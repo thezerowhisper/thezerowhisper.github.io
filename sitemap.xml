@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://thezerowhisper.github.io/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Hub -->
+  <url>
+    <loc>https://thezerowhisper.github.io/medical-calculators/</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Featured -->
+  <url>
+    <loc>https://thezerowhisper.github.io/rabies-scheduler/</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Emergency -->
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/curb65</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/news2</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/gcs-calculator</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/burn-calculator</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/wells-score</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/anion-gap</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/mentzer-index-calculator</loc></url>
+
+  <!-- Pediatrics -->
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/pediatric-asthma</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/uip-vaccine</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/growth-chart</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/milestones</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/paracetamol</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/ors</loc></url>
+
+  <!-- General -->
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/doses</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/bmi</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/egfr-calculator</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/hba1c-converter</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/corrected-calcium</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/child-pugh</loc></url>
+
+  <!-- Obs -->
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/obs-calc</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/due-date</loc></url>
+
+  <!-- Occupational -->
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/spirometry</loc></url>
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/biomedical-waste</loc></url>
+
+</urlset>
