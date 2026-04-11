@@ -1,313 +1,383 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="burn-parkland">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="stylesheet" href="/shared.css"/>
-<title>Burn TBSA &a; Parkland Formula Calculator | Rule of Nines — Adult &amp; Pediatric</title>
-<meta name="description" content="Calculate total body surface area (TBSA) burned using the Rule of Nines and determine 24-hour fluid resuscitation requirements with the Parkland Formula. Supports adult and pediatric patients."/>
-<meta name="keywords" content="Parkland formula calculator India, Rule of Nines burn assessment, TBSA burn calculator, burn fluid resuscitation, pediatric burn Lund Browder, burn calculator India, 4mL kg TBSA formula"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/burn-calculator"/>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script src="assets/umami-events.js"></script>
-<!-- Open Graph -->
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Burn TBSA &amp; Parkland Formula Calculator"/>
-<meta property="og:description" content="Free online burn area calculator using Rule of Nines. Automatically calculates Parkland formula fluid resuscitation for adults and pediatric patients."/>
-<meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/burn-calculator"/>
-<meta property="og:site_name" content="Clinical Calculators India"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/shared.css"/>
+  <title>Corrected Calcium Calculator — Albumin-Adjusted Ca²⁺ (mg/dL & mmol/L)</title>
+  <meta name="description" content="Free corrected calcium calculator for hypoalbuminaemia. Calculates albumin-adjusted calcium in mg/dL and mmol/L with hypocalcaemia/hypercalcaemia interpretation. Used by doctors, intensivists, and medical students." />
+  <meta name="keywords" content="corrected calcium calculator, albumin corrected calcium, calcium correction hypoalbuminaemia, adjusted calcium formula, hypocalcaemia calculator, hypercalcaemia calculator, corrected calcium mg/dL, corrected calcium mmol/L, calcium albumin correction India, serum calcium correction formula" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/corrected-calcium" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Corrected Calcium Calculator — Albumin-Adjusted Ca²⁺" />
+  <meta property="og:description" content="Calculate albumin-corrected calcium in mg/dL and mmol/L. Instant hypocalcaemia and hypercalcaemia grading." />
+  <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/corrected-calcium" />
+  <meta property="og:site_name" content="Medical Calculators" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Corrected Calcium Calculator" />
+  <meta name="twitter:description" content="Albumin-adjusted calcium calculator with mg/dL & mmol/L support and clinical interpretation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Burn Calculator — Rule of Nines &amp; Parkland Formula"/>
-<meta name="twitter:description" content="Calculate burn TBSA and 24-hour fluid resuscitation needs. Supports adult and pediatric Rule of Nines with Parkland formula output."/>
-
-<script type="application/ld+json">
-[
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": "Burn TBSA and Parkland Formula Fluid Calculator",
-    "description": "A clinical emergency tool for estimating burn percentage using the Rule of Nines and calculating 24-hour fluid resuscitation needs using the Parkland Formula.",
-    "url": "https://thezerowhisper.github.io/medical-calculators/burn-calculator",
-    "lastReviewed": "2026-03-25",
-    "reviewedBy": {
-      "@type": "MedicalOrganization",
-      "name": "American Burn Association"
-    },
-    "audience": { "@type": "MedicalAudience", "audienceType": "Clinician, Emergency Nurse, Surgeon, Pediatrician" },
-    "medicalSpecialty": "Emergency Medicine, Plastic Surgery, Pediatrics, Critical Care"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "What is the Parkland Formula for burn fluid resuscitation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Parkland Formula calculates 24-hour crystalloid fluid requirements for patients with significant burns: Total fluid (mL) = 4 mL × body weight (kg) × %TBSA burned. Half the total volume is administered in the first 8 hours (from the time of injury, not hospital arrival), and the remaining half over the next 16 hours. Lactated Ringer's solution is the preferred fluid. The formula was developed by Charles Baxter at Parkland Memorial Hospital in the 1960s."
-        }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://thezerowhisper.github.io/medical-calculators/"},
+          {"@type":"ListItem","position":2,"name":"Electrolyte Calculators","item":"https://thezerowhisper.github.io/medical-calculators/#electrolytes"},
+          {"@type":"ListItem","position":3,"name":"Corrected Calcium","item":"https://thezerowhisper.github.io/medical-calculators/corrected-calcium"}
+        ]
       },
       {
-        "@type": "Question",
-        "name": "What is the Rule of Nines for burn assessment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Rule of Nines is a rapid burn area estimation method that divides the body into regions each representing 9% (or multiples) of the total body surface area: Head and neck = 9%, each arm = 9%, anterior trunk = 18%, posterior trunk = 18%, each leg = 18%, and genitalia = 1% (adults). For infants and children, the head is proportionally larger (18%) and the legs proportionally smaller (14% each), reflecting differences in body surface area distribution with age."
-        }
+        "@type": "MedicalWebPage",
+        "name": "Corrected Calcium Calculator",
+        "url": "https://thezerowhisper.github.io/medical-calculators/corrected-calcium",
+        "description": "Calculates albumin-corrected serum calcium in hypoalbuminaemia. Supports mg/dL and mmol/L with clinical interpretation."
       },
       {
-        "@type": "Question",
-        "name": "When should the Parkland formula be applied?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Fluid resuscitation with the Parkland Formula is indicated for adults with burns covering more than 15% TBSA, and for children with burns greater than 10% TBSA. It is not needed for superficial (first-degree) burns, which are excluded from TBSA calculations. Deep partial-thickness and full-thickness burns are the primary targets for resuscitation. The formula provides a starting estimate — urine output (0.5 mL/kg/hr in adults, 1 mL/kg/hr in children) is the primary titration endpoint."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What burns are excluded from TBSA calculation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Superficial (first-degree) burns — equivalent to sunburn, with erythema only and no blistering — are excluded from TBSA calculations used for fluid resuscitation purposes. Only partial-thickness (second-degree) and full-thickness (third-degree) burns are counted. Including superficial burns would overestimate fluid requirements and risk iatrogenic fluid overload."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is the 8-hour clock for fluid resuscitation from injury or from arrival?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The 8-hour clock for the first half of Parkland fluid runs from the TIME OF INJURY, not from hospital arrival. If a patient arrives 2 hours after the burn injury occurred, only 6 hours remain to deliver the first half of the calculated fluid. This distinction is critical to avoid under-resuscitation. If a patient arrives late, the first-half volume must be infused more rapidly to complete delivery by the 8-hour mark from injury time."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type":"Question","name":"Why does serum calcium need to be corrected for albumin?",
+            "acceptedAnswer":{"@type":"Answer","text":"Approximately 40–45% of serum calcium is bound to albumin. When albumin is low (hypoalbuminaemia), total serum calcium is falsely low, even though the physiologically active ionised (free) calcium may be normal. The corrected calcium formula adjusts for this: Corrected Ca = Measured Ca + 0.8 × (4.0 − Albumin in g/dL). Without correction, hypoalbuminaemic patients may be incorrectly diagnosed with hypocalcaemia and treated unnecessarily."}
+          },
+          {
+            "@type":"Question","name":"What is the formula for corrected calcium?",
+            "acceptedAnswer":{"@type":"Answer","text":"Standard formula (using g/dL for albumin): Corrected Ca (mg/dL) = Measured Ca (mg/dL) + 0.8 × (4.0 − Albumin g/dL). In SI units: Corrected Ca (mmol/L) = Measured Ca (mmol/L) + 0.02 × (40 − Albumin g/L). Normal serum calcium: 8.5–10.5 mg/dL (2.12–2.62 mmol/L)."}
+          },
+          {
+            "@type":"Question","name":"What is the normal range for serum calcium?",
+            "acceptedAnswer":{"@type":"Answer","text":"Normal total serum calcium: 8.5–10.5 mg/dL (2.12–2.62 mmol/L). Ionised (free) calcium normal range: 1.15–1.35 mmol/L (4.6–5.4 mg/dL). Values below the lower limit of normal define hypocalcaemia; values above the upper limit define hypercalcaemia."}
+          },
+          {
+            "@type":"Question","name":"What are the causes of hypocalcaemia?",
+            "acceptedAnswer":{"@type":"Answer","text":"Common causes of true hypocalcaemia include: hypoparathyroidism (post-surgical, autoimmune, genetic), vitamin D deficiency, chronic kidney disease (reduced 1α-hydroxylation), hypomagnesaemia (impairs PTH secretion), pancreatitis (calcium saponification), hungry bone syndrome post-parathyroidectomy, and certain drugs (bisphosphonates, cinacalcet, denosumab, foscarnet)."}
+          },
+          {
+            "@type":"Question","name":"What are the causes of hypercalcaemia?",
+            "acceptedAnswer":{"@type":"Answer","text":"The mnemonic CHIMPANZEES covers most causes: Calcium supplementation excess, Hyperparathyroidism (primary — most common outpatient cause), Iatrogenic (thiazides, vitamin D, lithium), Metastatic malignancy or Multiple myeloma, Paget's disease, Addison's disease, Neoplasia (PTHrP-secreting tumours — most common inpatient cause), Zollinger-Ellison/MEN syndromes, Excess vitamin D (granulomatous disease — sarcoidosis, TB), Endocrine (hyperthyroidism), Sarcoidosis/immobilisation."}
+          },
+          {
+            "@type":"Question","name":"Is the corrected calcium formula accurate?",
+            "acceptedAnswer":{"@type":"Answer","text":"The Payne formula (0.8 correction factor) is the most widely used but has significant limitations. Multiple studies show poor correlation between corrected calcium and measured ionised calcium, particularly in critically ill patients, those with nephrotic syndrome, malignancy, and acid-base disturbances. When accurate calcium assessment is critical, direct measurement of ionised calcium (blood gas analyser) is preferred over the corrected formula."}
+          },
+          {
+            "@type":"Question","name":"What are the symptoms of hypocalcaemia?",
+            "acceptedAnswer":{"@type":"Answer","text":"Hypocalcaemia symptoms include neuromuscular irritability: Chvostek sign (facial muscle twitch on tapping the facial nerve), Trousseau sign (carpopedal spasm on blood pressure cuff inflation), perioral and fingertip paraesthesias, muscle cramps, tetany, and in severe cases seizures and laryngospasm. ECG findings include prolonged QTc interval. Chronic hypocalcaemia can cause cataracts, basal ganglia calcification, and cognitive impairment."}
+          },
+          {
+            "@type":"Question","name":"What are the symptoms of hypercalcaemia?",
+            "acceptedAnswer":{"@type":"Answer","text":"The mnemonic 'Bones, Stones, Groans, Psychic Moans': Bones — bone pain, osteitis fibrosa cystica; Stones — renal calculi, nephrocalcinosis, polyuria/polydipsia (nephrogenic DI); Groans — nausea, vomiting, constipation, anorexia, peptic ulcers; Psychic Moans — depression, confusion, lethargy, psychosis, coma. ECG shows shortened QTc interval."}
+          }
+        ]
       }
     ]
   }
-]
-</script>
+  </script>
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d3748;line-height:1.6}
-.pw{max-width:850px;margin:auto}
-.hero{background:linear-gradient(135deg,#742a2a,#c53030);border-radius:20px;padding:36px;color:white;margin-bottom:20px;text-align:center}
-.hero-sub{font-size:.68rem;font-weight:700;letter-spacing:.12em;margin-bottom:10px;opacity:.8;text-transform:uppercase}
-.hero h1{font-size:1.9rem;font-weight:800;margin-bottom:8px}
-.hero p{opacity:.85}
-.card{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
-.card h2{font-size:1rem;font-weight:700;color:#742a2a;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #fed7d7}
-.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:16px}
-.form-group label{font-size:.78rem;font-weight:700;color:#4a5568;display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.03em}
-.form-group input,.form-group select{width:100%;border:2px solid #e2e8f0;border-radius:10px;padding:12px;font-size:.97rem;outline:none;background:#f8fafc;transition:border-color .2s}
-.form-group input:focus{border-color:#e53e3e}
+  <style>
+    :root {
+      --bg: #f0f4f8; --surface: #fff; --surface2: #f5f8fc; --border: #dce4ef;
+      --primary: #0f766e; --primary-light: #14b8a6; --primary-dark: #0d4f4a;
+      --text: #0f1e33; --text-muted: #5a6a82; --text-light: #8fa0b8;
+      --radius: 14px; --radius-sm: 8px; --shadow: 0 2px 16px rgba(15,30,51,.09);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
 
-.nines-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#fff5f5;padding:14px;border-radius:12px;margin-bottom:10px}
-.nines-item label{font-size:.73rem;font-weight:700;color:#9b2c2c;display:block;margin-bottom:5px}
-.nines-item input{width:100%;border:2px solid #fed7d7;border-radius:8px;padding:9px;font-size:.95rem;outline:none;background:white}
-.nines-item input:focus{border-color:#e53e3e}
-.nines-hint{font-size:.75rem;color:#718096;margin-top:8px;padding:0 2px}
+    .topbar { background: var(--primary-dark); color: #fff; padding: 10px 20px; font-size: .82rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .topbar a { color: #5eead4; text-decoration: none; } .topbar a:hover { color: #fff; }
+    .breadcrumb { display: flex; gap: 6px; align-items: center; }
+    .breadcrumb span { color: #64748b; }
 
-/* FIXED: was result-box with no matching CSS class */
-.res-box{display:none;margin-top:24px;border-radius:14px;overflow:hidden;border:2px solid #feb2b2;animation:fadeIn .3s}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.res-header{padding:16px;font-weight:800;color:white;text-align:center;font-size:1.2rem;background:#c53030}
-.res-grid{display:grid;grid-template-columns:repeat(2,1fr);background:white;padding:20px;gap:12px}
-.rg-item{background:#fff5f5;padding:15px;border-radius:12px;text-align:center}
-.rg-item .lbl{font-size:.65rem;font-weight:700;color:#9b2c2c;text-transform:uppercase;margin-bottom:4px}
-.rg-item .val{font-size:1.4rem;font-weight:800;color:#1a202c}
-.timing-note{margin:0 20px 16px;padding:14px;background:#ebf8ff;border-left:5px solid #3182ce;border-radius:10px;font-size:.9rem;line-height:1.5}
-.btn-row{display:flex;gap:10px;padding:0 20px 20px}
-.btn{flex:1;padding:11px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:.88rem}
-.btn-print{background:#edf2f7;color:#2d3748}
-.btn-wa{background:#25D366;color:white}
+    .hero { background: linear-gradient(135deg, #0d4f4a 0%, #0f766e 50%, #0e7490 100%); color: #fff; padding: 48px 20px 56px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 14px; }
+    .hero h1 { font-size: clamp(1.7rem,4vw,2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .hero p { font-size: clamp(.95rem,2vw,1.1rem); color: rgba(255,255,255,.82); max-width: 600px; margin: 0 auto 20px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .hero-tags span { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); border-radius: 20px; padding: 3px 12px; font-size: .78rem; }
 
-/* Reference table */
-.ref-table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:10px}
-.ref-table th{background:#742a2a;color:white;padding:9px 10px;text-align:left}
-.ref-table td{padding:8px 10px;border-bottom:1px solid #e2e8f0}
-.ref-table tr:nth-child(even) td{background:#fff5f5}
+    .page { max-width: 880px; margin: 0 auto; padding: 32px 16px 64px; }
+    .card { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); padding: 28px; margin-bottom: 24px; }
+    .card-title { font-size: 1rem; font-weight: 700; color: var(--primary); letter-spacing: .03em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .card-title::before { content: ''; display: block; width: 4px; height: 18px; background: var(--primary-light); border-radius: 4px; }
 
-.content-section{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-.content-section h2{font-size:1.1rem;font-weight:700;color:#742a2a;margin-bottom:12px}
-.content-section h3{font-size:.95rem;font-weight:700;color:#2d3748;margin:14px 0 6px}
-.content-section p{font-size:.9rem;color:#4a5568;margin-bottom:10px}
-.content-section ul{padding-left:20px;margin-bottom:10px}
-.content-section ul li{font-size:.9rem;color:#4a5568;margin-bottom:5px}
-.callout{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 14px;border-radius:8px;font-size:.88rem;color:#742a2a;margin-top:12px}
+    /* UNIT TOGGLE */
+    .unit-toggle-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+    .unit-toggle-wrap label { font-size: .88rem; font-weight: 600; color: var(--text-muted); }
+    .toggle-group { display: flex; background: var(--surface2); border: 1.5px solid var(--border); border-radius: 30px; overflow: hidden; }
+    .toggle-group button { padding: 6px 18px; font-size: .83rem; font-weight: 600; border: none; background: transparent; cursor: pointer; color: var(--text-muted); transition: all .18s; font-family: 'Outfit', sans-serif; }
+    .toggle-group button.active { background: var(--primary); color: #fff; border-radius: 30px; }
 
-.footer-cite{font-size:.75rem;color:#718096;text-align:center;margin-top:20px;padding:10px}
-@media(max-width:600px){.res-grid{grid-template-columns:1fr}.btn-row{flex-direction:column}}
-</style>
+    /* FORM */
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media(max-width:560px) { .form-grid { grid-template-columns: 1fr; } }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-size: .84rem; font-weight: 600; color: var(--text-muted); }
+    .field input { background: var(--surface2); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; font-size: 1rem; font-family: 'JetBrains Mono', monospace; color: var(--text); outline: none; width: 100%; transition: border-color .18s, box-shadow .18s; }
+    .field input:focus { border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(20,184,166,.12); }
+    .field .hint { font-size: .76rem; color: var(--text-light); }
+
+    /* RESULT */
+    .result-area { margin-top: 24px; display: none; }
+    .result-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+    @media(max-width:500px) { .result-row { grid-template-columns: 1fr; } }
+
+    .res-box { background: var(--surface2); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; }
+    .res-box.primary { background: #f0fdfa; border-color: #5eead4; }
+    .res-box .rb-label { font-size: .72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 6px; }
+    .res-box .rb-val { font-family: 'JetBrains Mono', monospace; font-size: 2.2rem; font-weight: 700; color: var(--primary-dark); line-height: 1; margin-bottom: 3px; }
+    .res-box .rb-unit { font-size: .75rem; color: var(--text-light); }
+
+    .interp-box { border-radius: var(--radius-sm); padding: 14px 18px; display: flex; align-items: flex-start; gap: 10px; }
+    .interp-box .ib-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .interp-box .ib-text { font-size: .88rem; line-height: 1.65; }
+    .interp-box .ib-title { font-weight: 700; margin-bottom: 3px; font-size: .95rem; }
+    .interp-normal { background: #f0fdfa; border: 1.5px solid #5eead4; color: #134e4a; }
+    .interp-mild-hypo { background: #fefce8; border: 1.5px solid #fcd34d; color: #78350f; }
+    .interp-mod-hypo { background: #fff7ed; border: 1.5px solid #fdba74; color: #7c2d12; }
+    .interp-severe-hypo { background: #fef2f2; border: 1.5px solid #fca5a5; color: #7f1d1d; }
+    .interp-mild-hyper { background: #fefce8; border: 1.5px solid #fcd34d; color: #78350f; }
+    .interp-mod-hyper { background: #fff7ed; border: 1.5px solid #fdba74; color: #7c2d12; }
+    .interp-severe-hyper { background: #fef2f2; border: 1.5px solid #fca5a5; color: #7f1d1d; }
+
+    .formula-box { background: #0f1e33; color: #e2e8f0; border-radius: var(--radius-sm); padding: 16px 20px; font-family: 'JetBrains Mono', monospace; font-size: .83rem; line-height: 2; margin-bottom: 10px; overflow-x: auto; }
+    .formula-box .comment { color: #64748b; }
+    .formula-box .var { color: #93c5fd; }
+    .formula-box .num { color: #86efac; }
+
+    .ref-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    .ref-table th { background: var(--surface2); font-weight: 700; padding: 9px 12px; text-align: left; color: var(--text-muted); font-size: .76rem; text-transform: uppercase; letter-spacing: .05em; border-bottom: 2px solid var(--border); }
+    .ref-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); }
+    .ref-table tr:last-child td { border-bottom: none; }
+
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { width: 100%; text-align: left; padding: 15px 4px; font-size: .93rem; font-weight: 600; background: none; border: none; cursor: pointer; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: 'Outfit', sans-serif; }
+    .faq-q:hover { color: var(--primary); }
+    .faq-icon { flex-shrink: 0; width: 22px; height: 22px; background: var(--surface2); border: 1.5px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .85rem; transition: transform .2s, background .2s; color: var(--primary); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--primary); color: #fff; border-color: var(--primary); }
+    .faq-a { display: none; padding: 0 4px 15px; font-size: .88rem; color: var(--text-muted); line-height: 1.75; }
+    .faq-item.open .faq-a { display: block; }
+
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+    .related-card { background: var(--surface2); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; text-decoration: none; color: var(--text); transition: all .18s; display: block; }
+    .related-card:hover { border-color: var(--primary-light); background: #f0fdfa; transform: translateY(-2px); box-shadow: var(--shadow); }
+    .related-card .rc-name { font-size: .88rem; font-weight: 700; margin-bottom: 2px; }
+    .related-card .rc-desc { font-size: .76rem; color: var(--text-muted); }
+
+    .disclaimer { background: #fff8ed; border: 1px solid #fde68a; border-radius: var(--radius-sm); padding: 14px 18px; font-size: .82rem; color: #92400e; line-height: 1.6; }
+    .site-footer { text-align: center; font-size: .8rem; color: var(--text-light); padding: 24px 16px; border-top: 1px solid var(--border); margin-top: 32px; }
+    .site-footer a { color: var(--primary); text-decoration: none; }
+    @media(max-width:640px) { .card { padding: 20px 16px; } }
+  </style>
 </head>
 <body>
 
-<main class="pw">
-<div class="hero">
-  <div class="hero-sub">Emergency Burn Management Tool</div>
-  <h1>Burn &amp; Parkland Calculator</h1>
-  <p>TBSA Estimation (Rule of Nines) &amp; 24-Hour Fluid Resuscitation — Adult &amp; Pediatric</p>
-</div>
-
-<div class="card">
-  <h2>1. Patient Details</h2>
-  <div class="form-grid">
-    <div class="form-group">
-      <label>Age Group</label>
-      <select id="age" onchange="calc()">
-        <option value="adult">Adult / Child (&gt;8 years)</option>
-        <option value="peds">Infant / Child (0–8 years)</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Body Weight (kg)</label>
-      <input type="number" id="weight" placeholder="e.g. 70" oninput="calc()">
-    </div>
+<nav class="topbar">
+  <div class="breadcrumb">
+    <a href="/">Medical Calculators</a><span>›</span><span>Electrolytes</span><span>›</span><span>Corrected Calcium</span>
   </div>
+</nav>
 
-  <h2>2. TBSA — Rule of Nines (Exclude Superficial Burns)</h2>
-  <div class="nines-grid">
-    <div class="nines-item"><label>Head &amp; Neck</label><input type="number" class="part" id="head" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
-    <div class="nines-item"><label>Anterior Torso (Front)</label><input type="number" class="part" id="front" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
-    <div class="nines-item"><label>Posterior Torso (Back)</label><input type="number" class="part" id="back" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
-    <div class="nines-item"><label>Right Arm (full)</label><input type="number" class="part" id="rarm" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
-    <div class="nines-item"><label>Left Arm (full)</label><input type="number" class="part" id="larm" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
-    <div class="nines-item"><label>Right Leg (full)</label><input type="number" class="part" id="rleg" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
-    <div class="nines-item"><label>Left Leg (full)</label><input type="number" class="part" id="lleg" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
-    <div class="nines-item"><label>Genitalia (Adults)</label><input type="number" class="part" id="gen" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
+<header class="hero">
+  <div class="hero-badge">Electrolyte Calculator</div>
+  <h1>Corrected Calcium Calculator</h1>
+  <p>Albumin-adjusted serum calcium with hypocalcaemia &amp; hypercalcaemia grading</p>
+  <div class="hero-tags">
+    <span>mg/dL &amp; mmol/L</span><span>Albumin Correction</span>
+    <span>Hypo/Hypercalcaemia</span><span>Payne Formula</span><span>ICU &amp; Ward</span>
   </div>
-  <p class="nines-hint">Enter 1 for full area, or decimals for partial involvement (e.g. 0.5 = half the area). Do not include first-degree (superficial) burns.</p>
-</div>
+</header>
 
-<div id="result" class="res-box">
-  <div class="res-header">FLUID RESUSCITATION PLAN (PARKLAND FORMULA)</div>
-  <div class="res-grid">
-    <div class="rg-item"><div class="lbl">Total TBSA Burned</div><div id="res-tbsa" class="val">—</div></div>
-    <div class="rg-item"><div class="lbl">Total 24h Fluid</div><div id="res-total" class="val">—</div></div>
-    <div class="rg-item"><div class="lbl">First 8 Hours</div><div id="res-8h" class="val">—</div></div>
-    <div class="rg-item"><div class="lbl">Next 16 Hours</div><div id="res-16h" class="val">—</div></div>
-  </div>
-  <div class="timing-note">
-    <strong>⏱ Important:</strong> The 8-hour clock runs from the <strong>time of injury</strong>, not hospital arrival. Use <strong>Lactated Ringer's solution</strong>. Titrate to urine output: 0.5 mL/kg/hr (adult) or 1 mL/kg/hr (child).
-  </div>
-  <div class="btn-row">
-    <button class="btn btn-print" onclick="trackPrint('burn-parkland'); window.print()">🖨 Print Fluid Plan</button>
-    <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
-  </div>
-</div>
-
-<!-- Rule of Nines Reference -->
-<div class="content-section">
-  <h2>Rule of Nines — Quick Reference</h2>
-  <table class="ref-table">
-    <tr><th>Body Region</th><th>Adult % TBSA</th><th>Infant/Child % TBSA</th></tr>
-    <tr><td>Head &amp; Neck</td><td>9%</td><td>18% (larger proportionally)</td></tr>
-    <tr><td>Anterior Trunk (Chest + Abdomen)</td><td>18%</td><td>18%</td></tr>
-    <tr><td>Posterior Trunk (Back)</td><td>18%</td><td>18%</td></tr>
-    <tr><td>Each Arm</td><td>9%</td><td>9%</td></tr>
-    <tr><td>Each Leg</td><td>18%</td><td>14% (smaller proportionally)</td></tr>
-    <tr><td>Genitalia</td><td>1%</td><td>Not included</td></tr>
-    <tr><td><strong>Total</strong></td><td><strong>100%</strong></td><td><strong>100%</strong></td></tr>
-  </table>
-  <div class="callout">⚠️ Only partial-thickness (2nd degree) and full-thickness (3rd degree) burns are included in TBSA. Exclude superficial erythema (sunburn-like, 1st degree).</div>
-</div>
-
-<!-- Educational Content -->
-<div class="content-section">
-  <h2>Understanding Burn Assessment &amp; the Parkland Formula</h2>
-  <p>Severe burns cause massive fluid shifts from the intravascular compartment into tissues due to increased capillary permeability — a process that begins within minutes of injury and peaks at approximately 8–12 hours. Without prompt intravenous fluid resuscitation, this leads to hypovolemic shock, end-organ failure, and death. The Parkland Formula, developed by Dr. Charles Baxter in the 1960s, provides a simple evidence-based starting point for resuscitation in burns covering more than 15% TBSA in adults (or 10% in children).</p>
-  <p>The formula: <strong>4 mL × weight (kg) × %TBSA</strong> gives the total crystalloid volume needed over 24 hours. Half is delivered in the first 8 hours from injury, and the second half over the remaining 16 hours. This front-loading reflects the peak capillary leak period in early burn injury.</p>
-
-  <h3>Fluid Choice</h3>
-  <p>Lactated Ringer's solution (also called Hartmann's solution) is universally preferred over normal saline. Large volumes of 0.9% saline cause hyperchloremic metabolic acidosis, which can complicate the already complex metabolic derangement in burn patients. Colloids (albumin, fresh frozen plasma) are sometimes added after 8–12 hours in some protocols, but Lactated Ringer's alone is the standard first-line resuscitation fluid.</p>
-
-  <h3>Titration — Urine Output is the Target</h3>
-  <p>The Parkland calculation is a starting estimate only. Fluid rate must be adjusted based on urine output, measured hourly via catheter:</p>
-  <ul>
-    <li><strong>Adults:</strong> target 0.5 mL/kg/hr</li>
-    <li><strong>Children:</strong> target 1 mL/kg/hr</li>
-    <li>Oliguria → increase rate; excessive output → decrease rate</li>
-    <li>Hemoglobinuria (port-wine urine in electrical or chemical burns) → target higher output of 1–2 mL/kg/hr to protect kidneys</li>
-  </ul>
-
-  <h3>Burns Not Requiring Parkland Resuscitation</h3>
-  <ul>
-    <li>Superficial (first-degree) burns — excluded from TBSA entirely</li>
-    <li>Burns &lt;15% TBSA in adults — oral rehydration generally sufficient</li>
-    <li>Burns &lt;10% TBSA in children — oral rehydration generally sufficient</li>
-    <li>Burns to palms, ears, face (first degree only) — no resuscitation needed</li>
-  </ul>
-
-  <h3>Pediatric Considerations</h3>
-  <p>Children have proportionally larger head surface areas and smaller legs than adults, so the standard Rule of Nines is modified. The Lund and Browder chart provides the most accurate TBSA estimate for children — particularly neonates and infants — by accounting for age-related body proportion changes. Additionally, children receive maintenance dextrose-containing fluids alongside their Parkland volume to prevent hypoglycemia, which adults do not routinely need.</p>
-</div>
-
-<!-- FAQ -->
-<div class="content-section">
-  <h2>Frequently Asked Questions</h2>
-
-  <h3>What is the Parkland formula?</h3>
-  <p>The Parkland Formula calculates the volume of intravenous crystalloid fluid required in the first 24 hours after a significant burn injury: 4 mL × body weight in kg × percentage TBSA burned. Half the volume is given in the first 8 hours from the time of injury, and the second half over the following 16 hours.</p>
-
-  <h3>When should I start resuscitation from — injury or arrival?</h3>
-  <p>Always count from the time of injury. If a patient arrives 3 hours after a burn, only 5 hours remain to deliver the first half of the calculated volume. The rate should be increased accordingly to meet the 8-hour deadline from the time of burn, not from ED arrival.</p>
-
-  <h3>What does TBSA stand for?</h3>
-  <p>TBSA stands for Total Body Surface Area. In burn medicine, %TBSA specifically refers to the percentage of the body surface that has sustained partial-thickness (second-degree) or full-thickness (third-degree) burns. Superficial (first-degree) burns are excluded.</p>
-
-  <h3>Is the Parkland formula used for chemical and electrical burns?</h3>
-  <p>The Parkland Formula can serve as a baseline for chemical and electrical burns, but these injuries often underestimate their true depth and extent, and electrical injuries cause deep tissue damage not visible at the surface. Electrical burns typically require higher fluid volumes and a urine output target of 1–2 mL/kg/hr to protect against myoglobin-induced renal tubular injury.</p>
-</div>
-
-<div class="footer-cite">
-  References: American Burn Association (ABA) Practice Guidelines | Baxter CR. Fluid volume and electrolyte changes in burn patients. 1974 | Wallace Rule of Nines | Lund &amp; Browder Chart. This tool provides estimates only — adjust fluids based on urine output and clinical response.
-</div>
+<main class="page">
   <section class="card">
+    <div class="card-title">Calculator</div>
+
+    <div class="unit-toggle-wrap">
+      <label>Units:</label>
+      <div class="toggle-group">
+        <button class="active" id="btnMg" onclick="setUnit('mg')">mg/dL &amp; g/dL</button>
+        <button id="btnMmol" onclick="setUnit('si')">mmol/L &amp; g/L</button>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="field">
+        <label for="ca" id="ca-label">Total Serum Calcium (mg/dL)</label>
+        <input type="number" id="ca" placeholder="e.g. 7.8" step="0.01" oninput="calculate()" />
+        <span class="hint" id="ca-hint">Normal: 8.5–10.5 mg/dL</span>
+      </div>
+      <div class="field">
+        <label for="alb" id="alb-label">Serum Albumin (g/dL)</label>
+        <input type="number" id="alb" placeholder="e.g. 2.5" step="0.1" oninput="calculate()" />
+        <span class="hint" id="alb-hint">Normal: 3.5–5.0 g/dL</span>
+      </div>
+    </div>
+
+    <div class="result-area" id="resultArea">
+      <div class="result-row">
+        <div class="res-box">
+          <div class="rb-label">Measured Calcium</div>
+          <div class="rb-val" id="r-measured">—</div>
+          <div class="rb-unit" id="r-unit">mg/dL</div>
+        </div>
+        <div class="res-box primary">
+          <div class="rb-label">✓ Corrected Calcium</div>
+          <div class="rb-val" id="r-corrected">—</div>
+          <div class="rb-unit" id="r-unit2">mg/dL</div>
+        </div>
+      </div>
+      <div class="interp-box interp-normal" id="interpBox">
+        <div class="ib-icon">✅</div>
+        <div class="ib-text"><div class="ib-title" id="ib-title">—</div><div id="ib-body"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formula Card -->
+  <section class="card">
+    <div class="card-title">Formulas</div>
+    <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:12px">The Payne formula corrects for the proportion of calcium bound to albumin. Normal albumin is assumed to be 4.0 g/dL (40 g/L).</p>
+    <div class="formula-box">
+      <span class="comment">// Conventional units (mg/dL for Ca, g/dL for Albumin):</span><br>
+      <span class="var">Corrected Ca</span> = Measured Ca + <span class="num">0.8</span> × (<span class="num">4.0</span> − Albumin)<br><br>
+      <span class="comment">// SI units (mmol/L for Ca, g/L for Albumin):</span><br>
+      <span class="var">Corrected Ca</span> = Measured Ca + <span class="num">0.02</span> × (<span class="num">40</span> − Albumin)
+    </div>
+
+    <div style="overflow-x:auto">
+      <table class="ref-table">
+        <thead><tr><th>Condition</th><th>Total Ca (mg/dL)</th><th>Total Ca (mmol/L)</th><th>Ionised Ca (mmol/L)</th></tr></thead>
+        <tbody>
+          <tr><td>Severe hypocalcaemia</td><td>&lt; 7.0</td><td>&lt; 1.75</td><td>&lt; 0.8</td></tr>
+          <tr><td>Mild hypocalcaemia</td><td>7.0 – 8.5</td><td>1.75 – 2.12</td><td>0.8 – 1.15</td></tr>
+          <tr style="background:#f0fdfa"><td><strong>Normal</strong></td><td><strong>8.5 – 10.5</strong></td><td><strong>2.12 – 2.62</strong></td><td><strong>1.15 – 1.35</strong></td></tr>
+          <tr><td>Mild hypercalcaemia</td><td>10.5 – 12.0</td><td>2.62 – 3.0</td><td>1.35 – 1.55</td></tr>
+          <tr><td>Moderate hypercalcaemia</td><td>12.0 – 14.0</td><td>3.0 – 3.5</td><td>1.55 – 1.8</td></tr>
+          <tr><td>Severe hypercalcaemia</td><td>&gt; 14.0</td><td>&gt; 3.5</td><td>&gt; 1.8</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="card">
+    <div class="card-title">Frequently Asked Questions</div>
+    <div id="faq-list"></div>
+  </section>
+
+  <!-- Related -->
+  <section class="card">
+    <div class="card-title">Related Calculators</div>
+    <div class="related-grid">
+      <a href="egfr-calculator" class="related-card"><div class="rc-name">eGFR Calculator</div><div class="rc-desc">CKD-EPI · CG · MDRD</div></a>
+      <a href="anion-gap" class="related-card"><div class="rc-name">Anion Gap</div><div class="rc-desc">+ Delta ratio</div></a>
+      <a href="hba1c-converter" class="related-card"><div class="rc-name">HbA1c Converter</div><div class="rc-desc">% ↔ mmol/mol ↔ eAG</div></a>
+      <a href="child-pugh" class="related-card"><div class="rc-name">Child-Pugh Score</div><div class="rc-desc">Cirrhosis staging</div></a>
+      <a href="/" class="related-card"><div class="rc-name">All Calculators →</div><div class="rc-desc">17+ clinical tools</div></a>
+    </div>
+  </section>
+
+    <section class="card">
     <div class="card-title">Related Tools</div>
     <div class="related-grid">
-      <a href="https://thezerowhisper.github.io/medical-calculators/news2" class="related-card" ><div class="rc-name">NEWS2 Score</div><div class="rc-desc">Early warning monitoring</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/gcs-calculator" class="related-card" ><div class="rc-name">GCS Calculator</div><div class="rc-desc">Neurological status</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/wells-score" class="related-card" ><div class="rc-name">Wells Score</div><div class="rc-desc">DVT/PE in burns</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/egfr-calculator" class="related-card" ><div class="rc-name">eGFR Calculator</div><div class="rc-desc">Kidney function</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/anion-gap" class="related-card" ><div class="rc-name">Anion Gap</div><div class="rc-desc">Acid-base analysis</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/child-pugh" class="related-card" ><div class="rc-name">Child-Pugh Score</div><div class="rc-desc">Liver/albumin status</div></a>
       <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
     </div>
   </section>
-  </main>
+  <div class="disclaimer">⚠️ <strong>Disclaimer:</strong> The Payne corrected calcium formula has known limitations, particularly in critically ill patients, malignancy, nephrotic syndrome, and acid-base disturbances. When accurate calcium status is clinically critical, direct measurement of ionised calcium (blood gas analyser) is preferred. Not a substitute for clinical judgment.</div>
+</main>
+
+<footer class="site-footer">
+  <p><a href="/">Medical Calculators</a> &nbsp;·&nbsp; Formula: Payne RB et al., BMJ 1973</p>
+  <p style="margin-top:6px;font-size:.75rem">Keywords: corrected calcium calculator · albumin corrected calcium · hypocalcaemia calculator · calcium correction hypoalbuminaemia · corrected calcium mg/dL mmol/L</p>
+</footer>
 
 <script>
-const NINES={
-  adult:{head:9,front:18,back:18,rarm:9,larm:9,rleg:18,lleg:18,gen:1},
-  peds:{head:18,front:18,back:18,rarm:9,larm:9,rleg:14,lleg:14,gen:0}
-};
+  let unit = 'mg';
 
-function calc(){
-  const ageGroup=document.getElementById("age").value;
-  const weight=parseFloat(document.getElementById("weight").value);
-  const areas=NINES[ageGroup];
-  let totalTBSA=0;
-  ['head','front','back','rarm','larm','rleg','lleg','gen'].forEach(id=>{
-    totalTBSA+=parseFloat(document.getElementById(id).value||0)*areas[id];
-  });
-  if(totalTBSA>100) totalTBSA=100;
-  if(isNaN(weight)||weight<=0||totalTBSA<=0){
-    document.getElementById("result").style.display="none"; return;
+  function setUnit(u) {
+    unit = u;
+    document.getElementById('btnMg').classList.toggle('active', u === 'mg');
+    document.getElementById('btnMmol').classList.toggle('active', u === 'si');
+    const isSi = u === 'si';
+    document.getElementById('ca-label').textContent = 'Total Serum Calcium (' + (isSi ? 'mmol/L' : 'mg/dL') + ')';
+    document.getElementById('alb-label').textContent = 'Serum Albumin (' + (isSi ? 'g/L' : 'g/dL') + ')';
+    document.getElementById('ca-hint').textContent = isSi ? 'Normal: 2.12–2.62 mmol/L' : 'Normal: 8.5–10.5 mg/dL';
+    document.getElementById('alb-hint').textContent = isSi ? 'Normal: 35–50 g/L' : 'Normal: 3.5–5.0 g/dL';
+    document.getElementById('ca').placeholder = isSi ? 'e.g. 1.9' : 'e.g. 7.8';
+    document.getElementById('alb').placeholder = isSi ? 'e.g. 25' : 'e.g. 2.5';
+    document.getElementById('r-unit').textContent = isSi ? 'mmol/L' : 'mg/dL';
+    document.getElementById('r-unit2').textContent = isSi ? 'mmol/L' : 'mg/dL';
+    calculate();
   }
-  const totalFluid=4*weight*totalTBSA;
-  const first8h=totalFluid/2;
-  const next16h=totalFluid/2;
-  document.getElementById("res-tbsa").textContent=totalTBSA.toFixed(1)+"%";
-  document.getElementById("res-total").textContent=Math.round(totalFluid)+" mL";
-  document.getElementById("res-8h").textContent=Math.round(first8h)+" mL ("+Math.round(first8h/8)+" mL/hr)";
-  document.getElementById("res-16h").textContent=Math.round(next16h)+" mL ("+Math.round(next16h/16)+" mL/hr)";
-  document.getElementById("result").style.display="block";
-  trackCalc('burn-parkland', { tbsa: parseFloat(totalTBSA.toFixed(1)), fluid_ml: Math.round(totalFluid) });
 
-  document.getElementById("share-btn").onclick=()=>{
-    const text=`Burn Resuscitation Plan:\nTBSA: ${totalTBSA.toFixed(1)}%\nTotal 24h Fluid: ${Math.round(totalFluid)} mL\nFirst 8h: ${Math.round(first8h)} mL (${Math.round(first8h/8)} mL/hr)\nNext 16h: ${Math.round(next16h)} mL (${Math.round(next16h/16)} mL/hr)\nCalculated at Clinical Calculators India`;
-    try{uTrack('share_whatsapp',{tool:'burn-parkland'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
-  };
-}
+  function getInterpretation(val, isSi) {
+    // All thresholds in mg/dL; convert if SI
+    const v = isSi ? val * 18.016 / 0.2495 * 0.2495 : val; // actually just compare in native
+    const lo = isSi ? [1.75, 2.12, 2.62, 3.0, 3.5] : [7.0, 8.5, 10.5, 12.0, 14.0];
+    if (val < lo[0]) return { cls: 'interp-severe-hypo', icon: '🔴', title: 'Severe Hypocalcaemia', body: 'Immediate treatment required. Risk of tetany, seizures, laryngospasm, and fatal arrhythmias. IV calcium gluconate/chloride, cardiac monitoring. Check Mg²⁺ and vitamin D.' };
+    if (val < lo[1]) return { cls: 'interp-mild-hypo', icon: '🟡', title: 'Mild Hypocalcaemia', body: 'Below normal range. Check Chvostek and Trousseau signs. Investigate PTH, vitamin D, Mg²⁺, phosphate. Oral calcium supplementation may be appropriate if mild.' };
+    if (val <= lo[2]) return { cls: 'interp-normal', icon: '✅', title: 'Normal Calcium', body: 'Corrected calcium is within the normal reference range. No calcium disturbance identified based on albumin-adjusted value.' };
+    if (val <= lo[3]) return { cls: 'interp-mild-hyper', icon: '🟡', title: 'Mild Hypercalcaemia', body: 'Mildly elevated. Most likely hyperparathyroidism or malignancy. Ensure adequate hydration. Check PTH and PTH-related peptide. Repeat to confirm.' };
+    if (val <= lo[4]) return { cls: 'interp-mod-hyper', icon: '🟠', title: 'Moderate Hypercalcaemia', body: 'Significant hypercalcaemia. IV fluids (0.9% saline), bisphosphonates (zoledronic acid / pamidronate) if malignancy-related. Furosemide only after adequate rehydration. Urgent PTH, PTHrP, investigations.' };
+    return { cls: 'interp-severe-hyper', icon: '🔴', title: 'Severe Hypercalcaemia (Hypercalcaemic Crisis)', body: 'Life-threatening. Aggressive IV saline hydration, calcitonin for rapid effect, bisphosphonates, consider dialysis. ECG monitoring for shortened QTc. Urgent specialist input required.' };
+  }
+
+  function calculate() {
+    const ca = parseFloat(document.getElementById('ca').value);
+    const alb = parseFloat(document.getElementById('alb').value);
+    const area = document.getElementById('resultArea');
+    if (!ca || !alb || ca <= 0 || alb <= 0) { area.style.display = 'none'; return; }
+
+    const isSi = unit === 'si';
+    const normalAlb = isSi ? 40 : 4.0;
+    const factor = isSi ? 0.02 : 0.8;
+    const corrected = ca + factor * (normalAlb - alb);
+
+    area.style.display = 'block';
+    document.getElementById('r-measured').textContent = ca.toFixed(2);
+    document.getElementById('r-corrected').textContent = corrected.toFixed(2);
+
+    const interp = getInterpretation(corrected, isSi);
+    const box = document.getElementById('interpBox');
+    box.className = 'interp-box ' + interp.cls;
+    box.querySelector('.ib-icon').textContent = interp.icon;
+    document.getElementById('ib-title').textContent = interp.title;
+    document.getElementById('ib-body').textContent = interp.body;
+  }
+
+  // FAQs
+  const faqs = [
+    { q: "Why does calcium need to be corrected for albumin?", a: "About 40–45% of serum calcium is bound to albumin. When albumin is low, total calcium appears falsely low even though ionised (free) calcium may be normal. Without correction, hypoalbuminaemic patients may be incorrectly diagnosed with hypocalcaemia. The Payne formula adds 0.8 mg/dL for every 1 g/dL albumin is below 4.0 g/dL." },
+    { q: "What is the Payne formula for corrected calcium?", a: "Corrected Ca (mg/dL) = Measured Ca (mg/dL) + 0.8 × (4.0 − Albumin g/dL). In SI: Corrected Ca (mmol/L) = Measured Ca (mmol/L) + 0.02 × (40 − Albumin g/L)." },
+    { q: "What is the normal range for serum calcium?", a: "Normal total serum calcium: 8.5–10.5 mg/dL (2.12–2.62 mmol/L). Ionised calcium: 1.15–1.35 mmol/L. The corrected value should be interpreted against these ranges." },
+    { q: "What causes hypocalcaemia?", a: "Common causes: hypoparathyroidism (post-surgical, autoimmune), vitamin D deficiency, chronic kidney disease, hypomagnesaemia (impairs PTH secretion), acute pancreatitis, hungry bone syndrome post-parathyroidectomy, and drugs such as bisphosphonates, cinacalcet, foscarnet." },
+    { q: "What causes hypercalcaemia?", a: "CHIMPANZEES mnemonic: Calcium excess, Hyperparathyroidism (most common outpatient), Iatrogenic (thiazides, vitamin D), Malignancy/Myeloma (most common inpatient), Paget's, Addison's, Neoplasia (PTHrP), Zollinger-Ellison/MEN, Excess vitamin D, Endocrine (hyperthyroidism), Sarcoidosis." },
+    { q: "Is the corrected calcium formula accurate?", a: "The Payne formula has significant limitations, especially in critically ill patients, malignancy, nephrotic syndrome, and acid-base disturbances. Multiple studies show poor correlation with directly measured ionised calcium. When accuracy is critical (e.g., ICU), measure ionised calcium directly using a blood gas analyser." },
+    { q: "What are the symptoms of hypocalcaemia?", a: "Neuromuscular irritability: Chvostek sign (facial muscle twitch), Trousseau sign (carpopedal spasm), perioral and fingertip paraesthesias, muscle cramps, tetany, seizures, laryngospasm. ECG: prolonged QTc interval." },
+    { q: "What are the symptoms of hypercalcaemia?", a: "Bones, Stones, Groans, Psychic Moans: Bones — bone pain; Stones — renal calculi, polyuria; Groans — nausea, vomiting, constipation; Psychic Moans — depression, confusion, coma. ECG: shortened QTc interval." }
+  ];
+  const fl = document.getElementById('faq-list');
+  faqs.forEach((f, i) => {
+    fl.innerHTML += `<div class="faq-item" id="fi-${i}"><button class="faq-q" onclick="tf(${i})" aria-expanded="false"><span>${f.q}</span><span class="faq-icon">+</span></button><div class="faq-a">${f.a}</div></div>`;
+  });
+  function tf(i) {
+    const el = document.getElementById('fi-'+i);
+    const open = el.classList.toggle('open');
+    el.querySelector('.faq-q').setAttribute('aria-expanded', open);
+  }
 </script>
-<script src="/shared-nav.js"></script>
+<script src="/shared-nav.js"></script>  
 </body>
 </html>
