@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://thezerowhisper.github.io/rabies-scheduler/sitemap.xml
