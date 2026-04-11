@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="ors">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ORS Calculator: Diarrhea & Dehydration Relief (WHO/NCDC)</title>
+<meta name="description" content="Fast ORS calculator for diarrhea treatment: WHO-approved formula. Instant prep instructions for adults & children in India. Free, accurate, offline."/>
+<meta name="keywords" content="ORS calculator India, oral rehydration solution dose, ORS dose by weight child, dehydration treatment India, zinc dose diarrhoea India, ORS preparation instructions, how much ORS to give child India"/>
+
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/ors"/>
+
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_IN"/>
+<meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/ors"/>
+<meta property="og:title" content="ORS Calculator: Diarrhea & Dehydration Relief (WHO/NCDC)"/>
+<meta property="og:description" content="Fast ORS calculator for diarrhea treatment: WHO-approved formula. Instant prep instructions for adults & children in India. Free, accurate, offline."/>
+<meta property="og:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-ors.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="675"/>
+<meta property="og:image:alt" content="ORS rehydration calculator India — WHO Plan A and B, zinc IAP guideline, exact volumes by weight, severe dehydration warning signs, free tool"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="ORS Calculator: Diarrhea & Dehydration Relief (WHO/NCDC)"/>
+<meta name="twitter:description" content="Fast ORS calculator for diarrhea treatment: WHO-approved formula. Instant prep instructions for adults & children in India. Free, accurate, offline."/>
+<meta name="twitter:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-ors.png"/>
+<meta name="twitter:image:alt" content="ORS rehydration calculator India — WHO Plan A and B, zinc IAP guideline, exact volumes by weight, severe dehydration warning signs, free tool"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "ORS Rehydration Calculator India",
+  "description": "Calculate exact ORS volumes for dehydration in children and adults as per WHO and IAP guidelines.",
+  "url": "https://thezerowhisper.github.io/medical-calculators/ors",
+  "inLanguage": "en-IN",
+  "audience": {"@type": "MedicalAudience", "audienceType": "Patient, Physician, Parent"}
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d3748}
+.page-wrapper{max-width:600px;margin:auto}
+.back-link{display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;color:#3182ce;font-size:0.9rem;font-weight:600;text-decoration:none}
+.back-link:hover{text-decoration:underline}
+.card{background:white;border-radius:16px;padding:36px;box-shadow:0 4px 24px rgba(0,0,0,0.08);margin-bottom:24px}
+.logo{font-size:2rem;text-align:center;margin-bottom:8px}
+h1{font-size:1.4rem;font-weight:700;color:#1a202c;text-align:center;margin-bottom:4px}
+.subtitle{text-align:center;font-size:0.88rem;color:#718096;margin-bottom:10px}
+.keyword-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:24px}
+.keyword-chip{background:#e6fffa;color:#0f6e56;font-size:0.72rem;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid #9fe1cb}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+@media(max-width:480px){.form-grid{grid-template-columns:1fr}.card{padding:24px 18px}.info-section{padding:24px 18px}}
+label{display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:#2d3748}
+input[type=number],select{width:100%;padding:11px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:1rem;color:#2d3748;outline:none;transition:border-color 0.2s;background:white;font-family:inherit}
+input:focus,select:focus{border-color:#38b2ac}
+
+/* DEHYDRATION SELECTOR */
+.dehy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.dehy-btn{padding:10px 6px;border:2px solid #e2e8f0;border-radius:10px;font-weight:600;font-size:0.8rem;cursor:pointer;background:white;color:#718096;transition:all 0.2s;text-align:center;line-height:1.3}
+.dehy-btn.active-mild{border-color:#48bb78;background:#f0fff4;color:#276749}
+.dehy-btn.active-moderate{border-color:#ed8936;background:#fffaf0;color:#c05621}
+.dehy-btn.active-severe{border-color:#e53e3e;background:#fff5f5;color:#9b2c2c}
+.dehy-btn:hover:not(.active-mild):not(.active-moderate):not(.active-severe){border-color:#cbd5e0}
+
+.calc-btn{width:100%;padding:13px;background:#2c7a7b;color:white;border:none;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;transition:background 0.2s}
+.calc-btn:hover{background:#285e61}
+
+/* RESULTS */
+.results{margin-top:28px;display:none}
+
+/* SEVERE REFERRAL */
+.severe-box{background:#fff5f5;border:2px solid #fc8181;border-radius:14px;padding:20px;margin-bottom:16px;text-align:center}
+.severe-icon{font-size:2.5rem;margin-bottom:8px}
+.severe-title{font-size:1.1rem;font-weight:800;color:#c53030;margin-bottom:8px}
+.severe-desc{font-size:0.88rem;color:#9b2c2c;line-height:1.65}
+
+/* ORS HERO */
+.ors-hero{border-radius:14px;padding:20px;margin-bottom:16px;text-align:center;border:2px solid}
+.ors-hero-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px}
+.ors-hero-vol{font-size:2.8rem;font-weight:800;line-height:1}
+.ors-hero-sub{font-size:0.9rem;margin-top:4px}
+.ors-hero-time{font-size:0.82rem;margin-top:8px;font-weight:600}
+.hero-mild{background:#f0fff4;border-color:#9ae6b4}
+.hero-mild .ors-hero-label{color:#276749}
+.hero-mild .ors-hero-vol{color:#276749}
+.hero-mild .ors-hero-sub{color:#2f855a}
+.hero-moderate{background:#fffaf0;border-color:#fbd38d}
+.hero-moderate .ors-hero-label{color:#c05621}
+.hero-moderate .ors-hero-vol{color:#c05621}
+.hero-moderate .ors-hero-sub{color:#744210}
+
+/* DETAIL CARDS */
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+@media(max-width:400px){.detail-grid{grid-template-columns:1fr}}
+.detail-card{background:#f7fafc;border-radius:12px;padding:14px;border:1.5px solid #e2e8f0}
+.detail-card-label{font-size:0.7rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px}
+.detail-card-value{font-size:1.05rem;font-weight:800;color:#2d3748}
+.detail-card-sub{font-size:0.74rem;color:#718096;margin-top:3px;line-height:1.4}
+
+/* ZINC */
+.zinc-card{background:#faf5ff;border:2px solid #d6bcfa;border-radius:12px;padding:16px;margin-bottom:16px}
+.zinc-title{font-weight:700;font-size:0.9rem;color:#553c9a;margin-bottom:8px}
+.zinc-row{display:flex;justify-content:space-between;font-size:0.88rem;padding:6px 0;border-bottom:1px solid #e9d8fd}
+.zinc-row:last-child{border-bottom:none}
+.zinc-label{color:#4a5568}
+.zinc-value{font-weight:700;color:#553c9a}
+
+/* ORS PREP */
+.prep-card{background:#e6fffa;border:2px solid #9fe1cb;border-radius:12px;padding:16px;margin-bottom:16px}
+.prep-title{font-weight:700;font-size:0.9rem;color:#0f6e56;margin-bottom:10px}
+.prep-step{display:flex;gap:10px;margin-bottom:8px;font-size:0.85rem;color:#2d3748;line-height:1.5}
+.prep-num{width:22px;height:22px;border-radius:50%;background:#0f6e56;color:white;font-size:0.72rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+
+/* WARNING */
+.warning-card{background:#fff5f5;border:2px solid #fed7d7;border-radius:12px;padding:16px;margin-bottom:16px}
+.warning-title{font-weight:700;font-size:0.9rem;color:#c53030;margin-bottom:8px}
+.warning-item{font-size:0.84rem;color:#9b2c2c;padding:4px 0;line-height:1.5}
+
+.note-box{background:#fffaf0;border:1px solid #fbd38d;border-radius:10px;padding:12px 16px;font-size:0.82rem;color:#744210;margin-bottom:14px}
+.share-bar{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.share-btn{flex:1;min-width:100px;padding:10px 12px;border:none;border-radius:10px;font-size:0.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity 0.2s}
+.share-btn:hover{opacity:0.85}
+.btn-whatsapp{background:#25D366;color:white}
+.btn-copy{background:#edf2f7;color:#2d3748}
+.btn-print{background:#667eea;color:white}
+.btn-save{background:#ed8936;color:white}
+.copy-confirm{text-align:center;font-size:0.8rem;color:#38a169;margin-top:8px;height:18px}
+
+.info-section{background:white;padding:28px 36px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.05);margin-bottom:24px}
+.info-section h2{font-size:1rem;color:#1a202c;margin-top:20px;margin-bottom:8px;font-weight:700}
+.info-section h2:first-child{margin-top:0}
+.info-section p{font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px}
+.faq-item{margin-bottom:18px}
+.faq-item h3{font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px}
+.faq-item p{font-size:0.85rem;color:#4a5568;line-height:1.65}
+footer{text-align:center;padding-bottom:20px;font-size:0.78rem;color:#a0aec0}
+footer a{color:#3182ce}
+@media print{
+  .back-link,.share-bar,input,select,.keyword-chips,
+  .calc-btn,footer,.dehy-grid{display:none!important}
+  .card{box-shadow:none;padding:10px}
+  .results{display:block!important}
+}
+  /* ── DESKTOP LAYOUT ── */
+@media (min-width: 900px) {
+  body {
+    padding: 32px 40px;
+  }
+
+  .page-wrapper {
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 580px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  /* Back link spans full width */
+  .back-link {
+    grid-column: 1 / -1;
+  }
+
+  /* Calculator card stays left */
+  .card {
+    grid-column: 1;
+  }
+
+  /* Info section fills right, sticky */
+  .info-section {
+    grid-column: 2;
+    grid-row: 2;
+    position: sticky;
+    top: 20px;
+  }
+
+  /* Footer spans full width */
+  footer {
+    grid-column: 1 / -1;
+  }
+}
+</style>
+</head>
+<body>
+<main class="page-wrapper">
+  <a class="back-link" href="/">← All Calculators</a>
+  <div class="card">
+    <div class="logo">💧</div>
+    <h1>ORS Rehydration Calculator</h1>
+    <p class="subtitle">India · WHO &amp; IAP Guidelines · Diarrhoea Management · Zinc Supplementation</p>
+    <div class="keyword-chips">
+      <span class="keyword-chip">Mild Dehydration</span>
+      <span class="keyword-chip">Moderate Dehydration</span>
+      <span class="keyword-chip">Zinc IAP</span>
+      <span class="keyword-chip">ORS Preparation</span>
+      <span class="keyword-chip">Paediatric</span>
+      <span class="keyword-chip">Adult</span>
+    </div>
+
+    <div class="form-grid">
+      <div>
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" placeholder="e.g. 12" min="1" max="100" step="0.1"/>
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <div style="display:flex;gap:8px">
+          <input type="number" id="age" placeholder="e.g. 3" min="0" max="100" step="0.5" style="flex:1"/>
+          <select id="age-unit" style="width:90px">
+            <option value="years">Yrs</option>
+            <option value="months">Mos</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <label style="margin-bottom:10px">Degree of Dehydration</label>
+    <div class="dehy-grid">
+      <button class="dehy-btn active-mild" id="btn-mild"     onclick="selectDehy('mild')">
+        💧 Mild<br><span style="font-size:0.7rem;font-weight:400">Thirsty, slightly dry mouth</span>
+      </button>
+      <button class="dehy-btn" id="btn-moderate" onclick="selectDehy('moderate')">
+        🔶 Moderate<br><span style="font-size:0.7rem;font-weight:400">Sunken eyes, decreased urine</span>
+      </button>
+      <button class="dehy-btn" id="btn-severe"   onclick="selectDehy('severe')">
+        🚨 Severe<br><span style="font-size:0.7rem;font-weight:400">Limp, no tears, very sick</span>
+      </button>
+    </div>
+
+    <button class="calc-btn" onclick="calculate()">Calculate ORS Dose</button>
+
+    <div class="results" id="results">
+
+      <!-- SEVERE REFERRAL -->
+      <div class="severe-box" id="severe-box" style="display:none">
+        <div class="severe-icon">🚨</div>
+        <div class="severe-title">Refer to Hospital Immediately</div>
+        <div class="severe-desc">
+          Severe dehydration requires <strong>IV rehydration (Ringer's Lactate or Normal Saline)</strong> in a hospital setting.<br><br>
+          <strong>WHO Plan C:</strong> Give IV fluids 100ml/kg RL over 3 hours (infants) or 30ml/kg over 30 min then 70ml/kg over 2.5 hrs (children).<br><br>
+          Do not attempt oral rehydration alone in severe dehydration. Call an ambulance or go to the nearest hospital emergency immediately.
+        </div>
+      </div>
+
+      <!-- ORS HERO -->
+      <div id="ors-hero-wrap"></div>
+
+      <!-- DETAIL CARDS -->
+      <div class="detail-grid" id="detail-grid"></div>
+
+      <!-- ZINC -->
+      <div class="zinc-card" id="zinc-card"></div>
+
+      <!-- ORS PREP -->
+      <div class="prep-card">
+        <div class="prep-title">📋 How to Prepare ORS at Home</div>
+        <div class="prep-step"><div class="prep-num">1</div><div>Take <strong>1 litre of clean drinking water</strong> (boiled and cooled is best)</div></div>
+        <div class="prep-step"><div class="prep-num">2</div><div>Add <strong>1 ORS sachet</strong> (Electral, Enerlyte, or WHO-ORS) — do not add extra sachets to less water</div></div>
+        <div class="prep-step"><div class="prep-num">3</div><div>Stir well until completely dissolved</div></div>
+        <div class="prep-step"><div class="prep-num">4</div><div>Give in <strong>small frequent sips</strong> — not large volumes at once to avoid vomiting</div></div>
+        <div class="prep-step"><div class="prep-num">5</div><div><strong>Discard unused ORS after 24 hours</strong> — do not store prepared solution</div></div>
+        <div style="font-size:0.78rem;color:#0f6e56;margin-top:8px;font-style:italic">⚠️ Never add sugar, salt, or extra water to a prepared ORS solution — it alters the electrolyte balance.</div>
+      </div>
+
+      <!-- WHEN TO SEE DOCTOR -->
+      <div class="warning-card">
+        <div class="warning-title">🏥 Go to Hospital Immediately If:</div>
+        <div class="warning-item">🔴 Child is unable to drink or keep ORS down</div>
+        <div class="warning-item">🔴 Vomiting is profuse and persistent</div>
+        <div class="warning-item">🔴 Diarrhoea is bloody or contains mucus</div>
+        <div class="warning-item">🔴 High fever above 39°C alongside diarrhoea</div>
+        <div class="warning-item">🔴 No urine for more than 6 hours</div>
+        <div class="warning-item">🔴 Child is drowsy, limp, or unconscious</div>
+        <div class="warning-item">🔴 Sunken eyes, dry tongue, skin pinch returns slowly</div>
+        <div class="warning-item">🔴 Newborn or infant under 6 months with diarrhoea</div>
+      </div>
+
+      <div class="note-box">⚠️ ORS treats dehydration — it does not stop diarrhoea. Continue normal feeding alongside ORS. Breastfed babies should continue breastfeeding. This follows <strong>WHO Plan A and B</strong> and <strong>IAP 2024</strong> guidelines.</div>
+
+      <div class="share-bar">
+        <button class="share-btn btn-whatsapp" onclick="shareWhatsApp()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </button>
+        <button class="share-btn btn-copy" onclick="copyResult()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copy
+        </button>
+        <button class="share-btn btn-print" onclick="trackPrint('ors'); window.print()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print
+        </button>
+        <button class="share-btn btn-save" onclick="saveImage()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Save
+        </button>
+      </div>
+      <div class="copy-confirm" id="copy-confirm"></div>
+    </div>
+  </div>
+
+  <section class="info-section">
+    <h2>ORS Dose Guidelines — India (WHO Plan A &amp; B)</h2>
+    <p><strong>Mild dehydration (Plan A):</strong> 50ml/kg ORS over 3–4 hours at home. Continue breastfeeding. Offer extra ORS after each loose stool (50–100ml for children under 2, 100–200ml for older children).</p>
+    <p><strong>Moderate dehydration (Plan B):</strong> 100ml/kg ORS over 3–4 hours, preferably supervised at a health facility. Reassess after rehydration.</p>
+    <p><strong>Severe dehydration (Plan C):</strong> IV rehydration with Ringer's Lactate in hospital. ORS started as soon as child can drink.</p>
+    <h2>Zinc Supplementation for Diarrhoea</h2>
+    <p>IAP and WHO recommend zinc supplementation alongside ORS for all children with acute diarrhoea: <strong>10mg/day for infants under 6 months</strong> and <strong>20mg/day for children 6 months and above</strong>, for 14 days. Zinc reduces duration and severity of diarrhoea and prevents future episodes.</p>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How much ORS should I give my child?</h3>
+      <p>For mild dehydration: 50ml per kg body weight over 3–4 hours. For moderate dehydration: 100ml per kg over 3–4 hours. Always give in small frequent sips, not large amounts at once.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which ORS brand is best in India?</h3>
+      <p>WHO-ORS formula sachets (Electral, Enerlyte, ORS WHO) all contain the correct sodium concentration of 75 mEq/L. Avoid homemade salt-sugar solutions as concentrations are difficult to measure accurately.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I give ORS to a newborn?</h3>
+      <p>Newborns and infants under 6 months with diarrhoea should be seen by a doctor immediately. Continue breastfeeding. Do not give plain water to newborns as it can cause dangerous hyponatraemia.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Should I stop feeding during diarrhoea?</h3>
+      <p>No — continue normal feeding alongside ORS. Breastfed babies should continue breastfeeding. Stopping food prolongs recovery. The BRAT diet (banana, rice, applesauce, toast) is commonly recommended in India for older children.</p>
+    </div>
+  </section>
+
+  <footer>
+    For informational purposes only · Always consult your physician ·
+    <a href="/">All Calculators</a> ·
+    <a href="https://thezerowhisper.github.io/rabies-scheduler/">Rabies Scheduler</a>
+  </footer>
+  <section class="card">
+    <div class="card-title">Related Tools</div>
+    <div class="related-grid">
+      <a href="https://thezerowhisper.github.io/medical-calculators/paracetamol" class="related-card" ><div class="rc-name">Paracetamol Dose</div><div class="rc-desc">Child & adult dosing</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/growth-chart" class="related-card" ><div class="rc-name">Growth Chart</div><div class="rc-desc">Child nutrition status</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice" class="related-card" ><div class="rc-name">Neonatal Jaundice</div><div class="rc-desc">Newborn care</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
+    </div>
+  </section>
+  </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+let dehydration = "mild";
+let shareText   = "";
+
+function selectDehy(level) {
+  dehydration = level;
+  ["mild","moderate","severe"].forEach(l => {
+    const btn = document.getElementById("btn-"+l);
+    btn.className = "dehy-btn" + (l===level ? " active-"+l : "");
+  });
+}
+
+function calculate() {
+  const weight  = parseFloat(document.getElementById("weight").value);
+  const age     = parseFloat(document.getElementById("age").value);
+  const ageUnit = document.getElementById("age-unit").value;
+  if (!weight||weight<=0) { alert("Please enter a valid weight."); return; }
+  if (!age||age<0)        { alert("Please enter a valid age."); return; }
+
+  const ageMonths = ageUnit==="years" ? age*12 : age;
+
+  document.getElementById("severe-box").style.display    = dehydration==="severe" ? "block" : "none";
+  document.getElementById("ors-hero-wrap").style.display = dehydration==="severe" ? "none"  : "block";
+  document.getElementById("detail-grid").style.display   = dehydration==="severe" ? "none"  : "grid";
+
+  if (dehydration !== "severe") {
+    const mlPerKg  = dehydration==="mild" ? 50 : 100;
+    const totalMl  = Math.round(weight * mlPerKg);
+    const perHour  = Math.round(totalMl / 4);
+    const afterStool = ageMonths < 24 ? "50–100 ml" : "100–200 ml";
+    const heroClass  = dehydration==="mild" ? "hero-mild" : "hero-moderate";
+    const planLabel  = dehydration==="mild" ? "WHO Plan A — Home Treatment" : "WHO Plan B — Supervised Treatment";
+
+    document.getElementById("ors-hero-wrap").innerHTML = `
+      <div class="ors-hero ${heroClass}" style="margin-bottom:16px">
+        <div class="ors-hero-label">${planLabel}</div>
+        <div class="ors-hero-vol">${totalMl} ml</div>
+        <div class="ors-hero-sub">of ORS · ${mlPerKg} ml/kg × ${weight} kg</div>
+        <div class="ors-hero-time">Give over <strong>3–4 hours</strong> in small frequent sips</div>
+      </div>`;
+
+    document.getElementById("detail-grid").innerHTML = `
+      <div class="detail-card">
+        <div class="detail-card-label">Total ORS Volume</div>
+        <div class="detail-card-value">${totalMl} ml</div>
+        <div class="detail-card-sub">${mlPerKg} ml/kg over 3–4 hours</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-card-label">Rate per Hour</div>
+        <div class="detail-card-value">~${perHour} ml/hr</div>
+        <div class="detail-card-sub">Approx. ${Math.round(perHour/60*10)/10} ml per minute</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-card-label">After Each Loose Stool</div>
+        <div class="detail-card-value" style="font-size:0.95rem">${afterStool} extra</div>
+        <div class="detail-card-sub">In addition to the main course</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-card-label">ORS Sachets Needed</div>
+        <div class="detail-card-value">${Math.ceil(totalMl/1000)} sachet${Math.ceil(totalMl/1000)>1?"s":""}</div>
+        <div class="detail-card-sub">1 sachet dissolved in 1 litre water</div>
+      </div>`;
+  }
+
+  // Zinc
+  const zincDose  = ageMonths < 6 ? 10 : 20;
+  const zincForm1 = ageMonths < 6
+    ? "Zinc sulphate drops 10mg/ml: 1 ml/day"
+    : "Zinc dispersible tablet 20mg: 1 tablet/day dissolved in ORS or breast milk";
+  document.getElementById("zinc-card").innerHTML = `
+    <div class="zinc-title">💊 Zinc Supplementation (IAP / WHO Guideline)</div>
+    <div class="zinc-row"><span class="zinc-label">Daily dose</span><span class="zinc-value">${zincDose} mg/day</span></div>
+    <div class="zinc-row"><span class="zinc-label">Duration</span><span class="zinc-value">14 days</span></div>
+    <div class="zinc-row"><span class="zinc-label">Formulation</span><span class="zinc-value" style="text-align:right;max-width:60%">${zincForm1}</span></div>
+    <div class="zinc-row"><span class="zinc-label">Age group</span><span class="zinc-value">${ageMonths<6?"Under 6 months":"6 months and above"}</span></div>
+    <div style="font-size:0.75rem;color:#553c9a;margin-top:8px">Zinc reduces severity and duration of diarrhoea and prevents recurrence for 2–3 months.</div>`;
+
+  shareText = `💧 ORS Rehydration Plan\n\nWeight: ${weight}kg · Dehydration: ${dehydration}\n`;
+  if (dehydration === "severe") {
+    shareText += `\n🚨 SEVERE — Go to hospital for IV fluids immediately.`;
+  } else {
+    const totalMl = Math.round(weight * (dehydration==="mild"?50:100));
+    shareText += `\nTotal ORS: ${totalMl} ml over 3–4 hours\nZinc: ${ageMonths<6?10:20}mg/day for 14 days\n\nCalculated at: ${window.location.href}`;
+  }
+
+  document.getElementById("results").style.display = "block";
+  trackCalc('ors', { weight: weight, plan: dehydration });
+  document.getElementById("results").scrollIntoView({ behavior:"smooth", block:"nearest" });
+}
+
+function shareWhatsApp(){ if(!shareText)return; try{uTrack('share_whatsapp',{tool:'ors'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(shareText),'_blank','noopener'); }
+function copyResult(){
+  if(!shareText)return;
+  navigator.clipboard.writeText(shareText);
+  const el=document.getElementById("copy-confirm"); el.textContent="✓ Copied!"; setTimeout(()=>el.textContent="",2500);
+}
+function saveImage(){
+  if(!shareText){alert("Please calculate first.");return;}
+  const btn=event.target.closest("button"),orig=btn.innerHTML;
+  btn.textContent="Saving..."; btn.disabled=true;
+  html2canvas(document.getElementById("results"),{backgroundColor:"#ffffff",scale:2,useCORS:true}).then(canvas=>{
+    const a=document.createElement("a"); a.download="ors-dose.png"; a.href=canvas.toDataURL("image/png"); a.click();
+    btn.innerHTML=orig; btn.disabled=false;
+  });
+}
+</script>
+</body>
+</html>
