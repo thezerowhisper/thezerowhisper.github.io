@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="egfr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>eGFR Calculator — CKD-EPI, Cockcroft-Gault & MDRD | CKD Staging</title>
+  <meta name="description" content="Free eGFR calculator using CKD-EPI 2021, Cockcroft-Gault (CrCl), and MDRD formulas. Supports mg/dL and µmol/L. Instant CKD staging G1–G5. Used by doctors, medical students, and nurses." />
+  <meta name="keywords" content="eGFR calculator, creatinine clearance calculator, CKD-EPI calculator, Cockcroft-Gault calculator, MDRD calculator, kidney function calculator, CKD staging calculator, GFR calculator online, eGFR from creatinine, creatinine clearance mg/dL, eGFR India, estimated GFR, glomerular filtration rate calculator" />
+  <meta name="author" content="Dr. Diamond, MBBS, AFIH" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/egfr-calculator" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="eGFR Calculator — CKD-EPI, Cockcroft-Gault & MDRD | CKD Staging" />
+  <meta property="og:description" content="Calculate eGFR instantly using CKD-EPI 2021, Cockcroft-Gault, and MDRD formulas. mg/dL and µmol/L support. CKD stage G1–G5 with clinical interpretation." />
+  <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/egfr-calculator" />
+  <meta property="og:site_name" content="Medical Calculators — The Zero Whisper" />
+  <meta property="og:image" content="https://thezerowhisper.github.io/medical-calculators/og-egfr.png" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="eGFR Calculator — CKD-EPI, Cockcroft-Gault & MDRD" />
+  <meta name="twitter:description" content="Free online eGFR calculator with CKD staging. All major formulas, mg/dL & µmol/L. Instant results." />
+  <meta name="twitter:image" content="https://thezerowhisper.github.io/medical-calculators/og-egfr.png" />
+
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- ═══ STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://thezerowhisper.github.io/medical-calculators/"},
+          {"@type":"ListItem","position":2,"name":"Renal Calculators","item":"https://thezerowhisper.github.io/medical-calculators/#renal"},
+          {"@type":"ListItem","position":3,"name":"eGFR Calculator","item":"https://thezerowhisper.github.io/medical-calculators/egfr-calculator"}
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "name": "eGFR Calculator — CKD-EPI, Cockcroft-Gault & MDRD",
+        "url": "https://thezerowhisper.github.io/medical-calculators/egfr-calculator",
+        "description": "Free online eGFR calculator using CKD-EPI 2021, Cockcroft-Gault (creatinine clearance), and MDRD formulas with CKD staging G1–G5.",
+        "author": {"@type":"Person","name":"Dr. Diamond","honorificPrefix":"Dr.","hasCredential":"MBBS, AFIH"},
+        "medicalAudience": {"@type":"MedicalAudience","audienceType":"Clinician"},
+        "lastReviewed": "2025-01-01",
+        "reviewedBy": {"@type":"Person","name":"Dr. Diamond","honorificPrefix":"Dr."}
+      },
+      {
+        "@type": "MedicalTest",
+        "name": "Estimated Glomerular Filtration Rate (eGFR)",
+        "description": "eGFR is a blood test that measures how well your kidneys are filtering waste products from the blood. It is used to detect and stage chronic kidney disease (CKD).",
+        "usedToDiagnose": {"@type":"MedicalCondition","name":"Chronic Kidney Disease"},
+        "normalRange": "≥ 60 mL/min/1.73m² (G1–G2); values below indicate CKD stages G3–G5"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a normal eGFR level?",
+            "acceptedAnswer": {"@type":"Answer","text":"A normal eGFR is ≥ 90 mL/min/1.73m² (CKD stage G1). Values between 60–89 are classified as G2 (mildly decreased but may be normal for age). An eGFR below 60 for more than 3 months indicates chronic kidney disease."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between eGFR and creatinine clearance?",
+            "acceptedAnswer": {"@type":"Answer","text":"eGFR (estimated GFR) uses serum creatinine with age and sex to estimate kidney filtration rate normalized to 1.73m² body surface area, using CKD-EPI or MDRD formulas. Creatinine Clearance (CrCl) via Cockcroft-Gault estimates actual clearance in mL/min and is weight-dependent — preferred for drug dosing. eGFR is used for CKD staging and diagnosis."}
+          },
+          {
+            "@type": "Question",
+            "name": "Which formula is more accurate — CKD-EPI or MDRD?",
+            "acceptedAnswer": {"@type":"Answer","text":"CKD-EPI 2021 (race-free) is the currently recommended formula by KDIGO guidelines. It is more accurate than MDRD at higher eGFR values (above 60) and does not require race as an input. MDRD tends to underestimate eGFR in healthy individuals. Use CKD-EPI 2021 for diagnosis and staging; Cockcroft-Gault for drug dosing."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate eGFR from creatinine in µmol/L?",
+            "acceptedAnswer": {"@type":"Answer","text":"To convert creatinine from µmol/L to mg/dL, divide by 88.4. For example, 88.4 µmol/L equals 1.0 mg/dL. Our calculator accepts both units and converts automatically. Enter your creatinine value, select the unit, and the eGFR is computed instantly."}
+          },
+          {
+            "@type": "Question",
+            "name": "What eGFR level indicates kidney failure?",
+            "acceptedAnswer": {"@type":"Answer","text":"An eGFR below 15 mL/min/1.73m² (CKD stage G5) indicates kidney failure (end-stage renal disease). At this level, dialysis or kidney transplantation is usually required. An eGFR of 15–29 (G4) indicates severely decreased kidney function and requires urgent nephrology referral."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can eGFR improve over time?",
+            "acceptedAnswer": {"@type":"Answer","text":"Yes, eGFR can improve with treatment of the underlying cause — controlling blood pressure, blood sugar in diabetics, treating AKI, stopping nephrotoxic drugs, or managing obstruction. However, in progressive CKD, eGFR typically declines over time. A decline of more than 5 mL/min/1.73m² per year is considered significant."}
+          },
+          {
+            "@type": "Question",
+            "name": "How does CKD staging use eGFR?",
+            "acceptedAnswer": {"@type":"Answer","text":"KDIGO classifies CKD into G1 (≥90), G2 (60–89), G3a (45–59), G3b (30–44), G4 (15–29), and G5 (<15) based on eGFR. CKD requires eGFR below 60 or evidence of kidney damage for more than 3 months. Staging helps guide management, referral, and preparation for renal replacement therapy."}
+          },
+          {
+            "@type": "Question",
+            "name": "How often should eGFR be checked?",
+            "acceptedAnswer": {"@type":"Answer","text":"In high-risk individuals (diabetes, hypertension, family history of CKD), eGFR should be checked at least annually. In CKD G3a–G3b, check every 6 months. In G4, every 3 months. In G5, monthly or as clinically indicated. Acute changes in creatinine require urgent reassessment."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Cockcroft-Gault formula for creatinine clearance?",
+            "acceptedAnswer": {"@type":"Answer","text":"CrCl (mL/min) = [(140 − Age) × Weight(kg) × (0.85 if female)] ÷ (72 × Serum Creatinine in mg/dL). This formula is weight-dependent and is preferred for drug dosing calculations (e.g., antibiotics, renally-cleared chemotherapy). It is not recommended for CKD staging."}
+          },
+          {
+            "@type": "Question",
+            "name": "Is eGFR accurate in extreme body weights or elderly patients?",
+            "acceptedAnswer": {"@type":"Answer","text":"CKD-EPI eGFR may be less accurate in extreme body weights (very obese or cachectic patients), elderly patients with low muscle mass (low creatinine overestimates eGFR), and patients with amputation or muscle-wasting disease. In these cases, cystatin C-based eGFR or 24-hour urine creatinine clearance is more reliable."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #eef2f7;
+      --surface: #ffffff;
+      --surface2: #f5f8fc;
+      --border: #dce4ef;
+      --primary: #1a5fa8;
+      --primary-light: #2b7de9;
+      --primary-dark: #0d3d72;
+      --text: #0f1e33;
+      --text-muted: #5a6a82;
+      --text-light: #8fa0b8;
+      --accent: #00c9a7;
+      --g1: #22c55e; --g2: #84cc16; --g3a: #facc15;
+      --g3b: #f97316; --g4: #ef4444; --g5: #7c3aed;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow: 0 2px 16px rgba(15,30,51,.09);
+      --shadow-lg: 0 8px 40px rgba(15,30,51,.14);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    .topbar {
+      background: var(--primary-dark);
+      color: #fff;
+      padding: 10px 20px;
+      font-size: .82rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .topbar a { color: #93c5fd; text-decoration: none; }
+    .topbar a:hover { color: #fff; }
+    .breadcrumb { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .breadcrumb span { color: #64748b; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #1a5fa8 55%, #1d7fc4 100%);
+      color: #fff;
+      padding: 48px 20px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: .78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      letter-spacing: -.02em;
+    }
+    .hero p {
+      font-size: clamp(.95rem, 2vw, 1.1rem);
+      color: rgba(255,255,255,.82);
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      justify-content: center;
+    }
+    .hero-tags span {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: .78rem;
+      color: rgba(255,255,255,.9);
+    }
+
+    /* ── LAYOUT ── */
+    .page { max-width: 920px; margin: 0 auto; padding: 32px 16px 64px; }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .card-title::before {
+      content: '';
+      display: block; width: 4px; height: 18px;
+      background: var(--primary-light);
+      border-radius: 4px;
+    }
+
+    /* ── FORMULA TABS ── */
+    .formula-tabs {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .ftab {
+      padding: 8px 18px;
+      border-radius: 30px;
+      border: 2px solid var(--border);
+      background: var(--surface2);
+      font-size: .88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      color: var(--text-muted);
+      font-family: 'Outfit', sans-serif;
+    }
+    .ftab:hover { border-color: var(--primary-light); color: var(--primary); }
+    .ftab.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* ── UNIT TOGGLE ── */
+    .unit-toggle-wrap {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 22px;
+    }
+    .unit-toggle-wrap label { font-size: .88rem; font-weight: 600; color: var(--text-muted); }
+    .toggle-group {
+      display: flex;
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: 30px;
+      overflow: hidden;
+    }
+    .toggle-group button {
+      padding: 6px 16px;
+      font-size: .83rem;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all .18s;
+      font-family: 'Outfit', sans-serif;
+    }
+    .toggle-group button.active { background: var(--primary); color: #fff; border-radius: 30px; }
+
+    /* ── FORM GRID ── */
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media(max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+
+    .field { display: flex; flex-direction: column; gap: 5px; }
+    .field label { font-size: .84rem; font-weight: 600; color: var(--text-muted); }
+    .field input, .field select {
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 11px 14px;
+      font-size: .97rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text);
+      transition: border-color .18s, box-shadow .18s;
+      outline: none;
+      width: 100%;
+    }
+    .field input:focus, .field select:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(43,125,233,.12);
+    }
+    .field .hint { font-size: .76rem; color: var(--text-light); margin-top: 2px; }
+
+    /* sex toggle */
+    .sex-toggle { display: flex; gap: 10px; }
+    .sex-btn {
+      flex: 1;
+      padding: 11px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border);
+      background: var(--surface2);
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .18s;
+      font-family: 'Outfit', sans-serif;
+      color: var(--text-muted);
+    }
+    .sex-btn.active {
+      border-color: var(--primary);
+      background: #eff6ff;
+      color: var(--primary);
+    }
+
+    /* ── CG-ONLY FIELDS ── */
+    .cg-field { display: none; }
+    .cg-field.show { display: flex; }
+
+    /* ── RESULT PANEL ── */
+    .result-panel {
+      background: linear-gradient(135deg, #f0f7ff, #e8f4ff);
+      border: 2px solid #bfdbfe;
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      margin-top: 24px;
+      position: relative;
+      overflow: hidden;
+      display: none;
+    }
+    .result-panel.show { display: block; }
+    .result-panel::before {
+      content: '';
+      position: absolute; top: -30px; right: -30px;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, rgba(43,125,233,.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .result-label { font-size: .82rem; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+    .result-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 3.2rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .result-unit { font-size: .88rem; color: var(--text-muted); margin-bottom: 18px; }
+
+    /* CKD badge */
+    .ckd-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: .95rem;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .ckd-desc { font-size: .9rem; color: var(--text-muted); }
+
+    /* multi-result row */
+    .multi-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
+    @media(max-width:600px) { .multi-results { grid-template-columns: 1fr; } }
+    .mini-result {
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      text-align: center;
+    }
+    .mini-result .formula-name { font-size: .73rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+    .mini-result .formula-val { font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 600; color: var(--primary-dark); }
+    .mini-result .formula-unit { font-size: .73rem; color: var(--text-light); }
+
+    /* ── CKD TABLE ── */
+    .ckd-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    .ckd-table th { background: var(--surface2); font-weight: 700; padding: 10px 12px; text-align: left; color: var(--text-muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; }
+    .ckd-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    .ckd-table tr:last-child td { border-bottom: none; }
+    .ckd-table tr:hover td { background: var(--surface2); }
+    .stage-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+
+    /* ── FORMULA BOX ── */
+    .formula-box {
+      background: #0f1e33;
+      color: #e2e8f0;
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .82rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+      overflow-x: auto;
+    }
+    .formula-box .comment { color: #64748b; }
+    .formula-box .var { color: #93c5fd; }
+    .formula-box .num { color: #86efac; }
+    .formula-box .op { color: #fbbf24; }
+
+    /* ── FAQ ── */
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      padding: 16px 4px;
+      font-size: .95rem;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Outfit', sans-serif;
+    }
+    .faq-q:hover { color: var(--primary); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem;
+      transition: transform .2s, background .2s;
+      color: var(--primary);
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--primary); color: #fff; border-color: var(--primary); }
+    .faq-a {
+      display: none;
+      padding: 0 4px 16px;
+      font-size: .9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── INTERNAL LINKS ── */
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .related-card {
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all .18s;
+      display: block;
+    }
+    .related-card:hover { border-color: var(--primary-light); background: #eff6ff; transform: translateY(-2px); box-shadow: var(--shadow); }
+    .related-card .rc-name { font-size: .88rem; font-weight: 700; margin-bottom: 2px; }
+    .related-card .rc-desc { font-size: .76rem; color: var(--text-muted); }
+
+    /* ── FOOTER ── */
+    .disclaimer {
+      background: #fff8ed;
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      font-size: .82rem;
+      color: #92400e;
+      line-height: 1.6;
+    }
+    .site-footer {
+      text-align: center;
+      font-size: .8rem;
+      color: var(--text-light);
+      padding: 24px 16px;
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+    }
+    .site-footer a { color: var(--primary); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:640px) { .card { padding: 20px 16px; } }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Nav / Breadcrumb -->
+  <nav class="topbar" aria-label="Breadcrumb">
+    <div class="breadcrumb">
+      <a href="https://thezerowhisper.github.io/medical-calculators/">Medical Calculators</a>
+      <span>›</span>
+      <span>Renal</span>
+      <span>›</span>
+      <span>eGFR Calculator</span>
+    </div>
+    <span>By Dr. Diamond, MBBS, AFIH</span>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-badge">Renal Function Calculator</div>
+    <h1>eGFR Calculator</h1>
+    <p>CKD-EPI 2021 · Cockcroft-Gault (CrCl) · MDRD — with instant CKD staging G1–G5</p>
+    <div class="hero-tags">
+      <span>mg/dL &amp; µmol/L</span>
+      <span>CKD-EPI 2021</span>
+      <span>Cockcroft-Gault</span>
+      <span>MDRD 4-variable</span>
+      <span>CKD Stages G1–G5</span>
+      <span>Drug Dosing Ready</span>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+
+    <!-- ══ CALCULATOR CARD ══ -->
+    <section class="card" aria-label="eGFR Calculator">
+      <div class="card-title">Calculator</div>
+
+      <!-- Formula Tabs -->
+      <div class="formula-tabs" role="tablist" aria-label="Formula selection">
+        <button class="ftab active" data-formula="ckdepi" role="tab" aria-selected="true">CKD-EPI 2021 <small style="opacity:.7">(recommended)</small></button>
+        <button class="ftab" data-formula="cg" role="tab" aria-selected="false">Cockcroft-Gault</button>
+        <button class="ftab" data-formula="mdrd" role="tab" aria-selected="false">MDRD</button>
+        <button class="ftab" data-formula="all" role="tab" aria-selected="false">All Three</button>
+      </div>
+
+      <!-- Unit Toggle -->
+      <div class="unit-toggle-wrap">
+        <label>Creatinine unit:</label>
+        <div class="toggle-group" role="group" aria-label="Creatinine unit">
+          <button class="active" id="unitMg" onclick="setUnit('mg')">mg/dL</button>
+          <button id="unitUmol" onclick="setUnit('umol')">µmol/L</button>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-grid">
+        <div class="field">
+          <label for="age">Age (years)</label>
+          <input type="number" id="age" placeholder="e.g. 45" min="18" max="120" oninput="calculate()" />
+          <span class="hint">18–120 years</span>
+        </div>
+
+        <div class="field">
+          <label>Biological Sex</label>
+          <div class="sex-toggle">
+            <button class="sex-btn active" id="btnMale" onclick="setSex('male')">♂ Male</button>
+            <button class="sex-btn" id="btnFemale" onclick="setSex('female')">♀ Female</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="creatinine">Serum Creatinine</label>
+          <input type="number" id="creatinine" placeholder="e.g. 1.0" min="0.1" step="0.01" oninput="calculate()" />
+          <span class="hint" id="creatHint">Normal: 0.7–1.2 mg/dL (male), 0.5–1.1 (female)</span>
+        </div>
+
+        <div class="field cg-field" id="weightField">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" placeholder="e.g. 70" min="20" max="300" oninput="calculate()" />
+          <span class="hint">Required for Cockcroft-Gault</span>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="result-panel" id="resultPanel">
+        <div id="singleResult">
+          <div class="result-label" id="resultLabel">eGFR (CKD-EPI 2021)</div>
+          <div class="result-value" id="resultValue">—</div>
+          <div class="result-unit">mL/min/1.73m²</div>
+          <div id="ckdBadge"></div>
+          <div class="ckd-desc" id="ckdDesc"></div>
+        </div>
+        <div id="allResult" style="display:none;">
+          <div class="result-label" style="margin-bottom:12px;">All Formula Comparison</div>
+          <div class="multi-results">
+            <div class="mini-result">
+              <div class="formula-name">CKD-EPI 2021</div>
+              <div class="formula-val" id="allCkdepi">—</div>
+              <div class="formula-unit">mL/min/1.73m²</div>
+            </div>
+            <div class="mini-result">
+              <div class="formula-name">Cockcroft-Gault</div>
+              <div class="formula-val" id="allCg">—</div>
+              <div class="formula-unit">mL/min</div>
+            </div>
+            <div class="mini-result">
+              <div class="formula-name">MDRD</div>
+              <div class="formula-val" id="allMdrd">—</div>
+              <div class="formula-unit">mL/min/1.73m²</div>
+            </div>
+          </div>
+          <div id="ckdBadgeAll" style="margin-top:16px;"></div>
+          <div class="ckd-desc" id="ckdDescAll"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CKD STAGING TABLE ══ -->
+    <section class="card" aria-labelledby="ckd-heading">
+      <div class="card-title" id="ckd-heading">CKD Staging — KDIGO 2024</div>
+      <div style="overflow-x:auto">
+        <table class="ckd-table" role="table" aria-label="CKD stages by eGFR">
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>eGFR (mL/min/1.73m²)</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="row-G1">
+              <td><span class="stage-dot" style="background:var(--g1)"></span><strong>G1</strong></td>
+              <td><code>≥ 90</code></td>
+              <td>Normal or high</td>
+              <td>Monitor if risk factors present</td>
+            </tr>
+            <tr id="row-G2">
+              <td><span class="stage-dot" style="background:var(--g2)"></span><strong>G2</strong></td>
+              <td><code>60–89</code></td>
+              <td>Mildly decreased</td>
+              <td>Lifestyle modification, control BP/DM</td>
+            </tr>
+            <tr id="row-G3a">
+              <td><span class="stage-dot" style="background:var(--g3a)"></span><strong>G3a</strong></td>
+              <td><code>45–59</code></td>
+              <td>Mildly to moderately decreased</td>
+              <td>Nephrology referral, adjust drug doses</td>
+            </tr>
+            <tr id="row-G3b">
+              <td><span class="stage-dot" style="background:var(--g3b)"></span><strong>G3b</strong></td>
+              <td><code>30–44</code></td>
+              <td>Moderately to severely decreased</td>
+              <td>Nephrology referral, avoid nephrotoxins</td>
+            </tr>
+            <tr id="row-G4">
+              <td><span class="stage-dot" style="background:var(--g4)"></span><strong>G4</strong></td>
+              <td><code>15–29</code></td>
+              <td>Severely decreased</td>
+              <td>Prepare for renal replacement therapy</td>
+            </tr>
+            <tr id="row-G5">
+              <td><span class="stage-dot" style="background:var(--g5)"></span><strong>G5</strong></td>
+              <td><code>&lt; 15</code></td>
+              <td>Kidney failure (ESKD)</td>
+              <td>Dialysis / transplant evaluation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.8rem;color:var(--text-muted);margin-top:12px;">
+        * CKD diagnosis requires eGFR &lt;60 <em>or</em> evidence of kidney damage (albuminuria, haematuria, imaging) for <strong>≥3 months</strong>.
+      </p>
+    </section>
+
+    <!-- ══ FORMULAS ══ -->
+    <section class="card" aria-labelledby="formula-heading">
+      <div class="card-title" id="formula-heading">Formulas Used</div>
+
+      <h3 style="font-size:.93rem;font-weight:700;margin-bottom:8px;color:var(--primary)">CKD-EPI 2021 (Race-Free) — Recommended by KDIGO</h3>
+      <div class="formula-box">
+        <span class="comment">// Male:</span><br>
+        <span class="var">eGFR</span> <span class="op">=</span> <span class="num">142</span> × min(Scr/<span class="num">0.9</span>, 1)^<span class="num">−0.302</span> × max(Scr/<span class="num">0.9</span>, 1)^<span class="num">−1.200</span> × <span class="num">0.9938</span>^Age<br>
+        <span class="comment">// Female:</span><br>
+        <span class="var">eGFR</span> <span class="op">=</span> <span class="num">142</span> × min(Scr/<span class="num">0.7</span>, 1)^<span class="num">−0.241</span> × max(Scr/<span class="num">0.7</span>, 1)^<span class="num">−1.200</span> × <span class="num">0.9938</span>^Age × <span class="num">1.012</span>
+      </div>
+
+      <h3 style="font-size:.93rem;font-weight:700;margin-bottom:8px;color:var(--primary)">Cockcroft-Gault — Creatinine Clearance (Drug Dosing)</h3>
+      <div class="formula-box">
+        <span class="var">CrCl</span> <span class="op">=</span> [(140 − Age) × Weight<span class="comment">(kg)</span> × <span class="comment">(0.85 if ♀)</span>] <span class="op">÷</span> [<span class="num">72</span> × Scr<span class="comment">(mg/dL)</span>]
+      </div>
+
+      <h3 style="font-size:.93rem;font-weight:700;margin-bottom:8px;color:var(--primary)">MDRD 4-Variable</h3>
+      <div class="formula-box">
+        <span class="var">eGFR</span> <span class="op">=</span> <span class="num">175</span> × Scr^<span class="num">−1.154</span> × Age^<span class="num">−0.203</span> × <span class="num">0.742</span><span class="comment">(if ♀)</span>
+      </div>
+      <p style="font-size:.83rem;color:var(--text-muted)">For µmol/L: Scr (mg/dL) = Scr (µmol/L) ÷ 88.4</p>
+    </section>
+
+    <!-- ══ FAQ ══ -->
+    <section class="card" aria-labelledby="faq-heading">
+      <div class="card-title" id="faq-heading">Frequently Asked Questions</div>
+
+      <div id="faq-list">
+        <!-- JS renders FAQs -->
+      </div>
+    </section>
+
+    <!-- ══ RELATED CALCULATORS ══ -->
+    <section class="card" aria-labelledby="related-heading">
+      <div class="card-title" id="related-heading">Related Calculators</div>
+      <div class="related-grid">
+        <a href="corrected-calcium" class="related-card">
+          <div class="rc-name">Corrected Calcium</div>
+          <div class="rc-desc">Albumin-adjusted Ca²⁺</div>
+        </a>
+        <a href="cha2ds2-vasc" class="related-card">
+          <div class="rc-name">CHA₂DS₂-VASc</div>
+          <div class="rc-desc">AF stroke risk score</div>
+        </a>
+        <a href="anion-gap." class="related-card">
+          <div class="rc-name">Anion Gap</div>
+          <div class="rc-desc">+ Delta ratio</div>
+        </a>
+        <a href="hba1c-converter" class="related-card">
+          <div class="rc-name">HbA1c Converter</div>
+          <div class="rc-desc">% ↔ mmol/mol ↔ eAG</div>
+        </a>
+        <a href="child-pugh" class="related-card">
+          <div class="rc-name">Child-Pugh Score</div>
+          <div class="rc-desc">Cirrhosis severity</div>
+        </a>
+        <a href="/" class="related-card">
+          <div class="rc-name">All Calculators →</div>
+          <div class="rc-desc">17 clinical tools</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer" role="note" aria-label="Medical disclaimer">
+      ⚠️ <strong>Clinical Disclaimer:</strong> This calculator is intended as an aid for qualified healthcare professionals and medical students. It does not replace clinical judgment. Always verify results against patient-specific context and current clinical guidelines. Not for self-diagnosis. eGFR equations may be less accurate in extreme body weights, muscle-wasting conditions, pregnancy, and amputees.
+    </div>
+
+    <section class="card">
+    <div class="card-title">Related Tools</div>
+    <div class="related-grid">
+      <a href="https://thezerowhisper.github.io/medical-calculators/corrected-calcium" class="related-card" ><div class="rc-name">Corrected Calcium</div><div class="rc-desc">Albumin-adjusted Ca²⁺</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/anion-gap" class="related-card" ><div class="rc-name">Anion Gap</div><div class="rc-desc">Acid-base with albumin correction</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/child-pugh" class="related-card" ><div class="rc-name">Child-Pugh Score</div><div class="rc-desc">Liver function class</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Created by <strong>Dr. Diamond</strong>, MBBS, AFIH &nbsp;·&nbsp;
+       <a href="https://thezerowhisper.github.io/medical-calculators/">Medical Calculators</a> &nbsp;·&nbsp;
+       <a href="https://thezerowhisper.github.io/medical-calculators/#about">About</a> &nbsp;·&nbsp;
+       Formulas: KDIGO 2024, CKD-EPI 2021 (NEJM 2021)
+    </p>
+    <p style="margin-top:6px">Keywords: eGFR calculator · creatinine clearance calculator · CKD staging · Cockcroft-Gault · MDRD · kidney function test · glomerular filtration rate · CKD-EPI India</p>
+  </footer>
+
+  <script>
+    // ── STATE ──
+    let sex = 'male';
+    let unit = 'mg';
+    let formula = 'ckdepi';
+
+    // ── FAQ DATA ──
+    const faqs = [
+      {
+        q: "What is a normal eGFR level?",
+        a: "A normal eGFR is ≥ 90 mL/min/1.73m² (CKD stage G1). Values between 60–89 are classified as G2 (mildly decreased but may be normal for age). An eGFR below 60 persisting for more than 3 months confirms chronic kidney disease (CKD)."
+      },
+      {
+        q: "What is the difference between eGFR and creatinine clearance (CrCl)?",
+        a: "eGFR (via CKD-EPI or MDRD) is normalized to 1.73m² body surface area and is used for CKD diagnosis and staging. Creatinine Clearance (CrCl) from Cockcroft-Gault is weight-dependent and estimates actual clearance in mL/min — it is preferred for drug dosing (antibiotics, anticoagulants, chemotherapy)."
+      },
+      {
+        q: "Which formula is more accurate — CKD-EPI 2021 or MDRD?",
+        a: "CKD-EPI 2021 (race-free) is recommended by KDIGO and is more accurate than MDRD at higher eGFR values (>60 mL/min/1.73m²). MDRD tends to underestimate GFR in people with normal or near-normal kidney function. Use CKD-EPI 2021 for CKD staging and diagnosis."
+      },
+      {
+        q: "How do I calculate eGFR from creatinine in µmol/L?",
+        a: "Convert µmol/L to mg/dL by dividing by 88.4. For example, 88.4 µmol/L = 1.0 mg/dL. Our calculator handles this conversion automatically — just select µmol/L from the unit toggle and enter your value."
+      },
+      {
+        q: "What eGFR indicates kidney failure?",
+        a: "An eGFR below 15 mL/min/1.73m² (Stage G5) indicates kidney failure (end-stage renal disease, ESKD). Dialysis or transplant evaluation is typically required. Stage G4 (eGFR 15–29) indicates severely decreased kidney function requiring urgent nephrology referral."
+      },
+      {
+        q: "Can eGFR improve?",
+        a: "Yes. eGFR can improve with treatment of the underlying cause — controlling blood pressure, optimising blood sugar in diabetics, treating AKI, discontinuing nephrotoxic drugs, or relieving obstruction. In progressive CKD, a decline >5 mL/min/1.73m²/year is considered significant."
+      },
+      {
+        q: "What is the Cockcroft-Gault formula?",
+        a: "CrCl (mL/min) = [(140 − Age) × Weight (kg) × 0.85 if female] ÷ [72 × Scr (mg/dL)]. It is weight-dependent and ideal for drug dosing calculations. Use it for renally-cleared drugs such as aminoglycosides, vancomycin, metformin, and direct oral anticoagulants."
+      },
+      {
+        q: "How often should eGFR be checked?",
+        a: "In high-risk individuals (diabetes, hypertension, family history of CKD), check at least annually. CKD G3a–G3b: every 6 months. G4: every 3 months. G5: monthly or as clinically indicated. Any acute change in creatinine requires urgent reassessment."
+      },
+      {
+        q: "Is eGFR accurate in elderly patients or extreme body weights?",
+        a: "CKD-EPI may overestimate GFR in elderly patients with low muscle mass or in those with amputations, severe malnutrition, or muscle-wasting disease (low creatinine falsely elevates eGFR). In these cases, cystatin-C based eGFR or 24-hour urine creatinine clearance is more reliable."
+      },
+      {
+        q: "What is the eGFR cut-off for metformin safety?",
+        a: "Metformin is generally considered safe when eGFR is ≥45 mL/min/1.73m². Use with caution at eGFR 30–44. It should be stopped at eGFR <30 due to risk of lactic acidosis. Always check the latest local prescribing guidelines."
+      }
+    ];
+
+    // Render FAQs
+    const faqList = document.getElementById('faq-list');
+    faqs.forEach((f, i) => {
+      faqList.innerHTML += `
+        <div class="faq-item" id="faq-${i}">
+          <button class="faq-q" onclick="toggleFaq(${i})" aria-expanded="false" aria-controls="faq-a-${i}">
+            <span>${f.q}</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-${i}" role="region">${f.a}</div>
+        </div>`;
+    });
+
+    function toggleFaq(i) {
+      const item = document.getElementById('faq-' + i);
+      const btn = item.querySelector('.faq-q');
+      const isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    }
+
+    // ── FORMULA TABS ──
+    document.querySelectorAll('.ftab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.ftab').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected','true');
+        formula = btn.dataset.formula;
+        const weightField = document.getElementById('weightField');
+        weightField.classList.toggle('show', formula === 'cg' || formula === 'all');
+        calculate();
+      });
+    });
+
+    // ── UNIT ──
+    function setUnit(u) {
+      unit = u;
+      document.getElementById('unitMg').classList.toggle('active', u === 'mg');
+      document.getElementById('unitUmol').classList.toggle('active', u === 'umol');
+      const hint = document.getElementById('creatHint');
+      hint.textContent = u === 'mg'
+        ? 'Normal: 0.7–1.2 mg/dL (male), 0.5–1.1 (female)'
+        : 'Normal: 62–106 µmol/L (male), 44–97 (female)';
+      document.getElementById('creatinine').placeholder = u === 'mg' ? 'e.g. 1.0' : 'e.g. 88';
+      calculate();
+    }
+
+    // ── SEX ──
+    function setSex(s) {
+      sex = s;
+      document.getElementById('btnMale').classList.toggle('active', s === 'male');
+      document.getElementById('btnFemale').classList.toggle('active', s === 'female');
+      calculate();
+    }
+
+    // ── FORMULAS ──
+    function toMgDl(val) { return unit === 'umol' ? val / 88.4 : val; }
+
+    function calcCkdEpi(age, scrMg, isFemale) {
+      const k = isFemale ? 0.7 : 0.9;
+      const a = isFemale ? -0.241 : -0.302;
+      const sex_mult = isFemale ? 1.012 : 1.0;
+      const ratio = scrMg / k;
+      return 142 * Math.pow(Math.min(ratio, 1), a) * Math.pow(Math.max(ratio, 1), -1.200) * Math.pow(0.9938, age) * sex_mult;
+    }
+
+    function calcCG(age, scrMg, weight, isFemale) {
+      return ((140 - age) * weight * (isFemale ? 0.85 : 1)) / (72 * scrMg);
+    }
+
+    function calcMDRD(age, scrMg, isFemale) {
+      return 175 * Math.pow(scrMg, -1.154) * Math.pow(age, -0.203) * (isFemale ? 0.742 : 1);
+    }
+
+    function getCKDStage(egfr) {
+      if (egfr >= 90) return { stage: 'G1', color: 'var(--g1)', desc: 'Normal or high kidney function', advice: 'Monitor if risk factors present (diabetes, hypertension, family history)' };
+      if (egfr >= 60) return { stage: 'G2', color: 'var(--g2)', desc: 'Mildly decreased kidney function', advice: 'Lifestyle modification; control BP and blood glucose' };
+      if (egfr >= 45) return { stage: 'G3a', color: 'var(--g3a)', desc: 'Mildly to moderately decreased', advice: 'Nephrology referral; review and adjust drug doses' };
+      if (egfr >= 30) return { stage: 'G3b', color: 'var(--g3b)', desc: 'Moderately to severely decreased', advice: 'Nephrology referral; avoid nephrotoxic drugs; check for complications' };
+      if (egfr >= 15) return { stage: 'G4', color: 'var(--g4)', desc: 'Severely decreased kidney function', advice: 'Prepare for renal replacement therapy; urgent nephrology review' };
+      return { stage: 'G5', color: 'var(--g5)', desc: 'Kidney failure (ESKD)', advice: 'Evaluate for dialysis or kidney transplantation' };
+    }
+
+    function highlightRow(stage) {
+      ['G1','G2','G3a','G3b','G4','G5'].forEach(s => {
+        const row = document.getElementById('row-' + s);
+        if (row) row.style.background = (s === stage) ? '#eff6ff' : '';
+      });
+    }
+
+    function renderBadge(containerId, descId, ckd) {
+      document.getElementById(containerId).innerHTML =
+        `<span class="ckd-badge" style="background:${ckd.color}">CKD Stage ${ckd.stage}</span>`;
+      document.getElementById(descId).textContent = `${ckd.desc} — ${ckd.advice}`;
+    }
+
+    // ── MAIN CALCULATE ──
+    function calculate() {
+      const age = parseFloat(document.getElementById('age').value);
+      const scrRaw = parseFloat(document.getElementById('creatinine').value);
+      const weight = parseFloat(document.getElementById('weight').value);
+      const isFemale = sex === 'female';
+
+      const panel = document.getElementById('resultPanel');
+      const singleDiv = document.getElementById('singleResult');
+      const allDiv = document.getElementById('allResult');
+
+      if (!age || !scrRaw || age < 1 || scrRaw <= 0) {
+        panel.classList.remove('show');
+        return;
+      }
+
+      const scrMg = toMgDl(scrRaw);
+      panel.classList.add('show');
+
+      if (formula === 'all') {
+        if (!weight || weight <= 0) {
+          document.getElementById('allCg').textContent = '—';
+        }
+        const ckdepi = calcCkdEpi(age, scrMg, isFemale);
+        const mdrd = calcMDRD(age, scrMg, isFemale);
+        const cg = (weight && weight > 0) ? calcCG(age, scrMg, weight, isFemale) : null;
+
+        singleDiv.style.display = 'none';
+        allDiv.style.display = 'block';
+  trackCalc('egfr', { formula: formula, value: ckdepi ? ckdepi.toFixed(1) : null });
+        document.getElementById('allCkdepi').textContent = ckdepi.toFixed(1);
+        document.getElementById('allCg').textContent = cg ? cg.toFixed(1) : '—';
+        document.getElementById('allMdrd').textContent = mdrd.toFixed(1);
+
+        const ckd = getCKDStage(ckdepi);
+        renderBadge('ckdBadgeAll', 'ckdDescAll', ckd);
+        highlightRow(ckd.stage);
+
+      } else {
+        singleDiv.style.display = 'block';
+        allDiv.style.display = 'none';
+
+        let val, label;
+        if (formula === 'ckdepi') {
+          val = calcCkdEpi(age, scrMg, isFemale);
+          label = 'eGFR (CKD-EPI 2021)';
+        } else if (formula === 'cg') {
+          if (!weight || weight <= 0) { panel.classList.remove('show'); return; }
+          val = calcCG(age, scrMg, weight, isFemale);
+          label = 'CrCl (Cockcroft-Gault)';
+        } else {
+          val = calcMDRD(age, scrMg, isFemale);
+          label = 'eGFR (MDRD)';
+        }
+
+        document.getElementById('resultLabel').textContent = label;
+        document.getElementById('resultValue').textContent = val.toFixed(1);
+        document.getElementById('resultUnit').textContent = formula === 'cg' ? 'mL/min' : 'mL/min/1.73m²';
+
+        const ckd = getCKDStage(val);
+        renderBadge('ckdBadge', 'ckdDesc', ckd);
+        highlightRow(ckd.stage);
+      }
+    }
+  </script>
+
+</body>
+</html>

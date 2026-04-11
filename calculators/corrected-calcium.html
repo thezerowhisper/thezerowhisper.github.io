@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="burn-parkland">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Burn TBSA &amp; Parkland Formula Calculator | Rule of Nines — Adult &amp; Pediatric</title>
+<meta name="description" content="Calculate total body surface area (TBSA) burned using the Rule of Nines and determine 24-hour fluid resuscitation requirements with the Parkland Formula. Supports adult and pediatric patients."/>
+<meta name="keywords" content="Parkland formula calculator India, Rule of Nines burn assessment, TBSA burn calculator, burn fluid resuscitation, pediatric burn Lund Browder, burn calculator India, 4mL kg TBSA formula"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/burn-calculator"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Burn TBSA &amp; Parkland Formula Calculator"/>
+<meta property="og:description" content="Free online burn area calculator using Rule of Nines. Automatically calculates Parkland formula fluid resuscitation for adults and pediatric patients."/>
+<meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/burn-calculator"/>
+<meta property="og:site_name" content="Clinical Calculators India"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Burn Calculator — Rule of Nines &amp; Parkland Formula"/>
+<meta name="twitter:description" content="Calculate burn TBSA and 24-hour fluid resuscitation needs. Supports adult and pediatric Rule of Nines with Parkland formula output."/>
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Burn TBSA and Parkland Formula Fluid Calculator",
+    "description": "A clinical emergency tool for estimating burn percentage using the Rule of Nines and calculating 24-hour fluid resuscitation needs using the Parkland Formula.",
+    "url": "https://thezerowhisper.github.io/medical-calculators/burn-calculator",
+    "lastReviewed": "2026-03-25",
+    "reviewedBy": {
+      "@type": "MedicalOrganization",
+      "name": "American Burn Association"
+    },
+    "audience": { "@type": "MedicalAudience", "audienceType": "Clinician, Emergency Nurse, Surgeon, Pediatrician" },
+    "medicalSpecialty": "Emergency Medicine, Plastic Surgery, Pediatrics, Critical Care"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Parkland Formula for burn fluid resuscitation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Parkland Formula calculates 24-hour crystalloid fluid requirements for patients with significant burns: Total fluid (mL) = 4 mL × body weight (kg) × %TBSA burned. Half the total volume is administered in the first 8 hours (from the time of injury, not hospital arrival), and the remaining half over the next 16 hours. Lactated Ringer's solution is the preferred fluid. The formula was developed by Charles Baxter at Parkland Memorial Hospital in the 1960s."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Rule of Nines for burn assessment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Rule of Nines is a rapid burn area estimation method that divides the body into regions each representing 9% (or multiples) of the total body surface area: Head and neck = 9%, each arm = 9%, anterior trunk = 18%, posterior trunk = 18%, each leg = 18%, and genitalia = 1% (adults). For infants and children, the head is proportionally larger (18%) and the legs proportionally smaller (14% each), reflecting differences in body surface area distribution with age."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should the Parkland formula be applied?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fluid resuscitation with the Parkland Formula is indicated for adults with burns covering more than 15% TBSA, and for children with burns greater than 10% TBSA. It is not needed for superficial (first-degree) burns, which are excluded from TBSA calculations. Deep partial-thickness and full-thickness burns are the primary targets for resuscitation. The formula provides a starting estimate — urine output (0.5 mL/kg/hr in adults, 1 mL/kg/hr in children) is the primary titration endpoint."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What burns are excluded from TBSA calculation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Superficial (first-degree) burns — equivalent to sunburn, with erythema only and no blistering — are excluded from TBSA calculations used for fluid resuscitation purposes. Only partial-thickness (second-degree) and full-thickness (third-degree) burns are counted. Including superficial burns would overestimate fluid requirements and risk iatrogenic fluid overload."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the 8-hour clock for fluid resuscitation from injury or from arrival?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 8-hour clock for the first half of Parkland fluid runs from the TIME OF INJURY, not from hospital arrival. If a patient arrives 2 hours after the burn injury occurred, only 6 hours remain to deliver the first half of the calculated fluid. This distinction is critical to avoid under-resuscitation. If a patient arrives late, the first-half volume must be infused more rapidly to complete delivery by the 8-hour mark from injury time."
+        }
+      }
+    ]
+  }
+]
+</script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d3748;line-height:1.6}
+.pw{max-width:850px;margin:auto}
+.hero{background:linear-gradient(135deg,#742a2a,#c53030);border-radius:20px;padding:36px;color:white;margin-bottom:20px;text-align:center}
+.hero-sub{font-size:.68rem;font-weight:700;letter-spacing:.12em;margin-bottom:10px;opacity:.8;text-transform:uppercase}
+.hero h1{font-size:1.9rem;font-weight:800;margin-bottom:8px}
+.hero p{opacity:.85}
+.card{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+.card h2{font-size:1rem;font-weight:700;color:#742a2a;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #fed7d7}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:16px}
+.form-group label{font-size:.78rem;font-weight:700;color:#4a5568;display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.03em}
+.form-group input,.form-group select{width:100%;border:2px solid #e2e8f0;border-radius:10px;padding:12px;font-size:.97rem;outline:none;background:#f8fafc;transition:border-color .2s}
+.form-group input:focus{border-color:#e53e3e}
+
+.nines-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#fff5f5;padding:14px;border-radius:12px;margin-bottom:10px}
+.nines-item label{font-size:.73rem;font-weight:700;color:#9b2c2c;display:block;margin-bottom:5px}
+.nines-item input{width:100%;border:2px solid #fed7d7;border-radius:8px;padding:9px;font-size:.95rem;outline:none;background:white}
+.nines-item input:focus{border-color:#e53e3e}
+.nines-hint{font-size:.75rem;color:#718096;margin-top:8px;padding:0 2px}
+
+/* FIXED: was result-box with no matching CSS class */
+.res-box{display:none;margin-top:24px;border-radius:14px;overflow:hidden;border:2px solid #feb2b2;animation:fadeIn .3s}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.res-header{padding:16px;font-weight:800;color:white;text-align:center;font-size:1.2rem;background:#c53030}
+.res-grid{display:grid;grid-template-columns:repeat(2,1fr);background:white;padding:20px;gap:12px}
+.rg-item{background:#fff5f5;padding:15px;border-radius:12px;text-align:center}
+.rg-item .lbl{font-size:.65rem;font-weight:700;color:#9b2c2c;text-transform:uppercase;margin-bottom:4px}
+.rg-item .val{font-size:1.4rem;font-weight:800;color:#1a202c}
+.timing-note{margin:0 20px 16px;padding:14px;background:#ebf8ff;border-left:5px solid #3182ce;border-radius:10px;font-size:.9rem;line-height:1.5}
+.btn-row{display:flex;gap:10px;padding:0 20px 20px}
+.btn{flex:1;padding:11px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:.88rem}
+.btn-print{background:#edf2f7;color:#2d3748}
+.btn-wa{background:#25D366;color:white}
+
+/* Reference table */
+.ref-table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:10px}
+.ref-table th{background:#742a2a;color:white;padding:9px 10px;text-align:left}
+.ref-table td{padding:8px 10px;border-bottom:1px solid #e2e8f0}
+.ref-table tr:nth-child(even) td{background:#fff5f5}
+
+.content-section{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
+.content-section h2{font-size:1.1rem;font-weight:700;color:#742a2a;margin-bottom:12px}
+.content-section h3{font-size:.95rem;font-weight:700;color:#2d3748;margin:14px 0 6px}
+.content-section p{font-size:.9rem;color:#4a5568;margin-bottom:10px}
+.content-section ul{padding-left:20px;margin-bottom:10px}
+.content-section ul li{font-size:.9rem;color:#4a5568;margin-bottom:5px}
+.callout{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 14px;border-radius:8px;font-size:.88rem;color:#742a2a;margin-top:12px}
+
+.footer-cite{font-size:.75rem;color:#718096;text-align:center;margin-top:20px;padding:10px}
+@media(max-width:600px){.res-grid{grid-template-columns:1fr}.btn-row{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<main class="pw">
+<div class="hero">
+  <div class="hero-sub">Emergency Burn Management Tool</div>
+  <h1>Burn &amp; Parkland Calculator</h1>
+  <p>TBSA Estimation (Rule of Nines) &amp; 24-Hour Fluid Resuscitation — Adult &amp; Pediatric</p>
+</div>
+
+<div class="card">
+  <h2>1. Patient Details</h2>
+  <div class="form-grid">
+    <div class="form-group">
+      <label>Age Group</label>
+      <select id="age" onchange="calc()">
+        <option value="adult">Adult / Child (&gt;8 years)</option>
+        <option value="peds">Infant / Child (0–8 years)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Body Weight (kg)</label>
+      <input type="number" id="weight" placeholder="e.g. 70" oninput="calc()">
+    </div>
+  </div>
+
+  <h2>2. TBSA — Rule of Nines (Exclude Superficial Burns)</h2>
+  <div class="nines-grid">
+    <div class="nines-item"><label>Head &amp; Neck</label><input type="number" class="part" id="head" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
+    <div class="nines-item"><label>Anterior Torso (Front)</label><input type="number" class="part" id="front" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
+    <div class="nines-item"><label>Posterior Torso (Back)</label><input type="number" class="part" id="back" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
+    <div class="nines-item"><label>Right Arm (full)</label><input type="number" class="part" id="rarm" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
+    <div class="nines-item"><label>Left Arm (full)</label><input type="number" class="part" id="larm" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
+    <div class="nines-item"><label>Right Leg (full)</label><input type="number" class="part" id="rleg" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
+    <div class="nines-item"><label>Left Leg (full)</label><input type="number" class="part" id="lleg" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
+    <div class="nines-item"><label>Genitalia (Adults)</label><input type="number" class="part" id="gen" value="0" min="0" max="1" step="0.1" oninput="calc()"></div>
+  </div>
+  <p class="nines-hint">Enter 1 for full area, or decimals for partial involvement (e.g. 0.5 = half the area). Do not include first-degree (superficial) burns.</p>
+</div>
+
+<div id="result" class="res-box">
+  <div class="res-header">FLUID RESUSCITATION PLAN (PARKLAND FORMULA)</div>
+  <div class="res-grid">
+    <div class="rg-item"><div class="lbl">Total TBSA Burned</div><div id="res-tbsa" class="val">—</div></div>
+    <div class="rg-item"><div class="lbl">Total 24h Fluid</div><div id="res-total" class="val">—</div></div>
+    <div class="rg-item"><div class="lbl">First 8 Hours</div><div id="res-8h" class="val">—</div></div>
+    <div class="rg-item"><div class="lbl">Next 16 Hours</div><div id="res-16h" class="val">—</div></div>
+  </div>
+  <div class="timing-note">
+    <strong>⏱ Important:</strong> The 8-hour clock runs from the <strong>time of injury</strong>, not hospital arrival. Use <strong>Lactated Ringer's solution</strong>. Titrate to urine output: 0.5 mL/kg/hr (adult) or 1 mL/kg/hr (child).
+  </div>
+  <div class="btn-row">
+    <button class="btn btn-print" onclick="trackPrint('burn-parkland'); window.print()">🖨 Print Fluid Plan</button>
+    <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
+  </div>
+</div>
+
+<!-- Rule of Nines Reference -->
+<div class="content-section">
+  <h2>Rule of Nines — Quick Reference</h2>
+  <table class="ref-table">
+    <tr><th>Body Region</th><th>Adult % TBSA</th><th>Infant/Child % TBSA</th></tr>
+    <tr><td>Head &amp; Neck</td><td>9%</td><td>18% (larger proportionally)</td></tr>
+    <tr><td>Anterior Trunk (Chest + Abdomen)</td><td>18%</td><td>18%</td></tr>
+    <tr><td>Posterior Trunk (Back)</td><td>18%</td><td>18%</td></tr>
+    <tr><td>Each Arm</td><td>9%</td><td>9%</td></tr>
+    <tr><td>Each Leg</td><td>18%</td><td>14% (smaller proportionally)</td></tr>
+    <tr><td>Genitalia</td><td>1%</td><td>Not included</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>100%</strong></td><td><strong>100%</strong></td></tr>
+  </table>
+  <div class="callout">⚠️ Only partial-thickness (2nd degree) and full-thickness (3rd degree) burns are included in TBSA. Exclude superficial erythema (sunburn-like, 1st degree).</div>
+</div>
+
+<!-- Educational Content -->
+<div class="content-section">
+  <h2>Understanding Burn Assessment &amp; the Parkland Formula</h2>
+  <p>Severe burns cause massive fluid shifts from the intravascular compartment into tissues due to increased capillary permeability — a process that begins within minutes of injury and peaks at approximately 8–12 hours. Without prompt intravenous fluid resuscitation, this leads to hypovolemic shock, end-organ failure, and death. The Parkland Formula, developed by Dr. Charles Baxter in the 1960s, provides a simple evidence-based starting point for resuscitation in burns covering more than 15% TBSA in adults (or 10% in children).</p>
+  <p>The formula: <strong>4 mL × weight (kg) × %TBSA</strong> gives the total crystalloid volume needed over 24 hours. Half is delivered in the first 8 hours from injury, and the second half over the remaining 16 hours. This front-loading reflects the peak capillary leak period in early burn injury.</p>
+
+  <h3>Fluid Choice</h3>
+  <p>Lactated Ringer's solution (also called Hartmann's solution) is universally preferred over normal saline. Large volumes of 0.9% saline cause hyperchloremic metabolic acidosis, which can complicate the already complex metabolic derangement in burn patients. Colloids (albumin, fresh frozen plasma) are sometimes added after 8–12 hours in some protocols, but Lactated Ringer's alone is the standard first-line resuscitation fluid.</p>
+
+  <h3>Titration — Urine Output is the Target</h3>
+  <p>The Parkland calculation is a starting estimate only. Fluid rate must be adjusted based on urine output, measured hourly via catheter:</p>
+  <ul>
+    <li><strong>Adults:</strong> target 0.5 mL/kg/hr</li>
+    <li><strong>Children:</strong> target 1 mL/kg/hr</li>
+    <li>Oliguria → increase rate; excessive output → decrease rate</li>
+    <li>Hemoglobinuria (port-wine urine in electrical or chemical burns) → target higher output of 1–2 mL/kg/hr to protect kidneys</li>
+  </ul>
+
+  <h3>Burns Not Requiring Parkland Resuscitation</h3>
+  <ul>
+    <li>Superficial (first-degree) burns — excluded from TBSA entirely</li>
+    <li>Burns &lt;15% TBSA in adults — oral rehydration generally sufficient</li>
+    <li>Burns &lt;10% TBSA in children — oral rehydration generally sufficient</li>
+    <li>Burns to palms, ears, face (first degree only) — no resuscitation needed</li>
+  </ul>
+
+  <h3>Pediatric Considerations</h3>
+  <p>Children have proportionally larger head surface areas and smaller legs than adults, so the standard Rule of Nines is modified. The Lund and Browder chart provides the most accurate TBSA estimate for children — particularly neonates and infants — by accounting for age-related body proportion changes. Additionally, children receive maintenance dextrose-containing fluids alongside their Parkland volume to prevent hypoglycemia, which adults do not routinely need.</p>
+</div>
+
+<!-- FAQ -->
+<div class="content-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>What is the Parkland formula?</h3>
+  <p>The Parkland Formula calculates the volume of intravenous crystalloid fluid required in the first 24 hours after a significant burn injury: 4 mL × body weight in kg × percentage TBSA burned. Half the volume is given in the first 8 hours from the time of injury, and the second half over the following 16 hours.</p>
+
+  <h3>When should I start resuscitation from — injury or arrival?</h3>
+  <p>Always count from the time of injury. If a patient arrives 3 hours after a burn, only 5 hours remain to deliver the first half of the calculated volume. The rate should be increased accordingly to meet the 8-hour deadline from the time of burn, not from ED arrival.</p>
+
+  <h3>What does TBSA stand for?</h3>
+  <p>TBSA stands for Total Body Surface Area. In burn medicine, %TBSA specifically refers to the percentage of the body surface that has sustained partial-thickness (second-degree) or full-thickness (third-degree) burns. Superficial (first-degree) burns are excluded.</p>
+
+  <h3>Is the Parkland formula used for chemical and electrical burns?</h3>
+  <p>The Parkland Formula can serve as a baseline for chemical and electrical burns, but these injuries often underestimate their true depth and extent, and electrical injuries cause deep tissue damage not visible at the surface. Electrical burns typically require higher fluid volumes and a urine output target of 1–2 mL/kg/hr to protect against myoglobin-induced renal tubular injury.</p>
+</div>
+
+<div class="footer-cite">
+  References: American Burn Association (ABA) Practice Guidelines | Baxter CR. Fluid volume and electrolyte changes in burn patients. 1974 | Wallace Rule of Nines | Lund &amp; Browder Chart. This tool provides estimates only — adjust fluids based on urine output and clinical response.
+</div>
+  <section class="card">
+    <div class="card-title">Related Tools</div>
+    <div class="related-grid">
+      <a href="https://thezerowhisper.github.io/medical-calculators/news2" class="related-card" ><div class="rc-name">NEWS2 Score</div><div class="rc-desc">Early warning monitoring</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/gcs-calculator" class="related-card" ><div class="rc-name">GCS Calculator</div><div class="rc-desc">Neurological status</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/wells-score" class="related-card" ><div class="rc-name">Wells Score</div><div class="rc-desc">DVT/PE in burns</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
+    </div>
+  </section>
+  </main>
+
+<script>
+const NINES={
+  adult:{head:9,front:18,back:18,rarm:9,larm:9,rleg:18,lleg:18,gen:1},
+  peds:{head:18,front:18,back:18,rarm:9,larm:9,rleg:14,lleg:14,gen:0}
+};
+
+function calc(){
+  const ageGroup=document.getElementById("age").value;
+  const weight=parseFloat(document.getElementById("weight").value);
+  const areas=NINES[ageGroup];
+  let totalTBSA=0;
+  ['head','front','back','rarm','larm','rleg','lleg','gen'].forEach(id=>{
+    totalTBSA+=parseFloat(document.getElementById(id).value||0)*areas[id];
+  });
+  if(totalTBSA>100) totalTBSA=100;
+  if(isNaN(weight)||weight<=0||totalTBSA<=0){
+    document.getElementById("result").style.display="none"; return;
+  }
+  const totalFluid=4*weight*totalTBSA;
+  const first8h=totalFluid/2;
+  const next16h=totalFluid/2;
+  document.getElementById("res-tbsa").textContent=totalTBSA.toFixed(1)+"%";
+  document.getElementById("res-total").textContent=Math.round(totalFluid)+" mL";
+  document.getElementById("res-8h").textContent=Math.round(first8h)+" mL ("+Math.round(first8h/8)+" mL/hr)";
+  document.getElementById("res-16h").textContent=Math.round(next16h)+" mL ("+Math.round(next16h/16)+" mL/hr)";
+  document.getElementById("result").style.display="block";
+  trackCalc('burn-parkland', { tbsa: parseFloat(totalTBSA.toFixed(1)), fluid_ml: Math.round(totalFluid) });
+
+  document.getElementById("share-btn").onclick=()=>{
+    const text=`Burn Resuscitation Plan:\nTBSA: ${totalTBSA.toFixed(1)}%\nTotal 24h Fluid: ${Math.round(totalFluid)} mL\nFirst 8h: ${Math.round(first8h)} mL (${Math.round(first8h/8)} mL/hr)\nNext 16h: ${Math.round(next16h)} mL (${Math.round(next16h/16)} mL/hr)\nCalculated at Clinical Calculators India`;
+    try{uTrack('share_whatsapp',{tool:'burn-parkland'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
+  };
+}
+</script>
+</body>
+</html>
