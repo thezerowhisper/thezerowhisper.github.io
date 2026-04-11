@@ -1,364 +1,793 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="arv-dose">
+<html lang="en" data-tool="bmi">
 <head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="/shared.css"/>
+<title>BMI Calculator India | Indian & WHO Cutoffs | Adult & Child BMI</title>
+<meta name="description" content="Free BMI calculator for India using Indian-specific cutoffs (overweight BMI 23, obese BMI 25) and WHO standards. Covers adults and children. Includes waist circumference risk, ideal weight range, and health risk assessment."/>
+<meta name="keywords" content="BMI calculator India, Indian BMI cutoffs, BMI calculator kg cm India, overweight BMI India, obese BMI India, child BMI calculator India, waist circumference risk India, ideal weight calculator India, WHO BMI India comparison"/>
+<meta name="robots" content="index, follow"/>
+  <title>BMI Calculator India | Indian Cutoffs Overweight ≥23 Obese ≥25 | Free Tool</title>
+<meta name="description" content="BMI calculator with Indian cutoffs — overweight ≥23, obese ≥25. Waist circumference risk, ideal weight range, WHO comparison. Built for Indian adults and children."/>
+<meta name="keywords" content="BMI calculator India, Indian BMI cutoff, overweight BMI 23 India, obese BMI 25 India, waist circumference risk India, BMI calculator Indian guidelines, free BMI tool India"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/bmi"/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script src="assets/umami-events.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/shared.css"/>
-  <title>ARV Dose Calculator — Anti-Rabies Vaccine & RIG Dose India</title>
-  <meta name="description" content="Free ARV (Anti-Rabies Vaccine) dose calculator for India. Calculate RIG dose by weight, wound category (I/II/III), IM Essen regimen (Days 0,3,7,28), and intradermal schedule. NCDC & WHO 2018 guidelines." />
-  <meta name="keywords" content="ARV dose calculator, anti rabies vaccine dose calculator, ARV calculator India, rabies vaccine dose, RIG dose calculator, rabies immunoglobulin dose by weight, dog bite ARV dose, Essen regimen calculator, intradermal rabies vaccine, category III dog bite, NCDC rabies guidelines, ARV schedule India, rabies PEP calculator, anti rabies vaccine schedule days 0 3 7 28" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="ARV Dose Calculator — Anti-Rabies Vaccine and RIG Dose India" />
-  <meta property="og:description" content="Calculate ARV dose, RIG dose by weight, wound category. Essen IM and intradermal schedules. NCDC India guidelines." />
-  <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" />
-  <meta property="og:site_name" content="Medical Calculators" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ARV Dose Calculator — Anti-Rabies Vaccine India" />
-  <meta name="twitter:description" content="RIG dose by weight, wound category, Essen IM and ID schedules. Free ARV calculator for India." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thezerowhisper.github.io/medical-calculators/"},{"@type":"ListItem","position":2,"name":"Infectious Disease","item":"https://thezerowhisper.github.io/medical-calculators/#infectious"},{"@type":"ListItem","position":3,"name":"ARV Dose Calculator","item":"https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator"}]},{"@type":"MedicalWebPage","name":"ARV Dose Calculator — Anti-Rabies Vaccine","url":"https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator","description":"Calculate anti-rabies vaccine dose schedule and RIG dose by body weight for rabies PEP in India.","specialty":"Infectious Disease"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the ARV dose schedule in India?","acceptedAnswer":{"@type":"Answer","text":"Standard IM Essen regimen: 4 doses on Days 0, 3, 7, 28. Each dose is 0.5 mL (PVRV) or 1.0 mL (PCECV) IM in the deltoid."}},{"@type":"Question","name":"What is the RIG dose for rabies?","acceptedAnswer":{"@type":"Answer","text":"HRIG: 20 IU/kg body weight. ERIG: 40 IU/kg body weight. Infiltrate around wound on Day 0 only."}},{"@type":"Question","name":"Which categories need ARV and RIG?","acceptedAnswer":{"@type":"Answer","text":"Category I: No PEP. Category II: ARV only. Category III: ARV + RIG on Day 0."}},{"@type":"Question","name":"What is the intradermal ARV regimen?","acceptedAnswer":{"@type":"Answer","text":"WHO 2018 ID regimen: 0.1 mL at 2 sites on Days 0, 3, 7. More economical, fewer vials used."}},{"@type":"Question","name":"Is RIG needed if previously vaccinated?","acceptedAnswer":{"@type":"Answer","text":"No. Previously vaccinated patients need only 2-dose booster (Day 0 and 3), no RIG required."}},{"@type":"Question","name":"What first aid is needed after a dog bite?","acceptedAnswer":{"@type":"Answer","text":"Wash wound with soap and running water for 15 minutes, then apply povidone-iodine. Seek medical attention immediately."}},{"@type":"Question","name":"What is the difference between HRIG and ERIG?","acceptedAnswer":{"@type":"Answer","text":"HRIG: 20 IU/kg, lower risk, preferred. ERIG: 40 IU/kg, requires skin test, cheaper and widely available in India."}},{"@type":"Question","name":"What is the ARV dose for children?","acceptedAnswer":{"@type":"Answer","text":"Same vaccine volume as adults: 0.5 mL (PVRV) or 1.0 mL (PCECV). Inject in anterolateral thigh for children under 2 years. RIG dose is weight-based."}}]}]}
-  </script>
-  <style>
-    :root{--bg:#f0f4f8;--surface:#fff;--surface2:#f5f8fc;--border:#dce4ef;--primary:#b45309;--primary-light:#f59e0b;--primary-dark:#78350f;--text:#0f1e33;--text-muted:#5a6a82;--text-light:#8fa0b8;--cat1:#16a34a;--cat2:#d97706;--cat3:#dc2626;--radius:14px;--radius-sm:8px;--shadow:0 2px 16px rgba(15,30,51,.09)}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-    .topbar{background:var(--primary-dark);color:#fff;padding:10px 20px;font-size:.82rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-    .topbar a{color:#fde68a;text-decoration:none}.topbar a:hover{color:#fff}
-    .breadcrumb{display:flex;gap:6px;align-items:center}.breadcrumb span{color:#9ca3af}
-    .hero{background:linear-gradient(135deg,#78350f 0%,#b45309 45%,#1e3a5f 100%);color:#fff;padding:48px 20px 56px;text-align:center;position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
-    .hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:4px 14px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
-    .hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.2;margin-bottom:10px}
-    .hero p{font-size:clamp(.92rem,2vw,1.05rem);color:rgba(255,255,255,.82);max-width:640px;margin:0 auto 20px}
-    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-    .hero-tags span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:3px 12px;font-size:.78rem}
-    .page{max-width:920px;margin:0 auto;padding:32px 16px 64px}
-    .card{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:28px;margin-bottom:24px}
-    .card-title{font-size:1rem;font-weight:700;color:var(--primary);letter-spacing:.03em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px}
-    .card-title::before{content:'';display:block;width:4px;height:18px;background:var(--primary-light);border-radius:4px}
-    .scheduler-promo{background:linear-gradient(135deg,#0f1e33 0%,#1d4ed8 100%);color:#fff;border-radius:var(--radius);padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:24px}
-    .scheduler-promo .sp-title{font-size:1.05rem;font-weight:800;margin-bottom:4px}
-    .scheduler-promo .sp-sub{font-size:.84rem;opacity:.82}
-    .scheduler-promo a{background:#f59e0b;color:#0f1e33;text-decoration:none;font-weight:800;font-size:.9rem;padding:10px 20px;border-radius:30px;white-space:nowrap;flex-shrink:0;transition:background .18s}
-    .scheduler-promo a:hover{background:#fbbf24}
-    .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
-    @media(max-width:540px){.cat-grid{grid-template-columns:1fr}}
-    .cat-btn{border:2px solid var(--border);background:var(--surface2);border-radius:var(--radius-sm);padding:14px 10px;cursor:pointer;text-align:center;font-family:'Outfit',sans-serif;transition:all .2s}
-    .cat-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-    .cat-btn .cb-num{font-size:1.4rem;font-weight:800;margin-bottom:4px}
-    .cat-btn .cb-name{font-size:.82rem;font-weight:700;margin-bottom:6px}
-    .cat-btn .cb-desc{font-size:.74rem;color:var(--text-muted);line-height:1.4}
-    .cat-btn.cat1 .cb-num{color:var(--cat1)}.cat-btn.cat2 .cb-num{color:var(--cat2)}.cat-btn.cat3 .cb-num{color:var(--cat3)}
-    .cat-btn.active.cat1{background:#f0fdf4;border-color:var(--cat1)}.cat-btn.active.cat2{background:#fffbeb;border-color:var(--cat2)}.cat-btn.active.cat3{background:#fef2f2;border-color:var(--cat3)}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    @media(max-width:520px){.form-row{grid-template-columns:1fr}}
-    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-    .field label{font-size:.84rem;font-weight:600;color:var(--text-muted)}
-    .field input,.field select{background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:11px 14px;font-size:.97rem;font-family:'Outfit',sans-serif;color:var(--text);outline:none;width:100%;transition:border-color .18s,box-shadow .18s}
-    .field select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235a6a82' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
-    .field input:focus,.field select:focus{border-color:var(--primary-light);box-shadow:0 0 0 3px rgba(245,158,11,.12)}
-    .field .hint{font-size:.74rem;color:var(--text-light)}
-    .result-section{display:none;margin-top:8px}
-    .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
-    @media(max-width:560px){.result-grid{grid-template-columns:1fr 1fr}}
-    .r-box{background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center}
-    .r-box.primary{background:#fffbeb;border-color:#fcd34d}
-    .r-box .rb-label{font-size:.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
-    .r-box .rb-val{font-family:'JetBrains Mono',monospace;font-size:1.7rem;font-weight:700;color:var(--primary-dark);line-height:1;margin-bottom:3px}
-    .r-box .rb-unit{font-size:.74rem;color:var(--text-light)}
-    .regimen-steps{display:flex;flex-direction:column;gap:10px}
-    .step-row{display:grid;grid-template-columns:72px 1fr;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
-    .step-row.rig{border-color:#fca5a5;background:#fef2f2}
-    .step-day{background:var(--primary-dark);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 8px}
-    .step-row.rig .step-day{background:var(--cat3)}
-    .step-day .day-num{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1rem}
-    .step-day .day-label{font-size:.62rem;opacity:.8}
-    .step-content{padding:12px 14px}
-    .step-content .sc-title{font-weight:700;font-size:.9rem;margin-bottom:3px}
-    .step-content .sc-dose{font-family:'JetBrains Mono',monospace;font-size:.84rem;color:var(--primary);margin-bottom:3px}
-    .step-content .sc-note{font-size:.78rem;color:var(--text-muted)}
-    .alert{border-radius:var(--radius-sm);padding:13px 16px;font-size:.86rem;line-height:1.65;margin-bottom:12px;display:flex;gap:10px;align-items:flex-start}
-    .alert.cat1{background:#f0fdf4;border:1.5px solid #86efac;color:#14532d}
-    .alert.cat2{background:#fffbeb;border:1.5px solid #fcd34d;color:#78350f}
-    .alert.cat3{background:#fef2f2;border:1.5px solid #fca5a5;color:#7f1d1d}
-    .alert.info{background:#eff6ff;border:1.5px solid #bfdbfe;color:#1e3a5f}
-    .alert .al-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
-    .cat-table,.rig-table{width:100%;border-collapse:collapse;font-size:.84rem}
-    .cat-table th,.rig-table th{background:var(--surface2);font-weight:700;padding:9px 12px;text-align:left;color:var(--text-muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--border)}
-    .cat-table td,.rig-table td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
-    .cat-table tr:last-child td,.rig-table tr:last-child td{border-bottom:none}
-    .rig-table td{font-family:'JetBrains Mono',monospace;font-size:.82rem}.rig-table td:first-child{font-family:'Outfit',sans-serif}
-    .cat-badge{display:inline-block;padding:2px 10px;border-radius:10px;font-weight:700;font-size:.78rem;color:#fff}
-    .cb-I{background:var(--cat1)}.cb-II{background:var(--cat2)}.cb-III{background:var(--cat3)}
-    .step-lbl{font-size:.84rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px}
-    .faq-item{border-bottom:1px solid var(--border)}
-    .faq-q{width:100%;text-align:left;padding:15px 4px;font-size:.93rem;font-weight:600;background:none;border:none;cursor:pointer;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:'Outfit',sans-serif}
-    .faq-q:hover{color:var(--primary)}
-    .faq-icon{flex-shrink:0;width:22px;height:22px;background:var(--surface2);border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;transition:transform .2s,background .2s;color:var(--primary)}
-    .faq-item.open .faq-icon{transform:rotate(45deg);background:var(--primary);color:#fff;border-color:var(--primary)}
-    .faq-a{display:none;padding:0 4px 15px;font-size:.88rem;color:var(--text-muted);line-height:1.75}
-    .faq-item.open .faq-a{display:block}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
-    .related-card{background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;text-decoration:none;color:var(--text);transition:all .18s;display:block}
-    .related-card:hover{border-color:var(--primary-light);background:#fffbeb;transform:translateY(-2px);box-shadow:var(--shadow)}
-    .related-card .rc-name{font-size:.88rem;font-weight:700;margin-bottom:2px}
-    .related-card .rc-desc{font-size:.76rem;color:var(--text-muted)}
-    .disclaimer{background:#fff8ed;border:1px solid #fde68a;border-radius:var(--radius-sm);padding:14px 18px;font-size:.82rem;color:#92400e;line-height:1.6}
-    .site-footer{text-align:center;font-size:.8rem;color:var(--text-light);padding:24px 16px;border-top:1px solid var(--border);margin-top:32px}
-    .site-footer a{color:var(--primary);text-decoration:none}
-    @media(max-width:640px){.card{padding:20px 16px}}
-  </style>
+  <script src="assets/umami-events.js"></script>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_IN"/>
+<meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/bmi"/>
+<meta property="og:title" content="BMI Calculator India | Indian Cutoffs ≥23 Overweight, ≥25 Obese"/>
+<meta property="og:description" content="BMI calculator using Indian-specific cutoffs — overweight ≥23, obese ≥25. Includes waist risk, ideal weight range and WHO comparison. Free, no login."/>
+<meta property="og:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-bmi.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="675"/>
+<meta property="og:image:alt" content="BMI calculator India with Indian cutoffs — overweight at 23, obese at 25, waist circumference risk, free tool built by a doctor"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="BMI Calculator India | Indian Cutoffs ≥23 Overweight, ≥25 Obese"/>
+<meta name="twitter:description" content="BMI calculator using Indian-specific cutoffs — overweight ≥23, obese ≥25. Includes waist risk, ideal weight range and WHO comparison. Free, no login."/>
+<meta name="twitter:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-bmi.png"/>
+<meta name="twitter:image:alt" content="BMI calculator India with Indian cutoffs — overweight at 23, obese at 25, waist circumference risk, free tool built by a doctor"/>
+<link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/bmi"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "BMI Calculator India — Indian & WHO Cutoffs",
+  "description": "Free BMI calculator for India using Indian-specific and WHO cutoffs for adults and children with waist circumference risk assessment.",
+  "url": "https://thezerowhisper.github.io/medical-calculators/bmi",
+  "inLanguage": "en-IN",
+  "audience": {"@type": "MedicalAudience", "audienceType": "Patient, Physician"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the BMI cutoff for overweight in India?",
+      "acceptedAnswer": {"@type": "Answer", "text": "In India, overweight is defined as BMI ≥ 23 kg/m², which is lower than the WHO standard of 25. This is because Indians develop metabolic complications at lower BMI values."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is the BMI cutoff for obesity in India?",
+      "acceptedAnswer": {"@type": "Answer", "text": "In India, obesity is defined as BMI ≥ 25 kg/m². The WHO standard for obesity is BMI ≥ 30. Indian guidelines use lower cutoffs due to higher metabolic risk at lower BMI."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is normal BMI for Indians?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Normal BMI for Indians is 18.5 to 22.9 kg/m² as per Indian/Asian guidelines. This is narrower than the WHO normal range of 18.5–24.9."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is the healthy waist circumference for Indians?",
+      "acceptedAnswer": {"@type": "Answer", "text": "For Indian men, waist circumference should be below 90 cm. For Indian women, it should be below 80 cm. Values above these indicate abdominal obesity and increased cardiovascular risk."}
+    }
+  ]
+}
+</script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d3748}
+.page-wrapper{max-width:620px;margin:auto}
+
+.back-link{display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;color:#3182ce;font-size:0.9rem;font-weight:600;text-decoration:none}
+.back-link:hover{text-decoration:underline}
+
+.card{background:white;border-radius:16px;padding:36px;box-shadow:0 4px 24px rgba(0,0,0,0.08);margin-bottom:24px}
+.logo{font-size:2rem;text-align:center;margin-bottom:8px}
+h1{font-size:1.4rem;font-weight:700;color:#1a202c;text-align:center;margin-bottom:4px}
+.subtitle{text-align:center;font-size:0.88rem;color:#718096;margin-bottom:10px}
+
+.keyword-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:24px}
+.keyword-chip{background:#ebf8ff;color:#2b6cb0;font-size:0.72rem;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid #bee3f8}
+
+/* TABS */
+.age-tabs{display:flex;gap:0;margin-bottom:20px;border:2px solid #e2e8f0;border-radius:10px;overflow:hidden}
+.age-tab{flex:1;padding:10px;border:none;background:white;font-weight:600;font-size:0.9rem;cursor:pointer;color:#718096;transition:all 0.2s}
+.age-tab.active{background:#3182ce;color:white}
+
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-row{margin-bottom:14px}
+@media(max-width:480px){.form-grid{grid-template-columns:1fr}.card{padding:24px 18px}.info-section{padding:24px 18px}}
+
+label{display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:#2d3748}
+.label-opt{font-weight:400;font-size:0.78rem;color:#a0aec0;margin-left:6px}
+input[type=number],select{width:100%;padding:11px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:1rem;color:#2d3748;outline:none;transition:border-color 0.2s;background:white;font-family:inherit}
+input:focus,select:focus{border-color:#4299e1}
+
+.unit-toggle{display:flex;gap:8px;margin-bottom:14px}
+.unit-btn{flex:1;padding:8px;border:2px solid #e2e8f0;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;background:white;color:#718096;transition:all 0.2s}
+.unit-btn.active{border-color:#3182ce;background:#ebf8ff;color:#2b6cb0}
+
+.calc-btn{width:100%;padding:13px;background:#3182ce;color:white;border:none;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;transition:background 0.2s}
+.calc-btn:hover{background:#2b6cb0}
+
+/* ── RESULTS ── */
+.results{margin-top:28px;display:none}
+
+/* BMI DISPLAY */
+.bmi-hero{text-align:center;padding:24px 20px;border-radius:14px;margin-bottom:20px;border:2px solid}
+.bmi-number{font-size:3.2rem;font-weight:800;line-height:1}
+.bmi-unit{font-size:1rem;font-weight:500;margin-top:4px}
+.bmi-category{font-size:1.1rem;font-weight:700;margin-top:8px}
+
+/* BMI SCALE BAR */
+.scale-wrap{margin-bottom:20px}
+.scale-label{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
+.scale-bar{display:flex;height:14px;border-radius:8px;overflow:hidden;position:relative;margin-bottom:6px}
+.scale-segment{flex:1;position:relative}
+.scale-marker{position:absolute;top:-6px;width:3px;height:26px;background:#1a202c;border-radius:2px;transform:translateX(-50%);z-index:2}
+.scale-marker::after{content:attr(data-val);position:absolute;top:28px;left:50%;transform:translateX(-50%);font-size:0.7rem;font-weight:700;color:#1a202c;white-space:nowrap}
+.scale-ticks{display:flex;justify-content:space-between;font-size:0.68rem;color:#a0aec0;padding:0 2px;margin-top:20px}
+
+/* COMPARISON TABLE */
+.comparison-card{background:#f7fafc;border-radius:12px;padding:16px;margin-bottom:16px}
+.comparison-title{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px}
+.comparison-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #e2e8f0;font-size:0.88rem}
+.comparison-row:last-child{border-bottom:none}
+.comp-label{color:#4a5568;font-weight:500}
+.comp-values{display:flex;gap:10px}
+.comp-val{text-align:center;min-width:90px}
+.comp-val-number{font-weight:700;font-size:0.95rem}
+.comp-val-label{font-size:0.68rem;color:#718096;margin-top:1px}
+.comp-badge{display:inline-block;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:20px;margin-top:3px}
+
+/* DETAIL CARDS */
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+@media(max-width:400px){.detail-grid{grid-template-columns:1fr}}
+.detail-card{background:#f7fafc;border-radius:12px;padding:14px 16px;border:1.5px solid #e2e8f0}
+.detail-card-label{font-size:0.72rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
+.detail-card-value{font-size:1.15rem;font-weight:800;color:#2d3748}
+.detail-card-sub{font-size:0.75rem;color:#718096;margin-top:3px;line-height:1.4}
+
+/* WAIST */
+.waist-section{margin-bottom:16px}
+.waist-title{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px}
+.waist-result{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;border:1.5px solid}
+.waist-icon{font-size:1.4rem;flex-shrink:0}
+.waist-label{font-weight:700;font-size:0.9rem}
+.waist-sub{font-size:0.78rem;margin-top:2px}
+
+/* RISK METER */
+.risk-section{margin-bottom:16px}
+.risk-title{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px}
+.risk-bar-wrap{display:flex;gap:4px;margin-bottom:8px}
+.risk-segment{flex:1;height:10px;border-radius:5px}
+.risk-label-row{display:flex;justify-content:space-between;font-size:0.68rem;color:#a0aec0}
+.risk-current{text-align:center;font-weight:700;font-size:0.88rem;margin-top:8px;padding:8px;border-radius:8px}
+
+/* NOTE + SHARE */
+.note-box{background:#fffaf0;border:1px solid #fbd38d;border-radius:10px;padding:12px 16px;font-size:0.82rem;color:#744210;margin-bottom:14px}
+.share-bar{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.share-btn{flex:1;min-width:100px;padding:10px 12px;border:none;border-radius:10px;font-size:0.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity 0.2s}
+.share-btn:hover{opacity:0.85}
+.btn-whatsapp{background:#25D366;color:white}
+.btn-copy{background:#edf2f7;color:#2d3748}
+.btn-print{background:#667eea;color:white}
+.btn-save{background:#ed8936;color:white}
+.copy-confirm{text-align:center;font-size:0.8rem;color:#38a169;margin-top:8px;height:18px}
+
+/* INFO */
+.info-section{background:white;padding:28px 36px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.05);margin-bottom:24px}
+.info-section h2{font-size:1rem;color:#1a202c;margin-top:20px;margin-bottom:8px;font-weight:700}
+.info-section h2:first-child{margin-top:0}
+.info-section p{font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px}
+.faq-item{margin-bottom:18px}
+.faq-item h3{font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px}
+.faq-item p{font-size:0.85rem;color:#4a5568;line-height:1.65}
+
+.bmi-table{width:100%;border-collapse:collapse;font-size:0.85rem;margin:10px 0}
+.bmi-table th{background:#ebf8ff;color:#2b6cb0;padding:8px 12px;text-align:left;font-weight:700}
+.bmi-table td{padding:8px 12px;border-bottom:1px solid #e2e8f0;color:#4a5568}
+.bmi-table tr:last-child td{border-bottom:none}
+
+footer{text-align:center;padding-bottom:20px;font-size:0.78rem;color:#a0aec0}
+footer a{color:#3182ce}
+
+@media print{
+  .back-link,.share-bar,input,select,label,
+  .keyword-chips,.calc-btn,footer,.age-tabs,
+  .unit-toggle{display:none!important}
+  .card{box-shadow:none;padding:10px}
+  .results{display:block!important}
+}
+  /* ── DESKTOP LAYOUT ── */
+@media (min-width: 900px) {
+  body {
+    padding: 32px 40px;
+  }
+
+  .page-wrapper {
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 580px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  /* Back link spans full width */
+  .back-link {
+    grid-column: 1 / -1;
+  }
+
+  /* Calculator card stays left */
+  .card {
+    grid-column: 1;
+  }
+
+  /* Info section fills right, sticky */
+  .info-section {
+    grid-column: 2;
+    grid-row: 2;
+    position: sticky;
+    top: 20px;
+  }
+
+  /* Footer spans full width */
+  footer {
+    grid-column: 1 / -1;
+  }
+}
+</style>
 </head>
 <body>
-<nav class="topbar">
-  <div class="breadcrumb">
-    <a href="https://thezerowhisper.github.io/medical-calculators/">Medical Calculators</a><span>›</span><span>Infectious Disease</span><span>›</span><span>ARV Dose Calculator</span>
+<main class="page-wrapper">
+
+  <a class="back-link" href="https://thezerowhisper.github.io/medical-calculators/">← All Calculators</a>
+
+  <div class="card">
+    <div class="logo">⚖️</div>
+    <h1>BMI Calculator India</h1>
+    <p class="subtitle">Indian Cutoffs · WHO Comparison · Waist Risk · Adult & Child</p>
+    <div class="keyword-chips">
+      <span class="keyword-chip">Indian BMI Cutoffs</span>
+      <span class="keyword-chip">WHO Comparison</span>
+      <span class="keyword-chip">Overweight ≥23</span>
+      <span class="keyword-chip">Obese ≥25</span>
+      <span class="keyword-chip">Waist Circumference</span>
+      <span class="keyword-chip">Ideal Weight</span>
+    </div>
+
+    <!-- AGE GROUP TABS -->
+    <div class="age-tabs">
+      <button class="age-tab active" id="tab-adult" onclick="switchTab('adult')">Adult (18+ years)</button>
+      <button class="age-tab" id="tab-child" onclick="switchTab('child')">Child (2–17 years)</button>
+    </div>
+
+    <!-- UNIT TOGGLE -->
+    <div style="margin-bottom:10px">
+      <label>Units</label>
+      <div class="unit-toggle">
+        <button class="unit-btn active" id="unit-metric" onclick="switchUnit('metric')">Metric (kg / cm)</button>
+        <button class="unit-btn" id="unit-imperial" onclick="switchUnit('imperial')">Imperial (lbs / inches)</button>
+      </div>
+    </div>
+
+    <!-- ADULT FORM -->
+    <div id="form-adult">
+      <div class="form-grid">
+        <div>
+          <label for="a-weight">Weight</label>
+          <input type="number" id="a-weight" placeholder="e.g. 70" min="10" max="300" step="0.1"/>
+          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="a-weight-unit">kg</div>
+        </div>
+        <div>
+          <label for="a-height">Height</label>
+          <input type="number" id="a-height" placeholder="e.g. 170" min="50" max="300" step="0.1"/>
+          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="a-height-unit">cm</div>
+        </div>
+      </div>
+      <div class="form-grid">
+        <div>
+          <label for="a-gender">Gender</label>
+          <select id="a-gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div>
+          <label for="a-waist">Waist Circumference <span class="label-opt">(optional)</span></label>
+          <input type="number" id="a-waist" placeholder="e.g. 88" min="40" max="200" step="0.1"/>
+          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="a-waist-unit">cm</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHILD FORM -->
+    <div id="form-child" style="display:none">
+      <div class="form-grid">
+        <div>
+          <label for="c-weight">Weight</label>
+          <input type="number" id="c-weight" placeholder="e.g. 25" min="5" max="200" step="0.1"/>
+          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="c-weight-unit">kg</div>
+        </div>
+        <div>
+          <label for="c-height">Height</label>
+          <input type="number" id="c-height" placeholder="e.g. 120" min="50" max="220" step="0.1"/>
+          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="c-height-unit">cm</div>
+        </div>
+      </div>
+      <div class="form-grid">
+        <div>
+          <label for="c-age">Age</label>
+          <input type="number" id="c-age" placeholder="e.g. 8" min="2" max="17" step="1"/>
+          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px">years (2–17)</div>
+        </div>
+        <div>
+          <label for="c-gender">Gender</label>
+          <select id="c-gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calculate()">Calculate BMI</button>
+
+    <!-- RESULTS -->
+    <div class="results" id="results">
+
+      <!-- BMI HERO -->
+      <div class="bmi-hero" id="bmi-hero">
+        <div class="bmi-number" id="bmi-number"></div>
+        <div class="bmi-unit">kg/m²</div>
+        <div class="bmi-category" id="bmi-category"></div>
+      </div>
+
+      <!-- SCALE BAR -->
+      <div class="scale-wrap">
+        <div class="scale-label">BMI Scale — Indian Cutoffs</div>
+        <div class="scale-bar" id="scale-bar"></div>
+        <div class="scale-ticks" id="scale-ticks"></div>
+      </div>
+
+      <!-- COMPARISON -->
+      <div class="comparison-card">
+        <div class="comparison-title">Indian vs WHO Classification Comparison</div>
+        <div id="comparison-rows"></div>
+      </div>
+
+      <!-- DETAIL CARDS -->
+      <div class="detail-grid" id="detail-grid"></div>
+
+      <!-- WAIST -->
+      <div class="waist-section" id="waist-section" style="display:none">
+        <div class="waist-title">Waist Circumference Risk</div>
+        <div class="waist-result" id="waist-result"></div>
+      </div>
+
+      <!-- RISK METER -->
+      <div class="risk-section">
+        <div class="risk-title">Overall Health Risk Assessment</div>
+        <div class="risk-bar-wrap" id="risk-bar"></div>
+        <div class="risk-label-row">
+          <span>Low</span><span>Moderate</span><span>High</span><span>Very High</span>
+        </div>
+        <div class="risk-current" id="risk-current"></div>
+      </div>
+
+      <div class="note-box" id="result-note"></div>
+
+      <div class="share-bar">
+        <button class="share-btn btn-whatsapp" onclick="shareWhatsApp()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </button>
+        <button class="share-btn btn-copy" onclick="copyResult()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copy
+        </button>
+        <button class="share-btn btn-print" onclick="trackPrint('bmi'); window.print()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print
+        </button>
+        <button class="share-btn btn-save" onclick="saveImage()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Save
+        </button>
+      </div>
+      <div class="copy-confirm" id="copy-confirm"></div>
+    </div>
   </div>
-</nav>
-<header class="hero">
-  <div class="hero-badge">Anti-Rabies Vaccine Calculator</div>
-  <h1>ARV Dose Calculator</h1>
-  <p>Anti-Rabies Vaccine (ARV) dose, RIG by body weight &amp; schedule — NCDC India &amp; WHO 2018</p>
-  <div class="hero-tags">
-    <span>Category I / II / III</span><span>RIG Dose by Weight</span>
-    <span>HRIG &amp; ERIG</span><span>Essen IM 4-dose</span>
-    <span>Intradermal WHO 2018</span><span>Previously Vaccinated</span>
-  </div>
-</header>
-<main class="page">
 
-  <div class="scheduler-promo">
-    <div class="sp-text">
-      <div class="sp-title">📅 Need exact injection dates? Days 0, 3, 7, 28?</div>
-      <div class="sp-sub">Use our ARV Date Scheduler — enter first dose date, get all dates instantly with WhatsApp sharing</div>
-    </div>
-    <a href="https://thezerowhisper.github.io/rabies-scheduler/" target="_blank" rel="noopener">Open Date Scheduler →</a>
-  </div>
+  <section class="info-section">
+    <h2>Why Indian BMI Cutoffs Are Different</h2>
+    <p>Research shows that South Asians including Indians develop <strong>insulin resistance, diabetes, and cardiovascular disease at lower BMI values</strong> compared to Caucasians. At the same BMI, Indians have higher body fat percentage and more visceral (abdominal) fat. The <strong>WHO Expert Consultation (2004)</strong> and <strong>Consensus Statement for Diagnosis of Obesity (India, 2009)</strong> therefore recommend lower cutoffs for Asian Indians.</p>
 
-  <section class="card">
-    <div class="card-title">ARV Dose &amp; RIG Calculator</div>
-    <p class="step-lbl">Step 1 — Select Wound Category</p>
-    <div class="cat-grid">
-      <button class="cat-btn cat1" data-cat="1" onclick="selectCat(1)">
-        <div class="cb-num">I</div><div class="cb-name">No Exposure</div>
-        <div class="cb-desc">Touching/feeding animals. Licks on intact skin. No wound.</div>
-      </button>
-      <button class="cat-btn cat2" data-cat="2" onclick="selectCat(2)">
-        <div class="cb-num">II</div><div class="cb-name">Minor Exposure</div>
-        <div class="cb-desc">Nibbling uncovered skin. Minor scratches, no bleeding.</div>
-      </button>
-      <button class="cat-btn cat3 active" data-cat="3" onclick="selectCat(3)">
-        <div class="cb-num">III</div><div class="cb-name">Severe Exposure</div>
-        <div class="cb-desc">Deep bites, bleeding scratches, licks on mucosa, bat exposure.</div>
-      </button>
+    <h2>Indian vs WHO BMI Cutoffs</h2>
+    <table class="bmi-table">
+      <thead><tr><th>Category</th><th>Indian Cutoff</th><th>WHO Cutoff</th></tr></thead>
+      <tbody>
+        <tr><td>Underweight</td><td>&lt; 18.5</td><td>&lt; 18.5</td></tr>
+        <tr><td>Normal</td><td>18.5 – 22.9</td><td>18.5 – 24.9</td></tr>
+        <tr><td>Overweight</td><td>23.0 – 24.9</td><td>25.0 – 29.9</td></tr>
+        <tr><td>Obese Class I</td><td>25.0 – 29.9</td><td>30.0 – 34.9</td></tr>
+        <tr><td>Obese Class II</td><td>≥ 30.0</td><td>≥ 35.0</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Waist Circumference Cutoffs for Indians</h2>
+    <p>Abdominal obesity is a stronger risk predictor than BMI alone. Indian-specific cutoffs are: <strong>Men: ≥ 90 cm</strong> (high risk), <strong>Women: ≥ 80 cm</strong> (high risk). These are lower than Western cutoffs (102 cm for men, 88 cm for women).</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is the BMI cutoff for overweight in India?</h3>
+      <p>In India, overweight is BMI ≥ 23 kg/m². This is lower than the WHO standard of 25 because Indians develop metabolic complications at lower BMI values.</p>
     </div>
-    <p class="step-lbl">Step 2 — Patient Details</p>
-    <div class="form-row">
-      <div class="field">
-        <label for="weight">Body Weight (kg)</label>
-        <input type="number" id="weight" placeholder="e.g. 60" min="3" max="200" step="0.5" oninput="calculate()" />
-        <span class="hint">Required for RIG dose calculation</span>
-      </div>
-      <div class="field">
-        <label for="prevVacc">Vaccination Status</label>
-        <select id="prevVacc" onchange="calculate()">
-          <option value="naive">Not previously vaccinated</option>
-          <option value="prev">Previously vaccinated (completed course)</option>
-        </select>
-      </div>
-      <div class="field" id="rigTypeField">
-        <label for="rigType">RIG Type Available</label>
-        <select id="rigType" onchange="calculate()">
-          <option value="hrig">HRIG — Human RIG (20 IU/kg)</option>
-          <option value="erig">ERIG — Equine RIG (40 IU/kg)</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="route">Vaccine Route</label>
-        <select id="route" onchange="calculate()">
-          <option value="im">Intramuscular (IM) — Essen 4-dose</option>
-          <option value="id">Intradermal (ID) — WHO 2018</option>
-        </select>
-      </div>
+    <div class="faq-item">
+      <h3>What is normal BMI for Indians?</h3>
+      <p>Normal BMI for Indians is 18.5 to 22.9 kg/m². This range is narrower than the WHO normal range of 18.5–24.9.</p>
     </div>
-    <div class="result-section" id="resultSection">
-      <div class="result-grid" id="resultGrid"></div>
-      <div id="alertBox"></div>
-      <p class="step-lbl">Recommended Regimen</p>
-      <div class="regimen-steps" id="regimenSteps"></div>
+    <div class="faq-item">
+      <h3>What is the healthy waist size for Indian men and women?</h3>
+      <p>For Indian men, waist circumference should be below 90 cm. For Indian women, below 80 cm. Higher values indicate abdominal obesity and increased risk of diabetes and heart disease.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is BMI calculated?</h3>
+      <p>BMI = Weight (kg) ÷ Height² (m²). For example, a person weighing 70 kg with height 1.70 m has BMI = 70 ÷ (1.70 × 1.70) = 24.2 kg/m².</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is BMI accurate for Indians?</h3>
+      <p>BMI is a useful screening tool but has limitations. Indians tend to have higher body fat at the same BMI compared to Caucasians. Waist circumference measurement alongside BMI gives a more complete picture of metabolic risk.</p>
     </div>
   </section>
 
-  <section class="card">
-    <div class="card-title">Wound Category Reference — NCDC India</div>
-    <div style="overflow-x:auto">
-      <table class="cat-table">
-        <thead><tr><th>Category</th><th>Type of Contact</th><th>Examples</th><th>ARV</th><th>RIG</th></tr></thead>
-        <tbody>
-          <tr><td><span class="cat-badge cb-I">Cat I</span></td><td>Touching/feeding animals. Licks on intact skin.</td><td>Petting a dog, lick on unbroken skin</td><td style="color:#16a34a;font-weight:700">None</td><td style="color:#16a34a;font-weight:700">None</td></tr>
-          <tr><td><span class="cat-badge cb-II">Cat II</span></td><td>Nibbling uncovered skin. Minor scratches without bleeding.</td><td>Superficial scratch, small nibble not through dermis</td><td style="color:#d97706;font-weight:700">Yes — full course</td><td style="color:#16a34a;font-weight:700">No</td></tr>
-          <tr><td><span class="cat-badge cb-III">Cat III</span></td><td>Transdermal bites/scratches with bleeding. Licks on broken skin/mucosa. Bat exposure.</td><td>Deep bite, puncture wound, bleeding scratch, saliva on eyes/mouth</td><td style="color:#dc2626;font-weight:700">Yes — full course</td><td style="color:#dc2626;font-weight:700">Yes — Day 0</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="alert info" style="margin-top:14px"><span class="al-icon">ℹ️</span><div><strong>Wound toilet is mandatory for all categories.</strong> Wash immediately with soap and running water for 15 minutes, then apply povidone-iodine. This step alone can significantly reduce rabies virus at the wound site.</div></div>
-  </section>
+  <footer>
+    For informational purposes only · Always consult your physician ·
+    <a href="/">All Calculators</a> ·
+    <a href="https://thezerowhisper.github.io/rabies-scheduler/">Rabies Scheduler</a>
+  </footer>
 
   <section class="card">
-    <div class="card-title">RIG Dose by Body Weight</div>
-    <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:14px">Required only for <strong>Category III</strong> in non-vaccinated patients. Must be given on <strong>Day 0 only</strong> — cannot be given after Day 7.</p>
-    <div style="overflow-x:auto">
-      <table class="rig-table">
-        <thead><tr><th>Weight (kg)</th><th>HRIG (20 IU/kg)</th><th>ERIG (40 IU/kg)</th></tr></thead>
-        <tbody id="rigTableBody"></tbody>
-      </table>
-    </div>
-    <div class="alert cat3" style="margin-top:14px"><span class="al-icon">🔴</span><div><strong>Administration:</strong> Infiltrate as much RIG as possible around and into the wound. Remaining volume inject IM at a site away from vaccine injection. ERIG requires a skin test before administration.</div></div>
-  </section>
-
-  <section class="card">
-    <div class="card-title">Frequently Asked Questions</div>
-    <div id="faq-list"></div>
-  </section>
-
-    <section class="card">
     <div class="card-title">Related Tools</div>
     <div class="related-grid">
-      <a href="https://thezerowhisper.github.io/rabies-scheduler/" class="related-card" ><div class="rc-name">📅 ARV Date Scheduler</div><div class="rc-desc">Days 0,3,7,28 dates</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/uip-vaccine" class="related-card" ><div class="rc-name">UIP Vaccine Schedule</div><div class="rc-desc">Catch-up immunisation</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/paracetamol" class="related-card" ><div class="rc-name">Paracetamol Dose</div><div class="rc-desc">Fever/pain management</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/curb65" class="related-card" ><div class="rc-name">CURB-65 Score</div><div class="rc-desc">Pneumonia severity</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/growth-chart" class="related-card" ><div class="rc-name">Growth Chart</div><div class="rc-desc">WHO/IAP Z-scores 0–18y</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/hba1c-converter" class="related-card" ><div class="rc-name">HbA1c Converter</div><div class="rc-desc">Diabetes monitoring</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/paracetamol" class="related-card" ><div class="rc-name">Paracetamol Dose</div><div class="rc-desc">Weight-based dosing</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
     </div>
   </section>
-<section class="card" id="about-arv">
-  <div class="card-title">About Anti-Rabies Vaccine (ARV) in India</div>
-  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px">
-    Rabies post-exposure prophylaxis (PEP) in India follows the <strong>NCDC National Guidelines for Rabies Prophylaxis</strong> and the <strong>WHO Position Paper 2018</strong>. The standard regimen is the <strong>Essen intramuscular (IM) 4-dose schedule</strong> — a single dose of cell culture vaccine (0.5 mL PVRV or 1.0 mL PCECV) given on Days 0, 3, 7, and 28 in the deltoid. The gluteal region must never be used, as subcutaneous fat at that site impairs vaccine absorption and reduces immunogenicity.
-  </p>
-  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px">
-    The <strong>intradermal (ID) regimen</strong> recommended by WHO uses 0.1 mL at two sites on Days 0, 3, and 7 — only three clinic visits and significantly fewer vials per patient, making it the preferred option where trained staff are available. Immunocompromised patients require an additional Day 28 dose even with the ID regimen.
-  </p>
-  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px">
-    <strong>Rabies Immunoglobulin (RIG)</strong> is indicated only for Category III wounds in patients not previously vaccinated. The dose is strictly weight-based: <strong>HRIG at 20 IU/kg</strong> or <strong>ERIG at 40 IU/kg</strong>. The full dose must be infiltrated around the wound on Day 0 only — it cannot be administered after Day 7. ERIG requires a skin sensitivity test before use and carries a small risk of serum sickness, but remains the more accessible option across government facilities in India.
-  </p>
-  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px">
-    Wound toilet is the single most important immediate step: wash with soap and running water for <strong>at least 15 minutes</strong>, followed by application of povidone-iodine. This mechanical flushing alone can reduce rabies virus load at the wound site significantly before any vaccine is given.
-  </p>
-  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8">
-    Previously vaccinated individuals — those who have completed a full pre- or post-exposure course with a potent cell culture vaccine — require only a <strong>2-dose booster on Day 0 and Day 3</strong>. RIG is not needed regardless of wound category. This ARV dose calculator supports all these scenarios, including HRIG vs ERIG selection and IM vs ID route, based on patient weight and clinical history.
-  </p>
-</section>
-  <div class="disclaimer">⚠️ <strong>Disclaimer:</strong> Based on NCDC India Rabies Prophylaxis Guidelines and WHO Position Paper 2018. RIG must be given on Day 0 only. ERIG requires skin test. Wound category assessment requires clinical judgment. For qualified healthcare professionals only.</div>
-</main>
-<footer class="site-footer">
-  <p><a href="https://thezerowhisper.github.io/medical-calculators/">Medical Calculators</a> &nbsp;·&nbsp; <a href="https://thezerowhisper.github.io/rabies-scheduler/" target="_blank">ARV Date Scheduler</a> &nbsp;·&nbsp; References: NCDC India Rabies Guidelines; WHO Position Paper 2018</p>
-</footer>
+  </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
-  let selectedCat = 3;
-  function selectCat(n) {
-    selectedCat = n;
-    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-    document.querySelector('.cat-btn[data-cat="'+n+'"]').classList.add('active');
-    document.getElementById('rigTypeField').style.display = n === 3 ? 'flex' : 'none';
-    calculate();
+
+// ── STATE ─────────────────────────────────────────────────────────
+let currentTab  = "adult";
+let currentUnit = "metric";
+let shareText   = "";
+
+// ── INDIAN BMI CATEGORIES ─────────────────────────────────────────
+const INDIAN_CATS = [
+  { label:"Underweight",    min:0,    max:18.5, color:"#4299e1", bg:"#ebf8ff", border:"#bee3f8", risk:1 },
+  { label:"Normal",         min:18.5, max:23,   color:"#48bb78", bg:"#f0fff4", border:"#9ae6b4", risk:0 },
+  { label:"Overweight",     min:23,   max:25,   color:"#ed8936", bg:"#fffaf0", border:"#fbd38d", risk:2 },
+  { label:"Obese Class I",  min:25,   max:30,   color:"#e53e3e", bg:"#fff5f5", border:"#fed7d7", risk:3 },
+  { label:"Obese Class II", min:30,   max:50,   color:"#9b2c2c", bg:"#fff5f5", border:"#fc8181", risk:4 }
+];
+
+const WHO_CATS = [
+  { label:"Underweight", min:0,    max:18.5 },
+  { label:"Normal",      min:18.5, max:25   },
+  { label:"Overweight",  min:25,   max:30   },
+  { label:"Obese I",     min:30,   max:35   },
+  { label:"Obese II",    min:35,   max:50   }
+];
+
+const RISK_LABELS = ["Low","Moderate","High","Very High","Extremely High"];
+const RISK_COLORS = ["#48bb78","#ed8936","#e53e3e","#9b2c2c","#742a2a"];
+const RISK_BG     = ["#f0fff4","#fffaf0","#fff5f5","#fff5f5","#fff5f5"];
+
+function getIndianCat(bmi) {
+  return INDIAN_CATS.find(c => bmi >= c.min && bmi < c.max) || INDIAN_CATS[INDIAN_CATS.length-1];
+}
+function getWhoCat(bmi) {
+  return WHO_CATS.find(c => bmi >= c.min && bmi < c.max) || WHO_CATS[WHO_CATS.length-1];
+}
+
+// ── SWITCH TAB ────────────────────────────────────────────────────
+function switchTab(tab) {
+  currentTab = tab;
+  document.getElementById("form-adult").style.display = tab==="adult" ? "block" : "none";
+  document.getElementById("form-child").style.display = tab==="child" ? "block" : "none";
+  document.getElementById("tab-adult").classList.toggle("active", tab==="adult");
+  document.getElementById("tab-child").classList.toggle("active", tab==="child");
+  document.getElementById("results").style.display = "none";
+}
+
+// ── SWITCH UNIT ───────────────────────────────────────────────────
+function switchUnit(unit) {
+  currentUnit = unit;
+  document.getElementById("unit-metric").classList.toggle("active", unit==="metric");
+  document.getElementById("unit-imperial").classList.toggle("active", unit==="imperial");
+
+  const wU = unit==="metric" ? "kg" : "lbs";
+  const hU = unit==="metric" ? "cm" : "inches";
+  const waistU = unit==="metric" ? "cm" : "inches";
+
+  ["a-weight-unit","c-weight-unit"].forEach(id => { const el=document.getElementById(id); if(el) el.textContent=wU; });
+  ["a-height-unit","c-height-unit"].forEach(id => { const el=document.getElementById(id); if(el) el.textContent=hU; });
+  const wu = document.getElementById("a-waist-unit"); if(wu) wu.textContent=waistU;
+
+  const placeholders = unit==="metric"
+    ? {aw:"70",ah:"170",cw:"25",ch:"120",waist:"88"}
+    : {aw:"154",ah:"67",cw:"55",ch:"47",waist:"35"};
+  document.getElementById("a-weight").placeholder = placeholders.aw;
+  document.getElementById("a-height").placeholder = placeholders.ah;
+  document.getElementById("c-weight").placeholder = placeholders.cw;
+  document.getElementById("c-height").placeholder = placeholders.ch;
+  document.getElementById("a-waist").placeholder  = placeholders.waist;
+}
+
+// ── CALCULATE ─────────────────────────────────────────────────────
+function calculate() {
+  let weightKg, heightCm, waistCm=null, gender, ageYears=null;
+
+  if (currentTab === "adult") {
+    const w = parseFloat(document.getElementById("a-weight").value);
+    const h = parseFloat(document.getElementById("a-height").value);
+    const waistRaw = parseFloat(document.getElementById("a-waist").value);
+    gender = document.getElementById("a-gender").value;
+
+    if (!w || !h || w<=0 || h<=0) { alert("Please enter valid weight and height."); return; }
+
+    weightKg = currentUnit==="metric" ? w : w * 0.453592;
+    heightCm = currentUnit==="metric" ? h : h * 2.54;
+    if (!isNaN(waistRaw) && waistRaw > 0) {
+      waistCm = currentUnit==="metric" ? waistRaw : waistRaw * 2.54;
+    }
+  } else {
+    const w = parseFloat(document.getElementById("c-weight").value);
+    const h = parseFloat(document.getElementById("c-height").value);
+    ageYears = parseInt(document.getElementById("c-age").value);
+    gender   = document.getElementById("c-gender").value;
+
+    if (!w || !h || w<=0 || h<=0) { alert("Please enter valid weight and height."); return; }
+    if (!ageYears || ageYears < 2 || ageYears > 17) { alert("Please enter age between 2 and 17 years."); return; }
+
+    weightKg = currentUnit==="metric" ? w : w * 0.453592;
+    heightCm = currentUnit==="metric" ? h : h * 2.54;
   }
-  const rigWeights = [5,10,15,20,25,30,40,50,60,70,80,100];
-  const rigTbody = document.getElementById('rigTableBody');
-  rigWeights.forEach(w => {
-    const hrigIU = w*20, hrigMl = (w*20/150).toFixed(1);
-    const erigIU = w*40, erigMl = (w*40/300).toFixed(1);
-    rigTbody.innerHTML += `<tr><td>${w} kg</td><td>${hrigIU} IU (≈${hrigMl} mL at 150 IU/mL)</td><td>${erigIU} IU (≈${erigMl} mL at 300 IU/mL)</td></tr>`;
+
+  const heightM = heightCm / 100;
+  const bmi = Math.round((weightKg / (heightM * heightM)) * 10) / 10;
+
+  const indianCat = getIndianCat(bmi);
+  const whoCat    = getWhoCat(bmi);
+
+  // Ideal weight (Indian normal: 18.5–22.9)
+  const idealLow  = Math.round(18.5 * heightM * heightM * 10) / 10;
+  const idealHigh = Math.round(22.9 * heightM * heightM * 10) / 10;
+  const weightDiff = bmi < 18.5
+    ? Math.round((idealLow - weightKg) * 10) / 10
+    : bmi >= 23
+      ? Math.round((weightKg - idealHigh) * 10) / 10
+      : 0;
+
+  renderResults(bmi, indianCat, whoCat, weightKg, heightCm, heightM,
+                idealLow, idealHigh, weightDiff, waistCm, gender,
+                ageYears, currentUnit);
+}
+
+// ── RENDER ────────────────────────────────────────────────────────
+function renderResults(bmi, indianCat, whoCat, weightKg, heightCm, heightM,
+                       idealLow, idealHigh, weightDiff, waistCm, gender,
+                       ageYears, unit) {
+
+  // BMI Hero
+  const hero = document.getElementById("bmi-hero");
+  hero.style.background = indianCat.bg;
+  hero.style.borderColor = indianCat.border;
+  document.getElementById("bmi-number").style.color   = indianCat.color;
+  document.getElementById("bmi-number").textContent   = bmi.toFixed(1);
+  document.getElementById("bmi-category").style.color = indianCat.color;
+  document.getElementById("bmi-category").textContent = indianCat.label + " (Indian Guidelines)";
+
+  // Scale bar
+  const scaleColors = ["#4299e1","#48bb78","#ed8936","#e53e3e","#9b2c2c"];
+  const scaleMins   = [10, 18.5, 23, 25, 30];
+  const scaleMaxs   = [18.5, 23, 25, 30, 40];
+  const scaleBar    = document.getElementById("scale-bar");
+  scaleBar.innerHTML = "";
+
+  const totalRange = 40 - 10;
+  scaleMins.forEach((min, i) => {
+    const seg = document.createElement("div");
+    seg.className = "scale-segment";
+    seg.style.background = scaleColors[i];
+    seg.style.flex = ((scaleMaxs[i] - min) / totalRange).toString();
+    scaleBar.appendChild(seg);
   });
-  function calculate() {
-    const wt = parseFloat(document.getElementById('weight').value);
-    const prev = document.getElementById('prevVacc').value;
-    const rigType = document.getElementById('rigType').value;
-    const route = document.getElementById('route').value;
-    const rs = document.getElementById('resultSection');
-    if (!wt || wt < 3) { rs.style.display='none'; return; }
-    rs.style.display = 'block';
-    trackCalc('arv-dose', { category: selectedCat, weight: wt });
-    const catColors = ['','#16a34a','#d97706','#dc2626'];
-    const catNeed = ['','No PEP needed','ARV only','ARV + RIG'];
-    let gridHTML = `<div class="r-box primary"><div class="rb-label">Wound Category</div><div class="rb-val" style="color:${catColors[selectedCat]}">${selectedCat}</div><div class="rb-unit">${catNeed[selectedCat]}</div></div><div class="r-box"><div class="rb-label">Weight</div><div class="rb-val">${wt}</div><div class="rb-unit">kg</div></div>`;
-    let alertHTML = '', stepsHTML = '';
-    if (selectedCat === 1) {
-      gridHTML += `<div class="r-box"><div class="rb-label">ARV Required</div><div class="rb-val" style="color:#16a34a">None</div><div class="rb-unit">No PEP needed</div></div>`;
-      alertHTML = `<div class="alert cat1"><span class="al-icon">✅</span><div><strong>Category I — No PEP required.</strong> Wash the contact area with soap and water. No ARV or RIG needed if only touching or licking on intact skin with no wounds. If uncertain, reassess carefully.</div></div>`;
-      stepsHTML = `<div style="text-align:center;padding:20px;color:var(--cat1);font-weight:700">✅ No ARV needed for Category I exposure.</div>`;
-    } else if (selectedCat === 2) {
-      gridHTML += `<div class="r-box"><div class="rb-label">ARV Required</div><div class="rb-val" style="color:#d97706">Yes</div><div class="rb-unit">No RIG needed</div></div>`;
-      alertHTML = `<div class="alert cat2"><span class="al-icon">⚠️</span><div><strong>Category II — ARV required. RIG not indicated.</strong> Start wound toilet immediately, then initiate ARV on Day 0.</div></div>`;
-      stepsHTML = buildSteps(route, prev, false, wt, rigType);
+
+  // Marker position
+  const clampedBmi = Math.min(Math.max(bmi, 10), 40);
+  const markerPct  = ((clampedBmi - 10) / totalRange) * 100;
+  const marker = document.createElement("div");
+  marker.className = "scale-marker";
+  marker.setAttribute("data-val", bmi.toFixed(1));
+  marker.style.left = markerPct + "%";
+  scaleBar.style.position = "relative";
+  scaleBar.appendChild(marker);
+
+  document.getElementById("scale-ticks").innerHTML =
+    `<span>10</span><span>18.5</span><span>23</span><span>25</span><span>30</span><span>40+</span>`;
+
+  // Comparison table
+  const compRows = document.getElementById("comparison-rows");
+
+  const inBadgeStyle = `background:${indianCat.bg};color:${indianCat.color};border:1px solid ${indianCat.border}`;
+  const wBadgeStyle  = `background:#f7fafc;color:#4a5568;border:1px solid #e2e8f0`;
+
+  compRows.innerHTML = `
+    <div class="comparison-row">
+      <div class="comp-label">Your BMI</div>
+      <div class="comp-values">
+        <div class="comp-val">
+          <div class="comp-val-number" style="color:${indianCat.color}">${bmi.toFixed(1)}</div>
+          <div class="comp-val-label">kg/m²</div>
+        </div>
+      </div>
+    </div>
+    <div class="comparison-row">
+      <div class="comp-label">Classification</div>
+      <div class="comp-values">
+        <div class="comp-val">
+          <div class="comp-badge" style="${inBadgeStyle}">${indianCat.label}</div>
+          <div class="comp-val-label">Indian guideline</div>
+        </div>
+        <div class="comp-val">
+          <div class="comp-badge" style="${wBadgeStyle}">${whoCat.label}</div>
+          <div class="comp-val-label">WHO guideline</div>
+        </div>
+      </div>
+    </div>
+    <div class="comparison-row">
+      <div class="comp-label">Normal range</div>
+      <div class="comp-values">
+        <div class="comp-val">
+          <div class="comp-val-number" style="color:#38a169">18.5–22.9</div>
+          <div class="comp-val-label">Indian</div>
+        </div>
+        <div class="comp-val">
+          <div class="comp-val-number" style="color:#4a5568">18.5–24.9</div>
+          <div class="comp-val-label">WHO</div>
+        </div>
+      </div>
+    </div>`;
+
+  // Detail cards
+  const fmtWeight = w => unit==="metric"
+    ? `${w.toFixed(1)} kg`
+    : `${(w / 0.453592).toFixed(1)} lbs`;
+
+  let weightAdvice = "";
+  if (bmi < 18.5)      weightAdvice = `Gain <strong>${fmtWeight(idealLow - weightKg)}</strong> to reach normal`;
+  else if (bmi >= 23)  weightAdvice = `Lose <strong>${fmtWeight(weightKg - idealHigh)}</strong> to reach normal`;
+  else                 weightAdvice = "You are within the Indian normal range";
+
+  document.getElementById("detail-grid").innerHTML = `
+    <div class="detail-card">
+      <div class="detail-card-label">Ideal Weight Range</div>
+      <div class="detail-card-value">${fmtWeight(idealLow)} – ${fmtWeight(idealHigh)}</div>
+      <div class="detail-card-sub">For BMI 18.5–22.9 (Indian normal) at your height</div>
+    </div>
+    <div class="detail-card">
+      <div class="detail-card-label">Weight to Reach Normal</div>
+      <div class="detail-card-value" style="font-size:0.95rem">${weightAdvice.replace(/<[^>]*>/g,"")}</div>
+      <div class="detail-card-sub">Based on Indian cutoffs</div>
+    </div>
+    <div class="detail-card">
+      <div class="detail-card-label">Your Weight</div>
+      <div class="detail-card-value">${fmtWeight(weightKg)}</div>
+      <div class="detail-card-sub">Entered value</div>
+    </div>
+    <div class="detail-card">
+      <div class="detail-card-label">Your Height</div>
+      <div class="detail-card-value">${unit==="metric" ? heightCm.toFixed(0)+" cm" : (heightCm/2.54).toFixed(1)+" in"}</div>
+      <div class="detail-card-sub">Entered value</div>
+    </div>`;
+
+  // Waist circumference
+  if (waistCm && waistCm > 0) {
+    const maleLimit   = 90;
+    const femaleLimit = 80;
+    const limit = gender==="male" ? maleLimit : femaleLimit;
+    const waistHigh = waistCm >= limit;
+    const waistDispCm = unit==="metric" ? `${waistCm.toFixed(1)} cm` : `${(waistCm/2.54).toFixed(1)} in`;
+    const limitDisp   = unit==="metric" ? `${limit} cm` : `${(limit/2.54).toFixed(1)} in`;
+
+    document.getElementById("waist-section").style.display = "block";
+    const wr = document.getElementById("waist-result");
+    if (waistHigh) {
+      wr.style.cssText = "background:#fff5f5;border-color:#fed7d7;";
+      wr.innerHTML = `<div class="waist-icon">⚠️</div>
+        <div>
+          <div class="waist-label" style="color:#c53030">Abdominal Obesity — High Risk</div>
+          <div class="waist-sub" style="color:#9b2c2c">Your waist ${waistDispCm} exceeds the Indian limit of ${limitDisp} for ${gender}s. This indicates increased risk of diabetes and cardiovascular disease independent of BMI.</div>
+        </div>`;
     } else {
-      const iuPerKg = rigType === 'hrig' ? 20 : 40;
-      const rigConc = rigType === 'hrig' ? 150 : 300;
-      const rigDose = wt * iuPerKg;
-      const rigVol = (rigDose / rigConc).toFixed(1);
-      const rigName = rigType === 'hrig' ? 'HRIG' : 'ERIG';
-      gridHTML += `<div class="r-box" style="background:#fef2f2;border-color:#fca5a5"><div class="rb-label">${rigName} Dose</div><div class="rb-val" style="color:#dc2626">${rigDose}</div><div class="rb-unit">IU &nbsp;(≈${rigVol} mL)</div></div>`;
-      alertHTML = `<div class="alert cat3"><span class="al-icon">🔴</span><div><strong>Category III — ARV + RIG required on Day 0.</strong> ${rigName} <strong>${rigDose} IU</strong> (≈${rigVol} mL at ${rigConc} IU/mL) — infiltrate into and around wound; remainder IM at different site from vaccine. ${rigType==='erig'?'<strong>ERIG: skin test required before administration.</strong>':''}</div></div>`;
-      stepsHTML = buildSteps(route, prev, true, wt, rigType);
+      wr.style.cssText = "background:#f0fff4;border-color:#9ae6b4;";
+      wr.innerHTML = `<div class="waist-icon">✅</div>
+        <div>
+          <div class="waist-label" style="color:#276749">Normal Waist — Low Abdominal Risk</div>
+          <div class="waist-sub" style="color:#2f855a">Your waist ${waistDispCm} is within the safe Indian limit of ${limitDisp} for ${gender}s.</div>
+        </div>`;
     }
-    document.getElementById('resultGrid').innerHTML = gridHTML;
-    document.getElementById('alertBox').innerHTML = alertHTML;
-    document.getElementById('regimenSteps').innerHTML = stepsHTML;
+  } else {
+    document.getElementById("waist-section").style.display = "none";
   }
-  function step(day, dayLabel, name, dose, note, isRig) {
-    return `<div class="step-row${isRig?' rig':''}"><div class="step-day"><div class="day-num">${day}</div>${dayLabel?`<div class="day-label">${dayLabel}</div>`:''}</div><div class="step-content"><div class="sc-title">${name}</div><div class="sc-dose">${dose}</div>${note?`<div class="sc-note">${note}</div>`:''}</div></div>`;
+
+  // Risk meter
+  let riskLevel = indianCat.risk;
+  if (waistCm && waistCm >= (gender==="male" ? 90 : 80)) riskLevel = Math.min(riskLevel + 1, 4);
+
+  const riskBar = document.getElementById("risk-bar");
+  riskBar.innerHTML = "";
+  for (let i = 0; i < 5; i++) {
+    const seg = document.createElement("div");
+    seg.className = "risk-segment";
+    seg.style.background = i <= riskLevel ? RISK_COLORS[i] : "#e2e8f0";
+    riskBar.appendChild(seg);
   }
-  function buildSteps(route, prev, rig, wt, rigType) {
-    if (prev === 'prev') {
-      return `<div class="alert info"><span class="al-icon">ℹ️</span><div><strong>Previously vaccinated:</strong> 2-dose booster only — no RIG required.</div></div>`
-        + step('Day 0','','Booster Dose 1', route==='im'?'0.5 mL (PVRV) or 1.0 mL (PCECV) IM — deltoid':'0.1 mL ID × 2 sites — deltoid/forearm','No RIG needed in previously vaccinated patients',false)
-        + step('Day 3','','Booster Dose 2', route==='im'?'0.5 mL IM — deltoid':'0.1 mL ID × 2 sites','Complete 2-dose booster course. No further doses needed.',false);
-    }
-    const imDose = '0.5 mL (PVRV/Verorab) or 1.0 mL (PCECV/Rabipur) IM — deltoid (or anterolateral thigh if <2 yrs)';
-    const idDose = '0.1 mL ID × 2 sites — deltoid or volar forearm';
-    let html = '';
-    if (rig) {
-      const rigDose = wt * (rigType==='hrig'?20:40);
-      const rigVol = (rigDose / (rigType==='hrig'?150:300)).toFixed(1);
-      const rigName = rigType==='hrig'?'HRIG':'ERIG';
-      html += step('Day 0','+ RIG',`🔴 ${rigName} — Rabies Immunoglobulin`,`${rigDose} IU (≈${rigVol} mL) — infiltrate around wound, remainder IM at different site`,'Must be given on Day 0 only. Cannot be given after Day 7. Vaccine and RIG at different sites.',true);
-    }
-    html += step('Day 0', rig?'+ ARV':'', 'First ARV Dose', route==='im'?imDose:idDose, 'Start as soon as possible after exposure', false);
-    html += step('Day 3','','Second ARV Dose', route==='im'?imDose:idDose, '', false);
-    html += step('Day 7','','Third ARV Dose', route==='im'?imDose:idDose, route==='id'?'Last routine dose for WHO ID 3-visit regimen':'', false);
-    if (route==='im') html += step('Day 28','','Fourth ARV Dose', imDose, 'Final dose — complete the full course. Do not miss.', false);
-    else html += step('Day 28','','Fourth ARV Dose (ID)', '0.1 mL ID × 1 site', 'Only if immunocompromised — immunocompetent patients can omit Day 28 with ID regimen.',false);
-    return html;
+
+  const rc = document.getElementById("risk-current");
+  rc.style.background = RISK_BG[riskLevel];
+  rc.style.color       = RISK_COLORS[riskLevel];
+  rc.textContent       = `Overall Risk: ${RISK_LABELS[riskLevel]}`;
+
+  // Note
+  let noteText = "";
+  if (ageYears) {
+    noteText = `⚠️ For children, BMI percentile charts should be used alongside absolute BMI. This result uses adult Indian cutoffs as a reference. Consult a paediatrician for a complete assessment.`;
+  } else {
+    noteText = `⚠️ BMI is a screening tool, not a diagnostic test. Muscle mass, bone density, and fat distribution are not captured by BMI alone. Waist circumference and clinical assessment by your doctor gives a more complete picture.`;
   }
-  const faqs = [
-    {q:"What is the ARV dose schedule in India?",a:"Standard IM Essen regimen: 4 doses on Days 0, 3, 7, and 28. Each dose is 0.5 mL (PVRV/Verorab) or 1.0 mL (PCECV/Rabipur) IM in the deltoid. Anterolateral thigh for children under 2 years. The gluteal region must not be used — fat impairs absorption."},
-    {q:"What is the RIG dose by body weight for Category III?",a:"HRIG (Human RIG): 20 IU/kg. ERIG (Equine RIG): 40 IU/kg. Infiltrate maximum dose around and into the wound. Any remaining volume give IM at a site away from the vaccine. RIG must be given on Day 0 only."},
-    {q:"Which wound categories require ARV and RIG?",a:"Category I (touching/licking intact skin): No ARV or RIG. Category II (minor scratch, no bleeding): ARV only, no RIG. Category III (deep bite, bleeding, mucous membrane): ARV + RIG on Day 0."},
-    {q:"When should ARV be started?",a:"As soon as possible after the exposure — ideally on the same day (Day 0). There is no absolute upper time limit for starting ARV, but earlier is always better. If RIG is indicated, it must be given with the first ARV dose on Day 0 and cannot be given after Day 7."},
-    {q:"What is the intradermal ARV regimen?",a:"WHO 2018 recommended: 0.1 mL ID at 2 sites on Days 0, 3, and 7 — only 3 visits. More cost-effective, fewer vials used per patient. Requires trained staff for proper intradermal injection technique. A Day 28 dose is added for immunocompromised patients."},
-    {q:"What is the difference between HRIG and ERIG?",a:"HRIG (Human RIG): 20 IU/kg, very low risk of adverse reactions, preferred but expensive. ERIG (Equine RIG): 40 IU/kg, requires skin test before use, ~1% risk of serum sickness, significantly cheaper and widely available across India. Both are equally effective at correct doses."},
-    {q:"Is RIG needed if the patient was previously vaccinated?",a:"No. Previously vaccinated patients (completed pre- or post-exposure course with potent cell culture vaccine) require only a 2-dose booster on Day 0 and Day 3. RIG is not required regardless of wound category."},
-    {q:"What first aid should be done after a dog bite?",a:"Immediately wash the wound with soap and running water for at least 15 minutes, then apply povidone-iodine (Betadine) or 70% alcohol. Do not suture immediately. Seek medical attention for ARV/RIG, tetanus prophylaxis, and antibiotics (Amoxicillin-Clavulanate) for infected wounds."},
-    {q:"What is the ARV dose for children?",a:"Same vaccine volume as adults regardless of child's weight: 0.5 mL (PVRV) or 1.0 mL (PCECV). Injection site: anterolateral thigh for children under 2 years, deltoid for older children. RIG dose is weight-based: HRIG 20 IU/kg or ERIG 40 IU/kg."}
-  ];
-  const fl = document.getElementById('faq-list');
-  faqs.forEach((f,i) => {
-    fl.innerHTML += `<div class="faq-item" id="fi-${i}"><button class="faq-q" onclick="tf(${i})" aria-expanded="false"><span>${f.q}</span><span class="faq-icon">+</span></button><div class="faq-a">${f.a}</div></div>`;
+  document.getElementById("result-note").innerHTML = noteText;
+
+  // Build share text
+  const wDisp = unit==="metric" ? `${(weightKg).toFixed(1)} kg` : `${(weightKg/0.453592).toFixed(1)} lbs`;
+  const hDisp = unit==="metric" ? `${heightCm.toFixed(0)} cm` : `${(heightCm/2.54).toFixed(1)} in`;
+  shareText = `⚖️ BMI Result\n\nWeight: ${wDisp} · Height: ${hDisp}\nBMI: ${bmi.toFixed(1)} kg/m²\n\nIndian classification: ${indianCat.label}\nWHO classification: ${whoCat.label}\n\nIdeal weight range: ${fmtWeight(idealLow)} – ${fmtWeight(idealHigh)}\n${weightAdvice.replace(/<[^>]*>/g,"")}\nOverall risk: ${RISK_LABELS[riskLevel]}\n\nCalculated at: ${window.location.href}`;
+
+  document.getElementById("results").style.display = "block";
+   trackCalc('bmi', { bmi: bmiValue, category: category })
+  document.getElementById("results").scrollIntoView({ behavior:"smooth", block:"nearest" });
+}
+
+// ── SHARE ─────────────────────────────────────────────────────────
+function shareWhatsApp() {
+  if (!shareText) return;
+  try{uTrack('share_whatsapp',{tool:'bmi'});}catch(e){} window.open('https://wa.me/?text="+encodeURIComponent(shareText), "_blank", "noopener");
+}
+function copyResult() {
+  if (!shareText) return;
+  navigator.clipboard.writeText(shareText);
+  const el = document.getElementById("copy-confirm");
+  el.textContent = "✓ Copied!";
+  setTimeout(()=>el.textContent="", 2500);
+}
+function saveImage() {
+  if (!shareText) { alert("Please calculate BMI first."); return; }
+  const btn = event.target.closest("button"), orig = btn.innerHTML;
+  btn.textContent = "Saving..."; btn.disabled = true;
+  html2canvas(document.getElementById("results"),{backgroundColor:"#ffffff",scale:2,useCORS:true}).then(canvas=>{
+    const a = document.createElement("a");
+    a.download = "bmi-result-india.png";
+    a.href = canvas.toDataURL("image/png");
+    a.click();
+    btn.innerHTML = orig; btn.disabled = false;
   });
-  function tf(i) {
-    const el = document.getElementById('fi-'+i);
-    const open = el.classList.toggle('open');
-    el.querySelector('.faq-q').setAttribute('aria-expanded', open);
-  }
-  window.addEventListener('DOMContentLoaded', () => { selectCat(3); });
+}
 </script>
-  <script src="/shared-nav.js"></script>
+<script src="/shared-nav.js"></script>
 </body>
 </html>
