@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-IN" data-tool="rabies-scheduler">
 <head>
@@ -7,19 +6,19 @@
   <meta name="theme-color" content="#3182ce" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <meta name="google-site-verification" content="nZgsChD0zRn_BmL5Yw4MLcuRGkkhdkSTp9WAJPmudyM" />
-  <meta name="google-adsense-account" content="ca-pub-9687081664589626">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-  <title>Rabies Vaccine Date Calculator India | ARV Schedule Days 0,3,7,28</title>
-  <meta name="description" content="Free rabies vaccine date calculator for India. Enter your first ARV dose date and get all 4 injection dates instantly — Days 0, 3, 7, 28. Essen regimen, dog bite PEP." />
+<script src="assets/umami-events.js"></script>
+  <title>Rabies Vaccine Date Calculator India | ARV Date Calculator | Dog Bite Days 0,3,7,28</title>
+  <meta name="description" content="Free rabies vaccine date calculator for India. Enter your first dose date and get all 4 ARV injection dates instantly — Days 0, 3, 7, 28 as per Indian Essen regimen. Works for dog bite, cat bite and animal scratch PEP." />
   <meta name="author" content="Medical Calculators — The Zero Whisper" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="en-IN" />
   <link rel="canonical" href="https://thezerowhisper.github.io/rabies-scheduler/" />
-  <link rel="sitemap" type="application/xml" href="https://thezerowhisper.github.io/rabies-scheduler/sitemap.xml" />
+  <link rel="sitemap" type="application/xml" href="https://thezerowhisper.github.io/sitemap.xml" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Rabies Vaccine Date Calculator India | ARV Schedule | Days 0,3,7,28" />
-  <meta property="og:description" content="Free ARV schedule calculator for India. Enter your first rabies dose date and get all 4 injection dates instantly. Essen regimen — Days 0, 3, 7, 28." />
+  <meta property="og:description" content="Free ARV schedule calculator for India. Enter your first rabies dose date and get all 4 anti-rabies vaccine injection dates instantly. Dog bite PEP schedule." />
   <meta property="og:url" content="https://thezerowhisper.github.io/rabies-scheduler/" />
   <meta property="og:site_name" content="Rabies ARV Schedule Calculator" />
   <meta property="og:locale" content="en_IN" />
@@ -122,17 +121,6 @@
         "acceptedAnswer": { "@type": "Answer", "text": "Take the missed dose as soon as possible and continue the remaining doses on the original schedule. Do not restart the series. Consult your doctor if unsure." }
       }
     ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    "url": "https://thezerowhisper.github.io/rabies-scheduler/og-image.png",
-    "width": 1200,
-    "height": 630,
-    "caption": "Rabies ARV Vaccine Schedule India — Days 0, 3, 7, 28"
   }
   </script>
 
@@ -599,7 +587,7 @@
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
           Copy
         </button>
-        <button class="share-btn btn-print" onclick="try{trackPrint('rabies-scheduler');}catch(e){} window.print()">
+        <button class="share-btn btn-print" onclick="try{ if(typeof trackPrint === 'function') trackPrint('rabies-scheduler'); }catch(e){} window.print()">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           Print
         </button>
@@ -612,7 +600,7 @@
     </div>
   </div>
 
-  <a class="dose-xlink" href="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" aria-label="ARV Dose and RIG Calculator" onclick="try{uTrack('scheduler_referral',{from:'rabies-scheduler',to:'arv-dose-calculator'});}catch(e){}">
+  <a class="dose-xlink" href="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" aria-label="ARV Dose and RIG Calculator">
     <div class="dose-xlink-text">
       <div class="dose-xlink-title">🐕 Also need: ARV Dose & RIG Calculator</div>
       <div class="dose-xlink-sub">Wound category (I/II/III) · RIG dose by body weight (HRIG/ERIG) · Essen IM vs intradermal route · NCDC India guidelines</div>
@@ -686,7 +674,7 @@
         🩺 More Free Medical Calculators →
       </a>
       &nbsp;&nbsp;·&nbsp;&nbsp;
-      <a href="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" style="color:#b45309;text-decoration:none;font-weight:600" onclick="try{uTrack('scheduler_referral',{from:'rabies-scheduler-footer'});}catch(e){}">
+      <a href="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" style="color:#b45309;text-decoration:none;font-weight:600">
         🐕 ARV Dose &amp; RIG Calculator →
       </a>
     </p>
@@ -696,6 +684,20 @@
 </main>
 
 <script>
+  // Added date constraints to prevent selecting unreasonable future/past dates
+  document.addEventListener('DOMContentLoaded', () => {
+    const dateInput = document.getElementById('dose0date');
+    const today = new Date();
+    
+    // Max date is today
+    dateInput.max = today.toISOString().split('T')[0];
+    
+    // Min date is 30 days ago
+    const pastDate = new Date();
+    pastDate.setDate(today.getDate() - 30);
+    dateInput.min = pastDate.toISOString().split('T')[0];
+  });
+
   function setToday() {
     const today = new Date().toISOString().split('T')[0];
     document.getElementById("dose0date").value = today;
@@ -773,17 +775,43 @@
     });
 
     document.getElementById("results").style.display = "block";
+    
+    // Wrapped in try/catch to prevent errors if analytics are blocked
+    try {
+      if (typeof jstrackCalc === "function") {
+        jstrackCalc('rabies-scheduler', {
+          start_date: document.getElementById('dose0date').value,
+          doses: 4,
+          regimen: 'essen'
+        });
+      }
+    } catch(e) { console.warn("Analytics blocked or missing"); }
+    
     document.getElementById("results").scrollIntoView({ behavior: "smooth", block: "nearest" });
-    if (typeof trackCalc === 'function') trackCalc('rabies-arv', { doses: 4, day0: input });
   }
 
   function shareWhatsApp() {
-    if (!window.vaccineSchedule) return;
-    const lines = window.vaccineSchedule.map(d => `• ${d.label} ARV (Day ${d.day}): ${d.date}`).join("\n");
-    const text = `💉 *Rabies ARV Vaccination Schedule*\n\n${lines}\n\n⚠️ Please complete all 4 ARV doses. Rabies is fatal without timely vaccination.\n\n🔗 Calculate yours free: ${window.location.href}`;
-    try { uTrack('share_whatsapp', { tool: 'rabies-scheduler' }); } catch(e) {}
-    try { uTrack('share_whatsapp', { tool: 'rabies-scheduler' }); } catch(e) {}
-    window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener");
+    // TRACK EVENT safely
+    try {
+      if (typeof jstrackShare === "function") {
+        jstrackShare('whatsapp', 'rabies-scheduler');
+      } else if (window.umami) {
+        umami.track('share_whatsapp', { tool: 'rabies-scheduler' });
+      }
+    } catch(e) {}
+
+    // Fixed WhatsApp payload logic
+    if (!window.vaccineSchedule || window.vaccineSchedule.length === 0) {
+      alert("Please calculate your schedule first.");
+      return;
+    }
+
+    const dateList = window.vaccineSchedule.map(d => `Day ${d.day}: ${d.date}`).join("\n");
+
+    const text = `🩺 Rabies Vaccine Schedule (India)\n\n${dateList}\n\n⚠️ Complete all 4 doses — it is life-saving.\n\n📅 Calculate your exact dates instantly:\nhttps://thezerowhisper.github.io/rabies-scheduler/`;
+
+    const url = "https://wa.me/?text=" + encodeURIComponent(text);
+    window.open(url, '_blank');
   }
 
   function copySchedule() {
@@ -795,6 +823,15 @@
       el.textContent = "✓ Copied to clipboard!";
       setTimeout(() => el.textContent = "", 2500);
     });
+    
+    // Safely execute analytics
+    try {
+      if (typeof jstrackShare === "function") {
+        jstrackShare('copy', 'rabies-scheduler');
+      } else if (window.umami) {
+        umami.track('copy_schedule', { tool: 'rabies-scheduler' });
+      }
+    } catch(e) {}
   }
 
   function saveImage() {
@@ -826,32 +863,5 @@
     }
   }
 </script>
-
-<script>
-// ── Umami event tracking helpers (inlined — no external file needed) ────────
-function uTrack(name, props) {
-  try {
-    if (typeof window.umami !== 'undefined' && typeof window.umami.track === 'function') {
-      window.umami.track(name, props || {});
-    } else {
-      setTimeout(function() {
-        try {
-          if (typeof window.umami !== 'undefined') window.umami.track(name, props || {});
-        } catch(e) {}
-      }, 1200);
-    }
-  } catch(e) {}
-}
-function trackCalc(tool, props) { uTrack('calc_' + tool, props || {}); }
-function trackPrint(tool)       { uTrack('print', { tool: tool }); }
-function trackShare(tool)       { uTrack('share_whatsapp', { tool: tool }); }
-
-// Auto-track WhatsApp link clicks
-document.addEventListener('click', function(e) {
-  var a = e.target.closest('a[href]');
-  if (a && (a.href || '').startsWith('https://wa.me')) trackShare('rabies-arv');
-});
-</script>
 </body>
 </html>
-
