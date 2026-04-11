@@ -1,291 +1,380 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="neonatal-jaundice">
+<html lang="en-IN" data-tool="neonatal-jaundice">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="/shared.css"/>
-<title>Neonatal Jaundice Calculator | Phototherapy Threshold — AAP 2022 &amp; IAP Guidelines</title>
-<meta name="description" content="Calculate phototherapy thresholds for neonatal jaundice based on AAP 2022 and IAP guidelines. Assess total serum bilirubin against hour-specific treatment thresholds for newborns ≥35 weeks gestation."/>
-<meta name="keywords" content="neonatal jaundice calculator India, phototherapy threshold newborn, bilirubin calculator AAP 2022, neonatal hyperbilirubinemia, newborn jaundice treatment threshold, IAP jaundice guidelines, BiliTool India"/>
-<meta name="robots" content="index, follow"/>
+
+<title>Neonatal Jaundice Calculator | AAP 2022 Phototherapy Thresholds</title>
+<meta name="description" content="Free neonatal jaundice calculator based on AAP 2022 and IAP guidelines. Determine exact phototherapy and exchange transfusion thresholds for newborns ≥35 weeks."/>
+<meta name="keywords" content="neonatal jaundice calculator India, phototherapy threshold newborn, bilirubin calculator AAP 2022, neonatal hyperbilirubinemia nomogram, BiliTool alternative India, newborn jaundice treatment threshold, IAP jaundice guidelines, exchange transfusion calculator, transcutaneous bilirubin threshold, kernicterus prevention"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice"/>
+
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 <script src="assets/umami-events.js"></script>
-<!-- Open Graph -->
+
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Neonatal Jaundice Calculator — Phototherapy Threshold (AAP 2022)"/>
-<meta property="og:description" content="Free neonatal bilirubin calculator. Check phototherapy thresholds by age-in-hours for newborns ≥35 weeks, based on AAP 2022 revised guidelines."/>
+<meta property="og:locale" content="en_IN"/>
 <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice"/>
+<meta property="og:title" content="Neonatal Jaundice Calculator — Phototherapy Threshold (AAP 2022)"/>
+<meta property="og:description" content="Free neonatal bilirubin calculator. Check phototherapy and exchange transfusion thresholds by age-in-hours for newborns ≥35 weeks (AAP 2022 guidelines)."/>
+<meta property="og:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-neonatal-jaundice.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="675"/>
 <meta property="og:site_name" content="Clinical Calculators India"/>
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Neonatal Jaundice (Bilirubin) Calculator — AAP 2022"/>
-<meta name="twitter:description" content="Check if your newborn patient needs phototherapy. Hour-specific bilirubin thresholds per AAP 2022 for ≥35 weeks gestation."/>
+<meta name="twitter:description" content="Check if a newborn requires phototherapy. Hour-specific bilirubin thresholds per AAP 2022 guidelines for ≥35 weeks gestation."/>
+<meta name="twitter:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-neonatal-jaundice.png"/>
 
 <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": "Neonatal Jaundice Phototherapy Calculator — AAP 2022",
-    "description": "A clinical tool to determine phototherapy thresholds for neonatal hyperbilirubinemia in newborns ≥35 weeks gestation, based on AAP 2022 revised clinical practice guidelines.",
-    "url": "https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice",
-    "lastReviewed": "2026-03-25",
-    "reviewedBy": {
-      "@type": "MedicalOrganization",
-      "name": "American Academy of Pediatrics (AAP) / Indian Academy of Pediatrics (IAP)"
-    },
-    "audience": { "@type": "MedicalAudience", "audienceType": "Pediatrician, Neonatologist, Nurse, Medical Student" },
-    "medicalSpecialty": "Pediatrics, Neonatology",
-    "mainContentOfPage": {
-      "@type": "MedicalCondition",
-      "name": "Neonatal Hyperbilirubinemia",
-      "alternateName": "Neonatal Jaundice",
-      "code": { "@type": "MedicalCode", "code": "P59.9", "codingSystem": "ICD-10" }
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Neonatal Jaundice Phototherapy Calculator — AAP 2022",
+  "description": "A clinical tool to determine phototherapy and exchange transfusion thresholds for neonatal hyperbilirubinemia in newborns ≥35 weeks gestation, based on AAP 2022 revised clinical practice guidelines.",
+  "url": "https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice",
+  "lastReviewed": "2024-05-15",
+  "reviewedBy": {
+    "@type": "MedicalOrganization",
+    "name": "American Academy of Pediatrics (AAP) / Indian Academy of Pediatrics (IAP)"
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is neonatal jaundice and when does it require treatment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Neonatal jaundice (neonatal hyperbilirubinemia) is yellowing of the skin and eyes due to elevated total serum bilirubin in newborns. Physiological jaundice affects up to 60% of term and 80% of preterm newborns and is usually benign. Treatment with phototherapy is required when bilirubin levels cross hour-specific thresholds based on gestational age and risk factors. The AAP 2022 guidelines provide revised thresholds that account for gestational age, neurotoxicity risk factors, and hours of life."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the AAP 2022 update for neonatal jaundice?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The AAP 2022 revised clinical practice guideline for neonatal hyperbilirubinemia introduced lower phototherapy thresholds than the 2004 guidelines, particularly for newborns at 35–37 weeks gestation. Key changes include risk-stratified thresholds based on neurotoxicity risk factors (isoimmune haemolytic disease, G6PD deficiency, albumin < 3 g/dL, clinical instability), universal pre-discharge bilirubin screening, and a new lower exchange transfusion threshold. The revised guidelines emphasize preventing bilirubin-induced neurological damage (BIND), including kernicterus."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "At what bilirubin level is exchange transfusion required?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Exchange transfusion thresholds in AAP 2022 are set approximately 2 mg/dL above the phototherapy threshold for the same gestational age and risk category. For a typical term newborn (≥38 weeks, low risk), the exchange transfusion threshold at 72 hours is approximately 22–24 mg/dL. Any newborn with a bilirubin level approaching or exceeding exchange transfusion thresholds requires immediate senior neonatologist assessment and intensive phototherapy as a bridge."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between physiological and pathological jaundice in newborns?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Physiological jaundice appears after 24 hours of age, peaks between days 3–5, and resolves by 1–2 weeks in term newborns. It is caused by increased red cell breakdown, limited liver conjugation capacity, and increased enterohepatic circulation. Pathological jaundice appears within the first 24 hours, rises faster than 5 mg/dL per 24 hours, reaches very high levels, or persists beyond 2 weeks. Causes include isoimmune haemolysis (ABO/Rh incompatibility), G6PD deficiency, sepsis, hypothyroidism, and biliary atresia."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What neurotoxicity risk factors lower the phototherapy threshold?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The AAP 2022 guidelines define neurotoxicity risk factors that lower the phototherapy threshold for any given gestational age and hour of life: isoimmune haemolytic disease (ABO or Rh incompatibility with positive DAT), G6PD deficiency, albumin < 3.0 g/dL, sepsis or clinical instability, and significant hypoxia or acidosis. These factors increase the risk of bilirubin crossing the blood-brain barrier and causing bilirubin-induced neurological dysfunction (BIND)."
-        }
-      }
+  "audience": { "@type": "MedicalAudience", "audienceType": ["Pediatrician", "Neonatologist", "Nurse", "Medical Student"] },
+  "medicalSpecialty": ["Pediatrics", "Neonatology"],
+  "mainContentOfPage": {
+    "@type": "MedicalCondition",
+    "name": "Neonatal Hyperbilirubinemia",
+    "alternateName": "Neonatal Jaundice",
+    "code": { "@type": "MedicalCode", "code": "P59.9", "codingSystem": "ICD-10" }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Medical Calculators", "item": "https://thezerowhisper.github.io/medical-calculators/"},
+      {"@type": "ListItem", "position": 2, "name": "Neonatal Jaundice Calculator", "item": "https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice"}
     ]
   }
-]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Neonatal Bilirubin Threshold Calculator",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "description": "Calculates hour-specific total serum bilirubin (TSB) thresholds for phototherapy and exchange transfusion per AAP 2022 guidelines."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is neonatal jaundice and when does it require treatment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neonatal jaundice (neonatal hyperbilirubinemia) is yellowing of the skin and eyes due to elevated total serum bilirubin in newborns. Physiological jaundice affects up to 60% of term and 80% of preterm newborns and is usually benign. Treatment with phototherapy is required when bilirubin levels cross hour-specific thresholds based on gestational age and risk factors. The AAP 2022 guidelines provide revised thresholds that account for gestational age, neurotoxicity risk factors, and hours of life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the AAP 2022 update for neonatal jaundice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The AAP 2022 revised clinical practice guideline for neonatal hyperbilirubinemia introduced lower phototherapy thresholds than the 2004 guidelines, particularly for newborns at 35–37 weeks gestation. Key changes include risk-stratified thresholds based on neurotoxicity risk factors (isoimmune haemolytic disease, G6PD deficiency, albumin < 3 g/dL, clinical instability), universal pre-discharge bilirubin screening, and a new lower exchange transfusion threshold. The revised guidelines emphasize preventing bilirubin-induced neurological damage (BIND), including kernicterus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "At what bilirubin level is an exchange transfusion required?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exchange transfusion thresholds in AAP 2022 are set approximately 2 mg/dL above the phototherapy threshold for the same gestational age and risk category. For a typical term newborn (≥38 weeks, low risk), the exchange transfusion threshold at 72 hours is approximately 22–24 mg/dL. Any newborn with a bilirubin level approaching or exceeding exchange transfusion thresholds requires immediate senior neonatologist assessment and intensive phototherapy as a bridge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What neurotoxicity risk factors lower the phototherapy threshold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The AAP 2022 guidelines define neurotoxicity risk factors that lower the phototherapy threshold for any given gestational age and hour of life: isoimmune haemolytic disease (ABO or Rh incompatibility with positive DAT), G6PD deficiency, albumin < 3.0 g/dL, sepsis or clinical instability, and significant hypoxia or acidosis. These factors increase the risk of bilirubin crossing the blood-brain barrier and causing bilirubin-induced neurological dysfunction (BIND)."
+      }
+    }
+  ]
+}
 </script>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d3748;line-height:1.6}
 .pw{max-width:800px;margin:auto}
-.hero{background:linear-gradient(135deg,#553c9a,#6b46c1);border-radius:20px;padding:34px;color:white;margin-bottom:20px;text-align:center}
+
+.back-link{display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;color:#553c9a;font-size:0.9rem;font-weight:600;text-decoration:none}
+.back-link:hover{text-decoration:underline}
+
+.hero{background:linear-gradient(135deg,#553c9a,#6b46c1);border-radius:20px;padding:34px;color:white;margin-bottom:20px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
 .hero-sub{font-size:.68rem;font-weight:700;letter-spacing:.12em;margin-bottom:10px;opacity:.8;text-transform:uppercase}
 .hero h1{font-size:1.9rem;font-weight:800;margin-bottom:8px}
-.hero p{opacity:.85}
-.card{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-.card h2{font-size:1rem;font-weight:700;color:#553c9a;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #e9d8fd}
+.hero p{opacity:.9; font-size: 0.95rem;}
+
+.card{background:white;border-radius:16px;padding:28px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
+.card h2{font-size:1.1rem;font-weight:700;color:#553c9a;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #e9d8fd}
+
 .form-group{margin-bottom:18px}
-label{font-size:.82rem;font-weight:700;color:#4a5568;display:block;margin-bottom:7px;text-transform:uppercase;letter-spacing:.03em}
-input,select{width:100%;padding:12px;border:2px solid #e2e8f0;border-radius:10px;font-size:.97rem;outline:none;background:#f8fafc;transition:border-color .2s}
+label{font-size:.85rem;font-weight:700;color:#4a5568;display:block;margin-bottom:7px;text-transform:uppercase;letter-spacing:.03em}
+input,select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:.97rem;outline:none;background:#f8fafc;transition:border-color .2s;font-family:inherit;color:#2d3748}
 input:focus,select:focus{border-color:#805ad5}
 
 /* Risk factors toggle */
-.risk-list{background:#f8f4ff;padding:14px;border-radius:12px;margin-bottom:4px}
-.risk-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e9d8fd;cursor:pointer;user-select:none}
+.risk-list{background:#f8f4ff;padding:14px;border-radius:12px;margin-bottom:4px;border:1px solid #e9d8fd}
+.risk-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #e9d8fd;cursor:pointer;user-select:none;transition:background 0.2s}
 .risk-item:last-child{border-bottom:none}
-.risk-chk{width:22px;height:22px;border:2px solid #b794f4;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;font-size:.85rem}
+.risk-item:hover{background:#faf5ff}
+.risk-chk{width:22px;height:22px;border:2px solid #b794f4;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;font-size:.85rem;transition:all 0.2s}
 .risk-item.active .risk-chk{background:#805ad5;border-color:#805ad5}
-.risk-item span{font-size:.88rem;color:#2d3748}
+.risk-item span{font-size:.88rem;color:#2d3748;font-weight:500;line-height:1.4}
 
-.res-box{display:none;margin-top:20px;border-radius:14px;overflow:hidden;border:2px solid #e2e8f0;animation:fadeIn .3s}
+.res-box{display:none;margin-top:24px;border-radius:16px;overflow:hidden;border:2px solid #e2e8f0;animation:fadeIn .3s;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.res-header{padding:16px;text-align:center;font-weight:800;color:white;font-size:1.1rem}
-.res-grid{display:grid;grid-template-columns:repeat(3,1fr);background:white;padding:20px;gap:12px}
-.rg-item{text-align:center;background:#f7fafc;padding:14px;border-radius:12px}
-.rg-item .lbl{font-size:.65rem;color:#718096;text-transform:uppercase;font-weight:700;margin-bottom:4px}
-.rg-item .val{font-size:1.4rem;font-weight:800;color:#1a202c}
-.interp{margin:0 20px 16px;padding:14px;border-radius:10px;font-size:.9rem;line-height:1.5}
+.res-header{padding:18px;text-align:center;font-weight:800;color:white;font-size:1.15rem;letter-spacing:0.02em}
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);background:white;padding:24px;gap:12px}
+.rg-item{text-align:center;background:#f7fafc;padding:16px;border-radius:12px;border:1px solid #edf2f7}
+.rg-item .lbl{font-size:.68rem;color:#718096;text-transform:uppercase;font-weight:700;margin-bottom:6px;letter-spacing:0.04em}
+.rg-item .val{font-size:1.5rem;font-weight:800;color:#1a202c}
+
+.interp{margin:0 24px 16px;padding:16px;border-radius:12px;font-size:.9rem;line-height:1.55}
 .interp.safe{background:#f0fff4;border-left:5px solid #48bb78;color:#22543d}
 .interp.photo{background:#fffaf0;border-left:5px solid #ed8936;color:#7b341e}
 .interp.urgent{background:#fff5f5;border-left:5px solid #e53e3e;color:#742a2a}
-.btn-row{display:flex;gap:10px;padding:0 20px 20px}
-.btn{flex:1;padding:11px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:.88rem}
-.btn-print{background:#edf2f7;color:#2d3748}
-.btn-wa{background:#25D366;color:white}
 
-.ref-table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:10px}
-.ref-table th{background:#553c9a;color:white;padding:9px 10px;text-align:left}
-.ref-table td{padding:8px 10px;border-bottom:1px solid #e2e8f0}
+.share-bar{display:flex;gap:10px;margin:0 24px 24px;flex-wrap:wrap}
+.share-btn{flex:1;min-width:100px;padding:12px;border:none;border-radius:10px;font-size:0.85rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity 0.2s}
+.share-btn:hover{opacity:0.85}
+.btn-whatsapp{background:#25D366;color:white}
+.btn-copy{background:#edf2f7;color:#2d3748;border:1px solid #cbd5e0}
+.btn-print{background:#4a5568;color:white}
+.btn-save{background:#ed8936;color:white}
+.copy-confirm{text-align:center;font-size:0.8rem;color:#38a169;margin-top:8px;height:18px;font-weight:600;width:100%}
+
+.ref-table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:12px;border-radius:8px;overflow:hidden}
+.ref-table th{background:#553c9a;color:white;padding:10px 12px;text-align:left;font-weight:600}
+.ref-table td{padding:10px 12px;border-bottom:1px solid #e2e8f0;color:#4a5568}
 .ref-table tr:nth-child(even) td{background:#f8f4ff}
 
-.content-section{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-.content-section h2{font-size:1.1rem;font-weight:700;color:#553c9a;margin-bottom:12px}
-.content-section h3{font-size:.95rem;font-weight:700;color:#2d3748;margin:14px 0 6px}
-.content-section p{font-size:.9rem;color:#4a5568;margin-bottom:10px}
-.content-section ul{padding-left:20px;margin-bottom:10px}
-.content-section ul li{font-size:.9rem;color:#4a5568;margin-bottom:5px}
-.callout{background:#f8f4ff;border-left:4px solid #805ad5;padding:12px 14px;border-radius:8px;font-size:.88rem;color:#553c9a;margin-top:12px}
+.content-section{background:white;border-radius:16px;padding:28px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
+.content-section h2{font-size:1.15rem;font-weight:800;color:#553c9a;margin-bottom:14px}
+.content-section h3{font-size:.95rem;font-weight:700;color:#2d3748;margin:18px 0 8px}
+.content-section p{font-size:.9rem;color:#4a5568;margin-bottom:12px;line-height:1.65}
+.content-section ul{padding-left:22px;margin-bottom:12px}
+.content-section ul li{font-size:.9rem;color:#4a5568;margin-bottom:6px;line-height:1.5}
+.callout{background:#fffaf0;border-left:4px solid #ed8936;padding:14px 16px;border-radius:8px;font-size:.88rem;color:#744210;margin-top:16px;line-height:1.55}
 
-.footer-cite{font-size:.75rem;color:#718096;text-align:center;margin-top:20px;padding:10px}
-@media(max-width:600px){.res-grid{grid-template-columns:1fr 1fr}.btn-row{flex-direction:column}}
+/* RELATED CARDS */
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.related-card{padding:14px;background:#f7fafc;border:1.5px solid #e2e8f0;border-radius:10px;text-decoration:none;color:#2d3748;transition:border-color 0.2s}
+.related-card:hover{border-color:#553c9a}
+.rc-name{font-weight:700;font-size:0.9rem;color:#553c9a;margin-bottom:4px}
+.rc-desc{font-size:0.8rem;color:#718096}
+
+.footer-cite{font-size:.8rem;color:#718096;text-align:center;margin-top:24px;padding:10px;line-height:1.5}
+
+@media(max-width:600px){
+  .res-grid{grid-template-columns:1fr 1fr}
+  .related-grid{grid-template-columns:1fr}
+  .hero{padding:24px 20px}
+  .card, .content-section{padding:20px}
+}
+
+@media print {
+  .back-link, .form-group, .hero, .share-bar, .related-grid, .content-section, footer, .footer-cite { display:none!important; }
+  body { background: white; padding: 0; }
+  .res-box { display: block !important; border: 2px solid #000; box-shadow: none; }
+}
+
+@media (min-width: 900px) {
+  body { padding: 32px 40px; }
+  .pw { max-width: 900px; }
+}
 </style>
 </head>
 <body>
 
 <main class="pw">
-<div class="hero">
-  <div class="hero-sub">Neonatology — AAP 2022 Revised Guidelines</div>
-  <h1>Neonatal Jaundice Calculator</h1>
-  <p>Phototherapy &amp; Exchange Transfusion Thresholds for Newborns ≥35 Weeks</p>
-</div>
+  <a class="back-link" href="/">← All Calculators</a>
 
-<div class="card">
-  <h2>Patient Details</h2>
-  <div class="form-group">
-    <label>Gestational Age</label>
-    <select id="gest" onchange="calc()">
-      <option value="38">≥38 Weeks (Term, Low Neurotoxicity Risk)</option>
-      <option value="35">35–37 Weeks (Late Preterm)</option>
-    </select>
+  <div class="hero">
+    <div class="hero-sub">Neonatology — AAP 2022 Revised Guidelines</div>
+    <h1>Neonatal Jaundice Calculator</h1>
+    <p>Phototherapy &amp; Exchange Transfusion Thresholds for Newborns ≥35 Weeks</p>
   </div>
-  <div class="form-group">
-    <label>Age in Hours</label>
-    <input type="number" id="hours" placeholder="e.g. 48" min="0" oninput="calc()">
-  </div>
-  <div class="form-group">
-    <label>Total Serum Bilirubin (mg/dL)</label>
-    <input type="number" id="bili" step="0.1" placeholder="e.g. 12.5" min="0" oninput="calc()">
-  </div>
-  <div class="form-group">
-    <label>Neurotoxicity Risk Factors (Check All Present)</label>
-    <div class="risk-list">
-      <div class="risk-item" onclick="toggleRisk(this)" data-id="r1">
-        <div class="risk-chk"></div>
-        <span>Isoimmune haemolytic disease (ABO/Rh incompatibility with +ve DAT)</span>
-      </div>
-      <div class="risk-item" onclick="toggleRisk(this)" data-id="r2">
-        <div class="risk-chk"></div>
-        <span>G6PD deficiency (confirmed or suspected)</span>
-      </div>
-      <div class="risk-item" onclick="toggleRisk(this)" data-id="r3">
-        <div class="risk-chk"></div>
-        <span>Albumin &lt; 3.0 g/dL</span>
-      </div>
-      <div class="risk-item" onclick="toggleRisk(this)" data-id="r4">
-        <div class="risk-chk"></div>
-        <span>Sepsis, clinical instability, or significant acidosis/hypoxia</span>
+
+  <div class="card">
+    <h2>Patient Details</h2>
+    <div class="form-group">
+      <label>Gestational Age</label>
+      <select id="gest" onchange="calc()">
+        <option value="38">≥38 Weeks (Term, Low Neurotoxicity Risk)</option>
+        <option value="35">35–37 Weeks (Late Preterm)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Age in Hours</label>
+      <input type="number" id="hours" placeholder="e.g. 48" min="0" oninput="calc()">
+    </div>
+    <div class="form-group">
+      <label>Total Serum Bilirubin (mg/dL)</label>
+      <input type="number" id="bili" step="0.1" placeholder="e.g. 12.5" min="0" oninput="calc()">
+    </div>
+    <div class="form-group">
+      <label>Neurotoxicity Risk Factors (Check All Present)</label>
+      <div class="risk-list">
+        <div class="risk-item" onclick="toggleRisk(this)" data-id="r1">
+          <div class="risk-chk"></div>
+          <span>Isoimmune haemolytic disease (ABO/Rh incompatibility with +ve DAT)</span>
+        </div>
+        <div class="risk-item" onclick="toggleRisk(this)" data-id="r2">
+          <div class="risk-chk"></div>
+          <span>G6PD deficiency (confirmed or suspected)</span>
+        </div>
+        <div class="risk-item" onclick="toggleRisk(this)" data-id="r3">
+          <div class="risk-chk"></div>
+          <span>Albumin &lt; 3.0 g/dL</span>
+        </div>
+        <div class="risk-item" onclick="toggleRisk(this)" data-id="r4">
+          <div class="risk-chk"></div>
+          <span>Sepsis, clinical instability, or significant acidosis/hypoxia</span>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="result" class="res-box">
-  <div id="res-header" class="res-header"></div>
-  <div class="res-grid">
-    <div class="rg-item"><div class="lbl">Current Bili</div><div id="res-bili" class="val"></div></div>
-    <div class="rg-item"><div class="lbl">Photo Threshold</div><div id="res-thresh" class="val"></div></div>
-    <div class="rg-item"><div class="lbl">Exchange TSB</div><div id="res-exch" class="val"></div></div>
+  <div id="result" class="res-box" aria-live="polite">
+    <div id="res-header" class="res-header"></div>
+    <div class="res-grid">
+      <div class="rg-item"><div class="lbl">Current Bili</div><div id="res-bili" class="val"></div></div>
+      <div class="rg-item"><div class="lbl">Photo Threshold</div><div id="res-thresh" class="val"></div></div>
+      <div class="rg-item"><div class="lbl">Exchange TSB</div><div id="res-exch" class="val"></div></div>
+    </div>
+    <div id="res-note" class="interp"></div>
+    
+    <div class="share-bar">
+      <button class="share-btn btn-whatsapp" onclick="shareWhatsApp()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </button>
+      <button class="share-btn btn-copy" onclick="copyResult()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        Copy
+      </button>
+      <button class="share-btn btn-print" onclick="try{trackPrint('neonatal-jaundice');}catch(e){}; window.print()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print
+      </button>
+      <button class="share-btn btn-save" onclick="saveImage()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Save
+      </button>
+      <div class="copy-confirm" id="copy-confirm"></div>
+    </div>
   </div>
-  <div id="res-note" class="interp"></div>
-  <div class="btn-row">
-    <button class="btn btn-print" onclick="trackPrint('neonatal-jaundice'); window.print()">🖨 Print Assessment</button>
-    <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
+
+  <div class="content-section">
+    <h2>Phototherapy Threshold Quick Reference (AAP 2022)</h2>
+    <table class="ref-table">
+      <thead>
+        <tr><th>Age</th><th>≥38 Wk, Low Risk (mg/dL)</th><th>35–37 Wk / Any Risk Factor (mg/dL)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>24 hours</td><td>8.0</td><td>6.0</td></tr>
+        <tr><td>48 hours</td><td>13.0</td><td>11.0</td></tr>
+        <tr><td>72 hours</td><td>16.0</td><td>13.0</td></tr>
+        <tr><td>96 hours (≥4 days)</td><td>18.0</td><td>15.0</td></tr>
+        <tr><td>≥5 days</td><td>18.0</td><td>15.0</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">⚠️ These are simplified thresholds for educational reference. Always use the official AAP BiliTool or the full nomogram for clinical decisions. Exchange transfusion thresholds are approximately 2 mg/dL above phototherapy thresholds.</div>
   </div>
-</div>
 
-<!-- Reference Table -->
-<div class="content-section">
-  <h2>Phototherapy Threshold Quick Reference (AAP 2022)</h2>
-  <table class="ref-table">
-    <tr><th>Age</th><th>≥38 Wk, Low Risk (mg/dL)</th><th>35–37 Wk / Any Risk Factor (mg/dL)</th></tr>
-    <tr><td>24 hours</td><td>8.0</td><td>6.0</td></tr>
-    <tr><td>48 hours</td><td>13.0</td><td>11.0</td></tr>
-    <tr><td>72 hours</td><td>16.0</td><td>13.0</td></tr>
-    <tr><td>96 hours (≥4 days)</td><td>18.0</td><td>15.0</td></tr>
-    <tr><td>≥5 days</td><td>18.0</td><td>15.0</td></tr>
-  </table>
-  <div class="callout">⚠️ These are simplified thresholds for educational reference. Always use the official AAP BiliTool or the full nomogram for clinical decisions. Exchange transfusion thresholds are approximately 2 mg/dL above phototherapy thresholds.</div>
-</div>
+  <div class="content-section">
+    <h2>Understanding Neonatal Jaundice (Hyperbilirubinemia)</h2>
+    <p>Neonatal jaundice is one of the most common clinical conditions in newborns, affecting approximately 60% of term and 80% of preterm infants in the first week of life. While most cases are physiological and self-limiting, elevated bilirubin beyond certain thresholds carries a risk of neurotoxicity — specifically bilirubin-induced neurological dysfunction (BIND), which in its most severe form causes kernicterus, a permanent and devastating neurological injury.</p>
+    <p>Total serum bilirubin (TSB) or transcutaneous bilirubin (TcB) is the primary measurement used to monitor and guide treatment decisions. The AAP 2022 revised guidelines fundamentally changed management by lowering phototherapy thresholds (especially for late preterm infants), mandating universal predischarge bilirubin screening, and stratifying recommendations by neurotoxicity risk factors.</p>
 
-<!-- Educational Content -->
-<div class="content-section">
-  <h2>Understanding Neonatal Jaundice (Hyperbilirubinemia)</h2>
-  <p>Neonatal jaundice is one of the most common clinical conditions in newborns, affecting approximately 60% of term and 80% of preterm infants in the first week of life. While most cases are physiological and self-limiting, elevated bilirubin beyond certain thresholds carries a risk of neurotoxicity — specifically bilirubin-induced neurological dysfunction (BIND), which in its most severe form causes kernicterus, a permanent and devastating neurological injury.</p>
-  <p>Total serum bilirubin (TSB) or transcutaneous bilirubin (TcB) is the primary measurement used to monitor and guide treatment decisions. The AAP 2022 revised guidelines fundamentally changed management by lowering phototherapy thresholds (especially for late preterm infants), mandating universal predischarge bilirubin screening, and stratifying recommendations by neurotoxicity risk factors.</p>
+    <h3>Physiological vs. Pathological Jaundice</h3>
+    <p><strong>Physiological jaundice</strong> appears after 24 hours of age, peaks between days 3–5 in term infants (days 5–7 in preterm), and resolves by 1–2 weeks. It is caused by the normal neonatal breakdown of fetal haemoglobin combined with temporary hepatic immaturity. No treatment is typically required unless thresholds are crossed.</p>
+    <p><strong>Pathological jaundice</strong> is defined by its timing (onset within the first 24 hours), rate of rise (&gt;5 mg/dL/24h), severity (crossing phototherapy threshold), or prolonged duration (&gt;2 weeks term, &gt;3 weeks preterm). Causes include ABO/Rh isoimmune haemolysis, G6PD deficiency, sepsis, hypothyroidism, biliary atresia, and metabolic disorders. All jaundice in the first 24 hours is pathological until proven otherwise.</p>
 
-  <h3>Physiological vs. Pathological Jaundice</h3>
-  <p><strong>Physiological jaundice</strong> appears after 24 hours of age, peaks between days 3–5 in term infants (days 5–7 in preterm), and resolves by 1–2 weeks. It is caused by the normal neonatal breakdown of fetal haemoglobin combined with temporary hepatic immaturity. No treatment is typically required unless thresholds are crossed.</p>
-  <p><strong>Pathological jaundice</strong> is defined by its timing (onset within 24 hours), rate of rise (&gt;5 mg/dL/24h), severity (crossing phototherapy threshold), or prolonged duration (&gt;2 weeks term, &gt;3 weeks preterm). Causes include ABO/Rh isoimmune haemolysis, G6PD deficiency, sepsis, hypothyroidism, biliary atresia, and metabolic disorders. All jaundice in the first 24 hours is pathological until proven otherwise.</p>
+    <h3>AAP 2022 Key Changes from Prior Guidelines</h3>
+    <ul>
+      <li>Lower phototherapy thresholds — particularly protective for late preterm (35–37 weeks) infants</li>
+      <li>Universal predischarge TSB or TcB screening recommended for all newborns ≥35 weeks</li>
+      <li>Neurotoxicity risk factors now explicitly lower the treatment threshold for the same gestational age</li>
+      <li>Emphasis on ensuring adequate breastfeeding/nutrition to prevent dehydration-associated jaundice</li>
+      <li>G6PD testing recommended for all newborns in high-prevalence populations (including India)</li>
+    </ul>
 
-  <h3>AAP 2022 Key Changes from Prior Guidelines</h3>
-  <ul>
-    <li>Lower phototherapy thresholds — particularly protective for late preterm (35–37 weeks) infants</li>
-    <li>Universal predischarge TSB or TcB screening recommended for all newborns ≥35 weeks</li>
-    <li>Neurotoxicity risk factors now explicitly lower the treatment threshold for the same gestational age</li>
-    <li>Emphasis on ensuring adequate breastfeeding/nutrition to prevent dehydration-associated jaundice</li>
-    <li>G6PD testing recommended for all newborns in high-prevalence populations (including India)</li>
-  </ul>
+    <h3>Phototherapy — Mechanism and Delivery</h3>
+    <p>Phototherapy works by photo-isomerizing unconjugated bilirubin in the skin and superficial capillaries into water-soluble lumirubin and Z,E-bilirubin isomers, which are rapidly excreted in urine and bile without requiring hepatic conjugation. Efficacy depends on spectral irradiance (minimum 30 µW/cm²/nm at 460–490 nm wavelength), body surface area exposed (use of a blanket underneath increases efficacy), and duration. Intensive phototherapy (multiple lights, bili-blanket) is used for rapidly rising or near-exchange bilirubin levels.</p>
 
-  <h3>Phototherapy — Mechanism and Delivery</h3>
-  <p>Phototherapy works by photo-isomerizing unconjugated bilirubin in the skin and superficial capillaries into water-soluble lumirubin and Z,E-bilirubin isomers, which are excreted in urine and bile without requiring hepatic conjugation. Efficacy depends on spectral irradiance (minimum 30 µW/cm²/nm at 460–490 nm wavelength), body surface area exposed (use of a blanket underneath increases efficacy), and duration. Intensive phototherapy (multiple lights, bili-blanket) is used for rapidly rising or near-exchange bilirubin levels.</p>
+    <h3>When to Consider Exchange Transfusion</h3>
+    <p>Double-volume exchange transfusion (DVET) is the treatment of last resort for severe hyperbilirubinemia when intensive phototherapy fails to reduce bilirubin adequately, or when TSB is at or above the exchange transfusion threshold. DVET carries significant risks including infection, electrolyte imbalance, thrombocytopenia, and rarely death, and should be performed only in a NICU setting by experienced clinicians.</p>
+  </div>
 
-  <h3>When to Consider Exchange Transfusion</h3>
-  <p>Double-volume exchange transfusion (DVET) is the treatment of last resort for severe hyperbilirubinemia when intensive phototherapy fails to reduce bilirubin adequately, or when TSB is at or above the exchange transfusion threshold. DVET carries significant risks including infection, electrolyte imbalance, thrombocytopenia, and rarely death, and should be performed only in a NICU setting by experienced clinicians.</p>
-</div>
+  <div class="content-section">
+    <h2>Frequently Asked Questions</h2>
 
-<!-- FAQ -->
-<div class="content-section">
-  <h2>Frequently Asked Questions</h2>
+    <h3>Is jaundice in the first 24 hours always pathological?</h3>
+    <p>Yes. Any visible jaundice or bilirubin elevation within the first 24 hours of life is considered pathological until a cause is identified. The most common cause is ABO or Rh isoimmune haemolysis. These babies need urgent evaluation, blood group and Coombs testing, and often early intensive phototherapy.</p>
 
-  <h3>Is jaundice in the first 24 hours always pathological?</h3>
-  <p>Yes. Any visible jaundice or bilirubin elevation within the first 24 hours of life is considered pathological until a cause is identified. The most common cause is ABO or Rh isoimmune haemolysis. These babies need urgent evaluation, blood group and Coombs testing, and often early phototherapy.</p>
+    <h3>Can a breastfed baby have higher bilirubin?</h3>
+    <p>Yes — two distinct conditions are recognized. "Breastfeeding jaundice" occurs in the first week due to inadequate milk intake and dehydration, which concentrates bilirubin. "Breast milk jaundice" is a separate, later-onset condition (week 2–3) caused by a substance in mature breast milk that inhibits bilirubin conjugation. Both are typically benign but should be distinguished from pathological causes.</p>
 
-  <h3>Can a breastfed baby have higher bilirubin?</h3>
-  <p>Yes — two distinct conditions are recognized. "Breastfeeding jaundice" occurs in the first week due to inadequate milk intake and dehydration, which concentrates bilirubin. "Breast milk jaundice" is a separate, later-onset condition (week 2–3) caused by a substance in mature breast milk that inhibits bilirubin conjugation. Both are benign but should be distinguished from pathological causes.</p>
+    <h3>What is TcB and when is TSB needed?</h3>
+    <p>Transcutaneous bilirubin (TcB) is a non-invasive screening tool measured with a bilirubinometer on the forehead or sternum. It correlates well with TSB for routine screening but is less reliable in infants with dark skin, pre-treatment with phototherapy, or very high bilirubin levels. When TcB is above the phototherapy threshold zone or in any high-risk infant, a confirmatory total serum bilirubin (TSB) blood test must be obtained.</p>
 
-  <h3>What is TcB and when is TSB needed?</h3>
-  <p>Transcutaneous bilirubin (TcB) is a non-invasive screening tool measured with a bilirubinometer on the forehead or sternum. It correlates well with TSB for routine screening but is less reliable in infants with dark skin, pre-treatment with phototherapy, or very high bilirubin levels. When TcB is above the phototherapy threshold zone or in any high-risk infant, a confirmatory total serum bilirubin (TSB) blood test should be obtained.</p>
+    <h3>How long does phototherapy take to work?</h3>
+    <p>With standard, effective phototherapy, TSB typically declines by 1–2 mg/dL in the first 4–6 hours, and by 30–40% over 24 hours. A TSB recheck is typically done 4–6 hours after starting phototherapy in near-threshold cases, and 12–24 hours in less urgent cases. Phototherapy is discontinued when TSB falls at least 2 mg/dL below the treatment threshold and the infant is feeding well.</p>
+  </div>
 
-  <h3>How long does phototherapy take to work?</h3>
-  <p>With standard phototherapy, TSB typically declines by 1–2 mg/dL in the first 4–6 hours, and by 30–40% over 24 hours. A TSB recheck is typically done 4–6 hours after starting phototherapy in near-threshold cases, and 12–24 hours in less urgent cases. Phototherapy is discontinued when TSB falls at least 2 mg/dL below the treatment threshold and the infant is feeding well.</p>
-</div>
-
-<div class="footer-cite">
-  References: AAP Clinical Practice Guideline: Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation (Pediatrics, 2022) | Indian Academy of Pediatrics (IAP) Neonatology Guidelines 2022. This tool provides educational estimates only — clinical decisions should use the official AAP Bilitool nomogram.
-</div>
   <section class="card">
-    <div class="card-title">Related Tools</div>
+    <h2>Related Clinical Tools</h2>
     <div class="related-grid">
-      <a href="https://thezerowhisper.github.io/medical-calculators/growth-chart" class="related-card" ><div class="rc-name">Growth Chart</div><div class="rc-desc">Newborn weight Z-score</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/milestones" class="related-card" ><div class="rc-name">Milestones Checker</div><div class="rc-desc">Developmental screening</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/paracetamol" class="related-card" ><div class="rc-name">Paracetamol Dose</div><div class="rc-desc">Postnatal pain/fever</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/growth-chart" class="related-card">
+        <div class="rc-name">Growth Chart</div>
+        <div class="rc-desc">Newborn weight Z-score</div>
+      </a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/milestones" class="related-card">
+        <div class="rc-name">Milestones Checker</div>
+        <div class="rc-desc">Developmental screening</div>
+      </a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/paracetamol" class="related-card">
+        <div class="rc-name">Paracetamol Dose</div>
+        <div class="rc-desc">Postnatal pain/fever</div>
+      </a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card">
+        <div class="rc-name">All Calculators →</div>
+        <div class="rc-desc">20+ clinical tools</div>
+      </a>
     </div>
   </section>
-  </main>
 
+  <div class="footer-cite">
+    References: AAP Clinical Practice Guideline: Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation (Pediatrics, 2022) | Indian Academy of Pediatrics (IAP) Neonatology Guidelines 2022. This tool provides educational estimates only — clinical decisions should use the official AAP Bilitool nomogram.
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
-const riskSelected=new Set();
+const riskSelected = new Set();
+let shareText = "";
 
 function toggleRisk(el){
   el.classList.toggle('active');
@@ -302,56 +391,111 @@ function getThreshold(gestWks, hrs, hasRisk){
     "35":[{h:24,t:6},{h:48,t:11},{h:72,t:13},{h:96,t:15},{h:999,t:15}]
   };
   // If risk factors present, use the lower (35wk) scale even for term infants
-  const key=(hasRisk&&gestWks==="38")?"35":gestWks;
-  const scale=thresholds[key];
-  for(const row of scale){ if(hrs<=row.h) return row.t; }
+  const key = (hasRisk && gestWks === "38") ? "35" : gestWks;
+  const scale = thresholds[key];
+  for(const row of scale){ if(hrs <= row.h) return row.t; }
   return scale[scale.length-1].t;
 }
 
 function calc(){
-  const hrs=parseFloat(document.getElementById('hours').value);
-  const bili=parseFloat(document.getElementById('bili').value);
-  const gest=document.getElementById('gest').value;
-  if(!hrs||!bili||hrs<=0||bili<=0) return;
+  const hrs = parseFloat(document.getElementById('hours').value);
+  const bili = parseFloat(document.getElementById('bili').value);
+  const gest = document.getElementById('gest').value;
+  
+  if(!hrs || !bili || hrs <= 0 || bili <= 0) return;
 
-  const hasRisk=riskSelected.size>0;
-  const threshold=getThreshold(gest,hrs,hasRisk);
-  const exchThresh=threshold+2;
-  const needsPhoto=bili>=threshold;
-  const nearExch=bili>=(exchThresh-1);
+  const hasRisk = riskSelected.size > 0;
+  const threshold = getThreshold(gest, hrs, hasRisk);
+  const exchThresh = threshold + 2;
+  const needsPhoto = bili >= threshold;
+  const nearExch = bili >= (exchThresh - 1);
 
-  const res=document.getElementById('result');
-  const hdr=document.getElementById('res-header');
-  res.style.display="block";
-  trackCalc('neonatal-jaundice', { bili: bili, threshold: threshold, needs_photo: needsPhoto });
+  const res = document.getElementById('result');
+  const hdr = document.getElementById('res-header');
+  res.style.display = "block";
+  
+  try { if (typeof trackCalc === 'function') trackCalc('neonatal-jaundice', { bili: bili, threshold: threshold, needs_photo: needsPhoto }); } catch(e) {}
 
-  let status,color,note;
-  if(bili>=exchThresh){
-    status="urgent"; color="#e53e3e";
-    hdr.textContent="⚠️ EXCHANGE TRANSFUSION THRESHOLD REACHED";
-    note="<strong>IMMEDIATE ACTION REQUIRED:</strong> Bilirubin at or above exchange transfusion threshold. Start intensive phototherapy immediately and arrange urgent senior neonatologist review for double-volume exchange transfusion.";
+  let status, color, note, actionHeadline;
+  
+  if(bili >= exchThresh){
+    status = "urgent"; color = "#e53e3e";
+    actionHeadline = "⚠️ EXCHANGE TRANSFUSION THRESHOLD REACHED";
+    note = "<strong>IMMEDIATE ACTION REQUIRED:</strong> Bilirubin at or above exchange transfusion threshold. Start intensive phototherapy immediately and arrange urgent senior neonatologist review for double-volume exchange transfusion.";
   } else if(needsPhoto){
-    status="photo"; color="#ed8936";
-    hdr.textContent="PHOTOTHERAPY REQUIRED";
-    note="<strong>Start phototherapy now.</strong> Bilirubin exceeds the treatment threshold for this age and gestation. Ensure adequate feeds and hydration. Recheck TSB in 4–6 hours.";
+    status = "photo"; color = "#ed8936";
+    actionHeadline = "PHOTOTHERAPY REQUIRED";
+    note = "<strong>Start phototherapy now.</strong> Bilirubin exceeds the treatment threshold for this age and gestation. Ensure adequate feeds and hydration. Recheck TSB in 4–6 hours.";
   } else {
-    status="safe"; color="#38a169";
-    hdr.textContent="MONITOR ONLY — Below Phototherapy Threshold";
-    note="Current bilirubin is below the phototherapy threshold. Continue monitoring, ensure adequate feeding, and schedule follow-up bilirubin check per local protocol.";
+    status = "safe"; color = "#38a169";
+    actionHeadline = "MONITOR ONLY — Below Threshold";
+    note = "Current bilirubin is below the phototherapy threshold. Continue monitoring, ensure adequate feeding, and schedule follow-up bilirubin check per local protocol.";
   }
 
-  hdr.style.background=color;
-  document.getElementById('res-bili').textContent=bili.toFixed(1)+" mg/dL";
-  document.getElementById('res-thresh').textContent=threshold+" mg/dL";
-  document.getElementById('res-exch').textContent=exchThresh+" mg/dL";
-  const noteBox=document.getElementById('res-note');
-  noteBox.className="interp "+status;
-  noteBox.innerHTML=note+(hasRisk?"<br><em style='font-size:.82rem'>⚠️ Neurotoxicity risk factor(s) present — lower threshold applied.</em>":"");
+  hdr.style.background = color;
+  hdr.textContent = actionHeadline;
+  document.getElementById('res-bili').textContent = bili.toFixed(1) + " mg/dL";
+  document.getElementById('res-thresh').textContent = threshold + " mg/dL";
+  document.getElementById('res-exch').textContent = exchThresh + " mg/dL";
+  
+  const noteBox = document.getElementById('res-note');
+  noteBox.className = "interp " + status;
+  noteBox.innerHTML = note + (hasRisk ? "<br><em style='font-size:.82rem'>⚠️ Neurotoxicity risk factor(s) present — lower threshold applied.</em>" : "");
 
-  document.getElementById('share-btn').onclick=()=>{
-    const text=`Neonatal Jaundice Assessment:\nBilirubin: ${bili.toFixed(1)} mg/dL at ${hrs}h\nThreshold: ${threshold} mg/dL | Exchange: ${exchThresh} mg/dL\nResult: ${needsPhoto?"PHOTOTHERAPY REQUIRED":"Monitor Only"}\nCalculated at Clinical Calculators India`;
-    try{uTrack('share_whatsapp',{tool:'neonatal-jaundice'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
+  shareText = `Neonatal Jaundice Assessment:\nBilirubin: ${bili.toFixed(1)} mg/dL at ${hrs}h\nThreshold: ${threshold} mg/dL | Exchange: ${exchThresh} mg/dL\nResult: ${needsPhoto?"PHOTOTHERAPY REQUIRED":"Monitor Only"}\n\nCalculated at: ${window.location.href}`;
+}
+
+// ── SHARE & COPY FUNCTIONS ──
+function shareWhatsApp() {
+  if (!shareText) { alert("Please calculate first."); return; }
+  try { if (typeof uTrack === 'function') uTrack('share_whatsapp', { tool: 'neonatal-jaundice' }); } catch(e) {} 
+  window.open('https://wa.me/?text=' + encodeURIComponent(shareText), "_blank", "noopener");
+}
+
+function copyResult() {
+  if (!shareText) { alert("Please calculate first."); return; }
+  
+  const successHandler = () => {
+    const el = document.getElementById("copy-confirm");
+    if (el) {
+      el.textContent = "✓ Copied!";
+      setTimeout(() => { el.textContent = ""; }, 2500);
+    }
   };
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(shareText).then(successHandler).catch(() => fallbackCopy(shareText, successHandler));
+  } else {
+    fallbackCopy(shareText, successHandler);
+  }
+}
+
+function fallbackCopy(text, callback) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.position = "fixed"; ta.style.top = "0"; ta.style.left = "0";
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  try {
+    if(document.execCommand('copy')) callback();
+  } catch (err) {
+    console.error("Copy failed", err);
+  }
+  document.body.removeChild(ta);
+}
+
+function saveImage() {
+  if (!shareText) { alert("Please calculate first."); return; }
+  const btn = event.target.closest("button"), orig = btn.innerHTML;
+  btn.textContent = "Saving..."; btn.disabled = true;
+  html2canvas(document.getElementById("result"), { backgroundColor:"#ffffff", scale:2, useCORS:true })
+    .then(canvas => {
+      const a = document.createElement("a");
+      a.download = "neonatal-jaundice-result.png";
+      a.href = canvas.toDataURL("image/png");
+      a.click();
+      btn.innerHTML = orig; btn.disabled = false;
+    });
 }
 </script>
 <script src="/shared-nav.js"></script>
