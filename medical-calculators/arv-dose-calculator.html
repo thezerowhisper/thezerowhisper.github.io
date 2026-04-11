@@ -1,30 +1,102 @@
 <!DOCTYPE html>
 <html lang="en" data-tool="arv-dose">
 <head>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script src="assets/umami-events.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/shared.css"/>
-  <title>ARV Dose Calculator — Anti-Rabies Vaccine & RIG Dose India</title>
-  <meta name="description" content="Free ARV (Anti-Rabies Vaccine) dose calculator for India. Calculate RIG dose by weight, wound category (I/II/III), IM Essen regimen (Days 0,3,7,28), and intradermal schedule. NCDC & WHO 2018 guidelines." />
-  <meta name="keywords" content="ARV dose calculator, anti rabies vaccine dose calculator, ARV calculator India, rabies vaccine dose, RIG dose calculator, rabies immunoglobulin dose by weight, dog bite ARV dose, Essen regimen calculator, intradermal rabies vaccine, category III dog bite, NCDC rabies guidelines, ARV schedule India, rabies PEP calculator, anti rabies vaccine schedule days 0 3 7 28" />
+  <title>ARV Dose Calculator India | Rabies Vaccine & RIG Schedule</title>
+  <meta name="description" content="Free ARV (Anti-Rabies Vaccine) dose calculator for India. Calculate HRIG/ERIG dose by weight, wound category (I/II/III), and Essen IM/ID schedules per NCDC guidelines." />
+  <meta name="keywords" content="ARV dose calculator, anti rabies vaccine dose calculator, ARV calculator India, rabies vaccine dose by weight, RIG dose calculator, rabies immunoglobulin calculation, dog bite injection schedule India, HRIG vs ERIG dose, Essen regimen calculator, intradermal rabies vaccine dose, category III dog bite treatment, NCDC rabies guidelines 2024, pediatric ARV dose, rabies PEP calculator, rabies vaccine chart" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" />
+
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <script src="assets/umami-events.js"></script>
+
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ARV Dose Calculator — Anti-Rabies Vaccine and RIG Dose India" />
-  <meta property="og:description" content="Calculate ARV dose, RIG dose by weight, wound category. Essen IM and intradermal schedules. NCDC India guidelines." />
+  <meta property="og:title" content="ARV Dose Calculator India | Rabies Vaccine & RIG Schedule" />
+  <meta property="og:description" content="Calculate exact ARV dose, RIG dose by weight, and wound category. Essen IM and ID schedules per NCDC India guidelines." />
   <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" />
+  <meta property="og:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-arv.png" />
   <meta property="og:site_name" content="Medical Calculators" />
+
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ARV Dose Calculator — Anti-Rabies Vaccine India" />
-  <meta name="twitter:description" content="RIG dose by weight, wound category, Essen IM and ID schedules. Free ARV calculator for India." />
+  <meta name="twitter:title" content="ARV Dose Calculator India | Rabies Vaccine & RIG Schedule" />
+  <meta name="twitter:description" content="Calculate exact ARV dose, RIG dose by weight, and wound category. Essen IM and ID schedules per NCDC India guidelines." />
+  <meta name="twitter:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-arv.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thezerowhisper.github.io/medical-calculators/"},{"@type":"ListItem","position":2,"name":"Infectious Disease","item":"https://thezerowhisper.github.io/medical-calculators/#infectious"},{"@type":"ListItem","position":3,"name":"ARV Dose Calculator","item":"https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator"}]},{"@type":"MedicalWebPage","name":"ARV Dose Calculator — Anti-Rabies Vaccine","url":"https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator","description":"Calculate anti-rabies vaccine dose schedule and RIG dose by body weight for rabies PEP in India.","specialty":"Infectious Disease"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the ARV dose schedule in India?","acceptedAnswer":{"@type":"Answer","text":"Standard IM Essen regimen: 4 doses on Days 0, 3, 7, 28. Each dose is 0.5 mL (PVRV) or 1.0 mL (PCECV) IM in the deltoid."}},{"@type":"Question","name":"What is the RIG dose for rabies?","acceptedAnswer":{"@type":"Answer","text":"HRIG: 20 IU/kg body weight. ERIG: 40 IU/kg body weight. Infiltrate around wound on Day 0 only."}},{"@type":"Question","name":"Which categories need ARV and RIG?","acceptedAnswer":{"@type":"Answer","text":"Category I: No PEP. Category II: ARV only. Category III: ARV + RIG on Day 0."}},{"@type":"Question","name":"What is the intradermal ARV regimen?","acceptedAnswer":{"@type":"Answer","text":"WHO 2018 ID regimen: 0.1 mL at 2 sites on Days 0, 3, 7. More economical, fewer vials used."}},{"@type":"Question","name":"Is RIG needed if previously vaccinated?","acceptedAnswer":{"@type":"Answer","text":"No. Previously vaccinated patients need only 2-dose booster (Day 0 and 3), no RIG required."}},{"@type":"Question","name":"What first aid is needed after a dog bite?","acceptedAnswer":{"@type":"Answer","text":"Wash wound with soap and running water for 15 minutes, then apply povidone-iodine. Seek medical attention immediately."}},{"@type":"Question","name":"What is the difference between HRIG and ERIG?","acceptedAnswer":{"@type":"Answer","text":"HRIG: 20 IU/kg, lower risk, preferred. ERIG: 40 IU/kg, requires skin test, cheaper and widely available in India."}},{"@type":"Question","name":"What is the ARV dose for children?","acceptedAnswer":{"@type":"Answer","text":"Same vaccine volume as adults: 0.5 mL (PVRV) or 1.0 mL (PCECV). Inject in anterolateral thigh for children under 2 years. RIG dose is weight-based."}}]}]}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thezerowhisper.github.io/medical-calculators/"},
+          {"@type": "ListItem", "position": 2, "name": "Infectious Disease", "item": "https://thezerowhisper.github.io/medical-calculators/#infectious"},
+          {"@type": "ListItem", "position": 3, "name": "ARV Dose Calculator", "item": "https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator"}
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "name": "ARV Dose Calculator — Anti-Rabies Vaccine",
+        "url": "https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator",
+        "description": "Calculate anti-rabies vaccine dose schedule and RIG dose by body weight for rabies PEP in India.",
+        "specialty": "Infectious Disease"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the ARV dose schedule in India?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Standard IM Essen regimen: 4 doses on Days 0, 3, 7, 28. Each dose is 0.5 mL (PVRV) or 1.0 mL (PCECV) IM in the deltoid."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the RIG dose for rabies?",
+            "acceptedAnswer": {"@type": "Answer", "text": "HRIG: 20 IU/kg body weight. ERIG: 40 IU/kg body weight. Infiltrate around wound on Day 0 only."}
+          },
+          {
+            "@type": "Question",
+            "name": "Which categories need ARV and RIG?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Category I: No PEP. Category II: ARV only. Category III: ARV + RIG on Day 0."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the intradermal ARV regimen?",
+            "acceptedAnswer": {"@type": "Answer", "text": "WHO 2018 ID regimen: 0.1 mL at 2 sites on Days 0, 3, 7. More economical, fewer vials used."}
+          },
+          {
+            "@type": "Question",
+            "name": "Is RIG needed if previously vaccinated?",
+            "acceptedAnswer": {"@type": "Answer", "text": "No. Previously vaccinated patients need only a 2-dose booster (Day 0 and 3), no RIG required."}
+          },
+          {
+            "@type": "Question",
+            "name": "What first aid is needed after a dog bite?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Wash wound with soap and running water for 15 minutes, then apply povidone-iodine. Seek medical attention immediately."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between HRIG and ERIG?",
+            "acceptedAnswer": {"@type": "Answer", "text": "HRIG: 20 IU/kg, lower risk, preferred. ERIG: 40 IU/kg, requires skin test, cheaper and widely available in India."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the ARV dose for children?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Same vaccine volume as adults: 0.5 mL (PVRV) or 1.0 mL (PCECV). Inject in anterolateral thigh for children under 2 years. RIG dose is strictly weight-based."}
+          }
+        ]
+      }
+    ]
+  }
   </script>
+
   <style>
     :root{--bg:#f0f4f8;--surface:#fff;--surface2:#f5f8fc;--border:#dce4ef;--primary:#b45309;--primary-light:#f59e0b;--primary-dark:#78350f;--text:#0f1e33;--text-muted:#5a6a82;--text-light:#8fa0b8;--cat1:#16a34a;--cat2:#d97706;--cat3:#dc2626;--radius:14px;--radius-sm:8px;--shadow:0 2px 16px rgba(15,30,51,.09)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -42,7 +114,7 @@
     .hero-tags span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:3px 12px;font-size:.78rem}
     .page{max-width:920px;margin:0 auto;padding:32px 16px 64px}
     .card{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:28px;margin-bottom:24px}
-    .card-title{font-size:1rem;font-weight:700;color:var(--primary);letter-spacing:.03em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+    .card-title{font-size:1rem;font-weight:700;color:var(--primary);letter-spacing:.03em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px; margin-top:0;}
     .card-title::before{content:'';display:block;width:4px;height:18px;background:var(--primary-light);border-radius:4px}
     .scheduler-promo{background:linear-gradient(135deg,#0f1e33 0%,#1d4ed8 100%);color:#fff;border-radius:var(--radius);padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:24px}
     .scheduler-promo .sp-title{font-size:1.05rem;font-weight:800;margin-bottom:4px}
@@ -144,7 +216,7 @@
   </div>
 
   <section class="card">
-    <div class="card-title">ARV Dose &amp; RIG Calculator</div>
+    <h2 class="card-title">ARV Dose &amp; RIG Calculator</h2>
     <p class="step-lbl">Step 1 — Select Wound Category</p>
     <div class="cat-grid">
       <button class="cat-btn cat1" data-cat="1" onclick="selectCat(1)">
@@ -198,7 +270,7 @@
   </section>
 
   <section class="card">
-    <div class="card-title">Wound Category Reference — NCDC India</div>
+    <h2 class="card-title">Wound Category Reference — NCDC India</h2>
     <div style="overflow-x:auto">
       <table class="cat-table">
         <thead><tr><th>Category</th><th>Type of Contact</th><th>Examples</th><th>ARV</th><th>RIG</th></tr></thead>
@@ -213,7 +285,7 @@
   </section>
 
   <section class="card">
-    <div class="card-title">RIG Dose by Body Weight</div>
+    <h2 class="card-title">RIG Dose by Body Weight</h2>
     <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:14px">Required only for <strong>Category III</strong> in non-vaccinated patients. Must be given on <strong>Day 0 only</strong> — cannot be given after Day 7.</p>
     <div style="overflow-x:auto">
       <table class="rig-table">
@@ -225,12 +297,12 @@
   </section>
 
   <section class="card">
-    <div class="card-title">Frequently Asked Questions</div>
+    <h2 class="card-title">Frequently Asked Questions</h2>
     <div id="faq-list"></div>
   </section>
 
-    <section class="card">
-    <div class="card-title">Related Tools</div>
+  <section class="card">
+    <h2 class="card-title">Related Tools</h2>
     <div class="related-grid">
       <a href="https://thezerowhisper.github.io/rabies-scheduler/" class="related-card" ><div class="rc-name">📅 ARV Date Scheduler</div><div class="rc-desc">Days 0,3,7,28 dates</div></a>
       <a href="https://thezerowhisper.github.io/medical-calculators/uip-vaccine" class="related-card" ><div class="rc-name">UIP Vaccine Schedule</div><div class="rc-desc">Catch-up immunisation</div></a>
@@ -238,8 +310,9 @@
       <a href="https://thezerowhisper.github.io/medical-calculators/curb65" class="related-card" ><div class="rc-name">CURB-65 Score</div><div class="rc-desc">Pneumonia severity</div></a>
     </div>
   </section>
+
 <section class="card" id="about-arv">
-  <div class="card-title">About Anti-Rabies Vaccine (ARV) in India</div>
+  <h2 class="card-title">About Anti-Rabies Vaccine (ARV) in India</h2>
   <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px">
     Rabies post-exposure prophylaxis (PEP) in India follows the <strong>NCDC National Guidelines for Rabies Prophylaxis</strong> and the <strong>WHO Position Paper 2018</strong>. The standard regimen is the <strong>Essen intramuscular (IM) 4-dose schedule</strong> — a single dose of cell culture vaccine (0.5 mL PVRV or 1.0 mL PCECV) given on Days 0, 3, 7, and 28 in the deltoid. The gluteal region must never be used, as subcutaneous fat at that site impairs vaccine absorption and reduces immunogenicity.
   </p>
@@ -277,19 +350,25 @@
     const erigIU = w*40, erigMl = (w*40/300).toFixed(1);
     rigTbody.innerHTML += `<tr><td>${w} kg</td><td>${hrigIU} IU (≈${hrigMl} mL at 150 IU/mL)</td><td>${erigIU} IU (≈${erigMl} mL at 300 IU/mL)</td></tr>`;
   });
+
   function calculate() {
     const wt = parseFloat(document.getElementById('weight').value);
     const prev = document.getElementById('prevVacc').value;
     const rigType = document.getElementById('rigType').value;
     const route = document.getElementById('route').value;
     const rs = document.getElementById('resultSection');
+    
     if (!wt || wt < 3) { rs.style.display='none'; return; }
     rs.style.display = 'block';
-    trackCalc('arv-dose', { category: selectedCat, weight: wt });
+    
+    try { trackCalc('arv-dose', { category: selectedCat, weight: wt }); } catch(e) {}
+    
     const catColors = ['','#16a34a','#d97706','#dc2626'];
     const catNeed = ['','No PEP needed','ARV only','ARV + RIG'];
     let gridHTML = `<div class="r-box primary"><div class="rb-label">Wound Category</div><div class="rb-val" style="color:${catColors[selectedCat]}">${selectedCat}</div><div class="rb-unit">${catNeed[selectedCat]}</div></div><div class="r-box"><div class="rb-label">Weight</div><div class="rb-val">${wt}</div><div class="rb-unit">kg</div></div>`;
+    
     let alertHTML = '', stepsHTML = '';
+    
     if (selectedCat === 1) {
       gridHTML += `<div class="r-box"><div class="rb-label">ARV Required</div><div class="rb-val" style="color:#16a34a">None</div><div class="rb-unit">No PEP needed</div></div>`;
       alertHTML = `<div class="alert cat1"><span class="al-icon">✅</span><div><strong>Category I — No PEP required.</strong> Wash the contact area with soap and water. No ARV or RIG needed if only touching or licking on intact skin with no wounds. If uncertain, reassess carefully.</div></div>`;
@@ -304,39 +383,51 @@
       const rigDose = wt * iuPerKg;
       const rigVol = (rigDose / rigConc).toFixed(1);
       const rigName = rigType === 'hrig' ? 'HRIG' : 'ERIG';
+      
       gridHTML += `<div class="r-box" style="background:#fef2f2;border-color:#fca5a5"><div class="rb-label">${rigName} Dose</div><div class="rb-val" style="color:#dc2626">${rigDose}</div><div class="rb-unit">IU &nbsp;(≈${rigVol} mL)</div></div>`;
       alertHTML = `<div class="alert cat3"><span class="al-icon">🔴</span><div><strong>Category III — ARV + RIG required on Day 0.</strong> ${rigName} <strong>${rigDose} IU</strong> (≈${rigVol} mL at ${rigConc} IU/mL) — infiltrate into and around wound; remainder IM at different site from vaccine. ${rigType==='erig'?'<strong>ERIG: skin test required before administration.</strong>':''}</div></div>`;
       stepsHTML = buildSteps(route, prev, true, wt, rigType);
     }
+    
     document.getElementById('resultGrid').innerHTML = gridHTML;
     document.getElementById('alertBox').innerHTML = alertHTML;
     document.getElementById('regimenSteps').innerHTML = stepsHTML;
   }
+
   function step(day, dayLabel, name, dose, note, isRig) {
     return `<div class="step-row${isRig?' rig':''}"><div class="step-day"><div class="day-num">${day}</div>${dayLabel?`<div class="day-label">${dayLabel}</div>`:''}</div><div class="step-content"><div class="sc-title">${name}</div><div class="sc-dose">${dose}</div>${note?`<div class="sc-note">${note}</div>`:''}</div></div>`;
   }
+
   function buildSteps(route, prev, rig, wt, rigType) {
     if (prev === 'prev') {
       return `<div class="alert info"><span class="al-icon">ℹ️</span><div><strong>Previously vaccinated:</strong> 2-dose booster only — no RIG required.</div></div>`
         + step('Day 0','','Booster Dose 1', route==='im'?'0.5 mL (PVRV) or 1.0 mL (PCECV) IM — deltoid':'0.1 mL ID × 2 sites — deltoid/forearm','No RIG needed in previously vaccinated patients',false)
         + step('Day 3','','Booster Dose 2', route==='im'?'0.5 mL IM — deltoid':'0.1 mL ID × 2 sites','Complete 2-dose booster course. No further doses needed.',false);
     }
+    
     const imDose = '0.5 mL (PVRV/Verorab) or 1.0 mL (PCECV/Rabipur) IM — deltoid (or anterolateral thigh if <2 yrs)';
     const idDose = '0.1 mL ID × 2 sites — deltoid or volar forearm';
     let html = '';
+    
     if (rig) {
       const rigDose = wt * (rigType==='hrig'?20:40);
       const rigVol = (rigDose / (rigType==='hrig'?150:300)).toFixed(1);
       const rigName = rigType==='hrig'?'HRIG':'ERIG';
       html += step('Day 0','+ RIG',`🔴 ${rigName} — Rabies Immunoglobulin`,`${rigDose} IU (≈${rigVol} mL) — infiltrate around wound, remainder IM at different site`,'Must be given on Day 0 only. Cannot be given after Day 7. Vaccine and RIG at different sites.',true);
     }
+    
     html += step('Day 0', rig?'+ ARV':'', 'First ARV Dose', route==='im'?imDose:idDose, 'Start as soon as possible after exposure', false);
     html += step('Day 3','','Second ARV Dose', route==='im'?imDose:idDose, '', false);
     html += step('Day 7','','Third ARV Dose', route==='im'?imDose:idDose, route==='id'?'Last routine dose for WHO ID 3-visit regimen':'', false);
-    if (route==='im') html += step('Day 28','','Fourth ARV Dose', imDose, 'Final dose — complete the full course. Do not miss.', false);
-    else html += step('Day 28','','Fourth ARV Dose (ID)', '0.1 mL ID × 1 site', 'Only if immunocompromised — immunocompetent patients can omit Day 28 with ID regimen.',false);
+    
+    if (route==='im') {
+        html += step('Day 28','','Fourth ARV Dose', imDose, 'Final dose — complete the full course. Do not miss.', false);
+    } else {
+        html += step('Day 28','','Fourth ARV Dose (ID)', '0.1 mL ID × 1 site', 'Only if immunocompromised — immunocompetent patients can omit Day 28 with ID regimen.',false);
+    }
     return html;
   }
+
   const faqs = [
     {q:"What is the ARV dose schedule in India?",a:"Standard IM Essen regimen: 4 doses on Days 0, 3, 7, and 28. Each dose is 0.5 mL (PVRV/Verorab) or 1.0 mL (PCECV/Rabipur) IM in the deltoid. Anterolateral thigh for children under 2 years. The gluteal region must not be used — fat impairs absorption."},
     {q:"What is the RIG dose by body weight for Category III?",a:"HRIG (Human RIG): 20 IU/kg. ERIG (Equine RIG): 40 IU/kg. Infiltrate maximum dose around and into the wound. Any remaining volume give IM at a site away from the vaccine. RIG must be given on Day 0 only."},
@@ -348,15 +439,18 @@
     {q:"What first aid should be done after a dog bite?",a:"Immediately wash the wound with soap and running water for at least 15 minutes, then apply povidone-iodine (Betadine) or 70% alcohol. Do not suture immediately. Seek medical attention for ARV/RIG, tetanus prophylaxis, and antibiotics (Amoxicillin-Clavulanate) for infected wounds."},
     {q:"What is the ARV dose for children?",a:"Same vaccine volume as adults regardless of child's weight: 0.5 mL (PVRV) or 1.0 mL (PCECV). Injection site: anterolateral thigh for children under 2 years, deltoid for older children. RIG dose is weight-based: HRIG 20 IU/kg or ERIG 40 IU/kg."}
   ];
+
   const fl = document.getElementById('faq-list');
   faqs.forEach((f,i) => {
     fl.innerHTML += `<div class="faq-item" id="fi-${i}"><button class="faq-q" onclick="tf(${i})" aria-expanded="false"><span>${f.q}</span><span class="faq-icon">+</span></button><div class="faq-a">${f.a}</div></div>`;
   });
+
   function tf(i) {
     const el = document.getElementById('fi-'+i);
     const open = el.classList.toggle('open');
     el.querySelector('.faq-q').setAttribute('aria-expanded', open);
   }
+
   window.addEventListener('DOMContentLoaded', () => { selectCat(3); });
 </script>
   <script src="/shared-nav.js"></script>
