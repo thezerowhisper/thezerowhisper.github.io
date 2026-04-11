@@ -1,57 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="milestones">
+<html lang="en-IN" data-tool="milestones">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="/shared.css"/>
-<title>Developmental Milestone Checklist India | IAP 2015 | 0-18 Years</title>
-<meta name="description" content="Free developmental milestone checklist for Indian children 0–18 years — gross motor, fine motor, language, social-emotional milestones and red flags. IAP 2015 guidelines. DOB-based auto-age calculator."/>
-<meta name="keywords" content="developmental milestones India, child development checklist India, IAP developmental milestones 2015, gross motor milestones India, language development milestones India, developmental red flags India, child milestone calculator India, developmental delay India"/>
-<meta name="robots" content="index, follow"/>
+
+<title>Developmental Milestone Checklist India | IAP Guidelines | 0-18 Years</title>
+<meta name="description" content="Free developmental milestone checklist for Indian children 0–18 years. Track gross motor, fine motor, language, and social milestones with IAP red flag alerts."/>
+<meta name="keywords" content="developmental milestones India, child development checklist India, IAP developmental milestones 2015, gross motor milestones India, language development milestones India, developmental red flags India, child milestone calculator India, developmental delay screening India, Denver Developmental Screening Test, pediatric milestones chart"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/milestones"/>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b">
-  function shareMilestonesWhatsApp() {
-    var ageEl=document.querySelector('.age-val');
-    var age=ageEl?ageEl.textContent.trim():'';
-    var snEls=document.querySelectorAll('.stats-row .sn');
-    var achieved=snEls[0]?snEls[0].textContent.trim():'?';
-    var notYet=snEls[1]?snEls[1].textContent.trim():'?';
-    var lines=['Developmental Milestones Check',''];
-    if(age) lines.push('Age: '+age);
-    lines.push('Achieved: '+achieved+' | Not yet: '+notYet);
-    lines.push('','Based on IAP / CDC 2022 milestones');
-    lines.push('https://thezerowhisper.github.io/medical-calculators/milestones');
-    try{uTrack('share_whatsapp',{tool:'milestones'});}catch(e){}
-    window.open('https://wa.me/?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
-  }
-  function copyMilestonesResult() {
-    var ageEl=document.querySelector('.age-val');
-    var age=ageEl?ageEl.textContent.trim():'';
-    navigator.clipboard.writeText('Milestones | Age: '+age).then(function(){
-      var el=document.getElementById('msCopyConfirm'); el.textContent='Copied!';
-      setTimeout(function(){el.textContent='';},2000);
-    });
-  }
-  </script>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 <script src="assets/umami-events.js"></script>
+
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="en_IN"/>
 <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/milestones"/>
 <meta property="og:title" content="Developmental Milestone Checklist India | IAP 2015 | 0-18 Years"/>
-<meta property="og:description" content="Free developmental milestone checklist — gross motor, fine motor, language, social-emotional milestones and red flag alerts. IAP 2015. No login."/>
+<meta property="og:description" content="Free developmental milestone checklist — gross motor, fine motor, language, social-emotional milestones and red flag alerts. Based on IAP 2015. No login."/>
 <meta property="og:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-milestones.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="675"/>
+
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Developmental Milestone Checklist India | IAP 2015 | 0-18 Years"/>
-<meta name="twitter:description" content="Free developmental milestone checklist — IAP 2015. Auto age from DOB. Red flag alerts. No login."/>
+<meta name="twitter:title" content="Developmental Milestone Checklist India | IAP Guidelines"/>
+<meta name="twitter:description" content="Free developmental milestone checklist — IAP 2015. Auto age calculation from DOB with red flag alerts for developmental delay."/>
 <meta name="twitter:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-milestones.png"/>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Developmental Milestone Checklist India — IAP 2015","description":"Developmental milestone checklist for Indian children 0-18 years. Covers gross motor, fine motor and vision, language and communication, and social-emotional domains with age-specific red flag alerts. Based on IAP 2015 developmental surveillance guidelines.","url":"https://thezerowhisper.github.io/medical-calculators/milestones","inLanguage":"en-IN","audience":{"@type":"MedicalAudience","audienceType":"Physician, Patient, Parent"},"medicalSpecialty":"Pediatrics","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Medical Calculators","item":"https://thezerowhisper.github.io/medical-calculators/"},{"@type":"ListItem","position":2,"name":"Developmental Milestones","item":"https://thezerowhisper.github.io/medical-calculators/milestones"}]}}
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Developmental Milestone Checklist India — IAP 2015",
+  "description": "Developmental milestone checklist for Indian children 0-18 years. Covers gross motor, fine motor and vision, language and communication, and social-emotional domains with age-specific red flag alerts. Based on IAP 2015 developmental surveillance guidelines.",
+  "url": "https://thezerowhisper.github.io/medical-calculators/milestones",
+  "inLanguage": "en-IN",
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": ["Physician", "Pediatrician", "Parent"]
+  },
+  "medicalSpecialty": "Pediatrics",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Medical Calculators", "item": "https://thezerowhisper.github.io/medical-calculators/"},
+      {"@type": "ListItem", "position": 2, "name": "Developmental Milestones", "item": "https://thezerowhisper.github.io/medical-calculators/milestones"}
+    ]
+  }
+}
 </script>
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the developmental red flags in infants in India?","acceptedAnswer":{"@type":"Answer","text":"Key developmental red flags: No social smile by 3 months. No head control by 4 months. Not reaching for objects by 5 months. Not sitting without support by 9 months. No single words with meaning by 18 months. No 2-word phrases by 24 months. Loss of any previously acquired skill at any age. Any of these warrant immediate developmental assessment."}},{"@type":"Question","name":"What milestones should a 1-year-old child have in India?","acceptedAnswer":{"@type":"Answer","text":"By 12 months: Walks with support (cruising), stands briefly alone, has neat pincer grasp, says 2-3 meaningful words (mama/dada specific), waves bye-bye, points to objects, understands 'no', and comes when called."}},{"@type":"Question","name":"When should a child walk independently in India?","acceptedAnswer":{"@type":"Answer","text":"Most children walk independently by 12-14 months. Not walking independently by 18 months is a developmental red flag requiring evaluation. Some children walk as early as 9-10 months. Walking with support (cruising) by 12 months and independent walking by 15 months is considered normal range per IAP guidelines."}},{"@type":"Question","name":"When should a child start speaking in India?","acceptedAnswer":{"@type":"Answer","text":"First words with meaning by 12 months (at least 2-3 words). 10+ words by 18 months. 50+ words and 2-word phrases by 24 months. 3-word sentences by 36 months. Red flags: No words by 18 months. No 2-word phrases by 24 months. Speech regression at any age."}},{"@type":"Question","name":"What is developmental regression and when is it a red flag?","acceptedAnswer":{"@type":"Answer","text":"Developmental regression = loss of previously acquired skills. This is always a red flag at any age. Examples: a child who was walking and stops walking, a child who had words and stops speaking. Regression warrants immediate medical evaluation as it can indicate neurological, metabolic, or autistic conditions."}}]}
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Developmental Milestone Checklist India",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "description": "Interactive developmental milestone checklist for Indian children aged 0-18 based on IAP 2015 guidelines. Includes automatic age calculation and clinical red flag alerts."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the developmental red flags in infants in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key developmental red flags include: No social smile by 3 months. No head control by 4 months. Not reaching for objects by 5 months. Not sitting without support by 9 months. No single words with meaning by 18 months. No 2-word phrases by 24 months. Loss of any previously acquired skill at any age. Any of these warrant immediate developmental assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What milestones should a 1-year-old child have in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 12 months, a child typically: Walks with support (cruising), stands briefly alone, has a neat pincer grasp, says 2-3 meaningful words (like mama/dada), waves bye-bye, points to objects, understands 'no', and comes when called."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should a child walk independently in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most children walk independently by 12-14 months. Not walking independently by 18 months is a developmental red flag requiring evaluation. Some children walk as early as 9-10 months. Walking with support (cruising) by 12 months and independent walking by 15 months is considered within the normal range per IAP guidelines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should a child start speaking in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First words with meaning usually emerge by 12 months (at least 2-3 words). A child should have 10+ words by 18 months, and 50+ words plus 2-word phrases by 24 months. 3-word sentences should appear by 36 months. Red flags: No words by 18 months, no 2-word phrases by 24 months, or speech regression at any age."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is developmental regression and when is it a red flag?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Developmental regression is the loss of previously acquired skills. This is always a clinical red flag at any age. Examples include a child who was walking and stops, or a child who had words and stops speaking. Regression warrants immediate medical evaluation as it can indicate neurological, metabolic, or autistic conditions."
+      }
+    }
+  ]
+}
 </script>
 
 <style>
@@ -68,14 +126,15 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .intro{background:white;border-radius:14px;padding:20px 24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.05);font-size:.88rem;color:#4a5568;line-height:1.75}
 .intro strong{color:#1a202c}
 .card{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 16px rgba(0,0,0,.06)}
-.card h2{font-size:1rem;font-weight:700;color:#1a202c;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.card h2{font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:16px;display:flex;align-items:center;gap:8px}
 .form-row{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-bottom:8px}
 .form-row label{font-size:.82rem;font-weight:600;color:#4a5568;display:block;margin-bottom:5px}
 .form-row input,.form-row select{border:2px solid #e2e8f0;border-radius:10px;padding:10px 14px;font-size:.9rem;color:#2d3748;outline:none;width:190px}
 .form-row input:focus,.form-row select:focus{border-color:#805ad5}
-.btn-p{background:#553c9a;color:white;border:none;border-radius:10px;padding:10px 22px;font-size:.88rem;font-weight:700;cursor:pointer}
+.btn-p{background:#553c9a;color:white;border:none;border-radius:10px;padding:10px 22px;font-size:.88rem;font-weight:700;cursor:pointer;transition:background 0.2s}
 .btn-p:hover{background:#44337a}
-.btn-s{background:#e2e8f0;color:#4a5568;border:none;border-radius:10px;padding:10px 16px;font-size:.88rem;font-weight:600;cursor:pointer}
+.btn-s{background:#e2e8f0;color:#4a5568;border:none;border-radius:10px;padding:10px 16px;font-size:.88rem;font-weight:600;cursor:pointer;transition:background 0.2s}
+.btn-s:hover{background:#cbd5e0}
 
 /* AGE DISPLAY */
 .age-display{background:#faf5ff;border-radius:12px;padding:14px 18px;margin:14px 0;display:none;border:1.5px solid #d6bcfa}
@@ -128,7 +187,7 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .domain-la{border-left:3px solid #ed8936}
 .domain-so{border-left:3px solid #9f7aea}
 
-.faq-card h2{font-size:1rem;font-weight:700;color:#1a202c;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.faq-card h2{font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:14px;display:flex;align-items:center;gap:8px}
 .fi{border-bottom:1px solid #e2e8f0;padding:13px 0}
 .fi:last-child{border-bottom:none}
 .fq{font-size:.87rem;font-weight:700;color:#1a202c;cursor:pointer;display:flex;justify-content:space-between;gap:10px;line-height:1.4}
@@ -136,22 +195,30 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .fa{font-size:.83rem;color:#4a5568;line-height:1.7;margin-top:8px;display:none}
 .fi.open .fa{display:block}
 .fi.open .tog{transform:rotate(45deg)}
+
+/* RELATED CARDS */
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.related-card{padding:12px;background:#f7fafc;border:1.5px solid #e2e8f0;border-radius:10px;text-decoration:none;color:#2d3748;transition:border-color 0.2s}
+.related-card:hover{border-color:#3182ce}
+.rc-name{font-weight:700;font-size:0.85rem;color:#2b6cb0;margin-bottom:4px}
+.rc-desc{font-size:0.75rem;color:#718096}
+
 .disc{background:#fff5f5;border-radius:12px;padding:14px 18px;margin-bottom:20px;border-left:4px solid #fc8181;font-size:.77rem;color:#742a2a;line-height:1.6}
 footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
 .fl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
-.fl a{font-size:.82rem;color:#3182ce;text-decoration:none;padding:4px 0}
+.fl a{font-size:.82rem;color:#3182ce;text-decoration:none;padding:4px 0;font-weight:600}
 .fl a:hover{text-decoration:underline}
 .fb{text-align:center;font-size:.72rem;color:#a0aec0;border-top:1px solid #e2e8f0;padding-top:12px}
-@media(max-width:500px){.hero h1{font-size:1.3rem}.hero{padding:24px 18px}.stats-row{grid-template-columns:1fr 1fr}.form-row{flex-direction:column}.form-row input,.form-row select{width:100%}}
+@media(max-width:500px){.hero h1{font-size:1.3rem}.hero{padding:24px 18px}.stats-row{grid-template-columns:1fr 1fr}.form-row{flex-direction:column}.form-row input,.form-row select{width:100%}.related-grid{grid-template-columns:1fr}}
 @media(min-width:900px){body{padding:32px 60px}.pw{max-width:1100px}.fl{grid-template-columns:repeat(4,1fr)}}
 
-    .wa-share-bar{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-    .wa-share-btn{flex:1;min-width:120px;padding:11px 14px;border:none;border-radius:10px;font-size:.88rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .2s,transform .1s}
-    .wa-share-btn:hover{opacity:.88;transform:translateY(-1px)}
-    .wa-btn-green{background:#25D366;color:#fff}
-    .wa-btn-copy{background:#edf2f7;color:#2d3748}
-    .wa-copy-confirm{font-size:.78rem;color:#38a169;margin-top:6px;min-height:16px;text-align:center}
-  </style>
+.wa-share-bar{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.wa-share-btn{flex:1;min-width:120px;padding:11px 14px;border:none;border-radius:10px;font-size:.88rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .2s,transform .1s}
+.wa-share-btn:hover{opacity:.88;transform:translateY(-1px)}
+.wa-btn-green{background:#25D366;color:#fff}
+.wa-btn-copy{background:#edf2f7;color:#2d3748;border:1px solid #cbd5e0}
+.wa-copy-confirm{font-size:.78rem;color:#38a169;margin-top:6px;min-height:16px;text-align:center;font-weight:600}
+</style>
 </head>
 <body>
 <main class="pw">
@@ -172,10 +239,9 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
 </div>
 
 <div class="intro">
-  Developmental surveillance is a <strong>core part of every well-child visit</strong> in India. This checklist is based on <strong>IAP 2015 developmental milestones</strong> and covers gross motor, fine motor &amp; vision, language &amp; communication, and social-emotional development. Enter the child&#39;s date of birth to automatically load age-appropriate milestones. Tick each achieved milestone. <strong>Red flag alerts</strong> appear automatically when a critical milestone is not ticked at the expected age.
+  Developmental surveillance is a <strong>core part of every well-child pediatric visit</strong> in India. This checklist is based on <strong>IAP 2015 developmental milestones</strong> and covers gross motor, fine motor &amp; vision, language &amp; communication, and social-emotional development. Enter the child&#39;s date of birth to automatically load age-appropriate milestones. Tick each achieved milestone. <strong>Red flag alerts</strong> appear automatically when a critical milestone is not ticked at the expected age.
 </div>
 
-<!-- INPUT CARD -->
 <div class="card">
   <h2>&#128100; Enter Child&#39;s Details</h2>
   <div class="form-row">
@@ -212,7 +278,6 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
   </div>
 </div>
 
-<!-- STATS -->
 <div class="stats-row" id="stats" style="display:none">
   <div class="stat"><div class="sn g" id="sd">0</div><div class="sl">Achieved</div></div>
   <div class="stat"><div class="sn b" id="su">0</div><div class="sl">Not yet ticked</div></div>
@@ -220,20 +285,23 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
   <div class="stat"><div class="sn o" id="st">0</div><div class="sl">Total milestones</div></div>
 </div>
 
-<!-- RED FLAG SUMMARY -->
 <div class="wa-share-bar" id="msShareBar" style="display:none;margin-bottom:16px">
-  <button class="wa-share-btn wa-btn-green" onclick="shareMilestonesWhatsApp()"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Share Summary</button>
-  <button class="wa-share-btn wa-btn-copy" onclick="copyMilestonesResult()">&#128203; Copy</button>
+  <button class="wa-share-btn wa-btn-green" onclick="shareMilestonesWhatsApp()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="margin-top:-1px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Share Summary
+  </button>
+  <button class="wa-share-btn wa-btn-copy" onclick="copyMilestonesResult()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy
+  </button>
 </div><div class="wa-copy-confirm" id="msCopyConfirm"></div>
 <div class="rf-summary" id="rf-summary">
   <h3>&#9888; Red Flags Identified</h3>
   <div id="rf-summary-list"></div>
 </div>
 
-<!-- MILESTONE OUTPUT -->
 <div id="milestone-output"></div>
 
-<!-- RED FLAG MODAL -->
 <div class="rf-overlay" id="rf-overlay">
   <div class="rf-modal">
     <div class="rf-modal-icon">&#9888;&#65039;</div>
@@ -248,7 +316,6 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
   </div>
 </div>
 
-<!-- FAQ -->
 <div class="card faq-card">
   <h2>&#10067; FAQs &mdash; Developmental Milestones India</h2>
   <div class="fi"><div class="fq" onclick="tf(this)">What are the developmental red flags in infants?<span class="tog">+</span></div><div class="fa">Key red flags: No social smile by 3 months. No head control by 4 months. Not reaching for objects by 5 months. Not sitting without support by 9 months. No words with meaning by 18 months. No 2-word phrases by 24 months. Loss of any skill at any age. Any of these warrant immediate developmental assessment.</div></div>
@@ -259,6 +326,36 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
   <div class="fi"><div class="fq" onclick="tf(this)">What milestones should a 1-year-old have?<span class="tog">+</span></div><div class="fa">By 12 months: walks with support (cruising), stands briefly alone, neat pincer grasp, 2-3 meaningful words (mama/dada specific), waves bye-bye, points to objects, understands "no", comes when called. Red flag: no walking with support, no meaningful words.</div></div>
   <div class="fi"><div class="fq" onclick="tf(this)">What are the milestones for a 6-month-old?<span class="tog">+</span></div><div class="fa">By 6 months: sits with support, rolls both ways, bears weight on legs, reaches and transfers objects hand to hand, babbles (ba, ma, da), turns to voice, stranger awareness beginning, plays with own reflection. Red flag: not sitting with support, no babbling.</div></div>
 </div>
+
+<section class="card" id="about-milestones">
+  <h2>About Developmental Milestones in Children</h2>
+  <p style="font-size: 0.88rem; color: #4a5568; line-height: 1.7; margin-bottom: 8px;">Developmental milestones are age-specific skills that most children achieve within a predictable range. They span four primary domains: <strong>gross motor</strong> (sitting, walking, running), <strong>fine motor</strong> (pincer grasp, drawing), <strong>language</strong> (babbling, first words, sentences), and <strong>social/adaptive</strong> (smiling, eye contact, self-care). The <strong>IAP (Indian Academy of Pediatrics)</strong> and <strong>CDC 2022 milestones</strong> form the basis of developmental surveillance in routine child health checks in India.</p>
+  <p style="font-size: 0.88rem; color: #4a5568; line-height: 1.7; margin-bottom: 8px;">Key red flags requiring immediate developmental assessment include: no social smile by 3 months, no head control by 4 months, no sitting by 9 months, no single words by 18 months, no two-word phrases by 24 months, or any regression — loss of previously acquired skills at any age. Regression is always a red flag regardless of the child's current age and warrants urgent neurological evaluation.</p>
+  <p style="font-size: 0.88rem; color: #4a5568; line-height: 1.7; margin-bottom: 8px;">Developmental screening tools used in India include the <strong>Denver Developmental Screening Test II (DDST-II)</strong>, the <strong>Trivandrum Developmental Screening Chart (TDSC)</strong> for primary care settings, and the <strong>DASII (Development Assessment Scale for Indian Infants)</strong> for detailed assessment. Early identification of developmental delay enables timely referral for speech therapy, physiotherapy, or occupational therapy — interventions that are significantly more effective when started before age 3.</p>
+  <p style="font-size: 0.88rem; color: #4a5568; line-height: 1.7;">This milestones checker is designed for developmental surveillance at routine well-child visits as per IAP guidelines. It is a screening tool only — a positive screen should prompt formal developmental assessment by a trained paediatrician or developmental specialist, not a diagnosis.</p>
+</section>
+
+<section class="card">
+  <h2>Related Clinical Tools</h2>
+  <div class="related-grid">
+    <a href="https://thezerowhisper.github.io/medical-calculators/growth-chart" class="related-card">
+        <div class="rc-name">Growth Chart</div>
+        <div class="rc-desc">WHO/IAP Z-scores</div>
+    </a>
+    <a href="https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice" class="related-card">
+        <div class="rc-name">Neonatal Jaundice</div>
+        <div class="rc-desc">Newborn phototherapy</div>
+    </a>
+    <a href="https://thezerowhisper.github.io/medical-calculators/pediatric-asthma" class="related-card">
+        <div class="rc-name">Pediatric Asthma</div>
+        <div class="rc-desc">Child asthma action plan</div>
+    </a>
+    <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card">
+        <div class="rc-name">All Calculators →</div>
+        <div class="rc-desc">20+ clinical tools</div>
+    </a>
+  </div>
+</section>
 
 <div class="disc">
   <strong>Disclaimer:</strong> This checklist is based on IAP 2015 developmental surveillance guidelines. Milestones represent ranges — not all children achieve them at the same exact age. A missed milestone does not automatically indicate a disorder. Always correlate with clinical examination. If you have concerns about your child&#39;s development, consult a paediatrician. This tool does not replace clinical assessment.
@@ -278,23 +375,7 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
   <div class="fb">Free medical calculators for India &middot; Built by a doctor &middot; IAP 2015 guidelines<br><span style="margin-top:4px;display:block">For informational purposes only &middot; Always consult your physician</span></div>
 </footer>
 
-<section class="info-section" id="about-milestones">
-  <h2>About Developmental Milestones in Children</h2>
-  <p>Developmental milestones are age-specific skills that most children achieve within a predictable range. They span four domains: <strong>gross motor</strong> (sitting, walking, running), <strong>fine motor</strong> (pincer grasp, drawing), <strong>language</strong> (babbling, first words, sentences), and <strong>social/adaptive</strong> (smiling, eye contact, self-care). The <strong>IAP (Indian Academy of Pediatrics)</strong> and <strong>CDC 2022 milestones</strong> form the basis of developmental surveillance in routine child health checks in India.</p>
-  <p>Key red flags requiring immediate developmental assessment include: no social smile by 3 months, no head control by 4 months, no sitting by 9 months, no single words by 18 months, no two-word phrases by 24 months, or any regression — loss of previously acquired skills at any age. Regression is always a red flag regardless of the child's current age and warrants urgent neurological evaluation.</p>
-  <p>Developmental screening tools used in India include the <strong>Denver Developmental Screening Test II (DDST-II)</strong>, the <strong>Trivandrum Developmental Screening Chart (TDSC)</strong> for primary care settings, and the <strong>DASII (Development Assessment Scale for Indian Infants)</strong> for detailed assessment. Early identification of developmental delay enables timely referral for speech therapy, physiotherapy, or occupational therapy — interventions that are significantly more effective when started before age 3.</p>
-  <p>This milestones checker is designed for developmental surveillance at routine well-child visits as per IAP guidelines. It is a screening tool only — a positive screen should prompt formal developmental assessment by a trained paediatrician or developmental specialist, not a diagnosis.</p>
-</section>
-  <section class="card">
-    <div class="card-title">Related Tools</div>
-    <div class="related-grid">
-      <a href="https://thezerowhisper.github.io/medical-calculators/growth-chart" class="related-card" ><div class="rc-name">Growth Chart</div><div class="rc-desc">WHO/IAP Z-scores</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice" class="related-card" ><div class="rc-name">Neonatal Jaundice</div><div class="rc-desc">Newborn care</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/pediatric-asthma" class="related-card" ><div class="rc-name">Pediatric Asthma</div><div class="rc-desc">Child asthma action plan</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
-    </div>
-  </section>
-  </main>
+</main>
 
 <script>
 // ── MILESTONE DATA — IAP 2015 ─────────────────────────────────────────────
@@ -553,7 +634,7 @@ function loadFromDob(){
   document.getElementById("age-val").textContent = ageY+"y "+ageM+"m ("+ageDays+" days)";
   document.getElementById("age-sub").textContent = "Showing milestones for: "+BANDS.find(b=>b.id===bandId).label+" and all previous ages";
   document.getElementById("age-display").style.display="block";
-  trackCalc('milestones', { age_band: bandId });
+  try { if (typeof trackCalc === 'function') trackCalc('milestones', { age_band: bandId }); } catch(e) {}
   var msb=document.getElementById('msShareBar'); if(msb) msb.style.display='flex';
   renderMilestones(bandId, true);
 }
@@ -563,6 +644,7 @@ function selectBand(){
   if(!v) return;
   document.getElementById("dob").value = "";
   document.getElementById("age-display").style.display="none";
+  var msb=document.getElementById('msShareBar'); if(msb) msb.style.display='flex';
   renderMilestones(v, true);
 }
 
@@ -573,6 +655,7 @@ function clearAll(){
   document.getElementById("milestone-output").innerHTML = "";
   document.getElementById("stats").style.display = "none";
   document.getElementById("rf-summary").style.display = "none";
+  document.getElementById("msShareBar").style.display = "none";
   rfConcerns = [];
   currentBandIds = [];
 }
@@ -718,6 +801,74 @@ function updateStats(total, achieved){
 
 function tf(el){ el.closest(".fi").classList.toggle("open"); }
 document.getElementById("dob").max = new Date().toISOString().split("T")[0];
+
+// -- SHARE & COPY FUNCTIONS --
+function shareMilestonesWhatsApp() {
+  var ageEl = document.querySelector('.age-val');
+  var age = ageEl ? ageEl.textContent.trim() : '';
+  if (!age) {
+    var bandSel = document.getElementById('ageBand');
+    age = bandSel.options[bandSel.selectedIndex].text;
+  }
+  var snEls = document.querySelectorAll('.stats-row .sn');
+  var achieved = snEls[0] ? snEls[0].textContent.trim() : '?';
+  var notYet = snEls[1] ? snEls[1].textContent.trim() : '?';
+  var rf = snEls[2] ? snEls[2].textContent.trim() : '0';
+  
+  var lines = ['👶 Developmental Milestones Check',''];
+  if(age) lines.push('Age: ' + age);
+  lines.push('Achieved: ' + achieved + ' | Not yet: ' + notYet);
+  if (rf > 0) lines.push('⚠️ Red flags raised: ' + rf);
+  lines.push('','Based on IAP 2015 guidelines');
+  lines.push('https://thezerowhisper.github.io/medical-calculators/milestones');
+  
+  try{if(typeof uTrack === 'function') uTrack('share_whatsapp',{tool:'milestones'});}catch(e){}
+  window.open('https://wa.me/?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+}
+
+function copyMilestonesResult() {
+  var ageEl = document.querySelector('.age-val');
+  var age = ageEl ? ageEl.textContent.trim() : '';
+  if (!age) {
+    var bandSel = document.getElementById('ageBand');
+    age = bandSel.options[bandSel.selectedIndex].text;
+  }
+  var snEls = document.querySelectorAll('.stats-row .sn');
+  var achieved = snEls[0] ? snEls[0].textContent.trim() : '?';
+  var notYet = snEls[1] ? snEls[1].textContent.trim() : '?';
+  var rf = snEls[2] ? snEls[2].textContent.trim() : '0';
+  
+  var textToCopy = 'Developmental Milestones Check\nAge: ' + age + '\nAchieved: ' + achieved + ' | Not yet: ' + notYet + '\nRed Flags: ' + rf + '\n\nBased on IAP 2015 Guidelines';
+
+  const successHandler = () => {
+    var el = document.getElementById('msCopyConfirm');
+    el.textContent = '✓ Copied!';
+    setTimeout(function(){ el.textContent = ''; }, 2000);
+  };
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(textToCopy).then(successHandler).catch(() => fallbackCopy(textToCopy, successHandler));
+  } else {
+    fallbackCopy(textToCopy, successHandler);
+  }
+}
+
+function fallbackCopy(text, callback) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position = "fixed";
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    if(document.execCommand('copy')) callback();
+  } catch (err) {
+    console.error("Copy failed", err);
+  }
+  document.body.removeChild(textArea);
+}
 </script>
 <script src="/shared-nav.js"></script>
 </body>
