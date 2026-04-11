@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="/shared.css"/>
 <title>ObsCalc India | Obstetric Calculator | Gestational Age, Bishop Score, Apgar, EFW, GDM, VBAC</title>
 <meta name="description" content="Free obstetric calculator suite for Indian doctors. Gestational age by LMP or scan, expected fetal weight (Hadlock), Bishop score, Apgar score, GDM screening dates (DIPSI/FOGSI), VBAC eligibility and PPH risk — all in one tool."/>
 <meta name="keywords" content="obstetric calculator India, gestational age calculator India, Bishop score calculator India, Apgar score calculator, expected fetal weight Hadlock India, GDM screening dates DIPSI India, VBAC calculator India, PPH risk calculator, LMP calculator India, EDD calculator India, ObsCalc India, FOGSI calculator"/>
@@ -1013,5 +1014,6 @@ const ts=new Date().toISOString().split("T")[0];
 ["lmp-date","scan-date","gad-lmp","gdm-lmp"].forEach(id=>{const e=document.getElementById(id);if(e)e.max=ts;});
 buildPph(); buildGdm();
 </script>
+<script src="/shared-nav.js"></script>
 </body>
 </html>
