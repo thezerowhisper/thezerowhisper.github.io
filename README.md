@@ -9,7 +9,9 @@ A free, simple web tool for patients and healthcare providers to instantly calcu
 👉 **[https://thezerowhisper.github.io/rabies-scheduler/](https://thezerowhisper.github.io/rabies-scheduler/)**
 
 ---
+# medical-calculators
 
+Live tool: https://thezerowhisper.github.io/
 ## 📋 About
 
 After a dog bite or animal scratch, patients in India need 4 doses of the anti-rabies vaccine on specific days. Missing or miscalculating dates is a common problem — this tool solves it instantly.
