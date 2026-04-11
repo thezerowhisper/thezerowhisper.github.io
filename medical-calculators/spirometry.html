@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="spirometry">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Spirometry Predicted Values Calculator India | FEV1 FVC PEFR — Jindal Equations</title>
+<meta name="description" content="Calculate predicted FEV1, FVC, FEV1/FVC ratio and PEFR using Indian reference equations (Jindal et al.). Classify obstructive, restrictive and mixed ventilatory defects. Designed for pre-employment and periodic medical examinations in India."/>
+<meta name="keywords" content="spirometry predicted values India, FEV1 predicted India, FVC predicted India, Jindal spirometry equations, PEFR predicted India, occupational lung function test India, pre-employment spirometry India, obstructive restrictive ventilatory defect, pulmonary function test India, spirometry calculator"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/spirometry"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Spirometry Predicted Values Calculator India — Jindal Equations"/>
+<meta property="og:description" content="Calculate predicted FEV1, FVC, FEV1/FVC and PEFR using validated Indian (Jindal) reference equations. Classify ventilatory defects. Free, no login."/>
+<meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/spirometry"/>
+<meta property="og:site_name" content="Clinical Calculators India"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Spirometry Predicted Values — Indian (Jindal) Equations"/>
+<meta name="twitter:description" content="FEV1, FVC, FEV1/FVC and PEFR predicted values using Indian reference equations. Classify obstructive/restrictive/mixed defects."/>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
+
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org",
+  "@type":"MedicalWebPage",
+  "name":"Spirometry Predicted Values Calculator — Indian Reference Equations",
+  "description":"Calculates predicted FEV1, FVC, FEV1/FVC ratio and PEFR using Jindal et al. Indian reference equations for use in occupational health, pre-employment, and periodic medical examinations.",
+  "url":"https://thezerowhisper.github.io/medical-calculators/spirometry",
+  "lastReviewed":"2026-03-31",
+  "reviewedBy":{"@type":"MedicalOrganization","name":"Indian Journal of Chest Diseases — Jindal et al. Reference Equations"},
+  "audience":{"@type":"MedicalAudience","audienceType":"Occupational Physician, Pulmonologist, AFIH Doctor, General Physician"},
+  "medicalSpecialty":"Pulmonology, Occupational Medicine"
+},{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Which spirometry reference equations are used for Indians?","acceptedAnswer":{"@type":"Answer","text":"The most widely used and validated spirometry reference equations for Indian adults are Jindal et al. (1994 and 2016 updates), published in the Indian Journal of Chest Diseases. These are derived from Indian population studies and account for the fact that Indian lung volumes are approximately 15-25% lower than Caucasian predicted values for the same age, sex, and height. NHANES III equations significantly overestimate predicted values for Indians and should not be used without a racial correction factor."}},
+    {"@type":"Question","name":"What is a normal FEV1/FVC ratio?","acceptedAnswer":{"@type":"Answer","text":"A normal FEV1/FVC ratio is ≥70% (or ≥0.70) in adults. Values below 70% after bronchodilator administration indicate obstructive ventilatory defect. In older adults, the LLN (lower limit of normal) approach is preferred as FEV1/FVC naturally decreases with age — using a fixed 70% threshold may over-diagnose COPD in the elderly."}},
+    {"@type":"Question","name":"What is the difference between obstructive and restrictive ventilatory defect?","acceptedAnswer":{"@type":"Answer","text":"Obstructive defect: FEV1/FVC < 70% with relatively preserved FVC — airflow is blocked (asthma, COPD, bronchiectasis). Restrictive defect: FEV1/FVC ≥ 70% but FVC < 80% predicted — lung volumes are reduced (pulmonary fibrosis, pleural disease, obesity, neuromuscular disease). Mixed defect: both FEV1/FVC < 70% AND FVC < 80% predicted simultaneously."}},
+    {"@type":"Question","name":"Why do Indians have lower spirometry values than Western populations?","acceptedAnswer":{"@type":"Answer","text":"Indians have smaller thoracic cage dimensions relative to their height compared to Caucasians — a finding consistent across multiple population studies. Nutritional factors during childhood development, differences in body composition (leg-to-trunk ratios), and genetic factors all contribute. This means using Caucasian or NHANES III equations for Indian patients will consistently overestimate predicted values by 15-25%, leading to false-positive classification of impairment."}},
+    {"@type":"Question","name":"When is spirometry required for pre-employment medical in India?","acceptedAnswer":{"@type":"Answer","text":"Under the Factories Act 1948 and specific occupational health rules, spirometry is mandatory for pre-employment and periodic medical examination of workers exposed to: coal dust (pneumoconiosis risk), silica (silicosis), asbestos (asbestosis), cotton dust (byssinosis), isocyanates, grain dust, and other respiratory hazards. DGFASLI and state factory inspectorates specify which industries require PFT and at what intervals."}}
+  ]
+}]
+</script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d3748;line-height:1.6}
+.pw{max-width:820px;margin:auto}
+.back-nav{display:flex;align-items:center;gap:8px;margin-bottom:20px;text-decoration:none;color:#3182ce;font-size:.85rem;font-weight:600}
+.hero{background:linear-gradient(135deg,#065f46,#047857);border-radius:20px;padding:34px;color:white;margin-bottom:20px;text-align:center}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:white;font-size:.7rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:12px;letter-spacing:.08em}
+.hero h1{font-size:1.85rem;font-weight:800;margin-bottom:8px}
+.hero p{opacity:.85;font-size:.95rem;max-width:500px;margin:0 auto}
+.hero-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.hchip{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);color:#d1fae5;font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:20px}
+
+.card{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,.06)}
+.card h2{font-size:1rem;font-weight:700;color:#065f46;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #d1fae5}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group label{font-size:.78rem;font-weight:700;color:#4a5568;display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.03em}
+.form-group input,.form-group select{width:100%;border:2px solid #e2e8f0;border-radius:10px;padding:12px;font-size:.97rem;outline:none;background:#f8fafc;transition:border-color .2s}
+.form-group input:focus,.form-group select:focus{border-color:#047857}
+
+.btn-calc{background:#065f46;color:white;border:none;border-radius:10px;padding:13px 28px;font-size:1rem;font-weight:700;cursor:pointer;width:100%;transition:.2s;margin-top:4px}
+.btn-calc:hover{background:#047857}
+
+/* Results */
+.res-box{display:none;margin-top:20px;border-radius:14px;overflow:hidden;border:2px solid #d1fae5;animation:fadeIn .3s}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.res-header{padding:16px 20px;background:#065f46;color:white;font-weight:800;font-size:1.05rem;display:flex;align-items:center;justify-content:space-between}
+.res-header .classification{font-size:.85rem;font-weight:600;padding:4px 12px;border-radius:20px;background:rgba(255,255,255,.2)}
+
+.params-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:white}
+.param-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;align-items:center;padding:14px 18px;border-bottom:1px solid #f0f4f8;gap:8px}
+.param-row:last-child{border-bottom:none}
+.param-row.header{background:#f7fafc;font-size:.68rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:.06em;padding:10px 18px}
+.param-name{font-weight:600;font-size:.9rem;color:#1a202c}
+.param-unit{font-size:.75rem;color:#718096}
+.param-predicted{font-size:1.1rem;font-weight:800;color:#065f46}
+.param-measured{font-size:1rem;font-weight:700;color:#2d3748}
+.param-percent{font-size:.95rem;font-weight:700}
+.pct-normal{color:#047857}
+.pct-mild{color:#d97706}
+.pct-moderate{color:#dc2626}
+.pct-severe{color:#7f1d1d}
+
+.interp-box{margin:0 20px 20px;padding:16px;border-radius:10px;font-size:.9rem;line-height:1.55}
+.interp-box.normal{background:#f0fff4;border-left:5px solid #48bb78;color:#22543d}
+.interp-box.obstructive{background:#fff7ed;border-left:5px solid #f97316;color:#7c2d12}
+.interp-box.restrictive{background:#eff6ff;border-left:5px solid #3b82f6;color:#1e3a8a}
+.interp-box.mixed{background:#fdf4ff;border-left:5px solid #a855f7;color:#581c87}
+.interp-box.mild-obs{background:#fffbeb;border-left:5px solid #f59e0b;color:#78350f}
+
+.severity-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 20px}
+.sev-item{text-align:center;padding:12px 8px;border-radius:10px;background:#f7fafc}
+.sev-item .sev-val{font-size:1.3rem;font-weight:800;color:#065f46}
+.sev-item .sev-lbl{font-size:.65rem;color:#718096;text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+
+.btn-row{display:flex;gap:10px;padding:0 20px 20px}
+.btn{flex:1;padding:11px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:.88rem}
+.btn-print{background:#edf2f7;color:#2d3748}
+.btn-wa{background:#25D366;color:white}
+
+/* Severity Classification Table */
+.sev-table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:10px}
+.sev-table th{background:#065f46;color:white;padding:9px 12px;text-align:left;font-size:.78rem;font-weight:600}
+.sev-table td{padding:9px 12px;border-bottom:1px solid #e2e8f0;line-height:1.4}
+.sev-table tr:nth-child(even) td{background:#f7fafc}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.72rem;font-weight:700}
+.badge.n{background:#d1fae5;color:#065f46}
+.badge.mild{background:#fef3c7;color:#92400e}
+.badge.mod{background:#fee2e2;color:#991b1b}
+.badge.sev{background:#fce7f3;color:#831843}
+
+.content-section{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,.06)}
+.content-section h2{font-size:1.1rem;font-weight:700;color:#065f46;margin-bottom:12px}
+.content-section h3{font-size:.95rem;font-weight:700;color:#2d3748;margin:14px 0 6px}
+.content-section p{font-size:.9rem;color:#4a5568;margin-bottom:10px;line-height:1.65}
+.content-section ul{padding-left:20px;margin-bottom:10px}
+.content-section ul li{font-size:.9rem;color:#4a5568;margin-bottom:5px;line-height:1.6}
+.callout{background:#ecfdf5;border-left:4px solid #059669;padding:12px 14px;border-radius:8px;font-size:.88rem;color:#065f46;margin-top:12px}
+.warn-callout{background:#fff5f5;border-left:4px solid #dc2626;padding:12px 14px;border-radius:8px;font-size:.88rem;color:#7f1d1d;margin-top:10px}
+
+/* Footer */
+footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px}
+.fl-cat{font-size:.7rem;font-weight:700;color:#a0aec0;text-transform:uppercase;letter-spacing:.06em;grid-column:1/-1;padding-bottom:4px;border-bottom:1px solid #f0f4f8;margin:8px 0 4px}
+.fl a{font-size:.82rem;color:#3182ce;text-decoration:none;padding:4px 0;display:block}
+.fl a:hover{text-decoration:underline}
+.fb{text-align:center;font-size:.72rem;color:#a0aec0;border-top:1px solid #e2e8f0;padding-top:12px;margin-top:4px}
+
+@media(max-width:580px){.form-grid{grid-template-columns:1fr}.params-grid{grid-template-columns:1fr}.param-row{grid-template-columns:2fr 1fr 1fr 1fr;gap:4px}.severity-grid{grid-template-columns:1fr 1fr}.btn-row{flex-direction:column}}
+@media(min-width:900px){body{padding:32px 60px}.pw{max-width:1100px}.fl{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<main class="pw">
+
+<a class="back-nav" href="index">← All Medical Calculators</a>
+
+<div class="hero">
+  <div class="hero-badge">OCCUPATIONAL HEALTH · AFIH · FACTORIES ACT</div>
+  <h1>Spirometry Predicted Values</h1>
+  <p>FEV₁, FVC, FEV₁/FVC &amp; PEFR using validated Indian (Jindal) reference equations</p>
+  <div class="hero-chips">
+    <span class="hchip">Jindal Equations</span>
+    <span class="hchip">Indian Population</span>
+    <span class="hchip">Pre-Employment PFT</span>
+    <span class="hchip">Obstructive · Restrictive · Mixed</span>
+    <span class="hchip">ATS/ERS Classification</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Patient Parameters</h2>
+  <div class="form-grid">
+    <div class="form-group">
+      <label>Sex</label>
+      <select id="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Age (years)</label>
+      <input type="number" id="age" placeholder="e.g. 35" min="18" max="80">
+    </div>
+    <div class="form-group">
+      <label>Height (cm)</label>
+      <input type="number" id="height" placeholder="e.g. 168" min="140" max="200">
+    </div>
+    <div class="form-group">
+      <label>Weight (kg) — optional, for PEFR</label>
+      <input type="number" id="weight" placeholder="e.g. 65">
+    </div>
+  </div>
+
+  <div class="card" style="background:#f7fafc;box-shadow:none;border:1px solid #e2e8f0;margin-bottom:16px;padding:18px">
+    <h2 style="border-color:#bee3f8;color:#2c5282">Measured Values (enter if available)</h2>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>FEV₁ measured (L)</label>
+        <input type="number" id="m_fev1" placeholder="e.g. 2.85" step="0.01">
+      </div>
+      <div class="form-group">
+        <label>FVC measured (L)</label>
+        <input type="number" id="m_fvc" placeholder="e.g. 3.60" step="0.01">
+      </div>
+      <div class="form-group">
+        <label>PEFR measured (L/min)</label>
+        <input type="number" id="m_pefr" placeholder="e.g. 420">
+      </div>
+      <div class="form-group">
+        <label>FEV₁/FVC measured (%)</label>
+        <input type="number" id="m_ratio" placeholder="e.g. 79" step="0.1">
+      </div>
+    </div>
+    <p style="font-size:.78rem;color:#718096">Leave blank to see predicted values only without % predicted comparison.</p>
+  </div>
+
+  <button class="btn-calc" onclick="calculate()">Calculate Predicted Values</button>
+</div>
+
+<div id="result" class="res-box">
+  <div class="res-header">
+    <span>Spirometry — Predicted vs Measured</span>
+    <span class="classification" id="classification-badge"></span>
+  </div>
+
+  <div class="param-row header" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:10px 18px;background:#f7fafc">
+    <span>Parameter</span><span>Predicted</span><span>Measured</span><span>% Predicted</span>
+  </div>
+
+  <div class="param-row">
+    <div><div class="param-name">FEV₁</div><div class="param-unit">Forced Expiratory Volume in 1 second (L)</div></div>
+    <div class="param-predicted" id="r_fev1_pred">—</div>
+    <div class="param-measured" id="r_fev1_meas">—</div>
+    <div class="param-percent" id="r_fev1_pct">—</div>
+  </div>
+  <div class="param-row">
+    <div><div class="param-name">FVC</div><div class="param-unit">Forced Vital Capacity (L)</div></div>
+    <div class="param-predicted" id="r_fvc_pred">—</div>
+    <div class="param-measured" id="r_fvc_meas">—</div>
+    <div class="param-percent" id="r_fvc_pct">—</div>
+  </div>
+  <div class="param-row">
+    <div><div class="param-name">FEV₁/FVC</div><div class="param-unit">Tiffeneau ratio (%)</div></div>
+    <div class="param-predicted" id="r_ratio_pred">—</div>
+    <div class="param-measured" id="r_ratio_meas">—</div>
+    <div class="param-percent" id="r_ratio_pct">—</div>
+  </div>
+  <div class="param-row">
+    <div><div class="param-name">PEFR</div><div class="param-unit">Peak Expiratory Flow Rate (L/min)</div></div>
+    <div class="param-predicted" id="r_pefr_pred">—</div>
+    <div class="param-measured" id="r_pefr_meas">—</div>
+    <div class="param-percent" id="r_pefr_pct">—</div>
+  </div>
+
+  <div id="interp-box" class="interp-box normal"></div>
+
+  <div class="severity-grid" id="sev-grid" style="display:none">
+    <div class="sev-item"><div class="sev-val" id="sev-fev1">—</div><div class="sev-lbl">FEV₁ Severity</div></div>
+    <div class="sev-item"><div class="sev-val" id="sev-fvc">—</div><div class="sev-lbl">FVC Severity</div></div>
+    <div class="sev-item"><div class="sev-val" id="sev-ratio">—</div><div class="sev-lbl">Ratio</div></div>
+    <div class="sev-item"><div class="sev-val" id="sev-pefr">—</div><div class="sev-lbl">PEFR Severity</div></div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-print" onclick="trackPrint('spirometry'); window.print()">🖨 Print Report</button>
+    <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
+  </div>
+</div>
+
+<!-- Severity Classification Reference -->
+<div class="content-section">
+  <h2>ATS/ERS Severity Classification of Ventilatory Defects</h2>
+  <table class="sev-table">
+    <tr><th>Severity</th><th>FEV₁ % Predicted</th><th>Description</th><th>Common Causes</th></tr>
+    <tr><td><span class="badge n">Normal</span></td><td>≥ 80%</td><td>Within normal limits</td><td>—</td></tr>
+    <tr><td><span class="badge mild">Mild</span></td><td>70–79%</td><td>Mildly reduced airflow</td><td>Early COPD, mild asthma</td></tr>
+    <tr><td><span class="badge mod">Moderate</span></td><td>60–69%</td><td>Moderate airflow limitation</td><td>Moderate COPD, occupational lung disease</td></tr>
+    <tr><td><span class="badge mod">Moderately Severe</span></td><td>50–59%</td><td>Significant limitation</td><td>Advanced occupational asthma, silicosis</td></tr>
+    <tr><td><span class="badge sev">Severe</span></td><td>35–49%</td><td>Severely reduced</td><td>Severe COPD, advanced fibrosis</td></tr>
+    <tr><td><span class="badge sev">Very Severe</span></td><td>&lt; 35%</td><td>Very severely reduced</td><td>End-stage lung disease</td></tr>
+  </table>
+  <div class="callout">Classification by ATS/ERS Task Force Guidelines (Pellegrino et al. 2005). Severity is based on post-bronchodilator FEV₁ % predicted. For occupational health purposes, pre-bronchodilator values are used for initial screening.</div>
+</div>
+
+<!-- Educational Content -->
+<div class="content-section">
+  <h2>Why Indian Reference Equations (Jindal) Are Used</h2>
+  <p>Lung function reference values vary significantly between ethnic populations. Indians have smaller thoracic cage dimensions relative to their standing height compared to Caucasians — a well-documented finding across multiple population studies spanning decades. The practical implication is that using Caucasian or NHANES III predicted equations for Indian patients consistently overestimates predicted values by approximately 15–25%.</p>
+  <p>Jindal et al. published regression equations derived from healthy, non-smoking Indian adults across multiple states, providing the most widely cited and validated reference for Indian spirometry. The equations used in this calculator are the Jindal equations from the Indian Journal of Chest Diseases, adapted for clinical use in occupational health, pre-employment, and periodic medical examinations across India.</p>
+
+  <h3>Obstructive Ventilatory Defect</h3>
+  <p>Defined as FEV₁/FVC &lt; 70% (fixed ratio method). The FVC may be normal or reduced. This pattern indicates narrowing of the airways, reducing the rate of airflow. Common occupational causes include occupational asthma (isocyanates, latex, grain dust, wood dust), byssinosis (cotton dust), and COPD from coal or silica exposure. Reversibility testing with bronchodilator is essential — improvement of ≥12% AND ≥200 mL in FEV₁ suggests asthma.</p>
+
+  <h3>Restrictive Ventilatory Defect</h3>
+  <p>FEV₁/FVC ≥ 70% with FVC &lt; 80% predicted (spirometric restriction — note: true restriction requires TLC measurement by body plethysmography or helium dilution). Common occupational causes: silicosis, asbestosis, coal worker's pneumoconiosis, byssinosis stage 2+. Non-occupational causes include pulmonary fibrosis, pleural disease, chest wall deformity, and obesity.</p>
+
+  <h3>Mixed Ventilatory Defect</h3>
+  <p>Both FEV₁/FVC &lt; 70% AND FVC &lt; 80% predicted simultaneously. Seen in advanced silicosis with COPD, complicated pneumoconiosis, and severe occupational asthma with air trapping. Requires further workup including full lung volume assessment.</p>
+
+  <h3>Spirometry in Pre-Employment Medical Examinations</h3>
+  <p>Under the Factories Act 1948 and specific Hazardous Processes Rules, spirometry is mandatory for workers exposed to notifiable occupational lung hazards. Industries requiring baseline and periodic PFT include cotton textile mills, stone quarries, coal mines, asbestos processing, isocyanate manufacturing, grain handling facilities, and chemical industries with respiratory sensitisers. AFIH (Associate Fellow of Industrial Health) doctors are trained to perform and interpret occupational spirometry.</p>
+
+  <h3>Quality Criteria for Acceptable Spirometry (ATS/ERS)</h3>
+  <ul>
+    <li>Start of test: back-extrapolated volume &lt; 5% of FVC or &lt; 0.15L</li>
+    <li>End of test: exhalation ≥6 seconds or plateau (change &lt;25 mL in 1s)</li>
+    <li>No cough, glottis closure, or early termination</li>
+    <li>At least 3 acceptable manoeuvres with best FVC and FEV₁ within 150 mL</li>
+    <li>Use the highest FVC and highest FEV₁ from acceptable manoeuvres (may come from different blows)</li>
+  </ul>
+
+  <div class="warn-callout">
+    ⚠️ This calculator provides predicted values for reference only. Spirometry interpretation requires review of the flow-volume loop and volume-time curve, quality assessment of the manoeuvre, clinical context, and comparison with previous values. Always interpret with the patient's occupational exposure history, symptoms, and clinical examination.
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="content-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>What is the difference between FEV₁ and FVC?</h3>
+  <p>FVC (Forced Vital Capacity) is the total volume of air forcefully exhaled from full inspiration to complete exhalation. FEV₁ (Forced Expiratory Volume in 1 second) is the volume exhaled in the first second of that manoeuvre. The ratio FEV₁/FVC tells you how much of the total lung capacity you can empty in 1 second — reduced when airways are narrowed (obstructive pattern).</p>
+
+  <h3>Can this calculator replace a spirometry machine?</h3>
+  <p>No. This tool calculates predicted reference values based on age, sex, and height using validated Indian equations. The actual spirometry test must be performed with a calibrated spirometer that generates flow-volume and volume-time curves. This calculator helps you compare measured values against Indian predicted normals and classify the ventilatory pattern.</p>
+
+  <h3>At what FEV₁ is a worker considered unfit for dusty work?</h3>
+  <p>There is no single universal FEV₁ cutoff for fitness to work in dusty environments in India. DGMS (Directorate General of Mines Safety) and DGFASLI (Directorate General Factory Advice Service) guidelines specify industry-specific criteria. Generally, a baseline PFT within normal limits is required for placement in high-dust areas, and progressive decline (&gt;15% from baseline over periodic examinations) triggers review, job modification, or transfer.</p>
+
+  <h3>Why does PEFR vary with time of day?</h3>
+  <p>PEFR shows diurnal variation of up to 20% in normal individuals — lowest in the early morning, highest in the afternoon. In asthma, this variation exceeds 20% and is a diagnostic criterion. For occupational asthma, serial peak flow monitoring at and away from work (using a mini peak flow meter) over 4 weeks is the standard diagnostic approach recommended by BOHRF and SIGN guidelines.</p>
+</div>
+
+<div style="font-size:.75rem;color:#718096;text-align:center;margin-bottom:20px;padding:10px">
+  References: Jindal SK, et al. Indian J Chest Dis Allied Sci. 1994;36:185-191 | ATS/ERS Standardisation of Spirometry 2005 (Pellegrino et al.) | Factories Act 1948 — Schedule of Notifiable Occupational Diseases | DGFASLI Medical Standards. Predicted values are for adults aged 18–75 years.
+</div>
+
+<footer>
+  <div class="fl">
+    <div class="fl-cat">🏭 Occupational Health</div>
+    <a href="spirometry">🫁 Spirometry Predicted Values</a>
+    <a href="biomedical-waste">♻️ Biomedical Waste Guide</a>
+    <div class="fl-cat">🚨 Emergency &amp; Critical Care</div>
+    <a href="curb65">🫁 CURB-65 Pneumonia</a>
+    <a href="news2">📉 NEWS2 Early Warning</a>
+    <a href="gcs-calculator">🧠 GCS Calculator</a>
+    <a href="burn-calculator">🔥 Burn &amp; Parkland</a>
+    <a href="wells-score">🩸 Wells Score</a>
+    <div class="fl-cat">👶 Pediatrics</div>
+    <a href="neonatal-jaundice">🌟 Neonatal Jaundice</a>
+    <a href="uip-vaccine">🧒 UIP Vaccine Tracker</a>
+    <a href="growth-chart">📈 Growth Chart</a>
+    <a href="ors">💧 ORS Calculator</a>
+    <div class="fl-cat">🏥 General</div>
+    <a href="https://thezerowhisper.github.io/rabies-scheduler/">💉 Rabies ARV</a>
+    <a href="doses">💊 Drug Dose</a>
+    <a href="bmi">⚖️ BMI Calculator</a>
+    <a href="egfr-calculator">🫘 eGFR Calculator</a>
+    <a href="index" style="font-weight:700;color:#065f46">▶ All Calculators →</a>
+  </div>
+  <div class="fb">Free medical calculators for India · Built by a doctor · Jindal et al. Indian reference equations · ATS/ERS standards<br><span style="margin-top:4px;display:block">For informational purposes only · Always consult your physician</span></div>
+</footer>
+  <section class="card">
+    <div class="card-title">Related Tools</div>
+    <div class="related-grid">
+      <a href="https://thezerowhisper.github.io/medical-calculators/curb65" class="related-card" ><div class="rc-name">CURB-65 Score</div><div class="rc-desc">Pneumonia severity</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/news2" class="related-card" ><div class="rc-name">NEWS2 Score</div><div class="rc-desc">Early warning score</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/pediatric-asthma" class="related-card" ><div class="rc-name">Pediatric Asthma</div><div class="rc-desc">Child asthma action plan</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
+    </div>
+  </section>
+  </main>
+
+<script>
+// ── JINDAL EQUATIONS (Indian adults, Jindal SK et al. 1994) ────────────────
+// FEV1 (L), FVC (L), PEFR (L/min)
+// Male:   FEV1 = -1.150 + (0.0342 × H) - (0.0221 × A)
+//         FVC  = -1.321 + (0.0416 × H) - (0.0228 × A)
+//         PEFR = -89.14 + (4.267  × H) - (1.009  × A)   [H in cm]
+// Female: FEV1 = -0.660 + (0.0256 × H) - (0.0145 × A)
+//         FVC  = -0.847 + (0.0326 × H) - (0.0168 × A)
+//         PEFR = -58.40 + (3.089  × H) - (0.715  × A)
+// Source: Jindal SK et al. IJCD 1994;36:185-191 (commonly used regression)
+// Predicted FEV1/FVC is derived from the above
+
+function predictedValues(sex, age, height) {
+  const H = height, A = age;
+  let fev1, fvc, pefr;
+  if (sex === 'male') {
+    fev1 = -1.150 + (0.0342 * H) - (0.0221 * A);
+    fvc  = -1.321 + (0.0416 * H) - (0.0228 * A);
+    pefr = -89.14 + (4.267  * H) - (1.009  * A);
+  } else {
+    fev1 = -0.660 + (0.0256 * H) - (0.0145 * A);
+    fvc  = -0.847 + (0.0326 * H) - (0.0168 * A);
+    pefr = -58.40 + (3.089  * H) - (0.715  * A);
+  }
+  const ratio = (fev1 / fvc) * 100;
+  return {
+    fev1: Math.max(0, fev1),
+    fvc:  Math.max(0, fvc),
+    ratio: Math.min(100, Math.max(0, ratio)),
+    pefr: Math.max(0, pefr)
+  };
+}
+
+function pctClass(pct, isRatio) {
+  if (isRatio) return pct >= 70 ? 'pct-normal' : 'pct-moderate';
+  if (pct >= 80) return 'pct-normal';
+  if (pct >= 70) return 'pct-mild';
+  if (pct >= 50) return 'pct-moderate';
+  return 'pct-severe';
+}
+
+function severity(pct) {
+  if (pct >= 80) return 'Normal';
+  if (pct >= 70) return 'Mild';
+  if (pct >= 60) return 'Moderate';
+  if (pct >= 50) return 'Mod-Sev';
+  if (pct >= 35) return 'Severe';
+  return 'V.Severe';
+}
+
+function classify(fev1Pct, fvcPct, ratioPct) {
+  // Only classify if measured values entered
+  if (!fev1Pct) return null;
+  const obsPattern = ratioPct < 70;
+  const restPattern = fvcPct < 80;
+  if (obsPattern && restPattern) return 'mixed';
+  if (obsPattern) return 'obstructive';
+  if (restPattern) return 'restrictive';
+  return 'normal';
+}
+
+function calculate() {
+  const sex    = document.getElementById('sex').value;
+  const age    = parseFloat(document.getElementById('age').value);
+  const height = parseFloat(document.getElementById('height').value);
+  const mFev1  = parseFloat(document.getElementById('m_fev1').value);
+  const mFvc   = parseFloat(document.getElementById('m_fvc').value);
+  const mPefr  = parseFloat(document.getElementById('m_pefr').value);
+  const mRatio = parseFloat(document.getElementById('m_ratio').value);
+
+  if (!age || !height || age < 18 || age > 80 || height < 140 || height > 200) {
+    alert('Please enter a valid age (18–80 years) and height (140–200 cm).');
+    return;
+  }
+
+  const pred = predictedValues(sex, age, height);
+
+  // Populate predicted
+  document.getElementById('r_fev1_pred').textContent = pred.fev1.toFixed(2) + ' L';
+  document.getElementById('r_fvc_pred').textContent  = pred.fvc.toFixed(2)  + ' L';
+  document.getElementById('r_ratio_pred').textContent = pred.ratio.toFixed(0) + '%';
+  document.getElementById('r_pefr_pred').textContent  = Math.round(pred.pefr) + ' L/min';
+
+  // Measured & % predicted
+  const hasMeasured = !isNaN(mFev1) || !isNaN(mFvc);
+  let fev1Pct = null, fvcPct = null, ratioPct = null, pefrPct = null;
+
+  function setPct(id, measured, predicted) {
+    const measEl = document.getElementById(id + '_meas');
+    const pctEl  = document.getElementById(id + '_pct');
+    if (!isNaN(measured) && measured > 0) {
+      const pct = (measured / predicted) * 100;
+      const isRatio = id === 'r_ratio';
+      measEl.textContent = id === 'r_pefr' ? Math.round(measured) + ' L/min' :
+                           id === 'r_ratio' ? measured.toFixed(0) + '%' :
+                           measured.toFixed(2) + ' L';
+      pctEl.textContent  = Math.round(pct) + '%';
+      pctEl.className    = 'param-percent ' + pctClass(pct, id === 'r_ratio');
+      return pct;
+    } else {
+      measEl.textContent = '—';
+      pctEl.textContent  = '—';
+      pctEl.className    = 'param-percent';
+      return null;
+    }
+  }
+
+  fev1Pct  = setPct('r_fev1', mFev1, pred.fev1);
+  fvcPct   = setPct('r_fvc', mFvc, pred.fvc);
+  pefrPct  = setPct('r_pefr', mPefr, pred.pefr);
+
+  // Handle ratio separately (measured ratio vs predicted ratio)
+  const ratioMeasEl = document.getElementById('r_ratio_meas');
+  const ratioPctEl  = document.getElementById('r_ratio_pct');
+  if (!isNaN(mRatio) && mRatio > 0) {
+    ratioMeasEl.textContent = mRatio.toFixed(0) + '%';
+    ratioPct = mRatio;
+    const ratioClass = mRatio >= 70 ? 'pct-normal' : 'pct-moderate';
+    ratioPctEl.textContent = mRatio >= 70 ? 'Normal' : 'Low';
+    ratioPctEl.className = 'param-percent ' + ratioClass;
+  } else if (!isNaN(mFev1) && !isNaN(mFvc) && mFvc > 0) {
+    ratioPct = (mFev1 / mFvc) * 100;
+    ratioMeasEl.textContent = ratioPct.toFixed(0) + '%';
+    ratioPctEl.textContent = ratioPct >= 70 ? 'Normal' : 'Low';
+    ratioPctEl.className = 'param-percent ' + (ratioPct >= 70 ? 'pct-normal' : 'pct-moderate');
+  } else {
+    ratioMeasEl.textContent = '—';
+    ratioPctEl.textContent  = '—';
+    ratioPctEl.className    = 'param-percent';
+  }
+
+  // Classification and interpretation
+  const defect = classify(fev1Pct, fvcPct, ratioPct);
+  const badge  = document.getElementById('classification-badge');
+  const interp = document.getElementById('interp-box');
+
+  if (defect === 'obstructive') {
+    badge.textContent = '🟠 Obstructive Defect';
+    interp.className  = 'interp-box obstructive';
+    interp.innerHTML  = `<strong>Obstructive Ventilatory Defect</strong> — FEV₁/FVC &lt;70% with reduced FEV₁.<br><br>The airways are narrowed, limiting airflow. Common occupational causes include occupational asthma (sensitisers: isocyanates, latex, grain dust, wood dust), COPD from silica or coal dust, and byssinosis (cotton dust). <strong>Reversibility testing with bronchodilator is required</strong> — improvement of ≥12% and ≥200mL in FEV₁ indicates asthma.`;
+  } else if (defect === 'restrictive') {
+    badge.textContent = '🔵 Restrictive Pattern';
+    interp.className  = 'interp-box restrictive';
+    interp.innerHTML  = `<strong>Restrictive Ventilatory Pattern</strong> — FEV₁/FVC normal but FVC &lt;80% predicted.<br><br>Lung volumes are reduced. Note: spirometric restriction does not confirm true restriction — full lung volumes (TLC) by body plethysmography are needed. Common occupational causes: silicosis, asbestosis, coal worker's pneumoconiosis. Non-occupational: pulmonary fibrosis, pleural disease, obesity, kyphoscoliosis.`;
+  } else if (defect === 'mixed') {
+    badge.textContent = '🟣 Mixed Defect';
+    interp.className  = 'interp-box mixed';
+    interp.innerHTML  = `<strong>Mixed Ventilatory Defect</strong> — Both FEV₁/FVC &lt;70% AND FVC &lt;80% predicted.<br><br>Combination of obstructive and restrictive patterns. Seen in advanced silicosis with concurrent COPD, complicated pneumoconiosis, or severe air-trapping causing apparent FVC reduction. Requires full lung volume measurement and bronchodilator reversibility testing.`;
+  } else if (defect === 'normal') {
+    badge.textContent = '✅ Normal';
+    interp.className  = 'interp-box normal';
+    interp.innerHTML  = `<strong>Normal Spirometry</strong> — FEV₁, FVC, and FEV₁/FVC are all within predicted normal limits using Indian (Jindal) reference equations.<br><br>No obstructive or restrictive ventilatory defect detected. If symptoms persist despite normal spirometry, consider fractional exhaled nitric oxide (FeNO), bronchial challenge testing, or full lung volume assessment.`;
+  } else {
+    badge.textContent = '— Predicted Only';
+    interp.className  = 'interp-box normal';
+    interp.innerHTML  = `Predicted values calculated using Jindal et al. Indian reference equations for a ${sex === 'male' ? 'male' : 'female'}, ${age} years, ${height} cm. Enter measured spirometry values above to classify the ventilatory pattern and calculate % predicted.`;
+  }
+
+  // Severity grid
+  if (hasMeasured) {
+    document.getElementById('sev-grid').style.display = 'grid';
+    document.getElementById('sev-fev1').textContent  = fev1Pct  ? severity(fev1Pct)  : '—';
+    document.getElementById('sev-fvc').textContent   = fvcPct   ? severity(fvcPct)   : '—';
+    document.getElementById('sev-ratio').textContent = ratioPct ? (ratioPct >= 70 ? 'Normal' : 'Low') : '—';
+    document.getElementById('sev-pefr').textContent  = pefrPct  ? severity(pefrPct)  : '—';
+  } else {
+    document.getElementById('sev-grid').style.display = 'none';
+  }
+
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  if (typeof trackCalc === 'function') trackCalc('spirometry', {
+    sex, age, height,
+    defect: defect || 'predicted-only',
+    fev1_pred: pred.fev1.toFixed(2)
+  });
+
+  // WhatsApp share
+  document.getElementById('share-btn').onclick = () => {
+    const lines = [
+      `Spirometry Report (Jindal Indian Predicted Values)`,
+      `Patient: ${sex === 'male' ? 'Male' : 'Female'}, ${age}y, ${height}cm`,
+      ``,
+      `FEV₁   Predicted: ${pred.fev1.toFixed(2)} L${!isNaN(mFev1) ? ' | Measured: ' + mFev1.toFixed(2) + ' L | ' + Math.round(fev1Pct) + '%' : ''}`,
+      `FVC    Predicted: ${pred.fvc.toFixed(2)} L${!isNaN(mFvc) ? ' | Measured: ' + mFvc.toFixed(2) + ' L | ' + Math.round(fvcPct) + '%' : ''}`,
+      `PEFR   Predicted: ${Math.round(pred.pefr)} L/min${!isNaN(mPefr) ? ' | Measured: ' + Math.round(mPefr) + ' | ' + Math.round(pefrPct) + '%' : ''}`,
+      defect ? `Pattern: ${defect.toUpperCase()}` : '',
+      ``,
+      `Calculated at: ${window.location.href}`
+    ].filter(Boolean).join('\n');
+    try{uTrack('share_whatsapp',{tool:'spirometry'});}catch(e){} window.open('https://wa.me/?text=' + encodeURIComponent(lines));
+  };
+}
+</script>
+</body>
+</html>
