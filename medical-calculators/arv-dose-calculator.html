@@ -1,46 +1,362 @@
-// ============================================================
-// umami-events.js  — Medical Calculators India
-// Place at: /assets/umami-events.js
-// Load AFTER your Umami script tag (already defer):
-//   <script src="assets/umami-events.js"></script>
-// ============================================================
+<!DOCTYPE html>
+<html lang="en" data-tool="arv-dose">
+<head>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARV Dose Calculator — Anti-Rabies Vaccine & RIG Dose India</title>
+  <meta name="description" content="Free ARV (Anti-Rabies Vaccine) dose calculator for India. Calculate RIG dose by weight, wound category (I/II/III), IM Essen regimen (Days 0,3,7,28), and intradermal schedule. NCDC & WHO 2018 guidelines." />
+  <meta name="keywords" content="ARV dose calculator, anti rabies vaccine dose calculator, ARV calculator India, rabies vaccine dose, RIG dose calculator, rabies immunoglobulin dose by weight, dog bite ARV dose, Essen regimen calculator, intradermal rabies vaccine, category III dog bite, NCDC rabies guidelines, ARV schedule India, rabies PEP calculator, anti rabies vaccine schedule days 0 3 7 28" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ARV Dose Calculator — Anti-Rabies Vaccine and RIG Dose India" />
+  <meta property="og:description" content="Calculate ARV dose, RIG dose by weight, wound category. Essen IM and intradermal schedules. NCDC India guidelines." />
+  <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" />
+  <meta property="og:site_name" content="Medical Calculators" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ARV Dose Calculator — Anti-Rabies Vaccine India" />
+  <meta name="twitter:description" content="RIG dose by weight, wound category, Essen IM and ID schedules. Free ARV calculator for India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thezerowhisper.github.io/medical-calculators/"},{"@type":"ListItem","position":2,"name":"Infectious Disease","item":"https://thezerowhisper.github.io/medical-calculators/#infectious"},{"@type":"ListItem","position":3,"name":"ARV Dose Calculator","item":"https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator"}]},{"@type":"MedicalWebPage","name":"ARV Dose Calculator — Anti-Rabies Vaccine","url":"https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator","description":"Calculate anti-rabies vaccine dose schedule and RIG dose by body weight for rabies PEP in India.","specialty":"Infectious Disease"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the ARV dose schedule in India?","acceptedAnswer":{"@type":"Answer","text":"Standard IM Essen regimen: 4 doses on Days 0, 3, 7, 28. Each dose is 0.5 mL (PVRV) or 1.0 mL (PCECV) IM in the deltoid."}},{"@type":"Question","name":"What is the RIG dose for rabies?","acceptedAnswer":{"@type":"Answer","text":"HRIG: 20 IU/kg body weight. ERIG: 40 IU/kg body weight. Infiltrate around wound on Day 0 only."}},{"@type":"Question","name":"Which categories need ARV and RIG?","acceptedAnswer":{"@type":"Answer","text":"Category I: No PEP. Category II: ARV only. Category III: ARV + RIG on Day 0."}},{"@type":"Question","name":"What is the intradermal ARV regimen?","acceptedAnswer":{"@type":"Answer","text":"WHO 2018 ID regimen: 0.1 mL at 2 sites on Days 0, 3, 7. More economical, fewer vials used."}},{"@type":"Question","name":"Is RIG needed if previously vaccinated?","acceptedAnswer":{"@type":"Answer","text":"No. Previously vaccinated patients need only 2-dose booster (Day 0 and 3), no RIG required."}},{"@type":"Question","name":"What first aid is needed after a dog bite?","acceptedAnswer":{"@type":"Answer","text":"Wash wound with soap and running water for 15 minutes, then apply povidone-iodine. Seek medical attention immediately."}},{"@type":"Question","name":"What is the difference between HRIG and ERIG?","acceptedAnswer":{"@type":"Answer","text":"HRIG: 20 IU/kg, lower risk, preferred. ERIG: 40 IU/kg, requires skin test, cheaper and widely available in India."}},{"@type":"Question","name":"What is the ARV dose for children?","acceptedAnswer":{"@type":"Answer","text":"Same vaccine volume as adults: 0.5 mL (PVRV) or 1.0 mL (PCECV). Inject in anterolateral thigh for children under 2 years. RIG dose is weight-based."}}]}]}
+  </script>
+  <style>
+    :root{--bg:#f0f4f8;--surface:#fff;--surface2:#f5f8fc;--border:#dce4ef;--primary:#b45309;--primary-light:#f59e0b;--primary-dark:#78350f;--text:#0f1e33;--text-muted:#5a6a82;--text-light:#8fa0b8;--cat1:#16a34a;--cat2:#d97706;--cat3:#dc2626;--radius:14px;--radius-sm:8px;--shadow:0 2px 16px rgba(15,30,51,.09)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    .topbar{background:var(--primary-dark);color:#fff;padding:10px 20px;font-size:.82rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .topbar a{color:#fde68a;text-decoration:none}.topbar a:hover{color:#fff}
+    .breadcrumb{display:flex;gap:6px;align-items:center}.breadcrumb span{color:#9ca3af}
+    .hero{background:linear-gradient(135deg,#78350f 0%,#b45309 45%,#1e3a5f 100%);color:#fff;padding:48px 20px 56px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+    .hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:4px 14px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+    .hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.2;margin-bottom:10px}
+    .hero p{font-size:clamp(.92rem,2vw,1.05rem);color:rgba(255,255,255,.82);max-width:640px;margin:0 auto 20px}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    .hero-tags span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:3px 12px;font-size:.78rem}
+    .page{max-width:920px;margin:0 auto;padding:32px 16px 64px}
+    .card{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:28px;margin-bottom:24px}
+    .card-title{font-size:1rem;font-weight:700;color:var(--primary);letter-spacing:.03em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+    .card-title::before{content:'';display:block;width:4px;height:18px;background:var(--primary-light);border-radius:4px}
+    .scheduler-promo{background:linear-gradient(135deg,#0f1e33 0%,#1d4ed8 100%);color:#fff;border-radius:var(--radius);padding:22px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:24px}
+    .scheduler-promo .sp-title{font-size:1.05rem;font-weight:800;margin-bottom:4px}
+    .scheduler-promo .sp-sub{font-size:.84rem;opacity:.82}
+    .scheduler-promo a{background:#f59e0b;color:#0f1e33;text-decoration:none;font-weight:800;font-size:.9rem;padding:10px 20px;border-radius:30px;white-space:nowrap;flex-shrink:0;transition:background .18s}
+    .scheduler-promo a:hover{background:#fbbf24}
+    .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    @media(max-width:540px){.cat-grid{grid-template-columns:1fr}}
+    .cat-btn{border:2px solid var(--border);background:var(--surface2);border-radius:var(--radius-sm);padding:14px 10px;cursor:pointer;text-align:center;font-family:'Outfit',sans-serif;transition:all .2s}
+    .cat-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .cat-btn .cb-num{font-size:1.4rem;font-weight:800;margin-bottom:4px}
+    .cat-btn .cb-name{font-size:.82rem;font-weight:700;margin-bottom:6px}
+    .cat-btn .cb-desc{font-size:.74rem;color:var(--text-muted);line-height:1.4}
+    .cat-btn.cat1 .cb-num{color:var(--cat1)}.cat-btn.cat2 .cb-num{color:var(--cat2)}.cat-btn.cat3 .cb-num{color:var(--cat3)}
+    .cat-btn.active.cat1{background:#f0fdf4;border-color:var(--cat1)}.cat-btn.active.cat2{background:#fffbeb;border-color:var(--cat2)}.cat-btn.active.cat3{background:#fef2f2;border-color:var(--cat3)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:520px){.form-row{grid-template-columns:1fr}}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+    .field label{font-size:.84rem;font-weight:600;color:var(--text-muted)}
+    .field input,.field select{background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:11px 14px;font-size:.97rem;font-family:'Outfit',sans-serif;color:var(--text);outline:none;width:100%;transition:border-color .18s,box-shadow .18s}
+    .field select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235a6a82' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+    .field input:focus,.field select:focus{border-color:var(--primary-light);box-shadow:0 0 0 3px rgba(245,158,11,.12)}
+    .field .hint{font-size:.74rem;color:var(--text-light)}
+    .result-section{display:none;margin-top:8px}
+    .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+    @media(max-width:560px){.result-grid{grid-template-columns:1fr 1fr}}
+    .r-box{background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center}
+    .r-box.primary{background:#fffbeb;border-color:#fcd34d}
+    .r-box .rb-label{font-size:.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+    .r-box .rb-val{font-family:'JetBrains Mono',monospace;font-size:1.7rem;font-weight:700;color:var(--primary-dark);line-height:1;margin-bottom:3px}
+    .r-box .rb-unit{font-size:.74rem;color:var(--text-light)}
+    .regimen-steps{display:flex;flex-direction:column;gap:10px}
+    .step-row{display:grid;grid-template-columns:72px 1fr;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+    .step-row.rig{border-color:#fca5a5;background:#fef2f2}
+    .step-day{background:var(--primary-dark);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 8px}
+    .step-row.rig .step-day{background:var(--cat3)}
+    .step-day .day-num{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1rem}
+    .step-day .day-label{font-size:.62rem;opacity:.8}
+    .step-content{padding:12px 14px}
+    .step-content .sc-title{font-weight:700;font-size:.9rem;margin-bottom:3px}
+    .step-content .sc-dose{font-family:'JetBrains Mono',monospace;font-size:.84rem;color:var(--primary);margin-bottom:3px}
+    .step-content .sc-note{font-size:.78rem;color:var(--text-muted)}
+    .alert{border-radius:var(--radius-sm);padding:13px 16px;font-size:.86rem;line-height:1.65;margin-bottom:12px;display:flex;gap:10px;align-items:flex-start}
+    .alert.cat1{background:#f0fdf4;border:1.5px solid #86efac;color:#14532d}
+    .alert.cat2{background:#fffbeb;border:1.5px solid #fcd34d;color:#78350f}
+    .alert.cat3{background:#fef2f2;border:1.5px solid #fca5a5;color:#7f1d1d}
+    .alert.info{background:#eff6ff;border:1.5px solid #bfdbfe;color:#1e3a5f}
+    .alert .al-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .cat-table,.rig-table{width:100%;border-collapse:collapse;font-size:.84rem}
+    .cat-table th,.rig-table th{background:var(--surface2);font-weight:700;padding:9px 12px;text-align:left;color:var(--text-muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--border)}
+    .cat-table td,.rig-table td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
+    .cat-table tr:last-child td,.rig-table tr:last-child td{border-bottom:none}
+    .rig-table td{font-family:'JetBrains Mono',monospace;font-size:.82rem}.rig-table td:first-child{font-family:'Outfit',sans-serif}
+    .cat-badge{display:inline-block;padding:2px 10px;border-radius:10px;font-weight:700;font-size:.78rem;color:#fff}
+    .cb-I{background:var(--cat1)}.cb-II{background:var(--cat2)}.cb-III{background:var(--cat3)}
+    .step-lbl{font-size:.84rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px}
+    .faq-item{border-bottom:1px solid var(--border)}
+    .faq-q{width:100%;text-align:left;padding:15px 4px;font-size:.93rem;font-weight:600;background:none;border:none;cursor:pointer;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:'Outfit',sans-serif}
+    .faq-q:hover{color:var(--primary)}
+    .faq-icon{flex-shrink:0;width:22px;height:22px;background:var(--surface2);border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;transition:transform .2s,background .2s;color:var(--primary)}
+    .faq-item.open .faq-icon{transform:rotate(45deg);background:var(--primary);color:#fff;border-color:var(--primary)}
+    .faq-a{display:none;padding:0 4px 15px;font-size:.88rem;color:var(--text-muted);line-height:1.75}
+    .faq-item.open .faq-a{display:block}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+    .related-card{background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;text-decoration:none;color:var(--text);transition:all .18s;display:block}
+    .related-card:hover{border-color:var(--primary-light);background:#fffbeb;transform:translateY(-2px);box-shadow:var(--shadow)}
+    .related-card .rc-name{font-size:.88rem;font-weight:700;margin-bottom:2px}
+    .related-card .rc-desc{font-size:.76rem;color:var(--text-muted)}
+    .disclaimer{background:#fff8ed;border:1px solid #fde68a;border-radius:var(--radius-sm);padding:14px 18px;font-size:.82rem;color:#92400e;line-height:1.6}
+    .site-footer{text-align:center;font-size:.8rem;color:var(--text-light);padding:24px 16px;border-top:1px solid var(--border);margin-top:32px}
+    .site-footer a{color:var(--primary);text-decoration:none}
+    @media(max-width:640px){.card{padding:20px 16px}}
+  </style>
+</head>
+<body>
+<nav class="topbar">
+  <div class="breadcrumb">
+    <a href="https://thezerowhisper.github.io/medical-calculators/">Medical Calculators</a><span>›</span><span>Infectious Disease</span><span>›</span><span>ARV Dose Calculator</span>
+  </div>
+</nav>
+<header class="hero">
+  <div class="hero-badge">Anti-Rabies Vaccine Calculator</div>
+  <h1>ARV Dose Calculator</h1>
+  <p>Anti-Rabies Vaccine (ARV) dose, RIG by body weight &amp; schedule — NCDC India &amp; WHO 2018</p>
+  <div class="hero-tags">
+    <span>Category I / II / III</span><span>RIG Dose by Weight</span>
+    <span>HRIG &amp; ERIG</span><span>Essen IM 4-dose</span>
+    <span>Intradermal WHO 2018</span><span>Previously Vaccinated</span>
+  </div>
+</header>
+<main class="page">
 
-// ── SAFE CORE ─────────────────────────────────────────────────
-// try-catch on every call so a failed track NEVER blocks print
-// or any other onclick action.
-function uTrack(name, props) {
-  try {
-    if (typeof window.umami !== 'undefined' && typeof window.umami.track === 'function') {
-      window.umami.track(name, props || {});
-    } else {
-      // Umami not ready yet (defer timing) — retry after 1.2s
-      setTimeout(function() {
-        try {
-          if (typeof window.umami !== 'undefined') {
-            window.umami.track(name, props || {});
-          }
-        } catch(e) {}
-      }, 1200);
-    }
-  } catch(e) {}
-}
+  <div class="scheduler-promo">
+    <div class="sp-text">
+      <div class="sp-title">📅 Need exact injection dates? Days 0, 3, 7, 28?</div>
+      <div class="sp-sub">Use our ARV Date Scheduler — enter first dose date, get all dates instantly with WhatsApp sharing</div>
+    </div>
+    <a href="https://thezerowhisper.github.io/rabies-scheduler/" target="_blank" rel="noopener">Open Date Scheduler →</a>
+  </div>
 
-// ── PUBLIC HELPERS ────────────────────────────────────────────
-function trackCalc(tool, props) { uTrack('calc_' + tool, props || {}); }
-function trackPrint(tool)       { uTrack('print', { tool: tool }); }
-function trackShare(tool, method) {
-  uTrack('share_' + (method || 'whatsapp'), { tool: tool });
-}
+  <section class="card">
+    <div class="card-title">ARV Dose &amp; RIG Calculator</div>
+    <p class="step-lbl">Step 1 — Select Wound Category</p>
+    <div class="cat-grid">
+      <button class="cat-btn cat1" data-cat="1" onclick="selectCat(1)">
+        <div class="cb-num">I</div><div class="cb-name">No Exposure</div>
+        <div class="cb-desc">Touching/feeding animals. Licks on intact skin. No wound.</div>
+      </button>
+      <button class="cat-btn cat2" data-cat="2" onclick="selectCat(2)">
+        <div class="cb-num">II</div><div class="cb-name">Minor Exposure</div>
+        <div class="cb-desc">Nibbling uncovered skin. Minor scratches, no bleeding.</div>
+      </button>
+      <button class="cat-btn cat3 active" data-cat="3" onclick="selectCat(3)">
+        <div class="cb-num">III</div><div class="cb-name">Severe Exposure</div>
+        <div class="cb-desc">Deep bites, bleeding scratches, licks on mucosa, bat exposure.</div>
+      </button>
+    </div>
+    <p class="step-lbl">Step 2 — Patient Details</p>
+    <div class="form-row">
+      <div class="field">
+        <label for="weight">Body Weight (kg)</label>
+        <input type="number" id="weight" placeholder="e.g. 60" min="3" max="200" step="0.5" oninput="calculate()" />
+        <span class="hint">Required for RIG dose calculation</span>
+      </div>
+      <div class="field">
+        <label for="prevVacc">Vaccination Status</label>
+        <select id="prevVacc" onchange="calculate()">
+          <option value="naive">Not previously vaccinated</option>
+          <option value="prev">Previously vaccinated (completed course)</option>
+        </select>
+      </div>
+      <div class="field" id="rigTypeField">
+        <label for="rigType">RIG Type Available</label>
+        <select id="rigType" onchange="calculate()">
+          <option value="hrig">HRIG — Human RIG (20 IU/kg)</option>
+          <option value="erig">ERIG — Equine RIG (40 IU/kg)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="route">Vaccine Route</label>
+        <select id="route" onchange="calculate()">
+          <option value="im">Intramuscular (IM) — Essen 4-dose</option>
+          <option value="id">Intradermal (ID) — WHO 2018</option>
+        </select>
+      </div>
+    </div>
+    <div class="result-section" id="resultSection">
+      <div class="result-grid" id="resultGrid"></div>
+      <div id="alertBox"></div>
+      <p class="step-lbl">Recommended Regimen</p>
+      <div class="regimen-steps" id="regimenSteps"></div>
+    </div>
+  </section>
 
-// ── AUTO-TRACK WHATSAPP OUTBOUND CLICKS ──────────────────────
-// Reads data-tool from <html> tag — no per-page code needed.
-document.addEventListener('DOMContentLoaded', function() {
-  document.addEventListener('click', function(e) {
-    var a = e.target.closest('a[href]');
-    if (!a) return;
-    if ((a.href || '').startsWith('https://wa.me')) {
-      var tool = document.documentElement.dataset.tool || 'unknown';
-      trackShare(tool, 'whatsapp');
-    }
+  <section class="card">
+    <div class="card-title">Wound Category Reference — NCDC India</div>
+    <div style="overflow-x:auto">
+      <table class="cat-table">
+        <thead><tr><th>Category</th><th>Type of Contact</th><th>Examples</th><th>ARV</th><th>RIG</th></tr></thead>
+        <tbody>
+          <tr><td><span class="cat-badge cb-I">Cat I</span></td><td>Touching/feeding animals. Licks on intact skin.</td><td>Petting a dog, lick on unbroken skin</td><td style="color:#16a34a;font-weight:700">None</td><td style="color:#16a34a;font-weight:700">None</td></tr>
+          <tr><td><span class="cat-badge cb-II">Cat II</span></td><td>Nibbling uncovered skin. Minor scratches without bleeding.</td><td>Superficial scratch, small nibble not through dermis</td><td style="color:#d97706;font-weight:700">Yes — full course</td><td style="color:#16a34a;font-weight:700">No</td></tr>
+          <tr><td><span class="cat-badge cb-III">Cat III</span></td><td>Transdermal bites/scratches with bleeding. Licks on broken skin/mucosa. Bat exposure.</td><td>Deep bite, puncture wound, bleeding scratch, saliva on eyes/mouth</td><td style="color:#dc2626;font-weight:700">Yes — full course</td><td style="color:#dc2626;font-weight:700">Yes — Day 0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert info" style="margin-top:14px"><span class="al-icon">ℹ️</span><div><strong>Wound toilet is mandatory for all categories.</strong> Wash immediately with soap and running water for 15 minutes, then apply povidone-iodine. This step alone can significantly reduce rabies virus at the wound site.</div></div>
+  </section>
+
+  <section class="card">
+    <div class="card-title">RIG Dose by Body Weight</div>
+    <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:14px">Required only for <strong>Category III</strong> in non-vaccinated patients. Must be given on <strong>Day 0 only</strong> — cannot be given after Day 7.</p>
+    <div style="overflow-x:auto">
+      <table class="rig-table">
+        <thead><tr><th>Weight (kg)</th><th>HRIG (20 IU/kg)</th><th>ERIG (40 IU/kg)</th></tr></thead>
+        <tbody id="rigTableBody"></tbody>
+      </table>
+    </div>
+    <div class="alert cat3" style="margin-top:14px"><span class="al-icon">🔴</span><div><strong>Administration:</strong> Infiltrate as much RIG as possible around and into the wound. Remaining volume inject IM at a site away from vaccine injection. ERIG requires a skin test before administration.</div></div>
+  </section>
+
+  <section class="card">
+    <div class="card-title">Frequently Asked Questions</div>
+    <div id="faq-list"></div>
+  </section>
+
+    <section class="card">
+    <div class="card-title">Related Tools</div>
+    <div class="related-grid">
+      <a href="https://thezerowhisper.github.io/rabies-scheduler/" class="related-card" ><div class="rc-name">📅 ARV Date Scheduler</div><div class="rc-desc">Days 0,3,7,28 dates</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/uip-vaccine" class="related-card" ><div class="rc-name">UIP Vaccine Schedule</div><div class="rc-desc">Catch-up immunisation</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/paracetamol" class="related-card" ><div class="rc-name">Paracetamol Dose</div><div class="rc-desc">Fever/pain management</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/curb65" class="related-card" ><div class="rc-name">CURB-65 Score</div><div class="rc-desc">Pneumonia severity</div></a>
+    </div>
+  </section>
+<section class="card" id="about-arv">
+  <div class="card-title">About Anti-Rabies Vaccine (ARV) in India</div>
+  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px">
+    Rabies post-exposure prophylaxis (PEP) in India follows the <strong>NCDC National Guidelines for Rabies Prophylaxis</strong> and the <strong>WHO Position Paper 2018</strong>. The standard regimen is the <strong>Essen intramuscular (IM) 4-dose schedule</strong> — a single dose of cell culture vaccine (0.5 mL PVRV or 1.0 mL PCECV) given on Days 0, 3, 7, and 28 in the deltoid. The gluteal region must never be used, as subcutaneous fat at that site impairs vaccine absorption and reduces immunogenicity.
+  </p>
+  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px">
+    The <strong>intradermal (ID) regimen</strong> recommended by WHO uses 0.1 mL at two sites on Days 0, 3, and 7 — only three clinic visits and significantly fewer vials per patient, making it the preferred option where trained staff are available. Immunocompromised patients require an additional Day 28 dose even with the ID regimen.
+  </p>
+  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px">
+    <strong>Rabies Immunoglobulin (RIG)</strong> is indicated only for Category III wounds in patients not previously vaccinated. The dose is strictly weight-based: <strong>HRIG at 20 IU/kg</strong> or <strong>ERIG at 40 IU/kg</strong>. The full dose must be infiltrated around the wound on Day 0 only — it cannot be administered after Day 7. ERIG requires a skin sensitivity test before use and carries a small risk of serum sickness, but remains the more accessible option across government facilities in India.
+  </p>
+  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px">
+    Wound toilet is the single most important immediate step: wash with soap and running water for <strong>at least 15 minutes</strong>, followed by application of povidone-iodine. This mechanical flushing alone can reduce rabies virus load at the wound site significantly before any vaccine is given.
+  </p>
+  <p style="font-size:.9rem;color:var(--text-muted);line-height:1.8">
+    Previously vaccinated individuals — those who have completed a full pre- or post-exposure course with a potent cell culture vaccine — require only a <strong>2-dose booster on Day 0 and Day 3</strong>. RIG is not needed regardless of wound category. This ARV dose calculator supports all these scenarios, including HRIG vs ERIG selection and IM vs ID route, based on patient weight and clinical history.
+  </p>
+</section>
+  <div class="disclaimer">⚠️ <strong>Disclaimer:</strong> Based on NCDC India Rabies Prophylaxis Guidelines and WHO Position Paper 2018. RIG must be given on Day 0 only. ERIG requires skin test. Wound category assessment requires clinical judgment. For qualified healthcare professionals only.</div>
+</main>
+<footer class="site-footer">
+  <p><a href="https://thezerowhisper.github.io/medical-calculators/">Medical Calculators</a> &nbsp;·&nbsp; <a href="https://thezerowhisper.github.io/rabies-scheduler/" target="_blank">ARV Date Scheduler</a> &nbsp;·&nbsp; References: NCDC India Rabies Guidelines; WHO Position Paper 2018</p>
+</footer>
+<script>
+  let selectedCat = 3;
+  function selectCat(n) {
+    selectedCat = n;
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('.cat-btn[data-cat="'+n+'"]').classList.add('active');
+    document.getElementById('rigTypeField').style.display = n === 3 ? 'flex' : 'none';
+    calculate();
+  }
+  const rigWeights = [5,10,15,20,25,30,40,50,60,70,80,100];
+  const rigTbody = document.getElementById('rigTableBody');
+  rigWeights.forEach(w => {
+    const hrigIU = w*20, hrigMl = (w*20/150).toFixed(1);
+    const erigIU = w*40, erigMl = (w*40/300).toFixed(1);
+    rigTbody.innerHTML += `<tr><td>${w} kg</td><td>${hrigIU} IU (≈${hrigMl} mL at 150 IU/mL)</td><td>${erigIU} IU (≈${erigMl} mL at 300 IU/mL)</td></tr>`;
   });
-});
+  function calculate() {
+    const wt = parseFloat(document.getElementById('weight').value);
+    const prev = document.getElementById('prevVacc').value;
+    const rigType = document.getElementById('rigType').value;
+    const route = document.getElementById('route').value;
+    const rs = document.getElementById('resultSection');
+    if (!wt || wt < 3) { rs.style.display='none'; return; }
+    rs.style.display = 'block';
+    trackCalc('arv-dose', { category: selectedCat, weight: wt });
+    const catColors = ['','#16a34a','#d97706','#dc2626'];
+    const catNeed = ['','No PEP needed','ARV only','ARV + RIG'];
+    let gridHTML = `<div class="r-box primary"><div class="rb-label">Wound Category</div><div class="rb-val" style="color:${catColors[selectedCat]}">${selectedCat}</div><div class="rb-unit">${catNeed[selectedCat]}</div></div><div class="r-box"><div class="rb-label">Weight</div><div class="rb-val">${wt}</div><div class="rb-unit">kg</div></div>`;
+    let alertHTML = '', stepsHTML = '';
+    if (selectedCat === 1) {
+      gridHTML += `<div class="r-box"><div class="rb-label">ARV Required</div><div class="rb-val" style="color:#16a34a">None</div><div class="rb-unit">No PEP needed</div></div>`;
+      alertHTML = `<div class="alert cat1"><span class="al-icon">✅</span><div><strong>Category I — No PEP required.</strong> Wash the contact area with soap and water. No ARV or RIG needed if only touching or licking on intact skin with no wounds. If uncertain, reassess carefully.</div></div>`;
+      stepsHTML = `<div style="text-align:center;padding:20px;color:var(--cat1);font-weight:700">✅ No ARV needed for Category I exposure.</div>`;
+    } else if (selectedCat === 2) {
+      gridHTML += `<div class="r-box"><div class="rb-label">ARV Required</div><div class="rb-val" style="color:#d97706">Yes</div><div class="rb-unit">No RIG needed</div></div>`;
+      alertHTML = `<div class="alert cat2"><span class="al-icon">⚠️</span><div><strong>Category II — ARV required. RIG not indicated.</strong> Start wound toilet immediately, then initiate ARV on Day 0.</div></div>`;
+      stepsHTML = buildSteps(route, prev, false, wt, rigType);
+    } else {
+      const iuPerKg = rigType === 'hrig' ? 20 : 40;
+      const rigConc = rigType === 'hrig' ? 150 : 300;
+      const rigDose = wt * iuPerKg;
+      const rigVol = (rigDose / rigConc).toFixed(1);
+      const rigName = rigType === 'hrig' ? 'HRIG' : 'ERIG';
+      gridHTML += `<div class="r-box" style="background:#fef2f2;border-color:#fca5a5"><div class="rb-label">${rigName} Dose</div><div class="rb-val" style="color:#dc2626">${rigDose}</div><div class="rb-unit">IU &nbsp;(≈${rigVol} mL)</div></div>`;
+      alertHTML = `<div class="alert cat3"><span class="al-icon">🔴</span><div><strong>Category III — ARV + RIG required on Day 0.</strong> ${rigName} <strong>${rigDose} IU</strong> (≈${rigVol} mL at ${rigConc} IU/mL) — infiltrate into and around wound; remainder IM at different site from vaccine. ${rigType==='erig'?'<strong>ERIG: skin test required before administration.</strong>':''}</div></div>`;
+      stepsHTML = buildSteps(route, prev, true, wt, rigType);
+    }
+    document.getElementById('resultGrid').innerHTML = gridHTML;
+    document.getElementById('alertBox').innerHTML = alertHTML;
+    document.getElementById('regimenSteps').innerHTML = stepsHTML;
+  }
+  function step(day, dayLabel, name, dose, note, isRig) {
+    return `<div class="step-row${isRig?' rig':''}"><div class="step-day"><div class="day-num">${day}</div>${dayLabel?`<div class="day-label">${dayLabel}</div>`:''}</div><div class="step-content"><div class="sc-title">${name}</div><div class="sc-dose">${dose}</div>${note?`<div class="sc-note">${note}</div>`:''}</div></div>`;
+  }
+  function buildSteps(route, prev, rig, wt, rigType) {
+    if (prev === 'prev') {
+      return `<div class="alert info"><span class="al-icon">ℹ️</span><div><strong>Previously vaccinated:</strong> 2-dose booster only — no RIG required.</div></div>`
+        + step('Day 0','','Booster Dose 1', route==='im'?'0.5 mL (PVRV) or 1.0 mL (PCECV) IM — deltoid':'0.1 mL ID × 2 sites — deltoid/forearm','No RIG needed in previously vaccinated patients',false)
+        + step('Day 3','','Booster Dose 2', route==='im'?'0.5 mL IM — deltoid':'0.1 mL ID × 2 sites','Complete 2-dose booster course. No further doses needed.',false);
+    }
+    const imDose = '0.5 mL (PVRV/Verorab) or 1.0 mL (PCECV/Rabipur) IM — deltoid (or anterolateral thigh if <2 yrs)';
+    const idDose = '0.1 mL ID × 2 sites — deltoid or volar forearm';
+    let html = '';
+    if (rig) {
+      const rigDose = wt * (rigType==='hrig'?20:40);
+      const rigVol = (rigDose / (rigType==='hrig'?150:300)).toFixed(1);
+      const rigName = rigType==='hrig'?'HRIG':'ERIG';
+      html += step('Day 0','+ RIG',`🔴 ${rigName} — Rabies Immunoglobulin`,`${rigDose} IU (≈${rigVol} mL) — infiltrate around wound, remainder IM at different site`,'Must be given on Day 0 only. Cannot be given after Day 7. Vaccine and RIG at different sites.',true);
+    }
+    html += step('Day 0', rig?'+ ARV':'', 'First ARV Dose', route==='im'?imDose:idDose, 'Start as soon as possible after exposure', false);
+    html += step('Day 3','','Second ARV Dose', route==='im'?imDose:idDose, '', false);
+    html += step('Day 7','','Third ARV Dose', route==='im'?imDose:idDose, route==='id'?'Last routine dose for WHO ID 3-visit regimen':'', false);
+    if (route==='im') html += step('Day 28','','Fourth ARV Dose', imDose, 'Final dose — complete the full course. Do not miss.', false);
+    else html += step('Day 28','','Fourth ARV Dose (ID)', '0.1 mL ID × 1 site', 'Only if immunocompromised — immunocompetent patients can omit Day 28 with ID regimen.',false);
+    return html;
+  }
+  const faqs = [
+    {q:"What is the ARV dose schedule in India?",a:"Standard IM Essen regimen: 4 doses on Days 0, 3, 7, and 28. Each dose is 0.5 mL (PVRV/Verorab) or 1.0 mL (PCECV/Rabipur) IM in the deltoid. Anterolateral thigh for children under 2 years. The gluteal region must not be used — fat impairs absorption."},
+    {q:"What is the RIG dose by body weight for Category III?",a:"HRIG (Human RIG): 20 IU/kg. ERIG (Equine RIG): 40 IU/kg. Infiltrate maximum dose around and into the wound. Any remaining volume give IM at a site away from the vaccine. RIG must be given on Day 0 only."},
+    {q:"Which wound categories require ARV and RIG?",a:"Category I (touching/licking intact skin): No ARV or RIG. Category II (minor scratch, no bleeding): ARV only, no RIG. Category III (deep bite, bleeding, mucous membrane): ARV + RIG on Day 0."},
+    {q:"When should ARV be started?",a:"As soon as possible after the exposure — ideally on the same day (Day 0). There is no absolute upper time limit for starting ARV, but earlier is always better. If RIG is indicated, it must be given with the first ARV dose on Day 0 and cannot be given after Day 7."},
+    {q:"What is the intradermal ARV regimen?",a:"WHO 2018 recommended: 0.1 mL ID at 2 sites on Days 0, 3, and 7 — only 3 visits. More cost-effective, fewer vials used per patient. Requires trained staff for proper intradermal injection technique. A Day 28 dose is added for immunocompromised patients."},
+    {q:"What is the difference between HRIG and ERIG?",a:"HRIG (Human RIG): 20 IU/kg, very low risk of adverse reactions, preferred but expensive. ERIG (Equine RIG): 40 IU/kg, requires skin test before use, ~1% risk of serum sickness, significantly cheaper and widely available across India. Both are equally effective at correct doses."},
+    {q:"Is RIG needed if the patient was previously vaccinated?",a:"No. Previously vaccinated patients (completed pre- or post-exposure course with potent cell culture vaccine) require only a 2-dose booster on Day 0 and Day 3. RIG is not required regardless of wound category."},
+    {q:"What first aid should be done after a dog bite?",a:"Immediately wash the wound with soap and running water for at least 15 minutes, then apply povidone-iodine (Betadine) or 70% alcohol. Do not suture immediately. Seek medical attention for ARV/RIG, tetanus prophylaxis, and antibiotics (Amoxicillin-Clavulanate) for infected wounds."},
+    {q:"What is the ARV dose for children?",a:"Same vaccine volume as adults regardless of child's weight: 0.5 mL (PVRV) or 1.0 mL (PCECV). Injection site: anterolateral thigh for children under 2 years, deltoid for older children. RIG dose is weight-based: HRIG 20 IU/kg or ERIG 40 IU/kg."}
+  ];
+  const fl = document.getElementById('faq-list');
+  faqs.forEach((f,i) => {
+    fl.innerHTML += `<div class="faq-item" id="fi-${i}"><button class="faq-q" onclick="tf(${i})" aria-expanded="false"><span>${f.q}</span><span class="faq-icon">+</span></button><div class="faq-a">${f.a}</div></div>`;
+  });
+  function tf(i) {
+    const el = document.getElementById('fi-'+i);
+    const open = el.classList.toggle('open');
+    el.querySelector('.faq-q').setAttribute('aria-expanded', open);
+  }
+  window.addEventListener('DOMContentLoaded', () => { selectCat(3); });
+</script>
+</body>
+</html>
