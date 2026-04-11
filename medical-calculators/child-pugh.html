@@ -1,793 +1,593 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="bmi">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <link rel="stylesheet" href="/shared.css"/> 
-<title>BMI Calculator India | Indian & WHO Cutoffs | Adult & Child BMI</title>
-<meta name="description" content="Free BMI calculator for India using Indian-specific cutoffs (overweight BMI 23, obese BMI 25) and WHO standards. Covers adults and children. Includes waist circumference risk, ideal weight range, and health risk assessment."/>
-<meta name="keywords" content="BMI calculator India, Indian BMI cutoffs, BMI calculator kg cm India, overweight BMI India, obese BMI India, child BMI calculator India, waist circumference risk India, ideal weight calculator India, WHO BMI India comparison"/>
-<meta name="robots" content="index, follow"/>
-  <title>BMI Calculator India | Indian Cutoffs Overweight ≥23 Obese ≥25 | Free Tool</title>
-<meta name="description" content="BMI calculator with Indian cutoffs — overweight ≥23, obese ≥25. Waist circumference risk, ideal weight range, WHO comparison. Built for Indian adults and children."/>
-<meta name="keywords" content="BMI calculator India, Indian BMI cutoff, overweight BMI 23 India, obese BMI 25 India, waist circumference risk India, BMI calculator Indian guidelines, free BMI tool India"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/bmi"/>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-  <script src="assets/umami-events.js"></script>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_IN"/>
-<meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/bmi"/>
-<meta property="og:title" content="BMI Calculator India | Indian Cutoffs ≥23 Overweight, ≥25 Obese"/>
-<meta property="og:description" content="BMI calculator using Indian-specific cutoffs — overweight ≥23, obese ≥25. Includes waist risk, ideal weight range and WHO comparison. Free, no login."/>
-<meta property="og:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-bmi.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="675"/>
-<meta property="og:image:alt" content="BMI calculator India with Indian cutoffs — overweight at 23, obese at 25, waist circumference risk, free tool built by a doctor"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/shared.css"/>
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="BMI Calculator India | Indian Cutoffs ≥23 Overweight, ≥25 Obese"/>
-<meta name="twitter:description" content="BMI calculator using Indian-specific cutoffs — overweight ≥23, obese ≥25. Includes waist risk, ideal weight range and WHO comparison. Free, no login."/>
-<meta name="twitter:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-bmi.png"/>
-<meta name="twitter:image:alt" content="BMI calculator India with Indian cutoffs — overweight at 23, obese at 25, waist circumference risk, free tool built by a doctor"/>
-<link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/bmi"/>
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>Child-Pugh Score Calculator — Cirrhosis Class A/B/C, Survival & Operative Risk</title>
+  <meta name="description" content="Free Child-Pugh score calculator for chronic liver disease staging. Instantly calculate Class A, B, or C cirrhosis with 1-year/2-year survival, operative mortality, and MELD comparison. Includes PBC/PSC bilirubin variant. Used by hepatologists, GI surgeons, and medical students." />
+  <meta name="keywords" content="Child-Pugh score calculator, Child-Pugh class A B C, cirrhosis staging calculator, liver disease severity score, hepatic encephalopathy grading, Child-Pugh prognosis, operative mortality cirrhosis, Child-Pugh vs MELD, PBC Child-Pugh score, PSC liver staging, Child-Pugh survival, bilirubin albumin INR ascites score, hepatology calculator" />
+  <meta name="author" content="Dr. Diamond, MBBS, AFIH" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/child-pugh" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Child-Pugh Score Calculator — Cirrhosis Staging & Prognosis" />
+  <meta property="og:description" content="Calculate Child-Pugh Class A/B/C instantly. Survival rates, operative mortality, West Haven encephalopathy criteria, and PBC/PSC bilirubin variant included." />
+  <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/child-pugh" />
+  <meta property="og:site_name" content="Medical Calculators — The Zero Whisper" />
+  <meta property="og:image" content="https://thezerowhisper.github.io/medical-calculators/og-child-pugh.png" />
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "name": "BMI Calculator India — Indian & WHO Cutoffs",
-  "description": "Free BMI calculator for India using Indian-specific and WHO cutoffs for adults and children with waist circumference risk assessment.",
-  "url": "https://thezerowhisper.github.io/medical-calculators/bmi",
-  "inLanguage": "en-IN",
-  "audience": {"@type": "MedicalAudience", "audienceType": "Patient, Physician"}
-}
-</script>
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Child-Pugh Score Calculator — Cirrhosis Staging" />
+  <meta name="twitter:description" content="Instant Child-Pugh Class A/B/C with survival & operative mortality. PBC/PSC bilirubin variant. Free clinical tool." />
+  <meta name="twitter:image" content="https://thezerowhisper.github.io/medical-calculators/og-child-pugh.png" />
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the BMI cutoff for overweight in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "In India, overweight is defined as BMI ≥ 23 kg/m², which is lower than the WHO standard of 25. This is because Indians develop metabolic complications at lower BMI values."}
-    },
-    {
-      "@type": "Question",
-      "name": "What is the BMI cutoff for obesity in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "In India, obesity is defined as BMI ≥ 25 kg/m². The WHO standard for obesity is BMI ≥ 30. Indian guidelines use lower cutoffs due to higher metabolic risk at lower BMI."}
-    },
-    {
-      "@type": "Question",
-      "name": "What is normal BMI for Indians?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Normal BMI for Indians is 18.5 to 22.9 kg/m² as per Indian/Asian guidelines. This is narrower than the WHO normal range of 18.5–24.9."}
-    },
-    {
-      "@type": "Question",
-      "name": "What is the healthy waist circumference for Indians?",
-      "acceptedAnswer": {"@type": "Answer", "text": "For Indian men, waist circumference should be below 90 cm. For Indian women, it should be below 80 cm. Values above these indicate abdominal obesity and increased cardiovascular risk."}
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- ═══ STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://thezerowhisper.github.io/medical-calculators/"},
+          {"@type":"ListItem","position":2,"name":"Hepatology Calculators","item":"https://thezerowhisper.github.io/medical-calculators/#hepatology"},
+          {"@type":"ListItem","position":3,"name":"Child-Pugh Score","item":"https://thezerowhisper.github.io/medical-calculators/child-pugh"}
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "name": "Child-Pugh Score Calculator — Cirrhosis Staging",
+        "url": "https://thezerowhisper.github.io/medical-calculators/child-pugh",
+        "description": "Calculate Child-Pugh score and class (A/B/C) for chronic liver disease staging. Includes survival rates, operative mortality, and PBC/PSC bilirubin variant.",
+        "author": {"@type":"Person","name":"Dr. Diamond","honorificPrefix":"Dr.","hasCredential":"MBBS, AFIH"},
+        "medicalAudience": {"@type":"MedicalAudience","audienceType":"Clinician"},
+        "lastReviewed": "2025-01-01",
+        "reviewedBy": {"@type":"Person","name":"Dr. Diamond","honorificPrefix":"Dr."},
+        "specialty": "Gastroenterology"
+      },
+      {
+        "@type": "MedicalTest",
+        "name": "Child-Pugh Score",
+        "alternateName": "Child-Turcotte-Pugh Score",
+        "description": "A clinical scoring system used to assess the severity of chronic liver disease (cirrhosis) and predict short-term prognosis. Scores five parameters — bilirubin, albumin, INR, ascites, and hepatic encephalopathy — each from 1–3 points.",
+        "usedToDiagnose": {"@type":"MedicalCondition","name":"Cirrhosis"},
+        "normalRange": "Class A (5–6): Well compensated; Class B (7–9): Functional impairment; Class C (10–15): Decompensated"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Child-Pugh score and what is it used for?",
+            "acceptedAnswer": {"@type":"Answer","text":"The Child-Pugh score (originally Child-Turcotte-Pugh) is a clinical scoring system used to assess the severity and prognosis of chronic liver disease, primarily cirrhosis. It evaluates five parameters — total bilirubin, serum albumin, INR (or prothrombin time), degree of ascites, and grade of hepatic encephalopathy — each scored 1–3 points. It is used for cirrhosis staging, predicting surgical risk, and in transplant evaluation, though MELD has largely replaced it for transplant prioritization."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between Child-Pugh Class A, B, and C?",
+            "acceptedAnswer": {"@type":"Answer","text":"Class A (score 5–6): Well-compensated cirrhosis. 1-year survival ~100%, 2-year ~85%, operative mortality ~10%. Class B (score 7–9): Significant functional impairment. 1-year survival ~80%, 2-year ~60%, operative mortality ~30%. Class C (score 10–15): Decompensated cirrhosis. 1-year survival ~45%, 2-year ~35%, operative mortality ~82%. Class C patients should generally be considered for liver transplant evaluation."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between Child-Pugh score and MELD score?",
+            "acceptedAnswer": {"@type":"Answer","text":"Child-Pugh includes both clinical parameters (ascites, hepatic encephalopathy) and laboratory values (bilirubin, albumin, INR), making it somewhat subjective. MELD (Model for End-Stage Liver Disease) is entirely laboratory-based (serum creatinine, bilirubin, INR, sodium) and is currently used by UNOS to prioritize patients for liver transplantation because it is more objective and better predicts 90-day mortality. Child-Pugh remains useful for assessing surgical risk and general staging."}
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a different Child-Pugh bilirubin cut-off for PBC and PSC?",
+            "acceptedAnswer": {"@type":"Answer","text":"Yes. In Primary Biliary Cholangitis (PBC) and Primary Sclerosing Cholangitis (PSC), the bilirubin thresholds are modified: 1 point for bilirubin <4 mg/dL, 2 points for 4–10 mg/dL, and 3 points for >10 mg/dL. This is because bilirubin is disproportionately elevated in cholestatic liver diseases, and using standard thresholds would unfairly inflate the score. Our calculator includes a PBC/PSC toggle for this purpose."}
+          },
+          {
+            "@type": "Question",
+            "name": "What are the West Haven criteria for hepatic encephalopathy grading?",
+            "acceptedAnswer": {"@type":"Answer","text":"The West Haven criteria grade hepatic encephalopathy as: Grade 0 — no symptoms; Grade 1 — mild confusion, euphoria or depression, slowed thinking, impaired arithmetic; Grade 2 — lethargy, moderate confusion, personality change, inappropriate behaviour; Grade 3 — somnolent but arousable, severe confusion, gross disorientation; Grade 4 — coma (unresponsive to painful stimuli). For Child-Pugh scoring: Grade 0 = 1 point, Grade 1–2 = 2 points, Grade 3–4 = 3 points."}
+          },
+          {
+            "@type": "Question",
+            "name": "What Child-Pugh score is required for liver transplant?",
+            "acceptedAnswer": {"@type":"Answer","text":"Child-Pugh Class C (score ≥10) generally indicates decompensated cirrhosis and should prompt transplant evaluation. However, MELD score (≥15) is the primary criterion used by transplant centres for waitlist prioritization. Child-Pugh Class B with complications (refractory ascites, variceal bleeding, SBP, hepatorenal syndrome) also warrants transplant referral regardless of exact score."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can the Child-Pugh score be used to predict operative mortality?",
+            "acceptedAnswer": {"@type":"Answer","text":"Yes. The Child-Pugh score is the most widely used tool for predicting surgical risk in cirrhotic patients. Approximate operative mortality: Class A ~10%, Class B ~30%, Class C ~82%. Elective surgery is generally contraindicated in Class C. Emergency surgery carries significantly higher mortality. MELD score >14 also predicts increased 30-day surgical mortality and should be assessed alongside Child-Pugh."}
+          },
+          {
+            "@type": "Question",
+            "name": "How accurate is the Child-Pugh score?",
+            "acceptedAnswer": {"@type":"Answer","text":"The Child-Pugh score has limitations: the assessment of ascites and encephalopathy is subjective and observer-dependent; albumin can be affected by non-hepatic conditions (malnutrition, nephrotic syndrome); and INR can be affected by anticoagulation therapy. Despite these limitations, it remains a validated, widely-used clinical tool and correlates well with hepatic reserve and short-term survival in cirrhosis."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the minimum and maximum Child-Pugh score?",
+            "acceptedAnswer": {"@type":"Answer","text":"The minimum Child-Pugh score is 5 (all five parameters scoring 1 point each) corresponding to Class A, and the maximum is 15 (all parameters scoring 3 points each) corresponding to Class C. A score of exactly 5 with no ascites or encephalopathy suggests good hepatic reserve."}
+          },
+          {
+            "@type": "Question",
+            "name": "When was the Child-Pugh score developed?",
+            "acceptedAnswer": {"@type":"Answer","text":"The original Child-Turcotte score was published in 1964 by C.G. Child and J.G. Turcotte to predict survival after portocaval shunt surgery. It was modified by R.N. Pugh in 1973 who replaced the nutritional status criterion with the prothrombin time (INR), creating the current Child-Pugh (Child-Turcotte-Pugh) classification."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #eef2f7;
+      --surface: #ffffff;
+      --surface2: #f5f8fc;
+      --border: #dce4ef;
+      --primary: #1a5fa8;
+      --primary-light: #2b7de9;
+      --primary-dark: #0d3d72;
+      --text: #0f1e33;
+      --text-muted: #5a6a82;
+      --text-light: #8fa0b8;
+      --class-a: #16a34a;
+      --class-a-bg: #f0fdf4;
+      --class-a-border: #bbf7d0;
+      --class-b: #b45309;
+      --class-b-bg: #fffbeb;
+      --class-b-border: #fde68a;
+      --class-c: #dc2626;
+      --class-c-bg: #fef2f2;
+      --class-c-border: #fecaca;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow: 0 2px 16px rgba(15,30,51,.09);
+      --shadow-lg: 0 8px 40px rgba(15,30,51,.14);
     }
-  ]
-}
-</script>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; min-height: 100vh; }
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d3748}
-.page-wrapper{max-width:620px;margin:auto}
+    /* ── TOPBAR ── */
+    .topbar {
+      background: var(--primary-dark);
+      color: #fff;
+      padding: 10px 20px;
+      font-size: .82rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .topbar a { color: #93c5fd; text-decoration: none; }
+    .topbar a:hover { color: #fff; }
+    .breadcrumb { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .breadcrumb span { color: #64748b; }
 
-.back-link{display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;color:#3182ce;font-size:0.9rem;font-weight:600;text-decoration:none}
-.back-link:hover{text-decoration:underline}
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0d3d72 0%, #1a5fa8 50%, #1e6b3a 100%);
+      color: #fff;
+      padding: 48px 20px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: .78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      letter-spacing: -.02em;
+    }
+    .hero p {
+      font-size: clamp(.95rem, 2vw, 1.1rem);
+      color: rgba(255,255,255,.82);
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      justify-content: center;
+    }
+    .hero-tags span {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: .78rem;
+      color: rgba(255,255,255,.9);
+    }
 
-.card{background:white;border-radius:16px;padding:36px;box-shadow:0 4px 24px rgba(0,0,0,0.08);margin-bottom:24px}
-.logo{font-size:2rem;text-align:center;margin-bottom:8px}
-h1{font-size:1.4rem;font-weight:700;color:#1a202c;text-align:center;margin-bottom:4px}
-.subtitle{text-align:center;font-size:0.88rem;color:#718096;margin-bottom:10px}
+    /* ── LAYOUT ── */
+    .page { max-width: 920px; margin: 0 auto; padding: 32px 16px 64px; }
 
-.keyword-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:24px}
-.keyword-chip{background:#ebf8ff;color:#2b6cb0;font-size:0.72rem;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid #bee3f8}
+    /* ── CARD ── */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-title::before {
+      content: '';
+      display: block;
+      width: 4px; height: 18px;
+      background: var(--primary-light);
+      border-radius: 4px;
+    }
 
-/* TABS */
-.age-tabs{display:flex;gap:0;margin-bottom:20px;border:2px solid #e2e8f0;border-radius:10px;overflow:hidden}
-.age-tab{flex:1;padding:10px;border:none;background:white;font-weight:600;font-size:0.9rem;cursor:pointer;color:#718096;transition:all 0.2s}
-.age-tab.active{background:#3182ce;color:white}
+    /* ── PBC TOGGLE ── */
+    .pbc-toggle-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #f0f7ff;
+      border: 1.5px solid #bfdbfe;
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      cursor: pointer;
+    }
+    .pbc-toggle-wrap input[type=checkbox] {
+      width: 18px; height: 18px;
+      accent-color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+    .pbc-label { font-size: .88rem; color: var(--text); line-height: 1.5; cursor: pointer; }
+    .pbc-label strong { color: var(--primary); }
+    .pbc-label small { display: block; color: var(--text-muted); font-size: .78rem; margin-top: 2px; }
 
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
-.form-row{margin-bottom:14px}
-@media(max-width:480px){.form-grid{grid-template-columns:1fr}.card{padding:24px 18px}.info-section{padding:24px 18px}}
+    /* ── PARAMETER ROWS ── */
+    .param-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 4px;
+    }
+    @media(max-width: 600px) { .param-row { grid-template-columns: 1fr; } }
 
-label{display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:#2d3748}
-.label-opt{font-weight:400;font-size:0.78rem;color:#a0aec0;margin-left:6px}
-input[type=number],select{width:100%;padding:11px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:1rem;color:#2d3748;outline:none;transition:border-color 0.2s;background:white;font-family:inherit}
-input:focus,select:focus{border-color:#4299e1}
+    .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .field label {
+      font-size: .84rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .field label .pts-badge {
+      font-size: .72rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1px 7px;
+      font-weight: 700;
+      color: var(--primary);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .field select {
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 11px 14px;
+      font-size: .93rem;
+      font-family: 'Outfit', sans-serif;
+      color: var(--text);
+      outline: none;
+      cursor: pointer;
+      transition: border-color .18s, box-shadow .18s;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235a6a82' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+    .field select:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(43,125,233,.12);
+    }
+    .field select.pts-1 { border-left: 3px solid #22c55e; }
+    .field select.pts-2 { border-left: 3px solid #f59e0b; }
+    .field select.pts-3 { border-left: 3px solid #ef4444; }
+    .field .hint-text { font-size: .75rem; color: var(--text-light); }
 
-.unit-toggle{display:flex;gap:8px;margin-bottom:14px}
-.unit-btn{flex:1;padding:8px;border:2px solid #e2e8f0;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;background:white;color:#718096;transition:all 0.2s}
-.unit-btn.active{border-color:#3182ce;background:#ebf8ff;color:#2b6cb0}
+    /* ── SCORE BREAKDOWN ── */
+    .score-breakdown {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    @media(max-width:600px) { .score-breakdown { grid-template-columns: repeat(5, 1fr); gap: 5px; } }
+    .sb-item {
+      text-align: center;
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 6px;
+      transition: all .2s;
+    }
+    .sb-item .sb-label { font-size: .65rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+    .sb-item .sb-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .sb-item.active-1 { background: #f0fdf4; border-color: #86efac; }
+    .sb-item.active-1 .sb-val { color: #16a34a; }
+    .sb-item.active-2 { background: #fffbeb; border-color: #fcd34d; }
+    .sb-item.active-2 .sb-val { color: #b45309; }
+    .sb-item.active-3 { background: #fef2f2; border-color: #fca5a5; }
+    .sb-item.active-3 .sb-val { color: #dc2626; }
 
-.calc-btn{width:100%;padding:13px;background:#3182ce;color:white;border:none;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;transition:background 0.2s}
-.calc-btn:hover{background:#2b6cb0}
+    .score-total-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-bottom: 20px;
+    }
+    .score-total-row .total-label { font-size: .84rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
+    .score-total-row .total-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
 
-/* ── RESULTS ── */
-.results{margin-top:28px;display:none}
+    /* ── RESULT PANEL ── */
+    .result-panel {
+      border-radius: var(--radius);
+      padding: 28px;
+      border-width: 2px;
+      border-style: solid;
+    }
+    .result-panel.class-a { background: var(--class-a-bg); border-color: var(--class-a-border); }
+    .result-panel.class-b { background: var(--class-b-bg); border-color: var(--class-b-border); }
+    .result-panel.class-c { background: var(--class-c-bg); border-color: var(--class-c-border); }
 
-/* BMI DISPLAY */
-.bmi-hero{text-align:center;padding:24px 20px;border-radius:14px;margin-bottom:20px;border:2px solid}
-.bmi-number{font-size:3.2rem;font-weight:800;line-height:1}
-.bmi-unit{font-size:1rem;font-weight:500;margin-top:4px}
-.bmi-category{font-size:1.1rem;font-weight:700;margin-top:8px}
+    .result-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 20px; }
+    .class-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #fff;
+    }
+    .class-badge.a { background: var(--class-a); }
+    .class-badge.b { background: var(--class-b); }
+    .class-badge.c { background: var(--class-c); }
 
-/* BMI SCALE BAR */
-.scale-wrap{margin-bottom:20px}
-.scale-label{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
-.scale-bar{display:flex;height:14px;border-radius:8px;overflow:hidden;position:relative;margin-bottom:6px}
-.scale-segment{flex:1;position:relative}
-.scale-marker{position:absolute;top:-6px;width:3px;height:26px;background:#1a202c;border-radius:2px;transform:translateX(-50%);z-index:2}
-.scale-marker::after{content:attr(data-val);position:absolute;top:28px;left:50%;transform:translateX(-50%);font-size:0.7rem;font-weight:700;color:#1a202c;white-space:nowrap}
-.scale-ticks{display:flex;justify-content:space-between;font-size:0.68rem;color:#a0aec0;padding:0 2px;margin-top:20px}
+    .result-score-big {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 3.5re    .hero { background: linear-gradient(135deg, var(--primary-dark) 0%, #1a5fa8 100%); color: #fff; padding: 48px 20px; text-align: center; }
+    .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; }
+    .page { max-width: 920px; margin: 0 auto; padding: 32px 16px; }
+    .card { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); padding: 28px; margin-bottom: 24px; }
+    .card-title { font-size: 1rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .card-title::before { content: ''; width: 4px; height: 18px; background: var(--primary-light); border-radius: 4px; }
 
-/* COMPARISON TABLE */
-.comparison-card{background:#f7fafc;border-radius:12px;padding:16px;margin-bottom:16px}
-.comparison-title{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px}
-.comparison-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #e2e8f0;font-size:0.88rem}
-.comparison-row:last-child{border-bottom:none}
-.comp-label{color:#4a5568;font-weight:500}
-.comp-values{display:flex;gap:10px}
-.comp-val{text-align:center;min-width:90px}
-.comp-val-number{font-weight:700;font-size:0.95rem}
-.comp-val-label{font-size:0.68rem;color:#718096;margin-top:1px}
-.comp-badge{display:inline-block;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:20px;margin-top:3px}
+    .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media(max-width: 650px) { .input-grid { grid-template-columns: 1fr; } }
+    
+    .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 15px; }
+    .field label { font-size: .88rem; font-weight: 600; color: var(--text-muted); }
+    select { background: var(--surface2); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 10px; font-family: 'Outfit', sans-serif; outline: none; }
 
-/* DETAIL CARDS */
-.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
-@media(max-width:400px){.detail-grid{grid-template-columns:1fr}}
-.detail-card{background:#f7fafc;border-radius:12px;padding:14px 16px;border:1.5px solid #e2e8f0}
-.detail-card-label{font-size:0.72rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
-.detail-card-value{font-size:1.15rem;font-weight:800;color:#2d3748}
-.detail-card-sub{font-size:0.75rem;color:#718096;margin-top:3px;line-height:1.4}
+    .result-panel { background: #f0f7ff; border: 2px solid #bfdbfe; border-radius: var(--radius); padding: 24px; text-align: center; margin-top: 24px; display: none; }
+    .result-value { font-family: 'JetBrains Mono', monospace; font-size: 3rem; font-weight: 700; color: var(--primary-dark); }
+    .class-badge { display: inline-block; padding: 6px 20px; border-radius: 20px; color: #fff; font-weight: 700; margin-top: 10px; font-size: 1.1rem; }
+    
+    /* FAQ Styles */
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { width: 100%; text-align: left; padding: 16px 4px; font-size: .95rem; font-weight: 600; background: none; border: none; cursor: pointer; color: var(--text); display: flex; justify-content: space-between; align-items: center; }
+    .faq-a { display: none; padding: 0 4px 16px; font-size: .9rem; color: var(--text-muted); line-height: 1.75; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-icon { transition: transform 0.2s; color: var(--primary); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
 
-/* WAIST */
-.waist-section{margin-bottom:16px}
-.waist-title{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px}
-.waist-result{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;border:1.5px solid}
-.waist-icon{font-size:1.4rem;flex-shrink:0}
-.waist-label{font-weight:700;font-size:0.9rem}
-.waist-sub{font-size:0.78rem;margin-top:2px}
-
-/* RISK METER */
-.risk-section{margin-bottom:16px}
-.risk-title{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px}
-.risk-bar-wrap{display:flex;gap:4px;margin-bottom:8px}
-.risk-segment{flex:1;height:10px;border-radius:5px}
-.risk-label-row{display:flex;justify-content:space-between;font-size:0.68rem;color:#a0aec0}
-.risk-current{text-align:center;font-weight:700;font-size:0.88rem;margin-top:8px;padding:8px;border-radius:8px}
-
-/* NOTE + SHARE */
-.note-box{background:#fffaf0;border:1px solid #fbd38d;border-radius:10px;padding:12px 16px;font-size:0.82rem;color:#744210;margin-bottom:14px}
-.share-bar{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-.share-btn{flex:1;min-width:100px;padding:10px 12px;border:none;border-radius:10px;font-size:0.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity 0.2s}
-.share-btn:hover{opacity:0.85}
-.btn-whatsapp{background:#25D366;color:white}
-.btn-copy{background:#edf2f7;color:#2d3748}
-.btn-print{background:#667eea;color:white}
-.btn-save{background:#ed8936;color:white}
-.copy-confirm{text-align:center;font-size:0.8rem;color:#38a169;margin-top:8px;height:18px}
-
-/* INFO */
-.info-section{background:white;padding:28px 36px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.05);margin-bottom:24px}
-.info-section h2{font-size:1rem;color:#1a202c;margin-top:20px;margin-bottom:8px;font-weight:700}
-.info-section h2:first-child{margin-top:0}
-.info-section p{font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px}
-.faq-item{margin-bottom:18px}
-.faq-item h3{font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px}
-.faq-item p{font-size:0.85rem;color:#4a5568;line-height:1.65}
-
-.bmi-table{width:100%;border-collapse:collapse;font-size:0.85rem;margin:10px 0}
-.bmi-table th{background:#ebf8ff;color:#2b6cb0;padding:8px 12px;text-align:left;font-weight:700}
-.bmi-table td{padding:8px 12px;border-bottom:1px solid #e2e8f0;color:#4a5568}
-.bmi-table tr:last-child td{border-bottom:none}
-
-footer{text-align:center;padding-bottom:20px;font-size:0.78rem;color:#a0aec0}
-footer a{color:#3182ce}
-
-@media print{
-  .back-link,.share-bar,input,select,label,
-  .keyword-chips,.calc-btn,footer,.age-tabs,
-  .unit-toggle{display:none!important}
-  .card{box-shadow:none;padding:10px}
-  .results{display:block!important}
-}
-  /* ── DESKTOP LAYOUT ── */
-@media (min-width: 900px) {
-  body {
-    padding: 32px 40px;
-  }
-
-  .page-wrapper {
-    max-width: 1100px;
-    display: grid;
-    grid-template-columns: 580px 1fr;
-    gap: 28px;
-    align-items: start;
-  }
-
-  /* Back link spans full width */
-  .back-link {
-    grid-column: 1 / -1;
-  }
-
-  /* Calculator card stays left */
-  .card {
-    grid-column: 1;
-  }
-
-  /* Info section fills right, sticky */
-  .info-section {
-    grid-column: 2;
-    grid-row: 2;
-    position: sticky;
-    top: 20px;
-  }
-
-  /* Footer spans full width */
-  footer {
-    grid-column: 1 / -1;
-  }
-}
-</style>
+    .disclaimer { background: #fff8ed; border: 1px solid #fde68a; border-radius: var(--radius-sm); padding: 14px; font-size: .82rem; color: #92400e; margin-top: 20px; }
+    footer { text-align: center; font-size: .8rem; color: #8fa0b8; padding: 24px; border-top: 1px solid var(--border); }
+  </style>
 </head>
 <body>
-<main class="page-wrapper">
 
-  <a class="back-link" href="https://thezerowhisper.github.io/medical-calculators/">← All Calculators</a>
-
-  <div class="card">
-    <div class="logo">⚖️</div>
-    <h1>BMI Calculator India</h1>
-    <p class="subtitle">Indian Cutoffs · WHO Comparison · Waist Risk · Adult & Child</p>
-    <div class="keyword-chips">
-      <span class="keyword-chip">Indian BMI Cutoffs</span>
-      <span class="keyword-chip">WHO Comparison</span>
-      <span class="keyword-chip">Overweight ≥23</span>
-      <span class="keyword-chip">Obese ≥25</span>
-      <span class="keyword-chip">Waist Circumference</span>
-      <span class="keyword-chip">Ideal Weight</span>
+  <nav class="topbar">
+    <div class="breadcrumb">
+      <a href="/">Medical Calculators</a> › Hepatology › Child-Pugh Score
     </div>
+  </nav>
 
-    <!-- AGE GROUP TABS -->
-    <div class="age-tabs">
-      <button class="age-tab active" id="tab-adult" onclick="switchTab('adult')">Adult (18+ years)</button>
-      <button class="age-tab" id="tab-child" onclick="switchTab('child')">Child (2–17 years)</button>
-    </div>
+  <header class="hero">
+    <h1>Child-Pugh Score Calculator</h1>
+    <p>Classification for Severity of Chronic Liver Disease</p>
+  </header>
 
-    <!-- UNIT TOGGLE -->
-    <div style="margin-bottom:10px">
-      <label>Units</label>
-      <div class="unit-toggle">
-        <button class="unit-btn active" id="unit-metric" onclick="switchUnit('metric')">Metric (kg / cm)</button>
-        <button class="unit-btn" id="unit-imperial" onclick="switchUnit('imperial')">Imperial (lbs / inches)</button>
-      </div>
-    </div>
-
-    <!-- ADULT FORM -->
-    <div id="form-adult">
-      <div class="form-grid">
-        <div>
-          <label for="a-weight">Weight</label>
-          <input type="number" id="a-weight" placeholder="e.g. 70" min="10" max="300" step="0.1"/>
-          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="a-weight-unit">kg</div>
-        </div>
-        <div>
-          <label for="a-height">Height</label>
-          <input type="number" id="a-height" placeholder="e.g. 170" min="50" max="300" step="0.1"/>
-          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="a-height-unit">cm</div>
-        </div>
-      </div>
-      <div class="form-grid">
-        <div>
-          <label for="a-gender">Gender</label>
-          <select id="a-gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+  <main class="page">
+    <section class="card">
+      <div class="card-title">Clinical & Lab Parameters</div>
+      <div class="input-grid">
+        <div class="field">
+          <label for="bilirubin">Total Bilirubin (mg/dL)</label>
+          <select id="bilirubin" onchange="calculate()">
+            <option value="1">< 2.0</option>
+            <option value="2">2.0 – 3.0</option>
+            <option value="3">> 3.0</option>
           </select>
         </div>
-        <div>
-          <label for="a-waist">Waist Circumference <span class="label-opt">(optional)</span></label>
-          <input type="number" id="a-waist" placeholder="e.g. 88" min="40" max="200" step="0.1"/>
-          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="a-waist-unit">cm</div>
+        <div class="field">
+          <label for="albumin">Serum Albumin (g/dL)</label>
+          <select id="albumin" onchange="calculate()">
+            <option value="1">> 3.5</option>
+            <option value="2">2.8 – 3.5</option>
+            <option value="3">< 2.8</option>
+          </select>
         </div>
-      </div>
-    </div>
-
-    <!-- CHILD FORM -->
-    <div id="form-child" style="display:none">
-      <div class="form-grid">
-        <div>
-          <label for="c-weight">Weight</label>
-          <input type="number" id="c-weight" placeholder="e.g. 25" min="5" max="200" step="0.1"/>
-          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="c-weight-unit">kg</div>
+        <div class="field">
+          <label for="inr">INR</label>
+          <select id="inr" onchange="calculate()">
+            <option value="1">< 1.7</option>
+            <option value="2">1.7 – 2.3</option>
+            <option value="3">> 2.3</option>
+          </select>
         </div>
-        <div>
-          <label for="c-height">Height</label>
-          <input type="number" id="c-height" placeholder="e.g. 120" min="50" max="220" step="0.1"/>
-          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px" id="c-height-unit">cm</div>
+        <div class="field">
+          <label for="ascites">Ascites</label>
+          <select id="ascites" onchange="calculate()">
+            <option value="1">None</option>
+            <option value="2">Mild (Controlled by Diuretics)</option>
+            <option value="3">Moderate to Severe (Refractory)</option>
+          </select>
         </div>
-      </div>
-      <div class="form-grid">
-        <div>
-          <label for="c-age">Age</label>
-          <input type="number" id="c-age" placeholder="e.g. 8" min="2" max="17" step="1"/>
-          <div style="font-size:0.75rem;color:#a0aec0;margin-top:4px">years (2–17)</div>
-        </div>
-        <div>
-          <label for="c-gender">Gender</label>
-          <select id="c-gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+        <div class="field">
+          <label for="encephalopathy">Encephalopathy</label>
+          <select id="encephalopathy" onchange="calculate()">
+            <option value="1">None</option>
+            <option value="2">Grade 1-2 (Mild)</option>
+            <option value="3">Grade 3-4 (Severe)</option>
           </select>
         </div>
       </div>
-    </div>
 
-    <button class="calc-btn" onclick="calculate()">Calculate BMI</button>
-
-    <!-- RESULTS -->
-    <div class="results" id="results">
-
-      <!-- BMI HERO -->
-      <div class="bmi-hero" id="bmi-hero">
-        <div class="bmi-number" id="bmi-number"></div>
-        <div class="bmi-unit">kg/m²</div>
-        <div class="bmi-category" id="bmi-category"></div>
+      <div class="result-panel" id="resultPanel">
+        <div class="result-label">Total Child-Pugh Score</div>
+        <div class="result-value" id="scoreValue">5</div>
+        <div id="classBadge" class="class-badge">Class A</div>
+        <p id="survivalText" style="margin-top:15px; font-weight:500; color: var(--text-muted);"></p>
       </div>
+    </section>
 
-      <!-- SCALE BAR -->
-      <div class="scale-wrap">
-        <div class="scale-label">BMI Scale — Indian Cutoffs</div>
-        <div class="scale-bar" id="scale-bar"></div>
-        <div class="scale-ticks" id="scale-ticks"></div>
-      </div>
-
-      <!-- COMPARISON -->
-      <div class="comparison-card">
-        <div class="comparison-title">Indian vs WHO Classification Comparison</div>
-        <div id="comparison-rows"></div>
-      </div>
-
-      <!-- DETAIL CARDS -->
-      <div class="detail-grid" id="detail-grid"></div>
-
-      <!-- WAIST -->
-      <div class="waist-section" id="waist-section" style="display:none">
-        <div class="waist-title">Waist Circumference Risk</div>
-        <div class="waist-result" id="waist-result"></div>
-      </div>
-
-      <!-- RISK METER -->
-      <div class="risk-section">
-        <div class="risk-title">Overall Health Risk Assessment</div>
-        <div class="risk-bar-wrap" id="risk-bar"></div>
-        <div class="risk-label-row">
-          <span>Low</span><span>Moderate</span><span>High</span><span>Very High</span>
+    <section class="card">
+      <div class="card-title">Frequently Asked Questions</div>
+      <div id="faq-list">
         </div>
-        <div class="risk-current" id="risk-current"></div>
-      </div>
+    </section>
 
-      <div class="note-box" id="result-note"></div>
-
-      <div class="share-bar">
-        <button class="share-btn btn-whatsapp" onclick="shareWhatsApp()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp
-        </button>
-        <button class="share-btn btn-copy" onclick="copyResult()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-          Copy
-        </button>
-        <button class="share-btn btn-print" onclick="trackPrint('bmi'); window.print()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          Print
-        </button>
-        <button class="share-btn btn-save" onclick="saveImage()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Save
-        </button>
-      </div>
-      <div class="copy-confirm" id="copy-confirm"></div>
-    </div>
-  </div>
-
-  <section class="info-section">
-    <h2>Why Indian BMI Cutoffs Are Different</h2>
-    <p>Research shows that South Asians including Indians develop <strong>insulin resistance, diabetes, and cardiovascular disease at lower BMI values</strong> compared to Caucasians. At the same BMI, Indians have higher body fat percentage and more visceral (abdominal) fat. The <strong>WHO Expert Consultation (2004)</strong> and <strong>Consensus Statement for Diagnosis of Obesity (India, 2009)</strong> therefore recommend lower cutoffs for Asian Indians.</p>
-
-    <h2>Indian vs WHO BMI Cutoffs</h2>
-    <table class="bmi-table">
-      <thead><tr><th>Category</th><th>Indian Cutoff</th><th>WHO Cutoff</th></tr></thead>
-      <tbody>
-        <tr><td>Underweight</td><td>&lt; 18.5</td><td>&lt; 18.5</td></tr>
-        <tr><td>Normal</td><td>18.5 – 22.9</td><td>18.5 – 24.9</td></tr>
-        <tr><td>Overweight</td><td>23.0 – 24.9</td><td>25.0 – 29.9</td></tr>
-        <tr><td>Obese Class I</td><td>25.0 – 29.9</td><td>30.0 – 34.9</td></tr>
-        <tr><td>Obese Class II</td><td>≥ 30.0</td><td>≥ 35.0</td></tr>
-      </tbody>
-    </table>
-
-    <h2>Waist Circumference Cutoffs for Indians</h2>
-    <p>Abdominal obesity is a stronger risk predictor than BMI alone. Indian-specific cutoffs are: <strong>Men: ≥ 90 cm</strong> (high risk), <strong>Women: ≥ 80 cm</strong> (high risk). These are lower than Western cutoffs (102 cm for men, 88 cm for women).</p>
-
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>What is the BMI cutoff for overweight in India?</h3>
-      <p>In India, overweight is BMI ≥ 23 kg/m². This is lower than the WHO standard of 25 because Indians develop metabolic complications at lower BMI values.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What is normal BMI for Indians?</h3>
-      <p>Normal BMI for Indians is 18.5 to 22.9 kg/m². This range is narrower than the WHO normal range of 18.5–24.9.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What is the healthy waist size for Indian men and women?</h3>
-      <p>For Indian men, waist circumference should be below 90 cm. For Indian women, below 80 cm. Higher values indicate abdominal obesity and increased risk of diabetes and heart disease.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How is BMI calculated?</h3>
-      <p>BMI = Weight (kg) ÷ Height² (m²). For example, a person weighing 70 kg with height 1.70 m has BMI = 70 ÷ (1.70 × 1.70) = 24.2 kg/m².</p>
-    </div>
-    <div class="faq-item">
-      <h3>Is BMI accurate for Indians?</h3>
-      <p>BMI is a useful screening tool but has limitations. Indians tend to have higher body fat at the same BMI compared to Caucasians. Waist circumference measurement alongside BMI gives a more complete picture of metabolic risk.</p>
-    </div>
-  </section>
-
-  <footer>
-    For informational purposes only · Always consult your physician ·
-    <a href="/">All Calculators</a> ·
-    <a href="https://thezerowhisper.github.io/rabies-scheduler/">Rabies Scheduler</a>
-  </footer>
-
-  <section class="card">
+      <section class="card">
     <div class="card-title">Related Tools</div>
     <div class="related-grid">
-      <a href="https://thezerowhisper.github.io/medical-calculators/growth-chart" class="related-card" ><div class="rc-name">Growth Chart</div><div class="rc-desc">WHO/IAP Z-scores 0–18y</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/hba1c-converter" class="related-card" ><div class="rc-name">HbA1c Converter</div><div class="rc-desc">Diabetes monitoring</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/paracetamol" class="related-card" ><div class="rc-name">Paracetamol Dose</div><div class="rc-desc">Weight-based dosing</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/egfr-calculator" class="related-card" ><div class="rc-name">eGFR Calculator</div><div class="rc-desc">Renal function</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/anion-gap" class="related-card" ><div class="rc-name">Anion Gap</div><div class="rc-desc">Metabolic panel</div></a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/corrected-calcium" class="related-card" ><div class="rc-name">Corrected Calcium</div><div class="rc-desc">Albumin-adjusted Ca²⁺</div></a>
       <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
     </div>
   </section>
-  </main>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script>
-
-// ── STATE ─────────────────────────────────────────────────────────
-let currentTab  = "adult";
-let currentUnit = "metric";
-let shareText   = "";
-
-// ── INDIAN BMI CATEGORIES ─────────────────────────────────────────
-const INDIAN_CATS = [
-  { label:"Underweight",    min:0,    max:18.5, color:"#4299e1", bg:"#ebf8ff", border:"#bee3f8", risk:1 },
-  { label:"Normal",         min:18.5, max:23,   color:"#48bb78", bg:"#f0fff4", border:"#9ae6b4", risk:0 },
-  { label:"Overweight",     min:23,   max:25,   color:"#ed8936", bg:"#fffaf0", border:"#fbd38d", risk:2 },
-  { label:"Obese Class I",  min:25,   max:30,   color:"#e53e3e", bg:"#fff5f5", border:"#fed7d7", risk:3 },
-  { label:"Obese Class II", min:30,   max:50,   color:"#9b2c2c", bg:"#fff5f5", border:"#fc8181", risk:4 }
-];
-
-const WHO_CATS = [
-  { label:"Underweight", min:0,    max:18.5 },
-  { label:"Normal",      min:18.5, max:25   },
-  { label:"Overweight",  min:25,   max:30   },
-  { label:"Obese I",     min:30,   max:35   },
-  { label:"Obese II",    min:35,   max:50   }
-];
-
-const RISK_LABELS = ["Low","Moderate","High","Very High","Extremely High"];
-const RISK_COLORS = ["#48bb78","#ed8936","#e53e3e","#9b2c2c","#742a2a"];
-const RISK_BG     = ["#f0fff4","#fffaf0","#fff5f5","#fff5f5","#fff5f5"];
-
-function getIndianCat(bmi) {
-  return INDIAN_CATS.find(c => bmi >= c.min && bmi < c.max) || INDIAN_CATS[INDIAN_CATS.length-1];
-}
-function getWhoCat(bmi) {
-  return WHO_CATS.find(c => bmi >= c.min && bmi < c.max) || WHO_CATS[WHO_CATS.length-1];
-}
-
-// ── SWITCH TAB ────────────────────────────────────────────────────
-function switchTab(tab) {
-  currentTab = tab;
-  document.getElementById("form-adult").style.display = tab==="adult" ? "block" : "none";
-  document.getElementById("form-child").style.display = tab==="child" ? "block" : "none";
-  document.getElementById("tab-adult").classList.toggle("active", tab==="adult");
-  document.getElementById("tab-child").classList.toggle("active", tab==="child");
-  document.getElementById("results").style.display = "none";
-}
-
-// ── SWITCH UNIT ───────────────────────────────────────────────────
-function switchUnit(unit) {
-  currentUnit = unit;
-  document.getElementById("unit-metric").classList.toggle("active", unit==="metric");
-  document.getElementById("unit-imperial").classList.toggle("active", unit==="imperial");
-
-  const wU = unit==="metric" ? "kg" : "lbs";
-  const hU = unit==="metric" ? "cm" : "inches";
-  const waistU = unit==="metric" ? "cm" : "inches";
-
-  ["a-weight-unit","c-weight-unit"].forEach(id => { const el=document.getElementById(id); if(el) el.textContent=wU; });
-  ["a-height-unit","c-height-unit"].forEach(id => { const el=document.getElementById(id); if(el) el.textContent=hU; });
-  const wu = document.getElementById("a-waist-unit"); if(wu) wu.textContent=waistU;
-
-  const placeholders = unit==="metric"
-    ? {aw:"70",ah:"170",cw:"25",ch:"120",waist:"88"}
-    : {aw:"154",ah:"67",cw:"55",ch:"47",waist:"35"};
-  document.getElementById("a-weight").placeholder = placeholders.aw;
-  document.getElementById("a-height").placeholder = placeholders.ah;
-  document.getElementById("c-weight").placeholder = placeholders.cw;
-  document.getElementById("c-height").placeholder = placeholders.ch;
-  document.getElementById("a-waist").placeholder  = placeholders.waist;
-}
-
-// ── CALCULATE ─────────────────────────────────────────────────────
-function calculate() {
-  let weightKg, heightCm, waistCm=null, gender, ageYears=null;
-
-  if (currentTab === "adult") {
-    const w = parseFloat(document.getElementById("a-weight").value);
-    const h = parseFloat(document.getElementById("a-height").value);
-    const waistRaw = parseFloat(document.getElementById("a-waist").value);
-    gender = document.getElementById("a-gender").value;
-
-    if (!w || !h || w<=0 || h<=0) { alert("Please enter valid weight and height."); return; }
-
-    weightKg = currentUnit==="metric" ? w : w * 0.453592;
-    heightCm = currentUnit==="metric" ? h : h * 2.54;
-    if (!isNaN(waistRaw) && waistRaw > 0) {
-      waistCm = currentUnit==="metric" ? waistRaw : waistRaw * 2.54;
-    }
-  } else {
-    const w = parseFloat(document.getElementById("c-weight").value);
-    const h = parseFloat(document.getElementById("c-height").value);
-    ageYears = parseInt(document.getElementById("c-age").value);
-    gender   = document.getElementById("c-gender").value;
-
-    if (!w || !h || w<=0 || h<=0) { alert("Please enter valid weight and height."); return; }
-    if (!ageYears || ageYears < 2 || ageYears > 17) { alert("Please enter age between 2 and 17 years."); return; }
-
-    weightKg = currentUnit==="metric" ? w : w * 0.453592;
-    heightCm = currentUnit==="metric" ? h : h * 2.54;
-  }
-
-  const heightM = heightCm / 100;
-  const bmi = Math.round((weightKg / (heightM * heightM)) * 10) / 10;
-
-  const indianCat = getIndianCat(bmi);
-  const whoCat    = getWhoCat(bmi);
-
-  // Ideal weight (Indian normal: 18.5–22.9)
-  const idealLow  = Math.round(18.5 * heightM * heightM * 10) / 10;
-  const idealHigh = Math.round(22.9 * heightM * heightM * 10) / 10;
-  const weightDiff = bmi < 18.5
-    ? Math.round((idealLow - weightKg) * 10) / 10
-    : bmi >= 23
-      ? Math.round((weightKg - idealHigh) * 10) / 10
-      : 0;
-
-  renderResults(bmi, indianCat, whoCat, weightKg, heightCm, heightM,
-                idealLow, idealHigh, weightDiff, waistCm, gender,
-                ageYears, currentUnit);
-}
-
-// ── RENDER ────────────────────────────────────────────────────────
-function renderResults(bmi, indianCat, whoCat, weightKg, heightCm, heightM,
-                       idealLow, idealHigh, weightDiff, waistCm, gender,
-                       ageYears, unit) {
-
-  // BMI Hero
-  const hero = document.getElementById("bmi-hero");
-  hero.style.background = indianCat.bg;
-  hero.style.borderColor = indianCat.border;
-  document.getElementById("bmi-number").style.color   = indianCat.color;
-  document.getElementById("bmi-number").textContent   = bmi.toFixed(1);
-  document.getElementById("bmi-category").style.color = indianCat.color;
-  document.getElementById("bmi-category").textContent = indianCat.label + " (Indian Guidelines)";
-
-  // Scale bar
-  const scaleColors = ["#4299e1","#48bb78","#ed8936","#e53e3e","#9b2c2c"];
-  const scaleMins   = [10, 18.5, 23, 25, 30];
-  const scaleMaxs   = [18.5, 23, 25, 30, 40];
-  const scaleBar    = document.getElementById("scale-bar");
-  scaleBar.innerHTML = "";
-
-  const totalRange = 40 - 10;
-  scaleMins.forEach((min, i) => {
-    const seg = document.createElement("div");
-    seg.className = "scale-segment";
-    seg.style.background = scaleColors[i];
-    seg.style.flex = ((scaleMaxs[i] - min) / totalRange).toString();
-    scaleBar.appendChild(seg);
-  });
-
-  // Marker position
-  const clampedBmi = Math.min(Math.max(bmi, 10), 40);
-  const markerPct  = ((clampedBmi - 10) / totalRange) * 100;
-  const marker = document.createElement("div");
-  marker.className = "scale-marker";
-  marker.setAttribute("data-val", bmi.toFixed(1));
-  marker.style.left = markerPct + "%";
-  scaleBar.style.position = "relative";
-  scaleBar.appendChild(marker);
-
-  document.getElementById("scale-ticks").innerHTML =
-    `<span>10</span><span>18.5</span><span>23</span><span>25</span><span>30</span><span>40+</span>`;
-
-  // Comparison table
-  const compRows = document.getElementById("comparison-rows");
-
-  const inBadgeStyle = `background:${indianCat.bg};color:${indianCat.color};border:1px solid ${indianCat.border}`;
-  const wBadgeStyle  = `background:#f7fafc;color:#4a5568;border:1px solid #e2e8f0`;
-
-  compRows.innerHTML = `
-    <div class="comparison-row">
-      <div class="comp-label">Your BMI</div>
-      <div class="comp-values">
-        <div class="comp-val">
-          <div class="comp-val-number" style="color:${indianCat.color}">${bmi.toFixed(1)}</div>
-          <div class="comp-val-label">kg/m²</div>
-        </div>
-      </div>
+  <div class="disclaimer">
+      ⚠️ <strong>Clinical Disclaimer:</strong> The Child-Pugh score is a tool for predicting prognosis in cirrhosis. Always use clinical judgment alongside scores.
     </div>
-    <div class="comparison-row">
-      <div class="comp-label">Classification</div>
-      <div class="comp-values">
-        <div class="comp-val">
-          <div class="comp-badge" style="${inBadgeStyle}">${indianCat.label}</div>
-          <div class="comp-val-label">Indian guideline</div>
-        </div>
-        <div class="comp-val">
-          <div class="comp-badge" style="${wBadgeStyle}">${whoCat.label}</div>
-          <div class="comp-val-label">WHO guideline</div>
-        </div>
-      </div>
-    </div>
-    <div class="comparison-row">
-      <div class="comp-label">Normal range</div>
-      <div class="comp-values">
-        <div class="comp-val">
-          <div class="comp-val-number" style="color:#38a169">18.5–22.9</div>
-          <div class="comp-val-label">Indian</div>
-        </div>
-        <div class="comp-val">
-          <div class="comp-val-number" style="color:#4a5568">18.5–24.9</div>
-          <div class="comp-val-label">WHO</div>
-        </div>
-      </div>
-    </div>`;
+  
+<section class="info-section" id="about-child-pugh">
+  <h2>About Child-Pugh Score for Liver Cirrhosis</h2>
+  <p>The <strong>Child-Pugh score</strong> (also Child-Turcotte-Pugh or CTP score) is a validated clinical scoring system used to assess the severity of liver cirrhosis and estimate prognosis. It scores five parameters — serum bilirubin, serum albumin, prothrombin time (or INR), degree of ascites, and grade of hepatic encephalopathy — each on a scale of 1–3, giving a total score of 5–15. <strong>Class A (5–6)</strong>: well-compensated cirrhosis, 1-year survival ~100%, 2-year ~85%. <strong>Class B (7–9)</strong>: significant functional compromise, 1-year survival ~81%, 2-year ~57%. <strong>Class C (10–15)</strong>: decompensated cirrhosis, 1-year survival ~45%, 2-year ~35%.</p>
+  <p>Child-Pugh class is widely used in India and internationally for surgical risk stratification. Patients with Class A tolerate major hepatic surgery (including resection) reasonably well. Class B patients have significantly elevated operative mortality and require careful risk-benefit analysis. Class C patients are generally considered too high-risk for elective surgery and should be evaluated for <strong>liver transplantation</strong>. Child-Pugh class also guides dosing of hepatically-metabolised drugs and determines eligibility for certain interventions such as TIPS (transjugular intrahepatic portosystemic shunt).</p>
+  <p>While the <strong>MELD score</strong> (Model for End-Stage Liver Disease) has largely replaced Child-Pugh for liver transplant waitlist prioritisation globally, Child-Pugh remains clinically relevant for day-to-day prognostication, surgical planning, and drug dosing decisions. In Indian hepatology practice, both scores are routinely used together. Child-Pugh is simpler to calculate at the bedside and does not require creatinine, making it practical in resource-limited settings.</p>
+</section>
+</main>
 
-  // Detail cards
-  const fmtWeight = w => unit==="metric"
-    ? `${w.toFixed(1)} kg`
-    : `${(w / 0.453592).toFixed(1)} lbs`;
+  <footer>
+    <p>© 2026 The Zero Whisper - Medical Calculators</p>
+  </footer>
 
-  let weightAdvice = "";
-  if (bmi < 18.5)      weightAdvice = `Gain <strong>${fmtWeight(idealLow - weightKg)}</strong> to reach normal`;
-  else if (bmi >= 23)  weightAdvice = `Lose <strong>${fmtWeight(weightKg - idealHigh)}</strong> to reach normal`;
-  else                 weightAdvice = "You are within the Indian normal range";
+  <script>
+    const faqs = [
+      { q: "What is the Child-Pugh score?", a: "The Child-Pugh score is a system used to assess the prognosis of chronic liver disease, mainly cirrhosis. It scores five factors from 1-3 points to determine a total class." },
+      { q: "How is the score interpreted?", a: "Score 5-6 is Class A (least severe), 7-9 is Class B (moderate), and 10-15 is Class C (most severe), indicating the need for transplant consideration." },
+      { q: "What is the difference between Child-Pugh and MELD?", a: "Child-Pugh includes clinical findings like ascites and encephalopathy. MELD is entirely lab-based and is used to prioritize patients for liver transplant." }
+    ];
 
-  document.getElementById("detail-grid").innerHTML = `
-    <div class="detail-card">
-      <div class="detail-card-label">Ideal Weight Range</div>
-      <div class="detail-card-value">${fmtWeight(idealLow)} – ${fmtWeight(idealHigh)}</div>
-      <div class="detail-card-sub">For BMI 18.5–22.9 (Indian normal) at your height</div>
-    </div>
-    <div class="detail-card">
-      <div class="detail-card-label">Weight to Reach Normal</div>
-      <div class="detail-card-value" style="font-size:0.95rem">${weightAdvice.replace(/<[^>]*>/g,"")}</div>
-      <div class="detail-card-sub">Based on Indian cutoffs</div>
-    </div>
-    <div class="detail-card">
-      <div class="detail-card-label">Your Weight</div>
-      <div class="detail-card-value">${fmtWeight(weightKg)}</div>
-      <div class="detail-card-sub">Entered value</div>
-    </div>
-    <div class="detail-card">
-      <div class="detail-card-label">Your Height</div>
-      <div class="detail-card-value">${unit==="metric" ? heightCm.toFixed(0)+" cm" : (heightCm/2.54).toFixed(1)+" in"}</div>
-      <div class="detail-card-sub">Entered value</div>
-    </div>`;
-
-  // Waist circumference
-  if (waistCm && waistCm > 0) {
-    const maleLimit   = 90;
-    const femaleLimit = 80;
-    const limit = gender==="male" ? maleLimit : femaleLimit;
-    const waistHigh = waistCm >= limit;
-    const waistDispCm = unit==="metric" ? `${waistCm.toFixed(1)} cm` : `${(waistCm/2.54).toFixed(1)} in`;
-    const limitDisp   = unit==="metric" ? `${limit} cm` : `${(limit/2.54).toFixed(1)} in`;
-
-    document.getElementById("waist-section").style.display = "block";
-    const wr = document.getElementById("waist-result");
-    if (waistHigh) {
-      wr.style.cssText = "background:#fff5f5;border-color:#fed7d7;";
-      wr.innerHTML = `<div class="waist-icon">⚠️</div>
-        <div>
-          <div class="waist-label" style="color:#c53030">Abdominal Obesity — High Risk</div>
-          <div class="waist-sub" style="color:#9b2c2c">Your waist ${waistDispCm} exceeds the Indian limit of ${limitDisp} for ${gender}s. This indicates increased risk of diabetes and cardiovascular disease independent of BMI.</div>
+    const faqList = document.getElementById('faq-list');
+    faqs.forEach((f, i) => {
+      faqList.innerHTML += `
+        <div class="faq-item" onclick="toggleFaq(${i})">
+          <button class="faq-q"><span>${f.q}</span><span class="faq-icon">+</span></button>
+          <div class="faq-a">${f.a}</div>
         </div>`;
-    } else {
-      wr.style.cssText = "background:#f0fff4;border-color:#9ae6b4;";
-      wr.innerHTML = `<div class="waist-icon">✅</div>
-        <div>
-          <div class="waist-label" style="color:#276749">Normal Waist — Low Abdominal Risk</div>
-          <div class="waist-sub" style="color:#2f855a">Your waist ${waistDispCm} is within the safe Indian limit of ${limitDisp} for ${gender}s.</div>
-        </div>`;
+    });
+
+    function toggleFaq(i) {
+      document.querySelectorAll('.faq-item')[i].classList.toggle('open');
     }
-  } else {
-    document.getElementById("waist-section").style.display = "none";
-  }
 
-  // Risk meter
-  let riskLevel = indianCat.risk;
-  if (waistCm && waistCm >= (gender==="male" ? 90 : 80)) riskLevel = Math.min(riskLevel + 1, 4);
+    function calculate() {
+      const b = parseInt(document.getElementById('bilirubin').value);
+      const a = parseInt(document.getElementById('albumin').value);
+      const i = parseInt(document.getElementById('inr').value);
+      const as = parseInt(document.getElementById('ascites').value);
+      const e = parseInt(document.getElementById('encephalopathy').value);
 
-  const riskBar = document.getElementById("risk-bar");
-  riskBar.innerHTML = "";
-  for (let i = 0; i < 5; i++) {
-    const seg = document.createElement("div");
-    seg.className = "risk-segment";
-    seg.style.background = i <= riskLevel ? RISK_COLORS[i] : "#e2e8f0";
-    riskBar.appendChild(seg);
-  }
+      const score = b + a + i + as + e;
+      const panel = document.getElementById('resultPanel');
+      const badge = document.getElementById('classBadge');
+      const survival = document.getElementById('survivalText');
+      
+      panel.style.display = 'block';
+      document.getElementById('scoreValue').textContent = score;
 
-  const rc = document.getElementById("risk-current");
-  rc.style.background = RISK_BG[riskLevel];
-  rc.style.color       = RISK_COLORS[riskLevel];
-  rc.textContent       = `Overall Risk: ${RISK_LABELS[riskLevel]}`;
-
-  // Note
-  let noteText = "";
-  if (ageYears) {
-    noteText = `⚠️ For children, BMI percentile charts should be used alongside absolute BMI. This result uses adult Indian cutoffs as a reference. Consult a paediatrician for a complete assessment.`;
-  } else {
-    noteText = `⚠️ BMI is a screening tool, not a diagnostic test. Muscle mass, bone density, and fat distribution are not captured by BMI alone. Waist circumference and clinical assessment by your doctor gives a more complete picture.`;
-  }
-  document.getElementById("result-note").innerHTML = noteText;
-
-  // Build share text
-  const wDisp = unit==="metric" ? `${(weightKg).toFixed(1)} kg` : `${(weightKg/0.453592).toFixed(1)} lbs`;
-  const hDisp = unit==="metric" ? `${heightCm.toFixed(0)} cm` : `${(heightCm/2.54).toFixed(1)} in`;
-  shareText = `⚖️ BMI Result\n\nWeight: ${wDisp} · Height: ${hDisp}\nBMI: ${bmi.toFixed(1)} kg/m²\n\nIndian classification: ${indianCat.label}\nWHO classification: ${whoCat.label}\n\nIdeal weight range: ${fmtWeight(idealLow)} – ${fmtWeight(idealHigh)}\n${weightAdvice.replace(/<[^>]*>/g,"")}\nOverall risk: ${RISK_LABELS[riskLevel]}\n\nCalculated at: ${window.location.href}`;
-
-  document.getElementById("results").style.display = "block";
-   trackCalc('bmi', { bmi: bmiValue, category: category })
-  document.getElementById("results").scrollIntoView({ behavior:"smooth", block:"nearest" });
-}
-
-// ── SHARE ─────────────────────────────────────────────────────────
-function shareWhatsApp() {
-  if (!shareText) return;
-  try{uTrack('share_whatsapp',{tool:'bmi'});}catch(e){} window.open('https://wa.me/?text="+encodeURIComponent(shareText), "_blank", "noopener");
-}
-function copyResult() {
-  if (!shareText) return;
-  navigator.clipboard.writeText(shareText);
-  const el = document.getElementById("copy-confirm");
-  el.textContent = "✓ Copied!";
-  setTimeout(()=>el.textContent="", 2500);
-}
-function saveImage() {
-  if (!shareText) { alert("Please calculate BMI first."); return; }
-  const btn = event.target.closest("button"), orig = btn.innerHTML;
-  btn.textContent = "Saving..."; btn.disabled = true;
-  html2canvas(document.getElementById("results"),{backgroundColor:"#ffffff",scale:2,useCORS:true}).then(canvas=>{
-    const a = document.createElement("a");
-    a.download = "bmi-result-india.png";
-    a.href = canvas.toDataURL("image/png");
-    a.click();
-    btn.innerHTML = orig; btn.disabled = false;
-  });
-}
-</script>
+      if (score <= 6) {
+        badge.textContent = "Class A (Well Compensated)";
+        badge.style.backgroundColor = "var(--class-a)";
+        survival.innerHTML = "1-year survival: 100%<br>2-year survival: 85%";
+      } else if (score <= 9) {
+        badge.textContent = "Class B (Significant Functional Impairment)";
+        badge.style.backgroundColor = "var(--class-b)";
+        badge.style.color = "#000";
+        survival.innerHTML = "1-year survival: 80%<br>2-year survival: 60%";
+      } else {
+        badge.textContent = "Class C (Decompensated)";
+        badge.style.backgroundColor = "var(--class-c)";
+        badge.style.color = "#fff";
+        survival.innerHTML = "1-year survival: 45%<br>2-year survival: 35%";
+      }
+    }
+    window.onload = calculate;
+  </script>
   <script src="/shared-nav.js"></script>
 </body>
 </html>
