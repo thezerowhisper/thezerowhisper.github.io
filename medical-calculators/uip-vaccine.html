@@ -7,26 +7,14 @@
 <meta name="google-site-verification" content="nZgsChD0zRn_BmL5Yw4MLcuRGkkhdkSTp9WAJPmudyM"/>
 <meta name="author" content="Medical Professional"/>
 <title>UIP Vaccination Schedule & Catch-Up Guidelines India</title>
-<meta name="description" content="Free UIP vaccine scheduler: Get catch-up schedules, minimum intervals, and IAP-approved guidelines for missed doses (BCG, pentavalent, rotavirus, PCV). Birth to 16 years."/>
+<meta name="description" content="Free UIP vaccine scheduler: Get catch-up schedules, minimum intervals, and IAP-approved guidelines for missed doses (BCG, pentavalent, rotavirus, PCV)."/>
 <meta name="keywords" content="UIP vaccine catch-up schedule India, missed doses vaccination India, india uip catch-up vaccination schedule, catch up vaccination schedule india uip, UIP vaccine tracker India, IAP 2024 vaccine schedule, BCG catch-up age India, rotavirus catch-up schedule India, DPT booster schedule India UIP, universal immunisation programme India, baby vaccine schedule India, immunization chart India, vaccination schedule India PDF, child immunisation India"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/uip-vaccine"/>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b">
-function shareUIPWhatsApp() {
-  var dob = document.getElementById('dob') ? document.getElementById('dob').value : '';
-  var sd = document.getElementById('sd') ? document.getElementById('sd').textContent : '?';
-  var rEl=document.querySelector('.sn.r'); var bEl=document.querySelector('.sn.b');
-  var over=rEl?rEl.textContent:'0'; var up=bEl?bEl.textContent:'0';
-  var lines = ['UIP Vaccine Schedule - India',''];
-  if (dob) lines.push('Date of Birth: '+dob);
-  lines.push('Doses given: '+sd,'Overdue: '+over,'Upcoming: '+up);
-  lines.push('','Complete all missed doses as per IAP 2024 catch-up schedule.');
-  lines.push('https://thezerowhisper.github.io/medical-calculators/uip-vaccine');
-  try{uTrack('share_whatsapp',{tool:'uip-vaccine'});}catch(e){}
-  window.open('https://wa.me/?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
-}
-</script>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 <script src="assets/umami-events.js"></script>
+
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="en_IN"/>
 <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/uip-vaccine"/>
@@ -36,9 +24,10 @@ function shareUIPWhatsApp() {
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="675"/>
 <meta property="og:image:alt" content="UIP vaccine catch-up schedule tracker India - birth to 16 years, IAP 2024 guidelines, free tool built by a doctor"/>
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="UIP Vaccination Schedule & Catch-Up Guidelines India"/>
-<meta name="twitter:description" content="Free UIP vaccine scheduler: Get catch-up schedules, minimum intervals, and IAP-approved guidelines for missed doses (BCG, pentavalent, rotavirus, PCV)."/>
+<meta name="twitter:description" content="Free UIP vaccine scheduler: Get catch-up schedules, minimum intervals, and IAP-approved guidelines for missed doses."/>
 <meta name="twitter:image" content="https://thezerowhisper.github.io/medical-calculators/assets/og-uip-vaccine.png"/>
 <meta name="twitter:image:alt" content="UIP vaccine catch-up schedule tracker India - birth to 16 years, IAP 2024"/>
 
@@ -228,8 +217,8 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
     <div><label for="dob">Child&#39;s Date of Birth</label><input type="date" id="dob" max=""/></div>
     <button class="btn-g" onclick="calc()">Generate Schedule</button>
     <button class="btn-s" onclick="clearAll()">Clear</button>
-    <button class="btn-p" onclick="trackPrint('uip-vaccine'); window.print()">&#128424; Print / PDF</button>
-    <button class="btn-p" style="background:#25D366;border-color:#25D366" onclick="shareUIPWhatsApp()">&#128242; Share via WhatsApp</button>
+    <button class="btn-p" onclick="try{trackPrint('uip-vaccine');}catch(e){}; window.print()">&#128424; Print / PDF</button>
+    <button class="btn-p" style="background:#25D366;border-color:#25D366;color:white" onclick="shareUIPWhatsApp()">&#128242; Share via WhatsApp</button>
   </div>
   <p style="font-size:.76rem;color:#718096;margin-top:8px">&#10003; Records saved on your device only &mdash; no data sent to any server</p>
 </div>
@@ -503,18 +492,45 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
   </div>
   <div class="fb">Free medical calculators for India &middot; Built by a doctor &middot; IAP 2024 &amp; UIP guidelines &middot; India<br><span style="margin-top:4px;display:block">For informational purposes only &middot; Always consult your physician</span></div>
 </footer>
+
   <section class="card">
-    <div class="card-title">Related Tools</div>
-    <div class="related-grid">
-      <a href="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" class="related-card" ><div class="rc-name">ARV Dose Calculator</div><div class="rc-desc">Anti-rabies vaccine</div></a>
-      <a href="https://thezerowhisper.github.io/rabies-scheduler/" class="related-card" ><div class="rc-name">📅 ARV Date Scheduler</div><div class="rc-desc">Rabies PEP dates</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/milestones" class="related-card" ><div class="rc-name">Milestones Checker</div><div class="rc-desc">Child development</div></a>
-      <a href="https://thezerowhisper.github.io/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
+    <h2 class="card-h2">Related Tools</h2>
+    <div class="related-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px">
+      <a href="https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator" style="background:#f7fafc;padding:12px;border-radius:10px;text-decoration:none;color:inherit;border:1px solid #e2e8f0;transition:all 0.2s" onmouseover="this.style.borderColor='#3182ce'" onmouseout="this.style.borderColor='#e2e8f0'">
+        <div style="font-weight:700;font-size:0.9rem;color:#2b6cb0;margin-bottom:4px">ARV Dose Calculator</div>
+        <div style="font-size:0.75rem;color:#718096">Anti-rabies vaccine</div>
+      </a>
+      <a href="https://thezerowhisper.github.io/rabies-scheduler/" style="background:#f7fafc;padding:12px;border-radius:10px;text-decoration:none;color:inherit;border:1px solid #e2e8f0;transition:all 0.2s" onmouseover="this.style.borderColor='#3182ce'" onmouseout="this.style.borderColor='#e2e8f0'">
+        <div style="font-weight:700;font-size:0.9rem;color:#2b6cb0;margin-bottom:4px">📅 ARV Date Scheduler</div>
+        <div style="font-size:0.75rem;color:#718096">Rabies PEP dates</div>
+      </a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/milestones" style="background:#f7fafc;padding:12px;border-radius:10px;text-decoration:none;color:inherit;border:1px solid #e2e8f0;transition:all 0.2s" onmouseover="this.style.borderColor='#3182ce'" onmouseout="this.style.borderColor='#e2e8f0'">
+        <div style="font-weight:700;font-size:0.9rem;color:#2b6cb0;margin-bottom:4px">Milestones Checker</div>
+        <div style="font-size:0.75rem;color:#718096">Child development</div>
+      </a>
+      <a href="https://thezerowhisper.github.io/medical-calculators/" style="background:#f7fafc;padding:12px;border-radius:10px;text-decoration:none;color:inherit;border:1px solid #e2e8f0;transition:all 0.2s" onmouseover="this.style.borderColor='#3182ce'" onmouseout="this.style.borderColor='#e2e8f0'">
+        <div style="font-weight:700;font-size:0.9rem;color:#2b6cb0;margin-bottom:4px">All Calculators →</div>
+        <div style="font-size:0.75rem;color:#718096">20+ clinical tools</div>
+      </a>
     </div>
   </section>
   </main>
 
 <script>
+function shareUIPWhatsApp() {
+  var dob = document.getElementById('dob') ? document.getElementById('dob').value : '';
+  var sd = document.getElementById('sd') ? document.getElementById('sd').textContent : '?';
+  var rEl=document.querySelector('.sn.r'); var bEl=document.querySelector('.sn.b');
+  var over=rEl?rEl.textContent:'0'; var up=bEl?bEl.textContent:'0';
+  var lines = ['UIP Vaccine Schedule - India',''];
+  if (dob) lines.push('Date of Birth: '+dob);
+  lines.push('Doses given: '+sd,'Overdue: '+over,'Upcoming: '+up);
+  lines.push('','Complete all missed doses as per IAP 2024 catch-up schedule.');
+  lines.push('https://thezerowhisper.github.io/medical-calculators/uip-vaccine');
+  try{uTrack('share_whatsapp',{tool:'uip-vaccine'});}catch(e){}
+  window.open('https://wa.me/?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+}
+
 const VS=[
   {g:"At Birth",n:"BCG",d:0,a:"bcg-d"},
   {g:"At Birth",n:"OPV-0 (birth dose)",d:0,a:"birth-d"},
@@ -588,7 +604,7 @@ function render(dob,today){
   document.getElementById("so").textContent=ov;
   document.getElementById("su").textContent=up;
   document.getElementById("stats").style.display="grid";
-  trackCalc('uip-vaccine', { done: dn, overdue: ov, upcoming: up });
+  try { trackCalc('uip-vaccine', { done: dn, overdue: ov, upcoming: up }); } catch (e) {}
 }
 function tv(n){sr(n,!gr()[n]);const v=document.getElementById("dob").value;if(v)calc();}
 function tf(el){el.closest(".fi").classList.toggle("open");}
