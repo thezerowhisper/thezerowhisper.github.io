@@ -1,157 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Medical Calculators India | Free Clinical Tools for Doctors</title>
-
-<meta name="description" content="Free medical calculators for Indian doctors. CURB-65, NEWS2, GCS, eGFR, ARV dose, BMI, drug dosing, pediatric and obstetric tools. Built by a doctor. No login.">
-
-<link rel="canonical" href="https://thezerowhisper.github.io/">
-
-<!-- SEO -->
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Free Medical Calculators for India">
-<meta property="og:description" content="26+ clinical tools for doctors and patients — ARV, CURB-65, NEWS2, BMI, eGFR and more.">
-<meta property="og:url" content="https://thezerowhisper.github.io/">
-<meta property="og:type" content="website">
-
-<!-- AdSense (add your ID later) -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9687081664589626"
-crossorigin="anonymous"></script>
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MedCalc India | Free Clinical Calculators for Indian Doctors</title>
+<meta name="description" content="Free medical calculators for Indian doctors. CURB-65, NEWS2, GCS, eGFR, ARV dose, BMI, drug dosing, pediatric and obstetric tools. Built by a doctor. No login."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://thezerowhisper.github.io/"/>
+<meta property="og:title" content="MedCalc India — Free Clinical Calculators for Indian Doctors"/>
+<meta property="og:description" content="26+ free clinical tools for Indian doctors and patients — ARV, CURB-65, NEWS2, BMI, eGFR and more."/>
+<meta property="og:url" content="https://thezerowhisper.github.io/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://thezerowhisper.github.io/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9687081664589626" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalWebPage","name":"MedCalc India","description":"26+ free clinical calculators for Indian doctors and patients.","url":"https://thezerowhisper.github.io/","inLanguage":"en-IN","audience":{"@type":"MedicalAudience","audienceType":"Physician, Nurse, Medical Student, Patient"}}
+</script>
 <style>
-body{
-  font-family:system-ui;
-  margin:0;
-  background:#0f172a;
-  color:#fff;
-}
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:40px 20px;
-}
-.hero{
-  text-align:center;
-  padding:80px 20px;
-}
-.hero h1{
-  font-size:2.5rem;
-  margin-bottom:10px;
-}
-.hero p{
-  color:#cbd5f5;
-  font-size:1.1rem;
-}
-.cta{
-  margin-top:30px;
-}
-.cta a{
-  background:#3b82f6;
-  color:white;
-  padding:14px 24px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:40px;
-}
-.card{
-  background:#1e293b;
-  padding:20px;
-  border-radius:12px;
-  text-decoration:none;
-  color:white;
-  transition:0.2s;
-}
-.card:hover{
-  transform:translateY(-4px);
-  background:#334155;
-}
-footer{
-  text-align:center;
-  padding:30px;
-  color:#94a3b8;
-  font-size:0.9rem;
-}
+.hero-root{background:linear-gradient(135deg,#1a365d 0%,#2b6cb0 55%,#1e3a8a 100%);color:#fff;padding:72px 20px 80px;text-align:center;position:relative;overflow:hidden}
+.hero-root::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-root h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:16px;position:relative}
+.hero-root p{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,.82);max-width:580px;margin:0 auto 28px;position:relative}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-primary{background:#f59e0b;color:#1a365d;padding:14px 28px;border-radius:30px;font-weight:800;font-size:1rem;text-decoration:none;transition:all .2s}
+.btn-primary:hover{background:#fbbf24;transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.35);color:#fff;padding:13px 24px;border-radius:30px;font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s}
+.btn-ghost:hover{background:rgba(255,255,255,.25);transform:translateY(-2px)}
+.stats-bar{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin-top:36px;position:relative}
+.stat-item{text-align:center}
+.stat-item .s-num{font-size:1.8rem;font-weight:800;line-height:1}
+.stat-item .s-lbl{font-size:.75rem;color:rgba(255,255,255,.65);margin-top:4px;letter-spacing:.04em}
+.main-wrap{max-width:1100px;margin:0 auto;padding:48px 20px 60px}
+.section-head{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.spotlight{background:linear-gradient(135deg,#1a365d,#1d4ed8);color:#fff;border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px;text-decoration:none;transition:transform .2s}
+.spotlight:hover{transform:translateY(-2px)}
+.spotlight .sp-emoji{font-size:2.2rem;flex-shrink:0}
+.spotlight .sp-text{flex:1}
+.spotlight .sp-title{font-size:1.1rem;font-weight:800;margin-bottom:4px}
+.spotlight .sp-sub{font-size:.85rem;opacity:.82}
+.spotlight .sp-btn{background:#f59e0b;color:#1a365d;padding:10px 22px;border-radius:20px;font-weight:800;font-size:.88rem;flex-shrink:0;white-space:nowrap}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-bottom:32px}
+.tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-decoration:none;color:var(--text);box-shadow:var(--shadow);transition:all .2s;display:block;position:relative}
+.tool-card:hover{border-color:#bee3f8;transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.tool-card .tc-icon{font-size:1.8rem;margin-bottom:10px;display:block}
+.tool-card .tc-title{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:5px}
+.tool-card .tc-desc{font-size:.8rem;color:var(--text-muted);line-height:1.55}
+.tool-card .tc-tag{position:absolute;top:12px;right:12px;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:20px}
+.info-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:32px}
+.info-card h2{font-size:1.15rem;font-weight:800;color:var(--text);margin-bottom:14px}
+.info-card p{font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:10px}
 </style>
 </head>
-
 <body>
-
-<div class="container">
-
-<div class="hero">
-<h1>🩺 Free Medical Calculators for India</h1>
-<p>Clinically accurate tools built for doctors, nurses & patients using Indian and international guidelines.</p>
-
-<div class="cta">
-<a href="/medical-calculators/">👉 Open All Calculators</a>
-</div>
-</div>
-
-<!-- Featured Tools -->
-<div class="grid">
-
-<a class="card" href="/rabies-scheduler/">
-<h3>💉 Rabies ARV Calculator</h3>
-<p>Calculate vaccine dates (Day 0, 3, 7, 28)</p>
-</a>
-
-<a class="card" href="/medical-calculators/curb65">
-<h3>🫁 CURB-65</h3>
-<p>Pneumonia severity & admission decision</p>
-</a>
-
-<a class="card" href="/medical-calculators/news2">
-<h3>📉 NEWS2</h3>
-<p>Early warning score for deterioration</p>
-</a>
-
-<a class="card" href="/medical-calculators/bmi">
-<h3>⚖️ BMI India</h3>
-<p>Indian cutoff-based BMI calculator</p>
-</a>
-
-<a class="card" href="/medical-calculators/egfr-calculator">
-<h3>🫘 eGFR</h3>
-<p>Kidney function & CKD staging</p>
-</a>
-
-<a class="card" href="/medical-calculators/doses">
-<h3>💊 Drug Dose</h3>
-<p>Weight-based medication dosing</p>
-</a>
-
-</div>
-
-<!-- Internal SEO Text -->
-<section style="margin-top:60px; line-height:1.7; color:#cbd5f5;">
-
-<h2>About This Website</h2>
-<p>
-This platform provides free medical calculators designed for Indian clinical practice. Tools include emergency scoring systems like CURB-65, NEWS2, and GCS, along with drug dose calculators, pediatric tools, obstetric calculators, and chronic disease tools such as eGFR and HbA1c converters.
-</p>
-
-<p>
-All calculators are based on Indian guidelines (NCDC, IAP, FOGSI) and international standards (WHO, NICE, BTS). No login is required and no data is stored.
-</p>
-
+<section class="hero-root">
+  <div class="hero-badge">🇮🇳 Built for Indian Healthcare</div>
+  <h1>Free Medical Calculators<br>for India</h1>
+  <p>Clinically accurate tools built for doctors, nurses &amp; patients using NCDC, IAP, FOGSI &amp; WHO guidelines.</p>
+  <div class="hero-btns">
+    <a class="btn-primary" href="/medical-calculators/">Open All Calculators</a>
+    <a class="btn-ghost" href="/rabies-scheduler/">💉 Rabies PEP Scheduler</a>
+  </div>
+  <div class="stats-bar">
+    <div class="stat-item"><div class="s-num">26+</div><div class="s-lbl">Clinical Tools</div></div>
+    <div class="stat-item"><div class="s-num">0</div><div class="s-lbl">Login Required</div></div>
+    <div class="stat-item"><div class="s-num">0</div><div class="s-lbl">Data Stored</div></div>
+    <div class="stat-item"><div class="s-num">100%</div><div class="s-lbl">Free Forever</div></div>
+  </div>
 </section>
-
-<footer>
-Built by a doctor in India · Free tools · No login required
-</footer>
-
+<div style="max-width:1100px;margin:20px auto;padding:0 20px;">
+  <ins class="adsbygoogle" style="display:block;border-radius:10px;overflow:hidden;" data-ad-client="ca-pub-9687081664589626" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-
+<div class="main-wrap">
+  <a class="spotlight" href="/rabies-scheduler/">
+    <span class="sp-emoji">💉</span>
+    <div class="sp-text">
+      <div class="sp-title">Rabies PEP Vaccine Scheduler</div>
+      <div class="sp-sub">Calculate dose dates (Day 0, 3, 7, 28) for Essen IM regimen. WHO &amp; NCDC guidelines.</div>
+    </div>
+    <span class="sp-btn">Open Scheduler →</span>
+  </a>
+  <div class="section-head">🚨 Emergency &amp; Critical Care</div>
+  <div class="tool-grid">
+    <a class="tool-card" href="/medical-calculators/curb65"><span class="tc-icon">🫁</span><div class="tc-title">CURB-65</div><div class="tc-desc">Pneumonia severity score &amp; admission decision</div><span class="tc-tag pill-blue">Emergency</span></a>
+    <a class="tool-card" href="/medical-calculators/news2"><span class="tc-icon">📉</span><div class="tc-title">NEWS2</div><div class="tc-desc">National Early Warning Score — deterioration alert</div><span class="tc-tag pill-red">Critical</span></a>
+    <a class="tool-card" href="/medical-calculators/gcs-calculator"><span class="tc-icon">🧠</span><div class="tc-title">GCS</div><div class="tc-desc">Glasgow Coma Scale — level of consciousness</div><span class="tc-tag pill-orange">Neuro</span></a>
+    <a class="tool-card" href="/medical-calculators/burn-calculator"><span class="tc-icon">🔥</span><div class="tc-title">Burns / Parkland</div><div class="tc-desc">TBSA estimation and IV fluid resuscitation formula</div><span class="tc-tag pill-red">Emergency</span></a>
+    <a class="tool-card" href="/medical-calculators/wells-score"><span class="tc-icon">🩸</span><div class="tc-title">Wells Score</div><div class="tc-desc">DVT and PE pre-test probability</div><span class="tc-tag pill-blue">Vascular</span></a>
+    <a class="tool-card" href="/medical-calculators/anion-gap"><span class="tc-icon">⚗️</span><div class="tc-title">Anion Gap</div><div class="tc-desc">Metabolic acidosis classification</div><span class="tc-tag pill-orange">Metabolic</span></a>
+  </div>
+  <ins class="adsbygoogle" style="display:block;margin:0 0 32px;border-radius:10px;overflow:hidden;" data-ad-client="ca-pub-9687081664589626" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <div class="section-head">👶 Paediatrics &amp; Growth</div>
+  <div class="tool-grid">
+    <a class="tool-card" href="/medical-calculators/growth-chart"><span class="tc-icon">📏</span><div class="tc-title">Growth Chart</div><div class="tc-desc">WHO/IAP LMS-based z-score &amp; percentile (IAP 2015)</div><span class="tc-tag pill-green">IAP</span></a>
+    <a class="tool-card" href="/medical-calculators/milestones"><span class="tc-icon">🧩</span><div class="tc-title">Milestones</div><div class="tc-desc">Developmental milestone tracker by age domain</div><span class="tc-tag pill-green">Paeds</span></a>
+    <a class="tool-card" href="/medical-calculators/neonatal-jaundice"><span class="tc-icon">👶</span><div class="tc-title">Neonatal Jaundice</div><div class="tc-desc">Phototherapy threshold calculator (AAP / Bhutani)</div><span class="tc-tag pill-orange">Neonatal</span></a>
+    <a class="tool-card" href="/medical-calculators/pediatric-asthma"><span class="tc-icon">🌬️</span><div class="tc-title">Paediatric Asthma</div><div class="tc-desc">Action plan &amp; severity classification (GINA/IAP)</div><span class="tc-tag pill-blue">Respiratory</span></a>
+    <a class="tool-card" href="/medical-calculators/uip-vaccine"><span class="tc-icon">💉</span><div class="tc-title">UIP Vaccine Schedule</div><div class="tc-desc">India's Universal Immunisation Programme tracker</div><span class="tc-tag pill-green">NHP</span></a>
+    <a class="tool-card" href="/medical-calculators/paracetamol"><span class="tc-icon">💊</span><div class="tc-title">Paracetamol Dose</div><div class="tc-desc">Weight-based paracetamol dosing for children</div><span class="tc-tag pill-orange">Dosing</span></a>
+  </div>
+  <div class="section-head">🫘 Metabolic &amp; Organ Function</div>
+  <div class="tool-grid">
+    <a class="tool-card" href="/medical-calculators/egfr-calculator"><span class="tc-icon">🫘</span><div class="tc-title">eGFR</div><div class="tc-desc">CKD-EPI 2021, MDRD &amp; Cockcroft-Gault. CKD staging.</div><span class="tc-tag pill-blue">Renal</span></a>
+    <a class="tool-card" href="/medical-calculators/hba1c-converter"><span class="tc-icon">🩸</span><div class="tc-title">HbA1c Converter</div><div class="tc-desc">IFCC ↔ NGSP ↔ estimated average glucose</div><span class="tc-tag pill-orange">Diabetes</span></a>
+    <a class="tool-card" href="/medical-calculators/child-pugh"><span class="tc-icon">🫀</span><div class="tc-title">Child-Pugh Score</div><div class="tc-desc">Liver cirrhosis severity and prognosis</div><span class="tc-tag pill-blue">Hepatic</span></a>
+    <a class="tool-card" href="/medical-calculators/corrected-calcium"><span class="tc-icon">⚗️</span><div class="tc-title">Corrected Calcium</div><div class="tc-desc">Albumin-adjusted serum calcium</div><span class="tc-tag pill-orange">Metabolic</span></a>
+    <a class="tool-card" href="/medical-calculators/bmi"><span class="tc-icon">⚖️</span><div class="tc-title">BMI India</div><div class="tc-desc">Indian-specific BMI cutoffs (WHO Asia-Pacific)</div><span class="tc-tag pill-green">General</span></a>
+    <a class="tool-card" href="/medical-calculators/mentzer-index-calculator"><span class="tc-icon">🔬</span><div class="tc-title">Mentzer Index</div><div class="tc-desc">Beta-thalassaemia vs iron deficiency anaemia</div><span class="tc-tag pill-red">Haem</span></a>
+  </div>
+  <div class="section-head">🤰 Obstetrics</div>
+  <div class="tool-grid">
+    <a class="tool-card" href="/medical-calculators/obs-calc"><span class="tc-icon">🤰</span><div class="tc-title">ObsCalc Suite</div><div class="tc-desc">Comprehensive obstetric calculator — EDD, GA, Bishop, more</div><span class="tc-tag pill-blue">FOGSI</span></a>
+    <a class="tool-card" href="/medical-calculators/due-date"><span class="tc-icon">📅</span><div class="tc-title">Due Date Calculator</div><div class="tc-desc">EDD from LMP or conception date. Trimester breakdown.</div><span class="tc-tag pill-green">Obs</span></a>
+  </div>
+  <div class="section-head">🦠 Infectious Disease &amp; Occupational Health</div>
+  <div class="tool-grid">
+    <a class="tool-card" href="/rabies-scheduler/"><span class="tc-icon">🐕</span><div class="tc-title">Rabies PEP Scheduler</div><div class="tc-desc">Full Essen IM regimen dates + RIG dose (NCDC/WHO)</div><span class="tc-tag pill-red">NCDC</span></a>
+    <a class="tool-card" href="/medical-calculators/arv-dose-calculator"><span class="tc-icon">💉</span><div class="tc-title">ARV Dose Calculator</div><div class="tc-desc">Anti-rabies vaccine &amp; RIG dose by weight, wound category</div><span class="tc-tag pill-orange">NCDC</span></a>
+    <a class="tool-card" href="/medical-calculators/spirometry"><span class="tc-icon">🌬️</span><div class="tc-title">Spirometry India</div><div class="tc-desc">Predicted FEV1/FVC using Jindal Indian reference equations</div><span class="tc-tag pill-blue">Occ. Health</span></a>
+    <a class="tool-card" href="/medical-calculators/biomedical-waste"><span class="tc-icon">♻️</span><div class="tc-title">Biomedical Waste Guide</div><div class="tc-desc">BMW Rules 2016 — colour-coded segregation guide</div><span class="tc-tag pill-green">BMW 2016</span></a>
+    <a class="tool-card" href="/medical-calculators/ors"><span class="tc-icon">💧</span><div class="tc-title">ORS Rehydration</div><div class="tc-desc">Volume and rate of ORS for dehydration</div><span class="tc-tag pill-blue">General</span></a>
+    <a class="tool-card" href="/medical-calculators/doses"><span class="tc-icon">💊</span><div class="tc-title">Drug Dose Calculator</div><div class="tc-desc">Weight-based dosing for common medications</div><span class="tc-tag pill-orange">Pharmacology</span></a>
+  </div>
+  <ins class="adsbygoogle" style="display:block;margin:0 0 32px;border-radius:10px;overflow:hidden;" data-ad-client="ca-pub-9687081664589626" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <div class="info-card">
+    <h2>About This Website</h2>
+    <p>MedCalc India provides free clinical calculators designed for Indian clinical practice. Tools cover emergency scoring (CURB-65, NEWS2, GCS), drug dosing, paediatric tools, obstetric calculators, and chronic disease tools like eGFR and HbA1c converters.</p>
+    <p>All calculators follow Indian guidelines (NCDC, IAP, FOGSI) and international standards (WHO, NICE, BTS). No login is required and no patient data is ever stored or transmitted.</p>
+    <p style="margin-bottom:0;"><a href="/about" style="color:var(--primary-light);font-weight:700;">Learn more about the project →</a></p>
+  </div>
+</div>
+<script src="/shared-nav.js"></script>
 </body>
 </html>

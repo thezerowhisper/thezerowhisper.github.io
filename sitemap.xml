@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
-  <url>
-    <loc>https://thezerowhisper.github.io/</loc>
-    <priority>1.0</priority>
-  </url>
+  <!-- Root pages -->
+  <url><loc>https://thezerowhisper.github.io/</loc><priority>1.0</priority></url>
+  <url><loc>https://thezerowhisper.github.io/about</loc><priority>0.7</priority></url>
+  <url><loc>https://thezerowhisper.github.io/privacy</loc><priority>0.5</priority></url>
+  <url><loc>https://thezerowhisper.github.io/contact</loc><priority>0.6</priority></url>
 
-  <!-- Main Hub -->
-  <url>
-    <loc>https://thezerowhisper.github.io/medical-calculators/</loc>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- Featured -->
-  <url>
-    <loc>https://thezerowhisper.github.io/rabies-scheduler/</loc>
-    <priority>0.95</priority>
-  </url>
+  <!-- Main hubs -->
+  <url><loc>https://thezerowhisper.github.io/medical-calculators/</loc><priority>0.95</priority></url>
+  <url><loc>https://thezerowhisper.github.io/rabies-scheduler/</loc><priority>0.95</priority></url>
 
   <!-- Emergency -->
   <url><loc>https://thezerowhisper.github.io/medical-calculators/curb65</loc></url>
@@ -46,7 +38,7 @@
   <url><loc>https://thezerowhisper.github.io/medical-calculators/corrected-calcium</loc></url>
   <url><loc>https://thezerowhisper.github.io/medical-calculators/child-pugh</loc></url>
 
-  <!-- Obs -->
+  <!-- Obstetrics -->
   <url><loc>https://thezerowhisper.github.io/medical-calculators/obs-calc</loc></url>
   <url><loc>https://thezerowhisper.github.io/medical-calculators/due-date</loc></url>
 
