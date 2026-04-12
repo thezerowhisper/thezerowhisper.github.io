@@ -1,15 +1,29 @@
-/* shared-nav.js — injects site header + footer into every page */
+/* shared-nav.js — injects AdSense loader, site header, and footer into every page */
 (function () {
-  const BASE = 'https://thezerowhisper.github.io';
   const path = location.pathname;
 
-  /* ── Determine active nav link ── */
+  /* ══ 1. INJECT ADSENSE LOADER ══════════════════════════════
+     Dynamically adds the AdSense script to <head> on every page.
+     You never need to add it manually to individual pages again.
+     Just keep your <ins> ad slot tags wherever you want ads.       */
+  (function injectAdSense() {
+    const PUBLISHER_ID = 'ca-pub-9687081664589626';
+    // Don't inject twice if already present
+    if (document.querySelector('script[src*="adsbygoogle"]')) return;
+    const s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + PUBLISHER_ID;
+    document.head.appendChild(s);
+  })();
+
+  /* ══ 2. DETERMINE ACTIVE NAV LINK ═════════════════════════ */
   function isActive(href) {
-    if (href === '/') return path === '/';
+    if (href === '/') return path === '/' || path === '/index.html';
     return path.startsWith(href);
   }
 
-  /* ── Header HTML ── */
+  /* ══ 3. HEADER ═════════════════════════════════════════════ */
   const header = `
 <header class="site-header">
   <div class="header-inner">
@@ -29,7 +43,8 @@
   </div>
 </header>`;
 
-  /* ── Footer HTML ── */
+  /* ══ 4. FOOTER ═════════════════════════════════════════════ */
+  const year = new Date().getFullYear();
   const footer = `
 <footer class="site-footer">
   <div class="footer-inner">
@@ -46,7 +61,7 @@
       <a href="/medical-calculators/wells-score">Wells Score</a>
     </div>
     <div class="footer-col">
-      <h4>Pediatrics</h4>
+      <h4>Paediatrics</h4>
       <a href="/medical-calculators/growth-chart">Growth Chart</a>
       <a href="/medical-calculators/milestones">Milestones</a>
       <a href="/medical-calculators/neonatal-jaundice">Neonatal Jaundice</a>
@@ -63,7 +78,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© ${new Date().getFullYear()} MedCalc India · Built by a doctor in India · Free tools · No login required</span>
+    <span>© ${year} MedCalc India · Built by a doctor in India · Free tools · No login required</span>
     <span>
       <a href="/about">About</a> ·
       <a href="/privacy">Privacy Policy</a> ·
@@ -72,7 +87,8 @@
   </div>
 </footer>`;
 
-  /* ── Inject ── */
+  /* ══ 5. INJECT HEADER + FOOTER ═════════════════════════════ */
   document.body.insertAdjacentHTML('afterbegin', header);
   document.body.insertAdjacentHTML('beforeend', footer);
+
 })();
