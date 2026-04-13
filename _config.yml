@@ -49,7 +49,7 @@ defaults:
 # ── PLUGINS (GitHub Pages safe whitelist) ─────────────────
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
+ # - jekyll-sitemap
 
 # jekyll-sitemap will auto-generate /sitemap.xml listing
 # all your pages — great for Google Search Console.
