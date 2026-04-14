@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="ibw-calculator">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ideal Body Weight (IBW) Calculator | Adjusted Body Weight | RxMedCalc</title>
+<meta name="description" content="Free ideal body weight calculator using Devine, Robinson, Miller and Hamwi formulas. Includes adjusted body weight (AdjBW) for obese patients, drug dosing guide, and ventilator tidal volume calculation. Used by doctors and pharmacists worldwide."/>
+<meta name="keywords" content="ideal body weight calculator, IBW calculator, Devine formula, adjusted body weight calculator, AdjBW, IBW formula, ideal weight for height, tidal volume IBW, drug dosing body weight, IBW obesity, Robinson formula IBW, Hamwi formula"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/ibw-calculator"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Ideal Body Weight (IBW) Calculator — Devine, Robinson, Hamwi Formulas"/>
+<meta property="og:description" content="Calculate IBW and adjusted body weight using 4 validated formulas. Includes ventilator tidal volume and drug dosing guide. Free for doctors worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/ibw-calculator"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="IBW Calculator | Ideal Body Weight | RxMedCalc"/>
+<meta name="twitter:description" content="Calculate ideal body weight using Devine, Robinson, Miller and Hamwi formulas. Adjusted body weight for obese patients. Free clinical tool."/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"MedicalWebPage",
+      "@id":"https://rxmedcalc.com/medical-calculators/ibw-calculator#webpage",
+      "url":"https://rxmedcalc.com/medical-calculators/ibw-calculator",
+      "name":"Ideal Body Weight (IBW) Calculator",
+      "description":"Free IBW calculator using Devine, Robinson, Miller and Hamwi formulas. Includes adjusted body weight for obesity, drug dosing, and ventilator tidal volume.",
+      "inLanguage":"en",
+      "isPartOf":{"@id":"https://rxmedcalc.com/#website"},
+      "audience":{"@type":"MedicalAudience","audienceType":"Physician, Nurse, Pharmacist, Medical Student"},
+      "dateModified":"2025-04-14"
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},
+        {"@type":"ListItem","position":2,"name":"Medical Calculators","item":"https://rxmedcalc.com/medical-calculators/"},
+        {"@type":"ListItem","position":3,"name":"IBW Calculator","item":"https://rxmedcalc.com/medical-calculators/ibw-calculator"}
+      ]
+    },
+    {
+      "@type":"SoftwareApplication",
+      "name":"Ideal Body Weight Calculator",
+      "applicationCategory":"MedicalApplication",
+      "operatingSystem":"Any",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+      "url":"https://rxmedcalc.com/medical-calculators/ibw-calculator"
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"What is the Devine formula for ideal body weight?",
+          "acceptedAnswer":{"@type":"Answer","text":"The Devine formula (1974) calculates IBW as: Male: IBW = 50 kg + 2.3 kg × (height in inches − 60). Female: IBW = 45.5 kg + 2.3 kg × (height in inches − 60). This formula was originally derived for pharmacokinetic drug dosing, not for defining healthy weight. It remains the most widely used IBW formula in clinical practice, particularly for mechanical ventilation tidal volume calculation."}
+        },
+        {
+          "@type":"Question",
+          "name":"When should adjusted body weight be used instead of IBW?",
+          "acceptedAnswer":{"@type":"Answer","text":"Adjusted body weight (AdjBW) is used when actual body weight exceeds IBW by more than 20–30% (i.e. in obesity). AdjBW = IBW + 0.4 × (Actual weight − IBW). The 0.4 correction factor accounts for the fact that adipose tissue is not completely metabolically inert — it has some drug distribution volume. AdjBW is used for aminoglycoside dosing, low molecular weight heparin dosing, and some chemotherapy regimens in obese patients."}
+        },
+        {
+          "@type":"Question",
+          "name":"How is IBW used in mechanical ventilation?",
+          "acceptedAnswer":{"@type":"Answer","text":"In mechanical ventilation, tidal volume (Vt) should be set based on IBW, not actual body weight. The ARDSNet protocol recommends 6 mL/kg IBW as the lung-protective tidal volume in ARDS. Even in obese patients, lung size correlates with height (and therefore IBW), not with body weight. Using actual weight in obese patients would result in dangerous overdistension (volutrauma)."}
+        },
+        {
+          "@type":"Question",
+          "name":"Which IBW formula is most accurate?",
+          "acceptedAnswer":{"@type":"Answer","text":"No single formula is definitively most accurate for all populations. The Devine formula is most widely used clinically (especially for drug dosing and ventilation). The Robinson formula tends to give slightly lower values and is considered more appropriate for women. The Hamwi formula is commonly used by nutritionists. For clinical drug dosing, the Devine formula remains the standard reference in most pharmacokinetic studies."}
+        },
+        {
+          "@type":"Question",
+          "name":"What drugs use IBW for dosing?",
+          "acceptedAnswer":{"@type":"Answer","text":"Key drugs dosed on IBW or AdjBW include: Aminoglycosides (gentamicin, amikacin) — use AdjBW in obesity. Vancomycin — uses actual body weight (ABW). Heparin (unfractionated) — uses ABW, capped at some protocols. LMWH (enoxaparin) — uses ABW up to 144 kg, then seek specialist advice. Digoxin — uses IBW or lean body mass. Phenytoin — uses AdjBW. Chemotherapy agents — varies by protocol, many use BSA from AdjBW. Tidal volume — uses IBW (Devine formula)."}
+        },
+        {
+          "@type":"Question",
+          "name":"Is IBW the same as healthy weight?",
+          "acceptedAnswer":{"@type":"Answer","text":"No. IBW formulas were designed for drug dosing and physiological calculations, not to define a healthy weight range. They often give a single number rather than a range and do not account for body composition, ethnicity, age, or fitness level. For assessing healthy weight, BMI (with Asian cutoffs where appropriate) and waist circumference are better tools. A person may have an 'ideal' IBW but high body fat (sarcopenic obesity) or vice versa."}
+        },
+        {
+          "@type":"Question",
+          "name":"How do you calculate IBW in cm instead of inches?",
+          "acceptedAnswer":{"@type":"Answer","text":"Convert height to inches first: height in inches = height in cm ÷ 2.54. Then apply the Devine formula. Alternatively: Male IBW (kg) = 50 + 0.906 × (height in cm − 152.4). Female IBW (kg) = 45.5 + 0.906 × (height in cm − 152.4). This is the cm-converted form of the Devine formula, clinically equivalent to the original."}
+        },
+        {
+          "@type":"Question",
+          "name":"What is the IBW formula for children?",
+          "acceptedAnswer":{"@type":"Answer","text":"The Devine and other IBW formulas are validated for adults only (typically height >152 cm / 5 feet). For children, weight-for-height percentiles using WHO or IAP growth charts are the appropriate reference. The PALS and APLS formula for estimated weight in children is: Weight (kg) = 2 × (age in years + 4) for 1–10 years, or use the Broselow tape in emergency settings."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  background:linear-gradient(135deg,#0d1b2a 0%,#0f2e1e 60%,#0d1b2a 100%);
+  padding:40px 0 0;position:relative;overflow:hidden;
+}
+.page-header::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(16,185,129,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,0.05) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+.page-header::after{
+  content:'';position:absolute;width:500px;height:500px;
+  background:radial-gradient(circle,rgba(16,185,129,0.12) 0%,transparent 70%);
+  top:-100px;right:-50px;pointer-events:none;
+}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}
+.breadcrumb a:hover{color:#6ee7b7}
+.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#6ee7b7;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#34d399}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+
+/* ── MAIN ── */
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+
+/* ── CALCULATOR CARD ── */
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-card-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-card-title::before{content:'';display:block;width:4px;height:20px;background:#10b981;border-radius:2px;flex-shrink:0}
+
+/* Input grid */
+.input-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:560px){.input-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input,.field select{
+  width:100%;padding:11px 14px;
+  background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;
+  font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;
+  transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none;
+}
+.field input:focus,.field select:focus{border-color:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+
+/* Height toggle */
+.height-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.unit-toggle{display:flex;background:#f3f4f6;border-radius:8px;padding:3px;margin-bottom:14px;width:fit-content}
+.utab{padding:6px 16px;border:none;border-radius:6px;background:transparent;font-family:inherit;font-size:0.78rem;font-weight:600;color:#6b7280;cursor:pointer;transition:all 0.2s}
+.utab.active{background:#fff;color:#10b981;box-shadow:0 1px 4px rgba(0,0,0,0.1)}
+
+/* Calculate button */
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#10b981,#059669);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(16,185,129,0.3);margin-top:4px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(16,185,129,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}
+.error-msg.show{display:block}
+
+/* Results */
+.results{display:none;margin-top:24px}
+.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+
+/* Formula tabs */
+.formula-tabs{display:flex;gap:4px;background:#f3f4f6;border-radius:8px;padding:3px;margin-bottom:16px;flex-wrap:wrap}
+.ftab{flex:1;min-width:80px;padding:7px 8px;border:none;border-radius:6px;background:transparent;color:#6b7280;font-family:inherit;font-size:0.75rem;font-weight:600;cursor:pointer;transition:all 0.2s;text-align:center}
+.ftab.active{background:#10b981;color:#fff}
+
+/* Result boxes */
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:400px){.result-grid{grid-template-columns:1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-align:center}
+.rbox.primary{background:#f0fdf4;border-color:#bbf7d0}
+.rbox.secondary{background:#fffbeb;border-color:#fde68a}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.6rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.primary .rval{color:#10b981}
+.rbox.secondary .rval{color:#d97706}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+
+/* All formulas comparison */
+.formula-compare{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:16px}
+.fc-title{font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px}
+.fc-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f3f4f6;font-size:0.85rem}
+.fc-row:last-child{border-bottom:none}
+.fc-name{color:#374151;font-weight:600}
+.fc-val{color:#10b981;font-weight:700;font-variant-numeric:tabular-nums}
+
+/* Dosing table */
+.dosing-table{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:12px;padding:16px;margin-bottom:16px}
+.dt-title{font-size:0.75rem;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px}
+.dt-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #d1fae5;font-size:0.82rem}
+.dt-row:last-child{border-bottom:none}
+.dt-label{color:#374151}
+.dt-val{color:#0d1b2a;font-weight:700;font-variant-numeric:tabular-nums}
+
+/* Clinical alert */
+.clinical-alert{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.85rem;line-height:1.6;display:none}
+.clinical-alert.show{display:block}
+.alert-obese{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.alert-underweight{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.alert-normal{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+
+/* Action buttons */
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}
+.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#10b981;color:#10b981}
+
+/* ── CONTENT ── */
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#10b981;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#10b981;font-size:0.8rem}
+
+.formula-block{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:10px;padding:16px 20px;font-family:'Courier New',monospace;font-size:0.9rem;color:#065f46;margin:12px 0;line-height:2}
+.formula-block span{color:#9ca3af}
+
+.formula-compare-table{width:100%;border-collapse:collapse;font-size:0.85rem;margin:16px 0}
+.formula-compare-table th{background:#f9fafb;color:#6b7280;font-weight:700;padding:10px 14px;text-align:left;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid #e5e7eb}
+.formula-compare-table td{padding:10px 14px;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top}
+.formula-compare-table tr:hover td{background:#fafafa}
+.origin-tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:0.68rem;font-weight:600;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;margin-left:6px}
+
+.faq-item{border-bottom:1px solid #f3f4f6;padding:16px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.92rem;font-weight:600;color:#0d1b2a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.faq-q::after{content:'＋';color:#10b981;font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.86rem;color:#4b5563;line-height:1.75}
+.faq-item.open .faq-a{max-height:400px;padding-top:10px}
+
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#10b981;background:#f0fdf4;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}
+.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}
+.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/medical-calculators/">Calculators</a><span>›</span>
+      <span>IBW Calculator</span>
+    </nav>
+    <div class="page-eyebrow">⚖️ General Medicine · Pharmacology</div>
+    <h1>Ideal Body Weight<br><em>(IBW)</em> Calculator</h1>
+    <p class="page-sub">Calculate ideal body weight using Devine, Robinson, Miller and Hamwi formulas. Includes adjusted body weight for obesity, ventilator tidal volume, and clinical drug dosing guide.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 4 Validated Formulas</span>
+      <span class="hbadge">✓ Adjusted Body Weight</span>
+      <span class="hbadge">✓ Tidal Volume (ARDSNet)</span>
+      <span class="hbadge">✓ Drug Dosing Guide</span>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ═══ CALCULATOR ═══ -->
+  <div class="calc-card">
+    <div class="calc-card-title">IBW & Adjusted Body Weight Calculator</div>
+
+    <!-- Height unit toggle -->
+    <div style="margin-bottom:8px">
+      <div style="font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px">Height Units</div>
+      <div class="unit-toggle">
+        <button class="utab active" onclick="setUnits('cm')" id="u-cm">Centimetres</button>
+        <button class="utab" onclick="setUnits('ft')" id="u-ft">Feet & Inches</button>
+      </div>
+    </div>
+
+    <div class="input-grid">
+      <!-- CM mode -->
+      <div class="field" id="cm-field">
+        <label for="height-cm">Height</label>
+        <input type="number" id="height-cm" placeholder="e.g. 170" min="100" max="250" inputmode="decimal"/>
+        <div class="hint">centimetres</div>
+      </div>
+
+      <!-- FT mode (hidden by default) -->
+      <div class="field" id="ft-field" style="display:none">
+        <label>Height (ft)</label>
+        <input type="number" id="height-ft" placeholder="5" min="3" max="8" inputmode="decimal"/>
+        <div class="hint">feet</div>
+      </div>
+      <div class="field" id="in-field" style="display:none">
+        <label>Height (in)</label>
+        <input type="number" id="height-in" placeholder="7" min="0" max="11" inputmode="decimal"/>
+        <div class="hint">inches</div>
+      </div>
+
+      <div class="field">
+        <label for="sex">Biological Sex</label>
+        <select id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <div class="hint">for formula accuracy</div>
+      </div>
+
+      <div class="field">
+        <label for="actual-wt">Actual Weight</label>
+        <input type="number" id="actual-wt" placeholder="e.g. 75" min="20" max="300" inputmode="decimal"/>
+        <div class="hint">kg — for AdjBW & dosing</div>
+      </div>
+    </div>
+
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate IBW →</button>
+
+    <!-- RESULTS -->
+    <div class="results" id="results">
+      <div class="divider"></div>
+
+      <!-- Formula selector -->
+      <div style="font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px">Showing formula</div>
+      <div class="formula-tabs" id="formula-tabs">
+        <button class="ftab active" onclick="showFormula('devine')" id="ft-devine">Devine</button>
+        <button class="ftab" onclick="showFormula('robinson')" id="ft-robinson">Robinson</button>
+        <button class="ftab" onclick="showFormula('miller')" id="ft-miller">Miller</button>
+        <button class="ftab" onclick="showFormula('hamwi')" id="ft-hamwi">Hamwi</button>
+      </div>
+
+      <div class="result-grid">
+        <div class="rbox primary">
+          <div class="rlabel">Ideal Body Weight</div>
+          <div class="rval" id="r-ibw">—</div>
+          <div class="runit">kg (<span id="r-ibw-formula">Devine</span>)</div>
+        </div>
+        <div class="rbox secondary">
+          <div class="rlabel">Adjusted Body Weight</div>
+          <div class="rval" id="r-adjbw">—</div>
+          <div class="runit">kg (if obese)</div>
+        </div>
+      </div>
+
+      <!-- All formulas comparison -->
+      <div class="formula-compare">
+        <div class="fc-title">All Formula Results</div>
+        <div class="fc-row"><span class="fc-name">Devine (1974)</span><span class="fc-val" id="fc-devine">—</span></div>
+        <div class="fc-row"><span class="fc-name">Robinson (1983)</span><span class="fc-val" id="fc-robinson">—</span></div>
+        <div class="fc-row"><span class="fc-name">Miller (1983)</span><span class="fc-val" id="fc-miller">—</span></div>
+        <div class="fc-row"><span class="fc-name">Hamwi (1964)</span><span class="fc-val" id="fc-hamwi">—</span></div>
+      </div>
+
+      <!-- Dosing quick reference -->
+      <div class="dosing-table" id="dosing-table">
+        <div class="dt-title">💊 Drug Dosing Quick Reference</div>
+        <div class="dt-row"><span class="dt-label">Tidal Volume (6 mL/kg IBW)</span><span class="dt-val" id="d-tv">—</span></div>
+        <div class="dt-row"><span class="dt-label">Gentamicin 5 mg/kg AdjBW</span><span class="dt-val" id="d-gent">—</span></div>
+        <div class="dt-row"><span class="dt-label">Enoxaparin 1 mg/kg ABW</span><span class="dt-val" id="d-enox">—</span></div>
+        <div class="dt-row"><span class="dt-label">Use weight for dosing</span><span class="dt-val" id="d-which">—</span></div>
+      </div>
+
+      <div class="clinical-alert" id="clinical-alert"></div>
+
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <!-- ═══ FORMULAS EXPLAINED ═══ -->
+  <div class="content-card">
+    <h2>IBW Formulas — Complete Reference</h2>
+    <p>Four validated formulas exist for calculating ideal body weight. They were all derived from different populations and different time periods, which explains why their results differ by up to 10%. The choice of formula depends on the clinical context.</p>
+
+    <div class="formula-block">
+      <strong>Devine (1974) — Most widely used clinically</strong><br>
+      Male: IBW = 50 + 2.3 × <span>(height in inches − 60)</span><br>
+      Female: IBW = 45.5 + 2.3 × <span>(height in inches − 60)</span><br><br>
+      <strong>Robinson (1983)</strong><br>
+      Male: IBW = 52 + 1.9 × <span>(height in inches − 60)</span><br>
+      Female: IBW = 49 + 1.7 × <span>(height in inches − 60)</span><br><br>
+      <strong>Miller (1983)</strong><br>
+      Male: IBW = 56.2 + 1.41 × <span>(height in inches − 60)</span><br>
+      Female: IBW = 53.1 + 1.36 × <span>(height in inches − 60)</span><br><br>
+      <strong>Hamwi (1964) — Used by nutritionists</strong><br>
+      Male: IBW = 48 + 2.7 × <span>(height in inches − 60)</span><br>
+      Female: IBW = 45.5 + 2.2 × <span>(height in inches − 60)</span>
+    </div>
+
+    <h3>Adjusted Body Weight (AdjBW) Formula</h3>
+    <p>When actual body weight exceeds IBW by more than 20–30%, use AdjBW instead of IBW for drug dosing:</p>
+    <div class="formula-block">
+      AdjBW = IBW + 0.4 × (Actual Body Weight − IBW)
+    </div>
+    <p>The 0.4 correction factor (40%) accounts for the partial drug distribution into excess adipose tissue. Adipose tissue is not completely inert — it has a blood supply and some drug uptake, but significantly less than lean tissue.</p>
+
+    <table class="formula-compare-table">
+      <thead><tr><th>Formula</th><th>Year</th><th>Basis</th><th>Best Used For</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Devine</strong><span class="origin-tag">Most Common</span></td><td>1974</td><td>Originally for digoxin dosing, based on actuarial tables</td><td>Drug dosing, ventilator tidal volume (ARDSNet)</td></tr>
+        <tr><td><strong>Robinson</strong></td><td>1983</td><td>Revised Devine with population data</td><td>General drug dosing, tends to be lower than Devine</td></tr>
+        <tr><td><strong>Miller</strong></td><td>1983</td><td>Alternative regression from same dataset as Robinson</td><td>Gives intermediate values, rarely used alone</td></tr>
+        <tr><td><strong>Hamwi</strong></td><td>1964</td><td>Dietetic practice, Metropolitan Life tables</td><td>Nutritional assessment, dietetics, not drug dosing</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══ CLINICAL USES ═══ -->
+  <div class="content-card">
+    <h2>Clinical Uses of Ideal Body Weight</h2>
+
+    <h3>1. Mechanical Ventilation — The Most Critical Use</h3>
+    <p>The ARDSNet protocol (NEJM 2000, n=861) demonstrated that lung-protective ventilation using <strong>6 mL/kg IBW</strong> (versus 12 mL/kg) reduced ARDS mortality from 39.8% to 31%. This landmark trial established IBW-based tidal volume as the standard of care in ARDS. The key insight: <strong>lung size correlates with height, not body weight</strong>. An obese patient at 150 kg has the same lung capacity as a lean person of the same height — overdistension in obesity causes volutrauma.</p>
+    <p>In practice: Set initial Vt = 6 mL/kg IBW. If plateau pressure >30 cmH₂O, reduce to 4–5 mL/kg IBW. Never increase beyond 8 mL/kg IBW regardless of CO₂.</p>
+
+    <h3>2. Aminoglycoside Dosing (Gentamicin, Amikacin, Tobramycin)</h3>
+    <p>Aminoglycosides are hydrophilic — they distribute primarily into lean tissue and extracellular fluid, with minimal penetration into adipose tissue. In obese patients, using actual body weight significantly overestimates the volume of distribution and leads to toxicity (nephrotoxicity, ototoxicity). The correct weight for aminoglycoside dosing is:</p>
+    <ul>
+      <li>If actual weight ≤ IBW: use actual weight</li>
+      <li>If actual weight > IBW by &lt;20%: use actual weight</li>
+      <li>If actual weight > IBW by ≥20%: use AdjBW = IBW + 0.4 × (ABW − IBW)</li>
+    </ul>
+    <p>Extended interval (once-daily) dosing: 5–7 mg/kg AdjBW for gentamicin. Always follow with therapeutic drug monitoring (TDM) — trough levels at 18 hours for extended interval dosing.</p>
+
+    <h3>3. LMWH (Enoxaparin) in Obesity</h3>
+    <p>Low molecular weight heparins are dosed on actual body weight (ABW) in most patients. However, in extreme obesity (ABW >150 kg or BMI >50), evidence is limited. Many guidelines recommend anti-Xa monitoring in patients >100 kg on therapeutic enoxaparin. For prophylactic doses, standard dosing applies up to most weight ranges with some protocols using enoxaparin 40 mg BD in BMI >40.</p>
+
+    <h3>4. Vancomycin</h3>
+    <p>Unlike aminoglycosides, vancomycin uses <strong>actual body weight</strong> for initial dosing in all patients including the obese, because vancomycin has a larger volume of distribution that includes adipose tissue. AUC-guided monitoring (target AUC/MIC 400–600) is now preferred over trough-only monitoring per ASHP/IDSA/SIDP 2020 guidelines.</p>
+
+    <h3>5. Phenytoin</h3>
+    <p>Phenytoin loading dose uses AdjBW in obesity: Loading dose = 20 mg/kg AdjBW (max 2000 mg). Maintenance uses IBW-based calculations due to its saturable (Michaelis-Menten) kinetics. Always monitor free phenytoin levels in hypoalbuminaemia and renal failure.</p>
+
+    <h3>6. Nutritional Assessment</h3>
+    <p>IBW is used to calculate percentage of ideal body weight (%IBW = Actual weight ÷ IBW × 100) for nutritional status assessment. %IBW &lt;70% indicates severe malnutrition. Caloric requirements are often based on IBW (25–30 kcal/kg IBW/day) rather than actual weight in obese patients to avoid overfeeding.</p>
+
+    <h3>Limitations of IBW Formulas</h3>
+    <p>IBW formulas were derived from predominantly Caucasian populations and may not be accurate for other ethnic groups. Studies show that Asian populations, including South Asians, have higher body fat percentage at the same BMI and height compared to Caucasians. The formulas also do not account for age-related muscle loss (sarcopenia), body composition differences between athletes and sedentary individuals, or conditions affecting body composition (oedema, ascites, amputations).</p>
+    <p>For amputees, IBW must be corrected for the missing limb weight: upper arm 3.5%, forearm 2.3%, hand 0.8%, thigh 11.6%, lower leg 5.3%, foot 1.8% of total body weight.</p>
+  </div>
+
+  <!-- ═══ FAQ ═══ -->
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <!-- ═══ RELATED ═══ -->
+  <div class="content-card">
+    <h2>Related Clinical Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/bmi" class="related-card">
+        <span class="rc-icon">📊</span>
+        <div><div class="rc-title">BMI Calculator</div><div class="rc-desc">Asian/WHO obesity cutoffs</div></div>
+      </a>
+      <a href="/medical-calculators/map-calculator" class="related-card">
+        <span class="rc-icon">❤️</span>
+        <div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Mean arterial pressure</div></div>
+      </a>
+      <a href="/medical-calculators/egfr-calculator" class="related-card">
+        <span class="rc-icon">🫘</span>
+        <div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">Renal drug dose adjustment</div></div>
+      </a>
+      <a href="/medical-calculators/burn-calculator" class="related-card">
+        <span class="rc-icon">🔥</span>
+        <div><div class="rc-title">Parkland Formula</div><div class="rc-desc">Burns fluid resuscitation</div></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>⚠ Medical Disclaimer:</strong> IBW and AdjBW are pharmacokinetic tools for drug dosing calculations. They do not define a healthy weight or body composition goal. Drug dosing must be confirmed against current prescribing guidelines, local protocols, and therapeutic drug monitoring where applicable. Always consult a clinical pharmacist for complex dosing decisions in critically ill or obese patients.
+  </div>
+
+</main>
+
+<script src="/shared-nav.js"></script>
+
+<script>
+let heightUnit='cm';
+let calcResults=null;
+let activeFormula='devine';
+let lastResult=null;
+
+const faqs=[
+  ["What is the Devine formula for ideal body weight?","The Devine formula (1974): Male IBW = 50 kg + 2.3 kg × (height in inches − 60). Female IBW = 45.5 kg + 2.3 kg × (height in inches − 60). Originally derived for pharmacokinetic drug dosing. Remains the most widely used formula in clinical practice, especially for mechanical ventilation tidal volume."],
+  ["When should adjusted body weight be used instead of IBW?","AdjBW is used when actual weight exceeds IBW by more than 20–30% (obesity). AdjBW = IBW + 0.4 × (Actual weight − IBW). Used for aminoglycoside dosing, LMWH dosing, and some chemotherapy regimens in obese patients."],
+  ["How is IBW used in mechanical ventilation?","Tidal volume should be set at 6 mL/kg IBW in ARDS (ARDSNet protocol, NEJM 2000). Lung size correlates with height (IBW), not body weight. Using actual weight in obese patients causes dangerous lung overdistension (volutrauma)."],
+  ["Which IBW formula is most accurate?","No single formula is definitively most accurate. Devine is most widely used clinically (drug dosing, ventilation). Robinson gives slightly lower values, considered more appropriate for women. Hamwi is used in dietetics. For drug dosing, Devine is the standard reference in most pharmacokinetic studies."],
+  ["What drugs use IBW for dosing?","Tidal volume — IBW (Devine). Aminoglycosides (gentamicin, amikacin) — AdjBW in obesity. Vancomycin — actual body weight. Phenytoin — AdjBW for loading. Digoxin — IBW or lean body mass. LMWH (enoxaparin) — actual weight (with monitoring in extreme obesity)."],
+  ["Is IBW the same as healthy weight?","No. IBW formulas were designed for drug dosing, not to define healthy weight. They give a single number, not a range, and don't account for body composition, ethnicity, age, or fitness. BMI with Asian cutoffs and waist circumference are better tools for healthy weight assessment."],
+  ["How do you calculate IBW in cm?","Male IBW (kg) = 50 + 0.906 × (height cm − 152.4). Female IBW (kg) = 45.5 + 0.906 × (height cm − 152.4). This is the cm-converted Devine formula. Or simply divide cm by 2.54 to get inches, then apply the standard formula."],
+  ["What is the IBW formula for children?","Devine and other IBW formulas are validated for adults only (height >152 cm). For children, use WHO or IAP growth charts (weight-for-height percentiles). For emergency weight estimation: Weight (kg) = 2 × (age in years + 4) for ages 1–10, or use the Broselow tape."]
+];
+
+document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`
+  <div class="faq-item" id="faq-${i}">
+    <div class="faq-q" onclick="toggleFaq(${i})" role="button" tabindex="0">${f[0]}</div>
+    <div class="faq-a">${f[1]}</div>
+  </div>`).join('');
+
+function toggleFaq(i){
+  const item=document.getElementById('faq-'+i);
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(el=>el.classList.remove('open'));
+  if(!open) item.classList.add('open');
+}
+
+function setUnits(u){
+  heightUnit=u;
+  document.getElementById('u-cm').classList.toggle('active',u==='cm');
+  document.getElementById('u-ft').classList.toggle('active',u==='ft');
+  document.getElementById('cm-field').style.display=u==='cm'?'':'none';
+  document.getElementById('ft-field').style.display=u==='ft'?'':'none';
+  document.getElementById('in-field').style.display=u==='ft'?'':'none';
+}
+
+function getHeightInches(){
+  if(heightUnit==='cm'){
+    const cm=parseFloat(document.getElementById('height-cm').value);
+    return cm/2.54;
+  } else {
+    const ft=parseFloat(document.getElementById('height-ft').value)||0;
+    const inch=parseFloat(document.getElementById('height-in').value)||0;
+    return ft*12+inch;
+  }
+}
+
+function calcIBW(heightIn,sex){
+  const extra=heightIn-60;
+  return {
+    devine: sex==='male' ? 50+2.3*extra : 45.5+2.3*extra,
+    robinson: sex==='male' ? 52+1.9*extra : 49+1.7*extra,
+    miller: sex==='male' ? 56.2+1.41*extra : 53.1+1.36*extra,
+    hamwi: sex==='male' ? 48+2.7*extra : 45.5+2.2*extra
+  };
+}
+
+function showFormula(f){
+  activeFormula=f;
+  ['devine','robinson','miller','hamwi'].forEach(x=>{
+    document.getElementById('ft-'+x).classList.toggle('active',x===f);
+  });
+  if(calcResults){
+    const ibw=Math.round(calcResults.ibw[f]*10)/10;
+    document.getElementById('r-ibw').textContent=ibw;
+    document.getElementById('r-ibw-formula').textContent=f.charAt(0).toUpperCase()+f.slice(1);
+  }
+}
+
+function calculate(){
+  const heightIn=getHeightInches();
+  const sex=document.getElementById('sex').value;
+  const abw=parseFloat(document.getElementById('actual-wt').value)||null;
+  const errEl=document.getElementById('error-msg');
+  errEl.className='error-msg';
+
+  if(!heightIn||heightIn<47){errEl.textContent='Please enter a valid height (minimum 120 cm / 4 feet).';errEl.className='error-msg show';return;}
+  if(heightIn>98){errEl.textContent='Height seems too tall. Please check your entry.';errEl.className='error-msg show';return;}
+
+  const ibw=calcIBW(heightIn,sex);
+  const devineIBW=ibw.devine;
+
+  // AdjBW using Devine
+  let adjbw=null;
+  if(abw && abw>devineIBW*1.2){
+    adjbw=devineIBW+0.4*(abw-devineIBW);
+  }
+
+  calcResults={ibw,adjbw,abw,devineIBW};
+
+  // Populate all formulas
+  ['devine','robinson','miller','hamwi'].forEach(f=>{
+    document.getElementById('fc-'+f).textContent=Math.round(ibw[f]*10)/10+' kg';
+  });
+
+  // Show selected formula
+  const selIBW=Math.round(ibw[activeFormula]*10)/10;
+  document.getElementById('r-ibw').textContent=selIBW;
+  document.getElementById('r-ibw-formula').textContent=activeFormula.charAt(0).toUpperCase()+activeFormula.slice(1);
+  document.getElementById('r-adjbw').textContent=adjbw?Math.round(adjbw*10)/10+'':abw&&abw<=devineIBW?'N/A (use ABW)':'Enter weight';
+
+  // Dosing
+  const doseWt=adjbw||abw||devineIBW;
+  const tv=Math.round(devineIBW*6);
+  const tvMax=Math.round(devineIBW*8);
+  document.getElementById('d-tv').textContent=tv+'–'+tvMax+' mL';
+  document.getElementById('d-gent').textContent=Math.round(doseWt*5*10)/10+' mg';
+  document.getElementById('d-enox').textContent=abw?Math.round(abw*1*10)/10+' mg':'Enter weight';
+  document.getElementById('d-which').textContent=adjbw?'AdjBW (obesity)':abw&&abw<devineIBW?'Actual weight':'IBW (Devine)';
+
+  // Clinical alert
+  const alertEl=document.getElementById('clinical-alert');
+  let alertMsg='',alertCls='';
+  if(abw){
+    const pct=(abw/devineIBW)*100;
+    if(pct>130){alertMsg=`⚠️ Actual weight is ${Math.round(pct)}% of IBW (obese). Use Adjusted Body Weight (AdjBW) for aminoglycoside dosing and phenytoin. Use Actual Body Weight for vancomycin and enoxaparin. Set tidal volume at 6 mL/kg IBW (${tv} mL), NOT based on actual weight.`;alertCls='alert-obese';}
+    else if(pct<80){alertMsg=`⚠️ Actual weight is ${Math.round(pct)}% of IBW — underweight. Use actual body weight for drug dosing. Assess nutritional status. Calculate caloric needs at 25–30 kcal/kg IBW to avoid refeeding syndrome risk.`;alertCls='alert-underweight';}
+    else{alertMsg=`✅ Actual weight within normal range of IBW (${Math.round(pct)}% of IBW). Use actual body weight for most drug dosing. No adjustment required.`;alertCls='alert-normal';}
+    alertEl.textContent=alertMsg;
+    alertEl.className='clinical-alert '+alertCls+' show';
+  } else {
+    alertEl.className='clinical-alert';
+  }
+
+  lastResult=`IBW (Devine): ${Math.round(devineIBW*10)/10} kg${adjbw?` | AdjBW: ${Math.round(adjbw*10)/10} kg`:''}\nSex: ${sex} | Height: ${Math.round(heightIn*2.54)} cm / ${Math.floor(heightIn/12)}ft ${Math.round(heightIn%12)}in\nTidal Volume (6ml/kg IBW): ${tv}–${tvMax} mL\nCalculated at rxmedcalc.com/medical-calculators/ibw-calculator`;
+
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined') umami.track('ibw_calc_result',{sex,height_cm:Math.round(heightIn*2.54)});
+}
+
+function shareWA(){
+  if(!lastResult){alert('Calculate first.');return;}
+  const msg=encodeURIComponent('⚖️ IBW Result\n'+lastResult);
+  if(typeof umami!=='undefined') umami.track('ibw_share_wa',{});
+  window.open('https://wa.me/?text='+msg,'_blank');
+}
+function copyResult(){
+  if(!lastResult){alert('Calculate first.');return;}
+  navigator.clipboard.writeText(lastResult).then(()=>{
+    const b=document.querySelector('.copy-btn');
+    b.textContent='✓ Copied!';
+    setTimeout(()=>{b.textContent='📋 Copy';},2000);
+  });
+}
+function resetCalc(){
+  ['height-cm','height-ft','height-in','actual-wt'].forEach(id=>{
+    const el=document.getElementById(id);if(el)el.value='';
+  });
+  document.getElementById('results').className='results';
+  document.getElementById('error-msg').className='error-msg';
+  calcResults=null;lastResult=null;
+}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName)) calculate();
+  if(e.key==='Enter'&&e.target.classList.contains('faq-q')) e.target.click();
+});
+</script>
+</body>
+</html>
