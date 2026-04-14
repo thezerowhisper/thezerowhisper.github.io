@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="crcl-calculator">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Creatinine Clearance Calculator (Cockcroft-Gault) | CrCl & Drug Dosing | RxMedCalc</title>
+<meta name="description" content="Free creatinine clearance calculator using the Cockcroft-Gault equation. Calculate CrCl for drug dosing in renal impairment. Includes dose adjustment guide for common drugs — gentamicin, metformin, digoxin, enoxaparin, vancomycin. Used by doctors and pharmacists worldwide."/>
+<meta name="keywords" content="creatinine clearance calculator, Cockcroft-Gault calculator, CrCl calculator, renal drug dosing, creatinine clearance formula, GFR drug dosing, renal impairment drug dose, gentamicin renal dose, metformin CKD, creatinine clearance normal range, CrCl ml/min"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/creatinine-clearance"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Creatinine Clearance (Cockcroft-Gault) Calculator | Drug Dosing in Renal Impairment"/>
+<meta property="og:description" content="Calculate CrCl using Cockcroft-Gault equation. Includes drug dose adjustment guide for renal impairment. Free for doctors and pharmacists worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/creatinine-clearance"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"MedicalWebPage","@id":"https://rxmedcalc.com/medical-calculators/creatinine-clearance#webpage","url":"https://rxmedcalc.com/medical-calculators/creatinine-clearance","name":"Creatinine Clearance Calculator (Cockcroft-Gault)","description":"Free CrCl calculator using Cockcroft-Gault equation. Drug dose adjustment guide for renal impairment.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Physician, Pharmacist, Nurse, Medical Student"},"dateModified":"2025-04-14"},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Medical Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"Creatinine Clearance","item":"https://rxmedcalc.com/medical-calculators/creatinine-clearance"}]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is the Cockcroft-Gault formula for creatinine clearance?","acceptedAnswer":{"@type":"Answer","text":"CrCl (mL/min) = [(140 − Age) × Weight (kg)] ÷ [72 × Serum Creatinine (mg/dL)]. Multiply by 0.85 for females. Weight used is actual body weight unless patient is obese, in which case use ideal body weight (IBW). This formula estimates creatinine clearance as a surrogate for GFR and is the standard for drug dosing in renal impairment."}},
+      {"@type":"Question","name":"What is a normal creatinine clearance?","acceptedAnswer":{"@type":"Answer","text":"Normal CrCl is 90–130 mL/min in adults. Values decline with age — a 70-year-old with normal serum creatinine may have a CrCl of 60–70 mL/min due to age-related reduction in muscle mass. CrCl <60 mL/min indicates mild-moderate renal impairment and requires dose adjustment for renally cleared drugs. CrCl <30 mL/min is severe impairment; <15 mL/min is kidney failure."}},
+      {"@type":"Question","name":"Why use Cockcroft-Gault instead of CKD-EPI for drug dosing?","acceptedAnswer":{"@type":"Answer","text":"Most drug pharmacokinetic studies and prescribing information use Cockcroft-Gault (CG) as the renal function measure for dose adjustments. CKD-EPI gives eGFR normalised to 1.73m² body surface area, which is better for CKD staging and cardiovascular risk. CG gives absolute CrCl in mL/min, which matches how most drug dose adjustment tables were derived. Use CG for drug dosing, CKD-EPI for CKD staging."}},
+      {"@type":"Question","name":"What weight should be used in the Cockcroft-Gault formula?","acceptedAnswer":{"@type":"Answer","text":"Use actual body weight (ABW) if patient is not obese. If ABW > IBW by >30%, use IBW to avoid overestimating CrCl in obese patients — using ABW in obesity gives falsely high CrCl because creatinine production does not increase proportionally with adipose tissue. Some guidelines use AdjBW = IBW + 0.4×(ABW−IBW) as a compromise."}},
+      {"@type":"Question","name":"When should metformin be stopped based on creatinine clearance?","acceptedAnswer":{"@type":"Answer","text":"Per NICE and most international guidelines: Continue metformin at full dose if CrCl ≥60 mL/min. Reduce dose by 50% if CrCl 45–59 mL/min. Stop metformin if CrCl <45 mL/min (some guidelines say <30). Risk of metformin-associated lactic acidosis (MALA) increases with declining renal function as metformin accumulates."}},
+      {"@type":"Question","name":"How does creatinine clearance change with age?","acceptedAnswer":{"@type":"Answer","text":"CrCl declines approximately 1 mL/min per year after age 40. An 80-year-old with a normal serum creatinine of 0.9 mg/dL may have a CrCl of only 40–50 mL/min — in the range requiring drug dose adjustment. This is why elderly patients are particularly vulnerable to drug toxicity from renally cleared medications. Serum creatinine alone is an unreliable marker of renal function in the elderly due to reduced muscle mass."}}
+    ]}
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a2040 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(99,102,241,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(99,102,241,0.12) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#a5b4fc;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#818cf8}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#6366f1;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:500px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input,.field select{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none}
+.field input:focus,.field select:focus{border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+/* unit toggle */
+.unit-row{display:flex;gap:8px;margin-bottom:6px}
+.utab{padding:5px 14px;border:1.5px solid #e5e7eb;border-radius:20px;background:#f9fafb;font-family:inherit;font-size:0.75rem;font-weight:600;color:#6b7280;cursor:pointer;transition:all 0.2s}
+.utab.active{background:#6366f1;border-color:#6366f1;color:#fff}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#6366f1,#4f46e5);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(99,102,241,0.3);margin-top:4px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(99,102,241,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+/* CrCl gauge */
+.crcl-display{text-align:center;margin-bottom:20px}
+.crcl-number{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;line-height:1}
+.crcl-unit{font-size:0.95rem;color:#6b7280;margin-top:4px}
+.crcl-badge{display:inline-block;padding:7px 20px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-top:10px}
+.stage-normal{background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0}
+.stage-mild{background:#fffbeb;color:#d97706;border:1.5px solid #fde68a}
+.stage-moderate{background:#fff7ed;color:#ea580c;border:1.5px solid #fed7aa}
+.stage-severe{background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca}
+.stage-failure{background:#dc2626;color:#fff}
+/* stage bar */
+.stage-bar{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin:16px 0 6px;border-radius:8px;overflow:hidden}
+.sb{height:10px;background:#e5e7eb;transition:background 0.3s}
+.sb.active{background:#6366f1}
+.sb.s1.active{background:#16a34a}
+.sb.s2.active{background:#d97706}
+.sb.s3.active{background:#ea580c}
+.sb.s4.active{background:#dc2626}
+.sb.s5.active{background:#7f1d1d}
+.stage-labels{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin-bottom:16px}
+.sl{font-size:0.6rem;color:#9ca3af;text-align:center}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#eef2ff;border-color:#c7d2fe}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.4rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#6366f1}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+/* drug dosing table */
+.drug-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:16px 0}
+.drug-table th{background:#eef2ff;color:#4338ca;font-weight:700;padding:10px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid #c7d2fe}
+.drug-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top}
+.drug-table tr:hover td{background:#fafafa}
+.dose-ok{color:#16a34a;font-weight:700}.dose-reduce{color:#d97706;font-weight:700}.dose-stop{color:#dc2626;font-weight:700}.dose-caution{color:#ea580c;font-weight:700}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#6366f1;color:#6366f1}
+/* content */
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#6366f1;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#6366f1;font-size:0.8rem}
+.formula-block{background:#eef2ff;border:1.5px solid #c7d2fe;border-radius:10px;padding:16px 20px;font-family:'Courier New',monospace;font-size:0.92rem;color:#3730a3;margin:12px 0;line-height:2}
+.formula-block span{color:#9ca3af}
+.range-table{width:100%;border-collapse:collapse;font-size:0.85rem;margin:16px 0}
+.range-table th{background:#f9fafb;color:#6b7280;font-weight:700;padding:10px 14px;text-align:left;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid #e5e7eb}
+.range-table td{padding:10px 14px;border-bottom:1px solid #f3f4f6;color:#374151}
+.range-table tr:hover td{background:#fafafa}
+.pill{display:inline-block;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:700}
+.pill-g{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0}
+.pill-y{background:#fffbeb;color:#d97706;border:1px solid #fde68a}
+.pill-o{background:#fff7ed;color:#ea580c;border:1px solid #fed7aa}
+.pill-r{background:#fef2f2;color:#dc2626;border:1px solid #fecaca}
+.pill-d{background:#7f1d1d;color:#fff}
+.faq-item{border-bottom:1px solid #f3f4f6;padding:16px 0}.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.92rem;font-weight:600;color:#0d1b2a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.faq-q::after{content:'＋';color:#6366f1;font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.86rem;color:#4b5563;line-height:1.75}
+.faq-item.open .faq-a{max-height:300px;padding-top:10px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#6366f1;background:#eef2ff;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Creatinine Clearance</span></nav>
+    <div class="page-eyebrow">🫘 Renal · Pharmacology</div>
+    <h1>Creatinine Clearance<br><em>(Cockcroft-Gault)</em> Calculator</h1>
+    <p class="page-sub">Calculate CrCl for drug dosing in renal impairment. Includes automatic dose adjustment recommendations for 12 common drugs — gentamicin, metformin, digoxin, enoxaparin, vancomycin and more.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ Cockcroft-Gault 1976</span>
+      <span class="hbadge">✓ Drug Dose Adjustment</span>
+      <span class="hbadge">✓ CKD Staging</span>
+      <span class="hbadge">✓ Obesity Correction</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">Creatinine Clearance Calculator</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="e.g. 55" min="18" max="120" inputmode="decimal"/>
+        <div class="hint">years (18–120)</div>
+      </div>
+      <div class="field">
+        <label for="sex">Biological Sex</label>
+        <select id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <div class="hint">females × 0.85 correction</div>
+      </div>
+      <div class="field">
+        <label for="weight">Weight</label>
+        <input type="number" id="weight" placeholder="e.g. 70" min="20" max="300" inputmode="decimal"/>
+        <div class="hint">kg — use IBW if obese</div>
+      </div>
+      <div class="field">
+        <label>Serum Creatinine</label>
+        <div class="unit-row">
+          <button class="utab active" onclick="setCrUnit('mgdl')" id="u-mgdl">mg/dL</button>
+          <button class="utab" onclick="setCrUnit('umol')" id="u-umol">µmol/L</button>
+        </div>
+        <input type="number" id="creatinine" placeholder="e.g. 1.0" min="0.1" max="30" inputmode="decimal"/>
+        <div class="hint" id="cr-hint">mg/dL (normal: 0.6–1.2)</div>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate CrCl →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="crcl-display">
+        <div class="crcl-number" id="crcl-number" style="color:#6366f1">—</div>
+        <div class="crcl-unit">mL/min — Creatinine Clearance</div>
+        <div class="crcl-badge" id="crcl-badge"></div>
+      </div>
+      <div class="stage-bar">
+        <div class="sb s1" id="sb1"></div><div class="sb s2" id="sb2"></div>
+        <div class="sb s3" id="sb3"></div><div class="sb s4" id="sb4"></div>
+        <div class="sb s5" id="sb5"></div>
+      </div>
+      <div class="stage-labels">
+        <div class="sl">Normal<br>≥90</div><div class="sl">Mild<br>60–89</div>
+        <div class="sl">Moderate<br>30–59</div><div class="sl">Severe<br>15–29</div>
+        <div class="sl">Failure<br>&lt;15</div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">CrCl</div><div class="rval" id="r-crcl">—</div><div class="runit">mL/min</div></div>
+        <div class="rbox"><div class="rlabel">CKD Stage</div><div class="rval" id="r-stage">—</div><div class="runit">KDIGO</div></div>
+        <div class="rbox"><div class="rlabel">% Normal</div><div class="rval" id="r-pct">—</div><div class="runit">function</div></div>
+      </div>
+      <div style="font-size:0.78rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px">💊 Drug Dose Adjustments</div>
+      <table class="drug-table">
+        <thead><tr><th>Drug</th><th>Normal Dose</th><th>Recommendation</th></tr></thead>
+        <tbody id="drug-tbody"></tbody>
+      </table>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>Cockcroft-Gault Formula — Complete Guide</h2>
+    <p>The Cockcroft-Gault (CG) equation, published in 1976, remains the gold standard for estimating creatinine clearance for drug dosing purposes. It was derived from 249 male patients and validated extensively across diverse populations. Despite its age, it remains the formula of choice because <strong>virtually all drug pharmacokinetic studies and prescribing information cite CG-based CrCl</strong> for dose adjustment thresholds.</p>
+    <div class="formula-block">
+      CrCl (mL/min) = <span>[(</span>140 − Age<span>) ×</span> Weight (kg)<span>]</span> ÷ <span>[</span>72 × SCr (mg/dL)<span>]</span><br>
+      × 0.85 <span>if female</span><br><br>
+      SCr in µmol/L: divide by 88.4 to convert to mg/dL first
+    </div>
+    <h3>Why Age Matters So Much</h3>
+    <p>The (140 − Age) term captures the well-documented decline in GFR with ageing. Renal function peaks in early adulthood and declines at approximately 1 mL/min per year after age 40. Critically, serum creatinine may remain normal in elderly patients even with severely reduced CrCl because <strong>creatinine production falls proportionally with muscle mass</strong>. An 85-year-old woman weighing 45 kg with creatinine 0.7 mg/dL has a CrCl of only 28 mL/min — severe impairment despite a "normal" creatinine.</p>
+    <h3>The Female Correction Factor (×0.85)</h3>
+    <p>Women have approximately 15% less muscle mass than men of the same weight and age, producing proportionally less creatinine. The 0.85 correction factor accounts for this difference. Without it, CrCl would be systematically overestimated in women.</p>
+    <h3>Choosing the Right Weight</h3>
+    <p>Weight is the most contentious variable in the CG formula:</p>
+    <ul>
+      <li><strong>Not obese (ABW ≤ 120% IBW):</strong> Use actual body weight</li>
+      <li><strong>Obese (ABW > 120% IBW):</strong> Use IBW — adipose tissue produces minimal creatinine, so ABW overestimates CrCl</li>
+      <li><strong>Underweight (ABW &lt; IBW):</strong> Use actual body weight</li>
+      <li><strong>Oedematous/ascitic patients:</strong> Use estimated dry weight or IBW</li>
+    </ul>
+    <h3>CrCl vs eGFR — When to Use Each</h3>
+    <p>These are frequently confused. CrCl (Cockcroft-Gault) gives an absolute value in mL/min — ideal for drug dosing. eGFR (CKD-EPI, MDRD) is normalised to 1.73 m² body surface area — ideal for CKD staging and population-level cardiovascular risk. For a 50 kg woman, CrCl will be lower than eGFR; for a 100 kg man, CrCl will be higher. Always use CG-CrCl when checking drug prescribing information.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Drug Dosing in Renal Impairment — Comprehensive Guide</h2>
+    <h3>Antibiotics</h3>
+    <p><strong>Aminoglycosides (Gentamicin, Amikacin):</strong> Highly nephrotoxic, renally cleared. Use extended interval dosing (5–7 mg/kg once daily) with therapeutic drug monitoring. Reduce dose or extend interval when CrCl &lt;60 mL/min. Avoid if CrCl &lt;20 mL/min unless no alternative. Check levels — trough &lt;1 mg/L for gentamicin.</p>
+    <p><strong>Vancomycin:</strong> Uses AUC-guided dosing (target AUC/MIC 400–600). Loading dose based on actual weight; maintenance adjusted for CrCl. At CrCl &lt;30 mL/min, extend dosing interval to 24–48 hourly. Monitor trough levels if AUC monitoring unavailable.</p>
+    <p><strong>Piperacillin-Tazobactam:</strong> Reduce dose at CrCl &lt;40 mL/min. Extended infusion (4-hour) strategy improves pharmacodynamics especially in renal impairment.</p>
+    <h3>Cardiovascular Drugs</h3>
+    <p><strong>Digoxin:</strong> Narrow therapeutic index, primarily renally cleared. Use IBW for dosing calculations. Loading dose same regardless of renal function; maintenance halved if CrCl &lt;60 mL/min. Target levels 0.5–0.9 ng/mL in heart failure.</p>
+    <p><strong>Atenolol and Sotalol:</strong> Both renally cleared — reduce dose at CrCl &lt;35 mL/min. Sotalol requires careful QTc monitoring in renal impairment due to accumulation risk.</p>
+    <h3>Anticoagulants</h3>
+    <p><strong>Enoxaparin (therapeutic):</strong> Use 1 mg/kg BD for most patients. If CrCl &lt;30 mL/min, reduce to 1 mg/kg once daily or use unfractionated heparin with anti-Xa monitoring. Avoid LMWH if CrCl &lt;15 mL/min.</p>
+    <p><strong>Direct oral anticoagulants (DOACs):</strong> Apixaban is least renally cleared (27%) — can be used down to CrCl 15 mL/min with dose reduction. Rivaroxaban (33% renal) — avoid if CrCl &lt;15. Dabigatran (80% renal) — avoid if CrCl &lt;30.</p>
+    <h3>Diabetes Medications</h3>
+    <p><strong>Metformin:</strong> Risk of lactic acidosis from accumulation. Continue at full dose if CrCl ≥60. Reduce by 50% if CrCl 45–59. Stop if CrCl &lt;45 (NICE) or &lt;30 (some guidelines). Always withhold before contrast procedures if CrCl &lt;60.</p>
+    <p><strong>SGLT2 inhibitors:</strong> Reduced glucose-lowering efficacy at low GFR. Empagliflozin and dapagliflozin approved for heart failure/CKD protection down to eGFR 20+, even without glucose-lowering effect.</p>
+    <h3>NSAIDs and Analgesics</h3>
+    <p>NSAIDs should be avoided in CrCl &lt;60 mL/min — they inhibit prostaglandin-mediated afferent arteriolar vasodilation, reducing GFR acutely. In CKD, they can precipitate acute-on-chronic kidney injury. Use paracetamol as first-line analgesia in renal impairment.</p>
+    <p><strong>Codeine:</strong> Active metabolite (morphine-6-glucuronide) accumulates in renal failure — avoid in CrCl &lt;30. Use low-dose fentanyl or buprenorphine patches as safer alternatives in severe CKD.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Clinical Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">CKD-EPI 2021 for CKD staging</div></div></a>
+      <a href="/medical-calculators/ibw-calculator" class="related-card"><span class="rc-icon">⚖️</span><div><div class="rc-title">IBW Calculator</div><div class="rc-desc">Ideal weight for CG formula</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Renal perfusion pressure</div></div></a>
+      <a href="/medical-calculators/iv-drip-rate-calculator" class="related-card"><span class="rc-icon">💧</span><div><div class="rc-title">IV Drip Rate</div><div class="rc-desc">Drug infusion calculations</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Drug dose adjustments must be verified against current prescribing information, local formulary, and confirmed with a clinical pharmacist. CrCl is an estimate — actual renal function may differ. Always use clinical judgement alongside calculated values.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let crUnit='mgdl', lastResult=null;
+const faqs=[
+  ["What is the Cockcroft-Gault formula?","CrCl (mL/min) = [(140 − Age) × Weight (kg)] ÷ [72 × SCr (mg/dL)] × 0.85 for females. This 1976 formula remains the standard for drug dosing dose adjustment in renal impairment."],
+  ["What is normal creatinine clearance?","Normal CrCl is 90–130 mL/min. Values decline ~1 mL/min per year after age 40. CrCl <60 requires drug dose review; <30 is severe impairment; <15 is kidney failure."],
+  ["Why use Cockcroft-Gault instead of CKD-EPI for drug dosing?","Most drug pharmacokinetic studies used CG to derive dose adjustment thresholds. CKD-EPI is better for CKD staging; CG gives absolute CrCl in mL/min matching how drug prescribing information was written."],
+  ["What weight to use in Cockcroft-Gault?","Use actual weight if not obese. If ABW >120% IBW, use IBW — adipose tissue produces minimal creatinine so actual weight overestimates CrCl in obese patients."],
+  ["When to stop metformin based on CrCl?","Full dose if CrCl ≥60. Reduce 50% if CrCl 45–59. Stop if CrCl <45 (NICE) or <30. Withhold before contrast if CrCl <60."],
+  ["How does CrCl change with age?","Declines ~1 mL/min per year after 40. An 80-year-old with 'normal' creatinine may have CrCl of only 40–50 mL/min due to reduced muscle mass. Serum creatinine alone is unreliable in the elderly."]
+];
+document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
+function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open');}
+function setCrUnit(u){crUnit=u;document.getElementById('u-mgdl').classList.toggle('active',u==='mgdl');document.getElementById('u-umol').classList.toggle('active',u==='umol');document.getElementById('cr-hint').textContent=u==='mgdl'?'mg/dL (normal: 0.6–1.2)':'µmol/L (normal: 53–106)';}
+function getDrugRows(crcl){
+  const drugs=[
+    {name:'Gentamicin',normal:'5 mg/kg OD',fn:c=>c>=60?{cls:'dose-ok',txt:'Standard dose. TDM required.'}:c>=30?{cls:'dose-reduce',txt:'Reduce dose / extend interval. TDM essential.'}:{cls:'dose-stop',txt:'Avoid or specialist guidance only.'}},
+    {name:'Vancomycin',normal:'15–20 mg/kg BD',fn:c=>c>=60?{cls:'dose-ok',txt:'Standard dosing. AUC monitoring preferred.'}:c>=30?{cls:'dose-reduce',txt:'Extend interval to 24–36 h. Monitor levels.'}:{cls:'dose-reduce',txt:'Extend to 48 h or more. Strict TDM.'}},
+    {name:'Metformin',normal:'500–1000 mg BD',fn:c=>c>=60?{cls:'dose-ok',txt:'Full dose — continue.'}:c>=45?{cls:'dose-reduce',txt:'Reduce dose by 50%. Review regularly.'}:{cls:'dose-stop',txt:'STOP — lactic acidosis risk.'}},
+    {name:'Digoxin',normal:'0.125–0.25 mg OD',fn:c=>c>=60?{cls:'dose-ok',txt:'Standard dose. Monitor levels.'}:c>=30?{cls:'dose-reduce',txt:'Reduce to 0.0625–0.125 mg OD.'}:{cls:'dose-caution',txt:'0.0625 mg every 48 h. Strict monitoring.'}},
+    {name:'Enoxaparin (therapeutic)',normal:'1 mg/kg BD',fn:c=>c>=30?{cls:'dose-ok',txt:'Standard dose. Anti-Xa if >100 kg.'}:{cls:'dose-reduce',txt:'Reduce to 1 mg/kg OD. Monitor anti-Xa.'}},
+    {name:'Atenolol',normal:'50–100 mg OD',fn:c=>c>=35?{cls:'dose-ok',txt:'Standard dose.'}:c>=15?{cls:'dose-reduce',txt:'Reduce to 25–50 mg OD.'}:{cls:'dose-reduce',txt:'25 mg OD or every other day.'}},
+    {name:'Piperacillin-Tazobactam',normal:'4.5 g TDS/QDS',fn:c=>c>=40?{cls:'dose-ok',txt:'Standard dose.'}:{cls:'dose-reduce',txt:'Reduce to 2.25 g QDS or 4.5 g BD.'}},
+    {name:'Apixaban (AF)',normal:'5 mg BD',fn:c=>c>=30?{cls:'dose-ok',txt:'Standard or 2.5 mg BD if ≥2 risk factors.'}:c>=15?{cls:'dose-caution',txt:'Use with caution. Consider dose reduction.'}:{cls:'dose-stop',txt:'Avoid — insufficient data.'}},
+    {name:'NSAIDs',normal:'—',fn:c=>c>=60?{cls:'dose-caution',txt:'Use with caution. Monitor renal function.'}:{cls:'dose-stop',txt:'AVOID — risk of acute kidney injury.'}},
+    {name:'Codeine',normal:'30–60 mg QDS',fn:c=>c>=60?{cls:'dose-ok',txt:'Caution — start low, titrate.'}:c>=30?{cls:'dose-reduce',txt:'Reduce dose and frequency. Risk of accumulation.'}:{cls:'dose-stop',txt:'AVOID — use fentanyl or buprenorphine.'}},
+  ];
+  return drugs.map(d=>{const r=d.fn(crcl);return `<tr><td><strong>${d.name}</strong></td><td style="color:#6b7280">${d.normal}</td><td class="${r.cls}">${r.txt}</td></tr>`;}).join('');
+}
+function getStage(crcl){
+  if(crcl>=90)return{label:'Normal / High (G1)',cls:'stage-normal',stage:1};
+  if(crcl>=60)return{label:'Mildly Reduced (G2)',cls:'stage-mild',stage:2};
+  if(crcl>=30)return{label:'Moderately Reduced (G3)',cls:'stage-moderate',stage:3};
+  if(crcl>=15)return{label:'Severely Reduced (G4)',cls:'stage-severe',stage:4};
+  return{label:'Kidney Failure (G5)',cls:'stage-failure',stage:5};
+}
+function calculate(){
+  const age=parseFloat(document.getElementById('age').value);
+  const sex=document.getElementById('sex').value;
+  const wt=parseFloat(document.getElementById('weight').value);
+  let scr=parseFloat(document.getElementById('creatinine').value);
+  const errEl=document.getElementById('error-msg');
+  errEl.className='error-msg';
+  if(!age||!wt||!scr){errEl.textContent='Please fill in all fields.';errEl.className='error-msg show';return;}
+  if(age<18||age>120){errEl.textContent='Age must be 18–120 years.';errEl.className='error-msg show';return;}
+  if(crUnit==='umol') scr=scr/88.4;
+  if(scr<0.1||scr>30){errEl.textContent='Serum creatinine value seems incorrect. Please check units.';errEl.className='error-msg show';return;}
+  let crcl=((140-age)*wt)/(72*scr);
+  if(sex==='female') crcl*=0.85;
+  crcl=Math.round(crcl*10)/10;
+  const stage=getStage(crcl);
+  const pct=Math.min(100,Math.round((crcl/120)*100));
+  // Update UI
+  document.getElementById('crcl-number').textContent=crcl;
+  document.getElementById('crcl-number').style.color=crcl>=90?'#16a34a':crcl>=60?'#d97706':crcl>=30?'#ea580c':'#dc2626';
+  const badge=document.getElementById('crcl-badge');
+  badge.textContent=stage.label; badge.className='crcl-badge '+stage.cls;
+  // Stage bar
+  for(let i=1;i<=5;i++){const el=document.getElementById('sb'+i);el.className='sb s'+i+(i<=stage.stage?' active':'');}
+  document.getElementById('r-crcl').textContent=crcl;
+  document.getElementById('r-stage').textContent='G'+stage.stage;
+  document.getElementById('r-pct').textContent=pct+'%';
+  document.getElementById('drug-tbody').innerHTML=getDrugRows(crcl);
+  lastResult=`CrCl (Cockcroft-Gault): ${crcl} mL/min\nStage: ${stage.label}\nAge: ${age}y | Sex: ${sex} | Weight: ${wt}kg | SCr: ${document.getElementById('creatinine').value} ${crUnit==='mgdl'?'mg/dL':'µmol/L'}\nCalculated at rxmedcalc.com/medical-calculators/creatinine-clearance`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined') umami.track('crcl_calc',{crcl,stage:stage.stage});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🫘 CrCl Result\n'+lastResult),'_blank');}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy';},2000);});}
+function resetCalc(){['age','weight','creatinine'].forEach(id=>{document.getElementById(id).value='';});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null;}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate();});
+</script>
+</body>
+</html>
