@@ -50,7 +50,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="brand-name">🩺 MedCalc India</div>
-      <p>Free, clinically accurate tools for Indian doctors, nurses and patients. Built on NCDC, IAP, FOGSI and WHO guidelines. No login. No data stored.</p>
+      <p>Free, clinically accurate tools for Doctors Worldwide, nurses and patients. Built on NCDC, IAP, FOGSI and WHO guidelines. No login. No data stored.</p>
     </div>
     <div class="footer-col">
       <h4>Emergency</h4>
