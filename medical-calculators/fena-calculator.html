@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="fena-calculator">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FENa Calculator | Fractional Excretion of Sodium | Prerenal vs Renal AKI | RxMedCalc</title>
+<meta name="description" content="Free FENa (fractional excretion of sodium) calculator. Distinguish prerenal from intrinsic renal acute kidney injury. Includes FEUrea for patients on diuretics, clinical interpretation, and AKI management guide. Used by nephrologists and emergency physicians worldwide."/>
+<meta name="keywords" content="FENa calculator, fractional excretion of sodium, FENa AKI, prerenal vs renal AKI, FENa interpretation, FEUrea calculator, acute kidney injury calculator, FENa less than 1, FENa formula, fractional excretion sodium AKI"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/fena-calculator"/>
+<meta property="og:title" content="FENa Calculator | Fractional Excretion of Sodium | AKI | RxMedCalc"/>
+<meta property="og:description" content="Calculate FENa and FEUrea to distinguish prerenal from intrinsic renal AKI. Clinical interpretation and management guide. Free for doctors worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/fena-calculator"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a2030 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(99,102,241,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(99,102,241,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#a5b4fc;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#818cf8}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#6366f1;border-radius:2px;flex-shrink:0}
+.section-label{font-size:0.72rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em;margin:18px 0 10px}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:4px}
+@media(max-width:480px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none}
+.field input:focus{border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+.optional-note{font-size:0.78rem;color:#6b7280;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin-bottom:16px}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#6366f1,#4f46e5);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(99,102,241,0.3);margin-top:16px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(99,102,241,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.fena-display{text-align:center;margin-bottom:20px}
+.fena-number{font-family:'Fraunces',Georgia,serif;font-size:4rem;font-weight:900;line-height:1}
+.fena-unit{font-size:0.9rem;color:#6b7280;margin-top:4px}
+.fena-badge{display:inline-block;padding:7px 24px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-top:10px}
+.prerenal{background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0}
+.renal{background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca}
+.indeterminate{background:#fffbeb;color:#d97706;border:1.5px solid #fde68a}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#eef2ff;border-color:#c7d2fe}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.5rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#6366f1}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.interp-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.7}
+.interp-pre{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.interp-ren{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.interp-ind{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#6366f1;color:#6366f1}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#6366f1;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#6366f1;font-size:0.8rem}
+.formula-block{background:#eef2ff;border:1.5px solid #c7d2fe;border-radius:10px;padding:14px 16px;font-family:'Courier New',monospace;font-size:0.88rem;color:#3730a3;margin:10px 0;line-height:2}
+.compare-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:12px 0}
+.compare-table th{background:#eef2ff;color:#4338ca;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid #c7d2fe}
+.compare-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+.compare-table tr:hover td{background:#fafafa}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#6366f1;background:#eef2ff;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>FENa Calculator</span></nav>
+    <div class="page-eyebrow">🫘 Nephrology · Acute Kidney Injury</div>
+    <h1>FENa Calculator<br><em>Fractional Excretion</em> of Sodium</h1>
+    <p class="page-sub">Distinguish prerenal from intrinsic renal AKI. Includes FEUrea for patients on diuretics, clinical interpretation, and causes of false results.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ FENa &amp; FEUrea</span>
+      <span class="hbadge">✓ AKI Classification</span>
+      <span class="hbadge">✓ Diuretic Correction</span>
+      <span class="hbadge">✓ mg/dL &amp; mmol/L</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">FENa &amp; FEUrea Calculator</div>
+
+    <div class="section-label">Serum Values</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="s-na">Serum Sodium</label>
+        <input type="number" id="s-na" placeholder="e.g. 138" min="100" max="180" inputmode="decimal"/>
+        <div class="hint">mmol/L (mEq/L)</div>
+      </div>
+      <div class="field">
+        <label for="s-cr">Serum Creatinine</label>
+        <input type="number" id="s-cr" placeholder="e.g. 2.0" min="0.1" max="30" inputmode="decimal"/>
+        <div class="hint">mg/dL</div>
+      </div>
+    </div>
+
+    <div class="section-label">Urine Values (spot urine sample)</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="u-na">Urine Sodium</label>
+        <input type="number" id="u-na" placeholder="e.g. 15" min="1" max="400" inputmode="decimal"/>
+        <div class="hint">mmol/L (mEq/L)</div>
+      </div>
+      <div class="field">
+        <label for="u-cr">Urine Creatinine</label>
+        <input type="number" id="u-cr" placeholder="e.g. 80" min="1" max="500" inputmode="decimal"/>
+        <div class="hint">mg/dL</div>
+      </div>
+    </div>
+
+    <div class="section-label">FEUrea (optional — for patients on diuretics)</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="s-bun">Serum BUN / Urea</label>
+        <input type="number" id="s-bun" placeholder="e.g. 40" min="1" max="500" inputmode="decimal"/>
+        <div class="hint">mg/dL (BUN) or mmol/L (urea)</div>
+      </div>
+      <div class="field">
+        <label for="u-bun">Urine Urea / BUN</label>
+        <input type="number" id="u-bun" placeholder="e.g. 400" min="1" max="5000" inputmode="decimal"/>
+        <div class="hint">mg/dL (BUN) or mmol/L (urea)</div>
+      </div>
+    </div>
+    <div class="optional-note">ℹ️ BUN/Urea inputs are optional. If provided, FEUrea will be calculated — useful when patient is on diuretics (which falsely elevate FENa).</div>
+
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate FENa →</button>
+
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="fena-display">
+        <div class="fena-number" id="fena-number" style="color:#6366f1">—</div>
+        <div class="fena-unit">% — Fractional Excretion of Sodium</div>
+        <div class="fena-badge" id="fena-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">FENa</div><div class="rval" id="r-fena">—</div><div class="runit">%</div></div>
+        <div class="rbox" id="feun-box"><div class="rlabel">FEUrea</div><div class="rval" id="r-feun">N/A</div><div class="runit">%</div></div>
+      </div>
+      <div class="interp-box" id="interp-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>FENa Explained — Distinguishing AKI Types</h2>
+    <div class="formula-block">
+      FENa (%) = [(Urine Na × Serum Cr) ÷ (Serum Na × Urine Cr)] × 100<br>
+      FEUrea (%) = [(Urine Urea × Serum Cr) ÷ (Serum Urea × Urine Cr)] × 100
+    </div>
+    <table class="compare-table">
+      <thead><tr><th>Marker</th><th>&lt;1%</th><th>1–2%</th><th>&gt;2%</th></tr></thead>
+      <tbody>
+        <tr><td><strong>FENa</strong></td><td>Prerenal AKI</td><td>Indeterminate</td><td>Intrinsic renal / postrenal</td></tr>
+        <tr><td><strong>FEUrea</strong></td><td>&lt;35% = Prerenal</td><td>35–50%</td><td>&gt;50% = Intrinsic renal</td></tr>
+      </tbody>
+    </table>
+    <h3>When FENa Can Be Misleading</h3>
+    <p><strong>False low FENa (looks prerenal, but isn't):</strong></p>
+    <ul>
+      <li>Early contrast nephropathy — tubules initially intact, FENa &lt;1% for first 24 hours</li>
+      <li>Myoglobinuria / haemoglobinuria — tubular toxin but early FENa low</li>
+      <li>Early urinary obstruction</li>
+      <li>Acute glomerulonephritis — sodium retention due to inflammation</li>
+    </ul>
+    <p><strong>False high FENa (looks intrinsic, but may be prerenal):</strong></p>
+    <ul>
+      <li>Diuretics — loop and thiazide diuretics block tubular sodium reabsorption → use FEUrea instead</li>
+      <li>Pre-existing CKD — tubular function already impaired</li>
+      <li>Adrenal insufficiency</li>
+      <li>Bicarbonaturia (high bicarbonate with sodium in urine)</li>
+    </ul>
+    <h3>AKI Management by Type</h3>
+    <ul>
+      <li><strong>Prerenal (FENa &lt;1%):</strong> IV fluid resuscitation — 500 mL NS over 30 min (adult). Monitor urine output, creatinine. Identify and treat cause (bleeding, sepsis, heart failure, medications)</li>
+      <li><strong>Intrinsic renal (FENa &gt;2%):</strong> Identify specific cause — ATN (most common), glomerulonephritis, interstitial nephritis, vasculitis. Nephrology referral. Avoid nephrotoxins. Optimise haemodynamics</li>
+      <li><strong>Postrenal (obstruction):</strong> FENa may be &gt;2% or &lt;1% early. Urinary ultrasound mandatory. Catheterise if urethral obstruction. Nephrostomy if ureteric obstruction</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">Kidney function staging</div></div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">Creatinine Clearance</div><div class="rc-desc">Drug dosing in AKI</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Renal perfusion pressure</div></div></a>
+      <a href="/medical-calculators/holliday-segar" class="related-card"><span class="rc-icon">💧</span><div><div class="rc-title">Maintenance Fluids</div><div class="rc-desc">IV fluid rate calculation</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> FENa and FEUrea are aids in AKI classification. Clinical judgement, volume status assessment, urinalysis, urine microscopy, and renal ultrasound are essential for complete AKI evaluation. FENa has important limitations — always interpret in full clinical context. Nephrology consultation recommended for unexplained or severe AKI.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let lastResult=null;
+function calculate(){
+  const sNa=parseFloat(document.getElementById('s-na').value);
+  const sCr=parseFloat(document.getElementById('s-cr').value);
+  const uNa=parseFloat(document.getElementById('u-na').value);
+  const uCr=parseFloat(document.getElementById('u-cr').value);
+  const sBun=parseFloat(document.getElementById('s-bun').value)||null;
+  const uBun=parseFloat(document.getElementById('u-bun').value)||null;
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!sNa||!sCr||!uNa||!uCr){errEl.textContent='Please enter all 4 required values (serum Na, serum Cr, urine Na, urine Cr).';errEl.className='error-msg show';return}
+  const fena=Math.round(((uNa*sCr)/(sNa*uCr))*10000)/100;
+  let feun=null;
+  if(sBun&&uBun){feun=Math.round(((uBun*sCr)/(sBun*uCr))*10000)/100;}
+  document.getElementById('fena-number').textContent=fena+'%';
+  document.getElementById('r-fena').textContent=fena+'%';
+  document.getElementById('r-feun').textContent=feun!==null?feun+'%':'N/A';
+  const badge=document.getElementById('fena-badge');
+  const interp=document.getElementById('interp-box');
+  let primary=fena;let useFeun=false;
+  if(feun!==null&&fena>1){primary=feun/100*2.857;useFeun=true;}// scale FEUrea threshold to compare
+  if(fena<1||(feun!==null&&feun<35)){
+    badge.textContent='Likely Prerenal';badge.className='fena-badge prerenal';
+    interp.className='interp-box interp-pre';
+    interp.textContent='✅ FENa <1%'+(feun!==null?` and FEUrea <35% (${feun}%)`:'')+ ' — suggests prerenal AKI.\n\nKidney tubules are intact and maximally reabsorbing sodium in response to reduced renal perfusion. Treatment: IV fluid resuscitation, treat underlying cause (dehydration, sepsis, bleeding, heart failure, hepatorenal syndrome). Monitor creatinine and urine output response to fluids.';
+  } else if(fena>2||(feun!==null&&feun>50)){
+    badge.textContent='Likely Intrinsic Renal';badge.className='fena-badge renal';
+    interp.className='interp-box interp-ren';
+    interp.textContent='⚠️ FENa >2%'+(feun!==null?` and FEUrea >50% (${feun}%)`:'')+ ' — suggests intrinsic renal injury (ATN most likely).\n\nTubular function is impaired — sodium not being reabsorbed normally. Common causes: acute tubular necrosis (ischaemic or nephrotoxic), acute interstitial nephritis, glomerulonephritis. Consider: nephrology referral, urine microscopy (muddy brown casts = ATN), avoid nephrotoxins, optimise haemodynamics.';
+  } else {
+    badge.textContent='Indeterminate';badge.className='fena-badge indeterminate';
+    interp.className='interp-box interp-ind';
+    interp.textContent='⚠️ FENa 1–2%'+(feun!==null?` (FEUrea: ${feun}%)`:'')+ ' — indeterminate zone.\n\nCannot reliably distinguish prerenal from intrinsic renal AKI. Consider: full clinical assessment, fluid challenge if not contraindicated, urine microscopy, renal ultrasound, and urine electrolytes repeated after fluid challenge.';
+  }
+  lastResult=`FENa: ${fena}%${feun!==null?'\nFEUrea: '+feun+'%':''}\nSNa: ${sNa} | SCr: ${sCr} | UNa: ${uNa} | UCr: ${uCr}\nCalculated at rxmedcalc.com/medical-calculators/fena-calculator`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('fena_calc',{fena});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🫘 FENa Result\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['s-na','s-cr','u-na','u-cr','s-bun','u-bun'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>

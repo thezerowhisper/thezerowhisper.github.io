@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="qtc-calculator">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>QTc Calculator | Corrected QT Interval | Bazett, Fridericia, Framingham | RxMedCalc</title>
+<meta name="description" content="Free QTc (corrected QT interval) calculator using Bazett, Fridericia, Framingham and Hodges formulas. Assess risk of torsades de pointes, drug-induced QT prolongation, and Long QT syndrome. Includes QT prolonging drug list and management guide. Used by cardiologists and emergency physicians worldwide."/>
+<meta name="keywords" content="QTc calculator, corrected QT interval, QTc Bazett formula, QTc prolonged, long QT syndrome, torsades de pointes, QT interval calculator, QTc normal range, drug induced QT prolongation, QTc ms calculator, Fridericia formula QTc"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/qtc-calculator"/>
+<meta property="og:title" content="QTc Calculator | Corrected QT Interval | TdP Risk | RxMedCalc"/>
+<meta property="og:description" content="Calculate corrected QT interval using Bazett, Fridericia, Framingham and Hodges formulas. TdP risk assessment and QT drug list. Free for doctors."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/qtc-calculator"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1f1020 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(168,85,247,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,247,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(168,85,247,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#d8b4fe;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#c084fc}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#a855f7;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:480px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input,.field select{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none}
+.field input:focus,.field select:focus{border-color:#a855f7;box-shadow:0 0 0 3px rgba(168,85,247,0.1)}
+.field select option{background:#fff;color:#0d1b2a}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#a855f7,#9333ea);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(168,85,247,0.3);margin-top:4px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(168,85,247,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.qtc-display{text-align:center;margin-bottom:20px}
+.qtc-number{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;line-height:1}
+.qtc-unit{font-size:0.9rem;color:#6b7280;margin-top:4px}
+.qtc-badge{display:inline-block;padding:7px 24px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-top:10px}
+.qtc-normal{background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0}
+.qtc-borderline{background:#fffbeb;color:#d97706;border:1.5px solid #fde68a}
+.qtc-prolonged{background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca}
+.qtc-critical{background:#dc2626;color:#fff}
+/* Formula comparison */
+.formula-compare{background:#faf5ff;border:1.5px solid #e9d5ff;border-radius:12px;padding:16px;margin-bottom:16px}
+.fc-title{font-size:0.72rem;font-weight:700;color:#7e22ce;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px}
+.fc-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f3e8ff;font-size:0.85rem}
+.fc-row:last-child{border-bottom:none}
+.fc-name{color:#374151;font-weight:600}
+.fc-val{color:#a855f7;font-weight:700;font-variant-numeric:tabular-nums}
+.risk-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.7}
+.risk-normal{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.risk-borderline{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.risk-prolonged{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.risk-critical{background:#fef2f2;border:2px solid #dc2626;color:#7f1d1d}
+/* result boxes */
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#faf5ff;border-color:#e9d5ff}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.3rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#a855f7}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#a855f7;color:#a855f7}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#a855f7;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#a855f7;font-size:0.8rem}
+.formula-block{background:#faf5ff;border:1.5px solid #e9d5ff;border-radius:10px;padding:14px 16px;font-family:'Courier New',monospace;font-size:0.85rem;color:#6b21a8;margin:10px 0;line-height:2}
+.drug-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:12px 0}
+@media(max-width:500px){.drug-grid{grid-template-columns:1fr}}
+.drug-cat{background:#faf5ff;border:1.5px solid #e9d5ff;border-radius:10px;padding:14px}
+.drug-cat-title{font-size:0.75rem;font-weight:700;color:#7e22ce;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px}
+.drug-list{list-style:none;padding:0}
+.drug-list li{font-size:0.8rem;color:#374151;padding:3px 0;border-bottom:1px solid #f3e8ff}
+.drug-list li:last-child{border-bottom:none}
+.risk-pill{display:inline-block;padding:1px 6px;border-radius:8px;font-size:0.65rem;font-weight:700;margin-left:6px}
+.rp-high{background:#fef2f2;color:#dc2626;border:1px solid #fecaca}
+.rp-mod{background:#fffbeb;color:#d97706;border:1px solid #fde68a}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#a855f7;background:#faf5ff;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>QTc Calculator</span></nav>
+    <div class="page-eyebrow">📈 Cardiology · ECG · Arrhythmia</div>
+    <h1>QTc Calculator<br><em>Corrected QT</em> Interval</h1>
+    <p class="page-sub">Calculate corrected QT interval using Bazett, Fridericia, Framingham and Hodges formulas. Risk of torsades de pointes, Long QT syndrome, and drug-induced QT prolongation.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 4 Correction Formulas</span>
+      <span class="hbadge">✓ TdP Risk Assessment</span>
+      <span class="hbadge">✓ QT Drug Reference</span>
+      <span class="hbadge">✓ Sex-Specific Cutoffs</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">QTc Calculator</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="qt">QT Interval</label>
+        <input type="number" id="qt" placeholder="e.g. 420" min="200" max="700" inputmode="decimal"/>
+        <div class="hint">milliseconds (ms) — from ECG</div>
+      </div>
+      <div class="field">
+        <label for="hr">Heart Rate</label>
+        <input type="number" id="hr" placeholder="e.g. 75" min="20" max="300" inputmode="decimal"/>
+        <div class="hint">beats per minute (bpm)</div>
+      </div>
+      <div class="field">
+        <label for="sex">Biological Sex</label>
+        <select id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <div class="hint">normal cutoffs differ by sex</div>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate QTc →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="qtc-display">
+        <div class="qtc-number" id="qtc-number" style="color:#a855f7">—</div>
+        <div class="qtc-unit">ms — QTc (Bazett Formula)</div>
+        <div class="qtc-badge" id="qtc-badge"></div>
+      </div>
+      <div class="formula-compare">
+        <div class="fc-title">All Formula Results</div>
+        <div class="fc-row"><span class="fc-name">Bazett (most used)</span><span class="fc-val" id="fc-bazett">—</span></div>
+        <div class="fc-row"><span class="fc-name">Fridericia (preferred at high HR)</span><span class="fc-val" id="fc-frid">—</span></div>
+        <div class="fc-row"><span class="fc-name">Framingham</span><span class="fc-val" id="fc-fram">—</span></div>
+        <div class="fc-row"><span class="fc-name">Hodges</span><span class="fc-val" id="fc-hodg">—</span></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">QTc (Bazett)</div><div class="rval" id="r-qtc">—</div><div class="runit">ms</div></div>
+        <div class="rbox"><div class="rlabel">QT (measured)</div><div class="rval" id="r-qt">—</div><div class="runit">ms</div></div>
+        <div class="rbox"><div class="rlabel">RR interval</div><div class="rval" id="r-rr">—</div><div class="runit">seconds</div></div>
+      </div>
+      <div class="risk-box" id="risk-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>QTc Normal Range &amp; Interpretation</h2>
+    <div class="formula-block">
+      Bazett: QTc = QT ÷ √(RR in seconds)  [most common, overestimates at high HR]<br>
+      Fridericia: QTc = QT ÷ RR^(1/3)  [preferred at HR &gt;60 or &lt;100]<br>
+      Framingham: QTc = QT + 0.154×(1−RR)<br>
+      Hodges: QTc = QT + 1.75×(HR−60)<br>
+      RR interval = 60 ÷ Heart Rate
+    </div>
+    <h3>Normal QTc Values</h3>
+    <ul>
+      <li><strong>Normal males:</strong> QTc ≤440 ms</li>
+      <li><strong>Normal females:</strong> QTc ≤460 ms (women have naturally longer QTc due to hormonal effects)</li>
+      <li><strong>Borderline prolonged (males):</strong> 441–460 ms — monitor, identify and remove risk factors</li>
+      <li><strong>Borderline prolonged (females):</strong> 461–480 ms</li>
+      <li><strong>Prolonged:</strong> &gt;460 ms males / &gt;480 ms females — avoid QT-prolonging drugs, check electrolytes</li>
+      <li><strong>Critical / High TdP risk:</strong> &gt;500 ms in either sex — drug withdrawal, electrolyte correction, cardiac monitoring, consider admission</li>
+    </ul>
+    <h3>Why QTc Varies by Formula</h3>
+    <p>All QTc formulas attempt to remove the effect of heart rate on QT duration. Bazett's formula (QT ÷ √RR) is most widely used but overcorrects at high heart rates (&gt;100 bpm) — making QTc falsely high in tachycardia. Fridericia (cube root correction) performs better at high and low heart rates and is recommended by the FDA and most regulatory bodies for drug-induced QT assessment. For clinical bedside use, Bazett remains the standard.</p>
+    <h3>Common QT-Prolonging Drugs</h3>
+    <div class="drug-grid">
+      <div class="drug-cat">
+        <div class="drug-cat-title">Cardiac Drugs</div>
+        <ul class="drug-list">
+          <li>Amiodarone <span class="risk-pill rp-high">High</span></li>
+          <li>Sotalol <span class="risk-pill rp-high">High</span></li>
+          <li>Quinidine <span class="risk-pill rp-high">High</span></li>
+          <li>Procainamide <span class="risk-pill rp-high">High</span></li>
+          <li>Disopyramide <span class="risk-pill rp-high">High</span></li>
+          <li>Dofetilide <span class="risk-pill rp-high">High</span></li>
+        </ul>
+      </div>
+      <div class="drug-cat">
+        <div class="drug-cat-title">Antibiotics</div>
+        <ul class="drug-list">
+          <li>Azithromycin <span class="risk-pill rp-high">High</span></li>
+          <li>Clarithromycin <span class="risk-pill rp-high">High</span></li>
+          <li>Ciprofloxacin <span class="risk-pill rp-mod">Moderate</span></li>
+          <li>Moxifloxacin <span class="risk-pill rp-high">High</span></li>
+          <li>Chloroquine <span class="risk-pill rp-high">High</span></li>
+          <li>Fluconazole <span class="risk-pill rp-mod">Moderate</span></li>
+        </ul>
+      </div>
+      <div class="drug-cat">
+        <div class="drug-cat-title">Psychiatry</div>
+        <ul class="drug-list">
+          <li>Haloperidol <span class="risk-pill rp-high">High</span></li>
+          <li>Quetiapine <span class="risk-pill rp-mod">Moderate</span></li>
+          <li>Olanzapine <span class="risk-pill rp-mod">Moderate</span></li>
+          <li>Citalopram ≥40mg <span class="risk-pill rp-high">High</span></li>
+          <li>Tricyclics (TCA) <span class="risk-pill rp-high">High</span></li>
+          <li>Lithium <span class="risk-pill rp-mod">Moderate</span></li>
+        </ul>
+      </div>
+      <div class="drug-cat">
+        <div class="drug-cat-title">Others</div>
+        <ul class="drug-list">
+          <li>Ondansetron ≥32mg IV <span class="risk-pill rp-high">High</span></li>
+          <li>Methadone <span class="risk-pill rp-high">High</span></li>
+          <li>Domperidone <span class="risk-pill rp-high">High</span></li>
+          <li>Tamoxifen <span class="risk-pill rp-mod">Moderate</span></li>
+          <li>Arsenic trioxide <span class="risk-pill rp-high">High</span></li>
+        </ul>
+      </div>
+    </div>
+    <h3>Risk Factors for Drug-Induced QT Prolongation</h3>
+    <ul>
+      <li>Female sex (naturally longer baseline QTc)</li>
+      <li>Hypokalaemia (most common electrolyte cause — repolarisation reserve reduced)</li>
+      <li>Hypomagnesaemia</li>
+      <li>Hypocalcaemia</li>
+      <li>Bradycardia — longer RR interval gives more time for delayed repolarisation</li>
+      <li>Congenital Long QT syndrome</li>
+      <li>Heart failure, left ventricular hypertrophy</li>
+      <li>Combining multiple QT-prolonging drugs</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/cha2ds2-vasc" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">CHA₂DS₂-VASc</div><div class="rc-desc">Stroke risk in AF</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Cardiac perfusion</div></div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">CrCl Calculator</div><div class="rc-desc">Dose adjust for drug metabolism</div></div></a>
+      <a href="/medical-calculators/news2" class="related-card"><span class="rc-icon">📉</span><div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Clinical deterioration</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> QTc calculation is a screening tool only. Accurate QT measurement from a 12-lead ECG requires trained clinical assessment — the QT interval should be measured in leads II or V5, from QRS onset to T-wave end, averaged over 3–5 beats. Machine-measured QT values may be inaccurate. Always interpret in clinical context. QTc &gt;500 ms warrants urgent cardiology review.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let lastResult=null;
+function calculate(){
+  const qt=parseFloat(document.getElementById('qt').value);
+  const hr=parseFloat(document.getElementById('hr').value);
+  const sex=document.getElementById('sex').value;
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!qt||!hr){errEl.textContent='Please enter QT interval and heart rate.';errEl.className='error-msg show';return}
+  if(qt<200||qt>700){errEl.textContent='QT interval should be 200–700 ms.';errEl.className='error-msg show';return}
+  if(hr<20||hr>300){errEl.textContent='Heart rate should be 20–300 bpm.';errEl.className='error-msg show';return}
+  const rr=60/hr;
+  const bazett=Math.round(qt/Math.sqrt(rr));
+  const frid=Math.round(qt/Math.pow(rr,1/3));
+  const fram=Math.round(qt+0.154*(1-rr)*1000);// convert back: 0.154 × (1 - RR_seconds) × 1000 for ms
+  const hodg=Math.round(qt+1.75*(hr-60));
+  document.getElementById('qtc-number').textContent=bazett;
+  document.getElementById('fc-bazett').textContent=bazett+' ms';
+  document.getElementById('fc-frid').textContent=frid+' ms';
+  document.getElementById('fc-fram').textContent=fram+' ms';
+  document.getElementById('fc-hodg').textContent=hodg+' ms';
+  document.getElementById('r-qtc').textContent=bazett+' ms';
+  document.getElementById('r-qt').textContent=qt+' ms';
+  document.getElementById('r-rr').textContent=Math.round(rr*1000)/1000+' s';
+  const normalLimit=sex==='female'?460:440;
+  const badge=document.getElementById('qtc-badge');
+  const riskBox=document.getElementById('risk-box');
+  let badgeCls,badgeTxt,riskCls,riskTxt;
+  if(bazett<=normalLimit){
+    badgeCls='qtc-normal';badgeTxt='Normal';riskCls='risk-normal';
+    riskTxt=`✅ QTc ${bazett} ms — within normal range for ${sex}s (≤${normalLimit} ms). Low risk of torsades de pointes. Continue current medications with routine monitoring.`;
+  } else if(bazett<480){
+    badgeCls='qtc-borderline';badgeTxt='Borderline Prolonged';riskCls='risk-borderline';
+    riskTxt=`⚠️ QTc ${bazett} ms — borderline prolonged. Actions: Review all QT-prolonging medications. Check and correct electrolytes (K⁺, Mg²⁺, Ca²⁺). Identify risk factors. Avoid additional QT-prolonging drugs. Repeat ECG at 1–2 weeks or after medication changes.`;
+  } else if(bazett<500){
+    badgeCls='qtc-prolonged';badgeTxt='Prolonged — Action Required';riskCls='risk-prolonged';
+    riskTxt=`⚠️ QTc ${bazett} ms — prolonged. Increased TdP risk. Immediate actions: Stop or reduce offending QT-prolonging drugs. Correct electrolytes urgently (target K⁺ >4.0, Mg²⁺ >0.8 mmol/L). Continuous ECG monitoring. Avoid all Class IA and III antiarrhythmics. Cardiology referral.`;
+  } else {
+    badgeCls='qtc-critical';badgeTxt='Critical — High TdP Risk';riskCls='risk-critical';
+    riskTxt=`🚨 QTc ${bazett} ms — critically prolonged (>500 ms). High risk of torsades de pointes and sudden cardiac death. URGENT ACTIONS: Continuous cardiac monitoring. Withdraw all QT-prolonging medications immediately. IV magnesium sulphate 2g over 10 min (even if Mg²⁺ normal). Correct hypokalaemia urgently to K⁺ ≥4.5 mmol/L. Temporary pacing or isoprenaline if recurrent TdP. Emergency cardiology consultation.`;
+  }
+  badge.textContent=badgeTxt;badge.className='qtc-badge '+badgeCls;
+  riskBox.textContent=riskTxt;riskBox.className='risk-box '+riskCls;
+  lastResult=`QTc (Bazett): ${bazett} ms — ${badgeTxt}\nQT: ${qt} ms | HR: ${hr} bpm | RR: ${Math.round(rr*1000)/1000}s | Sex: ${sex}\nCalculated at rxmedcalc.com/medical-calculators/qtc-calculator`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('qtc_calc',{qtc:bazett,hr,qt,sex});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('📈 QTc Result\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['qt','hr'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate()});
+</script>
+</body>
+</html>

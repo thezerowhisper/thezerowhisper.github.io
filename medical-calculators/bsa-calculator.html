@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="bsa-calculator">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BSA Calculator | Body Surface Area — Mosteller, DuBois, Haycock | RxMedCalc</title>
+<meta name="description" content="Free body surface area (BSA) calculator using Mosteller, DuBois, Boyd, and Haycock formulas. Used for chemotherapy dosing, cardiac index, and BSA-normalised drug dosing. Includes cardiac output and index calculation. Used by oncologists, cardiologists, and intensivists worldwide."/>
+<meta name="keywords" content="BSA calculator, body surface area calculator, Mosteller formula, DuBois formula, Haycock formula, BSA chemotherapy, cardiac index calculator, body surface area m2, BSA formula, BSA oncology dosing"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/bsa-calculator"/>
+<meta property="og:title" content="BSA Calculator | Body Surface Area | RxMedCalc"/>
+<meta property="og:description" content="Calculate BSA using Mosteller, DuBois, Boyd and Haycock formulas. Chemotherapy dosing, cardiac index. Free for doctors worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/bsa-calculator"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/bsa-calculator","name":"Body Surface Area (BSA) Calculator","description":"Calculate BSA using Mosteller, DuBois, Boyd and Haycock formulas for chemotherapy dosing and cardiac index.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Oncologist, Cardiologist, Physician"},"dateModified":"2025-04-14"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"BSA Calculator","item":"https://rxmedcalc.com/medical-calculators/bsa-calculator"}]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a2f1a 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(16,185,129,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(16,185,129,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#6ee7b7;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#34d399}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#10b981;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:480px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none}
+.field input:focus{border-color:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#10b981,#059669);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(16,185,129,0.3);margin-top:4px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(16,185,129,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.bsa-display{text-align:center;margin-bottom:20px}
+.bsa-number{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;color:#10b981;line-height:1}
+.bsa-unit{font-size:1rem;color:#6b7280;margin-top:4px}
+.formula-compare{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:12px;padding:16px;margin-bottom:16px}
+.fc-title{font-size:0.72rem;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px}
+.fc-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #d1fae5;font-size:0.85rem}
+.fc-row:last-child{border-bottom:none}
+.fc-name{color:#374151;font-weight:600}
+.fc-val{color:#10b981;font-weight:700;font-variant-numeric:tabular-nums}
+.dosing-box{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:16px}
+.dt-title{font-size:0.72rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px}
+.dt-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f3f4f6;font-size:0.82rem}
+.dt-row:last-child{border-bottom:none}
+.dt-label{color:#374151}
+.dt-val{font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#10b981;color:#10b981}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#10b981;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#10b981;font-size:0.8rem}
+.formula-block{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:10px;padding:14px 16px;font-family:'Courier New',monospace;font-size:0.85rem;color:#065f46;margin:10px 0;line-height:1.8}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#10b981;background:#f0fdf4;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>BSA Calculator</span></nav>
+    <div class="page-eyebrow">📐 Oncology · Cardiology · General</div>
+    <h1>Body Surface Area<br><em>(BSA)</em> Calculator</h1>
+    <p class="page-sub">Calculate BSA using Mosteller, DuBois, Boyd, and Haycock formulas. Includes chemotherapy dosing reference, cardiac index calculation, and eGFR normalisation guide.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 4 Validated Formulas</span>
+      <span class="hbadge">✓ Chemotherapy Dosing</span>
+      <span class="hbadge">✓ Cardiac Index</span>
+      <span class="hbadge">✓ Paediatric Haycock</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">BSA Calculator</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="height">Height</label>
+        <input type="number" id="height" placeholder="e.g. 170" min="30" max="250" inputmode="decimal"/>
+        <div class="hint">centimetres (cm)</div>
+      </div>
+      <div class="field">
+        <label for="weight">Weight</label>
+        <input type="number" id="weight" placeholder="e.g. 70" min="1" max="300" inputmode="decimal"/>
+        <div class="hint">kilograms (kg)</div>
+      </div>
+    </div>
+    <!-- Optional: Cardiac output for CI -->
+    <div class="input-grid">
+      <div class="field">
+        <label for="co">Cardiac Output <span style="font-weight:400;text-transform:none">(optional)</span></label>
+        <input type="number" id="co" placeholder="e.g. 5.0" min="0.5" max="20" inputmode="decimal"/>
+        <div class="hint">L/min — for cardiac index</div>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate BSA →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="bsa-display">
+        <div class="bsa-number" id="bsa-number">—</div>
+        <div class="bsa-unit">m² — Body Surface Area (Mosteller)</div>
+      </div>
+      <div class="formula-compare">
+        <div class="fc-title">All Formula Results</div>
+        <div class="fc-row"><span class="fc-name">Mosteller (most used)</span><span class="fc-val" id="fc-most">—</span></div>
+        <div class="fc-row"><span class="fc-name">DuBois & DuBois (1916)</span><span class="fc-val" id="fc-dubois">—</span></div>
+        <div class="fc-row"><span class="fc-name">Boyd (1935)</span><span class="fc-val" id="fc-boyd">—</span></div>
+        <div class="fc-row"><span class="fc-name">Haycock (paediatric)</span><span class="fc-val" id="fc-hay">—</span></div>
+      </div>
+      <div class="dosing-box">
+        <div class="dt-title">📊 Clinical Reference</div>
+        <div class="dt-row"><span class="dt-label">Normal adult BSA (male)</span><span class="dt-val">~1.9 m²</span></div>
+        <div class="dt-row"><span class="dt-label">Normal adult BSA (female)</span><span class="dt-val">~1.6 m²</span></div>
+        <div class="dt-row"><span class="dt-label">Normal cardiac index</span><span class="dt-val">2.5–4.0 L/min/m²</span></div>
+        <div class="dt-row" id="ci-row" style="display:none"><span class="dt-label">Cardiac Index (your CO/BSA)</span><span class="dt-val" id="ci-val">—</span></div>
+        <div class="dt-row"><span class="dt-label">eGFR normalisation</span><span class="dt-val" id="egfr-factor">—</span></div>
+      </div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>BSA Formulas Explained</h2>
+    <div class="formula-block">
+      Mosteller: BSA = √(Height cm × Weight kg / 3600)<br>
+      DuBois: BSA = 0.007184 × Height^0.725 × Weight^0.425<br>
+      Boyd: BSA = 0.0003207 × Height^0.3 × Weight^(0.7285 - 0.0188×log10(Weight))<br>
+      Haycock (paediatric): BSA = 0.024265 × Height^0.3964 × Weight^0.5378
+    </div>
+    <h3>Which Formula to Use?</h3>
+    <p><strong>Mosteller</strong> is the most widely used in clinical practice and oncology because of its simplicity (simple square root formula, easy mental math) and validated accuracy. Most chemotherapy dose calculation software uses Mosteller.</p>
+    <p><strong>DuBois & DuBois</strong> (1916) was the original formula, derived from only 9 subjects, and may underestimate BSA in obese patients. Historically used for cardiac index calculation.</p>
+    <p><strong>Haycock</strong> was specifically validated in children from neonates to adults and is the formula of choice for paediatric BSA calculations and paediatric eGFR normalisation.</p>
+    <h3>Clinical Uses of BSA</h3>
+    <ul>
+      <li><strong>Chemotherapy dosing:</strong> Most cytotoxic drugs are dosed in mg/m² — carboplatin, doxorubicin, vincristine, paclitaxel. BSA capping at 2.0 m² is common practice to prevent toxicity in obese patients</li>
+      <li><strong>Cardiac index (CI):</strong> CI = Cardiac Output ÷ BSA. Normal CI = 2.5–4.0 L/min/m². Low CI (&lt;2.2) indicates cardiogenic shock</li>
+      <li><strong>eGFR normalisation:</strong> CKD-EPI and MDRD give eGFR normalised to 1.73 m² BSA. Multiply by (patient BSA ÷ 1.73) to get absolute GFR in mL/min</li>
+      <li><strong>Radiation therapy:</strong> BSA used to plan radiation fields and calculate mean doses</li>
+    </ul>
+    <h3>BSA Capping in Chemotherapy</h3>
+    <p>In obese patients, using actual BSA for chemotherapy dosing can lead to severe toxicity. Common capping strategies: cap BSA at 2.0 m² (most common), use IBW-based BSA instead of actual weight, or cap dose at standard adult dose. Always check the specific protocol — some regimens (e.g. carboplatin AUC-based dosing) use Calvert formula rather than BSA.</p>
+    <p>Conversely, underdosing based on capped BSA in obese patients may compromise chemotherapy efficacy. ASCO guidelines recommend using actual body weight (and hence actual BSA) for most chemotherapy regimens in obese patients with performance status.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/ibw-calculator" class="related-card"><span class="rc-icon">⚖️</span><div><div class="rc-title">IBW Calculator</div><div class="rc-desc">Ideal weight for drug dosing</div></div></a>
+      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">BSA-normalised kidney function</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Cardiac perfusion pressure</div></div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">Creatinine Clearance</div><div class="rc-desc">Drug dosing in renal failure</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> BSA calculations are for reference. Chemotherapy dosing requires verification by a qualified oncologist and clinical pharmacist, review of protocol-specific dosing guidelines, and assessment of renal/hepatic function. Never administer chemotherapy based solely on a calculator result.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let lastResult=null;
+function calculate(){
+  const h=parseFloat(document.getElementById('height').value);
+  const w=parseFloat(document.getElementById('weight').value);
+  const co=parseFloat(document.getElementById('co').value)||null;
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!h||!w){errEl.textContent='Please enter height and weight.';errEl.className='error-msg show';return}
+  if(h<30||h>250){errEl.textContent='Height must be 30–250 cm.';errEl.className='error-msg show';return}
+  if(w<1||w>300){errEl.textContent='Weight must be 1–300 kg.';errEl.className='error-msg show';return}
+  const most=Math.round(Math.sqrt(h*w/3600)*1000)/1000;
+  const dubois=Math.round(0.007184*Math.pow(h,0.725)*Math.pow(w,0.425)*1000)/1000;
+  const boyd=Math.round(0.0003207*Math.pow(h,0.3)*Math.pow(w,(0.7285-0.0188*Math.log10(w)))*1000)/1000;
+  const hay=Math.round(0.024265*Math.pow(h,0.3964)*Math.pow(w,0.5378)*1000)/1000;
+  document.getElementById('bsa-number').textContent=most;
+  document.getElementById('fc-most').textContent=most+' m²';
+  document.getElementById('fc-dubois').textContent=dubois+' m²';
+  document.getElementById('fc-boyd').textContent=boyd+' m²';
+  document.getElementById('fc-hay').textContent=hay+' m²';
+  // Cardiac index
+  if(co){
+    const ci=Math.round((co/most)*100)/100;
+    document.getElementById('ci-row').style.display='flex';
+    document.getElementById('ci-val').textContent=ci+' L/min/m²'+(ci<2.2?' ⚠ Low':ci>4?' ⚠ High':' ✓ Normal');
+  }
+  // eGFR factor
+  document.getElementById('egfr-factor').textContent=`×${Math.round((most/1.73)*100)/100} (BSA/1.73m²)`;
+  lastResult=`BSA (Mosteller): ${most} m²\nHeight: ${h} cm | Weight: ${w} kg${co?'\nCardiac Index: '+Math.round((co/most)*100)/100+' L/min/m²':''}\nCalculated at rxmedcalc.com/medical-calculators/bsa-calculator`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('bsa_calc',{bsa:most,height:h,weight:w});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('📐 BSA Result\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['height','weight','co'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';document.getElementById('ci-row').style.display='none';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>
