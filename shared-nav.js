@@ -29,7 +29,7 @@
   <div class="header-inner">
     <a href="/" class="site-logo">
       <span class="logo-icon">🩺</span>
-      <span class="logo-name">MedCalc India</span>
+      <span class="logo-name">RxMedCalc</span>
       <span class="logo-tag">Free</span>
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
@@ -49,7 +49,7 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="brand-name">🩺 MedCalc India</div>
+      <div class="brand-name">🩺 RxMedCalc</div>
       <p>Free, clinically accurate tools for Doctors Worldwide, nurses and patients. Built on NCDC, IAP, FOGSI and WHO guidelines. No login. No data stored.</p>
     </div>
     <div class="footer-col">
@@ -78,7 +78,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© ${year} MedCalc India · Built by a doctor in India · Free tools · No login required</span>
+    <span>© ${year} RxMedCalc · Built by a doctor in India · Free tools · No login required</span>
     <span>
       <a href="/about">About</a> ·
       <a href="/privacy">Privacy Policy</a> ·
