@@ -1,49 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Root pages -->
-  <url><loc>https://thezerowhisper.github.io/</loc><priority>1.0</priority></url>
-  <url><loc>https://thezerowhisper.github.io/about</loc><priority>0.7</priority></url>
-  <url><loc>https://thezerowhisper.github.io/privacy</loc><priority>0.5</priority></url>
-  <url><loc>https://thezerowhisper.github.io/contact</loc><priority>0.6</priority></url>
+  <!-- ═══ ROOT PAGES ═══ -->
+  <url><loc>https://rxmedcalc.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://rxmedcalc.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://rxmedcalc.com/privacy</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rxmedcalc.com/contact</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 
-  <!-- Main hubs -->
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/</loc><priority>0.95</priority></url>
-  <url><loc>https://thezerowhisper.github.io/rabies-scheduler/</loc><priority>0.95</priority></url>
+  <!-- ═══ MAIN HUBS ═══ -->
+  <url><loc>https://rxmedcalc.com/medical-calculators/</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://rxmedcalc.com/rabies-scheduler/</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
 
-  <!-- Emergency -->
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/curb65</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/news2</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/gcs-calculator</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/burn-calculator</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/wells-score</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/anion-gap</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/mentzer-index-calculator</loc></url>
+  <!-- ═══ EMERGENCY & CRITICAL CARE ═══ -->
+  <url><loc>https://rxmedcalc.com/medical-calculators/curb65</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/news2</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/gcs-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/burn-calculator</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/wells-score</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/anion-gap</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/mentzer-index-calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/map-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-  <!-- Pediatrics -->
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/pediatric-asthma</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/uip-vaccine</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/growth-chart</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/milestones</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/paracetamol</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/ors</loc></url>
+  <!-- ═══ PAEDIATRICS & NEONATOLOGY ═══ -->
+  <url><loc>https://rxmedcalc.com/medical-calculators/neonatal-jaundice</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/pediatric-asthma</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/uip-vaccine</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/growth-chart</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/milestones</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/paracetamol</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/ors</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/apgar-score</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <!-- General -->
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/doses</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/arv-dose-calculator</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/bmi</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/egfr-calculator</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/hba1c-converter</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/corrected-calcium</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/child-pugh</loc></url>
+  <!-- ═══ GENERAL MEDICINE & DOSING ═══ -->
+  <url><loc>https://rxmedcalc.com/medical-calculators/doses</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/arv-dose-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/bmi</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/egfr-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/hba1c-converter</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/corrected-calcium</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/child-pugh</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/ibw-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/creatinine-clearance</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/phq9-gad7</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-  <!-- Obstetrics -->
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/obs-calc</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/due-date</loc></url>
+  <!-- ═══ OBSTETRICS & GYNAECOLOGY ═══ -->
+  <url><loc>https://rxmedcalc.com/medical-calculators/obs-calc</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/due-date</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <!-- Occupational -->
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/spirometry</loc></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/biomedical-waste</loc></url>
+  <!-- ═══ OCCUPATIONAL HEALTH ═══ -->
+  <url><loc>https://rxmedcalc.com/medical-calculators/spirometry</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/biomedical-waste</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>
