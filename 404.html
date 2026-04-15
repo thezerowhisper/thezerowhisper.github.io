@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Page Not Found</title>
-    <meta http-equiv="refresh" content="0; URL='https://thezerowhisper.github.io/'" />
-    
-    <script type="text/javascript">
-      // 2. JavaScript Backup Redirect
-      window.location.href = "https://thezerowhisper.github.io/";
-    </script>
-  </head>
-  <body>
-    <p>Redirecting to homepage...</p>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+
+  <script>
+    var path = window.location.pathname;
+
+    // List of asset extensions to IGNORE
+    var assetExtensions = ['.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.webp', '.json', '.txt'];
+
+    var isAsset = assetExtensions.some(ext => path.endsWith(ext));
+
+    if (!isAsset) {
+      window.location.replace("https://thezerowhisper.github.io/");
+    }
+  </script>
+
+</head>
+<body>
+  <p>Page not found. Redirecting...</p>
+</body>
 </html>
