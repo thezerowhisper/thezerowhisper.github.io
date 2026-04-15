@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Page Not Found</title>
+<script>
+  var path = window.location.pathname.toLowerCase();
 
-  <script>
-    var path = window.location.pathname;
+  var assetExtensions = [
+    '.css', '.js', '.png', '.jpg', '.jpeg', '.gif',
+    '.svg', '.ico', '.webp', '.json', '.txt'
+  ];
 
-    // List of asset extensions to IGNORE
-    var assetExtensions = ['.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.webp', '.json', '.txt'];
+  var isAsset = assetExtensions.some(ext => path.endsWith(ext));
 
-    var isAsset = assetExtensions.some(ext => path.endsWith(ext));
-
-    if (!isAsset) {
-      window.location.replace("https://thezerowhisper.github.io/");
-    }
-  </script>
-
-</head>
-<body>
-  <p>Page not found. Redirecting...</p>
-</body>
-</html>
+  // 🚨 ONLY redirect if NOT asset AND NOT file request
+  if (!isAsset && !path.includes('.')) {
+    window.location.replace("https://thezerowhisper.github.io/");
+  }
+</script>
