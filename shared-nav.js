@@ -33,7 +33,7 @@
       <span class="logo-tag">Free</span>
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
-    <nav class="site-nav">
+    <nav class="site-nav"> <a href="/search" ${isActive('/search') ? 'class="active"' : ''}>🔍 Search</a>
       <a href="/" ${isActive('/') && !isActive('/medical') && !isActive('/rabies') && !isActive('/about') && !isActive('/privacy') && !isActive('/contact') ? 'class="active"' : ''}>Home</a>
       <a href="/medical-calculators/" ${isActive('/medical-calculators') ? 'class="active"' : ''}>Calculators</a>
       <a href="/rabies-scheduler/" ${isActive('/rabies-scheduler') ? 'class="active"' : ''}>Rabies PEP</a>
