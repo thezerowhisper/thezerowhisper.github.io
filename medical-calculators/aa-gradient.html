@@ -19,7 +19,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-<link rel="stylesheet" href="/shared.css"/>
+<link rel="stylesheet" href="/assets/shared.css"/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -215,7 +215,7 @@ h1 em{font-style:italic;color:#60a5fa}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> The A-a gradient calculator assumes standard atmospheric pressure (760 mmHg at sea level) and standard RQ of 0.8. At high altitude, modify Patm accordingly. ABG interpretation requires clinical context — always interpret alongside clinical findings, patient history, and other investigations.</div>
 </main>
-<script src="/shared-nav.js"></script>
+<script src="/assets/shared-nav.js"></script>
 <script>
 let fio2=0.21;let lastResult=null;
 function setFiO2(v){fio2=v;document.getElementById('fio2').value=v;document.querySelectorAll('.fio2-chip').forEach(c=>c.classList.toggle('sel',parseFloat(c.dataset.v)===v));}

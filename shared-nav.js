@@ -1,4 +1,4 @@
-/* shared-nav.js — injects AdSense loader, site header, and footer into every page */
+/* /assets/shared-nav.js — injects AdSense loader, site header, and footer into every page */
 (function () {
   const path = location.pathname;
 
@@ -17,7 +17,7 @@
   })();
 
   /* ══ 2. INJECT NAV + FOOTER CSS ═══════════════════════════
-     Inlined here so every page gets the styles even if shared.css
+     Inlined here so every page gets the styles even if /assets/shared.css
      is not loaded or has different class names.                    */
   (function injectNavCSS() {
     if (document.getElementById('rxmc-nav-css')) return;

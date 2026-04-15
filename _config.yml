@@ -18,7 +18,7 @@ permalink: none
 
 # ── EXCLUDE FROM JEKYLL PROCESSING ────────────────────────
 # Only exclude files that should NOT be copied to _site/
-# REMOVED: shared.css and shared-nav.js (they need to be served!)
+# REMOVED: /assets/shared.css and /assets/shared-nav.js (they need to be served!)
 exclude:
   - assets/umami-events.js
   - README.md
@@ -31,8 +31,8 @@ exclude:
 # ── INCLUDE FILES IN OUTPUT ────────────────────────────────
 # Explicitly ensure these static files are copied to _site/
 include:
-  - shared.css
-  - shared-nav.js
+  - /assets/shared.css
+  - /assets/shared-nav.js
   - assets/
 
 # ── MARKDOWN ENGINE ────────────────────────────────────────
@@ -60,7 +60,7 @@ sitemap:
     - /privacy
     - /contact
 
-# ── SASS (if you ever move shared.css to .scss) ───────────
+# ── SASS (if you ever move /assets/shared.css to .scss) ───────────
 # sass:
 #   style: compressed
 
@@ -68,11 +68,11 @@ sitemap:
 #  DEPLOYMENT CHECKLIST:
 #
 #  1. Replace your current _config.yml with this file
-#  2. Make sure shared.css exists in your repo root
-#  3. Make sure shared-nav.js exists in your repo root
+#  2. Make sure /assets/shared.css exists in your repo root
+#  3. Make sure /assets/shared-nav.js exists in your repo root
 #  4. Make sure assets/ folder exists with umami-events.js
 #  5. Commit all files:
-#     git add _config.yml shared.css shared-nav.js
+#     git add _config.yml /assets/shared.css /assets/shared-nav.js
 #     git commit -m "Fix: include CSS and JS in Jekyll output"
 #     git push origin main
 #  6. GitHub Pages rebuilds (~1 min) — check Actions tab
