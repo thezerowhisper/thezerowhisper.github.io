@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="sirs-criteria">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SIRS Criteria Calculator | Sepsis Screening | Systemic Inflammatory Response | RxMedCalc</title>
+<meta name="description" content="Free SIRS criteria calculator. Identify systemic inflammatory response syndrome and screen for sepsis. Includes Sepsis-2 vs Sepsis-3 comparison, organ dysfunction assessment, septic shock criteria, and IDSA/SSC management guidance. Used by emergency physicians and intensivists worldwide."/>
+<meta name="keywords" content="SIRS criteria calculator, SIRS sepsis, systemic inflammatory response syndrome, SIRS criteria, sepsis SIRS, SIRS score, sepsis criteria calculator, sepsis 2 criteria, SIRS temperature heart rate, sepsis screening tool, sepsis diagnosis criteria"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/sirs-criteria"/>
+<meta property="og:title" content="SIRS Criteria Calculator | Sepsis Screening | RxMedCalc"/>
+<meta property="og:description" content="Calculate SIRS criteria for sepsis screening. Sepsis-2 vs Sepsis-3 comparison. Organ dysfunction and septic shock assessment. Free clinical tool."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/sirs-criteria"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/sirs-criteria","name":"SIRS Criteria Calculator","description":"SIRS criteria for systemic inflammatory response syndrome and sepsis screening.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Emergency Physician, Intensivist, Physician"},"dateModified":"2025-04-14"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"SIRS Criteria","item":"https://rxmedcalc.com/medical-calculators/sirs-criteria"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What are the 4 SIRS criteria?","acceptedAnswer":{"@type":"Answer","text":"The four SIRS criteria are: (1) Temperature >38.3°C or <36°C, (2) Heart rate >90 beats per minute, (3) Respiratory rate >20 breaths/min or PaCO₂ <32 mmHg, (4) White blood cell count >12,000/µL or <4,000/µL or >10% bands. SIRS is present when 2 or more criteria are met. When SIRS occurs in the presence of suspected infection, it meets the Sepsis-2 definition of sepsis."}},
+{"@type":"Question","name":"What is the difference between SIRS and sepsis?","acceptedAnswer":{"@type":"Answer","text":"SIRS (Systemic Inflammatory Response Syndrome) is a non-specific clinical syndrome defined by 2 or more of the 4 criteria (temperature, heart rate, respiratory rate, WBC) regardless of cause. Sepsis (Sepsis-2 definition) is SIRS caused by suspected or confirmed infection. Under Sepsis-3 (2016), sepsis is redefined as life-threatening organ dysfunction caused by a dysregulated host response to infection, measured by an acute SOFA score increase of ≥2 points. SIRS criteria are no longer part of the Sepsis-3 definition."}}
+]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a1010 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(239,68,68,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(239,68,68,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(239,68,68,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#fca5a5;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#f87171}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#ef4444;border-radius:2px;flex-shrink:0}
+/* SIRS criteria items */
+.criteria-list{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.criterion{border:1.5px solid #e5e7eb;border-radius:14px;overflow:hidden;transition:all 0.2s}
+.criterion.met{border-color:#fecaca;background:#fef2f2}
+.cr-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;cursor:pointer;gap:12px}
+.cr-left{display:flex;align-items:center;gap:12px;flex:1}
+.cr-check{width:22px;height:22px;border:2px solid #d1d5db;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s;background:#fff;font-size:0.85rem}
+.criterion.met .cr-check{background:#ef4444;border-color:#ef4444;color:#fff}
+.cr-name{font-size:0.9rem;font-weight:700;color:#0d1b2a}
+.cr-thresh{font-size:0.75rem;color:#6b7280;margin-top:1px}
+.cr-points{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:900;color:#d1d5db;flex-shrink:0}
+.criterion.met .cr-points{color:#ef4444}
+/* input sub-row */
+.cr-input{display:none;padding:0 18px 14px;background:#fff8f8}
+.criterion.met .cr-input{display:block}
+.ci-field input{width:100%;max-width:200px;padding:8px 12px;border:1.5px solid #fecaca;border-radius:8px;font-family:inherit;font-size:0.9rem;color:#0d1b2a;outline:none;background:#fff}
+.ci-field input:focus{border-color:#ef4444}
+.ci-hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+/* running total */
+.sirs-total{background:linear-gradient(135deg,#fef2f2,#fff);border:1.5px solid #fecaca;border-radius:14px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.st-label{font-size:0.8rem;font-weight:600;color:#6b7280}
+.st-val{display:flex;align-items:baseline;gap:6px}
+.st-num{font-family:'Fraunces',Georgia,serif;font-size:2.5rem;font-weight:900;color:#ef4444}
+.st-max{font-size:0.9rem;color:#9ca3af}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#ef4444,#dc2626);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(239,68,68,0.3)}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(239,68,68,0.4)}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+/* result */
+.sirs-result{text-align:center;margin-bottom:20px}
+.sirs-num{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;line-height:1}
+.sirs-unit{font-size:0.9rem;color:#6b7280;margin-top:4px}
+.sirs-badge{display:inline-block;padding:7px 24px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-top:10px}
+.no-sirs{background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0}
+.sirs-pos{background:#fffbeb;color:#d97706;border:1.5px solid #fde68a}
+.sepsis-pos{background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca}
+.shock-pos{background:#dc2626;color:#fff}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#ef4444}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.mgmt-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line}
+.m-no{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.m-sirs{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.m-sepsis{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.m-shock{background:#fef2f2;border:2px solid #dc2626;color:#7f1d1d}
+/* organ dysfunction checkboxes */
+.od-section{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:16px}
+.od-title{font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px}
+.od-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.od-grid{grid-template-columns:1fr}}
+.od-item{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.82rem;color:#374151;padding:6px 8px;border-radius:8px;transition:background 0.15s}
+.od-item:hover{background:#f3f4f6}
+.od-item input{accent-color:#ef4444;flex-shrink:0}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#ef4444;color:#ef4444}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#ef4444;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ef4444;font-size:0.8rem}
+.compare-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:14px 0}
+.compare-table th{background:#fef2f2;color:#991b1b;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid #fecaca}
+.compare-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top}
+.faq-item{border-bottom:1px solid #f3f4f6;padding:16px 0}.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.92rem;font-weight:600;color:#0d1b2a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.faq-q::after{content:'＋';color:#ef4444;font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.86rem;color:#4b5563;line-height:1.75}
+.faq-item.open .faq-a{max-height:300px;padding-top:10px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>SIRS Criteria</span></nav>
+    <div class="page-eyebrow">🚨 Emergency · ICU · Sepsis</div>
+    <h1>SIRS Criteria<br><em>Calculator</em></h1>
+    <p class="page-sub">Assess systemic inflammatory response syndrome (SIRS) and screen for sepsis. Includes Sepsis-2 and Sepsis-3 criteria comparison, organ dysfunction assessment, septic shock criteria, and Hour-1 Bundle management guidance.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ SIRS + Sepsis-2 Criteria</span>
+      <span class="hbadge">✓ Organ Dysfunction</span>
+      <span class="hbadge">✓ Septic Shock</span>
+      <span class="hbadge">✓ SSC Hour-1 Bundle</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">SIRS Criteria Assessment</div>
+    <div style="font-size:0.8rem;color:#6b7280;margin-bottom:16px">Tap each criterion that is present in the patient. Score updates live.</div>
+    <div class="criteria-list">
+      <!-- Temperature -->
+      <div class="criterion" id="cr0" onclick="toggleCriterion(0)">
+        <div class="cr-header">
+          <div class="cr-left">
+            <div class="cr-check" id="chk0">✓</div>
+            <div><div class="cr-name">🌡️ Temperature</div><div class="cr-thresh">&gt;38.3°C (101°F) or &lt;36°C (96.8°F)</div></div>
+          </div>
+          <div class="cr-points">+1</div>
+        </div>
+      </div>
+      <!-- Heart Rate -->
+      <div class="criterion" id="cr1" onclick="toggleCriterion(1)">
+        <div class="cr-header">
+          <div class="cr-left">
+            <div class="cr-check" id="chk1">✓</div>
+            <div><div class="cr-name">❤️ Heart Rate</div><div class="cr-thresh">&gt;90 beats per minute</div></div>
+          </div>
+          <div class="cr-points">+1</div>
+        </div>
+      </div>
+      <!-- Respiratory -->
+      <div class="criterion" id="cr2" onclick="toggleCriterion(2)">
+        <div class="cr-header">
+          <div class="cr-left">
+            <div class="cr-check" id="chk2">✓</div>
+            <div><div class="cr-name">🫁 Respiratory Rate / PaCO₂</div><div class="cr-thresh">RR &gt;20 breaths/min OR PaCO₂ &lt;32 mmHg</div></div>
+          </div>
+          <div class="cr-points">+1</div>
+        </div>
+      </div>
+      <!-- WBC -->
+      <div class="criterion" id="cr3" onclick="toggleCriterion(3)">
+        <div class="cr-header">
+          <div class="cr-left">
+            <div class="cr-check" id="chk3">✓</div>
+            <div><div class="cr-name">🩸 WBC Count</div><div class="cr-thresh">&gt;12,000/µL or &lt;4,000/µL or &gt;10% bands</div></div>
+          </div>
+          <div class="cr-points">+1</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Organ dysfunction / Sepsis context -->
+    <div class="od-section">
+      <div class="od-title">Suspected infection &amp; organ dysfunction (for Sepsis-2 / Sepsis-3 classification)</div>
+      <div class="od-grid">
+        <label class="od-item"><input type="checkbox" id="od-infection" onclick="updateTotal()"/>Suspected or confirmed infection</label>
+        <label class="od-item"><input type="checkbox" id="od-hypotension" onclick="updateTotal()"/>Hypotension (SBP &lt;90 or MAP &lt;65)</label>
+        <label class="od-item"><input type="checkbox" id="od-lactate" onclick="updateTotal()"/>Lactate &gt;2 mmol/L</label>
+        <label class="od-item"><input type="checkbox" id="od-organ" onclick="updateTotal()"/>Acute organ dysfunction (renal, hepatic, CNS)</label>
+        <label class="od-item"><input type="checkbox" id="od-vasopressors" onclick="updateTotal()"/>Vasopressors required despite fluids</label>
+      </div>
+    </div>
+
+    <div class="sirs-total">
+      <span class="st-label">SIRS Criteria Met</span>
+      <div class="st-val"><span class="st-num" id="sirs-count">0</span><span class="st-max">/ 4</span></div>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Assess Sepsis Risk →</button>
+
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="sirs-result">
+        <div class="sirs-num" id="sirs-num" style="color:#16a34a">0</div>
+        <div class="sirs-unit">SIRS criteria present (out of 4)</div>
+        <div class="sirs-badge" id="sirs-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">SIRS Present</div><div class="rval" id="r-sirs">—</div><div class="runit">≥2 criteria</div></div>
+        <div class="rbox"><div class="rlabel">Sepsis-2</div><div class="rval" id="r-sep2">—</div><div class="runit">SIRS + infection</div></div>
+        <div class="rbox"><div class="rlabel">Septic Shock</div><div class="rval" id="r-shock">—</div><div class="runit">Sepsis-3 criteria</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>SIRS Criteria — Complete Clinical Guide</h2>
+    <p>Systemic Inflammatory Response Syndrome (SIRS) was defined by the 1991 ACCP/SCCM Consensus Conference as a non-specific clinical syndrome representing the body's systemic response to a wide variety of insults — both infectious and non-infectious. Two or more of the four SIRS criteria constitute a positive SIRS response. The key clinical insight is that SIRS is a physiological state of heightened inflammation and immune activation, not a diagnosis in itself.</p>
+    <p>SIRS can be triggered by infection (leading to sepsis under the old definition), trauma, burns, pancreatitis, surgery, ischaemia, malignancy, autoimmune disease, or any severe physiological stress. The diagnosis of sepsis in the Sepsis-2 framework required SIRS plus a suspected or confirmed infectious source. This was the standard clinical framework from 1991 until 2016.</p>
+
+    <h3>The Four SIRS Criteria Explained</h3>
+    <ul>
+      <li><strong>Temperature:</strong> Core temperature &gt;38.3°C (100.9°F) reflects pyrogenic cytokine activity (IL-1, IL-6, TNF-α). Hypothermia &lt;36°C occurs in severe sepsis, gram-negative bacteraemia, overwhelming infection in the immunocompromised or elderly, and is associated with worse prognosis than fever</li>
+      <li><strong>Heart Rate &gt;90 bpm:</strong> Tachycardia reflects increased sympathetic drive from pain, fever, hypovolaemia, or mediator release. In patients on beta-blockers or with pacemakers, heart rate may not reflect the underlying inflammatory state — clinical judgement required</li>
+      <li><strong>Respiratory Rate &gt;20 or PaCO₂ &lt;32 mmHg:</strong> Tachypnoea and hyperventilation reflect respiratory compensation for metabolic acidosis, direct lung involvement, hypoxaemia, or pain. PaCO₂ &lt;32 mmHg on ABG confirms respiratory alkalosis from hyperventilation</li>
+      <li><strong>WBC &gt;12,000 or &lt;4,000/µL or &gt;10% bands:</strong> Leukocytosis reflects bone marrow response to infection/inflammation. Leukopenia occurs in overwhelming infection, viral sepsis, or immunocompromised states and is a red flag. Bandemia (&gt;10% immature neutrophils/bands) represents a left-shift indicating bone marrow recruitment of immature cells</li>
+    </ul>
+
+    <h3>Sepsis-2 vs Sepsis-3 — The 2016 Paradigm Shift</h3>
+    <table class="compare-table">
+      <thead><tr><th>Feature</th><th>Sepsis-2 (1991)</th><th>Sepsis-3 (2016)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Sepsis definition</strong></td><td>SIRS (≥2 criteria) + suspected infection</td><td>Life-threatening organ dysfunction from dysregulated host response to infection (SOFA ≥2)</td></tr>
+        <tr><td><strong>Severe sepsis</strong></td><td>Sepsis + organ dysfunction</td><td>Term abandoned — now just "sepsis"</td></tr>
+        <tr><td><strong>Septic shock</strong></td><td>Sepsis + hypotension despite fluids</td><td>Sepsis + vasopressors to maintain MAP ≥65 + lactate &gt;2 mmol/L despite adequate resuscitation</td></tr>
+        <tr><td><strong>Screening tool</strong></td><td>SIRS criteria</td><td>qSOFA (bedside), SOFA (ICU)</td></tr>
+        <tr><td><strong>Clinical use</strong></td><td>Still widely used in ED triage and general wards</td><td>Standard for ICU and research</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Why SIRS Is Still Clinically Useful Despite Sepsis-3</h3>
+    <p>Despite the Sepsis-3 redefinition, SIRS criteria remain valuable in clinical practice for several reasons. They are simple, require no laboratory tests for the basic 3 clinical criteria (temperature, HR, RR), and can be assessed at the bedside within seconds. They have high sensitivity (though low specificity) for detecting patients who need closer evaluation. SIRS criteria are still embedded in many hospital triage systems, electronic health record sepsis alerts, and nursing assessment protocols worldwide.</p>
+    <p>The Sepsis-3 criticism of SIRS is primarily its low specificity — up to 30% of general medical ward patients and virtually all post-operative patients meet SIRS criteria without having infection-related organ dysfunction. However, in the emergency department and acute care context, SIRS remains a useful first-pass screening tool when combined with clinical assessment.</p>
+
+    <h3>Surviving Sepsis Campaign — Hour-1 Bundle (SSC 2018/2021)</h3>
+    <p>For patients meeting sepsis or septic shock criteria, the SSC Hour-1 Bundle recommends the following actions within 60 minutes of recognition:</p>
+    <ul>
+      <li>Measure lactate level — if &gt;2 mmol/L, repeat within 2 hours to assess response</li>
+      <li>Blood cultures before antibiotics — do not delay antibiotics for cultures</li>
+      <li>Broad-spectrum antibiotics — administer within 1 hour of sepsis recognition. For septic shock, within 1 hour. Each hour of delay increases mortality by ~7%</li>
+      <li>IV crystalloid resuscitation — 30 mL/kg IV crystalloid (normal saline or Hartmann's) for MAP &lt;65 or lactate ≥4 mmol/L. Administer within first 3 hours</li>
+      <li>Vasopressors — noradrenaline (norepinephrine) is first-line if MAP &lt;65 despite fluid resuscitation. Target MAP ≥65 mmHg. Add vasopressin 0.03 units/min if noradrenaline dose escalating</li>
+    </ul>
+
+    <h3>Non-Infectious Causes of SIRS — Important Differentials</h3>
+    <ul>
+      <li>Acute pancreatitis — one of the most common non-infectious causes; SIRS score correlates with severity</li>
+      <li>Major trauma and burns — cytokine release from tissue injury</li>
+      <li>Post-operative state — surgical stress response peaks at 24–48 hours</li>
+      <li>Acute myocardial infarction — inflammatory response to myocardial necrosis</li>
+      <li>Pulmonary embolism — reperfusion and platelet activation</li>
+      <li>Autoimmune disease flare — SLE, vasculitis, adult Still disease</li>
+      <li>Drug reactions — drug fever, neuroleptic malignant syndrome, serotonin syndrome</li>
+      <li>Malignancy — tumour fever, lymphoma B-symptoms</li>
+      <li>Transfusion reactions — TRALI, haemolytic transfusion reactions</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Sepsis-3 organ failure assessment</div></div></a>
+      <a href="/medical-calculators/qsofa-score" class="related-card"><span class="rc-icon">⚡</span><div><div class="rc-title">qSOFA Score</div><div class="rc-desc">Quick bedside sepsis screening</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Vasopressor target MAP ≥65</div></div></a>
+      <a href="/medical-calculators/news2" class="related-card"><span class="rc-icon">📉</span><div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Early deterioration detection</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> SIRS criteria are a clinical screening tool with limited specificity. Sepsis diagnosis requires clinical judgement integrating examination, investigations, and clinical context. Never withhold appropriate antibiotic therapy pending complete workup in a patient with suspected septic shock. Follow your institution's sepsis protocol and local antimicrobial guidelines.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let sirsSelected=new Set();let lastResult=null;
+const faqs=[
+  ["What are the 4 SIRS criteria?","Temperature >38.3°C or <36°C, Heart rate >90 bpm, Respiratory rate >20 or PaCO₂ <32 mmHg, WBC >12,000 or <4,000/µL or >10% bands. SIRS = ≥2 criteria."],
+  ["What is the difference between SIRS and sepsis?","Sepsis-2: SIRS + suspected infection. Sepsis-3 (2016): life-threatening organ dysfunction from dysregulated host response to infection (SOFA ≥2). SIRS is no longer part of Sepsis-3 definition but remains useful for bedside screening."],
+  ["Does SIRS always mean sepsis?","No. SIRS has many non-infectious causes: pancreatitis, trauma, burns, surgery, MI, PE, autoimmune disease, malignancy. SIRS indicates systemic inflammation — infection is one possible cause."],
+  ["What is septic shock under Sepsis-3?","Sepsis + vasopressors needed to maintain MAP ≥65 mmHg + lactate >2 mmol/L despite adequate fluid resuscitation. Hospital mortality >40%."],
+  ["When should antibiotics be given in sepsis?","Within 1 hour of sepsis recognition. Within 1 hour for septic shock — each hour of delay increases mortality by ~7%. Do not delay antibiotics to wait for cultures."]
+];
+document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
+function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}
+function toggleCriterion(i){
+  const cr=document.getElementById('cr'+i);
+  if(sirsSelected.has(i)){sirsSelected.delete(i);cr.classList.remove('met')}
+  else{sirsSelected.add(i);cr.classList.add('met')}
+  updateTotal();
+}
+function updateTotal(){
+  const count=sirsSelected.size;
+  document.getElementById('sirs-count').textContent=count;
+  document.getElementById('sirs-count').style.color=count>=2?'#ef4444':'#6b7280';
+}
+function calculate(){
+  const count=sirsSelected.size;
+  const hasInfection=document.getElementById('od-infection').checked;
+  const hasHypotension=document.getElementById('od-hypotension').checked;
+  const hasLactate=document.getElementById('od-lactate').checked;
+  const hasOrgan=document.getElementById('od-organ').checked;
+  const hasVasopressors=document.getElementById('od-vasopressors').checked;
+  const sirsPos=count>=2;
+  const sepsis2=sirsPos&&hasInfection;
+  const septicShock=sepsis2&&hasVasopressors&&hasLactate;
+  document.getElementById('sirs-num').textContent=count;
+  document.getElementById('sirs-num').style.color=count>=2?'#ef4444':count>=1?'#d97706':'#16a34a';
+  const badge=document.getElementById('sirs-badge');
+  const mgmt=document.getElementById('mgmt-box');
+  let badgeTxt,badgeCls,mcls,mtxt;
+  if(septicShock){badgeTxt='Septic Shock';badgeCls='shock-pos';mcls='m-shock';
+    mtxt='🚨 SEPTIC SHOCK — IMMEDIATE ACTION REQUIRED\n\nHour-1 Bundle:\n1. Blood cultures ×2 before antibiotics\n2. Broad-spectrum IV antibiotics immediately (piperacillin-tazobactam or meropenem)\n3. IV crystalloid 30 mL/kg over 3 hours\n4. Noradrenaline — target MAP ≥65 mmHg\n5. Measure lactate — if >4 mmol/L, resuscitate aggressively\n6. ICU admission\n7. Source control — drain abscess, remove infected device\n8. Reassess fluid response (CVP, passive leg raise, bedside echo)';}
+  else if(sepsis2||(sirsPos&&(hasOrgan||hasHypotension||hasLactate))){
+    const isSev=hasOrgan||hasHypotension||hasLactate;
+    badgeTxt=isSev?'Severe Sepsis (Sepsis-2)':'Sepsis (Sepsis-2)';badgeCls='sepsis-pos';mcls='m-sepsis';
+    mtxt=`⚠️ ${badgeTxt}\n\nImmediate actions:\n1. Blood cultures before antibiotics\n2. Broad-spectrum IV antibiotics within 1 hour\n3. IV fluid bolus 500 mL–1L NS/Hartmann's — reassess haemodynamics\n4. Check lactate — if >2 mmol/L, aggressive resuscitation\n5. Urine output monitoring (catheter) — target ≥0.5 mL/kg/hr\n6. Repeat clinical assessment every 30–60 min\n7. Consider ICU referral if organ dysfunction present\n8. Identify and treat source of infection`;}
+  else if(sirsPos){badgeTxt='SIRS (Non-specific)';badgeCls='sirs-pos';mcls='m-sirs';
+    mtxt='⚠️ SIRS criteria met (≥2). This indicates systemic inflammation — may or may not be infective.\n\nActions:\n1. If infection suspected — treat as sepsis above\n2. Assess non-infective causes: pancreatitis, trauma, burns, post-operative\n3. Serial monitoring of vital signs\n4. Blood tests: FBC, CRP, cultures if infection suspected, lactate\n5. Address underlying cause\n6. Repeat assessment in 1–2 hours';}
+  else{badgeTxt='SIRS Not Present';badgeCls='no-sirs';mcls='m-no';
+    mtxt='✅ SIRS criteria not met (<2 criteria). Low likelihood of systemic inflammatory response.\n\nNote: If clinical suspicion of infection remains high despite negative SIRS, use Sepsis-3 criteria (qSOFA ≥2 or SOFA ≥2 from baseline) — SIRS has low sensitivity in immunocompromised, elderly on steroids, and early infection.';}
+  badge.textContent=badgeTxt;badge.className='sirs-badge '+badgeCls;
+  document.getElementById('r-sirs').textContent=sirsPos?'Yes':'No';document.getElementById('r-sirs').style.color=sirsPos?'#ef4444':'#16a34a';
+  document.getElementById('r-sep2').textContent=sepsis2?'Met':'Not Met';document.getElementById('r-sep2').style.color=sepsis2?'#ef4444':'#16a34a';
+  document.getElementById('r-shock').textContent=septicShock?'SHOCK':'Not Met';document.getElementById('r-shock').style.color=septicShock?'#7f1d1d':'#16a34a';
+  mgmt.textContent=mtxt;mgmt.className='mgmt-box '+mcls;
+  lastResult=`SIRS: ${count}/4 criteria — ${badgeTxt}\nInfection: ${hasInfection?'Yes':'No'} | Hypotension: ${hasHypotension?'Yes':'No'} | Lactate >2: ${hasLactate?'Yes':'No'}\nCalculated at rxmedcalc.com/medical-calculators/sirs-criteria`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('sirs_calc',{count,sepsis2,septicShock});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🚨 SIRS Assessment\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){sirsSelected.clear();for(let i=0;i<4;i++){document.getElementById('cr'+i).classList.remove('met')}['od-infection','od-hypotension','od-lactate','od-organ','od-vasopressors'].forEach(id=>{document.getElementById(id).checked=false});document.getElementById('sirs-count').textContent='0';document.getElementById('results').className='results';lastResult=null}
+</script>
+</body>
+</html>
