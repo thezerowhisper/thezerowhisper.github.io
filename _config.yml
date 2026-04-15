@@ -17,12 +17,9 @@ lang: "en-IN"
 permalink: none
 
 # ── EXCLUDE FROM JEKYLL PROCESSING ────────────────────────
-# These files are served as-is. Jekyll should NOT touch them
-# because they contain special characters or JS that Jekyll
-# might misinterpret as Liquid template syntax ({{ }}, {% %}).
+# Only exclude files that should NOT be copied to _site/
+# REMOVED: shared.css and shared-nav.js (they need to be served!)
 exclude:
-  - shared-nav.js
-  - shared.css
   - assets/umami-events.js
   - README.md
   - node_modules/
@@ -31,15 +28,18 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-# ── INCLUDE HIDDEN FILES IF NEEDED ────────────────────────
-# include:
-#   - .htaccess
+# ── INCLUDE FILES IN OUTPUT ────────────────────────────────
+# Explicitly ensure these static files are copied to _site/
+include:
+  - shared.css
+  - shared-nav.js
+  - assets/
 
 # ── MARKDOWN ENGINE ────────────────────────────────────────
 markdown: kramdown
 highlighter: rouge
 
-# ── DEFAULTS (optional — stops Jekyll adding layouts) ──────
+# ── DEFAULTS (stops Jekyll adding unwanted layouts) ────────
 defaults:
   - scope:
       path: ""
@@ -49,12 +49,10 @@ defaults:
 # ── PLUGINS (GitHub Pages safe whitelist) ─────────────────
 plugins:
   - jekyll-seo-tag
- # - jekyll-sitemap
+  # - jekyll-sitemap
+  # Uncomment jekyll-sitemap to auto-generate /sitemap.xml
 
-# jekyll-sitemap will auto-generate /sitemap.xml listing
-# all your pages — great for Google Search Console.
-
-# ── SITEMAP EXCLUSIONS ────────────────────────────────────
+# ── SITEMAP EXCLUSIONS ─────────────────────────────────
 # Pages you do NOT want in the sitemap:
 sitemap:
   exclude:
@@ -67,10 +65,19 @@ sitemap:
 #   style: compressed
 
 # ═══════════════════════════════════════════════════════════
-#  AFTER ADDING THIS FILE:
-#  1. Commit and push to GitHub
-#  2. GitHub Pages rebuilds automatically (takes ~1 min)
-#  3. Test: visit /medical-calculators/curb65 (no .html)
-#  4. Old .html URLs still work — Jekyll serves both
-#  5. Update any internal links that still use .html
+#  DEPLOYMENT CHECKLIST:
+#
+#  1. Replace your current _config.yml with this file
+#  2. Make sure shared.css exists in your repo root
+#  3. Make sure shared-nav.js exists in your repo root
+#  4. Make sure assets/ folder exists with umami-events.js
+#  5. Commit all files:
+#     git add _config.yml shared.css shared-nav.js
+#     git commit -m "Fix: include CSS and JS in Jekyll output"
+#     git push origin main
+#  6. GitHub Pages rebuilds (~1 min) — check Actions tab
+#  7. Test: Visit https://thezerowhisper.github.io/medical-calculators/wells-score
+#  8. Open DevTools (F12) → Console → check for 404s
+#  9. CSS should load correctly now!
+#
 # ═══════════════════════════════════════════════════════════
