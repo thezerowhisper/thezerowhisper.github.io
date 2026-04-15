@@ -1,311 +1,66 @@
-/* ============================================================
-   TheZeroWhisper — Shared Design System
-   Used across: root index, about, privacy, contact,
-                medical-calculators/index, rabies-scheduler
-   ============================================================ */
-
-:root {
-  --primary:      #1a365d;
-  --primary-mid:  #2b6cb0;
-  --primary-light:#3182ce;
-  --accent:       #f59e0b;
-  --accent-dark:  #d97706;
-  --danger:       #e53e3e;
-  --green:        #38a169;
-  --bg:           #f0f4f8;
-  --surface:      #ffffff;
-  --surface2:     #f7fafc;
-  --border:       #e2e8f0;
-  --text:         #1a202c;
-  --text-muted:   #4a5568;
-  --text-light:   #718096;
-  --radius:       14px;
-  --radius-sm:    8px;
-  --shadow:       0 2px 16px rgba(0,0,0,.07);
-  --shadow-lg:    0 8px 32px rgba(0,0,0,.12);
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.65;
-}
-
-/* ── SITE HEADER ─────────────────────────────────────────── */
-.site-header {
-  background: var(--primary);
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,.25);
-}
-.header-inner {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 58px;
-}
-.site-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #fff;
-}
-.site-logo .logo-icon { font-size: 1.5rem; }
-.site-logo .logo-name {
-  font-size: 1.05rem;
-  font-weight: 800;
-  letter-spacing: -.01em;
-}
-.site-logo .logo-tag {
-  font-size: .68rem;
-  font-weight: 600;
-  background: var(--accent);
-  color: var(--primary);
-  padding: 2px 8px;
-  border-radius: 20px;
-  letter-spacing: .04em;
-}
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.site-nav a {
-  color: rgba(255,255,255,.82);
-  text-decoration: none;
-  font-size: .88rem;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: var(--radius-sm);
-  transition: all .18s;
-}
-.site-nav a:hover,
-.site-nav a.active { background: rgba(255,255,255,.15); color: #fff; }
-.nav-cta {
-  background: var(--accent) !important;
-  color: var(--primary) !important;
-  padding: 7px 14px !important;
-  border-radius: 20px !important;
-  font-weight: 700 !important;
-}
-.nav-cta:hover { background: #fbbf24 !important; transform: translateY(-1px); }
-
-/* Hamburger for mobile */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 4px 8px;
-}
-@media(max-width: 680px) {
-  .nav-toggle { display: block; }
-  .site-nav {
-    display: none;
-    position: absolute;
-    top: 58px;
-    left: 0; right: 0;
-    background: var(--primary);
-    flex-direction: column;
-    align-items: stretch;
-    padding: 12px 16px 20px;
-    gap: 4px;
-    box-shadow: 0 8px 24px rgba(0,0,0,.2);
-  }
-  .site-nav.open { display: flex; }
-  .site-nav a { padding: 10px 14px; font-size: .95rem; }
-}
-
-/* ── ADSENSE SLOTS ───────────────────────────────────────── */
-.ad-slot {
-  display: block;
-  text-align: center;
-  margin: 24px auto;
-  max-width: 100%;
-  min-height: 90px;
-  background: var(--surface2);
-  border: 1px dashed var(--border);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-light);
-  font-size: .78rem;
-}
-.ad-slot-banner { height: 90px; }
-.ad-slot-square { height: 250px; max-width: 300px; }
-.ad-slot ins { display: block; }
-
-/* ── BREADCRUMB ──────────────────────────────────────────── */
-.breadcrumb {
-  font-size: .78rem;
-  color: var(--text-light);
-  padding: 10px 0 6px;
-}
-.breadcrumb a { color: var(--primary-light); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
-.breadcrumb span { margin: 0 5px; color: var(--border); }
-
-/* ── SITE FOOTER ─────────────────────────────────────────── */
-.site-footer {
-  background: var(--primary);
-  color: rgba(255,255,255,.75);
-  margin-top: 60px;
-}
-.footer-inner {
-  max-width: 1100px;
-  margin: auto;
-  padding: 48px 24px 32px;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
-}
-@media(max-width: 720px) {
-  .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; }
-}
-@media(max-width: 480px) {
-  .footer-inner { grid-template-columns: 1fr; gap: 24px; }
-}
-.footer-brand p {
-  font-size: .85rem;
-  line-height: 1.7;
-  margin-top: 10px;
-  max-width: 280px;
-}
-.footer-brand .brand-name {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #fff;
-}
-.footer-col h4 {
-  font-size: .75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: rgba(255,255,255,.5);
-  margin-bottom: 14px;
-}
-.footer-col a {
-  display: block;
-  color: rgba(255,255,255,.72);
-  text-decoration: none;
-  font-size: .85rem;
-  margin-bottom: 8px;
-  transition: color .18s;
-}
-.footer-col a:hover { color: #fff; }
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.12);
-  padding: 20px 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: .78rem;
-  color: rgba(255,255,255,.45);
-}
-.footer-bottom a { color: rgba(255,255,255,.55); text-decoration: none; }
-.footer-bottom a:hover { color: #fff; }
-
-/* ── HERO SECTION ────────────────────────────────────────── */
-.page-hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-mid) 60%, #1e3a8a 100%);
-  color: #fff;
-  padding: 60px 20px 72px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.page-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");
-  pointer-events: none;
-}
-.page-hero h1 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 14px;
-  position: relative;
-}
-.page-hero p {
-  font-size: clamp(.95rem, 2vw, 1.1rem);
-  color: rgba(255,255,255,.82);
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-}
-.hero-badge {
-  display: inline-block;
-  background: rgba(255,255,255,.15);
-  border: 1px solid rgba(255,255,255,.25);
-  border-radius: 20px;
-  padding: 4px 16px;
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  position: relative;
-}
-
-/* ── CONTENT WRAPPER ─────────────────────────────────────── */
-.content-wrap {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px 60px;
-}
-.content-wide {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px 60px;
-}
-
-/* ── UTILITY CLASSES ─────────────────────────────────────── */
-.card {
-  background: var(--surface);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  padding: 28px 32px;
-  margin-bottom: 24px;
-}
-.section-title {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 16px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--border);
-}
-.section-title span { color: var(--primary-light); }
-.pill {
-  display: inline-block;
-  padding: 3px 12px;
-  border-radius: 20px;
-  font-size: .72rem;
-  font-weight: 700;
-}
-.pill-blue { background: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; }
-.pill-green { background: #f0fff4; color: #276749; border: 1px solid #9ae6b4; }
-.pill-orange { background: #fffaf0; color: #c05621; border: 1px solid #fbd38d; }
-.pill-red { background: #fff5f5; color: #9b2c2c; border: 1px solid #fed7d7; }
+# ═══════════════════════════════════════════════════════════
+#  _config.yml — RxMedCalc (thezerowhisper.github.io)
+#  Jekyll configuration for GitHub Pages
+# ═══════════════════════════════════════════════════════════
+# ── SITE IDENTITY ──────────────────────────────────────────
+title: "RxMedCalc"
+description: "Free clinical calculators for Indian doctors. CURB-65, NEWS2, GCS, eGFR, ARV dose, IV drip rate, BMI and more. Built by a doctor. No login required."
+url: "https://rxmedcalc.com"
+baseurl: ""
+lang: "en-IN"
+# ── PERMALINKS ─────────────────────────────────────────────
+# "none" gives clean URLs WITHOUT trailing slash:
+#   curb65.html  →  /medical-calculators/curb65
+# This matches your existing canonical tags exactly.
+permalink: none
+# ── EXCLUDE FROM JEKYLL PROCESSING ────────────────────────
+# These files are served as-is. Jekyll should NOT touch them
+# because they contain special characters or JS that Jekyll
+# might misinterpret as Liquid template syntax ({{ }}, {% %}).
+exclude:
+  - shared-nav.js
+  - shared.css
+  - assets/umami-events.js
+  - README.md
+  - node_modules/
+  - "*.json"
+  - "*.py"
+  - Gemfile
+  - Gemfile.lock
+# ── INCLUDE HIDDEN FILES IF NEEDED ────────────────────────
+# include:
+#   - .htaccess
+# ── MARKDOWN ENGINE ────────────────────────────────────────
+markdown: kramdown
+highlighter: rouge
+# ── DEFAULTS (optional — stops Jekyll adding layouts) ──────
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: null
+# ── PLUGINS (GitHub Pages safe whitelist) ─────────────────
+plugins:
+  - jekyll-seo-tag
+ # - jekyll-sitemap
+# jekyll-sitemap will auto-generate /sitemap.xml listing
+# all your pages — great for Google Search Console.
+# ── SITEMAP EXCLUSIONS ────────────────────────────────────
+# Pages you do NOT want in the sitemap:
+sitemap:
+  exclude:
+    - /404.html
+    - /privacy
+    - /contact
+# ── SASS (if you ever move shared.css to .scss) ───────────
+# sass:
+#   style: compressed
+# ═══════════════════════════════════════════════════════════
+#  AFTER ADDING THIS FILE:
+#  1. Commit and push to GitHub
+#  2. GitHub Pages rebuilds automatically (takes ~1 min)
+#  3. Test: visit /medical-calculators/curb65 (no .html)
+#  4. Old .html URLs still work — Jekyll serves both
+#  5. Update any internal links that still use .html
+# ═══════════════════════════════════════════════════════════
+its on githb pages this is the ile.
