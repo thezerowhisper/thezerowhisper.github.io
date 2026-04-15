@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="sofa-score">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SOFA Score Calculator | Sequential Organ Failure Assessment | ICU Mortality | RxMedCalc</title>
+<meta name="description" content="Free SOFA score calculator for ICU patients. Assess sequential organ failure across 6 organ systems. Predict ICU mortality, diagnose sepsis (qSOFA), and guide organ support decisions. Used by intensivists and critical care physicians worldwide."/>
+<meta name="keywords" content="SOFA score calculator, sequential organ failure assessment, SOFA ICU, SOFA mortality, organ failure ICU, sepsis SOFA, SOFA score interpretation, SOFA score sepsis, ICU prognosis calculator, delta SOFA"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/sofa-score"/>
+<meta property="og:title" content="SOFA Score Calculator | Organ Failure Assessment | ICU Mortality | RxMedCalc"/>
+<meta property="og:description" content="Calculate SOFA score for ICU organ failure assessment. Mortality prediction, sepsis diagnosis. Free for intensivists worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/sofa-score"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a0e0e 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(239,68,68,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(239,68,68,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(239,68,68,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#fca5a5;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#f87171}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#ef4444;border-radius:2px;flex-shrink:0}
+/* Organ rows */
+.organ-sections{display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
+.organ-row{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:14px;padding:16px 20px}
+.organ-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.organ-name{font-weight:700;color:#0d1b2a;font-size:0.92rem;display:flex;align-items:center;gap:8px}
+.organ-icon{font-size:1.2rem}
+.organ-score{font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:900;color:#ef4444}
+.organ-opts{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+@media(max-width:500px){.organ-opts{grid-template-columns:1fr 1fr 1fr}}
+.organ-opt{padding:8px 6px;border:1.5px solid #e5e7eb;border-radius:8px;background:#fff;text-align:center;cursor:pointer;transition:all 0.2s;font-family:inherit}
+.organ-opt:hover{border-color:#ef4444;background:#fef2f2}
+.organ-opt.sel{border-color:#ef4444;background:#fef2f2}
+.organ-opt .opt-score{font-size:1rem;font-weight:700;color:#6b7280;display:block}
+.organ-opt.sel .opt-score{color:#ef4444}
+.organ-opt .opt-desc{font-size:0.62rem;color:#9ca3af;margin-top:2px;line-height:1.2}
+/* Running total */
+.running-total{background:linear-gradient(135deg,#fef2f2,#fff);border:1.5px solid #fecaca;border-radius:14px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.rt-label{font-size:0.8rem;font-weight:600;color:#6b7280}
+.rt-val{font-family:'Fraunces',Georgia,serif;font-size:2.5rem;font-weight:900;color:#ef4444}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#ef4444,#dc2626);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(239,68,68,0.3)}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(239,68,68,0.4)}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.score-display{text-align:center;margin-bottom:20px}
+.score-big{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;color:#ef4444;line-height:1}
+.score-badge{display:inline-block;padding:7px 24px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-top:10px}
+.s-low{background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0}
+.s-mod{background:#fffbeb;color:#d97706;border:1.5px solid #fde68a}
+.s-high{background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca}
+.s-crit{background:#dc2626;color:#fff}
+.result-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.3rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#ef4444}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.interp-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.7}
+.i-low{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.i-mod{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.i-high{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.i-crit{background:#fef2f2;border:2px solid #dc2626;color:#7f1d1d}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#ef4444;color:#ef4444}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#ef4444;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ef4444;font-size:0.8rem}
+.sofa-table{width:100%;border-collapse:collapse;font-size:0.78rem;margin:12px 0}
+.sofa-table th{background:#fef2f2;color:#991b1b;font-weight:700;padding:8px 10px;text-align:left;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid #fecaca}
+.sofa-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;color:#374151;font-size:0.78rem}
+.sofa-table tr:hover td{background:#fafafa}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>SOFA Score</span></nav>
+    <div class="page-eyebrow">🏥 Critical Care · ICU · Sepsis</div>
+    <h1>SOFA Score<br><em>Calculator</em></h1>
+    <p class="page-sub">Sequential Organ Failure Assessment — evaluate organ dysfunction across 6 systems. ICU mortality prediction, sepsis diagnosis (Sepsis-3), and organ support guidance.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 6 Organ Systems</span>
+      <span class="hbadge">✓ ICU Mortality %</span>
+      <span class="hbadge">✓ Sepsis-3 Criteria</span>
+      <span class="hbadge">✓ Live Scoring</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">SOFA Score Assessment</div>
+    <div class="organ-sections" id="organ-sections"></div>
+    <div class="running-total">
+      <span class="rt-label">Current SOFA Score</span>
+      <span class="rt-val" id="rt-val">0</span>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Calculate Mortality Risk →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-display">
+        <div class="score-big" id="score-big">0</div>
+        <div style="font-size:0.9rem;color:#6b7280;margin-top:4px">SOFA Score (max 24)</div>
+        <div class="score-badge" id="score-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">SOFA Score</div><div class="rval" id="r-sofa">—</div><div class="runit">/ 24</div></div>
+        <div class="rbox"><div class="rlabel">ICU Mortality</div><div class="rval" id="r-mort">—</div><div class="runit">%</div></div>
+        <div class="rbox"><div class="rlabel">Sepsis Criteria</div><div class="rval" id="r-sepsis">—</div><div class="runit">SOFA ≥2</div></div>
+      </div>
+      <div class="interp-box" id="interp-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>SOFA Score Reference Table</h2>
+    <table class="sofa-table">
+      <thead><tr><th>Organ System</th><th>Score 0</th><th>Score 1</th><th>Score 2</th><th>Score 3</th><th>Score 4</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Respiratory</strong> (PaO₂/FiO₂)</td><td>≥400</td><td>300–399</td><td>200–299</td><td>100–199 +vent</td><td>&lt;100 +vent</td></tr>
+        <tr><td><strong>Coagulation</strong> (Platelets ×10³)</td><td>≥150</td><td>100–149</td><td>50–99</td><td>20–49</td><td>&lt;20</td></tr>
+        <tr><td><strong>Liver</strong> (Bilirubin mg/dL)</td><td>&lt;1.2</td><td>1.2–1.9</td><td>2.0–5.9</td><td>6.0–11.9</td><td>≥12.0</td></tr>
+        <tr><td><strong>Cardiovascular</strong></td><td>MAP≥70</td><td>MAP&lt;70</td><td>Dopa≤5 or Dobu</td><td>Dopa5-15 or Epi≤0.1</td><td>Dopa&gt;15 or Epi&gt;0.1</td></tr>
+        <tr><td><strong>CNS</strong> (GCS)</td><td>15</td><td>13–14</td><td>10–12</td><td>6–9</td><td>&lt;6</td></tr>
+        <tr><td><strong>Renal</strong> (Creatinine mg/dL)</td><td>&lt;1.2</td><td>1.2–1.9</td><td>2.0–3.4</td><td>3.5–4.9 or UO&lt;500</td><td>≥5.0 or UO&lt;200</td></tr>
+      </tbody>
+    </table>
+    <h3>SOFA Score and Mortality</h3>
+    <table class="sofa-table">
+      <thead><tr><th>SOFA Score</th><th>ICU Mortality</th></tr></thead>
+      <tbody>
+        <tr><td>0–6</td><td>&lt;10%</td></tr>
+        <tr><td>7–9</td><td>15–20%</td></tr>
+        <tr><td>10–12</td><td>40–50%</td></tr>
+        <tr><td>13–14</td><td>50–60%</td></tr>
+        <tr><td>15+</td><td>&gt;80%</td></tr>
+        <tr><td>15–24</td><td>&gt;90%</td></tr>
+      </tbody>
+    </table>
+    <h3>Sepsis-3 Definition</h3>
+    <p>The Sepsis-3 consensus (2016) defines sepsis as life-threatening organ dysfunction caused by a dysregulated host response to infection. Operationally: suspected infection + acute SOFA score increase of ≥2 points from baseline. SOFA ≥2 at ICU admission = ~10% in-hospital mortality. Delta-SOFA (change from admission to 48 hours) is a key prognostic indicator — worsening SOFA predicts higher mortality than absolute score alone.</p>
+    <h3>Delta-SOFA — Clinical Significance</h3>
+    <p>Serial SOFA scoring every 24–48 hours is more informative than a single score. A delta-SOFA of ≥2 within 48 hours predicts significantly increased mortality. Improving SOFA predicts better outcomes than absolute values. Use SOFA trend to guide escalation decisions, family discussions, and palliative care planning in the ICU.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Cardiovascular SOFA component</div></div></a>
+      <a href="/medical-calculators/gcs-calculator" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">GCS Calculator</div><div class="rc-desc">CNS SOFA component</div></div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">Creatinine Clearance</div><div class="rc-desc">Renal SOFA component</div></div></a>
+      <a href="/medical-calculators/news2" class="related-card"><span class="rc-icon">📉</span><div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Early deterioration warning</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> SOFA score is a severity and prognostic tool for ICU patients. It should not be used in isolation for treatment limitation decisions, which require comprehensive clinical assessment, patient values, and multidisciplinary input. SOFA was validated in ICU populations and may not apply to non-ICU settings.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+const ORGANS=[
+  {name:'Respiratory',icon:'🫁',param:'PaO₂/FiO₂ (mmHg)',opts:[{s:0,d:'≥400'},{s:1,d:'300–399'},{s:2,d:'200–299'},{s:3,d:'100–199 + ventilated'},{s:4,d:'<100 + ventilated'}]},
+  {name:'Coagulation',icon:'🩸',param:'Platelets (×10³/µL)',opts:[{s:0,d:'≥150'},{s:1,d:'100–149'},{s:2,d:'50–99'},{s:3,d:'20–49'},{s:4,d:'<20'}]},
+  {name:'Liver',icon:'🫀',param:'Bilirubin (mg/dL)',opts:[{s:0,d:'<1.2'},{s:1,d:'1.2–1.9'},{s:2,d:'2.0–5.9'},{s:3,d:'6.0–11.9'},{s:4,d:'≥12.0'}]},
+  {name:'Cardiovascular',icon:'❤️',param:'MAP / Vasopressors',opts:[{s:0,d:'MAP ≥70'},{s:1,d:'MAP <70'},{s:2,d:'Dopa ≤5 or Dobu any'},{s:3,d:'Dopa 5–15 or Epi/NA ≤0.1'},{s:4,d:'Dopa >15 or Epi/NA >0.1'}]},
+  {name:'CNS',icon:'🧠',param:'GCS Score',opts:[{s:0,d:'GCS 15'},{s:1,d:'GCS 13–14'},{s:2,d:'GCS 10–12'},{s:3,d:'GCS 6–9'},{s:4,d:'GCS <6'}]},
+  {name:'Renal',icon:'🫘',param:'Creatinine (mg/dL) or Urine Output',opts:[{s:0,d:'<1.2'},{s:1,d:'1.2–1.9'},{s:2,d:'2.0–3.4'},{s:3,d:'3.5–4.9 or UO<500 mL/d'},{s:4,d:'≥5.0 or UO<200 mL/d'}]},
+];
+let scores=new Array(6).fill(0);
+let lastResult=null;
+function buildOrgans(){
+  document.getElementById('organ-sections').innerHTML=ORGANS.map((o,oi)=>`
+    <div class="organ-row">
+      <div class="organ-header">
+        <div class="organ-name"><span class="organ-icon">${o.icon}</span>${o.name} <span style="font-size:0.72rem;color:#9ca3af;font-weight:400">(${o.param})</span></div>
+        <div class="organ-score">${scores[oi]}</div>
+      </div>
+      <div class="organ-opts">
+        ${o.opts.map(opt=>`<div class="organ-opt${scores[oi]===opt.s?' sel':''}" onclick="setScore(${oi},${opt.s})">
+          <span class="opt-score">${opt.s}</span>
+          <span class="opt-desc">${opt.d}</span>
+        </div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+function setScore(oi,s){
+  scores[oi]=s;
+  buildOrgans();
+  document.getElementById('rt-val').textContent=scores.reduce((a,b)=>a+b,0);
+  if(typeof umami!=='undefined')umami.track('sofa_set',{organ:ORGANS[oi].name,score:s});
+}
+function getMortality(s){
+  if(s<=6)return '<10';if(s<=9)return '15–20';if(s<=12)return '40–50';if(s<=14)return '50–60';return '>80';
+}
+function calculate(){
+  const total=scores.reduce((a,b)=>a+b,0);
+  const mort=getMortality(total);
+  document.getElementById('score-big').textContent=total;
+  document.getElementById('r-sofa').textContent=total;
+  document.getElementById('r-mort').textContent=mort+'%';
+  document.getElementById('r-sepsis').textContent=total>=2?'Met (≥2)':'Not Met';
+  document.getElementById('r-sepsis').style.color=total>=2?'#ef4444':'#16a34a';
+  const badge=document.getElementById('score-badge');
+  const interp=document.getElementById('interp-box');
+  let bTxt,bCls,iCls,iTxt;
+  if(total<=6){bTxt='Low Severity';bCls='s-low';iCls='i-low';iTxt='✅ Low organ failure burden. ICU mortality <10%. Monitor and manage individual organ dysfunctions. Serial SOFA every 24h to track trends.';}
+  else if(total<=9){bTxt='Moderate';bCls='s-mod';iCls='i-mod';iTxt='⚠️ Moderate organ failure — ICU mortality 15–20%. Optimise each failing organ system. Aggressive sepsis management if source identified. Serial SOFA monitoring essential.';}
+  else if(total<=12){bTxt='High Severity';bCls='s-high';iCls='i-high';iTxt='⚠️ High organ failure burden — ICU mortality 40–50%. Multi-organ dysfunction syndrome (MODS). Consider early goals-of-care discussion. Maximise organ support within agreed treatment ceiling.';}
+  else{bTxt='Critical';bCls='s-crit';iCls='i-crit';iTxt='🚨 Critical — ICU mortality >50%. Severe multi-organ failure. Goals-of-care discussion with family essential. Consider palliative care involvement if no clinical improvement. Delta-SOFA trend at 48h is key prognostic indicator.';}
+  badge.textContent=bTxt;badge.className='score-badge '+bCls;
+  interp.textContent=iTxt;interp.className='interp-box '+iCls;
+  lastResult=`SOFA Score: ${total}/24 — ${bTxt}\nICU Mortality: ~${mort}%\nOrgan scores: ${ORGANS.map((o,i)=>o.name+' '+scores[i]).join(', ')}\nCalculated at rxmedcalc.com/medical-calculators/sofa-score`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('sofa_calc',{score:total});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🏥 SOFA Score\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){scores=new Array(6).fill(0);buildOrgans();document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
+buildOrgans();
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="shock-index">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shock Index Calculator | Haemodynamic Instability | RxMedCalc</title>
+<meta name="description" content="Free shock index calculator. Calculate shock index (HR/SBP) and modified shock index to assess haemodynamic instability, predict massive transfusion need, and guide resuscitation. Includes clinical thresholds for trauma, obstetric haemorrhage, and sepsis. Used by emergency physicians worldwide."/>
+<meta name="keywords" content="shock index calculator, shock index HR SBP, modified shock index, haemodynamic instability, massive transfusion shock index, shock index trauma, obstetric shock index, shock index normal range, shock index 1"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/shock-index"/>
+<meta property="og:title" content="Shock Index Calculator | Haemodynamic Instability | RxMedCalc"/>
+<meta property="og:description" content="Calculate shock index and modified shock index. Predict massive transfusion need, assess haemodynamic instability. Free for emergency physicians."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/shock-index"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a1010 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(239,68,68,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(239,68,68,0.06) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(239,68,68,0.12) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#fca5a5;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#f87171}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#ef4444;border-radius:2px;flex-shrink:0}
+/* Live display */
+.si-live{background:linear-gradient(135deg,#fef2f2,#fff);border:1.5px solid #fecaca;border-radius:14px;padding:20px;text-align:center;margin-bottom:20px}
+.si-big{font-family:'Fraunces',Georgia,serif;font-size:5rem;font-weight:900;color:#ef4444;line-height:1;transition:color 0.3s}
+.si-formula{font-size:0.8rem;color:#9ca3af;margin-top:4px}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:480px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none}
+.field input:focus{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#ef4444,#dc2626);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(239,68,68,0.3)}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(239,68,68,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.result-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.3rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#ef4444}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.interp-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.7}
+.i-normal{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.i-elevated{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.i-shock{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.i-critical{background:#fef2f2;border:2px solid #dc2626;color:#7f1d1d}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#ef4444;color:#ef4444}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#ef4444;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ef4444;font-size:0.8rem}
+.si-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:12px 0}
+.si-table th{background:#fef2f2;color:#991b1b;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid #fecaca}
+.si-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Shock Index</span></nav>
+    <div class="page-eyebrow">🚨 Emergency · Trauma · Critical Care</div>
+    <h1>Shock Index<br><em>Calculator</em></h1>
+    <p class="page-sub">Calculate shock index (HR ÷ SBP) to rapidly assess haemodynamic instability. Predict massive transfusion need, guide resuscitation in trauma, obstetric haemorrhage, and sepsis.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ Shock Index & Modified SI</span>
+      <span class="hbadge">✓ Massive Transfusion Threshold</span>
+      <span class="hbadge">✓ Obstetric Haemorrhage</span>
+      <span class="hbadge">✓ Live Calculation</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">Shock Index Calculator</div>
+    <!-- Live display -->
+    <div class="si-live">
+      <div class="si-big" id="si-live-val">—</div>
+      <div class="si-formula">Shock Index = Heart Rate ÷ Systolic BP</div>
+    </div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="hr">Heart Rate</label>
+        <input type="number" id="hr" placeholder="e.g. 110" min="20" max="300" inputmode="decimal" oninput="updateLive()"/>
+        <div class="hint">beats per minute (bpm)</div>
+      </div>
+      <div class="field">
+        <label for="sbp">Systolic BP</label>
+        <input type="number" id="sbp" placeholder="e.g. 90" min="40" max="300" inputmode="decimal" oninput="updateLive()"/>
+        <div class="hint">mmHg</div>
+      </div>
+      <div class="field">
+        <label for="dbp">Diastolic BP <span style="font-weight:400;text-transform:none">(optional)</span></label>
+        <input type="number" id="dbp" placeholder="e.g. 60" min="20" max="200" inputmode="decimal"/>
+        <div class="hint">mmHg — for modified SI</div>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">Shock Index</div><div class="rval" id="r-si">—</div><div class="runit">HR/SBP</div></div>
+        <div class="rbox"><div class="rlabel">Modified SI</div><div class="rval" id="r-msi">—</div><div class="runit">HR/MAP</div></div>
+        <div class="rbox"><div class="rlabel">Massive Transfusion</div><div class="rval" id="r-mt">—</div><div class="runit">risk</div></div>
+      </div>
+      <div class="interp-box" id="interp-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>Shock Index Reference</h2>
+    <table class="si-table">
+      <thead><tr><th>Shock Index</th><th>Category</th><th>Clinical Significance</th></tr></thead>
+      <tbody>
+        <tr><td>&lt;0.6</td><td>Normal</td><td>Normal haemodynamics</td></tr>
+        <tr><td>0.6–1.0</td><td>Normal–Borderline</td><td>Mild compensated shock possible</td></tr>
+        <tr><td>1.0–1.4</td><td>Elevated</td><td>Significant haemodynamic compromise — may predict massive transfusion</td></tr>
+        <tr><td>≥1.4</td><td>Severe</td><td>Shock — high mortality, massive transfusion likely needed</td></tr>
+        <tr><td>≥1.7–2.0</td><td>Critical</td><td>Severe shock — immediate intervention required</td></tr>
+      </tbody>
+    </table>
+    <h3>Clinical Applications</h3>
+    <ul>
+      <li><strong>Trauma:</strong> SI ≥1.0 predicts massive transfusion with ~70% sensitivity. Activate MTP (massive transfusion protocol) at SI ≥1.0–1.4 in context of trauma</li>
+      <li><strong>Obstetric haemorrhage:</strong> SI ≥1.0 in PPH indicates significant blood loss (>1000 mL), SI ≥1.7 predicts severe maternal morbidity. Valuable because BP may remain deceptively normal in young women</li>
+      <li><strong>Sepsis screening:</strong> SI ≥1.0 combined with clinical features suggests haemodynamic compromise in sepsis</li>
+      <li><strong>Pulmonary embolism:</strong> SI ≥1.0 in suspected PE predicts right heart strain and adverse outcomes — consider thrombolysis</li>
+      <li><strong>Upper GI bleeding:</strong> SI ≥1.0 at presentation predicts adverse outcomes and need for urgent intervention</li>
+    </ul>
+    <h3>Why Shock Index Can Be More Sensitive Than BP Alone</h3>
+    <p>A young, healthy patient can maintain systolic BP in the normal range while developing significant hypovolaemia through compensatory tachycardia. A patient with HR 110 and SBP 110 has a normal blood pressure but a shock index of 1.0 — suggesting significant circulatory stress. SI captures the haemodynamic relationship that isolated BP or HR values miss.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Perfusion pressure assessment</div></div></a>
+      <a href="/medical-calculators/news2" class="related-card"><span class="rc-icon">📉</span><div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Clinical deterioration</div></div></a>
+      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Organ failure assessment</div></div></a>
+      <a href="/medical-calculators/burn-calculator" class="related-card"><span class="rc-icon">🔥</span><div><div class="rc-title">Parkland Formula</div><div class="rc-desc">Fluid resuscitation</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Shock index is a triage and screening tool. Haemodynamic assessment requires full clinical evaluation, serial vital signs, and clinical context. Shock index thresholds vary by clinical setting, patient age, and comorbidities. Always treat the patient, not the number.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let lastResult=null;
+function updateLive(){
+  const hr=parseFloat(document.getElementById('hr').value);
+  const sbp=parseFloat(document.getElementById('sbp').value);
+  const el=document.getElementById('si-live-val');
+  if(hr>0&&sbp>0){
+    const si=Math.round((hr/sbp)*100)/100;
+    el.textContent=si;
+    el.style.color=si<0.6?'#16a34a':si<1.0?'#d97706':si<1.4?'#ef4444':'#dc2626';
+  } else {el.textContent='—';el.style.color='#ef4444';}
+}
+function calculate(){
+  const hr=parseFloat(document.getElementById('hr').value);
+  const sbp=parseFloat(document.getElementById('sbp').value);
+  const dbp=parseFloat(document.getElementById('dbp').value)||null;
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!hr||!sbp){errEl.textContent='Please enter heart rate and systolic BP.';errEl.className='error-msg show';return}
+  const si=Math.round((hr/sbp)*100)/100;
+  let msi=null;
+  if(dbp){const map=Math.round((sbp+2*dbp)/3);msi=Math.round((hr/map)*100)/100;}
+  document.getElementById('r-si').textContent=si;
+  document.getElementById('r-msi').textContent=msi!==null?msi:'N/A';
+  document.getElementById('r-mt').textContent=si>=1.0?'Elevated':'Low';
+  document.getElementById('r-mt').style.color=si>=1.0?'#ef4444':'#16a34a';
+  const interp=document.getElementById('interp-box');
+  let cls,txt;
+  if(si<0.6){cls='i-normal';txt='✅ Normal shock index (<0.6). Haemodynamically stable. Routine monitoring appropriate.';}
+  else if(si<1.0){cls='i-elevated';txt='⚠️ Borderline shock index (0.6–1.0). Monitor closely. May indicate early compensated shock, especially in elderly patients. Reassess frequently.';}
+  else if(si<1.4){cls='i-shock';txt='⚠️ Elevated shock index (≥1.0). Significant haemodynamic compromise. Activate massive transfusion protocol if in trauma context. IV access ×2, IV fluids, blood type and crossmatch, urgent senior review. Consider obstetric haemorrhage protocol if postpartum.';}
+  else{cls='i-critical';txt='🚨 Severe shock (SI ≥1.4). Immediate intervention required. Massive transfusion protocol if trauma. Vasopressors, ICU transfer. Identify and control source of haemorrhage or sepsis. Do not delay resuscitation.';}
+  interp.textContent=txt;interp.className='interp-box '+cls;
+  lastResult=`Shock Index: ${si}${msi!==null?' | Modified SI: '+msi:''}\nHR: ${hr} bpm | SBP: ${sbp} mmHg\nCalculated at rxmedcalc.com/medical-calculators/shock-index`;
+  document.getElementById('results').className='results show';
+  if(typeof umami!=='undefined')umami.track('shock_index_calc',{si,hr,sbp});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🚨 Shock Index\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['hr','sbp','dbp'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';document.getElementById('si-live-val').textContent='—';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="meld-score">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MELD Score Calculator | MELD-Na | Liver Transplant Priority | RxMedCalc</title>
+<meta name="description" content="Free MELD and MELD-Na score calculator for liver disease severity and transplant priority. 90-day mortality prediction, UNOS waitlist criteria, and hepatology management guide. Used by hepatologists and gastroenterologists worldwide."/>
+<meta name="keywords" content="MELD score calculator, MELD-Na calculator, liver transplant score, MELD score interpretation, end stage liver disease, UNOS MELD, hepatic encephalopathy, liver failure score, MELD mortality, MELD 3.0"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/meld-score"/>
+<meta property="og:title" content="MELD Score Calculator | MELD-Na | Liver Disease Severity | RxMedCalc"/>
+<meta property="og:description" content="Calculate MELD and MELD-Na scores for liver disease severity and transplant priority. 90-day mortality prediction. Free for hepatologists worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/meld-score"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/meld-score","name":"MELD Score Calculator","description":"MELD and MELD-Na score for liver disease severity, 90-day mortality, and transplant priority.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Hepatologist, Gastroenterologist, Physician"},"dateModified":"2025-04-14"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"MELD Score","item":"https://rxmedcalc.com/medical-calculators/meld-score"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a dangerous MELD score?","acceptedAnswer":{"@type":"Answer","text":"A MELD score ≥15 indicates significant mortality risk and is the threshold for listing for liver transplantation in most centres. MELD 15–19 carries ~20% 3-month mortality without transplantation. MELD 20–29 carries 40–50% 3-month mortality. MELD ≥30 carries 70–80% 3-month mortality. MELD ≥40 has >90% 3-month mortality without transplantation."}},
+{"@type":"Question","name":"What is the difference between MELD and MELD-Na?","acceptedAnswer":{"@type":"Answer","text":"MELD-Na adds serum sodium to the original MELD score because hyponatraemia is an independent predictor of mortality in cirrhosis not captured by the original MELD formula. MELD-Na = MELD − serum Na − (0.025 × MELD × (140 − serum Na)) + 140. UNOS adopted MELD-Na in 2016 for organ allocation. Patients with the same MELD but lower sodium have higher waitlist mortality — MELD-Na corrects for this."}}
+]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a1820 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(245,158,11,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(245,158,11,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#fcd34d;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#fbbf24}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#d97706;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:500px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input,.field select{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none}
+.field input:focus,.field select:focus{border-color:#d97706;box-shadow:0 0 0 3px rgba(217,119,6,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+.floor-note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 12px;font-size:0.78rem;color:#92400e;margin-bottom:16px}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#d97706,#b45309);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(217,119,6,0.3);margin-top:4px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(217,119,6,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+/* Score display */
+.score-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.score-box{text-align:center;background:#fffbeb;border:1.5px solid #fde68a;border-radius:16px;padding:20px}
+.score-label{font-size:0.72rem;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.score-num{font-family:'Fraunces',Georgia,serif;font-size:3.5rem;font-weight:900;color:#d97706;line-height:1}
+.score-badge{display:inline-block;padding:5px 16px;border-radius:20px;font-size:0.82rem;font-weight:700;margin-top:8px}
+/* Mortality bar */
+.mortality-bar-wrap{margin-bottom:20px}
+.mortality-label{font-size:0.78rem;font-weight:600;color:#6b7280;margin-bottom:8px}
+.mortality-bar{height:14px;background:#f3f4f6;border-radius:7px;overflow:hidden;margin-bottom:4px}
+.mortality-fill{height:100%;border-radius:7px;transition:width 0.6s ease,background 0.4s ease}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#fffbeb;border-color:#fde68a}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.3rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#d97706}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.mgmt-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.7}
+.mgmt-low{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.mgmt-mod{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.mgmt-high{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.mgmt-critical{background:#fef2f2;border:2px solid #dc2626;color:#7f1d1d}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#d97706;color:#d97706}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#d97706;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#d97706;font-size:0.8rem}
+.formula-block{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:14px 16px;font-family:'Courier New',monospace;font-size:0.82rem;color:#78350f;margin:10px 0;line-height:2}
+.meld-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:14px 0}
+.meld-table th{background:#fffbeb;color:#92400e;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid #fde68a}
+.meld-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+.meld-table tr.active-row td{background:#fffbeb;font-weight:700;color:#d97706}
+.meld-table tr:hover td{background:#fafafa}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#d97706;background:#fffbeb;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>MELD Score</span></nav>
+    <div class="page-eyebrow">🫀 Hepatology · Gastroenterology</div>
+    <h1>MELD Score<br><em>Calculator</em></h1>
+    <p class="page-sub">Calculate MELD and MELD-Na scores for liver disease severity, 90-day mortality prediction, and liver transplant priority. Includes UNOS waitlist criteria and management guide.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ MELD &amp; MELD-Na</span>
+      <span class="hbadge">✓ 90-Day Mortality</span>
+      <span class="hbadge">✓ UNOS Criteria</span>
+      <span class="hbadge">✓ MELD 3.0</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">MELD &amp; MELD-Na Calculator</div>
+    <div class="floor-note">ℹ️ MELD uses floor values: Bilirubin, INR, and Creatinine minimum 1.0. Creatinine capped at 4.0 (patients on dialysis = 4.0).</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="bilirubin">Serum Bilirubin</label>
+        <input type="number" id="bilirubin" placeholder="e.g. 3.0" min="0.1" max="50" inputmode="decimal"/>
+        <div class="hint">mg/dL (min 1.0 applied)</div>
+      </div>
+      <div class="field">
+        <label for="inr">INR</label>
+        <input type="number" id="inr" placeholder="e.g. 1.8" min="0.5" max="20" inputmode="decimal"/>
+        <div class="hint">International Normalised Ratio (min 1.0)</div>
+      </div>
+      <div class="field">
+        <label for="creatinine">Serum Creatinine</label>
+        <input type="number" id="creatinine" placeholder="e.g. 1.5" min="0.1" max="10" inputmode="decimal"/>
+        <div class="hint">mg/dL (min 1.0, max 4.0, dialysis = 4.0)</div>
+      </div>
+      <div class="field">
+        <label for="sodium">Serum Sodium <span style="font-weight:400;text-transform:none">(for MELD-Na)</span></label>
+        <input type="number" id="sodium" placeholder="e.g. 135" min="100" max="160" inputmode="decimal"/>
+        <div class="hint">mmol/L — range 125–137 used in MELD-Na</div>
+      </div>
+    </div>
+    <div class="field" style="margin-bottom:16px">
+      <label for="dialysis">On Dialysis?</label>
+      <select id="dialysis">
+        <option value="no">No</option>
+        <option value="yes">Yes — use creatinine 4.0</option>
+      </select>
+    </div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate MELD →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-row">
+        <div class="score-box">
+          <div class="score-label">MELD Score</div>
+          <div class="score-num" id="meld-num">—</div>
+          <div class="score-badge" id="meld-badge"></div>
+        </div>
+        <div class="score-box">
+          <div class="score-label">MELD-Na Score</div>
+          <div class="score-num" id="meldna-num" style="font-size:3rem">—</div>
+          <div class="score-badge" id="meldna-badge"></div>
+        </div>
+      </div>
+      <div class="mortality-bar-wrap">
+        <div class="mortality-label" id="mortality-label">90-day mortality estimate</div>
+        <div class="mortality-bar"><div class="mortality-fill" id="mortality-fill" style="width:0%"></div></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">MELD</div><div class="rval" id="r-meld">—</div><div class="runit">score</div></div>
+        <div class="rbox hi"><div class="rlabel">MELD-Na</div><div class="rval" id="r-meldna">—</div><div class="runit">score</div></div>
+        <div class="rbox"><div class="rlabel">3-Month Mortality</div><div class="rval" id="r-mort">—</div><div class="runit">%</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>MELD Score — Mortality by Score</h2>
+    <table class="meld-table" id="meld-ref-table">
+      <thead><tr><th>MELD Score</th><th>3-Month Mortality</th><th>Transplant Priority</th></tr></thead>
+      <tbody>
+        <tr><td>&lt; 9</td><td>~1.9%</td><td>Low — outpatient management</td></tr>
+        <tr><td>10–19</td><td>~6%</td><td>Moderate — transplant listing consideration</td></tr>
+        <tr><td>20–29</td><td>~20%</td><td>High — active transplant evaluation</td></tr>
+        <tr><td>30–39</td><td>~53%</td><td>Very High — urgent listing</td></tr>
+        <tr><td>≥ 40</td><td>&gt;71%</td><td>Critical — highest priority (1A status)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>MELD Formula</h3>
+    <div class="formula-block">
+      MELD = 3.78 × ln(Bilirubin) + 11.2 × ln(INR) + 9.57 × ln(Creatinine) + 6.43<br>
+      Minimum values: Bili ≥1.0, INR ≥1.0, Cr ≥1.0, Cr max 4.0<br><br>
+      MELD-Na = MELD − Na − (0.025 × MELD × (140 − Na)) + 140<br>
+      Na range clamped to 125–137 mmol/L
+    </div>
+
+    <h3>MELD-Na vs MELD — Why Sodium Matters</h3>
+    <p>Hyponatraemia in cirrhosis is a marker of advanced disease, portal hypertension, and activated renin-angiotensin-aldosterone system. Patients with the same MELD score but lower serum sodium have significantly higher 90-day waitlist mortality. The United Network for Organ Sharing (UNOS) adopted MELD-Na in January 2016, replacing MELD as the primary organ allocation score.</p>
+    <p>MELD-Na ranges from 6 to 40. A patient with MELD 20 and sodium 128 mmol/L has MELD-Na ≈ 25 — significantly higher priority for organ allocation than their MELD alone would suggest.</p>
+
+    <h3>MELD 3.0 — The Newest Formula</h3>
+    <p>MELD 3.0 was introduced in 2021 to address sex-based disparities in liver transplantation (women historically had lower access despite equivalent illness severity). MELD 3.0 adds serum albumin and a female sex coefficient: MELD 3.0 = 4.56 × ln(Bili) + 0.82 × (137 − Na) − 0.24 × (137 − Na) × ln(Cr) + 9.09 × ln(INR) + 11.14 × ln(Cr) + 1.85 × (3.5 − Alb) + 1.33 (if female) + 7. Some UNOS regions are transitioning to MELD 3.0.</p>
+
+    <h3>Clinical Uses Beyond Transplantation</h3>
+    <ul>
+      <li><strong>Surgical risk assessment:</strong> MELD predicts 30-day post-operative mortality in cirrhotic patients. MELD &lt;10 = low risk (~4%). MELD 10–15 = moderate risk (~9%). MELD &gt;15 = high risk (&gt;25%). Elective surgery should generally be avoided if MELD &gt;20</li>
+      <li><strong>Acute alcoholic hepatitis:</strong> Maddrey Discriminant Function (MDF) is used alongside MELD. MELD &gt;20 in alcoholic hepatitis predicts high mortality and may guide corticosteroid therapy decisions</li>
+      <li><strong>Acute-on-chronic liver failure (ACLF):</strong> CLIF-C ACLF score has largely replaced MELD for short-term prognosis in ACLF, but MELD is still used for organ allocation</li>
+      <li><strong>Variceal bleeding:</strong> MELD at admission predicts 6-week mortality after variceal haemorrhage</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/child-pugh" class="related-card"><span class="rc-icon">🫀</span><div><div class="rc-title">Child-Pugh Score</div><div class="rc-desc">Liver cirrhosis severity A/B/C</div></div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">Creatinine Clearance</div><div class="rc-desc">Drug dosing in hepatic failure</div></div></a>
+      <a href="/medical-calculators/corrected-calcium" class="related-card"><span class="rc-icon">🔬</span><div><div class="rc-title">Corrected Calcium</div><div class="rc-desc">Albumin correction in liver disease</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Hepatorenal syndrome</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> MELD score is a mathematical model validated for prognostication and organ allocation. Clinical decisions regarding transplant listing, surgical risk, and acute management require comprehensive hepatology assessment. MELD does not account for all causes of mortality in liver disease. Always involve a hepatologist or transplant centre for complex decisions.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let lastResult=null;
+const MORTALITY=[1.9,6,6,20,20,20,53,53,71,71,71,71];
+function getMortality(meld){
+  if(meld<10)return 1.9;
+  if(meld<20)return 6;
+  if(meld<30)return 20;
+  if(meld<40)return 53;
+  return 71;
+}
+function calculate(){
+  let bili=parseFloat(document.getElementById('bilirubin').value);
+  let inr=parseFloat(document.getElementById('inr').value);
+  let cr=parseFloat(document.getElementById('creatinine').value);
+  const na=parseFloat(document.getElementById('sodium').value)||null;
+  const dialysis=document.getElementById('dialysis').value==='yes';
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!bili||!inr||!cr){errEl.textContent='Please enter Bilirubin, INR, and Creatinine.';errEl.className='error-msg show';return}
+  // Apply floors and caps
+  bili=Math.max(bili,1.0);
+  inr=Math.max(inr,1.0);
+  if(dialysis)cr=4.0;else cr=Math.min(Math.max(cr,1.0),4.0);
+  const meld=Math.round(3.78*Math.log(bili)+11.2*Math.log(inr)+9.57*Math.log(cr)+6.43);
+  const meldCapped=Math.min(Math.max(meld,6),40);
+  let meldna=null;
+  if(na){
+    const naC=Math.min(Math.max(na,125),137);
+    meldna=Math.round(meld-naC-(0.025*meld*(140-naC))+140);
+    meldna=Math.min(Math.max(meldna,6),40);
+  }
+  const mort=getMortality(meld);
+  const mortPct=Math.min((mort/100)*100,100);
+  // UI
+  document.getElementById('meld-num').textContent=meldCapped;
+  document.getElementById('meldna-num').textContent=meldna!==null?meldna:'N/A';
+  const fill=document.getElementById('mortality-fill');
+  fill.style.width=mortPct+'%';
+  fill.style.background=mort<10?'#10b981':mort<25?'#f59e0b':'#dc2626';
+  document.getElementById('r-meld').textContent=meldCapped;
+  document.getElementById('r-meldna').textContent=meldna!==null?meldna:'N/A';
+  document.getElementById('r-mort').textContent='~'+mort+'%';
+  document.getElementById('mortality-label').textContent=`90-day mortality estimate: ~${mort}%`;
+  // Badges and management
+  const badge=document.getElementById('meld-badge');
+  const mgmt=document.getElementById('mgmt-box');
+  let badgeTxt,mgmtCls,mgmtTxt;
+  if(meld<10){badgeTxt='Low Severity';badge.style.cssText='background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0';mgmtCls='mgmt-low';mgmtTxt='✅ Low severity. Outpatient hepatology follow-up. Manage underlying cause (alcohol cessation, antiviral therapy). Monitor: LFTs, INR, creatinine, sodium every 1–3 months. Avoid hepatotoxic drugs (NSAIDs, alcohol). Transplant listing not typically indicated.';}
+  else if(meld<20){badgeTxt='Moderate Severity';badge.style.cssText='background:#fffbeb;color:#d97706;border:1.5px solid #fde68a';mgmtCls='mgmt-mod';mgmtTxt='⚠️ Moderate severity. Consider transplant evaluation. Manage complications: diuretics for ascites (spironolactone ± furosemide), lactulose for encephalopathy, beta-blockers for portal hypertension. MELD ≥15 is threshold for listing in most centres. Regular re-scoring every 3 months.';}
+  else if(meld<30){badgeTxt='High Severity';badge.style.cssText='background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca';mgmtCls='mgmt-high';mgmtTxt='⚠️ High severity — ~20% 3-month mortality. Active transplant evaluation urgently. Hospitalise if decompensating. Manage: SBP prophylaxis (norfloxacin), lactulose/rifaximin for hepatic encephalopathy, terlipressin for hepatorenal syndrome. MELD ≥20 — do not delay surgical procedures if necessary.';}
+  else{badgeTxt='Critical';badge.style.cssText='background:#dc2626;color:#fff';mgmtCls='mgmt-critical';mgmtTxt='🚨 Critical — >50% 3-month mortality. Highest priority for liver transplantation. ICU-level care if decompensating. Treat precipitating cause. Consider TIPS if variceal bleeding or refractory ascites. Urgent transplant centre contact. MELD ≥35 may qualify for Status 1A in some regions.';}
+  badge.textContent=badgeTxt;
+  if(meldna!==null){const naBadge=document.getElementById('meldna-badge');naBadge.textContent=meldna>=meld?'Higher than MELD':'Lower than MELD';naBadge.style.cssText=meldna>=meld?'background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca':'background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0';}
+  mgmt.textContent=mgmtTxt;mgmt.className='mgmt-box '+mgmtCls;
+  lastResult=`MELD: ${meldCapped}${meldna!==null?' | MELD-Na: '+meldna:''}\n3-Month Mortality: ~${mort}%\nBili: ${bili} | INR: ${inr} | Cr: ${cr}${na?' | Na: '+na:''}\nCalculated at rxmedcalc.com/medical-calculators/meld-score`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('meld_calc',{meld:meldCapped});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🫀 MELD Score\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['bilirubin','inr','creatinine','sodium'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate()});
+</script>
+</body>
+</html>

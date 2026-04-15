@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="serum-osmolality">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Serum Osmolality Calculator | Osmol Gap | RxMedCalc</title>
+<meta name="description" content="Free serum osmolality calculator. Calculate measured vs calculated osmolality and osmol gap. Detect toxic alcohol ingestion, identify causes of hyperosmolality, and interpret the osmol gap. Includes clinical interpretation and management guide."/>
+<meta name="keywords" content="serum osmolality calculator, osmol gap calculator, calculated osmolality, osmolality formula, osmol gap toxicology, methanol ethylene glycol, hyperosmolality, serum osmolality normal range"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/serum-osmolality"/>
+<meta property="og:title" content="Serum Osmolality Calculator | Osmol Gap | RxMedCalc"/>
+<meta property="og:description" content="Calculate serum osmolality and osmol gap. Detect toxic alcohol ingestion. Clinical interpretation guide. Free for doctors worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/serum-osmolality"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0f2030 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(14,165,233,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,233,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#7dd3fc;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#38bdf8}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#0ea5e9;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:500px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none}
+.field input:focus{border-color:#0ea5e9;box-shadow:0 0 0 3px rgba(14,165,233,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+.section-label{font-size:0.72rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em;margin:16px 0 10px}
+.optional-note{font-size:0.78rem;color:#6b7280;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin-bottom:16px}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#0ea5e9,#0284c7);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(14,165,233,0.3);margin-top:4px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(14,165,233,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#f0f9ff;border-color:#bae6fd}
+.rbox.warn{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.4rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#0ea5e9}
+.rbox.warn .rval{color:#dc2626}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.interp-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.7}
+.interp-normal{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.interp-elevated{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.interp-toxic{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#0ea5e9;color:#0ea5e9}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#0ea5e9;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#0ea5e9;font-size:0.8rem}
+.formula-block{background:#f0f9ff;border:1.5px solid #bae6fd;border-radius:10px;padding:14px 16px;font-family:'Courier New',monospace;font-size:0.85rem;color:#075985;margin:10px 0;line-height:2}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#0ea5e9;background:#f0f9ff;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Serum Osmolality</span></nav>
+    <div class="page-eyebrow">⚗️ Nephrology · Toxicology · Emergency</div>
+    <h1>Serum Osmolality<br><em>&amp; Osmol Gap</em> Calculator</h1>
+    <p class="page-sub">Calculate estimated serum osmolality and osmol gap. Detect toxic alcohol ingestion, diagnose causes of hyperosmolality, and guide emergency management.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ Calculated Osmolality</span>
+      <span class="hbadge">✓ Osmol Gap</span>
+      <span class="hbadge">✓ Toxic Alcohol Detection</span>
+      <span class="hbadge">✓ Clinical Interpretation</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">Serum Osmolality Calculator</div>
+    <div class="section-label">Required values</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="na">Serum Sodium</label>
+        <input type="number" id="na" placeholder="e.g. 140" min="100" max="180" inputmode="decimal"/>
+        <div class="hint">mmol/L (mEq/L)</div>
+      </div>
+      <div class="field">
+        <label for="bun">BUN (Blood Urea Nitrogen)</label>
+        <input type="number" id="bun" placeholder="e.g. 20" min="0" max="300" inputmode="decimal"/>
+        <div class="hint">mg/dL</div>
+      </div>
+      <div class="field">
+        <label for="glucose">Serum Glucose</label>
+        <input type="number" id="glucose" placeholder="e.g. 100" min="10" max="2000" inputmode="decimal"/>
+        <div class="hint">mg/dL</div>
+      </div>
+    </div>
+    <div class="section-label">Optional — for Osmol Gap</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="measured">Measured Osmolality</label>
+        <input type="number" id="measured" placeholder="e.g. 295" min="200" max="500" inputmode="decimal"/>
+        <div class="hint">mOsm/kg — from lab (osmometer)</div>
+      </div>
+      <div class="field">
+        <label for="etoh">Ethanol Level <span style="font-weight:400;text-transform:none">(if known)</span></label>
+        <input type="number" id="etoh" placeholder="e.g. 0" min="0" max="500" inputmode="decimal"/>
+        <div class="hint">mg/dL — corrects for alcohol contribution</div>
+      </div>
+    </div>
+    <div class="optional-note">ℹ️ Enter measured osmolality from lab to calculate osmol gap. Osmol gap &gt;10 mOsm/kg suggests unmeasured osmoles (toxic alcohols, mannitol, propylene glycol).</div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate Osmolality →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">Calculated Osm</div><div class="rval" id="r-calc">—</div><div class="runit">mOsm/kg</div></div>
+        <div class="rbox" id="gap-box"><div class="rlabel">Osmol Gap</div><div class="rval" id="r-gap">N/A</div><div class="runit">mOsm/kg</div></div>
+        <div class="rbox"><div class="rlabel">Normal Range</div><div class="rval">275–295</div><div class="runit">mOsm/kg</div></div>
+      </div>
+      <div class="interp-box" id="interp-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+  <div class="content-card">
+    <h2>Osmolality Formula &amp; Osmol Gap</h2>
+    <div class="formula-block">
+      Calculated Osmolality = 2×Na + (BUN÷2.8) + (Glucose÷18) + (Ethanol÷4.6)<br>
+      Normal range: 275–295 mOsm/kg<br><br>
+      Osmol Gap = Measured Osmolality − Calculated Osmolality<br>
+      Normal osmol gap: &lt;10 mOsm/kg (some labs &lt;15)
+    </div>
+    <h3>Causes of Elevated Osmol Gap (&gt;10 mOsm/kg)</h3>
+    <ul>
+      <li><strong>Toxic alcohols:</strong> Methanol, ethylene glycol, isopropanol, propylene glycol — most important cause to exclude</li>
+      <li><strong>Ketoacidosis:</strong> DKA, alcoholic ketoacidosis — acetone is osmotically active</li>
+      <li><strong>Renal failure:</strong> Accumulation of unmeasured solutes</li>
+      <li><strong>Mannitol infusion:</strong> Common in neurosurgery/neurology</li>
+      <li><strong>Severe hyperlipidaemia or hyperproteinaemia:</strong> Pseudohyponatraemia</li>
+      <li><strong>Glycine, sorbitol:</strong> Irrigation fluid absorption (TURP syndrome)</li>
+    </ul>
+    <h3>High Osmol Gap + High Anion Gap Metabolic Acidosis</h3>
+    <p>The combination of elevated osmol gap AND elevated anion gap metabolic acidosis should immediately raise suspicion for <strong>methanol or ethylene glycol poisoning</strong>. Both are initially osmotically active (elevating osmol gap) but are subsequently metabolised to toxic acids (formate from methanol → anion gap acidosis; oxalate from ethylene glycol → anion gap acidosis). The osmol gap may normalise as the parent alcohol is metabolised — leaving only the anion gap acidosis. Do not be falsely reassured by a normal osmol gap late in the course.</p>
+    <h3>Causes of Hyperosmolality (&gt;295 mOsm/kg)</h3>
+    <ul>
+      <li>Hypernatraemia (most common) — water deficit, diabetes insipidus</li>
+      <li>Hyperglycaemia — hyperosmolar hyperglycaemic state (HHS)</li>
+      <li>Uraemia — elevated BUN in acute/chronic kidney failure</li>
+      <li>Toxic alcohol ingestion</li>
+      <li>Mannitol infusion</li>
+    </ul>
+  </div>
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/anion-gap" class="related-card"><span class="rc-icon">⚗️</span><div><div class="rc-title">Anion Gap</div><div class="rc-desc">Metabolic acidosis workup</div></div></a>
+      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">Renal function assessment</div></div></a>
+      <a href="/medical-calculators/fena-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">FENa Calculator</div><div class="rc-desc">AKI classification</div></div></a>
+      <a href="/medical-calculators/corrected-calcium" class="related-card"><span class="rc-icon">🔬</span><div><div class="rc-title">Corrected Calcium</div><div class="rc-desc">Electrolyte correction</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Suspected toxic alcohol poisoning is a medical emergency. Do not wait for confirmation before initiating treatment. Contact Poison Control, give fomepizole or ethanol antidote empirically, and arrange haemodialysis. Osmol gap has significant limitations — a normal gap does not exclude toxic ingestion at late presentation.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let lastResult=null;
+function calculate(){
+  const na=parseFloat(document.getElementById('na').value);
+  const bun=parseFloat(document.getElementById('bun').value);
+  const glucose=parseFloat(document.getElementById('glucose').value);
+  const measured=parseFloat(document.getElementById('measured').value)||null;
+  const etoh=parseFloat(document.getElementById('etoh').value)||0;
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!na||!bun||!glucose){errEl.textContent='Please enter Sodium, BUN, and Glucose.';errEl.className='error-msg show';return}
+  const calc=Math.round(2*na+(bun/2.8)+(glucose/18)+(etoh/4.6));
+  const gap=measured!==null?Math.round(measured-calc):null;
+  document.getElementById('r-calc').textContent=calc;
+  const gapBox=document.getElementById('gap-box');
+  if(gap!==null){
+    document.getElementById('r-gap').textContent=gap;
+    gapBox.className=gap>10?'rbox warn':'rbox';
+  }
+  const interp=document.getElementById('interp-box');
+  let txt,cls;
+  if(calc<275){txt='ℹ️ Calculated osmolality below normal range (<275 mOsm/kg). Causes: hypo-osmolality from water excess, SIADH, adrenal insufficiency, hypothyroidism. Check actual sodium and clinical status.';cls='interp-elevated';}
+  else if(calc<=295){txt='✅ Calculated osmolality within normal range (275–295 mOsm/kg).';cls='interp-normal';}
+  else{txt='⚠️ Elevated calculated osmolality (>295 mOsm/kg). Commonest causes: hypernatraemia, hyperglycaemia (HHS), uraemia. Assess volume status, check blood glucose, review medications (mannitol).';cls='interp-elevated';}
+  if(gap!==null){
+    if(gap>25){txt='🚨 CRITICALLY ELEVATED osmol gap ('+gap+' mOsm/kg). High suspicion for TOXIC ALCOHOL INGESTION (methanol or ethylene glycol). Also consider mannitol infusion, DKA, severe renal failure. Urgent toxicology referral. Start fomepizole empirically if clinical suspicion of toxic alcohol. Arrange haemodialysis.';cls='interp-toxic';}
+    else if(gap>10){txt='⚠️ Elevated osmol gap ('+gap+' mOsm/kg — normal <10). Possible causes: toxic alcohol (methanol, ethylene glycol, isopropanol), DKA/ketoacidosis, mannitol, renal failure, propylene glycol. Interpret in clinical context. Consider toxic alcohol screen if no clear alternative cause.';cls='interp-elevated';}
+    else{txt+=' Osmol gap '+gap+' mOsm/kg — normal (<10). Low likelihood of significant unmeasured osmoles at this time point.';cls=cls==='interp-normal'?'interp-normal':'interp-elevated';}
+  }
+  interp.textContent=txt;interp.className='interp-box '+cls;
+  lastResult=`Calculated Osmolality: ${calc} mOsm/kg${gap!==null?'\nOsmol Gap: '+gap+' mOsm/kg':''}\nNa: ${na} | BUN: ${bun} | Glucose: ${glucose}${etoh?' | EtOH: '+etoh:''}\nCalculated at rxmedcalc.com/medical-calculators/serum-osmolality`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('osmolality_calc',{calc,gap});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('⚗️ Osmolality\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['na','bun','glucose','measured','etoh'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>
