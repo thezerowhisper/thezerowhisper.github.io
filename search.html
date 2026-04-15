@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="search">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Search Medical Calculators | RxMedCalc</title>
+<meta name="description" content="Search all 38+ free medical calculators on RxMedCalc. Find tools by name, condition, specialty, or keyword instantly."/>
+<meta name="robots" content="noindex"/><!-- search pages don't need indexing -->
+<link rel="canonical" href="https://rxmedcalc.com/search"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;min-height:100vh}
+/* Search header */
+.search-header{background:linear-gradient(135deg,#0d1b2a 0%,#0f2744 100%);padding:40px 24px 0;position:relative;overflow:hidden}
+.search-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.05) 1px,transparent 1px);background-size:40px 40px}
+.search-header::after{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,0.15) 0%,transparent 70%);top:-80px;right:-40px;pointer-events:none}
+.sh-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;padding-bottom:40px}
+.sh-back{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.5);font-size:0.8rem;text-decoration:none;margin-bottom:24px;transition:color 0.2s}
+.sh-back:hover{color:#fff}
+.sh-title{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;color:#fff;margin-bottom:8px}
+.sh-sub{font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:24px}
+/* Search box */
+.search-box{position:relative}
+.search-input{
+  width:100%;padding:16px 52px 16px 20px;
+  background:#fff;border:none;border-radius:14px;
+  font-family:inherit;font-size:1rem;color:#0d1b2a;
+  outline:none;
+  box-shadow:0 8px 32px rgba(0,0,0,0.2);
+  transition:box-shadow 0.2s;
+}
+.search-input:focus{box-shadow:0 8px 32px rgba(59,130,246,0.3)}
+.search-input::placeholder{color:#9ca3af}
+.search-icon{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:1.2rem;color:#9ca3af;pointer-events:none}
+/* Filter chips */
+.filter-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.filter-chip{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:0.72rem;font-weight:600;padding:5px 12px;border-radius:20px;cursor:pointer;transition:all 0.2s;font-family:inherit}
+.filter-chip.active{background:#f59e0b;border-color:#f59e0b;color:#0d1b2a}
+.filter-chip:hover:not(.active){background:rgba(255,255,255,0.15);color:#fff}
+/* Results area */
+.main{max-width:720px;margin:0 auto;padding:32px 24px 80px}
+/* Stats bar */
+.stats-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px}
+.stats-count{font-size:0.82rem;color:#6b7280}
+.stats-count span{font-weight:700;color:#0d1b2a}
+/* Result cards */
+.result-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:16px;padding:20px 22px;margin-bottom:12px;text-decoration:none;color:inherit;display:flex;align-items:flex-start;gap:16px;transition:all 0.2s;position:relative;overflow:hidden}
+.result-card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--cat-color,#3b82f6);transform:scaleY(0);transition:transform 0.2s;transform-origin:top}
+.result-card:hover{border-color:transparent;box-shadow:0 8px 24px rgba(0,0,0,0.1);transform:translateX(4px)}
+.result-card:hover::after{transform:scaleY(1)}
+.rc-icon-wrap{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;background:var(--cat-bg,#eff6ff)}
+.rc-content{flex:1;min-width:0}
+.rc-title{font-size:0.95rem;font-weight:700;color:#0d1b2a;margin-bottom:4px}
+.rc-desc{font-size:0.78rem;color:#6b7280;line-height:1.5;margin-bottom:8px}
+.rc-tags{display:flex;gap:6px;flex-wrap:wrap}
+.rc-tag{font-size:0.65rem;font-weight:600;padding:2px 8px;border-radius:10px;background:#f3f4f6;color:#6b7280}
+.rc-cat{font-size:0.68rem;font-weight:700;color:var(--cat-color,#3b82f6);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em}
+.rc-arrow{color:#d1d5db;font-size:1rem;flex-shrink:0;margin-top:2px;transition:all 0.2s}
+.result-card:hover .rc-arrow{color:#3b82f6;transform:translateX(3px)}
+/* No results */
+.no-results{text-align:center;padding:48px 24px;color:#6b7280}
+.no-results h3{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;color:#0d1b2a;margin-bottom:8px}
+.no-results p{font-size:0.88rem;line-height:1.6}
+/* All tools initial state */
+.all-tools-grid{display:grid;grid-template-columns:1fr;gap:8px}
+/* Category headers in browse mode */
+.cat-header{font-size:0.72rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;padding:16px 0 8px;border-bottom:1px solid #e5e7eb;margin-bottom:4px}
+/* Highlight match */
+mark{background:#fef9c3;color:#0d1b2a;border-radius:3px;padding:0 2px}
+</style>
+</head>
+<body>
+
+<div class="search-header">
+  <div class="sh-inner">
+    <a href="/medical-calculators/" class="sh-back">← All Calculators</a>
+    <div class="sh-title">Find a Calculator</div>
+    <div class="sh-sub">Search across 38+ tools by name, condition, drug, or specialty</div>
+    <div class="search-box">
+      <input type="text" class="search-input" id="search-input" placeholder="e.g. creatinine, stroke, QTc, BSA, APGAR..." autocomplete="off" autofocus aria-label="Search calculators"/>
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="filter-chips" id="filter-chips">
+      <button class="filter-chip active" onclick="setFilter('all')">All</button>
+      <button class="filter-chip" onclick="setFilter('Emergency')">🚨 Emergency</button>
+      <button class="filter-chip" onclick="setFilter('Cardiac')">❤️ Cardiac</button>
+      <button class="filter-chip" onclick="setFilter('Renal')">🫘 Renal</button>
+      <button class="filter-chip" onclick="setFilter('Paediatrics')">👶 Paediatrics</button>
+      <button class="filter-chip" onclick="setFilter('General')">🏥 General</button>
+      <button class="filter-chip" onclick="setFilter('Obstetrics')">🤰 Obstetrics</button>
+      <button class="filter-chip" onclick="setFilter('Mental Health')">🧠 Mental Health</button>
+      <button class="filter-chip" onclick="setFilter('Pulmonary')">🫁 Pulmonary</button>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+  <div class="stats-bar">
+    <div class="stats-count" id="stats-count"><span id="count-num">38</span> calculators available</div>
+  </div>
+  <div id="results-container" class="all-tools-grid"></div>
+</main>
+
+<script src="/shared-nav.js"></script>
+<script>
+// ═══ CALCULATOR DATABASE ═══
+const TOOLS=[
+  // Emergency & Critical Care
+  {icon:'🫁',title:'CURB-65 Calculator',desc:'Pneumonia severity score with 30-day mortality risk and BTS admission decisions.',tags:['pneumonia','severity','CAP','antibiotic'],cat:'Emergency',url:'/medical-calculators/curb65',color:'#ef4444',bg:'#fef2f2',new:false},
+  {icon:'📉',title:'NEWS2 Score',desc:'National Early Warning Score 2 — SpO₂ Scale 1 & 2, ACVPU, RCP clinical response thresholds.',tags:['deterioration','ICU','sepsis','SpO2','oxygen'],cat:'Emergency',url:'/medical-calculators/news2',color:'#ef4444',bg:'#fef2f2',new:false},
+  {icon:'🧠',title:'GCS Calculator',desc:'Glasgow Coma Scale for adults and paediatric patients. TBI severity classification.',tags:['consciousness','trauma','TBI','neurological','coma'],cat:'Emergency',url:'/medical-calculators/gcs-calculator',color:'#ef4444',bg:'#fef2f2',new:false},
+  {icon:'🔥',title:'Burn & Parkland Calculator',desc:'Rule of Nines TBSA with 24-hour Parkland formula fluid resuscitation.',tags:['burns','TBSA','fluid','parkland','resuscitation'],cat:'Emergency',url:'/medical-calculators/burn-calculator',color:'#ef4444',bg:'#fef2f2',new:false},
+  {icon:'🩸',title:'Wells Score — DVT & PE',desc:'Pre-test probability for DVT and PE with NICE D-Dimer and imaging pathways.',tags:['DVT','PE','pulmonary embolism','thrombosis','d-dimer'],cat:'Emergency',url:'/medical-calculators/wells-score',color:'#ef4444',bg:'#fef2f2',new:false},
+  {icon:'⚗️',title:'Anion Gap Calculator',desc:'Anion gap with albumin correction. High-AG vs normal-AG metabolic acidosis and delta-delta ratio.',tags:['anion gap','acidosis','metabolic','electrolytes','albumin'],cat:'Emergency',url:'/medical-calculators/anion-gap',color:'#ef4444',bg:'#fef2f2',new:false},
+  {icon:'🧬',title:'Mentzer Index Calculator',desc:'Differentiate beta thalassemia from iron deficiency anaemia using MCV and RBC count.',tags:['thalassemia','anaemia','MCV','RBC','haematology'],cat:'Emergency',url:'/medical-calculators/mentzer-index-calculator',color:'#ef4444',bg:'#fef2f2',new:false},
+  {icon:'❤️',title:'MAP Calculator',desc:'Mean arterial pressure from SBP and DBP. Shock thresholds, SSC 2021 sepsis targets.',tags:['MAP','mean arterial pressure','shock','sepsis','blood pressure','perfusion'],cat:'Emergency',url:'/medical-calculators/map-calculator',color:'#ef4444',bg:'#fef2f2',new:true},
+  // Cardiac
+  {icon:'❤️',title:'CHA₂DS₂-VASc Score',desc:'Stroke risk in atrial fibrillation. ESC 2020 anticoagulation recommendations. DOAC guidance.',tags:['CHA2DS2VASc','atrial fibrillation','AF','stroke','anticoagulation','warfarin','DOAC'],cat:'Cardiac',url:'/medical-calculators/cha2ds2-vasc',color:'#dc2626',bg:'#fef2f2',new:true},
+  {icon:'📈',title:'QTc Calculator',desc:'Corrected QT interval using Bazett, Fridericia, Framingham and Hodges formulas. TdP risk.',tags:['QTc','QT interval','torsades','TdP','arrhythmia','ECG','long QT'],cat:'Cardiac',url:'/medical-calculators/qtc-calculator',color:'#dc2626',bg:'#fef2f2',new:true},
+  // Renal
+  {icon:'🫘',title:'eGFR Calculator',desc:'CKD-EPI 2021, MDRD & Cockcroft-Gault with CKD staging and drug dosing guide.',tags:['eGFR','CKD','kidney','renal','creatinine','MDRD'],cat:'Renal',url:'/medical-calculators/egfr-calculator',color:'#6366f1',bg:'#eef2ff',new:false},
+  {icon:'🫘',title:'Creatinine Clearance (CrCl)',desc:'Cockcroft-Gault CrCl with auto drug dose adjustment for 10 drugs including gentamicin and metformin.',tags:['creatinine clearance','CrCl','Cockcroft-Gault','drug dosing','renal','gentamicin','metformin'],cat:'Renal',url:'/medical-calculators/creatinine-clearance',color:'#6366f1',bg:'#eef2ff',new:true},
+  {icon:'🫘',title:'FENa Calculator',desc:'Fractional excretion of sodium. Distinguish prerenal from intrinsic renal AKI. FEUrea for diuretics.',tags:['FENa','FEUrea','AKI','acute kidney injury','prerenal','ATN','sodium'],cat:'Renal',url:'/medical-calculators/fena-calculator',color:'#6366f1',bg:'#eef2ff',new:true},
+  // Paediatrics
+  {icon:'🌟',title:'Neonatal Jaundice Calculator',desc:'Phototherapy thresholds for newborns ≥35 weeks by age-in-hours. AAP 2022 & IAP guidelines.',tags:['jaundice','phototherapy','neonatal','bilirubin','newborn','AAP'],cat:'Paediatrics',url:'/medical-calculators/neonatal-jaundice',color:'#ec4899',bg:'#fdf2f8',new:false},
+  {icon:'💨',title:'Pediatric Asthma Action Plan',desc:'Green/Yellow/Red zone guide for child asthma. Medication actions, emergency signs.',tags:['asthma','paediatric','GINA','bronchospasm','inhaler','salbutamol'],cat:'Paediatrics',url:'/medical-calculators/pediatric-asthma',color:'#ec4899',bg:'#fdf2f8',new:false},
+  {icon:'🧒',title:'UIP Vaccine Tracker',desc:'Complete immunisation schedule birth to 16 years. Track overdue doses.',tags:['vaccine','immunisation','UIP','BCG','DPT','MMR','schedule'],cat:'Paediatrics',url:'/medical-calculators/uip-vaccine',color:'#ec4899',bg:'#fdf2f8',new:false},
+  {icon:'📈',title:'Child Growth Chart',desc:'WHO/IAP growth chart Z-scores and percentiles. SAM/MAM/stunting classification.',tags:['growth','weight','height','BMI','z-score','WHO','IAP','SAM','MAM'],cat:'Paediatrics',url:'/medical-calculators/growth-chart',color:'#ec4899',bg:'#fdf2f8',new:false},
+  {icon:'🎯',title:'Child Milestones Tracker',desc:'Developmental milestones by age. Speech, motor, social skills with red flag alerts.',tags:['milestones','development','speech','motor','paediatric','screening'],cat:'Paediatrics',url:'/medical-calculators/milestones',color:'#ec4899',bg:'#fdf2f8',new:false},
+  {icon:'🌡️',title:'Paracetamol Dose Calculator',desc:'Weight-based dose (15mg/kg). Syrup volumes, tablet counts, max daily dose.',tags:['paracetamol','acetaminophen','dose','fever','paediatric','Calpol','Dolo'],cat:'Paediatrics',url:'/medical-calculators/paracetamol',color:'#ec4899',bg:'#fdf2f8',new:false},
+  {icon:'💧',title:'ORS Rehydration Calculator',desc:'ORS volumes for mild and moderate dehydration by weight. WHO Plan A & B.',tags:['ORS','rehydration','diarrhoea','dehydration','zinc','WHO'],cat:'Paediatrics',url:'/medical-calculators/ors',color:'#ec4899',bg:'#fdf2f8',new:false},
+  {icon:'👶',title:'APGAR Score Calculator',desc:'Interactive newborn assessment at 1, 5 and 10 minutes. NRP 2020 resuscitation guide.',tags:['APGAR','newborn','neonatal','resuscitation','NRP','birth'],cat:'Paediatrics',url:'/medical-calculators/apgar-score',color:'#ec4899',bg:'#fdf2f8',new:true},
+  // General Medicine
+  {icon:'⚖️',title:'BMI Calculator India',desc:'BMI with Indian/Asian cutoffs (overweight ≥23, obese ≥25). Waist circumference risk.',tags:['BMI','obesity','weight','Indian cutoffs','Asian'],cat:'General',url:'/medical-calculators/bmi',color:'#10b981',bg:'#f0fdf4',new:false},
+  {icon:'⚖️',title:'IBW Calculator',desc:'Ideal body weight using Devine, Robinson, Miller & Hamwi formulas. Adjusted body weight. ARDSNet tidal volume.',tags:['IBW','ideal body weight','Devine','AdjBW','tidal volume','drug dosing'],cat:'General',url:'/medical-calculators/ibw-calculator',color:'#10b981',bg:'#f0fdf4',new:true},
+  {icon:'📐',title:'BSA Calculator',desc:'Body surface area using Mosteller, DuBois, Boyd, Haycock formulas. Chemotherapy dosing, cardiac index.',tags:['BSA','body surface area','Mosteller','chemotherapy','cardiac index','oncology'],cat:'General',url:'/medical-calculators/bsa-calculator',color:'#10b981',bg:'#f0fdf4',new:true},
+  {icon:'💊',title:'Drug Dose Calculator',desc:'Weight-based doses for antibiotics, antipyretics and emergency drugs.',tags:['drug dose','antibiotic','weight based','paediatric','mg/kg'],cat:'General',url:'/medical-calculators/doses',color:'#10b981',bg:'#f0fdf4',new:false},
+  {icon:'🔬',title:'Corrected Calcium Calculator',desc:'Adjust serum calcium for hypoalbuminaemia. Identifies masked hypocalcaemia and hypercalcaemia.',tags:['calcium','corrected calcium','albumin','hypocalcaemia','hypercalcaemia'],cat:'General',url:'/medical-calculators/corrected-calcium',color:'#10b981',bg:'#f0fdf4',new:false},
+  {icon:'🩺',title:'HbA1c Converter',desc:'Convert HbA1c between % (NGSP) and mmol/mol (IFCC). eAG, diabetes control per ADA/ICMR.',tags:['HbA1c','glycated haemoglobin','diabetes','glucose','NGSP','IFCC','ADA'],cat:'General',url:'/medical-calculators/hba1c-converter',color:'#10b981',bg:'#f0fdf4',new:false},
+  {icon:'🫀',title:'Child-Pugh Score',desc:'Liver disease severity — Class A, B, C with survival estimates. Surgical risk guide.',tags:['Child-Pugh','liver','cirrhosis','hepatic','ascites','bilirubin'],cat:'General',url:'/medical-calculators/child-pugh',color:'#10b981',bg:'#f0fdf4',new:false},
+  {icon:'💧',title:'Maintenance IV Fluids (Holliday-Segar)',desc:'4-2-1 rule for maintenance fluid rate. NICE 2015 fluid type recommendations.',tags:['Holliday-Segar','maintenance fluid','4-2-1','IV fluid','paediatric fluid'],cat:'General',url:'/medical-calculators/holliday-segar',color:'#06b6d4',bg:'#f0f9ff',new:true},
+  {icon:'💉',title:'IV Drip Rate Calculator',desc:'Drops/min, mL/hr & infusion time. Macro and micro drip sets.',tags:['IV drip','drops per minute','mL/hr','infusion','drip rate','gtts'],cat:'General',url:'/medical-calculators/iv-drip-rate-calculator',color:'#06b6d4',bg:'#f0f9ff',new:false},
+  // Rabies / Infectious
+  {icon:'💉',title:'Rabies PEP Scheduler',desc:'4-dose Essen IM regimen dates (Day 0, 3, 7, 28). NCDC India & WHO 2018.',tags:['rabies','PEP','ARV','vaccine','dog bite','NCDC','Essen'],cat:'General',url:'/rabies-scheduler/',color:'#f59e0b',bg:'#fffbeb',new:false},
+  {icon:'🐕',title:'ARV Dose Calculator',desc:'Anti-rabies vaccine & RIG dose by weight. HRIG, ERIG. Category I/II/III.',tags:['ARV','anti-rabies','RIG','HRIG','ERIG','rabies','dog bite'],cat:'General',url:'/medical-calculators/arv-dose-calculator',color:'#f59e0b',bg:'#fffbeb',new:false},
+  // Obstetrics
+  {icon:'🏥',title:'ObsCalc — Obstetric Suite',desc:'10 obstetric tools — GA, EFW Hadlock, Bishop score, VBAC eligibility, PPH risk.',tags:['obstetrics','EDD','gestational age','Bishop','VBAC','FOGSI','pregnancy'],cat:'Obstetrics',url:'/medical-calculators/obs-calc',color:'#8b5cf6',bg:'#f5f3ff',new:false},
+  {icon:'🤰',title:'Due Date Calculator',desc:'EDD from LMP, IVF transfer or ultrasound. Week-by-week milestones.',tags:['due date','EDD','LMP','pregnancy','gestational age','ultrasound'],cat:'Obstetrics',url:'/medical-calculators/due-date',color:'#8b5cf6',bg:'#f5f3ff',new:false},
+  // Mental Health
+  {icon:'🧠',title:'PHQ-9 & GAD-7 Screener',desc:'Depression (PHQ-9) and anxiety (GAD-7) screening with NICE management guidance.',tags:['PHQ-9','GAD-7','depression','anxiety','mental health','NICE','screening'],cat:'Mental Health',url:'/medical-calculators/phq9-gad7',color:'#7c3aed',bg:'#f5f3ff',new:true},
+  // Pulmonary
+  {icon:'🫁',title:'Spirometry Predicted Values',desc:'FEV₁, FVC, FEV₁/FVC and PEFR using Jindal Indian equations. ATS/ERS classification.',tags:['spirometry','FEV1','FVC','PFT','Jindal','occupational health','AFIH'],cat:'Pulmonary',url:'/medical-calculators/spirometry',color:'#0891b2',bg:'#f0f9ff',new:false},
+  // Occupational
+  {icon:'♻️',title:'Biomedical Waste Guide',desc:'Colour-coded waste classification. BMW Rules 2016. Search 76+ items.',tags:['biomedical waste','BMW Rules','yellow bag','red bag','CPCB','hospital waste'],cat:'General',url:'/medical-calculators/biomedical-waste',color:'#16a34a',bg:'#f0fdf4',new:false},
+];
+
+let activeFilter='all';
+let lastQuery='';
+
+function setFilter(cat){
+  activeFilter=cat;
+  document.querySelectorAll('.filter-chip').forEach(c=>{
+    c.classList.toggle('active',c.textContent.includes(cat)||cat==='all'&&c.textContent==='All');
+  });
+  renderResults(document.getElementById('search-input').value.trim());
+}
+
+function highlight(text,query){
+  if(!query)return text;
+  const re=new RegExp('('+query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+  return text.replace(re,'<mark>$1</mark>');
+}
+
+function score(tool,q){
+  if(!q)return 1;
+  const ql=q.toLowerCase();
+  const tl=tool.title.toLowerCase();
+  const dl=tool.desc.toLowerCase();
+  const tags=tool.tags.join(' ').toLowerCase();
+  if(tl===ql)return 100;
+  if(tl.startsWith(ql))return 90;
+  if(tl.includes(ql))return 80;
+  if(tags.includes(ql))return 70;
+  if(dl.includes(ql))return 50;
+  // fuzzy: check each word
+  const words=ql.split(/\s+/);
+  let sc=0;
+  words.forEach(w=>{
+    if(tl.includes(w))sc+=30;
+    else if(tags.includes(w))sc+=20;
+    else if(dl.includes(w))sc+=10;
+  });
+  return sc;
+}
+
+function renderResults(query){
+  lastQuery=query;
+  const container=document.getElementById('results-container');
+  let filtered=TOOLS;
+
+  // Category filter
+  if(activeFilter!=='all'){
+    filtered=filtered.filter(t=>t.cat===activeFilter);
+  }
+
+  // Search filter
+  if(query.length>=1){
+    filtered=filtered.map(t=>({...t,_score:score(t,query)})).filter(t=>t._score>0).sort((a,b)=>b._score-a._score);
+  }
+
+  document.getElementById('count-num').textContent=filtered.length;
+
+  if(filtered.length===0){
+    container.innerHTML=`<div class="no-results"><h3>No results for "${query}"</h3><p>Try searching by condition (e.g. "AKI"), drug (e.g. "gentamicin"), or specialty (e.g. "cardiac").<br><br>Or browse all calculators at <a href="/medical-calculators/" style="color:#3b82f6">medical calculators</a>.</p></div>`;
+    return;
+  }
+
+  // Group by category if no search query
+  if(!query&&activeFilter==='all'){
+    const cats=['Emergency','Cardiac','Renal','Paediatrics','General','Obstetrics','Mental Health','Pulmonary'];
+    let html='';
+    cats.forEach(cat=>{
+      const tools=filtered.filter(t=>t.cat===cat);
+      if(!tools.length)return;
+      html+=`<div class="cat-header">${cat}</div>`;
+      tools.forEach(t=>{html+=renderCard(t,'')});
+    });
+    container.innerHTML=html;
+  } else {
+    container.innerHTML=filtered.map(t=>renderCard(t,query)).join('');
+  }
+
+  if(typeof umami!=='undefined'&&query.length>2)umami.track('search',{query,results:filtered.length});
+}
+
+function renderCard(t,q){
+  const newBadge=t.new?`<span style="display:inline-block;background:#dcfce7;color:#16a34a;border:1px solid #86efac;font-size:0.6rem;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;vertical-align:middle">NEW</span>`:'';
+  return `<a href="${t.url}" class="result-card" style="--cat-color:${t.color}">
+    <div class="rc-icon-wrap" style="background:${t.bg}">${t.icon}</div>
+    <div class="rc-content">
+      <div class="rc-cat">${t.cat}</div>
+      <div class="rc-title">${highlight(t.title,q)}${newBadge}</div>
+      <div class="rc-desc">${highlight(t.desc,q)}</div>
+      <div class="rc-tags">${t.tags.slice(0,4).map(tag=>`<span class="rc-tag">${highlight(tag,q)}</span>`).join('')}</div>
+    </div>
+    <div class="rc-arrow">›</div>
+  </a>`;
+}
+
+// Init
+renderResults('');
+
+// Search input
+document.getElementById('search-input').addEventListener('input',e=>{
+  renderResults(e.target.value.trim());
+});
+
+// URL param support: /search?q=qtc
+const urlQ=new URLSearchParams(location.search).get('q');
+if(urlQ){document.getElementById('search-input').value=urlQ;renderResults(urlQ);}
+</script>
+</body>
+</html>
