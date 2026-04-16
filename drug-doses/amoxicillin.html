@@ -97,6 +97,7 @@ a:hover { text-decoration: underline; }
   background: var(--white); border-bottom: 1px solid var(--border);
   padding: 10px 24px; font-size: 13px; color: var(--text-muted);
   display: flex; align-items: center; gap: 6px;
+  flex-wrap: wrap; /* <-- ADD THIS */
 }
 .breadcrumb-bar a { color: var(--navy-mid); }
 
@@ -127,7 +128,10 @@ a:hover { text-decoration: underline; }
 
 /* LAYOUT */
 .page-inner { max-width: 860px; margin: 0 auto; padding: 28px 24px 64px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
-@media (max-width: 760px) { .page-inner { grid-template-columns: 1fr; } .sidebar { order: -1; } }
+@media (max-width: 760px) { 
+  .page-inner { grid-template-columns: 1fr; } 
+  .sidebar { grid-column: 1; } 
+}
 
 /* CALCULATOR CARD */
 .calc-card {
@@ -199,7 +203,10 @@ a:hover { text-decoration: underline; }
 
 /* SIDEBAR */
 .sidebar { grid-column: 2; display: flex; flex-direction: column; gap: 16px; }
-@media (max-width: 760px) { .sidebar { grid-column: 1; } }
+@media (max-width: 760px) { 
+  .page-inner { grid-template-columns: 1fr; } 
+  .sidebar { grid-column: 1; } 
+}
 
 .info-widget {
   background: var(--white); border: 1.5px solid var(--border);
@@ -216,7 +223,8 @@ a:hover { text-decoration: underline; }
 .iw-label { color: var(--text-muted); }
 .iw-val { font-weight: 500; color: var(--text); font-family: var(--mono); font-size: 12px; }
 
-.dose-table-wrap { overflow-x: auto; }
+.dose-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; /* <-- ADD THIS */
+  width: 100%; /* <-- ADD THIS */ }
 .dose-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .dose-table th { background: var(--bg); padding: 8px 10px; text-align: left; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); white-space: nowrap; }
 .dose-table td { padding: 9px 10px; border-bottom: 1px solid var(--border); color: var(--text-mid); vertical-align: top; }
@@ -224,7 +232,7 @@ a:hover { text-decoration: underline; }
 .dose-table tr:hover td { background: var(--bg); }
 
 /* CONTENT */
-.content-block { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin-top: 0; grid-column: 1 / -1; }
+.content-block { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin-top: 0; grid-column: 1 / -1; min-width: 0; /* <-- ADD THIS */ }
 .content-block h2 { font-size: 21px; font-weight: 600; color: var(--navy); margin-bottom: 14px; letter-spacing: -0.3px; }
 .content-block h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin: 22px 0 8px; }
 .content-block p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 12px; }
