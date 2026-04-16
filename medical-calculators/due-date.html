@@ -61,9 +61,12 @@
   .due-banner { background: linear-gradient(135deg, #fdf2f8, #fff); border: 2px solid var(--border); border-radius: var(--radius); padding: 32px; text-align: center; }
   .edd-date { font-family: 'Fraunces', serif; font-size: clamp(2rem, 6vw, 3rem); font-weight: 900; color: var(--primary-dark); }
   
-  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 20px; }
+  @media(min-width: 600px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+
   .stat-box { background: #fff; padding: 15px; border-radius: 12px; border: 1px solid #f3f4f6; text-align: center; }
-  .stat-val { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 800; color: var(--text); }
+  .stat-val { font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; font-weight: 800; color: var(--text); }
+  .stat-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-top: 4px; }
 
   /* CONTENT SECTIONS */
   .info-content h2 { font-size: 1.6rem; font-weight: 800; color: var(--primary-dark); margin: 40px 0 20px; border-left: 5px solid var(--primary); padding-left: 15px; }
@@ -141,9 +144,10 @@
       <div class="due-banner">
         <div class="edd-date" id="res-edd">—</div>
         <div class="stats-grid">
-          <div class="stat-box"><div class="stat-val" id="res-week">—</div><div style="font-size:0.7rem; font-weight:700;">WEEKS</div></div>
-          <div class="stat-box"><div class="stat-val" id="res-countdown">—</div><div style="font-size:0.7rem; font-weight:700;">DAYS TO GO</div></div>
-          <div class="stat-box"><div class="stat-val" id="res-size">—</div><div style="font-size:0.7rem; font-weight:700;">BABY SIZE</div></div>
+          <div class="stat-box"><div class="stat-val" id="res-week">—</div><div class="stat-label">WEEKS</div></div>
+          <div class="stat-box"><div class="stat-val" id="res-countdown">—</div><div class="stat-label">DAYS TO GO</div></div>
+          <div class="stat-box"><div class="stat-val" id="res-size">—</div><div class="stat-label">BABY SIZE</div></div>
+          <div class="stat-box"><div class="stat-val" id="res-ritu">—</div><div class="stat-label">RITU (SEASON)</div></div>
         </div>
       </div>
       <div class="share-bar"><button class="share-btn wa-btn" onclick="shareWhatsApp()">📲 WhatsApp Results</button></div>
@@ -155,94 +159,28 @@
     <p>Calculating your <strong>Estimated Due Date (EDD)</strong> is the first step in your 280-day journey. While the idea of a single "due date" is exciting, it is important to remember that it is an estimate. In India, standard obstetric practice considers a normal pregnancy to last anywhere between 37 and 42 weeks.</p>
     
     <h3>1. The LMP Method (Naegele’s Rule)</h3>
-    <p>Most doctors in India use Naegele’s Rule to calculate your due date. This formula adds 7 days to the first day of your <strong>Last Menstrual Period (LMP)</strong> and then adds 9 months. This assumes a standard 28-day menstrual cycle. If your cycle is longer (e.g., 35 days), our calculator automatically adjusts the date to ensure accuracy.</p>
+    <p>Most doctors in India use Naegele’s Rule to calculate your due date. This formula adds 7 days to the first day of your <strong>Last Menstrual Period (LMP)</strong> and then adds 9 months. This assumes a standard 28-day menstrual cycle.</p>
 
     <h3>2. Ultrasound Dating (CRL)</h3>
-    <p>If you have irregular periods or were on birth control, your LMP might not be reliable. In such cases, an early ultrasound (performed between 7 and 13 weeks) is the "Gold Standard." The radiologist measures the <strong>Crown-Rump Length (CRL)</strong>. This is considered the most accurate way to date a pregnancy because fetal growth in the first trimester is very consistent across all babies.</p>
-
-    <h3>3. IVF and FET Due Dates</h3>
-    <p>For mothers undergoing IVF, calculating the due date is more precise. Since the date of fertilization or embryo transfer is known, we don't have to guess based on periods. 
-    <ul>
-      <li><strong>Day 5 Transfer:</strong> Transfer Date + 261 days.</li>
-      <li><strong>Day 3 Transfer:</strong> Transfer Date + 263 days.</li>
-    </ul>
-    </p>
+    <p>If you have irregular periods or were on birth control, your LMP might not be reliable. In such cases, an early ultrasound (performed between 7 and 13 weeks) is the "Gold Standard."</p>
 
     <h2>Indian Prenatal Scan & Test Schedule</h2>
-    <p>Prenatal care in India is structured to monitor both the mother’s health (preventing anemia and gestational diabetes) and the baby’s development. Here is the typical schedule followed by Indian hospitals:</p>
-    
     <div class="table-responsive">
       <table>
         <thead>
           <tr><th>Weeks</th><th>Scan/Test</th><th>Significance</th></tr>
         </thead>
         <tbody>
-          <tr><td>8-10</td><td>Dating Scan</td><td>Confirms the pregnancy is inside the uterus (rules out ectopic) and detects the heartbeat.</td></tr>
-          <tr><td>11-13</td><td>NT Scan & Dual Marker</td><td>Measures the fluid behind the baby's neck. Screens for Trisomy 21 (Down Syndrome).</td></tr>
-          <tr><td>18-20</td><td>Anomaly Scan (Level II)</td><td>The most critical scan. A detailed head-to-toe check of the baby's heart, spine, and brain.</td></tr>
-          <tr><td>24-28</td><td>Glucose Tolerance (OGTT)</td><td>Testing for Gestational Diabetes, which is highly prevalent in the Indian population.</td></tr>
-          <tr><td>30-32</td><td>Growth Scan & Doppler</td><td>Checks the blood flow (Doppler) and estimates fetal weight.</td></tr>
+          <tr><td>8-10</td><td>Dating Scan</td><td>Confirms location and heartbeat.</td></tr>
+          <tr><td>11-13</td><td>NT Scan & Dual Marker</td><td>Screens for genetic conditions.</td></tr>
+          <tr><td>18-20</td><td>Anomaly Scan (Level II)</td><td>Detailed anatomical check.</td></tr>
+          <tr><td>24-28</td><td>Glucose Tolerance (OGTT)</td><td>Checks for Gestational Diabetes.</td></tr>
         </tbody>
       </table>
     </div>
-
-    <h2>Fetal Weight Chart (Average Indian Baby)</h2>
-    <p>Mothers in India often worry about fetal weight. While every baby is different, here are the average weights (50th percentile) expected during the third trimester:</p>
-    <div class="table-responsive">
-      <table>
-        <thead>
-          <tr><th>Week</th><th>Length (cm)</th><th>Weight (grams)</th><th>Indian Fruit Comparison</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>28 Weeks</td><td>37.6 cm</td><td>1000g (1 kg)</td><td>Papaya</td></tr>
-          <tr><td>32 Weeks</td><td>42.4 cm</td><td>1700g (1.7 kg)</td><td>Custard Apple (large)</td></tr>
-          <tr><td>36 Weeks</td><td>47.4 cm</td><td>2600g (2.6 kg)</td><td>Small Watermelon</td></tr>
-          <tr><td>40 Weeks</td><td>51.2 cm</td><td>3300g (3.3 kg)</td><td>Pumpkin (Kaddu)</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h2>Signs of Labor: When to go to the Hospital?</h2>
-    <p>As you approach your due date, keep a "Go-Bag" ready. You should head to your maternity hospital if you experience:</p>
-    <ol>
-      <li><strong>Rupture of Membranes (Water Breaking):</strong> A sudden gush or continuous trickle of clear fluid.</li>
-      <li><strong>Regular Contractions:</strong> Pains that start in the back and move to the front, becoming stronger and closer together (e.g., every 5 minutes).</li>
-      <li><strong>Show:</strong> Passing of a mucus plug (bloody show).</li>
-      <li><strong>Reduced Fetal Movements:</strong> If you feel the baby is moving less than 10 times in 2 hours, call your doctor immediately.</li>
-    </ol>
-
-    <h2>Government Schemes for Pregnant Women in India</h2>
-    <p>The Government of India provides financial and nutritional support through various schemes:</p>
-    <ul>
-      <li><strong>PMMVY (Pradhan Mantri Matru Vandana Yojana):</strong> A cash incentive of ₹5,000 for the first-time mother to compensate for wage loss and ensure good nutrition.</li>
-      <li><strong>Janani Suraksha Yojana (JSY):</strong> Provides cash assistance for institutional deliveries (hospital births) to reduce maternal and neonatal mortality.</li>
-      <li><strong>MCP Card:</strong> The Mother and Child Protection card tracks your vaccinations (like Tetanus/Tdap) and scans. Ensure your hospital provides one.</li>
-    </ul>
 
     <div class="highlight-box">
-      <strong>💡 Did you know?</strong> In India, it is traditional to follow <em>Garbhini Paricharya</em> (Ayurvedic prenatal care). While modern medicine is essential, incorporating warm milk with ghee (in moderation) and avoiding "hot" foods like raw papaya is a common cultural practice.
-    </div>
-
-    <h2>Pregnancy Diet Tips for Indian Mothers</h2>
-    <p>An Indian pregnancy diet should be rich in proteins and fiber. Focus on:</p>
-    <ul>
-      <li><strong>Dal & Pulses:</strong> Excellent source of protein and folic acid.</li>
-      <li><strong>Leafy Greens (Palak/Methi):</strong> Vital for iron to prevent pregnancy-induced anemia.</li>
-      <li><strong>Dairy:</strong> Curd (Dahi) and Milk provide necessary calcium for the baby’s bone development.</li>
-      <li><strong>Nuts:</strong> Walnuts (Akhrot) and Almonds (Badam) are great for fetal brain health.</li>
-    </ul>
-
-    <h2>Conclusion</h2>
-    <p>Your journey to motherhood is unique. Use this **due date calculator** as a guide, but always prioritize your doctor's clinical findings over arithmetic formulas. Regular check-ups, a balanced Indian diet, and staying active will help you have a safe delivery.</p>
-
-    <h3>Frequently Asked Questions</h3>
-    <div class="faq-item">
-      <h3>Can the due date change?</h3>
-      <p>Yes. If your first-trimester ultrasound date differs from your LMP date by more than 7 days, your doctor will usually "reset" your due date based on the ultrasound.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What happens if I go past my due date?</h3>
-      <p>If you reach 40 weeks without labor, your doctor will perform a "Biophysical Profile" or NST to check the baby’s health. Most Indian doctors will induce labor by 41 weeks to avoid complications.</p>
+      <strong>💡 Indian Seasons (Ritu):</strong> Knowing the season of birth helps in planning traditional ceremonies like <em>Namkaran</em> and preparing the baby's clothing (Cotton for Grishma vs Woolens for Shishir).
     </div>
   </section>
 
@@ -256,26 +194,33 @@
   
   function switchMethod(event, m){
     method = m;
-    // Remove active class from all tabs
     document.querySelectorAll('.method-tab').forEach(t => t.classList.remove('active'));
-    // Add active class to clicked tab
     event.currentTarget.classList.add('active');
-    // Hide all form sections
     document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
-    // Show selected form section
     document.getElementById('form-' + m).classList.add('active');
+  }
+
+  function getIndianRitu(date) {
+    const month = date.getMonth(); // 0-11
+    const day = date.getDate();
+    
+    // Approximate Ritu calendar for India
+    if ((month === 1 && day >= 18) || month === 2 || (month === 3 && day <= 19)) return "Vasanta (Spring)";
+    if ((month === 3 && day >= 20) || month === 4 || (month === 5 && day <= 21)) return "Grishma (Summer)";
+    if ((month === 5 && day >= 22) || month === 6 || (month === 7 && day <= 22)) return "Varsha (Monsoon)";
+    if ((month === 7 && day >= 23) || month === 8 || (month === 9 && day <= 22)) return "Sharad (Autumn)";
+    if ((month === 9 && day >= 23) || month === 10 || (month === 11 && day <= 20)) return "Hemant (Pre-winter)";
+    return "Shishir (Winter)";
   }
 
   function calculate(){
     let edd = new Date();
     const today = new Date();
     
-    // Validate inputs based on method
     if(method === 'lmp'){
       const val = document.getElementById('lmp-date').value;
       if(!val) { alert("Please select your Last Period date"); return; }
       const dt = new Date(val);
-      // Adjust for cycle length if needed (simplified here to 280 days standard)
       edd = new Date(dt.getTime() + (280 * 24 * 60 * 60 * 1000));
     } else if(method === 'ultrasound'){
       const val = document.getElementById('us-date').value;
@@ -300,22 +245,19 @@
     const daysToGo = Math.ceil(diff / (1000 * 60 * 60 * 24));
     const weeksIn = Math.floor((280 - daysToGo) / 7);
     
-    // Update UI
     document.getElementById('res-edd').innerText = edd.toLocaleDateString('en-IN', {day:'numeric', month:'long', year:'numeric'});
     document.getElementById('res-countdown').innerText = daysToGo > 0 ? daysToGo : 0;
     document.getElementById('res-week').innerText = weeksIn > 0 ? weeksIn : 0;
+    document.getElementById('res-ritu').innerText = getIndianRitu(edd);
     
-    // Fruit size logic
     let size = "Seed";
     if(weeksIn > 36) size = "Pumpkin";
     else if(weeksIn > 28) size = "Papaya";
     else if(weeksIn > 18) size = "Banana";
     else if(weeksIn > 11) size = "Lemon";
     else if(weeksIn > 4) size = "Jamun";
-    
     document.getElementById('res-size').innerText = size;
 
-    // Show results
     document.getElementById('results').style.display = 'block';
     setTimeout(() => document.getElementById('results').scrollIntoView({behavior: 'smooth', block: 'nearest'}), 100);
   }
@@ -323,7 +265,8 @@
   function shareWhatsApp(){
     const edd = document.getElementById('res-edd').innerText;
     const weeks = document.getElementById('res-week').innerText;
-    const text = `🤰 My Estimated Due Date is ${edd}! I am ${weeks} weeks pregnant. Check yours at https://rxmedcalc.com/medical-calculators/due-date`;
+    const ritu = document.getElementById('res-ritu').innerText;
+    const text = `🤰 My Estimated Due Date is ${edd}! I am ${weeks} weeks pregnant. My baby will be born in the ${ritu} season. Check yours at https://rxmedcalc.com/medical-calculators/due-date`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   }
 </script>
