@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://rxmedcalc.com/</loc><priority>1.0</priority></url>
+<url><loc>https://rxmedcalc.com/index</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/amoxicillin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/drug-doses</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/metformin</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/azithromycin</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/ors</loc><priority>0.64</priority></url>
@@ -14,7 +15,7 @@
 <url><loc>https://rxmedcalc.com/medical-calculators/meld-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/mentzer-index-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/pediatric-weight</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/phq9-gad7</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/cha2ds2-vasc</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/bmi</loc><priority>0.64</priority></url>
@@ -48,7 +49,7 @@
 <url><loc>https://rxmedcalc.com/medical-calculators/biomedical-waste</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/egfr-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/has-bled</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/shock-</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators/shock-index</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/sirs-criteria</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/doses</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/curb65</loc><priority>0.64</priority></url>
@@ -63,6 +64,6 @@
 <url><loc>https://rxmedcalc.com/search</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/contact</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/privacy</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/rabies-scheduler/</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/rabies-scheduler</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/rabies-scheduler/doses</loc><priority>0.64</priority></url>
 </urlset>
