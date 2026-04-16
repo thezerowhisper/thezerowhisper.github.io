@@ -13,85 +13,148 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--accent:#0369a1;--accent-mid:#0ea5e9;--accent-light:#f0f9ff;--accent-dark:#075985;--navy:#0d2b45;--navy-mid:#163d5c;--text:#1a2535;--text-mid:#4a5568;--text-muted:#8896a8;--border:#e2e8f0;--bg:#f7f9fc;--white:#ffffff;--radius:12px;--radius-sm:8px;--font:'DM Sans',sans-serif;--mono:'DM Mono',monospace}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
-a{color:var(--accent-mid);text-decoration:none}a:hover{text-decoration:underline}
-.topnav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.nav-logo{font-weight:600;font-size:17px;color:var(--navy);text-decoration:none}.nav-logo span{color:#0e9f7e}
-.back-link{font-size:14px;color:var(--text-mid)}.back-link:hover{color:var(--accent-mid);text-decoration:none}
-.breadcrumb-bar{background:var(--white);border-bottom:1px solid var(--border);padding:10px 24px;font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:6px}
-.breadcrumb-bar a{color:var(--navy-mid)}
-.drug-hero{background:linear-gradient(135deg,#0c2340 0%,#075985 55%,var(--accent-mid) 100%);padding:40px 24px 36px;position:relative;overflow:hidden}
-.drug-hero::after{content:'🫧';position:absolute;right:20px;bottom:-20px;font-size:140px;opacity:.05;pointer-events:none}
-.drug-hero-inner{max-width:860px;margin:0 auto;position:relative}
-.drug-class-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:4px 12px;font-size:12px;color:rgba(255,255,255,.85);margin-bottom:12px}
-.drug-hero h1{font-size:clamp(24px,3.5vw,34px);font-weight:600;color:#fff;margin-bottom:8px;letter-spacing:-.4px}
-.drug-hero-sub{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:16px}
-.drug-meta-pills{display:flex;gap:8px;flex-wrap:wrap}
-.dmp{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:4px 12px;font-size:12px;color:rgba(255,255,255,.85)}
-.page-inner{max-width:860px;margin:0 auto;padding:28px 24px 64px;display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
-@media(max-width:760px){.page-inner{grid-template-columns:1fr}}
-.calc-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden}
-.calc-header{background:var(--accent-light);border-bottom:1px solid #bae6fd;padding:16px 20px;display:flex;align-items:center;gap:10px}
-.calc-header h2{font-size:16px;font-weight:600;color:var(--accent-dark)}
-.calc-body{padding:20px}
-.toggle-group{display:flex;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:3px;margin-bottom:16px;gap:3px}
-.toggle-btn{flex:1;padding:8px;border:none;background:transparent;border-radius:6px;font-family:var(--font);font-size:13px;font-weight:500;color:var(--text-mid);cursor:pointer;transition:all .15s}
-.toggle-btn.active{background:var(--white);color:var(--accent-dark);box-shadow:0 1px 3px rgba(0,0,0,.1)}
-.form-row{margin-bottom:16px}
-.form-label{display:block;font-size:13px;font-weight:500;color:var(--text);margin-bottom:6px}
-.form-label span{color:var(--text-muted);font-weight:400}
-.form-input,.form-select{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:14px;color:var(--text);background:var(--white);outline:none;transition:border-color .15s}
-.form-input:focus,.form-select:focus{border-color:var(--accent-mid)}
-.input-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.calc-btn{width:100%;padding:13px;background:var(--accent-mid);color:var(--white);font-family:var(--font);font-size:15px;font-weight:600;border:none;border-radius:var(--radius-sm);cursor:pointer;transition:background .15s,transform .1s;margin-top:4px}
-.calc-btn:hover{background:var(--accent-dark)}.calc-btn:active{transform:scale(.98)}
-.result-box{background:var(--accent-light);border:1.5px solid #7dd3fc;border-radius:var(--radius-sm);padding:18px 20px;margin-top:16px;display:none}
-.result-box.show{display:block}
-.result-title{font-size:13px;font-weight:600;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
-.result-main{font-size:26px;font-weight:600;color:var(--accent-dark);line-height:1.2;margin-bottom:4px}
-.result-sub{font-size:14px;color:var(--accent);margin-top:6px}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.result-item{background:var(--white);border-radius:8px;padding:10px 12px}
-.result-item .rl{font-size:11px;color:var(--text-muted);margin-bottom:3px}
-.result-item .rv{font-size:14px;font-weight:600;color:var(--accent-dark);font-family:var(--mono)}
-.warn-box{background:#fffbeb;border:1px solid #fcd34d;border-radius:var(--radius-sm);padding:12px 14px;font-size:13px;color:#78350f;margin-top:10px;display:none}
-.warn-box.show{display:flex;gap:8px;align-items:flex-start}
-.qt-box{background:#fef2f2;border:1.5px solid #fca5a5;border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:16px;font-size:13px;color:#7f1d1d;line-height:1.65}
-.qt-box strong{display:block;margin-bottom:4px}
-.sidebar{display:flex;flex-direction:column;gap:16px}
-.info-widget{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden}
-.iw-header{padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:7px}
-.iw-body{padding:14px 16px}
-.iw-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px}
-.iw-row:last-child{border-bottom:none}
-.iw-label{color:var(--text-muted)}.iw-val{font-weight:500;color:var(--text);font-family:var(--mono);font-size:12px;text-align:right}
-.content-block{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px 32px;grid-column:1 / -1}
-.content-block h2{font-size:21px;font-weight:600;color:var(--navy);margin-bottom:14px;letter-spacing:-.3px}
-.content-block h3{font-size:16px;font-weight:600;color:var(--navy);margin:22px 0 8px}
-.content-block p{font-size:15px;color:var(--text-mid);line-height:1.8;margin-bottom:12px}
-.content-block ul{list-style:none;padding:0;margin:0 0 14px}
-.content-block ul li{font-size:15px;color:var(--text-mid);line-height:1.7;padding-left:18px;position:relative;margin-bottom:5px}
-.content-block ul li::before{content:'→';position:absolute;left:0;color:var(--accent-mid);font-size:12px;top:3px}
-.content-block table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
-.content-block table th{background:var(--bg);padding:10px 12px;text-align:left;font-weight:600;color:var(--navy);border-bottom:1.5px solid var(--border)}
-.content-block table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text-mid);vertical-align:top}
-.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
-.faq-item:last-child{border-bottom:none}
-.faq-q{font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.faq-toggle{flex-shrink:0;color:var(--accent-mid);font-size:20px;line-height:1;transition:transform .2s}
-.faq-a{font-size:14px;color:var(--text-mid);line-height:1.75;padding-top:10px;display:none}
-.faq-item.open .faq-a{display:block}.faq-item.open .faq-toggle{transform:rotate(45deg)}
-.disclaimer{background:#fffbeb;border:1px solid #fcd34d;border-radius:var(--radius-sm);padding:13px 16px;font-size:13px;color:#78350f;line-height:1.6;display:flex;gap:8px;margin-top:18px}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:14px}
-.rel-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;display:block;transition:all .15s}
-.rel-card:hover{border-color:var(--accent-mid);background:var(--accent-light);text-decoration:none}
-.rel-card .rc-name{font-size:14px;font-weight:600;color:var(--navy)}
-.rel-card .rc-desc{font-size:12px;color:var(--text-muted);margin-top:3px}
-.site-footer{background:var(--navy);color:rgba(255,255,255,.6);text-align:center;padding:24px;font-size:13px}
-.site-footer a{color:rgba(255,255,255,.8)}
-@media(max-width:600px){.page-inner{padding:16px 14px 48px}.content-block{padding:20px 16px}.result-grid{grid-template-columns:1fr}.input-row{grid-template-columns:1fr}}
+:root {
+  --accent: #0369a1; --accent-mid: #0ea5e9; --accent-light: #f0f9ff; --accent-dark: #075985;
+  --navy: #0d2b45; --navy-mid: #163d5c;
+  --text: #1a2535; --text-mid: #4a5568; --text-muted: #8896a8;
+  --border: #e2e8f0; --bg: #f7f9fc; --white: #ffffff;
+  --radius: 12px; --radius-sm: 8px;
+  --font: 'DM Sans', sans-serif; --mono: 'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+  font-family: var(--font); background: var(--bg); color: var(--text); 
+  line-height: 1.6; font-size: 16px; 
+  overflow-wrap: break-word; word-wrap: break-word; /* Prevents long URLs/words from breaking mobile layout */
+}
+a { color: var(--accent-mid); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topnav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-weight: 600; font-size: 17px; color: var(--navy); text-decoration: none; }
+.nav-logo span { color: #0e9f7e; }
+.back-link { font-size: 14px; color: var(--text-mid); }
+.back-link:hover { color: var(--accent-mid); text-decoration: none; }
+.breadcrumb-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 10px 24px; font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.breadcrumb-bar a { color: var(--navy-mid); }
+
+/* HERO */
+.drug-hero { background: linear-gradient(135deg, #0c2340 0%, #075985 55%, var(--accent-mid) 100%); padding: 40px 24px 36px; position: relative; overflow: hidden; }
+.drug-hero::after { content: '🫧'; position: absolute; right: 20px; bottom: -20px; font-size: 140px; opacity: .05; pointer-events: none; }
+.drug-hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+.drug-class-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,.85); margin-bottom: 12px; }
+.drug-hero h1 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -.4px; }
+.drug-hero-sub { font-size: 15px; color: rgba(255,255,255,.75); margin-bottom: 16px; }
+.drug-meta-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.dmp { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,.85); }
+
+/* LAYOUT */
+.page-inner { max-width: 860px; margin: 0 auto; padding: 28px 24px 64px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
+
+/* CALCULATOR */
+.calc-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.calc-header { background: var(--accent-light); border-bottom: 1px solid #bae6fd; padding: 16px 20px; display: flex; align-items: center; gap: 10px; }
+.calc-header h2 { font-size: 16px; font-weight: 600; color: var(--accent-dark); }
+.calc-body { padding: 20px; }
+
+.toggle-group { display: flex; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 3px; margin-bottom: 16px; gap: 3px; }
+.toggle-btn { flex: 1; padding: 8px; border: none; background: transparent; border-radius: 6px; font-family: var(--font); font-size: 13px; font-weight: 500; color: var(--text-mid); cursor: pointer; transition: all .15s; }
+.toggle-btn.active { background: var(--white); color: var(--accent-dark); box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+
+.form-row { margin-bottom: 16px; }
+.form-label { display: block; font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.form-label span { color: var(--text-muted); font-weight: 400; }
+.form-input, .form-select { width: 100%; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font); font-size: 14px; color: var(--text); background: var(--white); outline: none; transition: border-color .15s; }
+.form-input:focus, .form-select:focus { border-color: var(--accent-mid); }
+.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.calc-btn { width: 100%; padding: 13px; background: var(--accent-mid); color: var(--white); font-family: var(--font); font-size: 15px; font-weight: 600; border: none; border-radius: var(--radius-sm); cursor: pointer; transition: background .15s, transform .1s; margin-top: 4px; }
+.calc-btn:hover { background: var(--accent-dark); }
+.calc-btn:active { transform: scale(.98); }
+
+/* RESULTS */
+.result-box { background: var(--accent-light); border: 1.5px solid #7dd3fc; border-radius: var(--radius-sm); padding: 18px 20px; margin-top: 16px; display: none; }
+.result-box.show { display: block; }
+.result-title { font-size: 13px; font-weight: 600; color: var(--accent-dark); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; }
+.result-main { font-size: 26px; font-weight: 600; color: var(--accent-dark); line-height: 1.2; margin-bottom: 4px; }
+.result-sub { font-size: 14px; color: var(--accent); margin-top: 6px; }
+.result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.result-item { background: var(--white); border-radius: 8px; padding: 10px 12px; }
+.result-item .rl { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.result-item .rv { font-size: 14px; font-weight: 600; color: var(--accent-dark); font-family: var(--mono); }
+
+.warn-box { background: #fffbeb; border: 1px solid #fcd34d; border-radius: var(--radius-sm); padding: 12px 14px; font-size: 13px; color: #78350f; margin-top: 10px; display: none; }
+.warn-box.show { display: flex; gap: 8px; align-items: flex-start; }
+
+.qt-box { background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 16px; font-size: 13px; color: #7f1d1d; line-height: 1.65; }
+.qt-box strong { display: block; margin-bottom: 4px; }
+
+/* SIDEBAR */
+.sidebar { display: flex; flex-direction: column; gap: 16px; }
+.info-widget { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.iw-header { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 7px; }
+.iw-body { padding: 14px 16px; }
+.iw-row { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.iw-row:last-child { border-bottom: none; }
+.iw-label { color: var(--text-muted); }
+.iw-val { font-weight: 500; color: var(--text); font-family: var(--mono); font-size: 12px; text-align: right; }
+
+/* CONTENT BLOCK */
+.content-block { 
+  background: var(--white); 
+  border: 1.5px solid var(--border); 
+  border-radius: var(--radius); 
+  padding: 28px 32px; 
+  grid-column: 1 / -1; 
+  min-width: 0; /* Important for preventing grid blowout */
+}
+.content-block h2 { font-size: 21px; font-weight: 600; color: var(--navy); margin-bottom: 14px; letter-spacing: -.3px; }
+.content-block h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin: 22px 0 8px; }
+.content-block p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 12px; }
+.content-block ul { list-style: none; padding: 0; margin: 0 0 14px; }
+.content-block ul li { font-size: 15px; color: var(--text-mid); line-height: 1.7; padding-left: 18px; position: relative; margin-bottom: 5px; }
+.content-block ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent-mid); font-size: 12px; top: 3px; }
+
+/* Responsive Table Styling */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  margin: 14px 0;
+}
+.content-block table { width: 100%; border-collapse: collapse; margin: 0; font-size: 14px; }
+.content-block table th { background: var(--bg); padding: 10px 12px; text-align: left; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); white-space: nowrap; }
+.content-block table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-mid); vertical-align: top; }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.faq-toggle { flex-shrink: 0; color: var(--accent-mid); font-size: 20px; line-height: 1; transition: transform .2s; }
+.faq-a { font-size: 14px; color: var(--text-mid); line-height: 1.75; padding-top: 10px; display: none; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+.disclaimer { background: #fffbeb; border: 1px solid #fcd34d; border-radius: var(--radius-sm); padding: 13px 16px; font-size: 13px; color: #78350f; line-height: 1.6; display: flex; gap: 8px; margin-top: 18px; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-top: 14px; }
+.rel-card { background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; display: block; transition: all .15s; }
+.rel-card:hover { border-color: var(--accent-mid); background: var(--accent-light); text-decoration: none; }
+.rel-card .rc-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+.rel-card .rc-desc { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+.site-footer { background: var(--navy); color: rgba(255,255,255,.6); text-align: center; padding: 24px; font-size: 13px; }
+.site-footer a { color: rgba(255,255,255,.8); }
+
+/* MEDIA QUERIES */
+@media (max-width: 760px) { 
+  .page-inner { grid-template-columns: 1fr; } 
+  .content-block { grid-column: 1; }
+}
+@media (max-width: 600px) { 
+  .page-inner { padding: 16px 14px 48px; gap: 16px; } 
+  .content-block { padding: 20px 16px; } 
+  .result-grid { grid-template-columns: 1fr; } 
+  .input-row { grid-template-columns: 1fr; } 
+}
 </style>
 </head>
 <body>
@@ -232,7 +295,7 @@ a{color:var(--accent-mid);text-decoration:none}a:hover{text-decoration:underline
 
   <div class="content-block">
     <h2>Ondansetron Dosing Reference Table — Paediatric & Adult</h2>
-    <div style="overflow-x:auto">
+    <div class="table-responsive">
       <table>
         <thead><tr><th>Patient</th><th>Indication</th><th>Dose</th><th>Frequency</th><th>Notes</th></tr></thead>
         <tbody>
@@ -288,34 +351,132 @@ a{color:var(--accent-mid);text-decoration:none}a:hover{text-decoration:underline
 <footer class="site-footer"><p>RxMedCalc · Free Clinical Tools for India · <a href="https://rxmedcalc.com/medical-calculators/">Medical Calculators</a> · <a href="https://rxmedcalc.com/drug-doses/">Drug Doses</a></p></footer>
 <script>
 let mode='paeds';
-function setMode(m,btn){mode=m;document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('paeds-section').style.display=m==='paeds'?'block':'none';document.getElementById('adult-section').style.display=m==='adult'?'block':'none';document.getElementById('result').classList.remove('show');document.getElementById('warn-box').classList.remove('show');}
-function calcOndansetron(){
-  const result=document.getElementById('result');const warnBox=document.getElementById('warn-box');result.classList.remove('show');warnBox.classList.remove('show');
-  if(mode==='paeds'){
-    const wt=parseFloat(document.getElementById('weight').value);const ageM=parseFloat(document.getElementById('age-months').value)||null;
-    if(!wt||wt<4){alert('Please enter a valid weight.');return;}
-    if(ageM&&ageM<6){document.getElementById('warn-text').textContent='Ondansetron is not recommended for children under 6 months of age. Seek paediatric specialist advice.';warnBox.classList.add('show');return;}
-    const ind=document.getElementById('ped-indication').value;const form=document.getElementById('ped-form').value;
-    const indMap={vomit:{mgKg:0.15,maxMg:4,freq:'Every 8 hours as needed (max 3 doses/day)',dur:'As needed, typically 1–2 days'},cinv_moderate:{mgKg:0.15,maxMg:8,freq:'Before chemo, then every 8 hours × 3 doses',dur:'Chemotherapy day'},cinv_high:{mgKg:0.15,maxMg:8,freq:'Every 4 hours × 3 doses (IV)',dur:'Chemo day + dexamethasone'},ponv:{mgKg:0.1,maxMg:4,freq:'Single IV dose at end of surgery',dur:'Single dose'},radiotherapy:{mgKg:0.15,maxMg:8,freq:'Before radiotherapy',dur:'Duration of RT'}};
-    const p=indMap[ind];const rawMg=wt*p.mgKg;const doseMg=Math.min(rawMg,p.maxMg);const roundedDose=Math.round(doseMg*10)/10;
-    let vol='';
-    if(form==='syrup2'){vol=(roundedDose/2*5).toFixed(1)+' ml (2mg/5ml)'}
-    else if(form==='odt4'){vol=(roundedDose/4).toFixed(2)+' × 4mg ODT'}
-    else if(form==='tab4'){vol=(roundedDose/4).toFixed(2)+' × 4mg tab'}
-    else{vol=(roundedDose/2).toFixed(1)+' ml (IV 2mg/ml)'}
-    document.getElementById('res-dose').textContent=roundedDose+' mg per dose';document.getElementById('res-freq').textContent=p.freq;document.getElementById('res-mg').textContent=roundedDose+' mg';document.getElementById('res-vol').textContent=vol;document.getElementById('res-max').textContent=p.maxMg+' mg';document.getElementById('res-dur').textContent=p.dur;result.classList.add('show');
-    if(rawMg>p.maxMg){document.getElementById('warn-text').textContent='Dose capped at maximum '+p.maxMg+' mg per dose.';warnBox.classList.add('show');}
+
+function setMode(m, btn) {
+  mode = m;
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('paeds-section').style.display = m === 'paeds' ? 'block' : 'none';
+  document.getElementById('adult-section').style.display = m === 'adult' ? 'block' : 'none';
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('warn-box').classList.remove('show');
+}
+
+function calcOndansetron() {
+  const result = document.getElementById('result');
+  const warnBox = document.getElementById('warn-box');
+  result.classList.remove('show');
+  warnBox.classList.remove('show');
+
+  if (mode === 'paeds') {
+    const wt = parseFloat(document.getElementById('weight').value);
+    const ageM = parseFloat(document.getElementById('age-months').value) || null;
+    
+    if (!wt || wt < 4) {
+      alert('Please enter a valid weight.');
+      return;
+    }
+    if (ageM && ageM < 6) {
+      document.getElementById('warn-text').textContent = 'Ondansetron is not recommended for children under 6 months of age. Seek paediatric specialist advice.';
+      warnBox.classList.add('show');
+      return;
+    }
+
+    const ind = document.getElementById('ped-indication').value;
+    const form = document.getElementById('ped-form').value;
+
+    const indMap = {
+      vomit: { mgKg: 0.15, maxMg: 4, freq: 'Every 8 hours as needed (max 3 doses/day)', dur: 'As needed, typically 1–2 days' },
+      cinv_moderate: { mgKg: 0.15, maxMg: 8, freq: 'Before chemo, then every 8 hours × 3 doses', dur: 'Chemotherapy day' },
+      cinv_high: { mgKg: 0.15, maxMg: 8, freq: 'Every 4 hours × 3 doses (IV)', dur: 'Chemo day + dexamethasone' },
+      ponv: { mgKg: 0.1, maxMg: 4, freq: 'Single IV dose at end of surgery', dur: 'Single dose' },
+      radiotherapy: { mgKg: 0.15, maxMg: 8, freq: 'Before radiotherapy', dur: 'Duration of RT' }
+    };
+
+    const p = indMap[ind];
+    const rawMg = wt * p.mgKg;
+    const doseMg = Math.min(rawMg, p.maxMg);
+    const roundedDose = Math.round(doseMg * 10) / 10;
+
+    let vol = '';
+    if (form === 'syrup2') {
+      vol = (roundedDose / 2 * 5).toFixed(1) + ' ml (2mg/5ml)';
+    } else if (form === 'odt4') {
+      vol = (roundedDose / 4).toFixed(2) + ' × 4mg ODT';
+    } else if (form === 'tab4') {
+      vol = (roundedDose / 4).toFixed(2) + ' × 4mg tab';
+    } else {
+      vol = (roundedDose / 2).toFixed(1) + ' ml (IV 2mg/ml)';
+    }
+
+    document.getElementById('res-dose').textContent = roundedDose + ' mg per dose';
+    document.getElementById('res-freq').textContent = p.freq;
+    document.getElementById('res-mg').textContent = roundedDose + ' mg';
+    document.getElementById('res-vol').textContent = vol;
+    document.getElementById('res-max').textContent = p.maxMg + ' mg';
+    document.getElementById('res-dur').textContent = p.dur;
+    result.classList.add('show');
+
+    if (rawMg > p.maxMg) {
+      document.getElementById('warn-text').textContent = 'Dose capped at maximum ' + p.maxMg + ' mg per dose.';
+      warnBox.classList.add('show');
+    }
   } else {
-    const ind=document.getElementById('adult-indication').value;const route=document.getElementById('adult-route').value;
-    const adultMap={vomit:{oral:{mg:4,freq:'Every 8 hours PRN',dur:'As needed',max:'32 mg/day'},iv:{mg:4,freq:'Slow IV every 8h',dur:'As needed',max:'16 mg/dose'}},cinv_moderate:{oral:{mg:8,freq:'Before chemo, then every 8–12h × 2 days',dur:'1–2 days',max:'32 mg/day'},iv:{mg:8,freq:'30 min before chemo, every 4h × 3',dur:'Chemo day',max:'16 mg/dose'}},cinv_high:{oral:{mg:8,freq:'Every 4–8h with dexamethasone + NK1',dur:'Chemo day',max:'32 mg/day'},iv:{mg:8,freq:'30 min before, every 4h × 2 (+ dexa + NK1)',dur:'Chemo day',max:'16 mg/dose'}},ponv:{oral:{mg:4,freq:'Pre-op single dose',dur:'Single dose',max:'4 mg'},iv:{mg:4,freq:'Slow IV at end of surgery (single dose)',dur:'Single dose',max:'4 mg (PONV)'}},pregnancy:{oral:{mg:4,freq:'Every 8 hours',dur:'As needed',max:'32 mg/day'},iv:{mg:4,freq:'Slow IV every 8h',dur:'As needed',max:'16 mg/dose'}},radiotherapy:{oral:{mg:8,freq:'Before each radiotherapy session',dur:'Duration of RT',max:'32 mg/day'},iv:{mg:8,freq:'30 min before radiotherapy',dur:'Duration of RT',max:'16 mg/dose'}}};
-    const d=adultMap[ind][route];
-    const vol=route==='oral'?d.mg===4?'1 × 4mg tab / ODT':d.mg===8?'2 × 4mg tabs':'':d.mg===4?'2 ml (IV 2mg/ml)':d.mg===8?'4 ml (IV 2mg/ml)':'';
-    document.getElementById('res-dose').textContent=d.mg+' mg per dose';document.getElementById('res-freq').textContent=d.freq;document.getElementById('res-mg').textContent=d.mg+' mg';document.getElementById('res-vol').textContent=vol;document.getElementById('res-max').textContent=d.max;document.getElementById('res-dur').textContent=d.dur;result.classList.add('show');
-    if(ind==='cinv_high'){document.getElementById('warn-text').textContent='Highly emetogenic chemo: ondansetron alone is insufficient. Must combine with dexamethasone and an NK1 receptor antagonist (aprepitant/fosaprepitant) per ASCO/ESMO guidelines.';warnBox.classList.add('show');}
-    if(route==='iv'&&(ind==='cinv_high'||ind==='cinv_moderate')){document.getElementById('warn-text').textContent=(document.getElementById('warn-text').textContent?document.getElementById('warn-text').textContent+' ':'')+'IV ondansetron: give as slow infusion over 15 minutes. Single IV dose must not exceed 16 mg. Monitor QTc.';warnBox.classList.add('show');}
+    const ind = document.getElementById('adult-indication').value;
+    const route = document.getElementById('adult-route').value;
+
+    const adultMap = {
+      vomit: { 
+        oral: { mg: 4, freq: 'Every 8 hours PRN', dur: 'As needed', max: '32 mg/day' }, 
+        iv: { mg: 4, freq: 'Slow IV every 8h', dur: 'As needed', max: '16 mg/dose' } 
+      },
+      cinv_moderate: { 
+        oral: { mg: 8, freq: 'Before chemo, then every 8–12h × 2 days', dur: '1–2 days', max: '32 mg/day' }, 
+        iv: { mg: 8, freq: '30 min before chemo, every 4h × 3', dur: 'Chemo day', max: '16 mg/dose' } 
+      },
+      cinv_high: { 
+        oral: { mg: 8, freq: 'Every 4–8h with dexamethasone + NK1', dur: 'Chemo day', max: '32 mg/day' }, 
+        iv: { mg: 8, freq: '30 min before, every 4h × 2 (+ dexa + NK1)', dur: 'Chemo day', max: '16 mg/dose' } 
+      },
+      ponv: { 
+        oral: { mg: 4, freq: 'Pre-op single dose', dur: 'Single dose', max: '4 mg' }, 
+        iv: { mg: 4, freq: 'Slow IV at end of surgery (single dose)', dur: 'Single dose', max: '4 mg (PONV)' } 
+      },
+      pregnancy: { 
+        oral: { mg: 4, freq: 'Every 8 hours', dur: 'As needed', max: '32 mg/day' }, 
+        iv: { mg: 4, freq: 'Slow IV every 8h', dur: 'As needed', max: '16 mg/dose' } 
+      },
+      radiotherapy: { 
+        oral: { mg: 8, freq: 'Before each radiotherapy session', dur: 'Duration of RT', max: '32 mg/day' }, 
+        iv: { mg: 8, freq: '30 min before radiotherapy', dur: 'Duration of RT', max: '16 mg/dose' } 
+      }
+    };
+
+    const d = adultMap[ind][route];
+    const vol = route === 'oral' ? (d.mg === 4 ? '1 × 4mg tab / ODT' : d.mg === 8 ? '2 × 4mg tabs' : '') : (d.mg === 4 ? '2 ml (IV 2mg/ml)' : d.mg === 8 ? '4 ml (IV 2mg/ml)' : '');
+
+    document.getElementById('res-dose').textContent = d.mg + ' mg per dose';
+    document.getElementById('res-freq').textContent = d.freq;
+    document.getElementById('res-mg').textContent = d.mg + ' mg';
+    document.getElementById('res-vol').textContent = vol;
+    document.getElementById('res-max').textContent = d.max;
+    document.getElementById('res-dur').textContent = d.dur;
+    result.classList.add('show');
+
+    if (ind === 'cinv_high') {
+      document.getElementById('warn-text').textContent = 'Highly emetogenic chemo: ondansetron alone is insufficient. Must combine with dexamethasone and an NK1 receptor antagonist (aprepitant/fosaprepitant) per ASCO/ESMO guidelines.';
+      warnBox.classList.add('show');
+    }
+    if (route === 'iv' && (ind === 'cinv_high' || ind === 'cinv_moderate')) {
+      document.getElementById('warn-text').textContent = (document.getElementById('warn-text').textContent ? document.getElementById('warn-text').textContent + ' ' : '') + 'IV ondansetron: give as slow infusion over 15 minutes. Single IV dose must not exceed 16 mg. Monitor QTc.';
+      warnBox.classList.add('show');
+    }
   }
 }
-function toggleFaq(el){el.closest('.faq-item').classList.toggle('open');}
+
+function toggleFaq(el) {
+  el.closest('.faq-item').classList.toggle('open');
+}
 </script>
 </body>
 </html>
