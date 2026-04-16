@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="lab-unit-converter">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lab Unit Converter | mg/dL to mmol/L | Blood Test Units | RxMedCalc</title>
+<meta name="description" content="Free medical lab unit converter. Convert between mg/dL and mmol/L for glucose, cholesterol, triglycerides, creatinine, urea, bilirubin, calcium, magnesium, uric acid, HbA1c, and 15+ more analytes. Includes normal reference ranges. Used by doctors, nurses, and patients worldwide."/>
+<meta name="keywords" content="lab unit converter, mg/dL to mmol/L, mmol/L to mg/dL, glucose unit converter, cholesterol unit converter, creatinine units, blood test unit converter, medical unit converter, HbA1c converter, bilirubin converter, triglycerides converter"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/lab-unit-converter"/>
+<meta property="og:title" content="Lab Unit Converter | mg/dL ↔ mmol/L | Blood Tests | RxMedCalc"/>
+<meta property="og:description" content="Convert blood test results between mg/dL and mmol/L for 20+ analytes. Normal ranges included. Free for doctors and patients worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/lab-unit-converter"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0f2030 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(16,185,129,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(16,185,129,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#6ee7b7;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#34d399}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#10b981;border-radius:2px;flex-shrink:0}
+/* Analyte selector */
+.analyte-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-bottom:20px}
+.analyte-btn{padding:9px 14px;border:1.5px solid #e5e7eb;border-radius:10px;background:#f9fafb;font-family:inherit;font-size:0.82rem;font-weight:600;color:#374151;cursor:pointer;transition:all 0.2s;text-align:left}
+.analyte-btn:hover{border-color:#10b981;background:#f0fdf4}
+.analyte-btn.sel{border-color:#10b981;background:#10b981;color:#fff}
+/* Converter */
+.converter-box{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:14px;padding:24px;margin-bottom:16px}
+.conv-title{font-size:0.78rem;font-weight:700;color:#065f46;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:16px}
+.conv-row{display:grid;grid-template-columns:1fr 40px 1fr;gap:8px;align-items:center;margin-bottom:12px}
+@media(max-width:480px){.conv-row{grid-template-columns:1fr;}.conv-arrow{display:none}}
+.conv-field label{font-size:0.72rem;font-weight:700;color:#065f46;text-transform:uppercase;letter-spacing:0.04em;display:block;margin-bottom:4px}
+.conv-field input{width:100%;padding:12px 14px;background:#fff;border:1.5px solid #bbf7d0;border-radius:10px;font-family:inherit;font-size:1rem;font-weight:600;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none}
+.conv-field input:focus{border-color:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,0.1)}
+.conv-arrow{text-align:center;font-size:1.2rem;color:#10b981;margin-top:20px}
+.conv-result{text-align:center;padding:16px;background:#fff;border:1.5px solid #bbf7d0;border-radius:12px}
+.cr-num{font-family:'Fraunces',Georgia,serif;font-size:2.2rem;font-weight:900;color:#10b981;font-variant-numeric:tabular-nums}
+.cr-unit{font-size:0.8rem;color:#6b7280;margin-top:2px}
+/* Normal range */
+.normal-range{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.nr-box{background:#fff;border:1.5px solid #bbf7d0;border-radius:10px;padding:12px;text-align:center}
+.nr-label{font-size:0.65rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:4px}
+.nr-val{font-size:0.9rem;font-weight:700;color:#065f46}
+/* Status indicator */
+.status-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-size:0.78rem;font-weight:700;margin-top:8px}
+.sp-low{background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
+.sp-normal{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0}
+.sp-high{background:#fef2f2;color:#dc2626;border:1px solid #fecaca}
+.sp-crit{background:#dc2626;color:#fff}
+/* Table of all analytes */
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#10b981;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.ref-table{width:100%;border-collapse:collapse;font-size:0.8rem;margin:12px 0}
+.ref-table th{background:#f0fdf4;color:#065f46;font-weight:700;padding:8px 10px;text-align:left;font-size:0.68rem;text-transform:uppercase;border-bottom:2px solid #bbf7d0}
+.ref-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;color:#374151;cursor:pointer}
+.ref-table tr:hover td{background:#f0fdf4}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#10b981;background:#f0fdf4;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Lab Unit Converter</span></nav>
+    <div class="page-eyebrow">🔬 Laboratory · General · Diagnostics</div>
+    <h1>Lab Unit<br><em>Converter</em></h1>
+    <p class="page-sub">Convert blood test results between mg/dL and mmol/L for 20+ analytes instantly. Includes normal reference ranges and out-of-range flagging. For glucose, cholesterol, creatinine, urea, bilirubin, uric acid, and more.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 20+ Analytes</span>
+      <span class="hbadge">✓ Bidirectional Conversion</span>
+      <span class="hbadge">✓ Normal Ranges</span>
+      <span class="hbadge">✓ Out-of-Range Flagging</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">Select Analyte</div>
+    <div class="analyte-grid" id="analyte-grid"></div>
+    <div class="converter-box" id="converter-box" style="display:none">
+      <div class="conv-title" id="conv-title">—</div>
+      <div class="conv-row">
+        <div class="conv-field">
+          <label id="lbl-a">mg/dL</label>
+          <input type="number" id="val-a" placeholder="0" inputmode="decimal" oninput="convertA()"/>
+        </div>
+        <div class="conv-arrow">⇄</div>
+        <div class="conv-field">
+          <label id="lbl-b">mmol/L</label>
+          <input type="number" id="val-b" placeholder="0" inputmode="decimal" oninput="convertB()"/>
+        </div>
+      </div>
+      <div class="conv-result" id="conv-result" style="display:none">
+        <div class="cr-num" id="result-num">—</div>
+        <div class="cr-unit" id="result-unit">—</div>
+        <div id="status-pill"></div>
+      </div>
+      <div class="normal-range" id="normal-range" style="display:none">
+        <div class="nr-box"><div class="nr-label">Normal (mg/dL)</div><div class="nr-val" id="nr-mgdl">—</div></div>
+        <div class="nr-box"><div class="nr-label">Normal (mmol/L)</div><div class="nr-val" id="nr-mmol">—</div></div>
+      </div>
+    </div>
+    <div id="no-sel" style="text-align:center;padding:32px;color:#9ca3af;font-size:0.9rem">Select an analyte above to begin converting</div>
+  </div>
+
+  <div class="content-card">
+    <h2>Complete Reference Table — All Analytes</h2>
+    <table class="ref-table" id="ref-table">
+      <thead><tr><th>Analyte</th><th>Conversion Factor</th><th>Normal (mg/dL)</th><th>Normal (mmol/L)</th><th>Notes</th></tr></thead>
+      <tbody id="ref-tbody"></tbody>
+    </table>
+    <h3>Why Units Differ Between Countries</h3>
+    <p>The United States, most of South Asia (including India), and parts of Asia use conventional units — primarily mg/dL (milligrams per decilitre). Most of Europe, Australia, Canada, and other countries use SI units — primarily mmol/L (millimoles per litre). This creates confusion when interpreting imported diagnostic guidelines, clinical trial endpoints, and drug thresholds. For example, a fasting glucose of 126 mg/dL (US diabetes threshold) equals 7.0 mmol/L (UK/ADA equivalent). A cholesterol of 200 mg/dL (borderline high in US guidelines) equals 5.17 mmol/L (UK threshold for statin consideration is 5.0 mmol/L). Understanding both unit systems is essential for any clinician working with international guidelines.</p>
+    <h3>Key Clinical Conversion Benchmarks to Memorise</h3>
+    <p>These are the most clinically important conversion pairs that every physician should know from memory:</p>
+    <ul>
+      <li><strong>Glucose:</strong> 18 mg/dL = 1 mmol/L. Fasting normal: 70–100 mg/dL = 3.9–5.6 mmol/L. Diabetes threshold: 126 mg/dL = 7.0 mmol/L. Hypoglycaemia: &lt;70 mg/dL = &lt;3.9 mmol/L</li>
+      <li><strong>Creatinine:</strong> 1 mg/dL ≈ 88.4 µmol/L. Normal male: 0.7–1.2 mg/dL = 62–106 µmol/L. AKI Stage 1: ≥1.5× baseline</li>
+      <li><strong>Cholesterol:</strong> Divide mg/dL by 38.67 for mmol/L. Total cholesterol 200 mg/dL = 5.17 mmol/L. LDL target ≤70 mg/dL = 1.81 mmol/L</li>
+      <li><strong>Triglycerides:</strong> Divide mg/dL by 88.57 for mmol/L. High: ≥150 mg/dL = 1.7 mmol/L. Very high: ≥500 mg/dL = 5.65 mmol/L (pancreatitis risk)</li>
+      <li><strong>Bilirubin:</strong> Divide mg/dL by 17.1 for µmol/L. Jaundice threshold: ~3 mg/dL = 51 µmol/L (clinically visible scleral icterus typically at &gt;2.5–3 mg/dL)</li>
+      <li><strong>Uric acid:</strong> Divide mg/dL by 59.48 for mmol/L. Gout treatment target: &lt;6 mg/dL = &lt;357 µmol/L (some guidelines &lt;5 mg/dL = &lt;297 µmol/L for tophaceous gout)</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/hba1c-converter" class="related-card"><span class="rc-icon">🩺</span><div><div class="rc-title">HbA1c Converter</div><div class="rc-desc">% to mmol/mol (IFCC)</div></div></a>
+      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">Creatinine-based kidney function</div></div></a>
+      <a href="/medical-calculators/corrected-calcium" class="related-card"><span class="rc-icon">🔬</span><div><div class="rc-title">Corrected Calcium</div><div class="rc-desc">Albumin-adjusted calcium</div></div></a>
+      <a href="/medical-calculators/anion-gap" class="related-card"><span class="rc-icon">⚗️</span><div><div class="rc-title">Anion Gap</div><div class="rc-desc">Metabolic acidosis workup</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Normal ranges shown are general reference ranges from major laboratory textbooks. Reference ranges vary by laboratory, analyser, patient age, sex, and pregnancy status. Always interpret results against the reference range provided by your specific laboratory report. This tool is for reference and educational purposes only.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+const ANALYTES=[
+  {n:'Glucose',a:'mg/dL',b:'mmol/L',f:0.05551,norm_a:'70–100 (fasting)',norm_b:'3.9–5.6 (fasting)',notes:'Diabetes: ≥126 mg/dL / 7.0 mmol/L fasting',
+    flags:[{max:70,lbl:'Low — Hypoglycaemia',cls:'sp-low'},{max:100,lbl:'Normal (fasting)',cls:'sp-normal'},{max:126,lbl:'Prediabetes range',cls:'sp-low'},{max:9999,lbl:'Elevated — Diabetes range',cls:'sp-high'}]},
+  {n:'Total Cholesterol',a:'mg/dL',b:'mmol/L',f:0.02586,norm_a:'<200',norm_b:'<5.17',notes:'Desirable <200, Borderline 200–239, High ≥240 mg/dL',
+    flags:[{max:200,lbl:'Desirable',cls:'sp-normal'},{max:239,lbl:'Borderline High',cls:'sp-low'},{max:9999,lbl:'High Cholesterol',cls:'sp-high'}]},
+  {n:'LDL Cholesterol',a:'mg/dL',b:'mmol/L',f:0.02586,norm_a:'<100 (optimal)',norm_b:'<2.59 (optimal)',notes:'High ASCVD risk target: <70 mg/dL (1.81 mmol/L)',
+    flags:[{max:70,lbl:'Optimal (high risk)',cls:'sp-normal'},{max:100,lbl:'Near Optimal',cls:'sp-normal'},{max:130,lbl:'Borderline High',cls:'sp-low'},{max:159,lbl:'High',cls:'sp-high'},{max:9999,lbl:'Very High',cls:'sp-crit'}]},
+  {n:'HDL Cholesterol',a:'mg/dL',b:'mmol/L',f:0.02586,norm_a:'≥40 (M) / ≥50 (F)',norm_b:'≥1.03 (M) / ≥1.29 (F)',notes:'Low HDL is an independent ASCVD risk factor',
+    flags:[{max:40,lbl:'Low HDL — Risk factor',cls:'sp-high'},{max:60,lbl:'Normal',cls:'sp-normal'},{max:9999,lbl:'High HDL — Protective',cls:'sp-normal'}]},
+  {n:'Triglycerides',a:'mg/dL',b:'mmol/L',f:0.01129,norm_a:'<150',norm_b:'<1.7',notes:'≥500 mg/dL — pancreatitis risk',
+    flags:[{max:150,lbl:'Normal',cls:'sp-normal'},{max:199,lbl:'Borderline High',cls:'sp-low'},{max:499,lbl:'High',cls:'sp-high'},{max:9999,lbl:'Very High — Pancreatitis risk',cls:'sp-crit'}]},
+  {n:'Creatinine',a:'mg/dL',b:'µmol/L',f:88.4,norm_a:'0.6–1.2',norm_b:'53–106',notes:'Male: 0.7–1.2, Female: 0.5–1.0 mg/dL',
+    flags:[{max:1.2,lbl:'Normal',cls:'sp-normal'},{max:2.0,lbl:'Mildly Elevated',cls:'sp-low'},{max:4.0,lbl:'Moderately Elevated',cls:'sp-high'},{max:9999,lbl:'Severely Elevated',cls:'sp-crit'}]},
+  {n:'BUN (Blood Urea Nitrogen)',a:'mg/dL',b:'mmol/L',f:0.3571,norm_a:'7–20',norm_b:'2.5–7.1',notes:'BUN:Cr ratio >20 suggests prerenal azotaemia',
+    flags:[{max:20,lbl:'Normal',cls:'sp-normal'},{max:50,lbl:'Mildly Elevated',cls:'sp-low'},{max:9999,lbl:'Elevated',cls:'sp-high'}]},
+  {n:'Urea',a:'mg/dL',b:'mmol/L',f:0.1665,norm_a:'15–40',norm_b:'2.5–6.7',notes:'Urea = BUN × 2.14. Common in UK/India labs',
+    flags:[{max:40,lbl:'Normal',cls:'sp-normal'},{max:100,lbl:'Elevated',cls:'sp-low'},{max:9999,lbl:'High',cls:'sp-high'}]},
+  {n:'Total Bilirubin',a:'mg/dL',b:'µmol/L',f:17.1,norm_a:'0.2–1.2',norm_b:'3.4–20.5',notes:'Jaundice visible at ~3 mg/dL (51 µmol/L)',
+    flags:[{max:1.2,lbl:'Normal',cls:'sp-normal'},{max:3.0,lbl:'Mild Elevation',cls:'sp-low'},{max:10,lbl:'Moderate — Jaundice',cls:'sp-high'},{max:9999,lbl:'Severe',cls:'sp-crit'}]},
+  {n:'Calcium (Total)',a:'mg/dL',b:'mmol/L',f:0.2495,norm_a:'8.5–10.5',norm_b:'2.12–2.62',notes:'Correct for albumin in hypoalbuminaemia',
+    flags:[{max:8.5,lbl:'Hypocalcaemia',cls:'sp-high'},{max:10.5,lbl:'Normal',cls:'sp-normal'},{max:12.0,lbl:'Mild Hypercalcaemia',cls:'sp-low'},{max:9999,lbl:'Severe Hypercalcaemia',cls:'sp-crit'}]},
+  {n:'Sodium',a:'mEq/L (=mmol/L)',b:'mmol/L',f:1,norm_a:'135–145',norm_b:'135–145',notes:'Same numeric value in both SI and conventional',
+    flags:[{max:135,lbl:'Hyponatraemia',cls:'sp-high'},{max:145,lbl:'Normal',cls:'sp-normal'},{max:9999,lbl:'Hypernatraemia',cls:'sp-high'}]},
+  {n:'Potassium',a:'mEq/L (=mmol/L)',b:'mmol/L',f:1,norm_a:'3.5–5.0',norm_b:'3.5–5.0',notes:'Same in both systems. Critical: <3.0 or >6.0',
+    flags:[{max:3.5,lbl:'Hypokalaemia',cls:'sp-high'},{max:5.0,lbl:'Normal',cls:'sp-normal'},{max:9999,lbl:'Hyperkalaemia',cls:'sp-high'}]},
+  {n:'Magnesium',a:'mg/dL',b:'mmol/L',f:0.4114,norm_a:'1.7–2.2',norm_b:'0.7–0.9',notes:'Hypomagnesaemia common in ICU, diuretic use',
+    flags:[{max:1.7,lbl:'Hypomagnesaemia',cls:'sp-high'},{max:2.2,lbl:'Normal',cls:'sp-normal'},{max:9999,lbl:'Hypermagnesaemia',cls:'sp-low'}]},
+  {n:'Uric Acid',a:'mg/dL',b:'µmol/L',f:59.48,norm_a:'3.5–7.2',norm_b:'208–428',notes:'Gout target: <6 mg/dL (357 µmol/L)',
+    flags:[{max:6.0,lbl:'At target (gout)',cls:'sp-normal'},{max:7.2,lbl:'Normal (upper)',cls:'sp-normal'},{max:9999,lbl:'Elevated — Hyperuricaemia',cls:'sp-high'}]},
+  {n:'Phosphorus',a:'mg/dL',b:'mmol/L',f:0.3229,norm_a:'2.5–4.5',norm_b:'0.81–1.45',notes:'Low in refeeding syndrome and malabsorption',
+    flags:[{max:2.5,lbl:'Hypophosphataemia',cls:'sp-high'},{max:4.5,lbl:'Normal',cls:'sp-normal'},{max:9999,lbl:'Hyperphosphataemia',cls:'sp-low'}]},
+  {n:'Iron (Serum)',a:'µg/dL',b:'µmol/L',f:0.1791,norm_a:'60–170 (M)',norm_b:'10.7–30.4 (M)',notes:'Female: 50–170 µg/dL. Low in iron deficiency, high in haemochromatosis',
+    flags:[{max:60,lbl:'Low Iron',cls:'sp-high'},{max:170,lbl:'Normal',cls:'sp-normal'},{max:9999,lbl:'Elevated',cls:'sp-low'}]},
+  {n:'Ferritin',a:'ng/mL (=µg/L)',b:'pmol/L',f:2.247,norm_a:'12–300 (M)',norm_b:'27–674 (M)',notes:'Female: 12–150 ng/mL. Low = iron deficient',
+    flags:[{max:12,lbl:'Iron Deficient',cls:'sp-crit'},{max:300,lbl:'Normal (male)',cls:'sp-normal'},{max:1000,lbl:'Mildly Elevated',cls:'sp-low'},{max:9999,lbl:'Markedly Elevated',cls:'sp-high'}]},
+  {n:'Albumin',a:'g/dL',b:'g/L',f:10,norm_a:'3.5–5.0',norm_b:'35–50',notes:'Hypoalbuminaemia: malnutrition, liver disease, nephrotic syndrome',
+    flags:[{max:3.5,lbl:'Hypoalbuminaemia',cls:'sp-high'},{max:5.0,lbl:'Normal',cls:'sp-normal'},{max:9999,lbl:'Elevated',cls:'sp-low'}]},
+  {n:'CRP (C-Reactive Protein)',a:'mg/L',b:'nmol/L',f:9.524,norm_a:'<10',norm_b:'<95',notes:'hs-CRP <1 low CV risk, 1–3 moderate, >3 high',
+    flags:[{max:10,lbl:'Normal',cls:'sp-normal'},{max:50,lbl:'Mild Elevation',cls:'sp-low'},{max:200,lbl:'Moderate',cls:'sp-high'},{max:9999,lbl:'High — Significant inflammation',cls:'sp-crit'}]},
+  {n:'Haemoglobin',a:'g/dL',b:'g/L',f:10,norm_a:'13.5–17.5 (M)',norm_b:'135–175 (M)',notes:'Female: 12–16 g/dL. Anaemia: <12F / <13M',
+    flags:[{max:8,lbl:'Severe Anaemia',cls:'sp-crit'},{max:10,lbl:'Moderate Anaemia',cls:'sp-high'},{max:12,lbl:'Mild Anaemia',cls:'sp-low'},{max:17.5,lbl:'Normal',cls:'sp-normal'},{max:9999,lbl:'Polycythaemia',cls:'sp-low'}]},
+];
+let currentAnalyte=null;
+document.getElementById('analyte-grid').innerHTML=ANALYTES.map((a,i)=>`<button class="analyte-btn" id="ab${i}" onclick="selectAnalyte(${i})">${a.n}</button>`).join('');
+// Build reference table
+document.getElementById('ref-tbody').innerHTML=ANALYTES.map((a,i)=>`<tr onclick="selectAnalyte(${i})"><td>${a.n}</td><td>÷${(1/a.f).toFixed(4)} or ×${a.f.toFixed(4)}</td><td>${a.norm_a}</td><td>${a.norm_b}</td><td>${a.notes}</td></tr>`).join('');
+function selectAnalyte(i){
+  currentAnalyte=i;
+  document.querySelectorAll('.analyte-btn').forEach((b,j)=>b.classList.toggle('sel',j===i));
+  document.getElementById('no-sel').style.display='none';
+  document.getElementById('converter-box').style.display='block';
+  const a=ANALYTES[i];
+  document.getElementById('conv-title').textContent=a.n+' Unit Converter';
+  document.getElementById('lbl-a').textContent=a.a;
+  document.getElementById('lbl-b').textContent=a.b;
+  document.getElementById('val-a').value='';document.getElementById('val-b').value='';
+  document.getElementById('conv-result').style.display='none';
+  document.getElementById('normal-range').style.display='grid';
+  document.getElementById('nr-mgdl').textContent=a.norm_a;
+  document.getElementById('nr-mmol').textContent=a.norm_b;
+  document.getElementById('status-pill').innerHTML='';
+  if(typeof umami!=='undefined')umami.track('lab_select',{analyte:a.n});
+}
+function showResult(valA,valB,dir){
+  const a=ANALYTES[currentAnalyte];
+  const result=dir==='a'?valB:valA;
+  const unit=dir==='a'?a.b:a.a;
+  const checkVal=valA;// Always check against mg/dL value
+  document.getElementById('result-num').textContent=result;
+  document.getElementById('result-unit').textContent=unit;
+  document.getElementById('conv-result').style.display='block';
+  // Flag
+  if(a.flags&&!isNaN(checkVal)){
+    let pill='';
+    for(const f of a.flags){if(checkVal<f.max){pill=`<div class="status-pill ${f.cls}">${f.lbl}</div>`;break;}}
+    document.getElementById('status-pill').innerHTML=pill;
+  }
+}
+function convertA(){
+  if(!currentAnalyte&&currentAnalyte!==0)return;
+  const a=ANALYTES[currentAnalyte];
+  const v=parseFloat(document.getElementById('val-a').value);
+  if(isNaN(v)){document.getElementById('conv-result').style.display='none';return;}
+  const res=Math.round(v*a.f*10000)/10000;
+  document.getElementById('val-b').value=res;
+  showResult(v,res,'a');
+}
+function convertB(){
+  if(!currentAnalyte&&currentAnalyte!==0)return;
+  const a=ANALYTES[currentAnalyte];
+  const v=parseFloat(document.getElementById('val-b').value);
+  if(isNaN(v)){document.getElementById('conv-result').style.display='none';return;}
+  const res=Math.round((v/a.f)*10000)/10000;
+  document.getElementById('val-a').value=res;
+  showResult(res,v,'b');
+}
+</script>
+</body>
+</html>

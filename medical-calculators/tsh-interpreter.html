@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="tsh-interpreter">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TSH Interpreter | Thyroid Function Test Interpretation | RxMedCalc</title>
+<meta name="description" content="Free TSH and thyroid function test interpreter. Enter TSH, Free T4, and Free T3 values to get a complete interpretation — overt hypothyroidism, subclinical hypothyroidism, hyperthyroidism, and sick euthyroid syndrome. Includes ATA treatment guidelines, levothyroxine dosing, and thyroid cancer context."/>
+<meta name="keywords" content="TSH interpreter, thyroid function test, TSH normal range, TSH high low, TSH T4 T3 interpretation, hypothyroidism calculator, hyperthyroidism TSH, subclinical hypothyroidism, levothyroxine dose, TSH reference range, thyroid test results explained"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/tsh-interpreter"/>
+<meta property="og:title" content="TSH Interpreter | Thyroid Function Test | RxMedCalc"/>
+<meta property="og:description" content="Interpret TSH, Free T4, and Free T3 thyroid function tests. Hypothyroidism, hyperthyroidism, subclinical disease. Treatment guidance. Free clinical tool."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/tsh-interpreter"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0f1f30 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(16,185,129,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(16,185,129,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#6ee7b7;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#34d399}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#10b981;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:500px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input,.field select{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none}
+.field input:focus,.field select:focus{border-color:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+.ref-bar{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:10px;padding:12px 16px;font-size:0.8rem;color:#065f46;margin-bottom:16px;line-height:1.7}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#10b981,#059669);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(16,185,129,0.3);margin-top:4px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(16,185,129,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+/* Diagnosis display */
+.dx-display{text-align:center;margin-bottom:20px;padding:24px;border-radius:14px;border:2px solid}
+.dx-title{font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:900;line-height:1.2;margin-bottom:8px}
+.dx-sub{font-size:0.88rem;opacity:0.8}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.rbox.hi .rval{color:#10b981}
+.rbox.hi{background:#f0fdf4;border-color:#bbf7d0}
+.mgmt-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#10b981;color:#10b981}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#10b981;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#10b981;font-size:0.8rem}
+.thyroid-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:14px 0}
+.thyroid-table th{background:#f0fdf4;color:#065f46;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;border-bottom:2px solid #bbf7d0}
+.thyroid-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+.faq-item{border-bottom:1px solid #f3f4f6;padding:16px 0}.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.92rem;font-weight:600;color:#0d1b2a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.faq-q::after{content:'＋';color:#10b981;font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.86rem;color:#4b5563;line-height:1.75}
+.faq-item.open .faq-a{max-height:300px;padding-top:10px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#10b981;background:#f0fdf4;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>TSH Interpreter</span></nav>
+    <div class="page-eyebrow">🦋 Endocrinology · Thyroid</div>
+    <h1>TSH Interpreter<br><em>Thyroid Function</em> Test</h1>
+    <p class="page-sub">Enter TSH with optional Free T4 and Free T3 for complete thyroid function interpretation. Hypothyroidism, hyperthyroidism, subclinical disease, sick euthyroid — with ATA treatment guidance.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ Full TFT Pattern Recognition</span>
+      <span class="hbadge">✓ Subclinical Disease</span>
+      <span class="hbadge">✓ Levothyroxine Dosing</span>
+      <span class="hbadge">✓ Sick Euthyroid</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">Thyroid Function Test Interpreter</div>
+    <div class="ref-bar">📋 Reference ranges used: TSH 0.4–4.0 mIU/L | Free T4 0.8–1.8 ng/dL (10–23 pmol/L) | Free T3 2.3–4.2 pg/mL (3.5–6.5 pmol/L)</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="tsh">TSH</label>
+        <input type="number" id="tsh" placeholder="e.g. 5.8" min="0" max="100" inputmode="decimal"/>
+        <div class="hint">mIU/L (normal: 0.4–4.0)</div>
+      </div>
+      <div class="field">
+        <label for="ft4">Free T4 <span style="font-weight:400;text-transform:none">(optional)</span></label>
+        <input type="number" id="ft4" placeholder="e.g. 0.9" min="0" max="10" inputmode="decimal"/>
+        <div class="hint">ng/dL (normal: 0.8–1.8)</div>
+      </div>
+      <div class="field">
+        <label for="ft3">Free T3 <span style="font-weight:400;text-transform:none">(optional)</span></label>
+        <input type="number" id="ft3" placeholder="e.g. 3.2" min="0" max="20" inputmode="decimal"/>
+        <div class="hint">pg/mL (normal: 2.3–4.2)</div>
+      </div>
+      <div class="field">
+        <label for="context">Clinical Context</label>
+        <select id="context">
+          <option value="routine">Routine screening / outpatient</option>
+          <option value="pregnant">Pregnancy</option>
+          <option value="elderly">Elderly (>70 years)</option>
+          <option value="sick">Acutely ill / hospitalised</option>
+          <option value="thyroidca">Known thyroid cancer</option>
+        </select>
+        <div class="hint">affects reference range interpretation</div>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Interpret Thyroid Function →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="dx-display" id="dx-display">
+        <div class="dx-title" id="dx-title">—</div>
+        <div class="dx-sub" id="dx-sub">—</div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">TSH</div><div class="rval" id="r-tsh">—</div><div class="runit">mIU/L</div></div>
+        <div class="rbox"><div class="rlabel">Free T4</div><div class="rval" id="r-ft4">—</div><div class="runit">ng/dL</div></div>
+        <div class="rbox"><div class="rlabel">Free T3</div><div class="rval" id="r-ft3">—</div><div class="runit">pg/mL</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>Thyroid Function Pattern Recognition</h2>
+    <table class="thyroid-table">
+      <thead><tr><th>TSH</th><th>Free T4</th><th>Free T3</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td>Normal (0.4–4)</td><td>Normal</td><td>Normal</td><td>Euthyroid — Normal thyroid function</td></tr>
+        <tr><td>High (&gt;4)</td><td>Low (&lt;0.8)</td><td>Low / Normal</td><td>Overt Hypothyroidism — treat with levothyroxine</td></tr>
+        <tr><td>High (&gt;4–10)</td><td>Normal</td><td>Normal</td><td>Subclinical Hypothyroidism — consider treatment</td></tr>
+        <tr><td>Very High (&gt;10)</td><td>Normal or Low</td><td>—</td><td>Significant Hypothyroidism — treat</td></tr>
+        <tr><td>Low (&lt;0.4)</td><td>High (&gt;1.8)</td><td>High (&gt;4.2)</td><td>Overt Hyperthyroidism — antithyroid drugs / RAI</td></tr>
+        <tr><td>Low (&lt;0.4)</td><td>Normal</td><td>Normal</td><td>Subclinical Hyperthyroidism — monitor / treat if symptomatic</td></tr>
+        <tr><td>Low</td><td>Low</td><td>Low</td><td>Central Hypothyroidism — pituitary/hypothalamic cause</td></tr>
+        <tr><td>Low or Normal</td><td>Low</td><td>Very Low</td><td>Sick Euthyroid Syndrome — non-thyroidal illness</td></tr>
+      </tbody>
+    </table>
+    <h3>Levothyroxine (T4) Replacement Dosing</h3>
+    <ul>
+      <li><strong>Young healthy adults (overt hypothyroidism):</strong> Full replacement dose — 1.6 µg/kg/day. Start at full dose in healthy adults under 60</li>
+      <li><strong>Elderly or cardiac disease:</strong> Start low — 25–50 µg/day, increase by 25 µg every 4–8 weeks. Avoid precipitating angina or AF</li>
+      <li><strong>Subclinical hypothyroidism (TSH 4–10, normal FT4):</strong> 50 µg/day starting dose if treating. Repeat TFT in 6–8 weeks. Target TSH 0.5–2.5 mIU/L for most adults; 0.5–1.5 in younger patients; can accept 1–4 in elderly</li>
+      <li><strong>Pregnancy:</strong> Increase levothyroxine dose immediately by 25–30% on diagnosis of pregnancy. Target TSH &lt;2.5 mIU/L in first trimester, &lt;3 mIU/L in second and third trimester</li>
+      <li><strong>Monitoring:</strong> Recheck TFT 6–8 weeks after any dose change. Once stable, annual TSH monitoring</li>
+    </ul>
+    <h3>Causes of Hypothyroidism</h3>
+    <ul>
+      <li><strong>Hashimoto thyroiditis (autoimmune):</strong> Most common cause in iodine-sufficient countries. Anti-TPO antibodies positive in 95%. Gradual destruction of thyroid tissue</li>
+      <li><strong>Iodine deficiency:</strong> Most common cause globally. Endemic in inland mountainous regions and certain parts of South Asia and Africa</li>
+      <li><strong>Post-radioactive iodine (RAI) or thyroidectomy</strong></li>
+      <li><strong>Drug-induced:</strong> Amiodarone (iodine content), lithium (inhibits thyroid hormone release), interferon-α, checkpoint inhibitors</li>
+      <li><strong>Central (secondary/tertiary):</strong> Pituitary or hypothalamic disease — low TSH with low FT4</li>
+    </ul>
+    <h3>Causes of Hyperthyroidism</h3>
+    <ul>
+      <li><strong>Graves disease:</strong> Most common cause. Autoimmune stimulation of TSH receptor by TSH-receptor antibodies (TRAb). Diffuse goitre, ophthalmopathy, pretibial myxoedema</li>
+      <li><strong>Toxic nodular goitre (Plummer disease):</strong> Single or multiple autonomously functioning nodules — common in iodine-deficient areas and elderly</li>
+      <li><strong>Subacute (de Quervain) thyroiditis:</strong> Post-viral painful thyroiditis with transient hyperthyroid phase, followed by hypothyroid phase, then recovery. Low uptake on thyroid scan</li>
+      <li><strong>Exogenous thyroid hormone (factitious):</strong> Low thyroglobulin level distinguishes from intrinsic overproduction</li>
+      <li><strong>Amiodarone-induced thyrotoxicosis (AIT):</strong> Type 1 (excess iodine) or Type 2 (destructive thyroiditis)</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/hba1c-converter" class="related-card"><span class="rc-icon">🩺</span><div><div class="rc-title">HbA1c Converter</div><div class="rc-desc">Endocrine monitoring</div></div></a>
+      <a href="/medical-calculators/bmi" class="related-card"><span class="rc-icon">⚖️</span><div><div class="rc-title">BMI Calculator</div><div class="rc-desc">Weight management in thyroid disease</div></div></a>
+      <a href="/medical-calculators/qtc-calculator" class="related-card"><span class="rc-icon">📈</span><div><div class="rc-title">QTc Calculator</div><div class="rc-desc">Amiodarone monitoring</div></div></a>
+      <a href="/medical-calculators/lab-unit-converter" class="related-card"><span class="rc-icon">🔬</span><div><div class="rc-title">Lab Unit Converter</div><div class="rc-desc">Convert thyroid hormone units</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> TSH and thyroid function interpretation requires clinical correlation with symptoms, history, medication use, and repeat testing where appropriate. Reference ranges vary by laboratory and assay. Pregnancy, acute illness, medications (amiodarone, biotin, heparin), and assay interference can significantly affect results. Always interpret TFTs in the clinical context. Endocrinology referral for complex or uncertain cases.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let lastResult=null;
+const faqs=[
+  ["What is a normal TSH level?","Normal TSH range is 0.4–4.0 mIU/L for most adults. In pregnancy, the target is <2.5 mIU/L in the first trimester. In the elderly, TSH up to 6–7 mIU/L may be acceptable without treatment."],
+  ["What does a high TSH mean?","High TSH (>4.0 mIU/L) indicates hypothyroidism — the pituitary is secreting more TSH to stimulate an underperforming thyroid. If Free T4 is also low: overt hypothyroidism (treat). If Free T4 is normal: subclinical hypothyroidism (consider treatment if TSH >10, symptomatic, or pregnant)."],
+  ["What does a low TSH mean?","Low TSH (<0.4 mIU/L) indicates hyperthyroidism or exogenous thyroid hormone suppression. If Free T4/T3 are elevated: overt hyperthyroidism (Graves, toxic nodule). If Free T4/T3 normal: subclinical hyperthyroidism (monitor, treat if AF risk, osteoporosis, age >65, or symptomatic)."],
+  ["When should subclinical hypothyroidism be treated?","ATA 2014: Treat if TSH >10 mIU/L (even if FT4 normal), or if TSH 4–10 with symptoms, pregnancy, high cardiovascular risk, age <70, or presence of anti-TPO antibodies. Observe with 6-monthly TFT if TSH 4–10 and asymptomatic."],
+  ["What is sick euthyroid syndrome?","Non-thyroidal illness syndrome — seen in acute illness, ICU admission, surgery. TSH may be low/normal/high, FT4 low-normal, FT3 markedly low (due to impaired T4→T3 conversion). DO NOT treat with levothyroxine in this setting — replace the illness, not the TSH. TFTs normalise on recovery."]
+];
+document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
+function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}
+function calculate(){
+  const tsh=parseFloat(document.getElementById('tsh').value);
+  const ft4=parseFloat(document.getElementById('ft4').value)||null;
+  const ft3=parseFloat(document.getElementById('ft3').value)||null;
+  const ctx=document.getElementById('context').value;
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(isNaN(tsh)){errEl.textContent='Please enter TSH value.';errEl.className='error-msg show';return}
+  // Determine reference ranges by context
+  let tshLow=0.4,tshHigh=4.0,tshNote='';
+  if(ctx==='pregnant'){tshLow=0.1;tshHigh=2.5;tshNote=' (first trimester pregnancy target)';}
+  else if(ctx==='elderly'){tshHigh=6.0;tshNote=' (elderly — higher threshold acceptable)';}
+  else if(ctx==='thyroidca'){tshLow=0.1;tshHigh=0.5;tshNote=' (suppressed TSH target for thyroid cancer)';}
+  // Pattern recognition
+  const tshHigh_flag=tsh>tshHigh;
+  const tshLow_flag=tsh<tshLow;
+  const tshNormal=!tshHigh_flag&&!tshLow_flag;
+  const ft4Low=ft4!==null&&ft4<0.8;
+  const ft4High=ft4!==null&&ft4>1.8;
+  const ft4Normal=ft4!==null&&!ft4Low&&!ft4High;
+  const ft3Low=ft3!==null&&ft3<2.3;
+  const ft3High=ft3!==null&&ft3>4.2;
+  let dx,dxSub,dxBg,dxBorder,dxColor,mgmtCls,mgmtTxt;
+  if(tshNormal&&(ft4Normal||ft4===null)&&(ft3!==null?!ft3Low&&!ft3High:true)){
+    if(ctx==='sick'&&ft3Low){
+      dx='Sick Euthyroid Syndrome';dxSub='Non-thyroidal illness — TSH may not reflect true thyroid status';
+      dxBg='#fffbeb';dxBorder='#fde68a';dxColor='#92400e';
+      mgmtTxt='⚠️ Sick Euthyroid Syndrome\n\nDo NOT treat with levothyroxine — TSH and thyroid hormones are suppressed as an adaptive response to acute illness.\n\nManagement:\n• Treat the underlying illness\n• Repeat TFT 6–8 weeks after recovery\n• Hypothyroidism will be unmasked if it was pre-existing\n• FT3 is most affected; FT4 mild-moderately affected; TSH usually low-normal';}
+    else{dx='Euthyroid';dxSub='Normal thyroid function — no thyroid disease detected';dxBg='#f0fdf4';dxBorder='#bbf7d0';dxColor='#065f46';
+      mgmtTxt='✅ Normal thyroid function (Euthyroid)\n\nTSH: '+tsh+' mIU/L — within normal range'+tshNote+'\n\nNo treatment indicated. Routine rescreening:\n• Adults: every 5 years if asymptomatic\n• Women over 50: every 2 years\n• Earlier if symptoms develop or risk factors present (family history, autoimmune disease)';}
+  } else if(tshHigh_flag&&!ft4Low&&!ft4High&&(ft3===null||!ft3Low)){
+    if(tsh>10){dx='Significant Hypothyroidism';dxSub='TSH markedly elevated — thyroid hormones likely insufficient'}
+    else{dx='Subclinical Hypothyroidism';dxSub='TSH elevated, Free T4 normal — early or compensated hypothyroidism'}
+    dxBg='#fffbeb';dxBorder='#fde68a';dxColor='#92400e';
+    mgmtTxt=(tsh>10?'⚠️ TSH >10 — Treat with levothyroxine\n\n':'⚠️ Subclinical Hypothyroidism (TSH '+(tsh>4?tsh:'')+' mIU/L)\n\n')+'Treatment considerations (ATA 2014):\n• TSH >10: Treat all ages\n• TSH 4–10: Treat if symptomatic, pregnant, planning pregnancy, TSH rising trend, anti-TPO antibodies positive, or age <70\n• TSH 4–10 in elderly (>70): observe, repeat in 6 months — higher TSH may be acceptable\n\nLevothyroxine starting doses:\n• Young/healthy adults: 50–75 µg/day, or 1.6 µg/kg/day full replacement\n• Elderly or cardiac disease: 25 µg/day, titrate slowly\n• Pregnancy: full replacement immediately, target TSH <2.5 mIU/L\n\nRecheck TFT in 6–8 weeks after starting or changing dose. Annual TFT once stable.';
+  } else if(tshHigh_flag&&(ft4Low||ft3Low)){
+    dx='Overt Hypothyroidism';dxSub='TSH elevated + low thyroid hormones — treatment required';dxBg='#fef2f2';dxBorder='#fecaca';dxColor='#991b1b';
+    mgmtTxt='⚠️ Overt Hypothyroidism\n\nTreatment: Levothyroxine (T4) replacement\n\n• Young healthy adults: Start at 1.6 µg/kg/day (full replacement)\n• Elderly or coronary artery disease: Start 25 µg/day — increase 25 µg every 4–8 weeks\n• Recheck TSH and FT4 in 6–8 weeks\n• Target TSH: 0.5–2.5 mIU/L (most adults)\n\nMyxoedema coma (severe hypothyroid crisis): IV T4 200–400 µg loading, then 50–100 µg/day + IV T3 5–20 µg load — ICU admission, steroid cover\n\nCommon causes: Hashimoto thyroiditis, post-RAI, post-thyroidectomy, iodine deficiency, drugs (amiodarone, lithium)';
+  } else if(tshLow_flag&&(ft4High||ft3High)){
+    dx='Overt Hyperthyroidism';dxSub='TSH suppressed + elevated thyroid hormones — antithyroid treatment required';dxBg='#fef2f2';dxBorder='#fecaca';dxColor='#991b1b';
+    mgmtTxt='🚨 Overt Hyperthyroidism\n\nUrgent evaluation needed. Investigate cause:\n• TSH-receptor antibodies (TRAb): positive = Graves disease\n• Thyroid ultrasound ± nuclear scan\n• Anti-TPO antibodies (Hashitoxicosis)\n\nMedical management:\n• Carbimazole 20–40 mg/day (first-line UK/India) or Propylthiouracil (PTU) 100–150 mg TDS (preferred in pregnancy, thyroid storm)\n• Beta-blockers: propranolol 40 mg TDS — symptom control (palpitations, tremor, anxiety)\n• Recheck TFT in 4–6 weeks\n\nDefinitive treatment options:\n• Radioactive iodine (RAI) — preferred for most non-pregnant adults with Graves disease\n• Thyroidectomy — large goitre, compression, failed medical therapy\n\nThyroid storm: PTU + iodine (1 hour after PTU) + dexamethasone + propranolol + supportive care — ICU';
+  } else if(tshLow_flag&&!ft4High&&!ft3High){
+    dx='Subclinical Hyperthyroidism';dxSub='TSH suppressed, thyroid hormones normal — may not need immediate treatment';dxBg='#fffbeb';dxBorder='#fde68a';dxColor='#92400e';
+    mgmtTxt='⚠️ Subclinical Hyperthyroidism (TSH '+tsh+' mIU/L, FT4/FT3 normal)\n\nTreat if:\n• TSH <0.1 mIU/L persistently (high risk of AF, osteoporosis)\n• Age >65 with any degree of TSH suppression\n• Post-menopausal women without bone-protective therapy\n• Symptomatic (palpitations, weight loss, tremor, heat intolerance)\n• Known cardiac disease\n\nMonitor if:\n• TSH 0.1–0.4, asymptomatic, age <65, no cardiac risk\n• Repeat TFT in 3–6 months\n\nWork up: nuclear thyroid scan to distinguish Graves from toxic nodule — guides treatment choice';
+  } else if(tshLow_flag&&ft4Low){
+    dx='Central Hypothyroidism';dxSub='Low TSH + low FT4 — pituitary or hypothalamic cause suspected';dxBg='#eff6ff';dxBorder='#bfdbfe';dxColor='#1d4ed8';
+    mgmtTxt='⚠️ Central (Secondary/Tertiary) Hypothyroidism\n\nRare pattern — TSH inappropriately low/normal for a low FT4. Suggests pituitary or hypothalamic disease.\n\nUrgent evaluation:\n• MRI pituitary (rule out pituitary adenoma, Sheehan syndrome, empty sella, infiltrative disease)\n• Full pituitary function testing: cortisol, IGF-1, LH/FSH, prolactin\n• Rule out: hypopituitarism, Sheehan syndrome, craniopharyngioma\n\nCRITICAL: Rule out adrenal insufficiency before starting levothyroxine — unmasking AI with T4 can precipitate adrenal crisis. Give hydrocortisone first if cortisol low/borderline.\n\nTreat with levothyroxine — target FT4 in upper half of normal range (TSH not a reliable monitoring parameter)';
+  } else {dx='Discordant/Complex Pattern';dxSub='Pattern does not fit standard interpretation — clinical correlation essential';dxBg='#f9fafb';dxBorder='#e5e7eb';dxColor='#374151';
+    mgmtTxt='⚠️ Complex or discordant thyroid function pattern.\n\nPossible causes:\n• Assay interference (biotin supplementation — stop 3–5 days before testing)\n• Heterophile antibodies\n• Drug effects (amiodarone, heparin, steroids, dopamine)\n• Recent radioiodine or thyroid surgery\n• TSH-secreting pituitary adenoma (high TSH + high FT4)\n\nActions:\n• Repeat TFT after stopping biotin for 5 days\n• Review medication list\n• Refer to endocrinology for specialist evaluation';}
+  const dx_el=document.getElementById('dx-display');
+  dx_el.style.background=dxBg;dx_el.style.borderColor=dxBorder;dx_el.style.color=dxColor;
+  document.getElementById('dx-title').textContent=dx;
+  document.getElementById('dx-sub').textContent=dxSub;
+  document.getElementById('r-tsh').textContent=tsh+' mIU/L';
+  document.getElementById('r-ft4').textContent=ft4!==null?ft4+' ng/dL':'Not entered';
+  document.getElementById('r-ft3').textContent=ft3!==null?ft3+' pg/mL':'Not entered';
+  document.getElementById('mgmt-box').textContent=mgmtTxt;
+  document.getElementById('mgmt-box').style.cssText=`background:${dxBg};border:1.5px solid ${dxBorder};color:${dxColor};border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line`;
+  lastResult=`Thyroid Function: ${dx}\nTSH: ${tsh} mIU/L${ft4!==null?' | FT4: '+ft4+' ng/dL':''}${ft3!==null?' | FT3: '+ft3+' pg/mL':''}\nCalculated at rxmedcalc.com/medical-calculators/tsh-interpreter`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('tsh_calc',{tsh,dx});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🦋 Thyroid Function\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['tsh','ft4','ft3'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>

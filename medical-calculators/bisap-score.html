@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="bisap-score">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BISAP Score Calculator | Pancreatitis Severity | Mortality Prediction | RxMedCalc</title>
+<meta name="description" content="Free BISAP (Bedside Index of Severity in Acute Pancreatitis) score calculator. Predict in-hospital mortality, organ failure, and need for ICU care in acute pancreatitis within 24 hours of admission. Includes Revised Atlanta Classification, management guidance, and CTSI comparison. Used by gastroenterologists and emergency physicians worldwide."/>
+<meta name="keywords" content="BISAP score calculator, pancreatitis severity score, BISAP pancreatitis, acute pancreatitis severity, pancreatitis mortality calculator, BISAP score interpretation, pancreatitis ICU criteria, Revised Atlanta Classification, pancreatitis CTSI, acute pancreatitis prognosis"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/bisap-score"/>
+<meta property="og:title" content="BISAP Score Calculator | Pancreatitis Severity | RxMedCalc"/>
+<meta property="og:description" content="Calculate BISAP score for acute pancreatitis severity. Mortality prediction, ICU criteria, Revised Atlanta Classification. Free for gastroenterologists."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/bisap-score"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a0f10 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(251,146,60,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(251,146,60,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(251,146,60,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(251,146,60,0.15);border:1px solid rgba(251,146,60,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#fdba74;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#fb923c}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#f97316;border-radius:2px;flex-shrink:0}
+.calc-sub{font-size:0.8rem;color:#6b7280;margin-bottom:24px}
+.criteria-list{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.crit{display:flex;align-items:flex-start;gap:14px;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px 16px;cursor:pointer;transition:all 0.2s;background:#f9fafb}
+.crit.sel{background:#fff7ed;border-color:#fed7aa}
+.crit-letter{width:32px;height:32px;border-radius:8px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85rem;color:#6b7280;flex-shrink:0;transition:all 0.2s}
+.crit.sel .crit-letter{background:#f97316;color:#fff}
+.crit-text{flex:1}
+.crit-name{font-size:0.9rem;font-weight:700;color:#0d1b2a}
+.crit-detail{font-size:0.75rem;color:#6b7280;margin-top:2px;line-height:1.5}
+.crit-pt{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#d1d5db;flex-shrink:0}
+.crit.sel .crit-pt{color:#f97316}
+.running-total{background:linear-gradient(135deg,#fff7ed,#fff);border:1.5px solid #fed7aa;border-radius:14px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.rt-label{font-size:0.8rem;font-weight:600;color:#6b7280}
+.rt-val{font-family:'Fraunces',Georgia,serif;font-size:2.5rem;font-weight:900;color:#f97316}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#f97316,#ea580c);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(249,115,22,0.3)}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(249,115,22,0.4)}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.score-display{text-align:center;margin-bottom:20px}
+.score-big{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;color:#f97316;line-height:1}
+.score-badge{display:inline-block;padding:7px 24px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-top:10px}
+.b-low{background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0}
+.b-mod{background:#fffbeb;color:#d97706;border:1.5px solid #fde68a}
+.b-high{background:#fff7ed;color:#ea580c;border:1.5px solid #fed7aa}
+.b-crit{background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#fff7ed;border-color:#fed7aa}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a}
+.rbox.hi .rval{color:#f97316}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.mgmt-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#f97316;color:#f97316}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#f97316;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#f97316;font-size:0.8rem}
+.bisap-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:14px 0}
+.bisap-table th{background:#fff7ed;color:#9a3412;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;border-bottom:2px solid #fed7aa}
+.bisap-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#f97316;background:#fff7ed;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>BISAP Score</span></nav>
+    <div class="page-eyebrow">🔥 Gastroenterology · Pancreatitis</div>
+    <h1>BISAP Score<br><em>Calculator</em></h1>
+    <p class="page-sub">Bedside Index of Severity in Acute Pancreatitis — predict in-hospital mortality and organ failure risk within 24 hours of admission. Guides ICU admission, fluid resuscitation intensity, and early intervention decisions.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 5 Bedside Criteria</span>
+      <span class="hbadge">✓ Mortality Prediction</span>
+      <span class="hbadge">✓ Revised Atlanta Classification</span>
+      <span class="hbadge">✓ Fluid Resuscitation Guide</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">BISAP Score</div>
+    <div class="calc-sub">Assess within first 24 hours of hospital admission. Each criterion = 1 point. Maximum score 5.</div>
+    <div class="criteria-list" id="criteria-list"></div>
+    <div class="running-total">
+      <span class="rt-label">BISAP Score</span>
+      <span class="rt-val" id="rt-val">0</span>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Calculate Pancreatitis Severity →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-display">
+        <div class="score-big" id="score-big">0</div>
+        <div style="font-size:0.9rem;color:#6b7280;margin-top:4px">BISAP Score (max 5)</div>
+        <div class="score-badge" id="score-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">BISAP Score</div><div class="rval" id="r-score">—</div><div class="runit">/ 5</div></div>
+        <div class="rbox"><div class="rlabel">In-Hospital Mortality</div><div class="rval" id="r-mort">—</div><div class="runit">%</div></div>
+        <div class="rbox"><div class="rlabel">Care Level</div><div class="rval" id="r-care" style="font-size:0.9rem">—</div><div class="runit">recommended</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>BISAP Score — Pancreatitis Severity Guide</h2>
+    <p>The BISAP (Bedside Index of Severity in Acute Pancreatitis) score was developed by Wu et al. (2008) from a prospective study of 17,992 hospitalised pancreatitis patients in the United States. It was designed as a simple five-point bedside score calculable within 24 hours of admission — without requiring CT imaging or complex scoring algorithms — to predict in-hospital mortality from acute pancreatitis. It outperforms the Ranson score in terms of bedside applicability while achieving comparable discriminative accuracy.</p>
+    <table class="bisap-table">
+      <thead><tr><th>BISAP Score</th><th>In-Hospital Mortality</th><th>Organ Failure Risk</th><th>Severity Class</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>&lt;1%</td><td>&lt;2%</td><td>Mild</td></tr>
+        <tr><td>1</td><td>~1%</td><td>~5%</td><td>Mild</td></tr>
+        <tr><td>2</td><td>~3%</td><td>~10%</td><td>Moderate</td></tr>
+        <tr><td>3</td><td>~10%</td><td>~25%</td><td>Severe</td></tr>
+        <tr><td>4</td><td>~20–30%</td><td>~40%</td><td>Severe</td></tr>
+        <tr><td>5</td><td>~50%</td><td>~50%+</td><td>Critical</td></tr>
+      </tbody>
+    </table>
+    <h3>Revised Atlanta Classification (2012) — Severity Categories</h3>
+    <ul>
+      <li><strong>Mild AP:</strong> No organ failure, no local or systemic complications. Usually self-limited. 30% of cases. Mortality &lt;1%. Treatment: supportive — aggressive early IV fluid resuscitation, analgesia, early oral feeding when tolerated</li>
+      <li><strong>Moderately Severe AP:</strong> Transient organ failure (&lt;48h) and/or local complications (acute peripancreatic fluid collection, pancreatic necrosis) without persistent organ failure. HDU/step-down care. Mortality 8%</li>
+      <li><strong>Severe AP:</strong> Persistent organ failure (&gt;48h) in one or more organ systems (respiratory, renal, cardiovascular). ICU admission required. Mortality 30–50%</li>
+    </ul>
+    <h3>Fluid Resuscitation in Acute Pancreatitis</h3>
+    <p>Early aggressive IV fluid resuscitation within the first 24 hours is the cornerstone of AP management. The ACG 2013 and AGA 2024 guidelines recommend:</p>
+    <ul>
+      <li><strong>Fluid choice:</strong> Lactated Ringer's solution (LR) preferred over normal saline — reduces SIRS incidence and improves outcomes (WATERFALL trial 2022, Chen et al.)</li>
+      <li><strong>Rate:</strong> 250–500 mL/hr for first 12–24 hours in non-cardiac patients. Goal-directed resuscitation targeting: urine output &gt;0.5 mL/kg/hr, HR &lt;100, MAP &gt;65 mmHg, haematocrit 35–44%</li>
+      <li><strong>Reassess at 6 and 24 hours:</strong> Decrease rate if haematocrit falling, BUN falling, adequate urine output. Avoid over-resuscitation — associated with abdominal compartment syndrome</li>
+      <li><strong>Nutritional support:</strong> Oral or enteral nutrition as early as tolerated. Early enteral feeding (within 24 hours) via nasogastric or nasojejunal route preferred in severe AP — reduces infections and mortality vs parenteral nutrition</li>
+    </ul>
+    <h3>Common Causes of Acute Pancreatitis — Memory Aid "I GET SMASHED"</h3>
+    <ul>
+      <li><strong>I</strong>diopathic (15–25%)</li>
+      <li><strong>G</strong>allstones (40–50% — most common in South Asia and women)</li>
+      <li><strong>E</strong>thanol/alcohol (30% — most common in Western countries)</li>
+      <li><strong>T</strong>rauma (blunt abdominal injury)</li>
+      <li><strong>S</strong>teroids, <strong>M</strong>umps/infection, <strong>A</strong>utoimmune (IgG4 pancreatitis)</li>
+      <li><strong>S</strong>corpion sting (relevant in India — Mesobuthus tamulus), <strong>H</strong>ypertriglyceridaemia (&gt;1000 mg/dL), <strong>E</strong>RCP (post-ERCP pancreatitis ~3%), <strong>D</strong>rugs (azathioprine, didanosine, valproate)</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Organ failure in severe pancreatitis</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Fluid resuscitation targets</div></div></a>
+      <a href="/medical-calculators/holliday-segar" class="related-card"><span class="rc-icon">💧</span><div><div class="rc-title">IV Fluid Rate</div><div class="rc-desc">Maintenance fluid calculation</div></div></a>
+      <a href="/medical-calculators/fena-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">FENa Calculator</div><div class="rc-desc">AKI in severe pancreatitis</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> BISAP is an early severity prediction tool and should not replace comprehensive clinical assessment. CT severity index (CTSI/MRSA) provides additional morphological information for pancreatic necrosis assessment. Management of severe acute pancreatitis requires a multidisciplinary team including gastroenterology, surgery, critical care, and interventional radiology.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+const CRITERIA=[
+  {l:'B',name:'BUN >25 mg/dL (>8.9 mmol/L)',detail:'Blood urea nitrogen elevated above 25 mg/dL on admission labs'},
+  {l:'I',name:'Impaired Mental Status',detail:'GCS <15, confusion, disorientation, lethargy, or somnolence'},
+  {l:'S',name:'SIRS (≥2 of 4 criteria)',detail:'Temperature >38.3°C or <36°C, HR >90, RR >20, WBC >12,000 or <4,000/µL'},
+  {l:'A',name:'Age >60 years',detail:'Patient age greater than 60 years'},
+  {l:'P',name:'Pleural Effusion',detail:'Pleural effusion on CXR, CT, or ultrasound'},
+];
+let sel=new Set();let lastResult=null;
+document.getElementById('criteria-list').innerHTML=CRITERIA.map((c,i)=>`
+  <div class="crit" id="cr${i}" onclick="toggle(${i})">
+    <div class="crit-letter" id="cl${i}">${c.l}</div>
+    <div class="crit-text">
+      <div class="crit-name">${c.name}</div>
+      <div class="crit-detail">${c.detail}</div>
+    </div>
+    <div class="crit-pt">+1</div>
+  </div>`).join('');
+function toggle(i){
+  const el=document.getElementById('cr'+i);
+  if(sel.has(i)){sel.delete(i);el.classList.remove('sel')}else{sel.add(i);el.classList.add('sel')}
+  document.getElementById('rt-val').textContent=sel.size;
+}
+const MORT=['<1','~1','~3','~10','~20–30','~50'];
+const CARE=['General ward','General ward','HDU / close monitoring','ICU admission','ICU','ICU + Specialist'];
+function calculate(){
+  const s=sel.size;
+  document.getElementById('score-big').textContent=s;
+  document.getElementById('r-score').textContent=s+'/5';
+  document.getElementById('r-mort').textContent=MORT[s]+'%';
+  document.getElementById('r-care').textContent=CARE[s];
+  const badge=document.getElementById('score-badge');
+  const mgmt=document.getElementById('mgmt-box');
+  let bCls,bTxt,mStyle,mTxt;
+  if(s<=1){bCls='b-low';bTxt='Mild — Low Risk';mStyle='background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534';
+    mTxt='✅ BISAP '+s+' — Mild acute pancreatitis (predicted mortality <1%).\n\nManagement:\n• General ward admission — standard monitoring\n• Aggressive early IV fluid: Lactated Ringer\'s 250–500 mL/hr × 24h (preferred over NS)\n• Goal urine output >0.5 mL/kg/hr; HR <100\n• Analgesia: IV paracetamol ± IV tramadol. NSAIDs relatively contraindicated\n• Oral feeding as tolerated (low-fat, soft diet) — do not fast\n• NPO only if nausea/vomiting — consider nasogastric if >48h\n• Treat underlying cause: gallstones (ERCP if cholangitis/biliary obstruction), alcohol cessation\n• Serial amylase/lipase, CRP — reassess severity at 48h';}
+  else if(s===2){bCls='b-mod';bTxt='Moderate — Increased Risk';mStyle='background:#fffbeb;border:1.5px solid #fde68a;color:#92400e';
+    mTxt='⚠️ BISAP 2 — Moderate severity (mortality ~3%, organ failure risk ~10%).\n\nManagement:\n• HDU / step-down admission — q4h vital signs, fluid balance\n• IV Lactated Ringer\'s 250–500 mL/hr — reassess at 6 and 24 hours\n• CRP and repeat bloods at 24h and 48h\n• CT abdomen with contrast at 48–72h if clinical deterioration or diagnosis uncertain\n• Analgesia: IV paracetamol + patient-controlled analgesia or IV morphine titrated\n• Early dietetics — aim enteral feeding within 24–48h if not tolerating oral\n• Gastroenterology review\n• Reassess severity at 48h using clinical + radiological criteria';}
+  else{bCls=s>=4?'b-crit':'b-high';bTxt=s>=4?'Critical — ICU':'Severe — ICU Required';mStyle=s>=4?'background:#fef2f2;border:2px solid #dc2626;color:#7f1d1d':'background:#fff7ed;border:1.5px solid #fed7aa;color:#9a3412';
+    mTxt=`🚨 BISAP ${s} — ${s>=4?'Critical':'Severe'} pancreatitis (mortality ${MORT[s]}%, organ failure ${s>=4?'~40–50%':'~25%'}).\n\nICU admission required. Immediate actions:\n• ICU/HDU — continuous monitoring, arterial line, central venous access\n• IV LR at 250–500 mL/hr — goal-directed (target UO >0.5 mL/kg/hr, HR <100, Hct 35–44%)\n• Vasopressors if MAP <65 despite fluids (noradrenaline first-line)\n• Early enteral nutrition: nasojejunal feeding within 24h preferred — reduces infectious complications\n• CT abdomen + pelvis (CECT) at 48–72h — assess for pancreatic necrosis (CTSI)\n• Antibiotics ONLY if infected necrosis confirmed/suspected (aspirate culture, fever >7d in necrosis) — prophylactic antibiotics NOT recommended\n• ERCP within 24h if concomitant cholangitis (fever, jaundice, sepsis)\n• Surgical/interventional radiology referral for walled-off necrosis (typically delayed >4 weeks)\n• Daily monitoring: ABG, lactate, electrolytes, renal function, coagulation`;}
+  badge.textContent=bTxt;badge.className='score-badge '+bCls;
+  mgmt.textContent=mTxt;mgmt.style.cssText=mStyle+';border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line';
+  lastResult=`BISAP Score: ${s}/5 — ${bTxt}\nMortality: ${MORT[s]}%\nCriteria: ${Array.from(sel).map(i=>CRITERIA[i].l).join(', ')||'None'}\nCalculated at rxmedcalc.com/medical-calculators/bisap-score`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('bisap_calc',{score:s});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🔥 BISAP Pancreatitis\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){sel.clear();CRITERIA.forEach((_,i)=>document.getElementById('cr'+i).classList.remove('sel'));document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
+</script>
+</body>
+</html>
