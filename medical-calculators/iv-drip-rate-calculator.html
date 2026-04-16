@@ -1,1040 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-tool="iv-calc">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="/assets/shared.css"/>
-<!-- ═══ PRIMARY SEO ═══ -->
-<title>IV Drip Rate Calculator | Drops Per Minute & mL/hr | Free Online Tool</title>
-<meta name="description" content="Free IV drip rate calculator for nurses and doctors. Calculate drops per minute (dpm), mL per hour, and infusion time. Supports macro (10, 15, 20 dpm) and micro (60 dpm) drip sets. Instant results — no login required.">
-<meta name="keywords" content="IV drip rate calculator, drops per minute calculator, IV flow rate calculator, infusion rate calculator, gtts per minute, mL per hour calculator, drip factor calculator, IV fluid calculator, nursing drip rate, intravenous infusion calculator, macro drip micro drip, IV rate formula, fluid infusion calculator India">
-<meta name="author" content="Medical Calculators">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>IV Drip Rate Calculator | Drops Per Minute & mL/hr | RxMedCalc</title>
+<meta name="description" content="Free IV drip rate calculator. Calculate drops per minute (dpm), mL per hour, and infusion time. Supports macro and micro drip sets.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator">
 
-<!-- ═══ OPEN GRAPH ═══ -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="IV Drip Rate Calculator — Drops Per Minute & mL/hr">
-<meta property="og:description" content="Calculate IV drip rates instantly. Drops per minute, mL/hour, and infusion time. For nurses, doctors & medical students. Free, fast, mobile-friendly.">
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator">
-<meta property="og:image" content="https://rxmedcalc.com/medical-calculators/og-iv-drip.png">
-<meta property="og:site_name" content="RxMedCalc">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="IV Drip Rate Calculator | Free Online Tool">
-<meta name="twitter:description" content="Instantly calculate IV drops per minute, mL/hr, and infusion time. Supports macro & micro drip sets.">
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 
-<!-- ═══ SCHEMA.ORG ═══ -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"MedicalWebPage",
-      "@id":"https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator#webpage",
-      "url":"https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator",
-      "name":"IV Drip Rate Calculator – Drops Per Minute & mL/hr",
-      "description":"Free online IV drip rate calculator. Calculate drops per minute (gtts/min), mL/hour, and total infusion time for any IV fluid order.",
-      "inLanguage":"en",
-      "isPartOf":{"@id":"https://rxmedcalc.com/medical-calculators/#website"},
-      "about":{"@type":"MedicalProcedure","name":"Intravenous Infusion","procedureType":"https://schema.org/TherapeuticProcedure"},
-      "audience":{"@type":"MedicalAudience","audienceType":"Nurse, Physician, Medical Student"},
-      "medicalAudience":{"@type":"MedicalAudience","audienceType":"Clinician"},
-      "dateModified":"2025-01-01"
-    },
-    {
-      "@type":"BreadcrumbList",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/medical-calculators/"},
-        {"@type":"ListItem","position":2,"name":"IV Drip Rate Calculator","item":"https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator"}
-      ]
-    },
-    {
-      "@type":"SoftwareApplication",
-      "name":"IV Drip Rate Calculator",
-      "applicationCategory":"MedicalApplication",
-      "operatingSystem":"Any",
-      "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},
-      "url":"https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator"
-    },
-    {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {
-          "@type":"Question",
-          "name":"What is the formula for IV drip rate?",
-          "acceptedAnswer":{"@type":"Answer","text":"IV drip rate (drops/min) = [Volume (mL) × Drip factor (gtts/mL)] ÷ Time (minutes). For example, 500 mL over 4 hours with a 15 gtts/mL set = (500 × 15) ÷ 240 = 31 drops/min."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is the drip factor for a macro drip set?",
-          "acceptedAnswer":{"@type":"Answer","text":"Macro drip sets come in three standard drip factors: 10 gtts/mL, 15 gtts/mL, and 20 gtts/mL. The most common in India is 15 gtts/mL (standard IV set). Micro drip sets deliver 60 gtts/mL and are used for paediatric patients or when precise small volumes are needed."}
-        },
-        {
-          "@type":"Question",
-          "name":"How do you calculate mL per hour for IV infusion?",
-          "acceptedAnswer":{"@type":"Answer","text":"mL/hour = Total volume (mL) ÷ Total time (hours). For example, 1000 mL over 8 hours = 1000 ÷ 8 = 125 mL/hour."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is the difference between macro drip and micro drip?",
-          "acceptedAnswer":{"@type":"Answer","text":"Macro drip sets deliver 10, 15, or 20 drops per mL and are used for adult patients requiring standard fluid administration. Micro drip (mini drip) sets deliver 60 drops per mL and are used for paediatric patients, critical care, or when small precise volumes must be infused slowly."}
-        },
-        {
-          "@type":"Question",
-          "name":"How many drops per minute for 1 litre in 8 hours?",
-          "acceptedAnswer":{"@type":"Answer","text":"Using a 15 gtts/mL set: (1000 mL × 15) ÷ (8 × 60) = 15000 ÷ 480 ≈ 31 drops per minute. Using a 20 gtts/mL set: (1000 × 20) ÷ 480 ≈ 42 drops per minute."}
-        },
-        {
-          "@type":"Question",
-          "name":"Can nurses use this IV drip rate calculator?",
-          "acceptedAnswer":{"@type":"Answer","text":"Yes. This calculator is designed for nurses, doctors, paramedics, and medical students. It calculates drops per minute, mL per hour, and total infusion time. Always verify results with your clinical protocol and institutional guidelines."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is gtts/min in IV therapy?",
-          "acceptedAnswer":{"@type":"Answer","text":"gtts/min stands for 'guttae per minute', which is the Latin term for drops per minute. It is the standard unit used in IV drip rate calculations. The drip factor of the IV set (10, 15, 20, or 60 gtts/mL) determines how many drops equal one millilitre."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is a normal IV drip rate for adults?",
-          "acceptedAnswer":{"@type":"Answer","text":"A typical adult maintenance IV rate is 100–125 mL/hour (roughly 25–42 drops/min with a 15 gtts/mL set). Resuscitation rates can be 500–1000 mL over 15–30 minutes. The correct rate depends on the clinical indication, patient weight, fluid type, and physician order."}
-        }
-      ]
-    }
-  ]
-}
-</script>
-
-<!-- ═══ GOOGLE ADSENSE ═══ -->
-<!-- ═══ UMAMI ANALYTICS ═══ -->
-<script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR-UMAMI-WEBSITE-ID"></script>
-
-<!-- ═══ PRELOAD FONTS ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet" />
 
 <style>
-/* ═══════════════════════════════════════════
-   DESIGN DIRECTION: Clinical precision meets
-   modern dashboard — deep navy + electric cyan
-   with monospaced result display for authority
-═══════════════════════════════════════════ */
-:root{
-  --navy:#0b1628;
-  --navy2:#111e35;
-  --navy3:#1a2d4a;
-  --cyan:#00d4ff;
-  --cyan2:#00a8cc;
-  --amber:#f0a500;
-  --green:#22d08a;
-  --red:#ff5a5a;
-  --txt:#e8f0fe;
-  --txt2:#8fa8c8;
-  --card:#131f35;
-  --border:#1e3050;
-  --r:12px;
-  --shadow:0 4px 24px rgba(0,0,0,.4);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  font-family:'Sora',system-ui,sans-serif;
-  background:var(--navy);
-  color:var(--txt);
-  min-height:100vh;
-  line-height:1.6;
-}
+  :root {
+    --bg: #eef2f7; --surface: #ffffff; --surface2: #f5f8fc;
+    --border: #dce4ef; --primary: #1a5fa8; --primary-light: #2b7de9; --primary-dark: #0d3d72;
+    --text: #0f1e33; --text-muted: #5a6a82; --text-light: #8fa0b8;
+    --radius: 14px; --radius-sm: 8px;
+    --shadow: 0 2px 16px rgba(15,30,51,.09);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { 
+    font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; 
+    overflow-wrap: break-word; word-wrap: break-word; 
+  }
 
-/* ── HEADER ── */
-header{
-  background:linear-gradient(135deg,var(--navy2) 0%,var(--navy3) 100%);
-  border-bottom:1px solid var(--border);
-  padding:20px 0 0;
-}
-.header-inner{max-width:860px;margin:0 auto;padding:0 20px}
-nav{display:flex;align-items:center;gap:8px;font-size:.75rem;color:var(--txt2);margin-bottom:18px;flex-wrap:wrap}
-nav a{color:var(--cyan);text-decoration:none}
-nav a:hover{text-decoration:underline}
-nav span{color:var(--txt2)}
-h1{
-  font-size:clamp(1.4rem,4vw,2rem);
-  font-weight:700;
-  line-height:1.2;
-  color:#fff;
-  margin-bottom:8px;
-}
-h1 span{color:var(--cyan)}
-.tagline{font-size:.9rem;color:var(--txt2);margin-bottom:20px}
-.badge-row{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:20px}
-.badge{
-  background:rgba(0,212,255,.1);
-  border:1px solid rgba(0,212,255,.25);
-  color:var(--cyan);
-  font-size:.7rem;
-  font-weight:600;
-  padding:3px 10px;
-  border-radius:20px;
-  letter-spacing:.04em;
-}
+  /* HEADER */
+  .topbar { background: var(--primary-dark); color: #fff; padding: 10px 20px; font-size: .82rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+  .topbar a { color: #93c5fd; text-decoration: none; }
+  .breadcrumb { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .breadcrumb span { color: #64748b; }
+  
+  .hero { 
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1a5fa8 55%, #1d7fc4 100%); 
+    color: #fff; padding: 48px 20px 56px; text-align: center; position: relative; overflow: hidden; 
+  }
+  .hero-badge { display: inline-block; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+  .hero p { font-size: clamp(.95rem, 2vw, 1.1rem); color: rgba(255,255,255,.82); max-width: 600px; margin: 0 auto 20px; }
 
-/* ── MAIN LAYOUT ── */
-main{max-width:860px;margin:0 auto;padding:28px 20px 60px}
+  /* CARDS */
+  .page { max-width: 920px; margin: -20px auto 0; padding: 0 16px 64px; position: relative; z-index: 10; }
+  .card { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); padding: 28px; margin-bottom: 24px; }
+  .card-title { font-size: 1.1rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .card-title::before { content: ''; display: block; width: 4px; height: 18px; background: var(--primary-light); border-radius: 4px; }
 
-/* ── AD SLOT ── */
-.ad-slot{
-  background:var(--card);
-  border:1px dashed var(--border);
-  border-radius:var(--r);
-  min-height:90px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:28px;
-  overflow:hidden;
-}
+  /* TABS */
+  .tabs { display: flex; gap: 4px; background: var(--surface2); border-radius: var(--radius-sm); padding: 4px; margin-bottom: 24px; flex-wrap: wrap; }
+  .tab { flex: 1; padding: 10px; border: none; border-radius: 6px; background: transparent; font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: inherit; min-width: 100px; }
+  .tab.active { background: var(--primary); color: #fff; }
 
-/* ── CALCULATOR CARD ── */
-.calc-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:var(--r);
-  padding:28px;
-  margin-bottom:24px;
-  box-shadow:var(--shadow);
-}
-.calc-card h2{
-  font-size:1rem;
-  font-weight:600;
-  color:var(--cyan);
-  margin-bottom:20px;
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.calc-card h2::before{
-  content:'';
-  display:block;
-  width:3px;height:18px;
-  background:var(--cyan);
-  border-radius:2px;
-}
+  /* FORM GRID */
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;}
+  @media(max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field label { font-size: .84rem; font-weight: 600; color: var(--text-muted); }
+  .field input { background: var(--surface2); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 11px 14px; font-size: .97rem; font-family: 'JetBrains Mono', monospace; color: var(--text); outline: none; width: 100%; }
+  .field input:focus { border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(43,125,233,.12); }
+  
+  /* DRIP CHIPS */
+  .drip-chips { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 5px; }
+  .drip-chip { background: var(--surface2); border: 1.5px solid var(--border); padding: 8px; border-radius: var(--radius-sm); cursor: pointer; text-align: center; transition: 0.2s; }
+  .drip-chip.sel { border-color: var(--primary); background: #eff6ff; }
+  .drip-chip span { display: block; font-size: 0.9rem; font-weight: 700; color: var(--text); }
+  .drip-chip small { font-size: 0.7rem; color: var(--text-light); }
 
-/* ── TABS ── */
-.tabs{display:flex;gap:4px;background:var(--navy2);border-radius:8px;padding:4px;margin-bottom:24px}
-.tab{
-  flex:1;
-  padding:8px;
-  border:none;
-  border-radius:6px;
-  background:transparent;
-  color:var(--txt2);
-  font-family:inherit;
-  font-size:.8rem;
-  font-weight:600;
-  cursor:pointer;
-  transition:all .2s;
-  text-align:center;
-}
-.tab.active{background:var(--cyan);color:var(--navy);box-shadow:0 2px 8px rgba(0,212,255,.3)}
-.tab:hover:not(.active){color:var(--txt);background:var(--navy3)}
+  /* RESULTS */
+  .result-panel { background: linear-gradient(135deg, #f0f7ff, #e8f4ff); border: 2px solid #bfdbfe; border-radius: var(--radius); padding: 28px; text-align: center; margin-top: 24px; display: none; }
+  .result-panel.show { display: block; }
+  .result-label { font-size: .82rem; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+  .result-value { font-family: 'JetBrains Mono', monospace; font-size: 3.2rem; font-weight: 800; color: var(--primary-dark); line-height: 1; margin-bottom: 4px; }
+  .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+  .mini-box { background: rgba(255,255,255,0.6); padding: 12px; border-radius: var(--radius-sm); border: 1px solid #bfdbfe; }
+  .mini-label { font-size: 0.7rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; }
+  .mini-val { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--primary); }
 
-/* ── FORM GRID ── */
-.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:500px){.field-grid{grid-template-columns:1fr}}
-.field{display:flex;flex-direction:column;gap:6px}
-.field label{font-size:.78rem;font-weight:600;color:var(--txt2);letter-spacing:.03em;text-transform:uppercase}
-.field input,.field select{
-  background:var(--navy2);
-  border:1px solid var(--border);
-  border-radius:8px;
-  color:var(--txt);
-  font-family:inherit;
-  font-size:.95rem;
-  padding:10px 14px;
-  outline:none;
-  transition:border-color .2s,box-shadow .2s;
-  width:100%;
-  -webkit-appearance:none;
-}
-.field input:focus,.field select:focus{
-  border-color:var(--cyan);
-  box-shadow:0 0 0 3px rgba(0,212,255,.15);
-}
-.field select option{background:var(--navy2);color:var(--txt)}
-.field .hint{font-size:.72rem;color:var(--txt2)}
+  .btn-calc { width: 100%; padding: 14px; background: var(--primary); border: none; border-radius: var(--radius-sm); color: #fff; font-family: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.2s; margin-top: 10px; }
+  .btn-calc:hover { background: var(--primary-dark); }
+  
+  .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; margin: 16px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th { background: var(--surface2); padding: 12px; text-align: left; font-size: 0.75rem; text-transform: uppercase; border-bottom: 2px solid var(--border); color: var(--text-muted); }
+  td { padding: 12px; border-bottom: 1px solid var(--border); }
 
-/* ── DRIP FACTOR QUICK SELECT ── */
-.drip-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
-.drip-chip{
-  background:var(--navy2);
-  border:1px solid var(--border);
-  color:var(--txt2);
-  font-size:.78rem;
-  font-weight:600;
-  padding:5px 12px;
-  border-radius:20px;
-  cursor:pointer;
-  transition:all .2s;
-}
-.drip-chip.sel{background:rgba(0,212,255,.15);border-color:var(--cyan);color:var(--cyan)}
-.drip-chip:hover:not(.sel){border-color:var(--txt2);color:var(--txt)}
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q { width: 100%; text-align: left; padding: 16px 0; font-size: .95rem; font-weight: 600; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: inherit; }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: var(--text-muted); font-size: 0.9rem; }
+  .faq-item.open .faq-a { max-height: 200px; padding-bottom: 16px; }
 
-/* ── FULL WIDTH FIELD ── */
-.field-full{display:flex;flex-direction:column;gap:6px;margin-top:16px}
-.field-full label{font-size:.78rem;font-weight:600;color:var(--txt2);letter-spacing:.03em;text-transform:uppercase}
-
-/* ── CALCULATE BTN ── */
-.btn-calc{
-  width:100%;
-  margin-top:22px;
-  padding:14px;
-  background:linear-gradient(135deg,var(--cyan) 0%,var(--cyan2) 100%);
-  border:none;
-  border-radius:var(--r);
-  color:var(--navy);
-  font-family:inherit;
-  font-size:1rem;
-  font-weight:700;
-  cursor:pointer;
-  letter-spacing:.03em;
-  transition:transform .15s,box-shadow .15s;
-  position:relative;
-  overflow:hidden;
-}
-.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,212,255,.35)}
-.btn-calc:active{transform:translateY(0)}
-
-/* ── RESULTS ── */
-#results{display:none}
-.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:16px}
-.result-box{
-  background:var(--navy2);
-  border:1px solid var(--border);
-  border-radius:var(--r);
-  padding:18px 16px;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-  transition:transform .2s;
-}
-.result-box:hover{transform:translateY(-2px)}
-.result-box.primary{border-color:var(--cyan);background:rgba(0,212,255,.06)}
-.result-box::after{
-  content:'';
-  position:absolute;
-  top:0;left:0;right:0;height:2px;
-  background:var(--border);
-}
-.result-box.primary::after{background:linear-gradient(90deg,var(--cyan),var(--cyan2))}
-.result-box.green::after{background:var(--green)}
-.result-box.amber::after{background:var(--amber)}
-.result-label{font-size:.7rem;font-weight:600;color:var(--txt2);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
-.result-val{
-  font-family:'JetBrains Mono',monospace;
-  font-size:2rem;
-  font-weight:600;
-  color:#fff;
-  line-height:1;
-}
-.result-box.primary .result-val{color:var(--cyan)}
-.result-unit{font-size:.75rem;color:var(--txt2);margin-top:4px}
-
-/* ── INFUSION CHART ── */
-.chart-label{font-size:.78rem;color:var(--txt2);margin-bottom:10px;font-weight:600}
-#infusion-bar{height:10px;background:var(--navy2);border-radius:5px;overflow:hidden;margin-bottom:4px}
-#infusion-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--cyan),var(--green));border-radius:5px;transition:width .6s ease}
-.chart-times{display:flex;justify-content:space-between;font-size:.7rem;color:var(--txt2)}
-
-/* ── WARNING BANNER ── */
-.warn-box{
-  background:rgba(240,165,0,.08);
-  border:1px solid rgba(240,165,0,.3);
-  border-radius:8px;
-  padding:12px 14px;
-  font-size:.82rem;
-  color:var(--amber);
-  margin-top:16px;
-  display:none;
-}
-.warn-box.show{display:block}
-
-/* ── RESET ── */
-.btn-reset{
-  width:100%;
-  margin-top:10px;
-  padding:10px;
-  background:transparent;
-  border:1px solid var(--border);
-  border-radius:8px;
-  color:var(--txt2);
-  font-family:inherit;
-  font-size:.85rem;
-  cursor:pointer;
-  transition:all .2s;
-}
-.btn-reset:hover{border-color:var(--txt2);color:var(--txt)}
-
-/* ── SHARE ROW ── */
-.share-row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
-.share-btn{
-  flex:1;
-  min-width:130px;
-  padding:10px;
-  border-radius:8px;
-  font-family:inherit;
-  font-size:.82rem;
-  font-weight:600;
-  cursor:pointer;
-  border:none;
-  transition:opacity .2s;
-}
-.share-btn:hover{opacity:.85}
-.whatsapp{background:#25d366;color:#fff}
-.copy-btn{background:var(--navy3);border:1px solid var(--border);color:var(--txt)}
-
-/* ── FORMULA REFERENCE ── */
-.formula-card{
-  background:var(--navy2);
-  border:1px solid var(--border);
-  border-radius:var(--r);
-  padding:20px;
-  margin-bottom:24px;
-}
-.formula-card h3{font-size:.9rem;font-weight:700;color:var(--txt);margin-bottom:14px}
-.formula-box{
-  background:var(--navy);
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:14px 16px;
-  font-family:'JetBrains Mono',monospace;
-  font-size:.85rem;
-  color:var(--cyan);
-  margin-bottom:10px;
-  line-height:1.7;
-}
-.formula-box span{color:var(--txt2)}
-
-/* ── DRIP FACTOR TABLE ── */
-.table-wrap{overflow-x:auto;margin-bottom:24px}
-table{width:100%;border-collapse:collapse;font-size:.85rem}
-th{background:var(--navy3);color:var(--txt2);font-weight:600;padding:10px 14px;text-align:left;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
-td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--txt)}
-tr:hover td{background:rgba(255,255,255,.02)}
-.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.7rem;font-weight:600}
-.tag-macro{background:rgba(0,212,255,.1);color:var(--cyan)}
-.tag-micro{background:rgba(34,208,138,.1);color:var(--green)}
-.tag-blood{background:rgba(255,90,90,.1);color:var(--red)}
-
-/* ── CONTENT SECTIONS ── */
-.content-section{margin-bottom:40px}
-.content-section h2{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:12px}
-.content-section h3{font-size:1rem;font-weight:600;color:var(--cyan);margin:18px 0 8px}
-.content-section p{font-size:.9rem;color:var(--txt2);line-height:1.75;margin-bottom:10px}
-.content-section ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
-.content-section li{
-  font-size:.88rem;color:var(--txt2);
-  padding-left:16px;position:relative;line-height:1.6;
-}
-.content-section li::before{
-  content:'→';
-  position:absolute;left:0;
-  color:var(--cyan);font-size:.8rem;
-}
-
-/* ── FAQ ── */
-.faq-item{
-  border-bottom:1px solid var(--border);
-  padding:16px 0;
-}
-.faq-q{
-  font-size:.9rem;font-weight:600;color:var(--txt);
-  cursor:pointer;
-  display:flex;justify-content:space-between;align-items:center;
-  gap:12px;
-  user-select:none;
-}
-.faq-q::after{
-  content:'＋';
-  color:var(--cyan);
-  font-size:1.1rem;
-  flex-shrink:0;
-  transition:transform .2s;
-}
-.faq-item.open .faq-q::after{transform:rotate(45deg)}
-.faq-a{
-  max-height:0;overflow:hidden;
-  transition:max-height .3s ease;
-  font-size:.86rem;color:var(--txt2);line-height:1.7;
-}
-.faq-item.open .faq-a{max-height:200px;padding-top:10px}
-
-/* ── FOOTER ── */
-footer{
-  background:var(--navy2);
-  border-top:1px solid var(--border);
-  text-align:center;
-  padding:24px 20px;
-  font-size:.8rem;
-  color:var(--txt2);
-}
-footer a{color:var(--cyan);text-decoration:none}
-footer a:hover{text-decoration:underline}
-.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:10px}
-
-/* ── UTILITY ── */
-.divider{height:1px;background:var(--border);margin:28px 0}
-.error-msg{color:var(--red);font-size:.8rem;margin-top:8px;display:none}
-.error-msg.show{display:block}
+  .disclaimer { background: #fff8ed; border: 1px solid #fde68a; border-radius: var(--radius-sm); padding: 14px 18px; font-size: .82rem; color: #92400e; margin-top: 24px; }
 </style>
 </head>
 <body>
 
-<!-- ═══ HEADER ═══ -->
-<header>
-  <div class="header-inner">
-    <nav aria-label="Breadcrumb">
-      <a href="https://rxmedcalc.com/medical-calculators/">Medical Calculators</a>
-      <span>›</span>
-      <span>IV Drip Rate Calculator</span>
-    </nav>
-    <h1>IV Drip Rate <span>Calculator</span></h1>
-    <p class="tagline">Calculate drops per minute (gtts/min), mL/hour &amp; infusion time — instantly</p>
-    <div class="badge-row">
-      <span class="badge">✓ Macro &amp; Micro Drip</span>
-      <span class="badge">✓ Bi-directional</span>
-      <span class="badge">✓ Mobile Friendly</span>
-      <span class="badge">✓ No Login</span>
-    </div>
+<nav class="topbar">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>›</span> <a href="/medical-calculators/">Calculators</a> <span>›</span> <span>IV Drip Rate</span>
   </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-badge">Nursing & Emergency</div>
+  <h1>IV Drip Rate Calculator</h1>
+  <p>Calculate drops per minute (gtts/min), mL/hour & infusion time instantly.</p>
 </header>
 
-<!-- ═══ MAIN ═══ -->
-<main>
-
-  <!-- Ad: Top Leaderboard -->
-  <div class="ad-slot" aria-label="Advertisement">
-    <ins class="adsbygoogle"
-         style="display:block;width:100%;min-height:90px"
-         data-ad-client="ca-pub-9687081664589626"
-         data-ad-slot="1111111111"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-  </div>
-
-  <!-- ═══ CALCULATOR CARD ═══ -->
-  <div class="calc-card" role="main">
-    <h2>IV Drip Rate Calculator</h2>
-
-    <!-- Mode Tabs -->
-    <div class="tabs" role="tablist" aria-label="Calculation mode">
-      <button class="tab active" role="tab" aria-selected="true"  id="tab-dpm"  onclick="switchTab('dpm')"  data-tool="iv_calc_tab_dpm">Drops per Minute</button>
-      <button class="tab"        role="tab" aria-selected="false" id="tab-mlhr" onclick="switchTab('mlhr')" data-tool="iv_calc_tab_mlhr">mL per Hour</button>
-      <button class="tab"        role="tab" aria-selected="false" id="tab-time" onclick="switchTab('time')" data-tool="iv_calc_tab_time">Infusion Time</button>
+<main class="page">
+  <section class="card">
+    <div class="card-title">Calculator</div>
+    
+    <div class="tabs">
+      <button class="tab active" id="tab-dpm" onclick="switchTab('dpm')">Drops / Min</button>
+      <button class="tab" id="tab-mlhr" onclick="switchTab('mlhr')">mL / Hour</button>
+      <button class="tab" id="tab-time" onclick="switchTab('time')">Infusion Time</button>
     </div>
 
-    <!-- ── FORM ── -->
-    <div id="form-area">
-
-      <!-- Volume -->
-      <div class="field-grid">
-        <div class="field">
-          <label for="volume">Volume to Infuse</label>
-          <input type="number" id="volume" placeholder="e.g. 500" min="1" max="10000" inputmode="decimal" aria-label="Volume in mL">
-          <span class="hint">in millilitres (mL)</span>
-        </div>
-
-        <!-- Time / Rate (depends on mode) -->
-        <div class="field" id="time-field">
-          <label for="time-hr" id="time-label">Infusion Time</label>
-          <div style="display:flex;gap:8px">
-            <input type="number" id="time-hr" placeholder="hrs" min="0" max="72" inputmode="decimal" style="flex:1" aria-label="Hours">
-            <input type="number" id="time-min" placeholder="min" min="0" max="59" inputmode="decimal" style="flex:1" aria-label="Minutes">
-          </div>
-          <span class="hint">hours &amp; minutes</span>
-        </div>
-
-        <!-- mL/hr input (hidden for mlhr tab) -->
-        <div class="field" id="rate-field" style="display:none">
-          <label for="rate-mlhr">Flow Rate</label>
-          <input type="number" id="rate-mlhr" placeholder="e.g. 125" min="1" max="1000" inputmode="decimal" aria-label="Rate in mL/hr">
-          <span class="hint">mL per hour</span>
-        </div>
+    <div class="form-grid">
+      <div class="field">
+        <label>Total Volume (mL)</label>
+        <input type="number" id="volume" placeholder="e.g. 500" oninput="calculate()">
+      </div>
+      
+      <div class="field" id="time-input-wrap">
+        <label>Infusion Time (Hours)</label>
+        <input type="number" id="hours" placeholder="e.g. 8" oninput="calculate()">
       </div>
 
-      <!-- Drip Factor -->
-      <div class="field-full" id="drip-field">
-        <label>Drip Factor (Drop Set)</label>
-        <div class="drip-chips" id="drip-chips">
-          <button class="drip-chip" onclick="setDrip(10)"  data-v="10">10 gtts/mL<br><small>Macro</small></button>
-          <button class="drip-chip sel" onclick="setDrip(15)" data-v="15">15 gtts/mL<br><small>Standard ✓</small></button>
-          <button class="drip-chip" onclick="setDrip(20)"  data-v="20">20 gtts/mL<br><small>Macro</small></button>
-          <button class="drip-chip" onclick="setDrip(60)"  data-v="60">60 gtts/mL<br><small>Micro</small></button>
-        </div>
-        <input type="hidden" id="drip-factor" value="15">
-      </div>
-
-      <!-- Error -->
-      <div class="error-msg" id="error-msg" role="alert"></div>
-
-      <button class="btn-calc" onclick="calculate()" data-tool="iv_calc_calculate" aria-label="Calculate IV drip rate">
-        ⟶ Calculate
-      </button>
-    </div>
-
-    <!-- ═══ RESULTS ═══ -->
-    <div id="results">
-      <div class="divider"></div>
-
-      <div class="result-grid" id="result-grid">
-        <!-- filled by JS -->
-      </div>
-
-      <!-- Infusion progress bar -->
-      <div id="infusion-bar-wrap" style="display:none">
-        <p class="chart-label">Infusion Timeline</p>
-        <div id="infusion-bar"><div id="infusion-fill"></div></div>
-        <div class="chart-times">
-          <span>Start</span>
-          <span id="bar-mid"></span>
-          <span id="bar-end"></span>
-        </div>
-      </div>
-
-      <!-- Warning -->
-      <div class="warn-box" id="warn-box" role="alert"></div>
-
-      <!-- Actions -->
-      <button class="btn-reset" onclick="resetCalc()" data-tool="iv_calc_reset">↺ Reset / New Calculation</button>
-
-      <div class="share-row">
-        <button class="share-btn whatsapp" onclick="shareWA()" data-tool="iv_calc_share_whatsapp">📲 Share on WhatsApp</button>
-        <button class="share-btn copy-btn" onclick="copyResult()" data-tool="iv_calc_copy">📋 Copy Result</button>
+      <div class="field" id="rate-input-wrap" style="display:none">
+        <label>Flow Rate (mL/hr)</label>
+        <input type="number" id="rate" placeholder="e.g. 125" oninput="calculate()">
       </div>
     </div>
-  </div><!-- /calc-card -->
 
-  <!-- Ad: In-content -->
-  <div class="ad-slot" aria-label="Advertisement">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9687081664589626"
-         data-ad-slot="2222222222"
-         data-ad-format="rectangle"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-  </div>
+    <div id="drip-wrap">
+      <label style="font-size: .84rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Drip Factor (gtts/mL)</label>
+      <div class="drip-chips">
+        <div class="drip-chip sel" data-v="15" onclick="setDrip(15)"><span>15 gtts/mL</span><small>Standard Adult</small></div>
+        <div class="drip-chip" data-v="20" onclick="setDrip(20)"><span>20 gtts/mL</span><small>Macro Drip</small></div>
+        <div class="drip-chip" data-v="60" onclick="setDrip(60)"><span>60 gtts/mL</span><small>Micro / Paed</small></div>
+        <div class="drip-chip" data-v="10" onclick="setDrip(10)"><span>10 gtts/mL</span><small>Blood Set</small></div>
+      </div>
+    </div>
 
-  <!-- ═══ FORMULA REFERENCE ═══ -->
-  <div class="formula-card">
-    <h3>IV Drip Rate Formulas</h3>
-    <div class="formula-box">
-      Drops/min = <span>(Volume mL × Drip Factor)</span> ÷ <span>Time in Minutes</span>
+    <div class="result-panel" id="resultPanel">
+      <div class="result-label" id="resLabel">Drops Per Minute</div>
+      <div class="result-value" id="resVal">—</div>
+      <div class="result-grid" id="resGrid"></div>
     </div>
-    <div class="formula-box">
-      mL/hour = <span>Volume mL</span> ÷ <span>Time in Hours</span>
-    </div>
-    <div class="formula-box">
-      Infusion Time (hrs) = <span>Volume mL</span> ÷ <span>mL/hour</span>
-    </div>
-  </div>
+  </section>
 
-  <!-- ═══ DRIP FACTOR TABLE ═══ -->
-  <div class="content-section">
-    <h2>Drip Factor Reference Table</h2>
-    <div class="table-wrap">
+  <section class="card">
+    <div class="card-title">Infusion Reference</div>
+    <div class="table-responsive">
       <table>
         <thead>
-          <tr><th>IV Set Type</th><th>Drip Factor</th><th>Typical Use</th><th>Category</th></tr>
+          <tr><th>Set Type</th><th>Factor</th><th>Typical Use</th></tr>
         </thead>
         <tbody>
-          <tr><td>Standard IV Set (Adult)</td><td>15 gtts/mL</td><td>Routine fluid administration, NS, RL, D5W</td><td><span class="tag tag-macro">Macro</span></td></tr>
-          <tr><td>Large-bore Gravity Set</td><td>10 gtts/mL</td><td>Rapid infusion, trauma, resuscitation</td><td><span class="tag tag-macro">Macro</span></td></tr>
-          <tr><td>Filtered IV Set</td><td>20 gtts/mL</td><td>Antibiotics, some chemotherapy agents</td><td><span class="tag tag-macro">Macro</span></td></tr>
-          <tr><td>Paediatric Burette Set</td><td>60 gtts/mL</td><td>Neonatal, paediatric ICU, precise dosing</td><td><span class="tag tag-micro">Micro</span></td></tr>
-          <tr><td>Blood &amp; Blood Products</td><td>10 gtts/mL</td><td>PRBC, FFP, platelets transfusion</td><td><span class="tag tag-blood">Blood</span></td></tr>
+          <tr><td>Standard</td><td>15 gtts/mL</td><td>Routine IV fluids</td></tr>
+          <tr><td>Macro</td><td>10-20 gtts/mL</td><td>Rapid infusion</td></tr>
+          <tr><td>Micro</td><td>60 gtts/mL</td><td>Neonatal / Paeds</td></tr>
         </tbody>
       </table>
     </div>
+  </section>
+
+  <section class="card">
+    <div class="card-title">Frequently Asked Questions</div>
+    <div id="faq-list"></div>
+  </section>
+
+  <div class="disclaimer">
+    ⚠️ <strong>Clinical Disclaimer:</strong> Always verify drip rates manually. This tool is for clinical guidance only.
   </div>
-
-  <!-- ═══ CONTENT: HOW TO USE ═══ -->
-  <div class="content-section">
-    <h2>How to Use This IV Drip Rate Calculator</h2>
-    <p>This free online IV drip rate calculator helps nurses, doctors, paramedics, and medical students quickly determine the correct rate for intravenous fluid administration. The calculator works in three modes:</p>
-
-    <h3>Mode 1: Drops per Minute (gtts/min)</h3>
-    <p>Enter the total volume to be infused (in mL), the total time available (hours and minutes), and select the drip factor of your IV giving set. The calculator will output the required drops per minute, which you then count visually or set on the roller clamp.</p>
-
-    <h3>Mode 2: mL per Hour</h3>
-    <p>Enter the total volume and infusion time to get the flow rate in mL/hour. This value is used to program infusion pumps and syringe drivers. Most modern infusion pumps require this input.</p>
-
-    <h3>Mode 3: Infusion Time</h3>
-    <p>Enter the total volume and the available flow rate (mL/hr) to calculate how long the infusion will take. Useful for pre-planning and patient counselling — for example, telling a patient how many hours they will need to stay for IV therapy.</p>
-  </div>
-
-  <!-- Ad: Mid-content -->
-  <div class="ad-slot" aria-label="Advertisement">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9687081664589626"
-         data-ad-slot="3333333333"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-  </div>
-
-  <!-- ═══ CONTENT: CLINICAL GUIDE ═══ -->
-  <div class="content-section">
-    <h2>Complete Guide to IV Drip Rate Calculation</h2>
-
-    <h3>The Basic Formula Explained</h3>
-    <p>The IV drip rate formula is one of the most fundamental calculations in clinical nursing. The formula is: <strong>Drops per minute = (Volume in mL × Drip factor in gtts/mL) ÷ Time in minutes</strong>. Every element of this formula matters:</p>
-    <ul>
-      <li><strong>Volume:</strong> The total amount of IV fluid ordered, in millilitres (mL). Common orders are 100 mL, 250 mL, 500 mL, and 1000 mL (1 litre).</li>
-      <li><strong>Drip factor:</strong> The number of drops per mL delivered by your specific giving set. This is printed on the IV set packaging and must match exactly.</li>
-      <li><strong>Time:</strong> Must always be converted to minutes. 1 hour = 60 minutes; 8 hours = 480 minutes.</li>
-    </ul>
-
-    <h3>Common IV Drip Rate Examples</h3>
-    <p>Here are worked examples for the most common clinical scenarios in Indian hospitals:</p>
-    <ul>
-      <li><strong>500 mL NS over 4 hours (15 gtts/mL):</strong> (500 × 15) ÷ 240 = 31 drops/min, 125 mL/hr</li>
-      <li><strong>1 litre RL over 8 hours (15 gtts/mL):</strong> (1000 × 15) ÷ 480 = 31 drops/min, 125 mL/hr</li>
-      <li><strong>100 mL antibiotic over 30 min (20 gtts/mL):</strong> (100 × 20) ÷ 30 = 67 drops/min, 200 mL/hr</li>
-      <li><strong>250 mL D5W over 6 hours (10 gtts/mL):</strong> (250 × 10) ÷ 360 = 7 drops/min, 42 mL/hr</li>
-      <li><strong>Paediatric — 50 mL over 1 hour (60 gtts/mL):</strong> (50 × 60) ÷ 60 = 50 drops/min, 50 mL/hr</li>
-    </ul>
-
-    <h3>Macro Drip vs Micro Drip Sets</h3>
-    <p>Choosing the correct IV giving set is as important as calculating the correct rate. Macro drip sets (10, 15, or 20 gtts/mL) are the standard for adult patients requiring routine or moderate-to-large fluid volumes. The 15 gtts/mL set is the most widely used in Indian government and private hospitals.</p>
-    <p>Micro drip sets (also called mini drip or paediatric sets) deliver 60 drops per mL. They are used whenever precise, slow infusion is required — particularly in neonatal units, paediatric ICUs, and for drugs such as potassium chloride, insulin infusions, and other high-alert medications.</p>
-
-    <h3>Tips to Count Drops Accurately</h3>
-    <ul>
-      <li>Use a watch with a second hand or a phone timer — count drops for a full 60 seconds for accuracy.</li>
-      <li>Adjust the roller clamp slowly. One full roll can change the rate significantly.</li>
-      <li>Recount after adjusting. Always verify at least twice before leaving the bedside.</li>
-      <li>Drops may slow as the bag empties due to decreasing hydrostatic pressure — recheck at 50% infused.</li>
-      <li>IV pump infusions bypass manual counting; use the mL/hr value from this calculator to programme the device.</li>
-    </ul>
-
-    <h3>When to Use an Infusion Pump</h3>
-    <p>Manual gravity drip is adequate for most routine fluid replacement in stable patients. However, infusion pumps (volumetric pumps or syringe drivers) are mandatory for: vasoactive drugs (dopamine, noradrenaline), insulin infusions, total parenteral nutrition (TPN), paediatric patients, concentrated electrolyte solutions, post-operative care, and any infusion where a rate error could be life-threatening.</p>
-
-    <h3>Safety Considerations in IV Therapy</h3>
-    <ul>
-      <li>Always verify the IV order — fluid type, volume, rate, and additives — against the medication chart before starting.</li>
-      <li>Confirm the drip factor of the giving set in your hand before calculating. Sets from different manufacturers may vary.</li>
-      <li>Round to the nearest whole drop per minute — you cannot deliver a fraction of a drop with gravity infusion.</li>
-      <li>Document the start time, rate set, and first verification check in the nursing notes.</li>
-      <li>Monitor infusion sites regularly for signs of infiltration, phlebitis, or extravasation.</li>
-      <li>This calculator is a clinical decision support tool. Always cross-check with your institution's protocols and verify with a senior colleague for critical infusions.</li>
-    </ul>
-  </div>
-
-  <!-- ═══ RELATED TOOLS ═══ -->
-  <div class="content-section">
-    <h2>Related Clinical Calculators</h2>
-    <ul>
-      <li><a href="https://rxmedcalc.com/medical-calculators/burn-calculator" style="color:var(--cyan)">Burns Fluid Calculator (Parkland Formula)</a> — fluid resuscitation for burns patients</li>
-      <li><a href="https://rxmedcalc.com/medical-calculators/egfr-calculator" style="color:var(--cyan)">eGFR Calculator</a> — adjust fluid and drug doses in CKD</li>
-      <li><a href="https://rxmedcalc.com/medical-calculators/news2" style="color:var(--cyan)">NEWS2 Score Calculator</a> — early warning score for deteriorating patients</li>
-      <li><a href="https://rxmedcalc.com/medical-calculators/arv-dose-calculator" style="color:var(--cyan)">ARV Dose Calculator</a> — anti-rabies vaccine dosing schedule</li>
-      <li><a href="https://rxmedcalc.com/medical-calculators/" style="color:var(--cyan)">All Medical Calculators →</a></li>
-    </ul>
-  </div>
-
-  <!-- ═══ FAQ ═══ -->
-  <div class="content-section">
-    <h2>Frequently Asked Questions</h2>
-    <div id="faq-container">
-      <!-- generated by JS from schema data for DRY principle -->
-    </div>
-  </div>
-
-  <!-- Ad: Bottom -->
-  <div class="ad-slot" aria-label="Advertisement">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9687081664589626"
-         data-ad-slot="4444444444"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
-  </div>
-
-  <!-- ═══ DISCLAIMER ═══ -->
-  <div style="background:rgba(240,165,0,.06);border:1px solid rgba(240,165,0,.2);border-radius:var(--r);padding:16px 18px;font-size:.8rem;color:var(--txt2);line-height:1.7">
-    <strong style="color:var(--amber)">⚠ Medical Disclaimer:</strong> This IV drip rate calculator is intended as a clinical decision support tool for qualified healthcare professionals. Results must be verified against the prescriber's order, your institution's protocols, and your clinical judgement. The authors accept no liability for errors in clinical practice arising from use of this tool. Always verify critical infusion rates with a senior clinician.
-  </div>
-
 </main>
 
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="footer-links">
-    <a href="https://rxmedcalc.com/medical-calculators/">All Calculators</a>
-    <a href="https://rxmedcalc.com/medical-calculators/curb65">CURB-65</a>
-    <a href="https://rxmedcalc.com/medical-calculators/gcs-calculator">GCS</a>
-    <a href="https://rxmedcalc.com/medical-calculators/bmi">BMI</a>
-    <a href="https://rxmedcalc.com/rabies-scheduler/">Rabies PEP</a>
-  </div>
-  <p>© 2025 RxMedCalc · Free tools for healthcare professionals worldwide · <a href="https://rxmedcalc.com/medical-calculators/">rxmedcalc.com/medical-calculators</a></p>
-</footer>
-
-<!-- ═══ JAVASCRIPT ═══ -->
 <script>
-// ── STATE ──
-let currentTab = 'dpm';
-let dripFactor = 15;
-let lastResult = null;
+  let currentMode = 'dpm';
+  let dripFactor = 15;
 
-// ── UMAMI HELPER (matches existing site pattern) ──
-function uTrack(eventName, props){
-  if(typeof umami !== 'undefined'){
-    umami.track(eventName, props);
-  }
-}
-
-// ── TAB SWITCH ──
-function switchTab(tab){
-  currentTab = tab;
-  ['dpm','mlhr','time'].forEach(t=>{
-    document.getElementById('tab-'+t).classList.toggle('active', t===tab);
-    document.getElementById('tab-'+t).setAttribute('aria-selected', t===tab);
-  });
-
-  const timeField = document.getElementById('time-field');
-  const rateField = document.getElementById('rate-field');
-  const dripField = document.getElementById('drip-field');
-  const timeLabel = document.getElementById('time-label');
-
-  if(tab==='dpm'){
-    timeField.style.display='';
-    rateField.style.display='none';
-    dripField.style.display='';
-    timeLabel.textContent='Infusion Time';
-  } else if(tab==='mlhr'){
-    timeField.style.display='';
-    rateField.style.display='none';
-    dripField.style.display='none';
-    timeLabel.textContent='Infusion Time';
-  } else {
-    timeField.style.display='none';
-    rateField.style.display='';
-    dripField.style.display='none';
-  }
-  resetDisplay();
-  uTrack('iv_calc_tab', {tab});
-}
-
-// ── DRIP FACTOR CHIPS ──
-function setDrip(val){
-  dripFactor = val;
-  document.getElementById('drip-factor').value = val;
-  document.querySelectorAll('.drip-chip').forEach(c=>{
-    c.classList.toggle('sel', parseInt(c.dataset.v)===val);
-  });
-  uTrack('iv_calc_drip_factor', {drip_factor: val});
-}
-
-// ── HELPERS ──
-function showError(msg){
-  const el = document.getElementById('error-msg');
-  el.textContent = msg;
-  el.classList.add('show');
-}
-function clearError(){
-  document.getElementById('error-msg').classList.remove('show');
-}
-function fmtTime(totalMin){
-  const h = Math.floor(totalMin/60);
-  const m = Math.round(totalMin%60);
-  if(h>0 && m>0) return h+'h '+m+'min';
-  if(h>0) return h+' hour'+(h>1?'s':'');
-  return m+' min';
-}
-
-// ── MAIN CALCULATE ──
-function calculate(){
-  clearError();
-  const vol = parseFloat(document.getElementById('volume').value);
-
-  if(!vol || vol<=0){ showError('Please enter a valid volume (mL).'); return; }
-
-  let results = [];
-  let infusionMinutes = null;
-
-  if(currentTab==='dpm'){
-    const hr  = parseFloat(document.getElementById('time-hr').value)||0;
-    const min = parseFloat(document.getElementById('time-min').value)||0;
-    const totalMin = hr*60 + min;
-    if(totalMin<=0){ showError('Please enter infusion time (hours and/or minutes).'); return; }
-    const dpm  = (vol * dripFactor) / totalMin;
-    const mlhr = (vol / totalMin) * 60;
-    infusionMinutes = totalMin;
-    results = [
-      {label:'Drops / Min',  val:Math.round(dpm),     unit:'gtts/min', cls:'primary'},
-      {label:'Flow Rate',    val:Math.round(mlhr*10)/10, unit:'mL/hour', cls:'green'},
-      {label:'Total Volume', val:vol,                  unit:'mL',       cls:''},
-      {label:'Total Time',   val:fmtTime(totalMin),    unit:'duration', cls:'amber'},
-    ];
-    lastResult = `IV Drip Rate: ${Math.round(dpm)} drops/min (${Math.round(mlhr*10)/10} mL/hr)\nVolume: ${vol} mL over ${fmtTime(totalMin)}\nDrip Factor: ${dripFactor} gtts/mL`;
-    checkWarning(Math.round(dpm), 'dpm');
-    uTrack('iv_calc_result_dpm', {dpm: Math.round(dpm), vol, time_min: totalMin, drip: dripFactor});
-
-  } else if(currentTab==='mlhr'){
-    const hr  = parseFloat(document.getElementById('time-hr').value)||0;
-    const min = parseFloat(document.getElementById('time-min').value)||0;
-    const totalMin = hr*60 + min;
-    if(totalMin<=0){ showError('Please enter infusion time.'); return; }
-    const mlhr = (vol/totalMin)*60;
-    infusionMinutes = totalMin;
-    results = [
-      {label:'Flow Rate',    val:Math.round(mlhr*10)/10, unit:'mL/hour', cls:'primary'},
-      {label:'Total Volume', val:vol,                    unit:'mL',      cls:''},
-      {label:'Total Time',   val:fmtTime(totalMin),      unit:'duration',cls:'amber'},
-    ];
-    lastResult = `IV Flow Rate: ${Math.round(mlhr*10)/10} mL/hr\nVolume: ${vol} mL over ${fmtTime(totalMin)}`;
-    uTrack('iv_calc_result_mlhr', {mlhr: Math.round(mlhr*10)/10, vol});
-
-  } else {
-    const rate = parseFloat(document.getElementById('rate-mlhr').value);
-    if(!rate || rate<=0){ showError('Please enter the flow rate (mL/hr).'); return; }
-    const totalMin = (vol/rate)*60;
-    infusionMinutes = totalMin;
-    results = [
-      {label:'Infusion Time', val:fmtTime(totalMin), unit:'duration', cls:'primary'},
-      {label:'Flow Rate',     val:rate,              unit:'mL/hour',  cls:'green'},
-      {label:'Total Volume',  val:vol,               unit:'mL',       cls:''},
-    ];
-    lastResult = `Infusion Time: ${fmtTime(totalMin)}\nVolume: ${vol} mL at ${rate} mL/hr`;
-    uTrack('iv_calc_result_time', {time_min: Math.round(totalMin), vol, rate});
-  }
-
-  renderResults(results);
-
-  // Progress bar
-  if(infusionMinutes){
-    const wrap = document.getElementById('infusion-bar-wrap');
-    wrap.style.display='block';
-    setTimeout(()=>{ document.getElementById('infusion-fill').style.width='100%'; }, 100);
-    document.getElementById('bar-mid').textContent = fmtTime(infusionMinutes/2);
-    document.getElementById('bar-end').textContent = fmtTime(infusionMinutes);
-  }
-
-  document.getElementById('results').style.display='block';
-  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
-}
-
-function renderResults(results){
-  const grid = document.getElementById('result-grid');
-  grid.innerHTML = results.map(r=>`
-    <div class="result-box ${r.cls}">
-      <div class="result-label">${r.label}</div>
-      <div class="result-val">${r.val}</div>
-      <div class="result-unit">${r.unit}</div>
-    </div>
-  `).join('');
-}
-
-function checkWarning(dpm, mode){
-  const box = document.getElementById('warn-box');
-  let msg = '';
-  if(mode==='dpm'){
-    if(dpm > 80) msg = '⚠ High drip rate (>80 gtts/min). Verify the order and consider using an infusion pump for accuracy and safety.';
-    else if(dpm < 5) msg = '⚠ Very slow drip rate (<5 gtts/min). Cannula occlusion risk is increased at very low gravity flow rates.';
-  }
-  box.textContent = msg;
-  box.classList.toggle('show', !!msg);
-}
-
-// ── RESET ──
-function resetCalc(){
-  document.getElementById('volume').value='';
-  document.getElementById('time-hr').value='';
-  document.getElementById('time-min').value='';
-  document.getElementById('rate-mlhr').value='';
-  document.getElementById('results').style.display='none';
-  document.getElementById('infusion-fill').style.width='0%';
-  document.getElementById('infusion-bar-wrap').style.display='none';
-  clearError();
-  resetDisplay();
-  uTrack('iv_calc_reset',{});
-}
-function resetDisplay(){
-  document.getElementById('results').style.display='none';
-  document.getElementById('infusion-fill').style.width='0%';
-  clearError();
-}
-
-// ── SHARE ──
-function shareWA(){
-  if(!lastResult){ alert('Calculate first.'); return; }
-  const url = encodeURIComponent('https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator');
-  const msg = encodeURIComponent('📊 IV Drip Rate Result\n' + lastResult + '\n\nCalculated using: https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator');
-  uTrack('iv_calc_share_whatsapp', {result: lastResult});
-  window.open('https://wa.me/?text='+msg, '_blank');
-}
-function copyResult(){
-  if(!lastResult){ alert('Calculate first.'); return; }
-  navigator.clipboard.writeText(lastResult).then(()=>{
-    const btn = document.querySelector('.copy-btn');
-    btn.textContent='✓ Copied!';
-    setTimeout(()=>{ btn.textContent='📋 Copy Result'; }, 2000);
-  });
-  uTrack('iv_calc_copy', {result: lastResult});
-}
-
-// ── FAQ ACCORDION ──
-const faqs = [
-  ['What is the formula for IV drip rate?', 'IV drip rate (drops/min) = [Volume (mL) × Drip factor (gtts/mL)] ÷ Time (minutes). For example, 500 mL over 4 hours with a 15 gtts/mL set = (500 × 15) ÷ 240 = 31 drops/min.'],
-  ['What is the drip factor for a macro drip set?', 'Macro drip sets come in three standard drip factors: 10 gtts/mL, 15 gtts/mL, and 20 gtts/mL. The most common in India is 15 gtts/mL. Micro drip sets deliver 60 gtts/mL and are used for paediatric patients or precise small volumes.'],
-  ['How do you calculate mL per hour for IV infusion?', 'mL/hour = Total volume (mL) ÷ Total time (hours). For example, 1000 mL over 8 hours = 125 mL/hour.'],
-  ['What is the difference between macro drip and micro drip?', 'Macro drip sets deliver 10, 15, or 20 drops per mL and are used for adults. Micro drip sets deliver 60 drops per mL and are used for paediatric patients, critical care, or small precise volumes.'],
-  ['How many drops per minute for 1 litre in 8 hours?', 'Using 15 gtts/mL set: (1000 × 15) ÷ 480 ≈ 31 drops/min. Using 20 gtts/mL set: (1000 × 20) ÷ 480 ≈ 42 drops/min.'],
-  ['What is gtts/min in IV therapy?', '"gtts/min" stands for guttae per minute — drops per minute. The drip factor of the IV set (10, 15, 20, or 60 gtts/mL) determines how many drops equal one millilitre.'],
-  ['What is a normal IV drip rate for adults?', 'A typical adult maintenance rate is 100–125 mL/hour (roughly 25–42 drops/min with 15 gtts/mL). Resuscitation rates can be 500–1000 mL over 15–30 minutes. The correct rate depends on the clinical indication, patient weight, fluid type, and physician order.'],
-  ['Can nurses use this IV drip rate calculator?', 'Yes. This calculator is designed for nurses, doctors, paramedics, and medical students. Always verify results against the prescriber\'s order and your institution\'s protocols.'],
-];
-
-const faqContainer = document.getElementById('faq-container');
-faqContainer.innerHTML = faqs.map((f,i)=>`
-  <div class="faq-item" id="faq-${i}">
-    <div class="faq-q" onclick="toggleFaq(${i})" role="button" tabindex="0" aria-expanded="false">${f[0]}</div>
-    <div class="faq-a">${f[1]}</div>
-  </div>
-`).join('');
-
-function toggleFaq(i){
-  const item = document.getElementById('faq-'+i);
-  const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(el=>el.classList.remove('open'));
-  if(!wasOpen){
-    item.classList.add('open');
-    item.querySelector('.faq-q').setAttribute('aria-expanded','true');
-    uTrack('iv_calc_faq', {question: faqs[i][0].substring(0,40)});
-  }
-}
-
-// Keyboard nav for FAQ
-document.addEventListener('keydown', e=>{
-  if(e.key==='Enter' && e.target.classList.contains('faq-q')){
-    e.target.click();
-  }
-});
-
-// Enter key on inputs triggers calculate
-document.addEventListener('keydown', e=>{
-  if(e.key==='Enter' && ['INPUT'].includes(e.target.tagName)){
+  function switchTab(mode) {
+    currentMode = mode;
+    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.id === 'tab-'+mode));
+    document.getElementById('time-input-wrap').style.display = (mode === 'time') ? 'none' : 'block';
+    document.getElementById('rate-input-wrap').style.display = (mode === 'time') ? 'block' : 'none';
+    document.getElementById('drip-wrap').style.display = (mode === 'dpm') ? 'block' : 'none';
     calculate();
   }
-});
+
+  function setDrip(v) {
+    dripFactor = v;
+    document.querySelectorAll('.drip-chip').forEach(c => c.classList.toggle('sel', parseInt(c.dataset.v) === v));
+    calculate();
+  }
+
+  function calculate() {
+    const vol = parseFloat(document.getElementById('volume').value);
+    const hrs = parseFloat(document.getElementById('hours').value);
+    const rate = parseFloat(document.getElementById('rate').value);
+    const panel = document.getElementById('resultPanel');
+    const resVal = document.getElementById('resVal');
+    const resLabel = document.getElementById('resLabel');
+    const resGrid = document.getElementById('resGrid');
+
+    if (!vol || (currentMode !== 'time' && !hrs) || (currentMode === 'time' && !rate)) {
+      panel.classList.remove('show'); return;
+    }
+
+    panel.classList.add('show');
+    if (currentMode === 'dpm') {
+      const dpm = Math.round((vol * dripFactor) / (hrs * 60));
+      const mlhr = Math.round(vol / hrs);
+      resLabel.innerText = "Drops Per Minute";
+      resVal.innerText = dpm + " gtts/min";
+      resGrid.innerHTML = `<div class="mini-box"><div class="mini-label">Flow Rate</div><div class="mini-val">${mlhr} mL/hr</div></div>`;
+    } else if (currentMode === 'mlhr') {
+      const mlhr = Math.round(vol / hrs);
+      resLabel.innerText = "Flow Rate";
+      resVal.innerText = mlhr + " mL/hr";
+      resGrid.innerHTML = `<div class="mini-box"><div class="mini-label">Total Volume</div><div class="mini-val">${vol} mL</div></div>`;
+    } else {
+      const time = (vol / rate).toFixed(1);
+      resLabel.innerText = "Infusion Time";
+      resVal.innerText = time + " Hours";
+      resGrid.innerHTML = `<div class="mini-box"><div class="mini-label">Rate</div><div class="mini-val">${rate} mL/hr</div></div>`;
+    }
+  }
+
+  const faqs = [
+    ["Formula for Drops/Min?", "DPM = (Volume × Drip Factor) / Time in minutes."],
+    ["Standard Drip Factor?", "Most adult sets are 15 or 20 gtts/mL. Paediatric sets are 60 gtts/mL."]
+  ];
+  document.getElementById('faq-list').innerHTML = faqs.map((f,i) => `
+    <div class="faq-item" id="faq-${i}">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">${f[0]} <span>+</span></button>
+      <div class="faq-a">${f[1]}</div>
+    </div>`).join('');
 </script>
+
 <script src="/assets/shared-nav.js"></script>
 </body>
 </html>
