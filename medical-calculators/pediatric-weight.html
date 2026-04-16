@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="pediatric-weight">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Paediatric Weight Estimation Calculator | Broselow | APLS | Emergency Drug Dosing | RxMedCalc</title>
+<meta name="description" content="Free paediatric weight estimation calculator using Broselow tape, APLS, Luscombe-Owens, and Nelson formulas. Calculate estimated weight from age or length for emergency drug dosing, fluid resuscitation, and defibrillation energy. Includes emergency drug dose table. Used by paediatricians and emergency physicians worldwide."/>
+<meta name="keywords" content="paediatric weight calculator, pediatric weight estimation, Broselow tape calculator, APLS weight formula, child weight from age, emergency pediatric dosing, paediatric resuscitation weight, Nelson formula weight, Luscombe Owens formula, paediatric drug dose calculator"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/pediatric-weight"/>
+<meta property="og:title" content="Paediatric Weight Estimation | Broselow | APLS | Emergency Dosing | RxMedCalc"/>
+<meta property="og:description" content="Estimate child weight using Broselow, APLS, Luscombe-Owens, and Nelson formulas. Emergency drug dosing table included. Free clinical tool."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/pediatric-weight"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/pediatric-weight","name":"Paediatric Weight Estimation Calculator","description":"Estimate child weight from age or length using Broselow, APLS, Luscombe-Owens and Nelson formulas for emergency drug dosing.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Paediatrician, Emergency Physician, Nurse"},"dateModified":"2025-04-14"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"Paediatric Weight","item":"https://rxmedcalc.com/medical-calculators/pediatric-weight"}]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0f1f35 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(236,72,153,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(236,72,153,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(236,72,153,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(236,72,153,0.15);border:1px solid rgba(236,72,153,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#f9a8d4;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#f472b6}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#ec4899;border-radius:2px;flex-shrink:0}
+.mode-toggle{display:flex;background:#f3f4f6;border-radius:8px;padding:3px;margin-bottom:20px;width:fit-content;gap:2px}
+.mtab{padding:7px 20px;border:none;border-radius:6px;background:transparent;font-family:inherit;font-size:0.82rem;font-weight:600;color:#6b7280;cursor:pointer;transition:all 0.2s}
+.mtab.active{background:#ec4899;color:#fff}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:500px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input,.field select{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none}
+.field input:focus,.field select:focus{border-color:#ec4899;box-shadow:0 0 0 3px rgba(236,72,153,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#ec4899,#db2777);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(236,72,153,0.3);margin-top:4px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(236,72,153,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+/* Weight big display */
+.weight-display{text-align:center;margin-bottom:20px;background:linear-gradient(135deg,#fdf2f8,#fff);border:1.5px solid #fbcfe8;border-radius:14px;padding:24px}
+.wt-num{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;color:#db2777;line-height:1}
+.wt-unit{font-size:0.9rem;color:#6b7280;margin-top:4px}
+.wt-range{font-size:0.78rem;color:#9ca3af;margin-top:6px}
+/* Formula comparison */
+.formula-compare{background:#fdf2f8;border:1.5px solid #fbcfe8;border-radius:12px;padding:16px;margin-bottom:16px}
+.fc-title{font-size:0.72rem;font-weight:700;color:#9d174d;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px}
+.fc-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #fce7f3;font-size:0.85rem}
+.fc-row:last-child{border-bottom:none}
+.fc-name{color:#374151;font-weight:600}
+.fc-val{color:#db2777;font-weight:700;font-variant-numeric:tabular-nums}
+/* Emergency drug table */
+.drug-table-wrap{margin-bottom:16px}
+.dt-title{font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.emg-table{width:100%;border-collapse:collapse;font-size:0.8rem}
+.emg-table th{background:#fdf2f8;color:#9d174d;font-weight:700;padding:8px 10px;text-align:left;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid #fbcfe8}
+.emg-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top}
+.emg-table tr:nth-child(even) td{background:#fafafa}
+.emg-table tr:hover td{background:#fdf2f8}
+.dose-val{font-weight:700;color:#db2777;font-variant-numeric:tabular-nums}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.print-btn{background:#ec4899;color:#fff}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#ec4899;color:#ec4899}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#ec4899;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ec4899;font-size:0.8rem}
+.formula-block{background:#fdf2f8;border:1.5px solid #fbcfe8;border-radius:10px;padding:14px 16px;font-family:'Courier New',monospace;font-size:0.85rem;color:#9d174d;margin:10px 0;line-height:2}
+.ref-table{width:100%;border-collapse:collapse;font-size:0.8rem;margin:12px 0}
+.ref-table th{background:#fdf2f8;color:#9d174d;font-weight:700;padding:8px 10px;text-align:left;font-size:0.68rem;text-transform:uppercase;border-bottom:2px solid #fbcfe8}
+.ref-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;color:#374151}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#ec4899;background:#fdf2f8;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Paediatric Weight</span></nav>
+    <div class="page-eyebrow">👶 Paediatrics · Emergency · Resuscitation</div>
+    <h1>Paediatric Weight<br><em>Estimation</em> Calculator</h1>
+    <p class="page-sub">Estimate child weight from age or length using Broselow tape, APLS, Luscombe-Owens, and Nelson formulas. Includes emergency drug dose table for resuscitation.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ Broselow Tape</span>
+      <span class="hbadge">✓ APLS Formula</span>
+      <span class="hbadge">✓ Emergency Drug Doses</span>
+      <span class="hbadge">✓ Defib Energy</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">Paediatric Weight Estimation</div>
+    <div style="font-size:0.78rem;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px">Input type</div>
+    <div class="mode-toggle">
+      <button class="mtab active" onclick="setMode('age')" id="mode-age">From Age</button>
+      <button class="mtab" onclick="setMode('len')" id="mode-len">From Length</button>
+    </div>
+    <div id="age-fields">
+      <div class="input-grid">
+        <div class="field">
+          <label for="age-y">Age — Years</label>
+          <input type="number" id="age-y" placeholder="e.g. 5" min="0" max="12" inputmode="decimal" oninput="liveCalc()"/>
+          <div class="hint">years (0–12)</div>
+        </div>
+        <div class="field">
+          <label for="age-m">Age — Months <span style="font-weight:400;text-transform:none">(optional)</span></label>
+          <input type="number" id="age-m" placeholder="e.g. 6" min="0" max="11" inputmode="decimal" oninput="liveCalc()"/>
+          <div class="hint">months within the year</div>
+        </div>
+      </div>
+    </div>
+    <div id="len-fields" style="display:none">
+      <div class="input-grid">
+        <div class="field">
+          <label for="length">Length / Height</label>
+          <input type="number" id="length" placeholder="e.g. 100" min="40" max="180" inputmode="decimal" oninput="liveCalc()"/>
+          <div class="hint">centimetres (cm)</div>
+        </div>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate Weight &amp; Drug Doses →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="weight-display">
+        <div class="wt-num" id="wt-num">—</div>
+        <div class="wt-unit">kg — Estimated Weight (APLS)</div>
+        <div class="wt-range" id="wt-range"></div>
+      </div>
+      <div class="formula-compare">
+        <div class="fc-title">All Formula Results</div>
+        <div class="fc-row"><span class="fc-name">APLS (Advanced Paediatric Life Support)</span><span class="fc-val" id="fc-apls">—</span></div>
+        <div class="fc-row"><span class="fc-name">Luscombe-Owens (more accurate &gt;1yr)</span><span class="fc-val" id="fc-lo">—</span></div>
+        <div class="fc-row"><span class="fc-name">Nelson formula</span><span class="fc-val" id="fc-nelson">—</span></div>
+        <div class="fc-row" id="broselow-row"><span class="fc-name">Broselow (length-based)</span><span class="fc-val" id="fc-brose">—</span></div>
+      </div>
+      <!-- Emergency drug table -->
+      <div class="drug-table-wrap">
+        <div class="dt-title">🚨 Emergency Drug Doses</div>
+        <table class="emg-table" id="drug-table">
+          <thead><tr><th>Drug / Action</th><th>Dose</th><th>Calculated</th><th>Notes</th></tr></thead>
+          <tbody id="drug-tbody"></tbody>
+        </table>
+      </div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+        <button class="act-btn print-btn" onclick="window.print()">🖨 Print</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>Paediatric Weight Estimation — Formula Guide</h2>
+    <p>In paediatric emergencies, accurate weight measurement is frequently impossible — the child may be unconscious, in respiratory distress, or brought in without a carer who knows their weight. Estimated weight is used to calculate drug doses, fluid volumes, defibrillation energies, and equipment sizes. Multiple validated formulas exist, each with different performance across age ranges.</p>
+    <div class="formula-block">
+      APLS (1–5 yrs): Weight (kg) = 2 × (Age + 4)<br>
+      APLS (6–12 yrs): Weight (kg) = 3 × Age<br>
+      Luscombe-Owens (1–10 yrs): Weight (kg) = 3 × Age + 7<br>
+      Nelson (&lt;1 yr): Weight (kg) = (Age months + 9) / 2<br>
+      Nelson (1–6 yrs): Weight (kg) = Age × 2 + 8<br>
+      Nelson (7–12 yrs): Weight (kg) = Age × 7/2 - 1<br>
+      Broselow (by length): Length-based colour-coded zones
+    </div>
+    <h3>APLS Formula — Most Widely Used in the UK and India</h3>
+    <p>The Advanced Paediatric Life Support (APLS) formula is the most commonly used in UK, Australian, and many Asian emergency departments. It uses two simple age-based formulas: 2 × (Age + 4) for children aged 1–5 years, and 3 × Age for children aged 6–12 years. It is easy to calculate mentally in an emergency. However, APLS tends to underestimate weight in children from higher-income countries and overweight children — several studies have documented APLS underestimating weight by 10–20% in modern paediatric populations.</p>
+    <h3>Luscombe-Owens Formula — Better Accuracy in Overweight Children</h3>
+    <p>The Luscombe-Owens formula (Weight = 3 × Age + 7) was published in 2007 specifically to address the systematic underestimation of APLS in contemporary children. Multiple validation studies across UK, Australia, India, and Southeast Asia have shown Luscombe-Owens provides better mean weight estimates across most age groups from 1–10 years and is now recommended by many paediatric emergency societies as an alternative to APLS. For children above the 50th centile for their age, Luscombe-Owens is the preferred formula.</p>
+    <h3>Broselow Tape — The Gold Standard for Length-Based Estimation</h3>
+    <p>The Broselow Paediatric Emergency Tape is a length-based colour-coded resuscitation tool that estimates weight and provides pre-calculated drug doses and equipment sizes for children up to 36 kg (approximately 12 years). It is the most validated tool in paediatric emergency medicine, with accuracy superior to most age-based formulas. The tape is placed beside the child from head to heel; the colour zone at the heel determines the weight estimate and corresponding pre-calculated doses. The Broselow tape is standard equipment in well-resourced paediatric emergency departments worldwide.</p>
+    <h3>Normal Paediatric Weight Reference Table</h3>
+    <table class="ref-table">
+      <thead><tr><th>Age</th><th>Weight (50th centile)</th><th>APLS Estimate</th><th>Luscombe-Owens</th></tr></thead>
+      <tbody>
+        <tr><td>Newborn</td><td>3.5 kg</td><td>—</td><td>—</td></tr>
+        <tr><td>3 months</td><td>6 kg</td><td>—</td><td>—</td></tr>
+        <tr><td>6 months</td><td>7.5 kg</td><td>—</td><td>—</td></tr>
+        <tr><td>12 months</td><td>10 kg</td><td>10 kg</td><td>10 kg</td></tr>
+        <tr><td>2 years</td><td>12 kg</td><td>12 kg</td><td>13 kg</td></tr>
+        <tr><td>5 years</td><td>18 kg</td><td>18 kg</td><td>22 kg</td></tr>
+        <tr><td>8 years</td><td>25 kg</td><td>24 kg</td><td>31 kg</td></tr>
+        <tr><td>10 years</td><td>32 kg</td><td>30 kg</td><td>37 kg</td></tr>
+        <tr><td>12 years</td><td>40 kg</td><td>36 kg</td><td>43 kg</td></tr>
+      </tbody>
+    </table>
+    <h3>Key Principles for Emergency Paediatric Drug Dosing</h3>
+    <ul>
+      <li><strong>Always use actual weight when available</strong> — these formulas are for emergencies when weighing is impossible or impractical</li>
+      <li><strong>Do not exceed adult doses</strong> — paediatric drug doses have maximum caps equal to standard adult doses for most drugs</li>
+      <li><strong>Double-check every calculation</strong> — drug errors are the most common cause of preventable harm in paediatric emergencies</li>
+      <li><strong>For obese children</strong> — use ideal body weight (IBW) for most weight-based drugs. Use actual weight for adrenaline/epinephrine in anaphylaxis and defibrillation</li>
+      <li><strong>Adrenaline in cardiac arrest</strong> — 0.1 mg/kg IV/IO (1:10,000 solution = 0.1 mL/kg). Maximum single dose 1 mg</li>
+      <li><strong>Defibrillation</strong> — 4 J/kg for first shock (AHA/ILCOR 2020). Subsequent shocks 4 J/kg. Maximum 360 J (monophasic) or 200 J (biphasic)</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/paracetamol" class="related-card"><span class="rc-icon">🌡️</span><div><div class="rc-title">Paracetamol Dose</div><div class="rc-desc">15 mg/kg weight-based dosing</div></div></a>
+      <a href="/medical-calculators/holliday-segar" class="related-card"><span class="rc-icon">💧</span><div><div class="rc-title">Maintenance Fluids</div><div class="rc-desc">Holliday-Segar 4-2-1 rule</div></div></a>
+      <a href="/medical-calculators/ibw-calculator" class="related-card"><span class="rc-icon">⚖️</span><div><div class="rc-title">IBW Calculator</div><div class="rc-desc">Ideal body weight dosing</div></div></a>
+      <a href="/medical-calculators/apgar-score" class="related-card"><span class="rc-icon">👶</span><div><div class="rc-title">APGAR Score</div><div class="rc-desc">Newborn assessment</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Weight estimation formulas are for use only when actual weight measurement is impossible. Always use actual weight when available. Drug doses calculated here are standard reference doses — always verify against your institution's drug formulary, BNF for Children, or pharmacist guidance. Double-check all doses before administration. Never exceed adult maximum doses.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let inputMode='age';let lastResult=null;let lastWeight=null;
+// Emergency drug table definitions: [name, dose_per_kg, unit, max, notes, route]
+const DRUGS=[
+  {n:'Adrenaline (cardiac arrest)',d:0.1,u:'mL/kg',mx:10,note:'1:10,000 solution. IV/IO. Max 1 mg',r:'IV/IO'},
+  {n:'Adrenaline (anaphylaxis)',d:0.01,u:'mg/kg',mx:0.5,note:'1:1,000 IM. Anterolateral thigh',r:'IM'},
+  {n:'Atropine',d:0.02,u:'mg/kg',mx:0.6,note:'Min dose 0.1 mg. IV/IO for bradycardia',r:'IV/IO'},
+  {n:'Adenosine (SVT)',d:0.1,u:'mg/kg',mx:6,note:'Rapid IV push + flush. Max 2nd dose 0.2 mg/kg',r:'IV rapid'},
+  {n:'Amiodarone (VF/VT)',d:5,u:'mg/kg',mx:300,note:'Over 20–60 min. Repeat up to 3 doses',r:'IV/IO'},
+  {n:'Sodium bicarbonate',d:1,u:'mEq/kg',mx:50,note:'8.4% solution = 1 mEq/mL. Dilute 1:1 in infants',r:'IV/IO'},
+  {n:'Glucose (10%)',d:2,u:'mL/kg',mx:200,note:'10% dextrose. For hypoglycaemia',r:'IV'},
+  {n:'Diazepam (seizure)',d:0.3,u:'mg/kg',mx:10,note:'IV slow over 3 min. Or 0.5 mg/kg rectal',r:'IV/rectal'},
+  {n:'Lorazepam (seizure)',d:0.1,u:'mg/kg',mx:4,note:'IV/IO first-line status epilepticus',r:'IV/IO'},
+  {n:'Phenobarbitone',d:20,u:'mg/kg',mx:1000,note:'Load: 20 mg/kg IV over 20 min. Seizure',r:'IV'},
+  {n:'Normal saline bolus',d:10,u:'mL/kg',mx:500,note:'Septic shock: 10 mL/kg bolus, reassess',r:'IV/IO'},
+  {n:'Defibrillation',d:4,u:'J/kg',mx:360,note:'First and subsequent shocks — 4 J/kg',r:'Defib'},
+  {n:'Fluid resuscitation',d:20,u:'mL/kg',mx:1000,note:'Trauma/shock: 20 mL/kg. Max 60 mL/kg',r:'IV/IO'},
+  {n:'Morphine',d:0.1,u:'mg/kg',mx:10,note:'IV slow. Titrate for pain. Max 10 mg',r:'IV slow'},
+  {n:'Midazolam (sedation)',d:0.1,u:'mg/kg',mx:5,note:'IV/IM/intranasal. Procedural sedation',r:'IV/IM/IN'},
+];
+function setMode(m){inputMode=m;document.getElementById('mode-age').classList.toggle('active',m==='age');document.getElementById('mode-len').classList.toggle('active',m==='len');document.getElementById('age-fields').style.display=m==='age'?'':'none';document.getElementById('len-fields').style.display=m==='len'?'':'none';document.getElementById('broselow-row').style.display=m==='len'?'flex':'none'}
+function calcAPLS(ageY,ageM){
+  const totalM=ageY*12+(ageM||0);
+  if(totalM<12)return Math.round((totalM+9)/2*10)/10;// Nelson for <1yr
+  if(ageY<=5)return 2*(ageY+4);
+  return 3*ageY;
+}
+function calcLO(ageY){return 3*ageY+7}
+function calcNelson(ageY,ageM){
+  const totalM=ageY*12+(ageM||0);
+  if(totalM<12)return Math.round((totalM+9)/2*10)/10;
+  if(ageY<=6)return 2*ageY+8;
+  return Math.round((3.5*ageY-1)*10)/10;
+}
+function calcBroselow(len){
+  // Approximate weight from length (Broselow zones)
+  if(len<46.5)return 3;if(len<52.5)return 4;if(len<60.5)return 5;if(len<68.5)return 7;
+  if(len<74.5)return 9;if(len<83.5)return 11;if(len<91.5)return 13;if(len<100.5)return 15;
+  if(len<109.5)return 18;if(len<118.5)return 22;if(len<127.5)return 26;if(len<137.5)return 30;
+  return 36;
+}
+function liveCalc(){}
+function buildDrugTable(wt){
+  const tbody=document.getElementById('drug-tbody');
+  tbody.innerHTML=DRUGS.map(d=>{
+    const raw=wt*d.d;
+    const val=Math.min(raw,d.mx);
+    const disp=val%1===0?val.toFixed(0):val.toFixed(1);
+    return `<tr><td>${d.n}</td><td>${d.d} ${d.u}</td><td class="dose-val">${disp} ${d.u.replace('/kg','')}</td><td>${d.note}</td></tr>`;
+  }).join('');
+}
+function calculate(){
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  let apls,lo,nelson,brose=null;
+  if(inputMode==='age'){
+    const ageY=parseFloat(document.getElementById('age-y').value)||0;
+    const ageM=parseFloat(document.getElementById('age-m').value)||0;
+    if(ageY===0&&ageM===0){errEl.textContent='Please enter age.';errEl.className='error-msg show';return}
+    apls=calcAPLS(ageY,ageM);lo=calcLO(ageY);nelson=calcNelson(ageY,ageM);
+    document.getElementById('broselow-row').style.display='none';
+    document.getElementById('wt-unit').textContent='kg — Estimated Weight (APLS)';
+  } else {
+    const len=parseFloat(document.getElementById('length').value);
+    if(!len){errEl.textContent='Please enter length.';errEl.className='error-msg show';return}
+    // Rough age from length for formula-based estimates
+    const ageEst=Math.max(1,Math.round((len-77.5)/6.5));
+    apls=calcAPLS(ageEst,0);lo=calcLO(ageEst);nelson=calcNelson(ageEst,0);brose=calcBroselow(len);
+    document.getElementById('broselow-row').style.display='flex';
+    document.getElementById('fc-brose').textContent=brose+' kg';
+    document.getElementById('wt-unit').textContent='kg — Estimated Weight (Broselow)';
+  }
+  const mainWt=inputMode==='len'&&brose?brose:apls;
+  lastWeight=mainWt;
+  document.getElementById('wt-num').textContent=mainWt;
+  document.getElementById('wt-range').textContent=`Range: ${Math.round(mainWt*0.85*10)/10} – ${Math.round(mainWt*1.15*10)/10} kg (±15%)`;
+  document.getElementById('fc-apls').textContent=apls+' kg';
+  document.getElementById('fc-lo').textContent=lo+' kg';
+  document.getElementById('fc-nelson').textContent=nelson+' kg';
+  buildDrugTable(mainWt);
+  lastResult=`Estimated Weight: ${mainWt} kg\nAPLS: ${apls} kg | Luscombe-Owens: ${lo} kg | Nelson: ${nelson} kg${brose?' | Broselow: '+brose+' kg':''}\nCalculated at rxmedcalc.com/medical-calculators/pediatric-weight`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('ped_weight_calc',{weight:mainWt,mode:inputMode});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('👶 Paediatric Weight\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['age-y','age-m','length'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null;lastWeight=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+setMode('age');
+</script>
+</body>
+</html>

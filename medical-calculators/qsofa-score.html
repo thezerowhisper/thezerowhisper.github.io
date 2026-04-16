@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="qsofa-score">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>qSOFA Score Calculator | Quick Sepsis Screening | Bedside Sepsis Tool | RxMedCalc</title>
+<meta name="description" content="Free qSOFA (quick SOFA) calculator for bedside sepsis screening outside the ICU. Calculate qSOFA score from altered mentation, respiratory rate, and systolic BP. Includes Sepsis-3 criteria, mortality prediction, and SSC Hour-1 Bundle guidance. Used by emergency physicians and hospitalists worldwide."/>
+<meta name="keywords" content="qSOFA calculator, quick SOFA score, qSOFA sepsis, qSOFA criteria, bedside sepsis screening, qSOFA score 2, qSOFA altered mentation, qSOFA respiratory rate, Sepsis-3 screening, qSOFA mortality, sepsis outside ICU"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/qsofa-score"/>
+<meta property="og:title" content="qSOFA Score Calculator | Bedside Sepsis Screening | RxMedCalc"/>
+<meta property="og:description" content="Calculate qSOFA score for bedside sepsis screening. Sepsis-3 criteria, mortality prediction. Free for emergency physicians worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/qsofa-score"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/qsofa-score","name":"qSOFA Score Calculator","description":"qSOFA bedside sepsis screening outside the ICU. Sepsis-3 criteria and mortality prediction.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Emergency Physician, Hospitalist, Nurse"},"dateModified":"2025-04-14"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"qSOFA Score","item":"https://rxmedcalc.com/medical-calculators/qsofa-score"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a positive qSOFA score?","acceptedAnswer":{"@type":"Answer","text":"A qSOFA score of 2 or more out of 3 is considered positive and indicates high risk of sepsis-related poor outcomes outside the ICU. The three qSOFA criteria are: altered mentation (GCS <15), respiratory rate ≥22 breaths/min, and systolic blood pressure ≤100 mmHg. Each criterion scores 1 point. A score ≥2 should prompt investigation for organ dysfunction (full SOFA score) and consideration of the SSC Hour-1 Bundle."}},
+{"@type":"Question","name":"What is qSOFA used for?","acceptedAnswer":{"@type":"Answer","text":"qSOFA (quick SOFA) is a bedside screening tool introduced in the Sepsis-3 consensus (2016) to identify patients outside the ICU — in the emergency department, general wards, or pre-hospital — who have suspected infection and are at high risk of poor outcomes including prolonged ICU stay and in-hospital death. It does not diagnose sepsis but identifies who needs urgent further evaluation with the full SOFA score."}}
+]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a0f10 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(239,68,68,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(239,68,68,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(239,68,68,0.12) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#fca5a5;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#f87171}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#ef4444;border-radius:2px;flex-shrink:0}
+.calc-subtitle{font-size:0.8rem;color:#6b7280;margin-bottom:24px}
+/* qSOFA big 3 items */
+.qsofa-items{display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
+.qi{display:flex;align-items:stretch;border:2px solid #e5e7eb;border-radius:16px;overflow:hidden;cursor:pointer;transition:all 0.2s;background:#fff}
+.qi.sel{border-color:#ef4444;background:#fef2f2}
+.qi-score{width:56px;display:flex;align-items:center;justify-content:center;background:#f3f4f6;font-family:'Fraunces',Georgia,serif;font-size:1.8rem;font-weight:900;color:#d1d5db;flex-shrink:0;transition:all 0.2s}
+.qi.sel .qi-score{background:#ef4444;color:#fff}
+.qi-body{padding:14px 18px;flex:1}
+.qi-name{font-size:0.95rem;font-weight:700;color:#0d1b2a;margin-bottom:3px}
+.qi-thresh{font-size:0.78rem;color:#6b7280;line-height:1.5}
+.qi-icon{font-size:1.3rem;margin-right:8px}
+/* Live score ring */
+.score-ring-wrap{display:flex;align-items:center;justify-content:center;gap:32px;background:linear-gradient(135deg,#fef2f2,#fff);border:1.5px solid #fecaca;border-radius:14px;padding:20px;margin-bottom:20px;flex-wrap:wrap}
+.score-ring{position:relative;width:90px;height:90px}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring circle.track{fill:none;stroke:#f3f4f6;stroke-width:8}
+.score-ring circle.fill{fill:none;stroke:#ef4444;stroke-width:8;stroke-linecap:round;stroke-dasharray:220;stroke-dashoffset:220;transition:stroke-dashoffset 0.5s ease}
+.score-ring-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:900;color:#ef4444}
+.ring-info{text-align:center}
+.ring-label{font-size:0.78rem;font-weight:600;color:#6b7280}
+.ring-status{font-size:1rem;font-weight:700;color:#0d1b2a;margin-top:4px}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#ef4444,#dc2626);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(239,68,68,0.3)}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(239,68,68,0.4)}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.3rem;font-weight:700;color:#0d1b2a}
+.rbox.hi .rval{color:#ef4444}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.mgmt-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line}
+.m-low{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.m-high{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#ef4444;color:#ef4444}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#ef4444;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ef4444;font-size:0.8rem}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+@media(max-width:500px){.compare-grid{grid-template-columns:1fr}}
+.cbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px}
+.cbox-title{font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px}
+.cbox ul{margin:0}
+.faq-item{border-bottom:1px solid #f3f4f6;padding:16px 0}.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.92rem;font-weight:600;color:#0d1b2a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.faq-q::after{content:'＋';color:#ef4444;font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.86rem;color:#4b5563;line-height:1.75}
+.faq-item.open .faq-a{max-height:300px;padding-top:10px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>qSOFA Score</span></nav>
+    <div class="page-eyebrow">⚡ Emergency · Sepsis-3 · Bedside</div>
+    <h1>qSOFA Score<br><em>Calculator</em></h1>
+    <p class="page-sub">Quick SOFA — bedside sepsis screening outside the ICU. Three-criterion score for identifying patients with suspected infection at high risk of poor outcomes. Sepsis-3 compliant.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ Sepsis-3 (2016)</span>
+      <span class="hbadge">✓ 3-Second Bedside Assessment</span>
+      <span class="hbadge">✓ No Lab Values Needed</span>
+      <span class="hbadge">✓ Mortality Prediction</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">qSOFA Score</div>
+    <div class="calc-subtitle">Tap each criterion present. Score ≥2 = high-risk sepsis — initiate urgent workup.</div>
+    <div class="qsofa-items">
+      <div class="qi" id="qi0" onclick="toggleQI(0)">
+        <div class="qi-score" id="qs0">1</div>
+        <div class="qi-body">
+          <div class="qi-name"><span class="qi-icon">🧠</span>Altered Mentation</div>
+          <div class="qi-thresh">Glasgow Coma Scale &lt;15 — any new confusion, drowsiness, agitation, or disorientation. Ask date, place, name. Check GCS formally if uncertain.</div>
+        </div>
+      </div>
+      <div class="qi" id="qi1" onclick="toggleQI(1)">
+        <div class="qi-score" id="qs1">1</div>
+        <div class="qi-body">
+          <div class="qi-name"><span class="qi-icon">🫁</span>Respiratory Rate ≥22 breaths/min</div>
+          <div class="qi-thresh">Count over 60 seconds. Normal adult RR is 12–20/min. RR ≥22 reflects respiratory compensation or direct lung involvement. Ventilated patients: consider PaO₂/FiO₂ ratio.</div>
+        </div>
+      </div>
+      <div class="qi" id="qi2" onclick="toggleQI(2)">
+        <div class="qi-score" id="qs2">1</div>
+        <div class="qi-body">
+          <div class="qi-name"><span class="qi-icon">📉</span>Systolic BP ≤100 mmHg</div>
+          <div class="qi-thresh">Measure in both arms if discrepancy suspected. In known hypertensives, even a SBP of 110–120 may represent significant hypotension from their baseline. Correlate with MAP.</div>
+        </div>
+      </div>
+    </div>
+    <!-- Live ring -->
+    <div class="score-ring-wrap">
+      <div class="score-ring">
+        <svg width="90" height="90" viewBox="0 0 90 90">
+          <circle class="track" cx="45" cy="45" r="35"/>
+          <circle class="fill" id="ring-fill" cx="45" cy="45" r="35"/>
+        </svg>
+        <div class="score-ring-num" id="ring-num">0</div>
+      </div>
+      <div class="ring-info">
+        <div class="ring-label">qSOFA Score (max 3)</div>
+        <div class="ring-status" id="ring-status">Score 0 — Low risk</div>
+      </div>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Assess Sepsis Risk →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">qSOFA Score</div><div class="rval" id="r-score">—</div><div class="runit">/ 3</div></div>
+        <div class="rbox"><div class="rlabel">Sepsis Risk</div><div class="rval" id="r-risk" style="font-size:1rem">—</div><div class="runit">Sepsis-3</div></div>
+        <div class="rbox"><div class="rlabel">In-Hospital Mortality</div><div class="rval" id="r-mort">—</div><div class="runit">risk</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>qSOFA — Complete Clinical Guide</h2>
+    <p>The quick Sequential Organ Failure Assessment (qSOFA) score was introduced by the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3) in February 2016, published simultaneously in JAMA by Singer et al. It was designed as a simple bedside tool — requiring no laboratory investigations — to identify adult patients outside the intensive care unit who have suspected infection and are at high risk of prolonged ICU admission, in-hospital death, or other poor outcomes.</p>
+    <p>The development of qSOFA arose from a systematic review of over 1.3 million patient encounters in three large US health system databases. The three criteria — altered mentation, respiratory rate ≥22 breaths/min, and systolic blood pressure ≤100 mmHg — were selected from the full SOFA score as the variables with the strongest independent predictive value for in-hospital mortality in suspected infection outside the ICU. Each criterion scores 1 point, giving a maximum total of 3.</p>
+
+    <h3>The Three qSOFA Criteria in Detail</h3>
+    <ul>
+      <li><strong>Altered mentation (GCS &lt;15):</strong> Any change from the patient's normal baseline mental state. This includes new confusion, disorientation, drowsiness, restlessness, or agitation. Ask: "What is today's date?", "Where are you?", "What is your name?" — failure on any suggests altered mentation. A GCS of 14 (even mild drowsiness) counts as positive. This criterion reflects early encephalopathy from poor cerebral perfusion or direct CNS effects of sepsis mediators</li>
+      <li><strong>Respiratory rate ≥22 breaths/min:</strong> Must be counted over a full 60 seconds at rest. Tachypnoea in sepsis reflects metabolic acidosis (compensatory hyperventilation), hypoxaemia from early lung involvement, or pain. RR is the most under-reported vital sign in clinical practice — studies show nurses commonly fail to count RR, estimating instead. Always count for a full minute</li>
+      <li><strong>Systolic BP ≤100 mmHg:</strong> Hypotension reflects cardiovascular compromise from vasodilation and myocardial depression in sepsis. Even a reading of 100 mmHg is below the threshold. In chronically hypertensive patients (baseline SBP 160–180 mmHg), a SBP of 110 may represent clinically significant relative hypotension even though it does not trigger qSOFA</li>
+    </ul>
+
+    <h3>qSOFA Performance and Evidence</h3>
+    <p>The original Seymour et al. 2016 derivation study showed that qSOFA ≥2 had a similar predictive validity for in-hospital mortality as the full SOFA score in patients outside the ICU, with an AUROC of approximately 0.81 compared to 0.74 for SIRS criteria in the same population. A qSOFA ≥2 was associated with a 3- to 14-fold increase in in-hospital mortality compared to qSOFA &lt;2. The score performs best as a prognostic tool, not a diagnostic tool — it does not confirm sepsis but identifies who needs urgent evaluation.</p>
+
+    <h3>qSOFA vs SIRS vs SOFA — When to Use Each</h3>
+    <div class="compare-grid">
+      <div class="cbox">
+        <div class="cbox-title">✅ Use qSOFA when…</div>
+        <ul>
+          <li>Bedside rapid screen needed</li>
+          <li>No labs immediately available</li>
+          <li>ED triage or ward assessment</li>
+          <li>Pre-hospital sepsis screening</li>
+          <li>Deciding who needs urgent bloods</li>
+        </ul>
+      </div>
+      <div class="cbox">
+        <div class="cbox-title">✅ Use full SOFA when…</div>
+        <ul>
+          <li>ICU admission or review</li>
+          <li>Confirming sepsis definition</li>
+          <li>Tracking organ dysfunction trend</li>
+          <li>Research/audit purposes</li>
+          <li>Labs available — more accurate</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Limitations of qSOFA</h3>
+    <p>A 2018 meta-analysis by Serafim et al. (Critical Care Medicine) found that qSOFA had lower sensitivity (60%) than SIRS criteria (88%) for identifying sepsis, meaning it misses up to 40% of patients who will deteriorate. A negative qSOFA does NOT exclude sepsis — clinical judgement must always prevail. In patients on beta-blockers, the HR component of SIRS and tachypnoea of qSOFA may be blunted. In the elderly, altered mentation may be chronic (dementia) or difficult to assess acutely. In chronic kidney disease or liver disease patients, baseline creatinine or bilirubin elevations may confound the full SOFA interpretation.</p>
+    <p>For these reasons, qSOFA is best used as a rapid initial screen that, when positive (≥2), triggers full SOFA assessment, blood cultures, lactate, and consideration of the SSC Hour-1 Bundle — not as the sole arbiter of sepsis diagnosis. Clinical gestalt and nursing concern should override a negative qSOFA when sepsis is suspected on other grounds.</p>
+
+    <h3>Sepsis-3 Definitions — Quick Reference</h3>
+    <ul>
+      <li><strong>Sepsis:</strong> Suspected or confirmed infection + acute increase in SOFA score ≥2 from baseline (representing organ dysfunction). In-hospital mortality ~10%</li>
+      <li><strong>Septic shock:</strong> Sepsis + vasopressors required to maintain MAP ≥65 mmHg + serum lactate &gt;2 mmol/L despite adequate fluid resuscitation. In-hospital mortality &gt;40%</li>
+      <li><strong>qSOFA ≥2 without SOFA:</strong> Should prompt urgent investigation — check lactate, blood cultures, FBC, RFT, LFT, coagulation, blood gas. Does not confirm sepsis without evidence of organ dysfunction</li>
+    </ul>
+
+    <h3>SSC Hour-1 Bundle — Key Actions</h3>
+    <ul>
+      <li>Measure lactate — if &gt;2 mmol/L, repeat at 2 hours. If &gt;4 mmol/L, aggressive resuscitation and ICU referral</li>
+      <li>Blood cultures ×2 sets before antibiotics (do not delay antibiotics if cultures cause delay)</li>
+      <li>Broad-spectrum antibiotics within 1 hour of sepsis recognition</li>
+      <li>IV crystalloid 30 mL/kg for MAP &lt;65 mmHg or lactate ≥4 mmol/L</li>
+      <li>Vasopressors (noradrenaline) if MAP &lt;65 mmHg persists after fluids</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Full organ failure assessment</div></div></a>
+      <a href="/medical-calculators/sirs-criteria" class="related-card"><span class="rc-icon">🚨</span><div><div class="rc-title">SIRS Criteria</div><div class="rc-desc">Sepsis-2 screening</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Vasopressor target MAP ≥65</div></div></a>
+      <a href="/medical-calculators/news2" class="related-card"><span class="rc-icon">📉</span><div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Early deterioration</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> qSOFA is a screening tool with limited sensitivity. A negative qSOFA does not exclude sepsis. Clinical judgement must always override the score. Any patient with suspected sepsis should be assessed with blood cultures, lactate, and full SOFA evaluation regardless of qSOFA result. Follow your institution's sepsis protocol.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let sel=new Set();let lastResult=null;
+const faqs=[
+  ["What is a positive qSOFA score?","qSOFA ≥2 out of 3 is positive — high risk of poor outcomes. The 3 criteria are: altered mentation (GCS <15), RR ≥22/min, SBP ≤100 mmHg."],
+  ["What is qSOFA used for?","Bedside sepsis screening outside ICU. Identifies patients with suspected infection at risk of prolonged ICU stay or death. Triggers full SOFA assessment and Hour-1 Bundle."],
+  ["Can qSOFA miss sepsis?","Yes — qSOFA has ~60% sensitivity. A negative qSOFA does not exclude sepsis. Always use clinical judgement alongside the score."],
+  ["How is qSOFA different from SIRS?","SIRS uses 4 criteria (temp, HR, RR, WBC) and is more sensitive but less specific. qSOFA uses 3 criteria (mentation, RR, SBP), needs no labs, and better predicts mortality in suspected infection outside the ICU."],
+  ["What happens if qSOFA is positive?","Urgent: blood cultures ×2, lactate, blood gas, FBC, renal/liver function, CRP, CXR. Start broad-spectrum antibiotics within 1 hour. Assess SOFA score. Consider ICU referral if organ dysfunction confirmed."]
+];
+document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
+function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}
+function toggleQI(i){
+  const el=document.getElementById('qi'+i);
+  if(sel.has(i)){sel.delete(i);el.classList.remove('sel')}else{sel.add(i);el.classList.add('sel')}
+  updateRing();
+}
+function updateRing(){
+  const s=sel.size;
+  document.getElementById('ring-num').textContent=s;
+  const offset=220-(220*s/3);
+  document.getElementById('ring-fill').style.strokeDashoffset=offset;
+  document.getElementById('ring-fill').style.stroke=s>=2?'#dc2626':s===1?'#f59e0b':'#d1d5db';
+  document.getElementById('ring-num').style.color=s>=2?'#dc2626':s===1?'#f59e0b':'#9ca3af';
+  document.getElementById('ring-status').textContent=s===0?'Score 0 — Low risk':s===1?'Score 1 — Monitor closely':'Score '+s+' — HIGH RISK ⚠';
+  document.getElementById('ring-status').style.color=s>=2?'#dc2626':s===1?'#d97706':'#6b7280';
+}
+function calculate(){
+  const s=sel.size;
+  document.getElementById('r-score').textContent=s+'/3';
+  const mort=s===0?'<1%':s===1?'2–4%':s===2?'10–15%':'20–25%';
+  document.getElementById('r-mort').textContent=mort;
+  const risk=s>=2?'HIGH RISK':s===1?'Monitor':'Low Risk';
+  const riskEl=document.getElementById('r-risk');riskEl.textContent=risk;riskEl.style.color=s>=2?'#dc2626':s===1?'#d97706':'#16a34a';
+  const mgmt=document.getElementById('mgmt-box');
+  let mcls,mtxt;
+  if(s>=2){mcls='m-high';mtxt='🚨 qSOFA ≥2 — HIGH RISK OF SEPSIS-RELATED POOR OUTCOMES\n\nUrgent actions within 1 hour:\n1. Blood cultures ×2 before antibiotics\n2. Serum lactate (venous or arterial)\n3. FBC, U&E, LFT, coagulation, blood gas\n4. CXR + urine dipstick\n5. Broad-spectrum IV antibiotics immediately\n6. IV access × 2 — IV fluid challenge if MAP <65 or lactate >2\n7. Calculate full SOFA score\n8. Senior/ICU review\n\nDo NOT wait for all results before starting antibiotics.';}
+  else if(s===1){mcls='m-high';mtxt='⚠️ qSOFA 1 — Monitor closely\n\nActions:\n1. Increased observation frequency (at least hourly vitals)\n2. Blood cultures if infection suspected\n3. Baseline bloods: FBC, CRP, renal function, lactate\n4. Reassess qSOFA in 1–2 hours\n5. Low threshold to escalate if clinical status deteriorates\n6. Identify and treat suspected infection source';}
+  else{mcls='m-low';mtxt='✅ qSOFA 0 — Low risk at this time\n\nNote: qSOFA has ~60% sensitivity. If clinical suspicion of sepsis remains high, do NOT rely on a negative qSOFA alone.\n\nContinue standard assessment:\n1. Serial vital signs monitoring\n2. Assess for localising signs of infection\n3. Lower threshold for investigation in elderly, immunocompromised, or those on beta-blockers/steroids';}
+  mgmt.textContent=mtxt;mgmt.className='mgmt-box '+mcls;
+  lastResult=`qSOFA Score: ${s}/3 — ${risk}\nCriteria: Mentation: ${sel.has(0)?'Yes':'No'} | RR≥22: ${sel.has(1)?'Yes':'No'} | SBP≤100: ${sel.has(2)?'Yes':'No'}\nCalculated at rxmedcalc.com/medical-calculators/qsofa-score`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('qsofa_calc',{score:s});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('⚡ qSOFA\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){sel.clear();for(let i=0;i<3;i++)document.getElementById('qi'+i).classList.remove('sel');updateRing();document.getElementById('results').className='results';lastResult=null}
+</script>
+</body>
+</html>

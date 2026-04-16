@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="grace-score">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GRACE Score Calculator | ACS Risk | In-Hospital & 6-Month Mortality | RxMedCalc</title>
+<meta name="description" content="Free GRACE (Global Registry of Acute Coronary Events) score calculator for risk stratification in acute coronary syndrome. Predict in-hospital and 6-month mortality and MACE after ACS. Includes ESC 2020 NSTEMI management guidance, invasive strategy timing, and antiplatelet recommendations. Used by cardiologists worldwide."/>
+<meta name="keywords" content="GRACE score calculator, GRACE ACS risk, acute coronary syndrome risk score, GRACE mortality, NSTEMI risk stratification, ACS prognosis calculator, GRACE score interpretation, GRACE 2.0, invasive strategy ACS, GRACE score ESC guidelines"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/grace-score"/>
+<meta property="og:title" content="GRACE Score Calculator | ACS Risk | In-Hospital Mortality | RxMedCalc"/>
+<meta property="og:description" content="Calculate GRACE score for ACS risk stratification. In-hospital and 6-month mortality prediction. ESC 2020 NSTEMI management. Free for cardiologists."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/grace-score"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/grace-score","name":"GRACE Score Calculator","description":"GRACE ACS risk score for in-hospital and 6-month mortality prediction after acute coronary syndrome.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Cardiologist, Emergency Physician"},"dateModified":"2025-04-14"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"GRACE Score","item":"https://rxmedcalc.com/medical-calculators/grace-score"}]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a0a10 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(239,68,68,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(239,68,68,0.06) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(239,68,68,0.12) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#fca5a5;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#f87171}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#ef4444;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:500px){.input-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:0.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.field input,.field select{width:100%;padding:11px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none}
+.field input:focus,.field select:focus{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,0.1)}
+.field .hint{font-size:0.72rem;color:#9ca3af;margin-top:4px}
+.checkbox-row{display:flex;align-items:center;gap:12px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px 16px;cursor:pointer;transition:all 0.2s;margin-bottom:10px}
+.checkbox-row.checked{background:#fef2f2;border-color:#fecaca}
+.checkbox-row input[type="checkbox"]{width:18px;height:18px;accent-color:#ef4444;cursor:pointer;flex-shrink:0}
+.checkbox-row label{font-size:0.88rem;font-weight:600;color:#374151;cursor:pointer;flex:1}
+.section-label{font-size:0.72rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em;margin:16px 0 8px}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#ef4444,#dc2626);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(239,68,68,0.3);margin-top:8px}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(239,68,68,0.4)}
+.error-msg{color:#dc2626;font-size:0.8rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.score-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.score-box{text-align:center;background:#fef2f2;border:1.5px solid #fecaca;border-radius:16px;padding:20px}
+.sb-label{font-size:0.72rem;font-weight:700;color:#9d172d;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:6px}
+.sb-num{font-family:'Fraunces',Georgia,serif;font-size:3rem;font-weight:900;color:#ef4444;line-height:1}
+.sb-badge{display:inline-block;padding:5px 14px;border-radius:20px;font-size:0.78rem;font-weight:700;margin-top:8px}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a}
+.rbox.hi .rval{color:#ef4444}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.rec-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line}
+.rec-low{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.rec-int{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.rec-high{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#ef4444;color:#ef4444}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#ef4444;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ef4444;font-size:0.8rem}
+.grace-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:14px 0}
+.grace-table th{background:#fef2f2;color:#991b1b;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;border-bottom:2px solid #fecaca}
+.grace-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>GRACE Score</span></nav>
+    <div class="page-eyebrow">❤️ Cardiology · ACS · NSTEMI</div>
+    <h1>GRACE Score<br><em>ACS Risk</em> Calculator</h1>
+    <p class="page-sub">Global Registry of Acute Coronary Events risk score for in-hospital and 6-month mortality in ACS. ESC 2020 NSTEMI invasive strategy timing and antiplatelet guidance.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ ESC 2020 Guidelines</span>
+      <span class="hbadge">✓ In-Hospital Mortality</span>
+      <span class="hbadge">✓ 6-Month Mortality</span>
+      <span class="hbadge">✓ Invasive Strategy Timing</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">GRACE Score Calculator</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="e.g. 65" min="18" max="100" inputmode="decimal"/>
+        <div class="hint">years</div>
+      </div>
+      <div class="field">
+        <label for="hr">Heart Rate</label>
+        <input type="number" id="hr" placeholder="e.g. 88" min="20" max="300" inputmode="decimal"/>
+        <div class="hint">beats per minute (bpm)</div>
+      </div>
+      <div class="field">
+        <label for="sbp">Systolic BP</label>
+        <input type="number" id="sbp" placeholder="e.g. 130" min="40" max="300" inputmode="decimal"/>
+        <div class="hint">mmHg on admission</div>
+      </div>
+      <div class="field">
+        <label for="creat">Creatinine</label>
+        <input type="number" id="creat" placeholder="e.g. 1.0" min="0.1" max="20" inputmode="decimal"/>
+        <div class="hint">mg/dL on admission</div>
+      </div>
+      <div class="field">
+        <label for="killip">Killip Class</label>
+        <select id="killip">
+          <option value="1">I — No HF signs</option>
+          <option value="2">II — Rales / JVD</option>
+          <option value="3">III — Pulmonary oedema</option>
+          <option value="4">IV — Cardiogenic shock</option>
+        </select>
+        <div class="hint">heart failure classification</div>
+      </div>
+    </div>
+    <div class="section-label">Additional risk factors</div>
+    <div class="checkbox-row" onclick="toggleCB(this,'chk-ca')">
+      <input type="checkbox" id="chk-ca"/><label for="chk-ca">Cardiac arrest on admission</label>
+    </div>
+    <div class="checkbox-row" onclick="toggleCB(this,'chk-ecg')">
+      <input type="checkbox" id="chk-ecg"/><label for="chk-ecg">ST-segment deviation on ECG (depression or elevation)</label>
+    </div>
+    <div class="checkbox-row" onclick="toggleCB(this,'chk-trop')">
+      <input type="checkbox" id="chk-trop"/><label for="chk-trop">Elevated cardiac enzymes / troponin</label>
+    </div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate GRACE Score →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-row">
+        <div class="score-box">
+          <div class="sb-label">GRACE Score</div>
+          <div class="sb-num" id="grace-num">—</div>
+          <div class="sb-badge" id="grace-badge"></div>
+        </div>
+        <div class="score-box">
+          <div class="sb-label">In-Hospital Mortality</div>
+          <div class="sb-num" id="ihmort-num" style="font-size:2.5rem">—</div>
+          <div class="sb-badge" id="ihm-badge"></div>
+        </div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">GRACE Score</div><div class="rval" id="r-grace">—</div><div class="runit">points</div></div>
+        <div class="rbox"><div class="rlabel">In-Hospital Mortality</div><div class="rval" id="r-ih">—</div><div class="runit">%</div></div>
+        <div class="rbox"><div class="rlabel">6-Month Mortality</div><div class="rval" id="r-6m">—</div><div class="runit">%</div></div>
+      </div>
+      <div class="rec-box" id="rec-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>GRACE Score — Complete Clinical Guide</h2>
+    <p>The GRACE (Global Registry of Acute Coronary Events) score was derived from a prospective multinational registry of over 43,000 patients with ACS across 14 countries. It was developed to provide clinicians with an objective, validated tool for risk stratification of patients presenting with acute coronary syndrome — enabling evidence-based decisions about invasive strategy timing, discharge planning, and intensity of secondary prevention. The GRACE score predicts both in-hospital and post-discharge mortality, making it uniquely valuable for the full spectrum of ACS management from admission through 6 months.</p>
+    <p>The eight components of the GRACE score — age, heart rate, systolic blood pressure, serum creatinine, Killip class, cardiac arrest at admission, ST-segment deviation, and elevated cardiac enzymes — were selected from multivariate logistic regression as independent predictors of in-hospital mortality. The score is validated for STEMI, NSTEMI, and unstable angina, though its discriminative accuracy is highest for NSTEMI and unstable angina (AUROC ~0.83).</p>
+
+    <h3>GRACE Score Risk Categories and Mortality</h3>
+    <table class="grace-table">
+      <thead><tr><th>Risk Category</th><th>GRACE Score</th><th>In-Hospital Mortality</th><th>6-Month Mortality</th><th>ESC Strategy</th></tr></thead>
+      <tbody>
+        <tr><td>Low</td><td>≤108</td><td>&lt;1%</td><td>&lt;3%</td><td>Invasive within 72 hours</td></tr>
+        <tr><td>Intermediate</td><td>109–140</td><td>1–3%</td><td>3–8%</td><td>Invasive within 24 hours</td></tr>
+        <tr><td>High</td><td>&gt;140</td><td>&gt;3%</td><td>&gt;8%</td><td>Invasive within 2 hours</td></tr>
+      </tbody>
+    </table>
+
+    <h3>ESC 2020 NSTEMI — Invasive Strategy Timing Based on GRACE</h3>
+    <ul>
+      <li><strong>Immediate invasive (&lt;2 hours) — Very high-risk NSTEMI:</strong> Haemodynamic instability or cardiogenic shock, recurrent or ongoing chest pain refractory to medical treatment, life-threatening arrhythmias, mechanical complications of MI, acute heart failure clearly related to NSTEMI, ST-segment changes &gt;1 mm in ≥6 leads (anterior MI equivalent)</li>
+      <li><strong>Early invasive (&lt;24 hours) — High-risk NSTEMI:</strong> GRACE score &gt;140, dynamic ST-T changes, rise or fall in troponin consistent with MI</li>
+      <li><strong>Invasive within 72 hours — Intermediate-risk NSTEMI:</strong> Diabetes mellitus, renal insufficiency (eGFR &lt;60), LVEF &lt;40%, early post-infarction angina, prior PCI or CABG, GRACE score 109–140</li>
+      <li><strong>Selective invasive — Low-risk NSTEMI:</strong> GRACE score &lt;109, no recurrent symptoms, no high-risk features. Non-invasive stress testing first; angiography if ischaemia confirmed</li>
+    </ul>
+
+    <h3>Antiplatelet Therapy in NSTEMI — ESC 2020</h3>
+    <ul>
+      <li><strong>Aspirin:</strong> Loading dose 150–300 mg orally immediately, then 75–100 mg daily indefinitely. First-line in all ACS patients without allergy</li>
+      <li><strong>P2Y12 inhibitor (DAPT — dual antiplatelet therapy):</strong> Add to aspirin for 12 months. Preferred agents: ticagrelor 180 mg loading then 90 mg BD (superior to clopidogrel), or prasugrel 60 mg loading then 10 mg OD (for PCI patients without prior stroke/TIA)</li>
+      <li><strong>Clopidogrel:</strong> 300–600 mg loading, 75 mg daily. For patients who cannot receive ticagrelor or prasugrel, or on oral anticoagulation (triple therapy consideration)</li>
+      <li><strong>Anticoagulation:</strong> UFH, LMWH (enoxaparin preferred), fondaparinux, or bivalirudin depending on strategy and bleeding risk</li>
+    </ul>
+
+    <h3>GRACE Score Limitations</h3>
+    <p>The GRACE score was derived primarily in Western populations and may underestimate risk in South Asian and other populations with different background cardiovascular risk profiles. It requires serum creatinine, which may delay initial risk stratification in resource-limited settings. The GRACE 2.0 online calculator provides more granular mortality estimates than the categorical score used here. Killip class assessment requires clinical examination and is subjective. Despite limitations, GRACE remains the most widely validated and used ACS risk score globally and is specifically endorsed by the ESC 2020 NSTEMI guidelines over other risk scores for this purpose.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/cha2ds2-vasc" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">CHA₂DS₂-VASc</div><div class="rc-desc">AF anticoagulation with ACS</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Cardiogenic shock assessment</div></div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">Creatinine Clearance</div><div class="rc-desc">Drug dosing in ACS with CKD</div></div></a>
+      <a href="/medical-calculators/rcri-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">RCRI Calculator</div><div class="rc-desc">Perioperative cardiac risk</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> The GRACE score is a validated prognostic tool for ACS risk stratification, not a diagnostic tool. Clinical decisions must integrate complete clinical assessment, ECG findings, serial troponins, echocardiography, and local catheterisation laboratory availability. This calculator provides an approximate GRACE score — use the official GRACE 2.0 online tool for the most accurate continuous mortality estimates in clinical practice.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+let lastResult=null;
+// GRACE score point tables (simplified scoring per original publication)
+function getAgePoints(a){if(a<30)return 0;if(a<40)return 8;if(a<50)return 25;if(a<60)return 41;if(a<70)return 58;if(a<80)return 75;return 91;}
+function getHRPoints(h){if(h<50)return 0;if(h<70)return 3;if(h<90)return 9;if(h<110)return 15;if(h<150)return 24;if(h<200)return 38;return 46;}
+function getSBPPoints(s){if(s<80)return 58;if(s<100)return 53;if(s<120)return 43;if(s<140)return 34;if(s<160)return 24;if(s<200)return 10;return 0;}
+function getCreatPoints(c){if(c<0.4)return 1;if(c<0.8)return 3;if(c<1.2)return 5;if(c<1.6)return 7;if(c<2.0)return 9;if(c<4.0)return 15;return 20;}
+function getKillipPoints(k){const pts=[0,20,39,59];return pts[parseInt(k)-1]||0;}
+// Mortality lookup (approximate from GRACE tables)
+function getIHMort(s){
+  if(s<=60)return '<1';if(s<=80)return '<1';if(s<=100)return 1;if(s<=120)return 1.5;
+  if(s<=140)return 2;if(s<=160)return 3;if(s<=180)return 4;if(s<=200)return 6;
+  if(s<=220)return 8;if(s<=240)return 11;if(s<=260)return 14;if(s<=280)return 18;
+  return '>20';
+}
+function get6MMort(s){
+  if(s<=88)return '<3';if(s<=118)return 3;if(s<=140)return 6;if(s<=160)return 9;
+  if(s<=180)return 13;if(s<=200)return 18;if(s<=220)return 24;return '>30';
+}
+function toggleCB(row,id){const cb=document.getElementById(id);cb.checked=!cb.checked;row.classList.toggle('checked',cb.checked)}
+function calculate(){
+  const age=parseFloat(document.getElementById('age').value);
+  const hr=parseFloat(document.getElementById('hr').value);
+  const sbp=parseFloat(document.getElementById('sbp').value);
+  const creat=parseFloat(document.getElementById('creat').value);
+  const killip=document.getElementById('killip').value;
+  const ca=document.getElementById('chk-ca').checked;
+  const ecg=document.getElementById('chk-ecg').checked;
+  const trop=document.getElementById('chk-trop').checked;
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!age||!hr||!sbp||!creat){errEl.textContent='Please enter age, heart rate, systolic BP, and creatinine.';errEl.className='error-msg show';return}
+  const score=getAgePoints(age)+getHRPoints(hr)+getSBPPoints(sbp)+getCreatPoints(creat)+getKillipPoints(killip)+(ca?39:0)+(ecg?28:0)+(trop?14:0);
+  const ihMort=getIHMort(score);
+  const m6Mort=get6MMort(score);
+  document.getElementById('grace-num').textContent=score;
+  document.getElementById('ihmort-num').textContent=(typeof ihMort==='number'?ihMort+'%':ihMort);
+  document.getElementById('r-grace').textContent=score;
+  document.getElementById('r-ih').textContent=(typeof ihMort==='number'?ihMort+'%':ihMort);
+  document.getElementById('r-6m').textContent=(typeof m6Mort==='number'?m6Mort+'%':m6Mort);
+  const graceBadge=document.getElementById('grace-badge');
+  const ihmBadge=document.getElementById('ihm-badge');
+  const rec=document.getElementById('rec-box');
+  let bTxt,bStyle,iStyle,rCls,rTxt;
+  if(score<=108){bTxt='Low Risk';bStyle='background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0';iStyle='background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0';rCls='rec-low';
+    rTxt='✅ Low risk GRACE score (≤108). In-hospital mortality <1%.\n\nESC 2020 strategy: Invasive strategy within 72 hours if no high-risk features.\n\nManagement:\n• Dual antiplatelet therapy: aspirin 150–300 mg load + ticagrelor 180 mg load\n• Anticoagulation: fondaparinux 2.5 mg SC daily (preferred in low bleed risk) or enoxaparin\n• Non-invasive stress testing if decision to defer angiography\n• Risk factor optimisation: statin (high-intensity), ACE/ARB, beta-blocker\n• Discharge with cardiology follow-up';}
+  else if(score<=140){bTxt='Intermediate Risk';bStyle='background:#fffbeb;color:#d97706;border:1.5px solid #fde68a';iStyle='background:#fffbeb;color:#d97706;border:1.5px solid #fde68a';rCls='rec-int';
+    rTxt='⚠️ Intermediate risk GRACE score (109–140). In-hospital mortality 1–3%.\n\nESC 2020 strategy: Early invasive strategy within 24 hours.\n\nManagement:\n• Dual antiplatelet: aspirin + ticagrelor 180 mg or prasugrel 60 mg (PCI patients)\n• Anticoagulation: UFH 60–70 IU/kg IV or enoxaparin 1 mg/kg SC BD\n• Cardiac monitoring — continuous ECG, serial troponins\n• Echocardiography to assess LV function\n• Optimise co-morbidities: control BP, glucose, discontinue NSAIDs/COX-2\n• Cardiology consultation and catheterisation laboratory notification';}
+  else{bTxt='High Risk';bStyle='background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca';iStyle='background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca';rCls='rec-high';
+    rTxt='🚨 High risk GRACE score (>140). In-hospital mortality >3%.\n\nESC 2020 strategy: Immediate invasive (<2 hours) if any very-high-risk feature; otherwise early invasive within 2 hours.\n\nManagement:\n• Immediate cardiac monitoring and IV access\n• Dual antiplatelet: aspirin + ticagrelor or prasugrel loading doses\n• Anticoagulation: UFH or bivalirudin\n• Urgent cardiology and cath lab notification\n• Glycoprotein IIb/IIIa inhibitor if high thrombus burden at angiography\n• ICU/CCU admission\n• Haemodynamic support if cardiogenic shock (IABP, Impella, ECMO)';}
+  graceBadge.textContent=bTxt;graceBadge.style.cssText=bStyle;
+  ihmBadge.textContent='In-Hospital: '+(typeof ihMort==='number'?ihMort+'%':ihMort);ihmBadge.style.cssText=iStyle;
+  rec.textContent=rTxt;rec.className='rec-box '+rCls;
+  lastResult=`GRACE Score: ${score} — ${bTxt}\nIn-Hospital Mortality: ${typeof ihMort==='number'?ihMort+'%':ihMort} | 6-Month Mortality: ${typeof m6Mort==='number'?m6Mort+'%':m6Mort}\nAge: ${age} | HR: ${hr} | SBP: ${sbp} | Cr: ${creat} | Killip: ${killip}\nCalculated at rxmedcalc.com/medical-calculators/grace-score`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('grace_calc',{score});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('❤️ GRACE Score\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['age','hr','sbp','creat'].forEach(id=>{document.getElementById(id).value=''});['chk-ca','chk-ecg','chk-trop'].forEach(id=>{document.getElementById(id).checked=false;document.getElementById(id).closest('.checkbox-row').classList.remove('checked')});document.getElementById('killip').value='1';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate()});
+</script>
+</body>
+</html>

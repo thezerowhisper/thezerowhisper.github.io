@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="rcri-calculator">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RCRI Calculator | Revised Cardiac Risk Index | Perioperative Cardiac Risk | RxMedCalc</title>
+<meta name="description" content="Free RCRI (Revised Cardiac Risk Index) calculator for perioperative cardiac risk assessment before non-cardiac surgery. Calculate risk of major adverse cardiac events (MACE), includes ACC/AHA 2014 preoperative guidelines, statin and beta-blocker recommendations, and cardiac workup decision guide. Used by anaesthesiologists and surgeons worldwide."/>
+<meta name="keywords" content="RCRI calculator, revised cardiac risk index, perioperative cardiac risk, preoperative cardiac assessment, RCRI score, Lee index, cardiac risk surgery, MACE perioperative, preoperative evaluation calculator, non-cardiac surgery cardiac risk"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/rcri-calculator"/>
+<meta property="og:title" content="RCRI Calculator | Perioperative Cardiac Risk | Non-Cardiac Surgery | RxMedCalc"/>
+<meta property="og:description" content="Calculate perioperative cardiac risk before non-cardiac surgery using the Revised Cardiac Risk Index. ACC/AHA guidelines, MACE prediction. Free clinical tool."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/rcri-calculator"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/rcri-calculator","name":"RCRI Calculator — Revised Cardiac Risk Index","description":"Perioperative cardiac risk assessment before non-cardiac surgery using the RCRI. ACC/AHA 2014 guidelines.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Anaesthesiologist, Surgeon, Cardiologist"},"dateModified":"2025-04-14"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"RCRI Calculator","item":"https://rxmedcalc.com/medical-calculators/rcri-calculator"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a high RCRI score?","acceptedAnswer":{"@type":"Answer","text":"RCRI score 3 or more is considered high risk for perioperative major adverse cardiac events (MACE). RCRI 0: ~0.4% MACE risk. RCRI 1: ~1% MACE risk. RCRI 2: ~2.4% MACE risk. RCRI 3+: 5.4–11%+ MACE risk. High-risk patients (RCRI ≥3) may benefit from preoperative cardiology review, stress testing if functional capacity is unknown, and perioperative beta-blocker and statin therapy."}},
+{"@type":"Question","name":"What are the 6 RCRI criteria?","acceptedAnswer":{"@type":"Answer","text":"The six RCRI criteria (Lee Revised Cardiac Risk Index, 1999) are: (1) High-risk surgery (intraperitoneal, intrathoracic, or suprainguinal vascular surgery), (2) Ischaemic heart disease (history of MI, Q waves on ECG, or use of nitrates), (3) History of congestive heart failure, (4) History of cerebrovascular disease (stroke or TIA), (5) Insulin-dependent diabetes mellitus, (6) Preoperative serum creatinine >2.0 mg/dL. Each criterion scores 1 point."}}
+]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a1030 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(239,68,68,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(239,68,68,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(239,68,68,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#fca5a5;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#f87171}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#ef4444;border-radius:2px;flex-shrink:0}
+.criteria-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.crit{display:flex;align-items:flex-start;gap:14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px 16px;cursor:pointer;transition:all 0.2s}
+.crit.sel{background:#fef2f2;border-color:#fecaca}
+.crit-check{width:22px;height:22px;border:2px solid #d1d5db;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all 0.2s;font-size:0.85rem;background:#fff}
+.crit.sel .crit-check{background:#ef4444;border-color:#ef4444;color:#fff}
+.crit-text{flex:1}
+.crit-name{font-size:0.9rem;font-weight:700;color:#0d1b2a}
+.crit-detail{font-size:0.76rem;color:#6b7280;margin-top:2px;line-height:1.5}
+.crit-pt{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#d1d5db;flex-shrink:0}
+.crit.sel .crit-pt{color:#ef4444}
+.running-total{background:linear-gradient(135deg,#fef2f2,#fff);border:1.5px solid #fecaca;border-radius:14px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.rt-label{font-size:0.8rem;font-weight:600;color:#6b7280}
+.rt-val{font-family:'Fraunces',Georgia,serif;font-size:2.5rem;font-weight:900;color:#ef4444}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#ef4444,#dc2626);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(239,68,68,0.3)}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(239,68,68,0.4)}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.score-display{text-align:center;margin-bottom:20px}
+.score-big{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;line-height:1}
+.score-sub{font-size:0.88rem;color:#6b7280;margin-top:4px}
+.score-badge{display:inline-block;padding:7px 24px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-top:10px}
+.b-low{background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0}
+.b-mod{background:#fffbeb;color:#d97706;border:1.5px solid #fde68a}
+.b-high{background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a}
+.rbox.hi .rval{color:#ef4444}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.rec-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line}
+.rec-low{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.rec-mod{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.rec-high{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#ef4444;color:#ef4444}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#ef4444;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ef4444;font-size:0.8rem}
+.mace-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:14px 0}
+.mace-table th{background:#fef2f2;color:#991b1b;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;border-bottom:2px solid #fecaca}
+.mace-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+.faq-item{border-bottom:1px solid #f3f4f6;padding:16px 0}.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.92rem;font-weight:600;color:#0d1b2a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.faq-q::after{content:'＋';color:#ef4444;font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.86rem;color:#4b5563;line-height:1.75}
+.faq-item.open .faq-a{max-height:300px;padding-top:10px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>RCRI Calculator</span></nav>
+    <div class="page-eyebrow">❤️ Anaesthesia · Cardiology · Perioperative</div>
+    <h1>RCRI Calculator<br><em>Revised Cardiac Risk Index</em></h1>
+    <p class="page-sub">Perioperative cardiac risk assessment before non-cardiac surgery. MACE prediction, ACC/AHA 2014 preoperative evaluation guidance, and beta-blocker/statin perioperative management.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ ACC/AHA 2014 Guidelines</span>
+      <span class="hbadge">✓ MACE Risk %</span>
+      <span class="hbadge">✓ 6 Validated Criteria</span>
+      <span class="hbadge">✓ Cardiac Workup Guidance</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">RCRI — 6 Criteria Assessment</div>
+    <div class="criteria-grid" id="criteria-grid"></div>
+    <div class="running-total">
+      <span class="rt-label">Current RCRI Score</span>
+      <span class="rt-val" id="rt-val">0</span>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Calculate Cardiac Risk →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-display">
+        <div class="score-big" id="score-big" style="color:#ef4444">0</div>
+        <div class="score-sub">RCRI Score (max 6)</div>
+        <div class="score-badge" id="score-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">RCRI Score</div><div class="rval" id="r-score">—</div><div class="runit">/ 6</div></div>
+        <div class="rbox"><div class="rlabel">MACE Risk</div><div class="rval" id="r-mace">—</div><div class="runit">% perioperative</div></div>
+        <div class="rbox"><div class="rlabel">Risk Category</div><div class="rval" id="r-cat" style="font-size:1rem">—</div><div class="runit">ACC/AHA</div></div>
+      </div>
+      <div class="rec-box" id="rec-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>RCRI — Perioperative Cardiac Risk Guide</h2>
+    <p>The Revised Cardiac Risk Index (RCRI), also known as the Lee Index, was published by Thomas Lee and colleagues in 1999 (Circulation) based on a prospective cohort study of 4,315 patients undergoing elective non-cardiac surgery at a single academic medical centre. It identified six independent predictors of major adverse cardiac events (MACE) — defined as myocardial infarction, pulmonary oedema, ventricular fibrillation or primary cardiac arrest, and complete heart block. The RCRI has been externally validated in multiple populations worldwide and remains the most widely used preoperative cardiac risk stratification tool, endorsed by ACC/AHA 2014 guidelines for preoperative cardiac evaluation.</p>
+    <h3>RCRI Score and MACE Risk</h3>
+    <table class="mace-table">
+      <thead><tr><th>RCRI Score</th><th>MACE Risk (Lee 1999)</th><th>MACE Risk (Revised estimates)</th><th>Risk Category</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>0.4%</td><td>3.9%</td><td>Very Low</td></tr>
+        <tr><td>1</td><td>0.9%</td><td>6.0%</td><td>Low</td></tr>
+        <tr><td>2</td><td>6.6%</td><td>10.1%</td><td>Moderate</td></tr>
+        <tr><td>≥3</td><td>11%</td><td>15%</td><td>High</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.8rem;color:#9ca3af;margin-top:-8px">Note: Revised estimates from Duceppe et al. 2017 meta-analysis (JAMA Internal Medicine) are higher than Lee's original derivation cohort estimates, reflecting broader population validation.</p>
+    <h3>The 6 RCRI Criteria Explained</h3>
+    <ul>
+      <li><strong>High-risk surgery:</strong> Intraperitoneal, intrathoracic, and suprainguinal vascular procedures carry the highest surgical risk. Low-risk surgeries (superficial procedures, endoscopy, cataract) are excluded from RCRI use</li>
+      <li><strong>Ischaemic heart disease:</strong> History of MI, positive exercise stress test, current chest pain thought to be ischaemic, use of nitrate therapy, or ECG with Q waves in any lead</li>
+      <li><strong>Congestive heart failure:</strong> History of HF, pulmonary oedema, paroxysmal nocturnal dyspnoea, bilateral rales on examination, or S3 gallop, or chest X-ray showing pulmonary vascular redistribution</li>
+      <li><strong>Cerebrovascular disease:</strong> History of ischaemic stroke, TIA, or carotid endarterectomy. Reflects generalised atherosclerotic burden and risk of perioperative haemodynamic vulnerability</li>
+      <li><strong>Insulin-dependent diabetes:</strong> Insulin therapy specifically — not oral hypoglycaemics alone. Insulin-dependent diabetes is a proxy for advanced disease and autonomic dysfunction</li>
+      <li><strong>Preoperative creatinine &gt;2.0 mg/dL:</strong> Reflects significant chronic kidney disease (approximately CKD Stage 4 or worse). Renal insufficiency impairs perioperative haemodynamic reserve and increases cardiac stress</li>
+    </ul>
+    <h3>ACC/AHA 2014 Preoperative Cardiac Evaluation Steps</h3>
+    <ul>
+      <li><strong>Step 1 — Emergency surgery?</strong> Proceed to surgery with perioperative surveillance. No time for evaluation</li>
+      <li><strong>Step 2 — Active cardiac conditions?</strong> Unstable coronary syndrome, decompensated HF, significant arrhythmias, severe valvular disease → postpone surgery, evaluate and treat first</li>
+      <li><strong>Step 3 — Low-risk surgery?</strong> Risk &lt;1% even without testing → proceed</li>
+      <li><strong>Step 4 — Good functional capacity (≥4 METs)?</strong> Can climb a flight of stairs, walk on level ground at 4 mph, or do light housework without symptoms → proceed without further testing</li>
+      <li><strong>Step 5 — Unknown/poor functional capacity with RCRI ≥3?</strong> Pharmacological stress testing may change management → consider non-invasive testing. If tests don't change management, proceed with surgery</li>
+    </ul>
+    <h3>Perioperative Beta-Blocker Management</h3>
+    <p>ACC/AHA 2014 guidelines on perioperative beta-blockers: Continue beta-blockers in patients already taking them (Class I). Consider perioperative beta-blockers for patients with 3 or more RCRI risk factors — but do NOT start beta-blockers on the day of surgery. If initiating beta-blockers, start at least 2–7 days before surgery with dose titration to achieve HR 60–80 bpm. Avoid high-dose beta-blockers in beta-blocker-naive patients — the POISE trial showed they reduced MI but increased stroke and overall mortality at high doses.</p>
+    <h3>Perioperative Statin Therapy</h3>
+    <p>Statins have pleiotropic effects beyond LDL-lowering — anti-inflammatory, plaque-stabilising, and endothelial effects that may reduce perioperative cardiac events. ACC/AHA 2014 recommends: Continue statins in patients currently taking them. Initiating statins may be reasonable in patients undergoing vascular surgery with or without elevated cardiac biomarkers. For non-vascular surgery, statin initiation in high-risk patients may be considered but evidence is less robust.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/cha2ds2-vasc" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">CHA₂DS₂-VASc</div><div class="rc-desc">AF anticoagulation risk</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Perioperative haemodynamics</div></div></a>
+      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">Renal RCRI criterion</div></div></a>
+      <a href="/medical-calculators/ascvd-risk" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">ASCVD Risk</div><div class="rc-desc">10-year cardiovascular risk</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> The RCRI is a validated screening tool but does not replace comprehensive preoperative clinical assessment by a qualified anaesthesiologist and surgeon. Cardiac risk estimation must consider surgical urgency, type of surgery, local anaesthetic options, and individual patient factors. Always follow ACC/AHA or ESC preoperative guidelines and multidisciplinary team decision-making for high-risk patients.</div>
+</main>
+<script src="/shared-nav.js"></script>
+<script>
+const CRITERIA=[
+  {name:'High-Risk Surgery',detail:'Intraperitoneal, intrathoracic, or suprainguinal vascular procedure',icon:'🏥'},
+  {name:'Ischaemic Heart Disease',detail:'History of MI, Q waves on ECG, positive stress test, current angina, or nitrate use',icon:'❤️'},
+  {name:'Congestive Heart Failure',detail:'History of HF, pulmonary oedema, PND, bilateral rales, S3 gallop, or CXR redistribution',icon:'🫀'},
+  {name:'Cerebrovascular Disease',detail:'History of ischaemic stroke, TIA, or carotid endarterectomy',icon:'🧠'},
+  {name:'Insulin-Dependent Diabetes',detail:'Currently on insulin therapy (not oral agents alone)',icon:'💉'},
+  {name:'Creatinine >2.0 mg/dL',detail:'Preoperative serum creatinine greater than 2.0 mg/dL (≈177 µmol/L)',icon:'🫘'},
+];
+let sel=new Set();let lastResult=null;
+const MACE=['0.4%','0.9%','6.6%','≥11%'];
+const MACE_REV=['~3.9%','~6.0%','~10.1%','~15%'];
+const faqs=[
+  ["What is a high RCRI score?","RCRI ≥3 is high risk — MACE rate ~11–15%. RCRI 0: ~0.4%. RCRI 1: ~0.9%. RCRI 2: ~6.6%. High-risk patients may need cardiology review, stress testing, and optimisation before elective surgery."],
+  ["What are the 6 RCRI criteria?","High-risk surgery, ischaemic heart disease, congestive heart failure, cerebrovascular disease, insulin-dependent diabetes, preoperative creatinine >2.0 mg/dL. Each = 1 point."],
+  ["Should I delay surgery for a high RCRI?","Not automatically. ACC/AHA 2014: emergency surgery proceeds regardless. For elective surgery with RCRI ≥3, consider cardiology review and whether non-invasive testing would change management. Surgery should not be delayed if testing won't change management."],
+  ["When are perioperative beta-blockers indicated?","Continue in patients already taking them. Consider initiating if RCRI ≥3, but start 2–7 days before surgery — never start on the day of surgery. Target HR 60–80 bpm."],
+  ["Is RCRI used for all surgeries?","RCRI is for non-cardiac surgery risk stratification. For cardiac surgery, specific risk scores (EuroSCORE II, STS score) are used. Low-risk surgeries (endoscopy, cataract, superficial) generally do not require RCRI assessment."]
+];
+document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
+function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}
+document.getElementById('criteria-grid').innerHTML=CRITERIA.map((c,i)=>`
+  <div class="crit" id="c${i}" onclick="toggle(${i})">
+    <div class="crit-check" id="cc${i}">✓</div>
+    <div class="crit-text">
+      <div class="crit-name">${c.icon} ${c.name}</div>
+      <div class="crit-detail">${c.detail}</div>
+    </div>
+    <div class="crit-pt">+1</div>
+  </div>`).join('');
+function toggle(i){
+  const el=document.getElementById('c'+i);
+  if(sel.has(i)){sel.delete(i);el.classList.remove('sel')}else{sel.add(i);el.classList.add('sel')}
+  document.getElementById('rt-val').textContent=sel.size;
+}
+function calculate(){
+  const s=sel.size;
+  const idx=Math.min(s,3);
+  document.getElementById('score-big').textContent=s;
+  document.getElementById('r-score').textContent=s+'/6';
+  document.getElementById('r-mace').textContent=MACE[idx];
+  const badge=document.getElementById('score-badge');
+  const rec=document.getElementById('rec-box');
+  let bCls,bTxt,rCat,rCls,rTxt;
+  if(s===0){bCls='b-low';bTxt='Very Low Risk';rCat='Very Low';rCls='rec-low';
+    rTxt='✅ Very low perioperative cardiac risk (RCRI 0 — MACE ~0.4%). Proceed to surgery with standard monitoring.\n\nPerioperative management:\n• Continue all cardiac medications perioperatively\n• No additional cardiac testing required for most procedures\n• Standard anaesthetic technique\n• Routine postoperative monitoring';}
+  else if(s===1){bCls='b-low';bTxt='Low Risk';rCat='Low';rCls='rec-low';
+    rTxt='✅ Low perioperative cardiac risk (RCRI 1 — MACE ~0.9%). Proceed to surgery.\n\nPerioperative management:\n• Continue existing beta-blockers and statins\n• Optimise blood pressure and glucose control preoperatively\n• No routine pre-op stress testing required for patients with ≥4 METs functional capacity\n• Standard ECG, FBC, U&E preoperatively';}
+  else if(s===2){bCls='b-mod';bTxt='Moderate Risk';rCat='Moderate';rCls='rec-mod';
+    rTxt='⚠️ Moderate perioperative cardiac risk (RCRI 2 — MACE ~6.6%). Assess functional capacity.\n\nPerioperative management:\n• If functional capacity ≥4 METs — proceed without stress testing\n• If unknown/poor functional capacity — consider pharmacological stress test\n• Ensure optimal medical therapy (ACE inhibitor/ARB, statin, beta-blocker if indicated)\n• Consider cardiology review for elective high-risk procedures\n• Perioperative troponin monitoring if intermediate-high risk surgery';}
+  else{bCls='b-high';bTxt='High Risk';rCat='High';rCls='rec-high';
+    rTxt='⚠️ High perioperative cardiac risk (RCRI ≥3 — MACE ≥11%). Cardiology review recommended.\n\nPerioperative management:\n• Cardiology review before elective surgery\n• Assess functional capacity formally if uncertain\n• Consider pharmacological stress test (dobutamine stress echo or nuclear imaging) if result would change management\n• Ensure optimal medical therapy — statin, beta-blocker (start 2–7 days before), ACE/ARB\n• For elective surgery, postpone and optimise if active cardiac conditions present\n• Perioperative troponin monitoring (baseline + 24h + 48h post-op)\n• Discuss risk/benefit of surgery with patient using shared decision-making';}
+  badge.textContent=bTxt;badge.className='score-badge '+bCls;
+  document.getElementById('r-cat').textContent=rCat;
+  rec.textContent=rTxt;rec.className='rec-box '+rCls;
+  lastResult=`RCRI Score: ${s}/6 — ${rCat} Risk\nMACE risk: ${MACE[idx]}\nCriteria: ${Array.from(sel).map(i=>CRITERIA[i].name).join(', ')||'None'}\nCalculated at rxmedcalc.com/medical-calculators/rcri-calculator`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('rcri_calc',{score:s});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('❤️ RCRI\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){sel.clear();for(let i=0;i<6;i++)document.getElementById('c'+i).classList.remove('sel');document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
+</script>
+</body>
+</html>
