@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metformin Dose Calculator India | eGFR & Kidney Disease | RxMedCalc</title>
+<meta name="description" content="Metformin dosage calculator with eGFR-based kidney dose adjustment. When to hold metformin in CKD, contrast, surgery. Glycomet, Glucophage, Obimet India. ADA, ICMR, BNF guidelines.">
+<meta name="keywords" content="metformin dose calculator India, metformin dose in kidney disease, metformin eGFR dose, metformin CKD dosing, when to stop metformin kidney, glycomet dose, metformin dose India, metformin renal impairment dose">
+<link rel="canonical" href="https://rxmedcalc.com/drug-doses/metformin/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Metformin Dose Calculator with eGFR — RxMedCalc",
+  "description": "Metformin dosage calculator for type 2 diabetes. eGFR-based dose adjustment, CKD staging, when to hold metformin. India-specific brands and ICMR guideline aligned.",
+  "url": "https://rxmedcalc.com/drug-doses/metformin/",
+  "about": { "@type": "Drug", "name": "Metformin hydrochloride" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Drug Doses", "item": "https://rxmedcalc.com/drug-doses/" },
+    { "@type": "ListItem", "position": 3, "name": "Metformin", "item": "https://rxmedcalc.com/drug-doses/metformin/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should metformin be stopped in kidney disease?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Metformin should be stopped (contraindicated) when eGFR falls below 30 mL/min/1.73m² (CKD stage G4–G5). When eGFR is 30–45 mL/min/1.73m² (CKD stage G3b), the maximum metformin dose should be halved and the patient monitored closely. Metformin can be used at reduced dose when eGFR is 45–60 mL/min/1.73m²." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum dose of metformin per day?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The maximum recommended daily dose of metformin is 2000–2550 mg/day (typically 2000 mg/day in India). The extended-release (SR) formulation maximum is 2000 mg/day. Starting dose is 500mg once or twice daily, with gradual titration over 4–8 weeks to reduce GI side effects." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should metformin be stopped before contrast dye (CT scan)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Metformin should be held from the time of contrast administration and for 48 hours after iodinated contrast injection, due to risk of contrast-induced nephropathy causing lactic acidosis. It can be restarted after 48 hours if renal function is stable. For patients with eGFR > 60 mL/min and no risk factors, some guidelines permit continuing metformin but withholding it is standard practice in India." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the metformin starting dose in India?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The recommended starting dose of metformin in India (per ICMR and ADA guidelines) is 500 mg once daily with dinner, or 500 mg twice daily with meals. The dose is then increased by 500 mg every 1–2 weeks as tolerated (based on GI side effects) to a target of 1000–2000 mg/day. Starting with low doses and titrating gradually significantly reduces GI intolerance." }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --accent: #1e6b9e; --accent-mid: #2b7be8; --accent-light: #eaf2ff; --accent-dark: #0f4a7a;
+  --success: #0e9f7e; --success-light: #e1f5ee;
+  --warn-bg: #fffbeb; --warn-border: #fcd34d; --warn-text: #78350f;
+  --danger-bg: #fef2f2; --danger-border: #fca5a5; --danger-text: #7f1d1d;
+  --navy: #0d2b45; --navy-mid: #163d5c;
+  --text: #1a2535; --text-mid: #4a5568; --text-muted: #8896a8;
+  --border: #e2e8f0; --bg: #f7f9fc; --white: #ffffff;
+  --radius: 12px; --radius-sm: 8px;
+  --font: 'DM Sans', sans-serif; --mono: 'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+a { color: var(--accent-mid); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.topnav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-weight: 600; font-size: 17px; color: var(--navy); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.nav-logo span { color: #0e9f7e; }
+.back-link { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--text-mid); }
+.back-link:hover { color: var(--accent-mid); text-decoration: none; }
+.breadcrumb-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 10px 24px; font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+.breadcrumb-bar a { color: var(--navy-mid); }
+
+.drug-hero {
+  background: linear-gradient(135deg, #0a1f3a 0%, #0f4a7a 55%, var(--accent-mid) 100%);
+  padding: 40px 24px 36px; position: relative; overflow: hidden;
+}
+.drug-hero::after { content: '🩸'; position: absolute; right: 20px; bottom: -20px; font-size: 140px; opacity: 0.04; pointer-events: none; }
+.drug-hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+.drug-class-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
+.drug-hero h1 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -0.4px; }
+.drug-hero-sub { font-size: 15px; color: rgba(255,255,255,0.75); margin-bottom: 16px; }
+.drug-meta-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.dmp { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,0.85); }
+
+.page-inner { max-width: 860px; margin: 0 auto; padding: 28px 24px 64px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
+@media (max-width: 760px) { .page-inner { grid-template-columns: 1fr; } }
+
+.calc-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.calc-header { background: var(--accent-light); border-bottom: 1px solid #c3d9f5; padding: 16px 20px; display: flex; align-items: center; gap: 10px; }
+.calc-header h2 { font-size: 16px; font-weight: 600; color: var(--accent-dark); }
+.calc-body { padding: 20px; }
+
+.egfr-visual {
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 16px; margin-bottom: 16px;
+}
+.egfr-visual-title { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 10px; }
+.egfr-track { height: 10px; border-radius: 5px; position: relative; overflow: visible;
+  background: linear-gradient(90deg, #dc2626 0%, #f97316 20%, #eab308 38%, #22c55e 55%, #3b82f6 100%);
+  margin-bottom: 6px;
+}
+.egfr-pointer {
+  position: absolute; top: -4px; width: 18px; height: 18px;
+  background: var(--white); border: 2.5px solid var(--navy);
+  border-radius: 50%; transform: translateX(-50%);
+  transition: left 0.3s ease;
+  left: 0%;
+}
+.egfr-labels { display: flex; justify-content: space-between; font-size: 10px; font-family: var(--mono); color: var(--text-muted); }
+.ckd-stage-pill {
+  display: inline-block; padding: 3px 10px; border-radius: 12px;
+  font-size: 12px; font-weight: 600; margin-top: 8px;
+}
+
+.form-row { margin-bottom: 16px; }
+.form-label { display: block; font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.form-label span { color: var(--text-muted); font-weight: 400; }
+.form-input, .form-select { width: 100%; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font); font-size: 14px; color: var(--text); background: var(--white); outline: none; transition: border-color 0.15s; }
+.form-input:focus, .form-select:focus { border-color: var(--accent-mid); }
+.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.calc-btn { width: 100%; padding: 13px; background: var(--accent-mid); color: var(--white); font-family: var(--font); font-size: 15px; font-weight: 600; border: none; border-radius: var(--radius-sm); cursor: pointer; transition: background 0.15s, transform 0.1s; margin-top: 4px; }
+.calc-btn:hover { background: var(--accent-dark); }
+.calc-btn:active { transform: scale(0.98); }
+
+.result-box { background: var(--accent-light); border: 1.5px solid #93c5fd; border-radius: var(--radius-sm); padding: 18px 20px; margin-top: 16px; display: none; }
+.result-box.show { display: block; }
+.result-box.danger { background: var(--danger-bg); border-color: var(--danger-border); }
+.result-box.warn { background: var(--warn-bg); border-color: var(--warn-border); }
+.result-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; color: var(--accent-dark); }
+.result-box.danger .result-title { color: #991b1b; }
+.result-box.warn .result-title { color: #78350f; }
+.result-main { font-size: 26px; font-weight: 600; color: var(--accent-dark); line-height: 1.2; margin-bottom: 4px; }
+.result-box.danger .result-main { color: #991b1b; }
+.result-box.warn .result-main { color: #78350f; }
+.result-sub { font-size: 14px; color: var(--accent); margin-top: 6px; }
+.result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.result-item { background: var(--white); border-radius: 8px; padding: 10px 12px; }
+.result-item .rl { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.result-item .rv { font-size: 14px; font-weight: 600; color: var(--navy); font-family: var(--mono); }
+
+/* HOLD BOX */
+.hold-box { background: var(--danger-bg); border: 1.5px solid var(--danger-border); border-radius: var(--radius-sm); padding: 16px 18px; display: none; }
+.hold-box.show { display: block; }
+.hold-box h4 { color: #991b1b; font-size: 15px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.hold-box p { font-size: 13px; color: #7f1d1d; line-height: 1.65; }
+.hold-box ul { list-style: disc; padding-left: 18px; margin-top: 8px; }
+.hold-box ul li { font-size: 13px; color: #7f1d1d; line-height: 1.65; margin-bottom: 4px; }
+
+/* SIDEBAR */
+.sidebar { display: flex; flex-direction: column; gap: 16px; }
+.info-widget { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.iw-header { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 7px; }
+.iw-body { padding: 14px 16px; }
+.iw-row { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.iw-row:last-child { border-bottom: none; }
+.iw-label { color: var(--text-muted); }
+.iw-val { font-weight: 500; color: var(--text); font-family: var(--mono); font-size: 12px; text-align: right; }
+
+/* CKD STAGES TABLE in sidebar */
+.ckd-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.ckd-table th { background: var(--bg); padding: 7px 8px; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); text-align: left; }
+.ckd-table td { padding: 7px 8px; border-bottom: 1px solid var(--border); }
+.ckd-table tr:last-child td { border-bottom: none; }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+.pill-green { background: #dcfce7; color: #166534; }
+.pill-yellow { background: #fef9c3; color: #713f12; }
+.pill-orange { background: #ffedd5; color: #7c2d12; }
+.pill-red { background: #fee2e2; color: #7f1d1d; }
+
+/* CONTENT */
+.content-block { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 28px 32px; grid-column: 1 / -1; }
+.content-block h2 { font-size: 21px; font-weight: 600; color: var(--navy); margin-bottom: 14px; letter-spacing: -0.3px; }
+.content-block h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin: 22px 0 8px; }
+.content-block p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 12px; }
+.content-block ul { list-style: none; padding: 0; margin: 0 0 14px; }
+.content-block ul li { font-size: 15px; color: var(--text-mid); line-height: 1.7; padding-left: 18px; position: relative; margin-bottom: 5px; }
+.content-block ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent-mid); font-size: 12px; top: 3px; }
+.content-block table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+.content-block table th { background: var(--bg); padding: 10px 12px; text-align: left; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); }
+.content-block table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-mid); vertical-align: top; }
+
+.faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.faq-toggle { flex-shrink: 0; color: var(--accent-mid); font-size: 20px; line-height: 1; transition: transform 0.2s; }
+.faq-a { font-size: 14px; color: var(--text-mid); line-height: 1.75; padding-top: 10px; display: none; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+.disclaimer { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: var(--radius-sm); padding: 13px 16px; font-size: 13px; color: var(--warn-text); line-height: 1.6; display: flex; gap: 8px; margin-top: 18px; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-top: 14px; }
+.rel-card { background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; display: block; transition: all 0.15s; }
+.rel-card:hover { border-color: var(--accent-mid); background: var(--accent-light); text-decoration: none; }
+.rel-card .rc-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+.rel-card .rc-desc { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+.site-footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 24px; font-size: 13px; }
+.site-footer a { color: rgba(255,255,255,0.8); }
+
+@media (max-width: 600px) { .page-inner { padding: 16px 14px 48px; } .content-block { padding: 20px 16px; } .result-grid { grid-template-columns: 1fr; } .input-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="https://rxmedcalc.com/" class="nav-logo">Rx<span>Med</span>Calc</a>
+  <a href="https://rxmedcalc.com/drug-doses/" class="back-link">← Drug Doses</a>
+</nav>
+<div class="breadcrumb-bar">
+  <a href="https://rxmedcalc.com/">Home</a> ›
+  <a href="https://rxmedcalc.com/drug-doses/">Drug Doses</a> ›
+  <span>Metformin</span>
+</div>
+
+<section class="drug-hero">
+  <div class="drug-hero-inner">
+    <div class="drug-class-badge">💊 Biguanide · First-line type 2 diabetes</div>
+    <h1>Metformin Dose Calculator</h1>
+    <p class="drug-hero-sub">India · eGFR-Based Dosing · Kidney Disease Adjustment · Glycomet · Glucophage · Obimet</p>
+    <div class="drug-meta-pills">
+      <span class="dmp">Oral only</span>
+      <span class="dmp">eGFR-guided dosing</span>
+      <span class="dmp">Max 2000mg/day</span>
+      <span class="dmp">ADA · ICMR · BNF</span>
+    </div>
+  </div>
+</section>
+
+<div class="page-inner">
+
+  <!-- CALCULATOR -->
+  <div class="calc-card">
+    <div class="calc-header">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0f4a7a" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg>
+      <h2>Metformin + Renal Dose Calculator</h2>
+    </div>
+    <div class="calc-body">
+      <!-- eGFR visual slider -->
+      <div class="egfr-visual">
+        <div class="egfr-visual-title">eGFR — kidney function meter</div>
+        <div class="egfr-track" id="egfr-track">
+          <div class="egfr-pointer" id="egfr-pointer"></div>
+        </div>
+        <div class="egfr-labels"><span>0</span><span>15</span><span>30</span><span>45</span><span>60</span><span>90</span><span>120+</span></div>
+        <span class="ckd-stage-pill" id="ckd-pill" style="background:#dcfce7;color:#166534;">Enter eGFR below ↓</span>
+      </div>
+
+      <div class="input-row">
+        <div class="form-row">
+          <label class="form-label">eGFR <span>(mL/min/1.73m²)</span></label>
+          <input type="number" class="form-input" id="egfr" placeholder="e.g. 55" min="0" max="130" step="1" oninput="updateEgfrViz()">
+        </div>
+        <div class="form-row">
+          <label class="form-label">Diabetes control (HbA1c)</label>
+          <select class="form-select" id="hba1c">
+            <option value="poor">Poor control (&gt;9%) — max titration needed</option>
+            <option value="moderate" selected>Moderate (7–9%) — standard titration</option>
+            <option value="good">Well controlled (&lt;7%) — may reduce dose</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Metformin formulation</label>
+        <select class="form-select" id="formulation">
+          <option value="ir500">Immediate-release 500mg tablet (Glycomet 500 · Glucophage 500)</option>
+          <option value="ir1000">Immediate-release 1g tablet (Glycomet 1g)</option>
+          <option value="sr500">SR 500mg tablet (Glycomet SR · Obimet SR)</option>
+          <option value="sr1000">SR 1g tablet (Glycomet SR 1g)</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Planned procedure or hold situation</label>
+        <select class="form-select" id="hold">
+          <option value="none">None — routine prescribing</option>
+          <option value="contrast">Iodinated contrast (CT scan / angiography)</option>
+          <option value="surgery">Surgery (general/regional anaesthesia)</option>
+          <option value="aki">Acute illness — risk of dehydration / AKI</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="calcMetformin()">Calculate Dose & Advice</button>
+
+      <div class="result-box" id="result">
+        <div class="result-title" id="res-title">Dosing Recommendation</div>
+        <div class="result-main" id="res-dose">—</div>
+        <div class="result-sub" id="res-freq">—</div>
+        <div class="result-grid">
+          <div class="result-item"><div class="rl">CKD stage</div><div class="rv" id="res-ckd">—</div></div>
+          <div class="result-item"><div class="rl">Max daily dose</div><div class="rv" id="res-max">—</div></div>
+          <div class="result-item"><div class="rl">Start dose</div><div class="rv" id="res-start">—</div></div>
+          <div class="result-item"><div class="rl">Tablet count/day</div><div class="rv" id="res-tabs">—</div></div>
+        </div>
+      </div>
+      <div class="hold-box" id="hold-box">
+        <h4>⛔ Metformin Hold Required</h4>
+        <p id="hold-text"></p>
+        <ul id="hold-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="info-widget">
+      <div class="iw-header">💊 Drug profile</div>
+      <div class="iw-body">
+        <div class="iw-row"><span class="iw-label">Drug class</span><span class="iw-val">Biguanide</span></div>
+        <div class="iw-row"><span class="iw-label">Route</span><span class="iw-val">Oral only</span></div>
+        <div class="iw-row"><span class="iw-label">Half-life</span><span class="iw-val">4–9 hrs (plasma)</span></div>
+        <div class="iw-row"><span class="iw-label">Renal excretion</span><span class="iw-val">&gt;90% unchanged</span></div>
+        <div class="iw-row"><span class="iw-label">Protein binding</span><span class="iw-val">Negligible</span></div>
+        <div class="iw-row"><span class="iw-label">Hypoglycaemia?</span><span class="iw-val">No (monotherapy)</span></div>
+      </div>
+    </div>
+
+    <div class="info-widget">
+      <div class="iw-header">🫘 CKD dosing guide</div>
+      <div class="iw-body" style="padding: 10px 14px;">
+        <table class="ckd-table">
+          <thead><tr><th>eGFR</th><th>Stage</th><th>Metformin</th></tr></thead>
+          <tbody>
+            <tr><td>&gt;60</td><td>G1–G2</td><td><span class="pill pill-green">Full dose</span></td></tr>
+            <tr><td>45–60</td><td>G3a</td><td><span class="pill pill-yellow">Full dose, monitor</span></td></tr>
+            <tr><td>30–44</td><td>G3b</td><td><span class="pill pill-orange">Max 1000mg/day</span></td></tr>
+            <tr><td>&lt;30</td><td>G4–G5</td><td><span class="pill pill-red">STOP — contraindicated</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="info-widget">
+      <div class="iw-header">🏷️ Indian brand names</div>
+      <div class="iw-body">
+        <div class="iw-row"><span class="iw-label">IR 500mg</span><span class="iw-val">Glycomet · Glucophage · Obimet</span></div>
+        <div class="iw-row"><span class="iw-label">IR 1g</span><span class="iw-val">Glycomet 1g</span></div>
+        <div class="iw-row"><span class="iw-label">SR 500mg</span><span class="iw-val">Glycomet SR · Obimet SR</span></div>
+        <div class="iw-row"><span class="iw-label">SR 1g</span><span class="iw-val">Glycomet SR 1g</span></div>
+      </div>
+    </div>
+
+    <div class="info-widget">
+      <div class="iw-header">⛔ When to hold metformin</div>
+      <div class="iw-body" style="font-size:13px;color:var(--text-mid);line-height:1.65;">
+        <p style="margin-bottom:8px;color:#991b1b;font-weight:500;">Stop 48h before / hold during:</p>
+        <p style="margin-bottom:6px;">📷 Iodinated contrast CT / angiography</p>
+        <p style="margin-bottom:6px;">🔪 Surgery requiring general/regional anaesthesia</p>
+        <p style="margin-bottom:6px;">🤒 Acute illness with dehydration / diarrhoea / vomiting</p>
+        <p style="margin-bottom:6px;">🫘 Any acute kidney injury (AKI)</p>
+        <p>✈️ Extreme heat / exertion with inadequate fluid intake</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT BLOCK -->
+  <div class="content-block">
+    <h2>Metformin Dosing Guide — India · Kidney Disease · eGFR Adjustment</h2>
+
+    <table>
+      <thead><tr><th>eGFR (mL/min/1.73m²)</th><th>CKD Stage</th><th>Metformin dose</th><th>Max daily</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td>&gt;90</td><td>G1 (normal/high)</td><td>500mg BD → titrate up</td><td>2000 mg</td><td>Full dose, routine monitoring</td></tr>
+        <tr><td>60–90</td><td>G2 (mildly decreased)</td><td>500mg BD → titrate up</td><td>2000 mg</td><td>Full dose, annual eGFR check</td></tr>
+        <tr><td>45–59</td><td>G3a (mild-moderate)</td><td>Standard dose with caution</td><td>2000 mg</td><td>Monitor eGFR every 3–6 months</td></tr>
+        <tr><td>30–44</td><td>G3b (moderate-severe)</td><td>Maximum 500mg BD</td><td>1000 mg</td><td>Halved max dose · monitor closely</td></tr>
+        <tr><td>&lt;30</td><td>G4–G5 (severe/failure)</td><td>CONTRAINDICATED</td><td>—</td><td>Stop metformin · seek alternative</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:28px;">Metformin in Type 2 Diabetes — India Clinical Guide</h2>
+
+    <p>Metformin (biguanide) is the first-line pharmacological treatment for type 2 diabetes mellitus (T2DM) in India, recommended by both the Indian Council of Medical Research (ICMR) and the American Diabetes Association (ADA) as the preferred initial agent when lifestyle modification alone is insufficient. It works primarily by reducing hepatic glucose output (gluconeogenesis) and improving peripheral insulin sensitivity, without causing hypoglycaemia in monotherapy or weight gain.</p>
+
+    <p>In India, where type 2 diabetes affects over 77 million people and a significant proportion have concurrent chronic kidney disease (CKD) at diagnosis, appropriate metformin dosing with renal function monitoring is one of the most clinically important prescribing decisions in primary care. Lactic acidosis — metformin's most serious rare adverse effect — occurs almost exclusively in patients with contraindications to its use, primarily renal impairment. Correct renal dose adjustment essentially eliminates this risk.</p>
+
+    <h3>How to start metformin — titration for tolerability</h3>
+
+    <p>The most common reason patients stop metformin is gastrointestinal side effects — nausea, diarrhoea, and abdominal bloating. These occur in up to 30% of patients but are largely avoidable with correct titration. The standard approach: start at 500 mg once daily with dinner. After 1 week, increase to 500 mg twice daily (with breakfast and dinner). After a further 1–2 weeks, increase to 500 mg three times daily or 1000 mg twice daily, depending on tolerability and glycaemic response. The target dose for most patients is 1000–2000 mg/day. Extended-release (SR) formulations (Glycomet SR) have lower GI side effect rates and can be substituted for immediate-release if GI intolerance is significant.</p>
+
+    <h3>Metformin and kidney disease — the eGFR thresholds that matter</h3>
+
+    <p>Metformin is renally excreted almost entirely unchanged, with over 90% renal clearance. Accumulation in renal impairment increases lactic acid levels, as metformin inhibits mitochondrial complex I and shifts metabolism toward lactate production. The current evidence-based eGFR thresholds, per BNF, ADA, and KDIGO 2022 guidelines, are:</p>
+
+    <ul>
+      <li><strong>eGFR ≥ 45 mL/min/1.73m²:</strong> Metformin may be used at standard doses. Annual eGFR monitoring recommended.</li>
+      <li><strong>eGFR 30–44 mL/min/1.73m² (CKD G3b):</strong> Metformin may be continued but the maximum daily dose should be halved (maximum 1000 mg/day). eGFR should be checked every 3–6 months.</li>
+      <li><strong>eGFR &lt; 30 mL/min/1.73m² (CKD G4–G5):</strong> Metformin is contraindicated. Stop metformin and switch to an alternative glycaemic agent (SGLT2 inhibitor only if eGFR &gt;20, GLP-1 RA, or sulphonylurea under supervision).</li>
+    </ul>
+
+    <p>Note that the older threshold of eGFR &lt;60 for stopping metformin — still seen in some older Indian guidelines — is no longer recommended. The current international consensus allows metformin at reduced doses down to eGFR 30, based on safety data from large observational studies. Use the <a href="https://rxmedcalc.com/medical-calculators/egfr-calculator">eGFR Calculator on RxMedCalc</a> to calculate the patient's current eGFR before prescribing.</p>
+
+    <h3>When to hold metformin — perioperative and contrast guidance</h3>
+
+    <p>Metformin must be temporarily discontinued in certain clinical situations to prevent lactic acidosis risk, even when the patient's baseline eGFR is adequate:</p>
+    <ul>
+      <li><strong>Iodinated contrast media (CT, coronary angiography, IVP):</strong> Metformin should be held from the time of contrast administration and restarted 48 hours later, only if renal function is confirmed to be stable (eGFR unchanged from baseline). Contrast-induced nephropathy can transiently drop eGFR, causing metformin accumulation.</li>
+      <li><strong>Surgery requiring general or regional anaesthesia:</strong> Hold metformin on the day of surgery and for 48 hours post-operatively. Restart when the patient is eating, haemodynamically stable, and eGFR is checked.</li>
+      <li><strong>Acute illness with dehydration:</strong> Any illness causing significant dehydration, diarrhoea, or vomiting reduces renal perfusion and effective GFR, even if the baseline eGFR is normal. Hold metformin during the illness and restart when recovered and oral intake is restored.</li>
+      <li><strong>Hepatic impairment:</strong> Avoid metformin in hepatic failure, as impaired lactate clearance increases lactic acidosis risk.</li>
+    </ul>
+
+    <h3>Metformin and lactic acidosis — putting the risk in perspective</h3>
+
+    <p>Lactic acidosis associated with metformin use is extremely rare when the drug is used correctly — estimated at approximately 3 cases per 100,000 patient-years. This rate is comparable to that seen in diabetic patients not on metformin, suggesting that lactic acidosis in these patients is often related to the underlying disease burden (sepsis, shock, cardiac failure) rather than metformin itself. The key message for Indian clinicians: metformin is safe in patients with eGFR ≥ 30 mL/min/1.73m², provided the drug is held during the recognised high-risk situations listed above.</p>
+
+    <!-- FAQ -->
+    <h2 style="margin-top:30px;">Frequently Asked Questions</h2>
+    <div id="faq">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">When should metformin be stopped in kidney disease?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">Metformin is contraindicated when eGFR falls below 30 mL/min/1.73m² (CKD G4–G5). Between eGFR 30–44 (CKD G3b), reduce the maximum daily dose to 1000 mg. Between 45–59 (CKD G3a), continue standard dose with careful monitoring. The old threshold of stopping at eGFR &lt;60 is no longer recommended by ADA, KDIGO, or BNF.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is the starting dose of metformin in India?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">Start metformin at 500 mg once daily with dinner. After 1 week, increase to 500 mg twice daily. Titrate every 1–2 weeks as tolerated, targeting 1000–2000 mg/day. Extended-release (SR) tablets cause less GI upset and can be given once daily at night — use Glycomet SR 500 or 1g as a once-daily starting option.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Should metformin be stopped before a CT scan with contrast in India?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">Yes. Hold metformin from the time of contrast injection and restart 48 hours later, provided renal function is stable. Contrast-induced nephropathy can transiently impair renal function, causing metformin accumulation. This applies to coronary angiography, contrast CT, IVP, and any iodinated contrast procedure. It is standard practice in India to hold metformin for 48 hours post-contrast regardless of baseline eGFR.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can metformin cause hypoglycaemia?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">No. Metformin does not cause hypoglycaemia when used as monotherapy, because it reduces hepatic glucose output and sensitises insulin receptors without stimulating insulin secretion. Hypoglycaemia can occur when metformin is combined with sulphonylureas (e.g. glibenclamide) or insulin — in that case, the risk is from the sulphonylurea or insulin, not the metformin.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is the difference between Glycomet 500 and Glycomet SR 500 in India?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">Glycomet 500 is immediate-release metformin — absorbed and excreted within 6–8 hours, usually given 2–3 times daily. Glycomet SR (sustained-release) releases metformin slowly over 12+ hours, allowing once-daily or twice-daily dosing. SR has lower GI side effects and better tolerability. It is preferred for patients with significant GI side effects on IR tablets, and for once-daily convenience. The SR formulation is generally taken with dinner.</div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <span>⚠️</span>
+      <span>This calculator is a clinical decision-support tool for trained healthcare professionals. Always verify doses against the BNF, ADA guidelines, and ICMR Standards of Medical Care in Diabetes — India. Clinical judgement must be applied. Not a substitute for professional medical advice.</span>
+    </div>
+
+    <h2 style="margin-top:28px;">Related Tools</h2>
+    <div class="related-grid">
+      <a href="https://rxmedcalc.com/medical-calculators/egfr-calculator" class="rel-card"><div class="rc-name">eGFR Calculator</div><div class="rc-desc">CKD-EPI 2021 · CKD staging</div></a>
+      <a href="https://rxmedcalc.com/medical-calculators/creatinine-clearance" class="rel-card"><div class="rc-name">CrCl Calculator</div><div class="rc-desc">Cockcroft-Gault equation</div></a>
+      <a href="https://rxmedcalc.com/medical-calculators/hba1c-converter" class="rel-card"><div class="rc-name">HbA1c Converter</div><div class="rc-desc">NGSP ↔ IFCC · ADA targets</div></a>
+      <a href="https://rxmedcalc.com/drug-doses/amoxicillin/" class="rel-card"><div class="rc-name">Amoxicillin</div><div class="rc-desc">Antibiotic dosing</div></a>
+      <a href="https://rxmedcalc.com/drug-doses/azithromycin/" class="rel-card"><div class="rc-name">Azithromycin</div><div class="rc-desc">Typhoid · CAP dosing</div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <p>RxMedCalc · Free Clinical Tools for India · <a href="https://rxmedcalc.com/medical-calculators/">Medical Calculators</a> · <a href="https://rxmedcalc.com/drug-doses/">Drug Doses</a></p>
+</footer>
+
+<script>
+function updateEgfrViz() {
+  const val = parseFloat(document.getElementById('egfr').value);
+  const pointer = document.getElementById('egfr-pointer');
+  const pill = document.getElementById('ckd-pill');
+  if (isNaN(val)) return;
+  // Map 0-120 to 0-100%
+  const pct = Math.min(Math.max((val / 120) * 100, 0), 100);
+  pointer.style.left = pct + '%';
+  let stage, color, bg;
+  if (val >= 90)      { stage = 'CKD G1 — Normal/High';      color = '#166534'; bg = '#dcfce7'; }
+  else if (val >= 60) { stage = 'CKD G2 — Mildly decreased'; color = '#166534'; bg = '#dcfce7'; }
+  else if (val >= 45) { stage = 'CKD G3a — Mild-moderate';   color = '#713f12'; bg = '#fef9c3'; }
+  else if (val >= 30) { stage = 'CKD G3b — Mod-severe';      color = '#7c2d12'; bg = '#ffedd5'; }
+  else                { stage = 'CKD G4/G5 — STOP metformin';color = '#7f1d1d'; bg = '#fee2e2'; }
+  pill.style.background = bg;
+  pill.style.color = color;
+  pill.textContent = stage;
+}
+
+function calcMetformin() {
+  const egfr = parseFloat(document.getElementById('egfr').value);
+  const hba1c = document.getElementById('hba1c').value;
+  const form = document.getElementById('formulation').value;
+  const holdSit = document.getElementById('hold').value;
+
+  // Handle hold situations first
+  const holdBox = document.getElementById('hold-box');
+  const holdText = document.getElementById('hold-text');
+  const holdList = document.getElementById('hold-list');
+  if (holdSit !== 'none') {
+    holdBox.classList.add('show');
+    const holdData = {
+      contrast: {
+        text: 'Metformin should be held before and after iodinated contrast procedures.',
+        items: ['Hold metformin from the time of contrast injection', 'Restart 48 hours after contrast, only if renal function is stable', 'Applies to CT with contrast, coronary angiography, IVP, and all iodinated contrast', 'Ensure adequate hydration before the procedure']
+      },
+      surgery: {
+        text: 'Metformin should be held around surgical procedures requiring anaesthesia.',
+        items: ['Hold metformin on the morning of surgery', 'Restart 48 hours post-operatively when eating normally and haemodynamically stable', 'Confirm eGFR has not changed before restarting', 'Coordinate with the surgical / anaesthesia team']
+      },
+      aki: {
+        text: 'Metformin must be withheld during acute illness with dehydration risk.',
+        items: ['Hold metformin if the patient has significant diarrhoea, vomiting, or is unable to maintain oral intake', 'Restart when hydration is restored and oral intake is normal', 'Check renal function before restarting if illness was severe', '"Sick day rules" — counsel all patients on metformin to hold during intercurrent illness']
+      }
+    };
+    const d = holdData[holdSit];
+    holdText.textContent = d.text;
+    holdList.innerHTML = d.items.map(i => `<li>${i}</li>`).join('');
+    if (!egfr) return; // Show hold message even without eGFR
+  } else {
+    holdBox.classList.remove('show');
+  }
+
+  if (!egfr || egfr < 0) { alert('Please enter the patient\'s eGFR to receive dosing advice.'); return; }
+
+  const resultBox = document.getElementById('result');
+  const resTitle = document.getElementById('res-title');
+  const resDose = document.getElementById('res-dose');
+  const resFreq = document.getElementById('res-freq');
+  const resCkd = document.getElementById('res-ckd');
+  const resMax = document.getElementById('res-max');
+  const resStart = document.getElementById('res-start');
+  const resTabs = document.getElementById('res-tabs');
+
+  resultBox.classList.remove('danger', 'warn');
+
+  const formMg = { ir500: 500, ir1000: 1000, sr500: 500, sr1000: 1000 }[form];
+  const isSR = form.startsWith('sr');
+
+  if (egfr < 30) {
+    resultBox.classList.add('show', 'danger');
+    resTitle.textContent = '⛔ Metformin Contraindicated';
+    resDose.textContent = 'STOP Metformin';
+    resFreq.textContent = 'eGFR < 30 mL/min/1.73m² — contraindicated. Switch to alternative glycaemic agent.';
+    resCkd.textContent = 'G4–G5';
+    resMax.textContent = '0 mg';
+    resStart.textContent = 'Stop now';
+    resTabs.textContent = '0 tablets';
+    return;
+  }
+
+  let maxDaily, startDose, freq;
+  if (egfr < 45) {
+    maxDaily = 1000;
+    startDose = 500;
+    freq = isSR ? 'Once daily with dinner' : 'Twice daily with meals (500mg BD)';
+    resultBox.classList.add('show', 'warn');
+    resTitle.textContent = '⚠️ Reduced Dose — CKD G3b';
+  } else {
+    maxDaily = 2000;
+    startDose = 500;
+    freq = isSR ? 'Once daily with dinner (SR) — titrate to 1g–2g/day' : 'Start once daily → titrate to BD or TDS';
+    resultBox.classList.add('show');
+    resTitle.textContent = 'Dosing Recommendation';
+  }
+
+  const targetDaily = hba1c === 'poor' ? maxDaily : hba1c === 'moderate' ? Math.min(maxDaily, 1500) : Math.min(maxDaily, 1000);
+  const tabCount = Math.round(targetDaily / formMg);
+
+  resDose.textContent = 'Target: ' + targetDaily + ' mg/day';
+  resFreq.textContent = freq;
+  resCkd.textContent = egfr >= 90 ? 'G1' : egfr >= 60 ? 'G2' : egfr >= 45 ? 'G3a' : 'G3b';
+  resMax.textContent = maxDaily + ' mg/day';
+  resStart.textContent = startDose + ' mg once daily';
+  resTabs.textContent = tabCount + ' × ' + formMg + 'mg';
+}
+
+function toggleFaq(el) { el.closest('.faq-item').classList.toggle('open'); }
+</script>
+</body>
+</html>

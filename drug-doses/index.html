@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drug Dosage Calculators India | Weight-Based Dosing | RxMedCalc</title>
+<meta name="description" content="Free drug dosage calculators for Indian doctors and nurses. Weight-based mg/kg dosing for antibiotics, diabetes drugs, cardiac medicines. Paediatric doses, renal adjustments, Indian brand names. WHO & BNF aligned.">
+<meta name="keywords" content="drug dose calculator India, drug dosage calculator, antibiotic dose calculator, paediatric drug dosing, weight-based drug dose, renal dose adjustment, medicine dose calculator">
+<link rel="canonical" href="https://rxmedcalc.com/drug-doses/">
+
+<!-- Schema: MedicalWebPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Drug Dosage Calculators — RxMedCalc",
+  "description": "Interactive drug dosage calculators for Indian clinicians. Weight-based, paediatric, and renal-adjusted dosing for antibiotics, diabetes drugs, cardiovascular medicines and more.",
+  "url": "https://rxmedcalc.com/drug-doses/",
+  "audience": { "@type": "MedicalAudience", "audienceType": "Clinician" },
+  "specialty": "Pharmacology",
+  "provider": { "@type": "Organization", "name": "RxMedCalc", "url": "https://rxmedcalc.com" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Drug Doses", "item": "https://rxmedcalc.com/drug-doses/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do drug dosage calculators work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You enter the patient's weight, age, and kidney function. The calculator applies the standard mg/kg dosing formula and outputs the exact dose in mg, along with the volume to draw from the available formulation (syrup ml, tablet count, or IV vial)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are these drug doses suitable for India?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every calculator uses Indian brand names and available formulations, follows CDSCO-approved indications, and references Indian Standard Treatment Guidelines alongside the BNF and WHO Essential Medicines List." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these calculators for paediatric patients?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All calculators support weight-based mg/kg dosing for children. Neonatal and infant dosing limits are flagged with safety warnings where relevant." }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #0d2b45;
+  --navy-mid: #163d5c;
+  --navy-light: #1e5180;
+  --teal: #0e9f7e;
+  --teal-light: #e1f5ee;
+  --teal-mid: #1d9e75;
+  --coral: #e05a2b;
+  --coral-light: #fdf0ea;
+  --blue: #2b7be8;
+  --blue-light: #eaf2ff;
+  --amber: #d48a0c;
+  --amber-light: #fef3dc;
+  --purple: #6b5ce7;
+  --purple-light: #f0eeff;
+  --text: #1a2535;
+  --text-mid: #4a5568;
+  --text-muted: #8896a8;
+  --border: #e2e8f0;
+  --border-mid: #cbd5e1;
+  --bg: #f7f9fc;
+  --white: #ffffff;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font: 'DM Sans', sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+.topnav {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-logo {
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-logo span { color: var(--teal); }
+.nav-links { display: flex; gap: 4px; }
+.nav-link {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-mid);
+  font-weight: 400;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-link:hover { background: var(--bg); color: var(--text); }
+.nav-link.active { background: var(--teal-light); color: var(--teal-mid); font-weight: 500; }
+
+/* BREADCRUMB */
+.breadcrumb-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 24px;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.breadcrumb-bar a { color: var(--navy-light); }
+.breadcrumb-bar a:hover { text-decoration: underline; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, var(--navy-light) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 64px 24px 56px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.hero::after {
+  content: '💊';
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  font-size: 180px;
+  opacity: 0.04;
+  pointer-events: none;
+  transform: rotate(-15deg);
+}
+.hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.3px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+.hero h1 em { font-style: normal; color: #6ee9c8; }
+.hero-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  max-width: 580px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.hero-stats {
+  display: flex;
+  gap: 0;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  overflow: hidden;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  padding: 14px 24px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+.hero-stat:last-child { border-right: none; }
+.hero-stat .n { font-size: 22px; font-weight: 600; color: #fff; line-height: 1; }
+.hero-stat .l { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* SEARCH */
+.search-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  position: sticky;
+  top: 56px;
+  z-index: 90;
+}
+.search-inner { max-width: 860px; margin: 0 auto; display: flex; gap: 12px; align-items: center; }
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  transition: border-color 0.15s;
+}
+.search-box:focus-within { border-color: var(--teal); }
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--text);
+  width: 100%;
+}
+.search-box input::placeholder { color: var(--text-muted); }
+.search-icon { color: var(--text-muted); flex-shrink: 0; }
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+.filter-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  color: var(--text-mid);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+  font-family: var(--font);
+  font-weight: 400;
+}
+.filter-btn:hover { border-color: var(--teal); color: var(--teal-mid); }
+.filter-btn.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+/* MAIN LAYOUT */
+.main { max-width: 860px; margin: 0 auto; padding: 32px 24px 64px; }
+
+/* SECTION HEADERS */
+.sec-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 36px 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid var(--border);
+}
+.sec-head:first-child { margin-top: 0; }
+.sec-icon {
+  width: 36px; height: 36px;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.sec-title { font-size: 17px; font-weight: 600; color: var(--navy); }
+.sec-count { margin-left: auto; font-size: 12px; font-family: var(--mono); color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 3px 10px; }
+
+/* DRUG GRID */
+.drug-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.drug-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px 16px 22px;
+  cursor: pointer;
+  transition: all 0.18s;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.drug-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--accent-color, var(--teal));
+  border-radius: 2px 0 0 2px;
+}
+.drug-card:hover {
+  border-color: var(--accent-color, var(--teal));
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+.card-name { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.card-generic { font-size: 12px; color: var(--text-muted); font-style: italic; margin-bottom: 6px; }
+.card-desc { font-size: 13px; color: var(--text-mid); line-height: 1.5; margin-bottom: 10px; }
+.card-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+.tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.tag-teal  { background: var(--teal-light); color: #0a6b52; }
+.tag-blue  { background: var(--blue-light); color: #1a5dbf; }
+.tag-amber { background: var(--amber-light); color: #9a6000; }
+.tag-coral { background: var(--coral-light); color: #b84315; }
+.tag-purple { background: var(--purple-light); color: #4a3cbf; }
+.new-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-size: 10px; font-weight: 600;
+  padding: 2px 7px;
+  background: #ecfdf5; color: #065f46;
+  border: 1px solid #6ee7b7;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.soon-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-size: 10px;
+  padding: 2px 7px;
+  background: var(--bg); color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.card-arrow {
+  position: absolute;
+  bottom: 14px; right: 14px;
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: transform 0.15s, color 0.15s;
+}
+.drug-card:hover .card-arrow { transform: translateX(3px); color: var(--teal); }
+
+/* SEO CONTENT */
+.seo-block {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  margin-top: 40px;
+}
+.seo-block h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+.seo-block h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 24px 0 10px;
+}
+.seo-block p {
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+.seo-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+.seo-block ul li {
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 6px;
+}
+.seo-block ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-size: 13px;
+  top: 2px;
+}
+
+/* INFO CARDS */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+.info-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+.info-card .ic-icon { font-size: 22px; margin-bottom: 8px; }
+.info-card .ic-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.info-card .ic-text { font-size: 12px; color: var(--text-mid); line-height: 1.55; }
+
+/* DISCLAIMER */
+.disclaimer {
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 13px;
+  color: #78350f;
+  line-height: 1.6;
+  margin-top: 24px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* FOOTER */
+.site-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+}
+.site-footer a { color: rgba(255,255,255,0.8); text-decoration: underline; }
+
+/* HIDDEN CARDS for filter JS */
+.drug-card.hidden { display: none; }
+.section-group.hidden { display: none; }
+
+@media (max-width: 600px) {
+  .hero { padding: 40px 16px 36px; }
+  .hero-stats { flex-wrap: wrap; }
+  .main { padding: 24px 16px 48px; }
+  .seo-block { padding: 20px 18px; }
+  .drug-grid { grid-template-columns: 1fr 1fr; }
+  .topnav { padding: 0 16px; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a href="https://rxmedcalc.com/" class="nav-logo">Rx<span>Med</span>Calc</a>
+  <div class="nav-links">
+    <a href="https://rxmedcalc.com/medical-calculators/" class="nav-link">Medical Calculators</a>
+    <a href="https://rxmedcalc.com/drug-doses/" class="nav-link active">Drug Doses</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <a href="https://rxmedcalc.com/">Home</a>
+  <span>›</span>
+  <span>Drug Dosage Calculators</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">💊 Clinical Drug Reference · Built by a Doctor · India</div>
+    <h1>Drug Dosage Calculators<br>for <em>Indian Clinicians</em></h1>
+    <p class="hero-sub">Weight-based dosing, renal adjustments, paediatric formulations, and Indian brand names — for every common drug you prescribe. Free, evidence-based, no login required.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">40+</div><div class="l">Drug calculators</div></div>
+      <div class="hero-stat"><div class="n">8</div><div class="l">Specialties</div></div>
+      <div class="hero-stat"><div class="n">100%</div><div class="l">Free, no login</div></div>
+      <div class="hero-stat"><div class="n">BNF · WHO</div><div class="l">Aligned</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH + FILTERS -->
+<div class="search-wrap">
+  <div class="search-inner">
+    <div class="search-box">
+      <svg class="search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="drug-search" placeholder="Search drug name, brand, or indication…" oninput="filterDrugs()" />
+    </div>
+    <div class="filters" id="filter-row">
+      <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+      <button class="filter-btn" onclick="setFilter('antibiotic', this)">Antibiotics</button>
+      <button class="filter-btn" onclick="setFilter('paeds', this)">Paediatric</button>
+      <button class="filter-btn" onclick="setFilter('cardiac', this)">Cardiac</button>
+      <button class="filter-btn" onclick="setFilter('diabetes', this)">Diabetes</button>
+      <button class="filter-btn" onclick="setFilter('neuro', this)">Neurology</button>
+      <button class="filter-btn" onclick="setFilter('renal', this)">Renal dosing</button>
+    </div>
+  </div>
+</div>
+
+<!-- DRUG LISTINGS -->
+<main class="main">
+
+  <!-- ANTIBIOTICS -->
+  <div class="section-group" data-cat="antibiotic paeds">
+    <div class="sec-head">
+      <div class="sec-icon" style="background:#e1f5ee;">🦠</div>
+      <span class="sec-title">Antibiotics & Antimicrobials</span>
+      <span class="sec-count">8 calculators</span>
+    </div>
+    <div class="drug-grid">
+      <a href="https://rxmedcalc.com/drug-doses/amoxicillin/" class="drug-card" style="--accent-color:#1d9e75;" data-tags="antibiotic paeds renal amoxicillin augmentin penicillin">
+        <div class="new-badge">New</div>
+        <div class="card-name">Amoxicillin</div>
+        <div class="card-generic">Amoxycillin · Augmentin · Amoxil</div>
+        <div class="card-desc">Weight-based dosing for adults & children. Oral, IV formulations. ENT, chest, UTI, typhoid.</div>
+        <div class="card-tags">
+          <span class="tag tag-teal">mg/kg</span>
+          <span class="tag tag-teal">Paeds</span>
+          <span class="tag tag-blue">Oral · IV</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="https://rxmedcalc.com/drug-doses/azithromycin/" class="drug-card" style="--accent-color:#1d9e75;" data-tags="antibiotic azithromycin zithromax azee typhoid cap">
+        <div class="new-badge">New</div>
+        <div class="card-name">Azithromycin</div>
+        <div class="card-generic">Azee · Zithromax · Azithral</div>
+        <div class="card-desc">Z-pack, typhoid, CAP, and child doses. India-specific dosing for common indications.</div>
+        <div class="card-tags">
+          <span class="tag tag-teal">Typhoid</span>
+          <span class="tag tag-teal">CAP</span>
+          <span class="tag tag-blue">Paeds</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#1d9e75;" data-tags="antibiotic paeds ceftriaxone monocef iv">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Ceftriaxone</div>
+        <div class="card-generic">Monocef · Oframax</div>
+        <div class="card-desc">IV/IM dosing. Meningitis, sepsis, typhoid, community pneumonia.</div>
+        <div class="card-tags">
+          <span class="tag tag-amber">IV · IM</span>
+          <span class="tag tag-coral">Sepsis</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#1d9e75;" data-tags="antibiotic metronidazole flagyl amoeba paeds">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Metronidazole</div>
+        <div class="card-generic">Flagyl · Metrogyl</div>
+        <div class="card-desc">Anaerobic, amoebiasis, H. pylori, dental. Oral, IV, and gel dosing.</div>
+        <div class="card-tags">
+          <span class="tag tag-teal">Amoeba</span>
+          <span class="tag tag-blue">Oral · IV</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#1d9e75;" data-tags="antibiotic cotrimoxazole trimethoprim uti pcp renal">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Cotrimoxazole</div>
+        <div class="card-generic">Bactrim · Septran</div>
+        <div class="card-desc">TMP-SMX for UTI, PCP prophylaxis. Renal dose adjustment. Paed doses.</div>
+        <div class="card-tags">
+          <span class="tag tag-teal">UTI</span>
+          <span class="tag tag-blue">PCP</span>
+          <span class="tag tag-amber">Renal adj.</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#1d9e75;" data-tags="antibiotic vancomycin iv renal tdm mrsa">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Vancomycin</div>
+        <div class="card-generic">Vancocin</div>
+        <div class="card-desc">AUC/MIC-guided dosing. Renal adjustment, loading dose, TDM targets.</div>
+        <div class="card-tags">
+          <span class="tag tag-coral">TDM</span>
+          <span class="tag tag-amber">Renal adj.</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- DIABETES -->
+  <div class="section-group" data-cat="diabetes renal">
+    <div class="sec-head">
+      <div class="sec-icon" style="background:#eaf2ff;">🩸</div>
+      <span class="sec-title">Diabetes & Endocrinology</span>
+      <span class="sec-count">6 calculators</span>
+    </div>
+    <div class="drug-grid">
+      <a href="https://rxmedcalc.com/drug-doses/metformin/" class="drug-card" style="--accent-color:#2b7be8;" data-tags="diabetes metformin glycomet glucophage renal egfr ckd">
+        <div class="new-badge">New</div>
+        <div class="card-name">Metformin</div>
+        <div class="card-generic">Glycomet · Glucophage · Obimet</div>
+        <div class="card-desc">Dose titration by eGFR. CKD thresholds. When to hold. Max daily dose guidance.</div>
+        <div class="card-tags">
+          <span class="tag tag-blue">T2DM</span>
+          <span class="tag tag-blue">eGFR-based</span>
+          <span class="tag tag-amber">Renal</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#2b7be8;" data-tags="diabetes insulin basal bolus correction">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Insulin</div>
+        <div class="card-generic">Actrapid · Mixtard · Lantus</div>
+        <div class="card-desc">Basal-bolus calculator. Correction factor. Sliding scale. Dose adjustment guide.</div>
+        <div class="card-tags">
+          <span class="tag tag-blue">Basal-bolus</span>
+          <span class="tag tag-blue">Correction</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#2b7be8;" data-tags="diabetes glipizide glibenclamide daonil sulphonylurea">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Glibenclamide</div>
+        <div class="card-generic">Daonil · Glucovance</div>
+        <div class="card-desc">Sulphonylurea dosing. Hypoglycaemia risk in elderly. Start low, go slow.</div>
+        <div class="card-tags">
+          <span class="tag tag-blue">T2DM</span>
+          <span class="tag tag-amber">Elderly risk</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#2b7be8;" data-tags="thyroid levothyroxine thyroxine tsh hypothyroid endocrine">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Levothyroxine</div>
+        <div class="card-generic">Eltroxin · Thyronorm</div>
+        <div class="card-desc">TSH-guided thyroid hormone replacement. Weight-based start dose for adults & children.</div>
+        <div class="card-tags">
+          <span class="tag tag-blue">Hypothyroid</span>
+          <span class="tag tag-blue">TSH-guided</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CARDIAC -->
+  <div class="section-group" data-cat="cardiac renal">
+    <div class="sec-head">
+      <div class="sec-icon" style="background:#fdf0ea;">❤️</div>
+      <span class="sec-title">Cardiovascular Drugs</span>
+      <span class="sec-count">7 calculators</span>
+    </div>
+    <div class="drug-grid">
+      <a href="#" class="drug-card" style="--accent-color:#e05a2b;" data-tags="cardiac amlodipine amlovas norvasc hypertension">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Amlodipine</div>
+        <div class="card-generic">Amlovas · Amlopress · Norvasc</div>
+        <div class="card-desc">Hypertension & angina. Elderly and CKD adjustments. Max dose guidance.</div>
+        <div class="card-tags">
+          <span class="tag tag-coral">CCB</span>
+          <span class="tag tag-amber">HTN</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#e05a2b;" data-tags="cardiac digoxin lanoxin renal heart failure tdm">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Digoxin</div>
+        <div class="card-generic">Lanoxin</div>
+        <div class="card-desc">Loading & maintenance dose. Renal-adjusted. Toxicity thresholds and TDM.</div>
+        <div class="card-tags">
+          <span class="tag tag-coral">Heart failure</span>
+          <span class="tag tag-amber">TDM · Renal</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#e05a2b;" data-tags="cardiac heparin enoxaparin lmwh dvt acs anticoagulant renal">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Enoxaparin (LMWH)</div>
+        <div class="card-generic">Clexane · Lovenox</div>
+        <div class="card-desc">DVT prophylaxis & treatment. Weight-based. CrCl dose reduction &lt;30 mL/min.</div>
+        <div class="card-tags">
+          <span class="tag tag-coral">DVT</span>
+          <span class="tag tag-coral">ACS</span>
+          <span class="tag tag-amber">Renal adj.</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#e05a2b;" data-tags="cardiac atenolol tenormin beta blocker renal">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Atenolol</div>
+        <div class="card-generic">Tenormin · Aten</div>
+        <div class="card-desc">Beta-blocker dosing for hypertension. Renal dose reduction by CrCl.</div>
+        <div class="card-tags">
+          <span class="tag tag-coral">β-blocker</span>
+          <span class="tag tag-amber">Renal adj.</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- NEUROLOGY -->
+  <div class="section-group" data-cat="neuro paeds renal">
+    <div class="sec-head">
+      <div class="sec-icon" style="background:#f0eeff;">🧠</div>
+      <span class="sec-title">Neurology & Psychiatry</span>
+      <span class="sec-count">5 calculators</span>
+    </div>
+    <div class="drug-grid">
+      <a href="#" class="drug-card" style="--accent-color:#6b5ce7;" data-tags="neuro phenytoin eptoin dilantin epilepsy renal paeds tdm">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Phenytoin</div>
+        <div class="card-generic">Eptoin · Dilantin</div>
+        <div class="card-desc">Loading & maintenance dose. IBW-based. Albumin correction. TDM targets.</div>
+        <div class="card-tags">
+          <span class="tag tag-purple">Epilepsy</span>
+          <span class="tag tag-amber">TDM · IBW</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#6b5ce7;" data-tags="neuro valproate depakote epilepsy paeds">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Valproate</div>
+        <div class="card-generic">Valparin · Depakote</div>
+        <div class="card-desc">mg/kg dosing for epilepsy. Paediatric and adult. Hepatotoxicity monitoring thresholds.</div>
+        <div class="card-tags">
+          <span class="tag tag-purple">Epilepsy</span>
+          <span class="tag tag-blue">Paeds</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#" class="drug-card" style="--accent-color:#6b5ce7;" data-tags="neuro diazepam valium benzo seizure paeds">
+        <div class="soon-badge">Coming soon</div>
+        <div class="card-name">Diazepam</div>
+        <div class="card-generic">Valium · Calmpose</div>
+        <div class="card-desc">Acute seizure IV dosing. Rectal & IM routes. Paediatric weight-based doses.</div>
+        <div class="card-tags">
+          <span class="tag tag-purple">Acute seizure</span>
+          <span class="tag tag-blue">Paeds</span>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- SEO CONTENT BLOCK -->
+  <div class="seo-block">
+    <h2>Drug Dosage Calculators for Indian Doctors & Nurses</h2>
+
+    <p>RxMedCalc's drug dosage section provides interactive, weight-based dosing calculators designed specifically for clinical practice in India. Whether you are a doctor in a busy OPD, a nurse preparing an IV infusion, a pharmacist verifying a prescription, or a medical student learning to prescribe — these tools help you calculate the exact dose, volume, and frequency for the patient in front of you.</p>
+
+    <p>Every drug entry references Indian prescribing standards, the British National Formulary (BNF), the WHO Essential Medicines List (EML), and where applicable, Indian Standard Treatment Guidelines (STG). Indian brand names and formulation strengths commonly available in India are included, so you are not converting between unfamiliar concentrations.</p>
+
+    <h3>Why use an interactive drug dosage calculator instead of a static reference?</h3>
+
+    <p>Static drug tables list standard adult doses — but they cannot account for a 12 kg child, a patient with stage 3 CKD, or an elderly patient with reduced renal clearance. Manual dose calculation in these situations is one of the leading causes of medication errors, particularly in paediatrics and critical care. RxMedCalc eliminates arithmetic errors by letting you enter the actual patient data and computing the personalised dose automatically.</p>
+
+    <p>The calculators also flag unsafe doses, display the exact volume to draw from common Indian formulations (e.g. Calpol 125mg/5ml, Ceftriaxone 1g vial, Glycomet 500mg tablets), and show maximum daily dose limits — reducing the risk of accidental overdosing in busy clinical settings.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="ic-icon">🇮🇳</div>
+        <div class="ic-title">India-specific</div>
+        <div class="ic-text">Indian brand names, CDSCO-approved indications, local formulation strengths.</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">👶</div>
+        <div class="ic-title">Paediatric first</div>
+        <div class="ic-text">mg/kg dosing with safe upper limits for neonates, infants, and children of every weight.</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">🫘</div>
+        <div class="ic-title">Renal adjustments</div>
+        <div class="ic-text">CrCl and eGFR-based dose reduction for all renally-cleared drugs. CKD-staged guidance.</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">📋</div>
+        <div class="ic-title">Evidence-based</div>
+        <div class="ic-text">BNF, WHO EML, IAP, FOGSI, NMC guidelines cited and verified for every drug entry.</div>
+      </div>
+    </div>
+
+    <h3>Which drugs are covered?</h3>
+
+    <p>The drug dosage section is organised by specialty. Current and upcoming calculators cover:</p>
+    <ul>
+      <li><strong>Antibiotics & antimicrobials</strong> — amoxicillin, azithromycin, ceftriaxone, metronidazole, cotrimoxazole, vancomycin, and more, with indications specific to India's disease burden (typhoid, leptospirosis, drug-resistant infections).</li>
+      <li><strong>Diabetes & endocrinology</strong> — metformin with eGFR-guided dosing, insulin basal-bolus calculator, sulphonylureas, levothyroxine.</li>
+      <li><strong>Cardiovascular drugs</strong> — antihypertensives, digoxin, LMWH/enoxaparin, beta-blockers, with renal dose adjustment.</li>
+      <li><strong>Neurology & psychiatry</strong> — phenytoin (loading + maintenance with albumin correction), valproate, benzodiazepines for acute seizure.</li>
+      <li><strong>Paediatric-specific dosing</strong> — all calculators support weight-based mg/kg dosing for children, and neonatal limits where relevant.</li>
+    </ul>
+
+    <h3>How to use these calculators</h3>
+
+    <p>Each drug page has a simple three-step flow. First, enter the patient's weight in kilograms (and age for paediatric patients). Second, select the indication or infection type, which adjusts the dosing interval and duration. Third, choose the formulation available to you — the calculator outputs the exact dose in mg and the volume or tablet count for your specific strength. Renal-impaired patients: enter the CrCl or eGFR, and the calculator automatically applies the appropriate dose reduction.</p>
+
+    <h3>Linked tools on RxMedCalc</h3>
+
+    <p>The drug dosage section works closely with RxMedCalc's <a href="https://rxmedcalc.com/medical-calculators/egfr-calculator">eGFR Calculator</a> and <a href="https://rxmedcalc.com/medical-calculators/creatinine-clearance">Creatinine Clearance (Cockcroft-Gault)</a> tools. If you are unsure of a patient's renal function, calculate their eGFR first, then return to the drug page to enter the value. The <a href="https://rxmedcalc.com/medical-calculators/ibw-calculator">Ideal Body Weight Calculator</a> is linked from phenytoin and aminoglycoside pages, where IBW-based rather than actual weight dosing is clinically important.</p>
+
+    <div class="disclaimer">
+      <span>⚠️</span>
+      <span><strong>Clinical disclaimer:</strong> These calculators are decision-support tools intended for use by trained healthcare professionals. Always verify doses against current prescribing information, the BNF, and your institution's formulary. Clinical judgement must always be applied. RxMedCalc is not a substitute for professional medical advice, diagnosis, or treatment.</span>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>RxMedCalc · Free Clinical Tools for India · <a href="https://rxmedcalc.com/medical-calculators/">Medical Calculators</a> · <a href="https://rxmedcalc.com/drug-doses/">Drug Doses</a></p>
+</footer>
+
+<script>
+function filterDrugs() {
+  const q = document.getElementById('drug-search').value.toLowerCase().trim();
+  document.querySelectorAll('.drug-card').forEach(card => {
+    const tags = card.dataset.tags || '';
+    const text = (card.innerText + ' ' + tags).toLowerCase();
+    card.classList.toggle('hidden', q && !text.includes(q));
+  });
+}
+
+let activeFilter = 'all';
+
+function setFilter(cat, btn) {
+  activeFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.drug-card').forEach(card => {
+    if (cat === 'all') {
+      card.classList.remove('hidden');
+    } else {
+      const tags = card.dataset.tags || '';
+      card.classList.toggle('hidden', !tags.includes(cat));
+    }
+  });
+  document.querySelectorAll('.section-group').forEach(sec => {
+    const cards = sec.querySelectorAll('.drug-card:not(.hidden)');
+    sec.classList.toggle('hidden', cards.length === 0);
+  });
+}
+</script>
+</body>
+</html>

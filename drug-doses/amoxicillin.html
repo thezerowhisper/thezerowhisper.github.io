@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amoxicillin Dose Calculator India | mg/kg Paediatric & Adult | RxMedCalc</title>
+<meta name="description" content="Free amoxicillin dosage calculator for India. Weight-based mg/kg dosing for children and adults. Augmentin, Amoxil, Mox brand doses. ENT, chest, UTI, typhoid indications. Renal dose adjustment included.">
+<meta name="keywords" content="amoxicillin dose calculator India, amoxicillin dosage for children kg, augmentin dose calculator, amoxicillin pediatric dose, amoxicillin dose mg/kg, amoxicillin syrup dose child India">
+<link rel="canonical" href="https://rxmedcalc.com/drug-doses/amoxicillin/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Amoxicillin Dose Calculator — RxMedCalc",
+  "description": "Weight-based amoxicillin dosage calculator for paediatric and adult patients in India. Covers ENT, respiratory, UTI, and typhoid indications.",
+  "url": "https://rxmedcalc.com/drug-doses/amoxicillin/",
+  "audience": { "@type": "MedicalAudience", "audienceType": "Clinician" },
+  "about": { "@type": "Drug", "name": "Amoxicillin", "nonproprietaryName": "Amoxicillin trihydrate" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Drug Doses", "item": "https://rxmedcalc.com/drug-doses/" },
+    { "@type": "ListItem", "position": 3, "name": "Amoxicillin", "item": "https://rxmedcalc.com/drug-doses/amoxicillin/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the amoxicillin dose for children in India?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The standard paediatric amoxicillin dose is 25–50 mg/kg/day divided into 3 doses every 8 hours for most infections. For severe infections (e.g. pneumonia), up to 90 mg/kg/day may be used. The maximum single dose is 500 mg for mild infections and 875 mg for severe infections. Always use weight-based dosing — age-based estimates are less accurate." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the amoxicillin dose for a 10 kg child?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For a 10 kg child at standard dosing (25 mg/kg/day ÷ 3 doses): 83 mg per dose, every 8 hours. In Amoxicillin 125mg/5ml syrup, that is approximately 3.3 ml per dose. At high dosing (50 mg/kg/day): 167 mg per dose = 6.7 ml of 125mg/5ml syrup." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can amoxicillin be used for typhoid in India?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Amoxicillin is no longer a first-line treatment for typhoid in India due to widespread Salmonella typhi resistance. Azithromycin or ceftriaxone are preferred for uncomplicated typhoid. Amoxicillin may be used only if susceptibility is confirmed on culture and sensitivity testing." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does amoxicillin dose need to be reduced in kidney disease?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. For CrCl 10–30 mL/min, the dose interval should be extended to every 12 hours. For CrCl less than 10 mL/min, extend to every 24 hours. Use the standard dose amount but reduce the frequency. Severe renal impairment also increases the risk of crystalluria — ensure adequate hydration." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Amoxicillin and Augmentin (Amoxicillin-Clavulanate)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Augmentin combines amoxicillin with clavulanate, a beta-lactamase inhibitor. It covers beta-lactamase-producing organisms that plain amoxicillin cannot. Augmentin is preferred for complicated infections (sinusitis, otitis media, animal bites, diabetic foot infections). Dose calculation is based on the amoxicillin component (e.g. Augmentin 625 mg = 500 mg amoxicillin + 125 mg clavulanate)." }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --teal: #0e9f7e; --teal-mid: #1d9e75; --teal-light: #e1f5ee; --teal-dark: #065f46;
+  --navy: #0d2b45; --navy-mid: #163d5c;
+  --text: #1a2535; --text-mid: #4a5568; --text-muted: #8896a8;
+  --border: #e2e8f0; --bg: #f7f9fc; --white: #ffffff;
+  --amber: #d48a0c; --amber-light: #fef3dc; --coral: #e05a2b; --coral-light: #fdf0ea;
+  --radius: 12px; --radius-sm: 8px;
+  --font: 'DM Sans', sans-serif; --mono: 'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topnav {
+  background: var(--white); border-bottom: 1px solid var(--border);
+  padding: 0 24px; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+}
+.nav-logo { font-weight: 600; font-size: 17px; color: var(--navy); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.nav-logo span { color: var(--teal); }
+.back-link { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--text-mid); }
+.back-link:hover { color: var(--teal); text-decoration: none; }
+
+.breadcrumb-bar {
+  background: var(--white); border-bottom: 1px solid var(--border);
+  padding: 10px 24px; font-size: 13px; color: var(--text-muted);
+  display: flex; align-items: center; gap: 6px;
+}
+.breadcrumb-bar a { color: var(--navy-mid); }
+
+/* DRUG HERO */
+.drug-hero {
+  background: linear-gradient(135deg, #0a3d1e 0%, #0e6647 55%, var(--teal) 100%);
+  padding: 40px 24px 36px; position: relative; overflow: hidden;
+}
+.drug-hero::after {
+  content: '🦠';
+  position: absolute; right: 20px; bottom: -20px;
+  font-size: 140px; opacity: 0.05; pointer-events: none;
+}
+.drug-hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+.drug-class-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,0.85);
+  margin-bottom: 12px;
+}
+.drug-hero h1 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -0.4px; }
+.drug-hero-sub { font-size: 15px; color: rgba(255,255,255,0.75); margin-bottom: 16px; }
+.drug-meta-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.dmp {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,0.85);
+}
+
+/* LAYOUT */
+.page-inner { max-width: 860px; margin: 0 auto; padding: 28px 24px 64px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
+@media (max-width: 760px) { .page-inner { grid-template-columns: 1fr; } .sidebar { order: -1; } }
+
+/* CALCULATOR CARD */
+.calc-card {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+  grid-column: 1;
+}
+.calc-header {
+  background: var(--teal-light); border-bottom: 1px solid #a7e3cc;
+  padding: 16px 20px; display: flex; align-items: center; gap: 10px;
+}
+.calc-header h2 { font-size: 16px; font-weight: 600; color: var(--teal-dark); }
+.calc-body { padding: 20px; }
+
+.form-row { margin-bottom: 16px; }
+.form-label { display: block; font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.form-label span { color: var(--text-muted); font-weight: 400; }
+.form-input {
+  width: 100%; padding: 10px 12px; border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); font-family: var(--font); font-size: 14px;
+  color: var(--text); background: var(--white); outline: none; transition: border-color 0.15s;
+}
+.form-input:focus { border-color: var(--teal); }
+.form-select {
+  width: 100%; padding: 10px 12px; border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); font-family: var(--font); font-size: 14px;
+  color: var(--text); background: var(--white); outline: none; cursor: pointer;
+  transition: border-color 0.15s;
+}
+.form-select:focus { border-color: var(--teal); }
+.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.calc-btn {
+  width: 100%; padding: 13px; background: var(--teal-mid);
+  color: var(--white); font-family: var(--font); font-size: 15px; font-weight: 600;
+  border: none; border-radius: var(--radius-sm); cursor: pointer;
+  transition: background 0.15s, transform 0.1s; margin-top: 4px;
+}
+.calc-btn:hover { background: #158c66; }
+.calc-btn:active { transform: scale(0.98); }
+
+/* RESULT */
+.result-box {
+  background: var(--teal-light); border: 1.5px solid #6ee7b7;
+  border-radius: var(--radius-sm); padding: 18px 20px; margin-top: 16px;
+  display: none;
+}
+.result-box.show { display: block; }
+.result-title { font-size: 13px; font-weight: 600; color: var(--teal-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.result-main { font-size: 26px; font-weight: 600; color: var(--teal-dark); line-height: 1.2; margin-bottom: 4px; }
+.result-sub { font-size: 14px; color: #0a6b52; margin-top: 6px; }
+.result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.result-item { background: var(--white); border-radius: 8px; padding: 10px 12px; }
+.result-item .rl { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.result-item .rv { font-size: 15px; font-weight: 600; color: var(--teal-dark); font-family: var(--mono); }
+.warning-box {
+  background: #fffbeb; border: 1px solid #fcd34d;
+  border-radius: var(--radius-sm); padding: 12px 14px;
+  font-size: 13px; color: #78350f; margin-top: 10px;
+  display: none;
+}
+.warning-box.show { display: flex; gap: 8px; align-items: flex-start; }
+.renal-box {
+  background: var(--coral-light); border: 1px solid #f9c3a6;
+  border-radius: var(--radius-sm); padding: 12px 14px;
+  font-size: 13px; color: #7a2a0f; margin-top: 10px;
+  display: none;
+}
+.renal-box.show { display: block; }
+
+/* SIDEBAR */
+.sidebar { grid-column: 2; display: flex; flex-direction: column; gap: 16px; }
+@media (max-width: 760px) { .sidebar { grid-column: 1; } }
+
+.info-widget {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+}
+.iw-header {
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+  font-size: 13px; font-weight: 600; color: var(--navy);
+  display: flex; align-items: center; gap: 7px;
+}
+.iw-body { padding: 14px 16px; }
+.iw-row { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.iw-row:last-child { border-bottom: none; }
+.iw-label { color: var(--text-muted); }
+.iw-val { font-weight: 500; color: var(--text); font-family: var(--mono); font-size: 12px; }
+
+.dose-table-wrap { overflow-x: auto; }
+.dose-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.dose-table th { background: var(--bg); padding: 8px 10px; text-align: left; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); white-space: nowrap; }
+.dose-table td { padding: 9px 10px; border-bottom: 1px solid var(--border); color: var(--text-mid); vertical-align: top; }
+.dose-table tr:last-child td { border-bottom: none; }
+.dose-table tr:hover td { background: var(--bg); }
+
+/* CONTENT */
+.content-block { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin-top: 0; grid-column: 1 / -1; }
+.content-block h2 { font-size: 21px; font-weight: 600; color: var(--navy); margin-bottom: 14px; letter-spacing: -0.3px; }
+.content-block h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin: 22px 0 8px; }
+.content-block p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 12px; }
+.content-block ul { list-style: none; padding: 0; margin: 0 0 14px; }
+.content-block ul li { font-size: 15px; color: var(--text-mid); line-height: 1.7; padding-left: 18px; position: relative; margin-bottom: 5px; }
+.content-block ul li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-size: 12px; top: 3px; }
+.content-block table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+.content-block table th { background: var(--bg); padding: 10px 12px; text-align: left; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); }
+.content-block table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-mid); }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.faq-toggle { flex-shrink: 0; color: var(--teal); font-size: 20px; line-height: 1; transition: transform 0.2s; }
+.faq-a { font-size: 14px; color: var(--text-mid); line-height: 1.75; padding-top: 10px; display: none; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+.disclaimer {
+  background: #fffbeb; border: 1px solid #fcd34d; border-radius: var(--radius-sm);
+  padding: 13px 16px; font-size: 13px; color: #78350f; line-height: 1.6;
+  display: flex; gap: 8px; margin-top: 18px;
+}
+
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-top: 14px; }
+.rel-card {
+  background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  padding: 12px 14px; display: block; transition: all 0.15s;
+}
+.rel-card:hover { border-color: var(--teal); background: var(--teal-light); text-decoration: none; }
+.rel-card .rc-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+.rel-card .rc-desc { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+.site-footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 24px; font-size: 13px; }
+.site-footer a { color: rgba(255,255,255,0.8); }
+
+@media (max-width: 600px) {
+  .page-inner { padding: 16px 14px 48px; gap: 16px; }
+  .content-block { padding: 20px 16px; }
+  .result-grid { grid-template-columns: 1fr; }
+  .input-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="https://rxmedcalc.com/" class="nav-logo">Rx<span>Med</span>Calc</a>
+  <a href="https://rxmedcalc.com/drug-doses/" class="back-link">← Drug Doses</a>
+</nav>
+
+<div class="breadcrumb-bar">
+  <a href="https://rxmedcalc.com/">Home</a> ›
+  <a href="https://rxmedcalc.com/drug-doses/">Drug Doses</a> ›
+  <span>Amoxicillin</span>
+</div>
+
+<!-- HERO -->
+<section class="drug-hero">
+  <div class="drug-hero-inner">
+    <div class="drug-class-badge">💊 Aminopenicillin · Beta-lactam antibiotic</div>
+    <h1>Amoxicillin Dose Calculator</h1>
+    <p class="drug-hero-sub">India · Paediatric & Adult · mg/kg Weight-Based Dosing · Augmentin · Amoxil · Mox</p>
+    <div class="drug-meta-pills">
+      <span class="dmp">Oral · IV</span>
+      <span class="dmp">25–90 mg/kg/day</span>
+      <span class="dmp">Renal adjustment</span>
+      <span class="dmp">BNF · IAP guidelines</span>
+    </div>
+  </div>
+</section>
+
+<div class="page-inner">
+
+  <!-- CALCULATOR -->
+  <div class="calc-card">
+    <div class="calc-header">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#065f46" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg>
+      <h2>Amoxicillin Dose Calculator</h2>
+    </div>
+    <div class="calc-body">
+      <div class="form-row">
+        <label class="form-label">Patient weight <span>(kg)</span></label>
+        <input type="number" class="form-input" id="weight" placeholder="e.g. 15" min="0.5" max="150" step="0.5">
+      </div>
+      <div class="input-row">
+        <div class="form-row">
+          <label class="form-label">Patient age <span>(years)</span></label>
+          <input type="number" class="form-input" id="age" placeholder="e.g. 5" min="0" max="100" step="0.5">
+        </div>
+        <div class="form-row">
+          <label class="form-label">CrCl <span>(optional, mL/min)</span></label>
+          <input type="number" class="form-input" id="crcl" placeholder="e.g. 45" min="1" max="200">
+        </div>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Indication / Infection type</label>
+        <select class="form-select" id="indication">
+          <option value="mild">Mild infection — ENT, URTI, tonsillitis</option>
+          <option value="moderate">Moderate infection — chest, UTI, sinusitis</option>
+          <option value="severe">Severe / high-dose — CAP, otitis media, H. pylori</option>
+          <option value="augmentin">Augmentin (Amoxicillin + Clavulanate)</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Available formulation</label>
+        <select class="form-select" id="formulation">
+          <option value="syrup125">Syrup 125 mg/5ml (Amoxil · Mox · Novamox)</option>
+          <option value="syrup250">Syrup 250 mg/5ml (Amoxil 250)</option>
+          <option value="tab250">Capsule / Tablet 250 mg</option>
+          <option value="tab500">Capsule / Tablet 500 mg</option>
+          <option value="tab875">Tablet 875 mg (Augmentin 875)</option>
+          <option value="iv1g">IV Injection 1g vial</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="calcAmox()">Calculate Dose</button>
+
+      <div class="result-box" id="result">
+        <div class="result-title">Recommended Dose</div>
+        <div class="result-main" id="res-dose">—</div>
+        <div class="result-sub" id="res-freq">—</div>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="rl">Per dose (mg)</div>
+            <div class="rv" id="res-mg">—</div>
+          </div>
+          <div class="result-item">
+            <div class="rl">Formulation volume</div>
+            <div class="rv" id="res-vol">—</div>
+          </div>
+          <div class="result-item">
+            <div class="rl">Daily total (mg)</div>
+            <div class="rv" id="res-daily">—</div>
+          </div>
+          <div class="result-item">
+            <div class="rl">Duration</div>
+            <div class="rv" id="res-dur">—</div>
+          </div>
+        </div>
+      </div>
+      <div class="warning-box" id="warn-box">
+        <span>⚠️</span><span id="warn-text"></span>
+      </div>
+      <div class="renal-box" id="renal-box">
+        <strong>🫘 Renal dose adjustment:</strong> <span id="renal-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="info-widget">
+      <div class="iw-header">💊 Drug profile</div>
+      <div class="iw-body">
+        <div class="iw-row"><span class="iw-label">Drug class</span><span class="iw-val">Aminopenicillin</span></div>
+        <div class="iw-row"><span class="iw-label">Route</span><span class="iw-val">Oral, IV, IM</span></div>
+        <div class="iw-row"><span class="iw-label">Half-life</span><span class="iw-val">1–1.5 hrs</span></div>
+        <div class="iw-row"><span class="iw-label">Bioavailability</span><span class="iw-val">~74% (oral)</span></div>
+        <div class="iw-row"><span class="iw-label">Renal excretion</span><span class="iw-val">60–70%</span></div>
+        <div class="iw-row"><span class="iw-label">Protein binding</span><span class="iw-val">17–20%</span></div>
+      </div>
+    </div>
+    <div class="info-widget">
+      <div class="iw-header">🏷️ Indian brand names</div>
+      <div class="iw-body">
+        <div class="iw-row"><span class="iw-label">Syrup 125mg/5ml</span><span class="iw-val">Novamox · Mox · Amoxil</span></div>
+        <div class="iw-row"><span class="iw-label">Syrup 250mg/5ml</span><span class="iw-val">Amoxil 250 · Clavam</span></div>
+        <div class="iw-row"><span class="iw-label">Capsule 250mg</span><span class="iw-val">Amoxil · Wymox</span></div>
+        <div class="iw-row"><span class="iw-label">Capsule 500mg</span><span class="iw-val">Novamox 500 · Mox</span></div>
+        <div class="iw-row"><span class="iw-label">Augmentin 625</span><span class="iw-val">Augmentin · Clavam 625</span></div>
+        <div class="iw-row"><span class="iw-label">IV 500mg / 1g</span><span class="iw-val">Amoxil IV · Generic</span></div>
+      </div>
+    </div>
+    <div class="info-widget">
+      <div class="iw-header">⚠️ Contraindications</div>
+      <div class="iw-body" style="font-size:13px;color:var(--text-mid);line-height:1.65;">
+        <p style="margin-bottom:8px;">✗ Penicillin hypersensitivity / allergy</p>
+        <p style="margin-bottom:8px;">✗ Infectious mononucleosis (EBV) — causes rash</p>
+        <p style="margin-bottom:8px;">✗ Dose reduce in CrCl &lt;30 mL/min</p>
+        <p>✗ Caution in hepatic disease (Augmentin)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOSE REFERENCE TABLE -->
+  <div class="content-block">
+    <h2>Amoxicillin Dosing Reference Table — India</h2>
+    <div class="dose-table-wrap">
+      <table class="dose-table">
+        <thead>
+          <tr>
+            <th>Indication</th>
+            <th>Dose</th>
+            <th>Frequency</th>
+            <th>Duration</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Tonsillitis / pharyngitis (child)</td><td>40 mg/kg/day</td><td>TDS (every 8h)</td><td>7–10 days</td><td>Max 1.5g/day</td></tr>
+          <tr><td>Otitis media (child)</td><td>80–90 mg/kg/day</td><td>BD or TDS</td><td>5–10 days</td><td>High dose for resistant S. pneumoniae</td></tr>
+          <tr><td>URTI / mild chest (adult)</td><td>500 mg</td><td>TDS</td><td>5–7 days</td><td>Standard adult dose</td></tr>
+          <tr><td>CAP — community pneumonia (adult)</td><td>1g</td><td>TDS</td><td>5–7 days</td><td>NICE/BTS guidelines</td></tr>
+          <tr><td>UTI — uncomplicated</td><td>500 mg</td><td>TDS</td><td>3–7 days</td><td>Check local resistance patterns</td></tr>
+          <tr><td>H. pylori (with clarithromycin + PPI)</td><td>1g</td><td>BD</td><td>7–14 days</td><td>Part of triple therapy</td></tr>
+          <tr><td>Augmentin 625 (adult)</td><td>625 mg (500+125)</td><td>TDS</td><td>5–7 days</td><td>Animal bites, diabetic foot, sinusitis</td></tr>
+          <tr><td>IV — severe infection (adult)</td><td>1–2g</td><td>TDS–QDS</td><td>As directed</td><td>Hospital setting, IV access</td></tr>
+          <tr><td>Neonate (&lt;1 month)</td><td>30 mg/kg/dose</td><td>BD</td><td>As directed</td><td>Specialist supervision required</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">TDS = three times daily · BD = twice daily · QDS = four times daily. Always use weight-based dosing for children under 12 years.</p>
+
+    <h2 style="margin-top:28px;">About Amoxicillin — Clinical Guide for Indian Doctors</h2>
+
+    <p>Amoxicillin is a broad-spectrum aminopenicillin antibiotic and one of the most widely prescribed drugs in India. It is bactericidal, acting by inhibiting bacterial cell wall synthesis through binding to penicillin-binding proteins (PBPs). It covers most Gram-positive cocci (Streptococcus, Enterococcus) and several Gram-negative organisms (Haemophilus influenzae, E. coli, Salmonella). It does not cover beta-lactamase-producing bacteria, which is where Augmentin (amoxicillin-clavulanate) becomes relevant.</p>
+
+    <p>In the Indian context, amoxicillin remains a cornerstone drug for primary care — used in community-acquired respiratory tract infections, otitis media, streptococcal tonsillitis, uncomplicated UTIs, H. pylori eradication, and dental infections. It is on the WHO Essential Medicines List and is available in multiple affordable formulations across India, including the widely recognised brands Novamox, Mox, and Augmentin.</p>
+
+    <h3>Paediatric dosing — what Indian doctors need to know</h3>
+
+    <p>Weight-based dosing is essential for children — age-based estimates can lead to significant under- or over-dosing. The standard paediatric dose is 25–50 mg/kg/day divided into three doses (every 8 hours). For high-priority infections such as otitis media (where Streptococcus pneumoniae resistance is increasing in India), the IAP recommends high-dose amoxicillin at 80–90 mg/kg/day. This calculator supports both standard and high-dose regimens depending on the indication selected.</p>
+
+    <p>For the syrup formulations most used in Indian paediatric practice — Novamox 125mg/5ml and Amoxil 250mg/5ml — the calculator outputs the exact volume in millilitres, reducing the risk of dispensing errors. Note that 125mg/5ml and 250mg/5ml have very different concentrations; always check the label before dispensing.</p>
+
+    <h3>Augmentin (Amoxicillin-Clavulanate) dosing</h3>
+
+    <p>Augmentin adds clavulanate to amoxicillin, protecting it from beta-lactamase-producing organisms. It is the drug of choice for animal bites, sinusitis that has failed plain amoxicillin, diabetic foot infections (mild), aspiration pneumonia, and secondary bacterial infections of the skin. In India, the most common adult formulations are Augmentin 625mg (500mg amoxicillin + 125mg clavulanate, given TDS) and Augmentin 1g (875mg + 125mg, given BD). The dose calculation in this tool is based on the amoxicillin component.</p>
+
+    <h3>Resistance patterns in India</h3>
+
+    <p>Beta-lactamase production is widespread among common Indian pathogens — particularly H. influenzae, E. coli, and Klebsiella. Plain amoxicillin is therefore not appropriate for urinary tract infections without local sensitivity data, and is not used for Klebsiella, MRSA, or Pseudomonas infections. For Salmonella typhi (typhoid), significant amoxicillin resistance has been documented in India, and it is no longer recommended as empirical treatment for typhoid fever — azithromycin or ceftriaxone are the current first-line options per NVBDCP and WHO guidelines.</p>
+
+    <h3>Renal dose adjustment</h3>
+    <p>Amoxicillin is predominantly renally excreted. For patients with CrCl below 30 mL/min, the dosing interval should be extended rather than the dose reduced. For CrCl 10–30 mL/min: extend to every 12 hours. For CrCl &lt;10 mL/min or dialysis: extend to every 24 hours. High doses (for CAP or severe infections) should be used with caution in renal impairment. Use our <a href="https://rxmedcalc.com/medical-calculators/creatinine-clearance">Creatinine Clearance Calculator</a> to determine the patient's CrCl first.</p>
+
+    <h3>Drug interactions</h3>
+    <ul>
+      <li><strong>Warfarin:</strong> Amoxicillin can increase INR — monitor closely in patients on warfarin.</li>
+      <li><strong>Methotrexate:</strong> Penicillins reduce methotrexate renal clearance — risk of methotrexate toxicity.</li>
+      <li><strong>Oral contraceptives:</strong> Theoretical reduction in efficacy — advise additional contraception during course (debated evidence).</li>
+      <li><strong>Allopurinol:</strong> Increases risk of amoxicillin-induced skin rash — avoid combination where possible.</li>
+      <li><strong>Probenecid:</strong> Reduces renal tubular secretion of amoxicillin, increasing plasma levels — can be used deliberately to increase levels in selected infections.</li>
+    </ul>
+
+    <!-- FAQ -->
+    <h2 style="margin-top:30px;">Frequently Asked Questions</h2>
+    <div id="faq">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is the amoxicillin dose for children by weight in India?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">The standard paediatric amoxicillin dose is 25–50 mg/kg/day divided into 3 doses (every 8 hours). For a 10 kg child at 40 mg/kg/day: 133 mg per dose = approximately 5.3 ml of 125mg/5ml syrup, or 2.7 ml of 250mg/5ml syrup. For high-dose otitis media (80 mg/kg/day): 267 mg per dose. The calculator above will compute the exact volume for any weight and formulation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is the difference between Amoxicillin 125mg/5ml and 250mg/5ml syrup?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">Both are amoxicillin suspensions but at different concentrations. 125mg/5ml means 1 teaspoon (5ml) contains 125mg — used for younger, lighter children. 250mg/5ml means 1 teaspoon contains 250mg — used for older or heavier children or where a smaller volume is easier to administer. Confusing the two can result in a 2× dosing error. Always read the label carefully and specify the concentration when prescribing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can amoxicillin be used for typhoid in India?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">Amoxicillin is no longer recommended as empirical treatment for typhoid fever in India due to widespread Salmonella typhi resistance. Current guidelines (WHO 2018, NVBDCP India) recommend azithromycin for uncomplicated typhoid and ceftriaxone for complicated or severe cases. Amoxicillin may only be used if blood or stool culture confirms susceptibility.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How do I adjust amoxicillin dose for kidney disease?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">For CrCl 10–30 mL/min: dose every 12 hours instead of every 8 hours. For CrCl &lt;10 mL/min: dose every 24 hours. For patients on haemodialysis: give a supplementary dose after each dialysis session. The total daily dose may need reduction in severe renal impairment. Use the CrCl box in the calculator above to get an automatic adjustment recommendation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is amoxicillin safe in pregnancy and breastfeeding?<span class="faq-toggle">+</span></div>
+        <div class="faq-a">Yes. Amoxicillin is considered safe in all trimesters of pregnancy (Category B) and during breastfeeding. It is the antibiotic of choice for many infections in pregnant women including UTIs and Group B Streptococcus colonisation. Standard dosing applies — no dose adjustment required for pregnancy alone.</div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <span>⚠️</span>
+      <span>This calculator is a clinical decision-support tool for trained healthcare professionals. Always verify doses against the BNF, CDSCO prescribing information, and your institution's antibiotic policy. Apply clinical judgement. Not a substitute for medical advice.</span>
+    </div>
+
+    <h2 style="margin-top:28px;">Related Tools</h2>
+    <div class="related-grid">
+      <a href="https://rxmedcalc.com/drug-doses/azithromycin/" class="rel-card"><div class="rc-name">Azithromycin</div><div class="rc-desc">Typhoid, CAP, child doses</div></a>
+      <a href="https://rxmedcalc.com/medical-calculators/creatinine-clearance" class="rel-card"><div class="rc-name">CrCl Calculator</div><div class="rc-desc">Cockcroft-Gault equation</div></a>
+      <a href="https://rxmedcalc.com/medical-calculators/egfr-calculator" class="rel-card"><div class="rc-name">eGFR Calculator</div><div class="rc-desc">CKD-EPI 2021, CKD staging</div></a>
+      <a href="https://rxmedcalc.com/drug-doses/metformin/" class="rel-card"><div class="rc-name">Metformin</div><div class="rc-desc">eGFR-based dosing</div></a>
+      <a href="https://rxmedcalc.com/medical-calculators/curb65" class="rel-card"><div class="rc-name">CURB-65</div><div class="rc-desc">Pneumonia severity score</div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <p>RxMedCalc · Free Clinical Tools for India · <a href="https://rxmedcalc.com/medical-calculators/">Medical Calculators</a> · <a href="https://rxmedcalc.com/drug-doses/">Drug Doses</a></p>
+</footer>
+
+<script>
+const DOSE_PROFILES = {
+  mild:      { mgPerKgPerDay: 40,  doses: 3, label: 'every 8 hours (TDS)',  dur: '5–7 days',  maxPerDay: 1500 },
+  moderate:  { mgPerKgPerDay: 50,  doses: 3, label: 'every 8 hours (TDS)',  dur: '7 days',    maxPerDay: 3000 },
+  severe:    { mgPerKgPerDay: 90,  doses: 3, label: 'every 8 hours (TDS)',  dur: '5–10 days', maxPerDay: 3000 },
+  augmentin: { mgPerKgPerDay: 45,  doses: 3, label: 'every 8 hours (TDS)',  dur: '5–7 days',  maxPerDay: 1500 }
+};
+const FORMULATIONS = {
+  syrup125: { label: 'ml (125mg/5ml)', mgPer5ml: 125 },
+  syrup250: { label: 'ml (250mg/5ml)', mgPer5ml: 250 },
+  tab250:   { label: 'tablets (250mg)',  mgPerUnit: 250 },
+  tab500:   { label: 'tablets (500mg)',  mgPerUnit: 500 },
+  tab875:   { label: 'tablets (875mg)',  mgPerUnit: 875 },
+  iv1g:     { label: 'g IV (1g vial)',   mgPerUnit: 1000 }
+};
+
+function calcAmox() {
+  const wt = parseFloat(document.getElementById('weight').value);
+  const age = parseFloat(document.getElementById('age').value) || null;
+  const crcl = parseFloat(document.getElementById('crcl').value) || null;
+  const ind = document.getElementById('indication').value;
+  const form = document.getElementById('formulation').value;
+
+  if (!wt || wt < 0.5 || wt > 300) { alert('Please enter a valid weight.'); return; }
+
+  const profile = DOSE_PROFILES[ind];
+  const rawDailyMg = wt * profile.mgPerKgPerDay;
+  const cappedDaily = Math.min(rawDailyMg, profile.maxPerDay);
+  const perDoseMg = cappedDaily / profile.doses;
+  const roundedDose = Math.round(perDoseMg / 5) * 5; // round to nearest 5mg
+  const fObj = FORMULATIONS[form];
+
+  let volStr = '';
+  if (fObj.mgPer5ml) {
+    const ml = (roundedDose / fObj.mgPer5ml) * 5;
+    volStr = ml.toFixed(1) + ' ' + fObj.label;
+  } else {
+    const units = roundedDose / fObj.mgPerUnit;
+    volStr = units.toFixed(2) + ' ' + fObj.label;
+  }
+
+  document.getElementById('res-dose').textContent = roundedDose + ' mg per dose';
+  document.getElementById('res-freq').textContent = profile.label + (age && age < 1 ? ' — verify with paediatrician for age < 1 year' : '');
+  document.getElementById('res-mg').textContent = roundedDose + ' mg';
+  document.getElementById('res-vol').textContent = volStr;
+  document.getElementById('res-daily').textContent = (roundedDose * profile.doses) + ' mg';
+  document.getElementById('res-dur').textContent = profile.dur;
+  document.getElementById('result').classList.add('show');
+
+  // Warning: dose capped?
+  const warnBox = document.getElementById('warn-box');
+  const warnText = document.getElementById('warn-text');
+  if (rawDailyMg > profile.maxPerDay) {
+    warnText.textContent = 'Dose capped at adult maximum (' + profile.maxPerDay + ' mg/day). The weight-based calculation exceeded the standard adult maximum.';
+    warnBox.classList.add('show');
+  } else if (age !== null && age < 0.083) {
+    warnText.textContent = 'Patient is under 1 month old (neonate). Amoxicillin dosing in neonates requires specialist supervision. Standard mg/kg dosing does not apply — please consult a neonatologist.';
+    warnBox.classList.add('show');
+  } else {
+    warnBox.classList.remove('show');
+  }
+
+  // Renal box
+  const renalBox = document.getElementById('renal-box');
+  const renalText = document.getElementById('renal-text');
+  if (crcl !== null) {
+    if (crcl < 10) {
+      renalText.textContent = 'CrCl < 10 mL/min: Extend dosing interval to every 24 hours. Give supplementary dose after haemodialysis. Max dose per interval: 500mg.';
+      renalBox.classList.add('show');
+    } else if (crcl < 30) {
+      renalText.textContent = 'CrCl 10–30 mL/min: Extend dosing interval to every 12 hours (BD). Standard dose amount applies.';
+      renalBox.classList.add('show');
+    } else if (crcl < 60) {
+      renalText.textContent = 'CrCl 30–60 mL/min: No dose adjustment required. Standard every 8 hours dosing is appropriate.';
+      renalBox.classList.add('show');
+    } else {
+      renalBox.classList.remove('show');
+    }
+  } else {
+    renalBox.classList.remove('show');
+  }
+}
+
+function toggleFaq(el) {
+  el.closest('.faq-item').classList.toggle('open');
+}
+</script>
+</body>
+</html>
