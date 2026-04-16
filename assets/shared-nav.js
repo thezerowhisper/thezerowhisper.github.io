@@ -241,8 +241,9 @@
     <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
     <nav class="site-nav">
       <a href="/" ${isActive('/') && !path.startsWith('/medical') && !path.startsWith('/rabies') && !path.startsWith('/about') && !path.startsWith('/privacy') && !path.startsWith('/contact') && !path.startsWith('/search') ? 'class="active"' : ''}>Home</a>
-      <a href="/medical-calculators/" ${isActive('/medical-calculators') ? 'class="active"' : ''}>Calculators</a>
+      <a href="/medical-calculators/" ${isActive('/medical-calculators') ? 'class="active"' : ''}>Medical Calculators</a>
       <a href="/rabies-scheduler/" ${isActive('/rabies-scheduler') ? 'class="active"' : ''}>Rabies PEP</a>
+      <a href="/drug-doses/" ${isActive('/rabies-scheduler') ? 'class="active"' : ''}>Drug Dosage Calculator</a>
       <a href="/search" ${isActive('/search') ? 'class="active"' : ''}>🔍 Search</a>
       <a href="/about" ${isActive('/about') ? 'class="active"' : ''}>About</a>
     </nav>
