@@ -20,7 +20,6 @@ permalink: none
 # Only exclude files that should NOT be copied to _site/
 # REMOVED: /assets/shared.css and /assets/shared-nav.js (they need to be served!)
 exclude:
-  - assets/umami-events.js
   - README.md
   - node_modules/
   - "*.json"
@@ -34,6 +33,7 @@ include:
   - /assets/shared.css
   - /assets/shared-nav.js
   - assets/
+  - assets/umami-events.js
 
 # ── MARKDOWN ENGINE ────────────────────────────────────────
 markdown: kramdown
