@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cetirizine Dose Calculator India | Paediatric & Adult | mg/kg | RxMedCalc</title>
+<meta name="description" content="Cetirizine dosage calculator India. Paediatric mg/kg dosing for allergic rhinitis, urticaria, allergies. Adult doses. Zyrtec, Alerid, Cetzine brands. Age-based and weight-based dosing guide.">
+<meta name="keywords" content="cetirizine dose calculator India, cetirizine pediatric dose mg/kg, cetirizine dose child India, cetirizine syrup dose, zyrtec dose child, alerid dose, cetzine dose, cetirizine allergy dose">
+<link rel="canonical" href="https://rxmedcalc.com/drug-doses/cetirizine/">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Cetirizine Dose Calculator — RxMedCalc","description":"Cetirizine dosage calculator for paediatric and adult patients. Allergic rhinitis, urticaria, atopic eczema. India-specific brands and BNF aligned.","url":"https://rxmedcalc.com/drug-doses/cetirizine/","audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"about":{"@type":"Drug","name":"Cetirizine hydrochloride"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Drug Doses","item":"https://rxmedcalc.com/drug-doses/"},{"@type":"ListItem","position":3,"name":"Cetirizine","item":"https://rxmedcalc.com/drug-doses/cetirizine/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the cetirizine dose for children by weight in India?","acceptedAnswer":{"@type":"Answer","text":"For children aged 6 months–2 years: 2.5 mg once daily. For children 2–6 years: 2.5 mg twice daily or 5 mg once daily. For children 6–12 years: 5 mg twice daily or 10 mg once daily. In weight-based dosing: 0.25 mg/kg/dose (max 10 mg/day). Cetirizine syrup 5mg/5ml is available in India as Cetzine, Alerid, Zyrtec syrup."}},{"@type":"Question","name":"What is the cetirizine dose for adults?","acceptedAnswer":{"@type":"Answer","text":"Standard adult dose: cetirizine 10 mg once daily. In patients with renal impairment (CrCl 11–31 mL/min): 5 mg once daily. In patients on dialysis or CrCl <11 mL/min: cetirizine is contraindicated. Cetirizine is non-sedating at standard doses but may cause drowsiness in some patients."}},{"@type":"Question","name":"What is the difference between cetirizine and levocetirizine?","acceptedAnswer":{"@type":"Answer","text":"Levocetirizine is the R-enantiomer of cetirizine with approximately twice the potency. The standard levocetirizine dose is 5 mg once daily for adults (half the cetirizine dose). Levocetirizine causes slightly less sedation than cetirizine and has a cleaner pharmacokinetic profile. In children: levocetirizine 2.5 mg once daily (6 months–5 years) and 5 mg once daily (6–12 years)."}}]}</script>
+
+<link rel="stylesheet" href="/assets/shared.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ─── RESET & BASE ─────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:#f7f9fc;color:#1a2535;line-height:1.6;font-size:16px;min-width:0}
+a{color:#0284c7;text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* ─── CSS VARIABLES ────────────────────────────────── */
+:root{
+  --accent:#0284c7;--accent-mid:#0ea5e9;--accent-light:#f0f9ff;--accent-dark:#075985;
+  --navy:#0d2b45;--text:#1a2535;--text-mid:#4a5568;--text-muted:#8896a8;
+  --border:#e2e8f0;--bg:#f7f9fc;--white:#fff;
+  --green:#059669;--green-light:#ecfdf5;
+  --amber:#d97706;--amber-light:#fffbeb;
+  --radius:12px;--radius-sm:8px;
+  --mono:'DM Mono',monospace;
+  /* mobile-first spacing */
+  --px:16px;--gap:12px;
+}
+@media(min-width:640px){:root{--px:24px;--gap:16px}}
+@media(min-width:900px){:root{--px:32px}}
+
+/* ─── NAV ──────────────────────────────────────────── */
+.topnav{
+  background:var(--white);border-bottom:1px solid var(--border);
+  padding:0 var(--px);height:52px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:200;
+}
+.nav-logo{font-weight:600;font-size:17px;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:2px}
+.nav-logo span{color:#0e9f7e}
+.back-link{font-size:13px;color:var(--text-mid);display:flex;align-items:center;gap:4px;white-space:nowrap}
+.back-link:hover{color:var(--accent);text-decoration:none}
+
+/* ─── BREADCRUMB ───────────────────────────────────── */
+.breadcrumb{
+  background:var(--white);border-bottom:1px solid var(--border);
+  padding:8px var(--px);font-size:12px;color:var(--text-muted);
+  display:flex;align-items:center;gap:5px;flex-wrap:wrap;
+}
+.breadcrumb a{color:var(--navy)}
+
+/* ─── HERO ─────────────────────────────────────────── */
+.hero{
+  background:linear-gradient(135deg,#0c4a6e 0%,#075985 60%,#0284c7 100%);
+  padding:32px var(--px) 28px;position:relative;overflow:hidden;
+}
+.hero::after{content:'💊';position:absolute;right:-10px;bottom:-24px;font-size:120px;opacity:.05;pointer-events:none;line-height:1}
+.hero-inner{max-width:820px;margin:0 auto;position:relative}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;padding:3px 11px;font-size:11px;color:rgba(255,255,255,.85);
+  margin-bottom:10px;
+}
+.hero h1{font-size:clamp(20px,4vw,30px);font-weight:600;color:#fff;margin-bottom:6px;letter-spacing:-.3px;line-height:1.25}
+.hero-sub{font-size:13px;color:rgba(255,255,255,.72);margin-bottom:14px;line-height:1.55}
+.hero-pills{display:flex;gap:6px;flex-wrap:wrap}
+.hero-pill{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  border-radius:16px;padding:3px 10px;font-size:11px;color:rgba(255,255,255,.85);
+}
+
+/* ─── PAGE LAYOUT ──────────────────────────────────── */
+.page-wrap{max-width:820px;margin:0 auto;padding:20px var(--px) 60px}
+
+/* Mobile: single column. ≥760px: calc + sidebar side by side */
+.two-col{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+@media(min-width:760px){.two-col{grid-template-columns:1fr 280px;align-items:start}}
+
+.full-col{grid-column:1 / -1}
+
+/* ─── CARDS ────────────────────────────────────────── */
+.card{
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;
+}
+.card-head{
+  padding:13px 16px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:9px;
+}
+.card-head h2{font-size:14px;font-weight:600;color:var(--accent-dark)}
+.card-body{padding:16px}
+
+/* ─── TOGGLE ───────────────────────────────────────── */
+.seg{
+  display:flex;background:var(--bg);border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);padding:3px;gap:3px;margin-bottom:14px;
+}
+.seg-btn{
+  flex:1;padding:8px 6px;border:none;background:transparent;
+  border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;
+  color:var(--text-mid);cursor:pointer;transition:all .15s;text-align:center;
+}
+.seg-btn.on{background:var(--white);color:var(--accent-dark);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+
+/* ─── FORM ─────────────────────────────────────────── */
+.field{margin-bottom:13px}
+.field:last-child{margin-bottom:0}
+.lbl{display:block;font-size:12px;font-weight:500;color:var(--text);margin-bottom:5px}
+.lbl small{color:var(--text-muted);font-weight:400}
+.inp,.sel{
+  width:100%;padding:10px 12px;
+  border:1.5px solid var(--border);border-radius:var(--radius-sm);
+  font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);
+  background:var(--white);outline:none;transition:border-color .15s;
+  /* fix iOS zoom: minimum 16px font */
+  font-size:16px;
+}
+.inp:focus,.sel:focus{border-color:var(--accent-mid)}
+/* override back to readable size after zoom-fix */
+@media(min-width:480px){.inp,.sel{font-size:14px}}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:360px){.row2{grid-template-columns:1fr}}
+
+.btn{
+  width:100%;padding:13px;
+  background:var(--accent-mid);color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;
+  border:none;border-radius:var(--radius-sm);
+  cursor:pointer;transition:background .15s,transform .1s;
+  margin-top:6px;
+  /* tap target */
+  min-height:48px;
+}
+.btn:hover{background:var(--accent-dark)}
+.btn:active{transform:scale(.98)}
+
+/* ─── RESULT ───────────────────────────────────────── */
+.result{
+  background:var(--accent-light);border:1.5px solid #7dd3fc;
+  border-radius:var(--radius-sm);padding:16px;margin-top:14px;display:none;
+}
+.result.show{display:block}
+.res-label{font-size:11px;font-weight:600;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.res-main{font-size:24px;font-weight:600;color:var(--accent-dark);line-height:1.2;margin-bottom:3px}
+.res-sub{font-size:13px;color:var(--accent);margin-bottom:10px}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:340px){.res-grid{grid-template-columns:1fr}}
+.res-cell{background:var(--white);border-radius:7px;padding:9px 11px}
+.res-cell .rl{font-size:10px;color:var(--text-muted);margin-bottom:2px}
+.res-cell .rv{font-size:13px;font-weight:600;color:var(--accent-dark);font-family:var(--mono)}
+
+/* ─── ALERT BOXES ──────────────────────────────────── */
+.alert{
+  border-radius:var(--radius-sm);padding:11px 13px;
+  font-size:13px;line-height:1.6;margin-top:10px;display:none;
+}
+.alert.show{display:flex;gap:8px;align-items:flex-start}
+.alert-warn{background:var(--amber-light);border:1px solid #fcd34d;color:#78350f}
+.alert-danger{background:#fef2f2;border:1px solid #fca5a5;color:#7f1d1d}
+.alert-info{background:var(--accent-light);border:1px solid #bae6fd;color:#075985}
+
+/* ─── SIDEBAR WIDGETS ──────────────────────────────── */
+.widget{
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;
+}
+.widget-head{
+  padding:11px 14px;border-bottom:1px solid var(--border);
+  font-size:12px;font-weight:600;color:var(--navy);
+  display:flex;align-items:center;gap:6px;
+}
+.widget-body{padding:12px 14px}
+.wi-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:6px 0;border-bottom:1px solid var(--border);font-size:12px;
+}
+.wi-row:last-child{border-bottom:none}
+.wi-lbl{color:var(--text-muted)}
+.wi-val{font-weight:500;color:var(--text);font-family:var(--mono);font-size:11px;text-align:right;max-width:160px}
+
+/* ─── CONTENT BLOCK ────────────────────────────────── */
+.content{
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:var(--radius);padding:24px 20px;margin-top:var(--gap);
+}
+@media(min-width:640px){.content{padding:28px 28px}}
+.content h2{font-size:19px;font-weight:600;color:var(--navy);margin-bottom:12px;letter-spacing:-.3px}
+.content h3{font-size:15px;font-weight:600;color:var(--navy);margin:20px 0 7px}
+.content p{font-size:14px;color:var(--text-mid);line-height:1.8;margin-bottom:11px}
+.content ul{list-style:none;padding:0;margin:0 0 12px}
+.content ul li{font-size:14px;color:var(--text-mid);line-height:1.7;padding-left:16px;position:relative;margin-bottom:4px}
+.content ul li::before{content:'→';position:absolute;left:0;color:var(--accent-mid);font-size:11px;top:3px}
+
+/* ─── DOSE TABLE ───────────────────────────────────── */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:400px}
+.tbl th{background:var(--bg);padding:9px 10px;text-align:left;font-weight:600;color:var(--navy);border-bottom:1.5px solid var(--border);white-space:nowrap}
+.tbl td{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--text-mid);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+
+/* ─── FAQ ──────────────────────────────────────────── */
+.faq-item{border-bottom:1px solid var(--border);padding:14px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{
+  font-size:14px;font-weight:600;color:var(--navy);
+  cursor:pointer;display:flex;justify-content:space-between;
+  align-items:flex-start;gap:10px;
+  /* larger tap target */
+  padding:2px 0;
+}
+.faq-ico{flex-shrink:0;color:var(--accent-mid);font-size:18px;line-height:1;transition:transform .2s}
+.faq-a{font-size:13px;color:var(--text-mid);line-height:1.75;padding-top:8px;display:none}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-ico{transform:rotate(45deg)}
+
+/* ─── DISCLAIMER ───────────────────────────────────── */
+.disclaimer{
+  background:var(--amber-light);border:1px solid #fcd34d;
+  border-radius:var(--radius-sm);padding:12px 14px;
+  font-size:12px;color:#78350f;line-height:1.6;
+  display:flex;gap:8px;margin-top:16px;
+}
+
+/* ─── RELATED GRID ─────────────────────────────────── */
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px;margin-top:12px}
+.rel-card{
+  background:var(--bg);border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);padding:11px 12px;display:block;transition:all .15s;
+}
+.rel-card:hover{border-color:var(--accent-mid);background:var(--accent-light);text-decoration:none}
+.rel-card .rn{font-size:13px;font-weight:600;color:var(--navy)}
+.rel-card .rd{font-size:11px;color:var(--text-muted);margin-top:2px}
+
+/* ─── FOOTER ───────────────────────────────────────── */
+.site-footer{
+  background:var(--navy);color:rgba(255,255,255,.55);
+  text-align:center;padding:20px var(--px);font-size:12px;
+}
+.site-footer a{color:rgba(255,255,255,.75)}
+</style>
+</head>
+<body>
+
+<!-- Umami analytics -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
+<!-- Shared nav -->
+<script src="/assets/shared-nav.js"></script>
+
+<nav class="topnav">
+  <a href="https://rxmedcalc.com/" class="nav-logo">Rx<span>Med</span>Calc</a>
+  <a href="https://rxmedcalc.com/drug-doses/" class="back-link">← Drug Doses</a>
+</nav>
+
+<div class="breadcrumb">
+  <a href="https://rxmedcalc.com/">Home</a><span>›</span>
+  <a href="https://rxmedcalc.com/drug-doses/">Drug Doses</a><span>›</span>
+  <span>Cetirizine</span>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">💊 2nd-gen antihistamine · H1-blocker</div>
+    <h1>Cetirizine Dose Calculator</h1>
+    <p class="hero-sub">India · Paediatric & Adult · Allergic Rhinitis · Urticaria · Atopic Eczema · Zyrtec · Alerid · Cetzine</p>
+    <div class="hero-pills">
+      <span class="hero-pill">Oral syrup & tablet</span>
+      <span class="hero-pill">6 months+ age</span>
+      <span class="hero-pill">0.25 mg/kg paeds</span>
+      <span class="hero-pill">BNF · IAP aligned</span>
+    </div>
+  </div>
+</section>
+
+<div class="page-wrap">
+  <div class="two-col">
+
+    <!-- CALCULATOR -->
+    <div class="card">
+      <div class="card-head">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#075985" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg>
+        <h2>Cetirizine Dose Calculator</h2>
+      </div>
+      <div class="card-body">
+        <div class="seg">
+          <button class="seg-btn on" onclick="setMode('paeds',this)">👶 Paediatric</button>
+          <button class="seg-btn" onclick="setMode('adult',this)">🧑 Adult</button>
+        </div>
+
+        <!-- PAEDS -->
+        <div id="paeds-sec">
+          <div class="row2">
+            <div class="field">
+              <label class="lbl">Weight <small>(kg)</small></label>
+              <input class="inp" id="wt" type="number" placeholder="e.g. 14" min="3" max="80" step="0.5" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label class="lbl">Age <small>(years)</small></label>
+              <input class="inp" id="age" type="number" placeholder="e.g. 4" min="0.5" max="18" step="0.5" inputmode="decimal">
+            </div>
+          </div>
+          <div class="field">
+            <label class="lbl">Indication</label>
+            <select class="sel" id="ped-ind">
+              <option value="allergy">Allergic rhinitis / hay fever</option>
+              <option value="urticaria">Urticaria / hives</option>
+              <option value="eczema">Atopic eczema / pruritus</option>
+              <option value="angioedema">Angioedema (adjunct)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="lbl">Formulation</label>
+            <select class="sel" id="ped-form">
+              <option value="syrup5">Syrup 5 mg/5 ml — Cetzine · Alerid · Zyrtec</option>
+              <option value="tab5">Tablet 5 mg</option>
+              <option value="tab10">Tablet 10 mg</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ADULT -->
+        <div id="adult-sec" style="display:none">
+          <div class="field">
+            <label class="lbl">Indication</label>
+            <select class="sel" id="adult-ind">
+              <option value="standard">Allergic rhinitis / urticaria / eczema (standard)</option>
+              <option value="chronic">Chronic urticaria (long-term)</option>
+              <option value="severe">Severe / refractory urticaria (up-dose)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="lbl">CrCl <small>(optional — renal adjustment)</small></label>
+            <input class="inp" id="crcl" type="number" placeholder="e.g. 25 mL/min" min="1" max="200" inputmode="decimal">
+          </div>
+        </div>
+
+        <button class="btn" onclick="calc()">Calculate Dose</button>
+
+        <div class="result" id="result">
+          <div class="res-label">Recommended Dose</div>
+          <div class="res-main" id="r-dose">—</div>
+          <div class="res-sub" id="r-freq">—</div>
+          <div class="res-grid">
+            <div class="res-cell"><div class="rl">Dose (mg)</div><div class="rv" id="r-mg">—</div></div>
+            <div class="res-cell"><div class="rl">Volume / Tablets</div><div class="rv" id="r-vol">—</div></div>
+            <div class="res-cell"><div class="rl">Max daily</div><div class="rv" id="r-max">—</div></div>
+            <div class="res-cell"><div class="rl">Duration</div><div class="rv" id="r-dur">—</div></div>
+          </div>
+        </div>
+        <div class="alert alert-warn" id="warn"><span>⚠️</span><span id="warn-t"></span></div>
+        <div class="alert alert-danger" id="danger"><span>⛔</span><span id="danger-t"></span></div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div style="display:flex;flex-direction:column;gap:var(--gap)">
+      <div class="widget">
+        <div class="widget-head">💊 Drug profile</div>
+        <div class="widget-body">
+          <div class="wi-row"><span class="wi-lbl">Class</span><span class="wi-val">2nd-gen H1-antihistamine</span></div>
+          <div class="wi-row"><span class="wi-lbl">Route</span><span class="wi-val">Oral</span></div>
+          <div class="wi-row"><span class="wi-lbl">Onset</span><span class="wi-val">~1 hour</span></div>
+          <div class="wi-row"><span class="wi-lbl">Duration</span><span class="wi-val">24 hours</span></div>
+          <div class="wi-row"><span class="wi-lbl">Half-life</span><span class="wi-val">8–9 hrs (adults)</span></div>
+          <div class="wi-row"><span class="wi-lbl">Renal excretion</span><span class="wi-val">~70% unchanged</span></div>
+          <div class="wi-row"><span class="wi-lbl">Min age</span><span class="wi-val">6 months</span></div>
+        </div>
+      </div>
+      <div class="widget">
+        <div class="widget-head">🏷️ Indian brands</div>
+        <div class="widget-body">
+          <div class="wi-row"><span class="wi-lbl">Syrup 5mg/5ml</span><span class="wi-val">Cetzine · Alerid · Zyrtec</span></div>
+          <div class="wi-row"><span class="wi-lbl">Tablet 5 mg</span><span class="wi-val">Cetzine 5 · Okacet 5</span></div>
+          <div class="wi-row"><span class="wi-lbl">Tablet 10 mg</span><span class="wi-val">Zyrtec · Alerid · Okacet</span></div>
+          <div class="wi-row"><span class="wi-lbl">Levocetirizine 5mg</span><span class="wi-val">Levocet · Xyzal · Lecope</span></div>
+        </div>
+      </div>
+      <div class="widget">
+        <div class="widget-head">🫘 Renal dosing (adult)</div>
+        <div class="widget-body" style="font-size:12px;color:var(--text-mid);line-height:1.7">
+          <p>CrCl ≥ 80: 10 mg OD — standard</p>
+          <p style="margin-top:5px">CrCl 50–79: 10 mg OD — standard</p>
+          <p style="margin-top:5px">CrCl 30–49: 5 mg OD</p>
+          <p style="margin-top:5px">CrCl 11–30: 5 mg alternate days</p>
+          <p style="margin-top:5px;color:#991b1b">CrCl &lt;11 / dialysis: avoid</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end two-col -->
+
+  <!-- FULL-WIDTH CONTENT -->
+  <div class="content">
+    <h2>Cetirizine Dosing Reference — Paediatric & Adult India</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Age group</th><th>Dose</th><th>Frequency</th><th>Max/day</th><th>Formulation</th></tr></thead>
+        <tbody>
+          <tr><td>6–12 months</td><td>2.5 mg</td><td>Once daily</td><td>2.5 mg</td><td>0.25 ml of 5mg/5ml syrup</td></tr>
+          <tr><td>1–2 years</td><td>2.5 mg</td><td>Once daily (or BD if needed)</td><td>5 mg</td><td>2.5 ml of 5mg/5ml syrup</td></tr>
+          <tr><td>2–6 years</td><td>2.5 mg BD or 5 mg OD</td><td>Once or twice daily</td><td>5 mg</td><td>2.5 ml BD or 5 ml OD</td></tr>
+          <tr><td>6–12 years</td><td>5 mg BD or 10 mg OD</td><td>Once or twice daily</td><td>10 mg</td><td>5 ml BD / 5mg tab BD / 10mg tab OD</td></tr>
+          <tr><td>Adult / child ≥12 yr</td><td>10 mg</td><td>Once daily (evening)</td><td>10 mg</td><td>1 × 10mg tab or 10 ml syrup</td></tr>
+          <tr><td>Adult — renal CrCl 30–49</td><td>5 mg</td><td>Once daily</td><td>5 mg</td><td>5mg tab or 5 ml syrup</td></tr>
+          <tr><td>Adult — renal CrCl 11–30</td><td>5 mg</td><td>Every 48h (alternate days)</td><td>5 mg</td><td>5mg tab</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:24px">Cetirizine — Clinical Guide for Indian Doctors & Parents</h2>
+
+    <p>Cetirizine is a second-generation H1-receptor antagonist and one of the most widely prescribed antihistamines in India for children and adults. Unlike first-generation antihistamines (chlorphenamine, promethazine), cetirizine causes minimal sedation at therapeutic doses due to poor blood-brain barrier penetration. It provides effective once-daily relief for allergic rhinitis, urticaria, atopic eczema-related pruritus, and allergic conjunctivitis. It is available as Zyrtec, Alerid, Cetzine, and Okacet across Indian pharmacies.</p>
+
+    <p>In paediatric practice, cetirizine is one of the safest and most evidence-backed antihistamines from 6 months of age. The IAP and BNF endorse its use from infancy. The syrup formulation (5 mg/5 ml) allows accurate weight-based or age-based dosing for young children. Importantly, cetirizine does not have the antimuscarinic side effects (urinary retention, dry mouth, blurred vision, sedation) of older antihistamines like chlorphenamine — making it the preferred first-line antihistamine in children.</p>
+
+    <h3>Paediatric dosing — age-based guide India</h3>
+    <p>For infants aged 6–12 months: 2.5 mg (2.5 ml of 5mg/5ml syrup) once daily. For children 1–2 years: 2.5 mg once daily, increasing to twice daily if needed. For children 2–6 years: 2.5 mg twice daily or 5 mg once daily. For children 6–12 years: the dose doubles to 5 mg twice daily or 10 mg once daily. Weight-based dosing (0.25 mg/kg/dose, max 5 mg per dose for children under 6, max 10 mg per dose for children over 6) is useful for children whose weight falls outside the typical range for their age.</p>
+
+    <h3>Cetirizine vs levocetirizine — which to prescribe?</h3>
+    <p>Levocetirizine is the R-enantiomer of cetirizine and is approximately twice as potent. The standard adult dose of levocetirizine is 5 mg once daily (compared to 10 mg for cetirizine). For children aged 6 months to 5 years: levocetirizine 1.25 mg (half a 2.5 mg tablet) once daily; for ages 6–11 years: 2.5 mg once daily. Levocetirizine has a slightly cleaner pharmacokinetic profile and marginally less sedation. In clinical practice, both drugs are equally effective at equivalent doses — choice is often driven by availability and cost. Levocetirizine brands in India include Levocet, Xyzal, and Lecope.</p>
+
+    <h3>Chronic urticaria — up-dosing strategy</h3>
+    <p>For chronic spontaneous urticaria (CSU) that does not respond to standard doses, international guidelines (EAACI/WAO) recommend up-dosing cetirizine to 20–40 mg/day (off-label) before escalating to omalizumab or immunosuppressants. In India, where CSU is common and biologic therapy is often cost-prohibitive, up-dosed cetirizine (20 mg/day in two divided doses) is a widely used and reasonably effective intermediate step. This should be done under specialist supervision with monitoring for sedation.</p>
+
+    <h2 style="margin-top:24px">Frequently Asked Questions</h2>
+    <div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="tf(this)">What is the cetirizine dose for a 3-year-old child in India?<span class="faq-ico">+</span></div>
+        <div class="faq-a">For a 3-year-old (typical weight 13–15 kg): cetirizine 2.5 mg twice daily or 5 mg once daily. In Cetzine/Alerid 5mg/5ml syrup: 2.5 ml twice daily, or 5 ml once daily at bedtime. Maximum daily dose is 5 mg for children aged 2–6 years. The once-daily evening dose is preferred for compliance and to minimise any daytime drowsiness.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="tf(this)">Can cetirizine be given to infants under 1 year?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Cetirizine is approved for use from 6 months of age at a dose of 2.5 mg once daily. It should not be used in infants under 6 months. The syrup formulation is required for accurate dosing in this age group. Seek paediatric specialist advice before using antihistamines in infants under 1 year, as the indication should be clearly established.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="tf(this)">Does cetirizine cause drowsiness in children?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Cetirizine is classified as a low-sedating (non-sedating at standard doses) antihistamine. In clinical studies, drowsiness occurs in approximately 13% of patients — more than placebo but far less than first-generation antihistamines (chlorphenamine, promethazine). Giving the dose at bedtime minimises functional impact of any sedation. Avoid combining with alcohol, benzodiazepines, or other CNS depressants.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="tf(this)">Is cetirizine safe during pregnancy?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Cetirizine is Pregnancy Category B and is considered one of the safer antihistamines during pregnancy. It is preferred over chlorphenamine and promethazine. Standard doses apply. It passes into breast milk in small amounts — if required during breastfeeding, use the lowest effective dose and monitor the infant for drowsiness.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="tf(this)">Does cetirizine need renal dose adjustment?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Yes. Cetirizine is ~70% renally excreted unchanged. For CrCl 30–49 mL/min: 5 mg once daily. For CrCl 11–30 mL/min: 5 mg every 48 hours. For CrCl &lt;11 mL/min or dialysis: avoid cetirizine (accumulation risk). Use the CrCl calculator on RxMedCalc to assess renal function before prescribing.</div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <span>⚠️</span>
+      <span>Decision-support tool for trained healthcare professionals. Verify doses against current BNF and prescribing information. Not a substitute for clinical judgement.</span>
+    </div>
+
+    <h2 style="margin-top:24px">Related Tools</h2>
+    <div class="rel-grid">
+      <a href="/drug-doses/prednisolone/" class="rel-card"><div class="rn">Prednisolone</div><div class="rd">Steroid — allergy, asthma</div></a>
+      <a href="/drug-doses/ondansetron/" class="rel-card"><div class="rn">Ondansetron</div><div class="rd">Antiemetic dosing</div></a>
+      <a href="/drug-doses/amoxicillin/" class="rel-card"><div class="rn">Amoxicillin</div><div class="rd">Antibiotic dosing</div></a>
+      <a href="/medical-calculators/paracetamol" class="rel-card"><div class="rn">Paracetamol</div><div class="rd">Antipyretic · fever</div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="rel-card"><div class="rn">CrCl Calculator</div><div class="rd">Renal function</div></a>
+    </div>
+  </div><!-- end content -->
+</div><!-- end page-wrap -->
+
+<footer class="site-footer">
+  <p>RxMedCalc · Free Clinical Tools for India · <a href="/medical-calculators/">Medical Calculators</a> · <a href="/drug-doses/">Drug Doses</a></p>
+</footer>
+
+<script>
+let mode='paeds';
+function setMode(m,btn){
+  mode=m;
+  document.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById('paeds-sec').style.display=m==='paeds'?'block':'none';
+  document.getElementById('adult-sec').style.display=m==='adult'?'block':'none';
+  hide('result');hide('warn');hide('danger');
+}
+function show(id){document.getElementById(id).classList.add('show')}
+function hide(id){document.getElementById(id).classList.remove('show')}
+
+function calc(){
+  hide('result');hide('warn');hide('danger');
+  if(mode==='paeds'){
+    const wt=parseFloat(document.getElementById('wt').value);
+    const age=parseFloat(document.getElementById('age').value)||null;
+    if(!wt||wt<2){alert('Please enter a valid weight.');return;}
+    if(age!==null&&age<0.5){
+      document.getElementById('danger-t').textContent='Cetirizine is not recommended for children under 6 months.';
+      show('danger');return;
+    }
+    const form=document.getElementById('ped-form').value;
+    // dose by age
+    let doseMg,maxDay,doses,freq;
+    if(age!==null&&age<1){doseMg=2.5;maxDay=2.5;doses=1;freq='Once daily';}
+    else if(age!==null&&age<2){doseMg=2.5;maxDay=5;doses=2;freq='Twice daily (or once daily if tolerated)';}
+    else if(age!==null&&age<6){doseMg=2.5;maxDay=5;doses=2;freq='Twice daily';}
+    else{
+      // weight-based 0.25mg/kg, max 10
+      doseMg=Math.min(wt*0.25,10);
+      if(doseMg<=5){doseMg=5;doses=2;freq='Twice daily';maxDay=10;}
+      else{doseMg=10;doses=1;freq='Once daily (evening)';maxDay=10;}
+    }
+    doseMg=Math.round(doseMg*10)/10;
+    let vol='';
+    if(form==='syrup5'){vol=(doseMg/5*5).toFixed(1)+' ml (5mg/5ml)';}
+    else if(form==='tab5'){vol=(doseMg/5).toFixed(2)+' × 5mg tab';}
+    else{vol=(doseMg/10).toFixed(2)+' × 10mg tab';}
+    set('r-dose',doseMg+' mg per dose');
+    set('r-freq',freq);set('r-mg',doseMg+' mg');set('r-vol',vol);
+    set('r-max',maxDay+' mg');set('r-dur','As needed / per course');
+    show('result');
+  } else {
+    const ind=document.getElementById('adult-ind').value;
+    const crcl=parseFloat(document.getElementById('crcl').value)||null;
+    let mg=10,freq='Once daily (evening)',vol='1 × 10mg tab',max='10 mg',dur='As needed';
+    if(ind==='severe'){mg=20;freq='10 mg twice daily (off-label)';vol='2 × 10mg tabs';max='20 mg (up-dosed)';dur='Under specialist review';}
+    // renal adj
+    let warnMsg='';
+    if(crcl!==null){
+      if(crcl<11){document.getElementById('danger-t').textContent='CrCl < 11 mL/min: cetirizine is contraindicated — risk of accumulation. Seek renal pharmacist advice.';show('danger');return;}
+      else if(crcl<30){mg=5;freq='5 mg every 48 hours (alternate days)';vol='½ × 10mg tab or 1 × 5mg tab';max='5 mg/48h';warnMsg='CrCl 11–30 mL/min: reduce to 5 mg every 48 hours.';}
+      else if(crcl<50){mg=5;freq='5 mg once daily';vol='1 × 5mg tab or 5 ml syrup';max='5 mg/day';warnMsg='CrCl 30–49 mL/min: reduce to 5 mg once daily.';}
+    }
+    set('r-dose',mg+' mg per dose');set('r-freq',freq);set('r-mg',mg+' mg');
+    set('r-vol',vol);set('r-max',max);set('r-dur',dur);
+    show('result');
+    if(warnMsg){document.getElementById('warn-t').textContent=warnMsg;show('warn');}
+  }
+}
+function set(id,v){document.getElementById(id).textContent=v}
+function tf(el){el.closest('.faq-item').classList.toggle('open')}
+</script>
+</body>
+</html>
