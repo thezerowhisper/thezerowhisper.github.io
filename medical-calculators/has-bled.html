@@ -4,265 +4,308 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>HAS-BLED Score Calculator | Bleeding Risk in AF Anticoagulation | RxMedCalc</title>
-<meta name="description" content="Free HAS-BLED score calculator for bleeding risk assessment in patients with atrial fibrillation on anticoagulation. Identify modifiable bleeding risk factors per ESC 2020 guidelines."/>
-<meta name="keywords" content="HAS-BLED calculator, HAS-BLED score, bleeding risk anticoagulation, AF bleeding risk, ESC guidelines AF"/>
+<meta name="description" content="Free HAS-BLED score calculator for bleeding risk assessment in patients with atrial fibrillation on anticoagulation. Calculate annual major bleeding risk, identify modifiable bleeding risk factors, and guide anticoagulation decisions per ESC 2020 guidelines. Used by cardiologists and physicians worldwide."/>
+<meta name="keywords" content="HAS-BLED calculator, HAS-BLED score, bleeding risk anticoagulation, AF bleeding risk, HAS-BLED interpretation, major bleeding risk atrial fibrillation, anticoagulation bleeding score, HAS-BLED vs CHA2DS2-VASc, modifiable bleeding risk, HAS-BLED ESC guidelines"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
 <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/has-bled"/>
-
 <meta property="og:title" content="HAS-BLED Score Calculator | Bleeding Risk in AF | RxMedCalc"/>
-<meta property="og:description" content="Calculate HAS-BLED bleeding risk score in AF patients on anticoagulation. Identify modifiable risk factors. ESC 2020 guidance."/>
+<meta property="og:description" content="Calculate HAS-BLED bleeding risk score in AF patients on anticoagulation. Identify modifiable risk factors. ESC 2020 guidance. Free for cardiologists."/>
 <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/has-bled"/>
 <meta property="og:site_name" content="RxMedCalc"/>
 <meta name="twitter:card" content="summary_large_image"/>
-
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-
 <link rel="stylesheet" href="/assets/shared.css"/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/has-bled","name":"HAS-BLED Score Calculator","description":"HAS-BLED bleeding risk score for AF patients on anticoagulation. ESC 2020 guidelines.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Cardiologist, GP, Haematologist"},"dateModified":"2025-04-14"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"HAS-BLED","item":"https://rxmedcalc.com/medical-calculators/has-bled"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What HAS-BLED score is high bleeding risk?","acceptedAnswer":{"@type":"Answer","text":"A HAS-BLED score of 3 or more is considered high bleeding risk, with an annual major bleeding rate of approximately 3.74% or higher. However, a high HAS-BLED score alone should NOT be used to withhold anticoagulation in AF patients who have a high CHA₂DS₂-VASc score. Instead, ESC 2020 guidelines recommend using HAS-BLED to identify and correct modifiable bleeding risk factors (uncontrolled hypertension, labile INR, concomitant NSAIDs/antiplatelet use, excess alcohol) while continuing anticoagulation."}},
+{"@type":"Question","name":"Should I stop anticoagulation if HAS-BLED is high?","acceptedAnswer":{"@type":"Answer","text":"No — a high HAS-BLED score should NOT automatically lead to discontinuation of anticoagulation. In most AF patients with CHA₂DS₂-VASc ≥2 (male) or ≥3 (female), the stroke risk outweighs the bleeding risk even at HAS-BLED 3+. A high HAS-BLED score should prompt identification and correction of modifiable bleeding risk factors. If bleeding risk genuinely outweighs thrombotic risk after careful assessment, this should be a shared decision between the clinician and patient."}}
+]}
+]}
+</script>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { 
-    font-family: 'DM Sans', system-ui, sans-serif; 
-    background: #f8f6f2; 
-    color: #1a1a2e; 
-    overflow-x: hidden;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;overflow-wrap: break-word;word-wrap: break-word;}
 
-  /* HEADER & HERO */
-  .page-header { 
-    background: linear-gradient(135deg, #0d1b2a 0%, #1a1020 60%, #0d1b2a 100%); 
-    padding: 40px 0 40px; 
-    position: relative; 
-    overflow: hidden; 
-  }
-  .page-header::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(239,68,68,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(239,68,68,0.05) 1px, transparent 1px); background-size: 40px 40px; }
-  
-  .hero-inner-content { max-width: 900px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
-  
-  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
-  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
-  
-  .page-eyebrow { display: inline-flex; align-items: center; background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); border-radius: 20px; padding: 5px 14px; font-size: 0.72rem; font-weight: 700; color: #fca5a5; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
-  h1 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: #fff; line-height: 1.15; margin-bottom: 12px; }
-  h1 em { font-style: italic; color: #f87171; }
-  .page-sub { font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 580px; margin-bottom: 24px; }
-  
-  /* MAIN LAYOUT */
-  .main { max-width: 900px; margin: 0 auto; padding: 36px 24px 80px; }
-  .calc-card { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 20px; padding: 32px; margin-bottom: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
-  .calc-title { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 700; color: #0d1b2a; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
-  .calc-title::before { content: ''; display: block; width: 4px; height: 20px; background: #ef4444; border-radius: 2px; flex-shrink: 0; }
+/* ── HEADER FIXES ── */
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a1020 60%,#0d1b2a 100%);padding:40px 0 60px;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(239,68,68,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(239,68,68,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(239,68,68,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+/* Renamed to prevent nav collision */
+.hero-inner-content{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
 
-  /* CRITERIA SELECTION */
-  .criteria-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-  .crit { display: flex; align-items: flex-start; gap: 14px; border: 1.5px solid #e5e7eb; border-radius: 12px; padding: 14px 16px; cursor: pointer; transition: all 0.2s; background: #f9fafb; }
-  .crit.sel { background: #fef2f2; border-color: #fecaca; }
-  .crit:hover { border-color: #fca5a5; }
-  
-  .crit-letter { width: 32px; height: 32px; border-radius: 8px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; color: #6b7280; flex-shrink: 0; }
-  .crit.sel .crit-letter { background: #ef4444; color: #fff; }
-  .crit-body { flex: 1; }
-  .crit-name { font-size: 0.9rem; font-weight: 700; color: #0d1b2a; }
-  .crit-detail { font-size: 0.75rem; color: #6b7280; margin-top: 2px; }
-  
-  .crit-mod { font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 8px; margin-top: 6px; display: inline-block; }
-  .mod-yes { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
-  .mod-no { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#fca5a5;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#f87171}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
 
-  /* TOTALS & BUTTONS */
-  .running-total { background: linear-gradient(135deg, #fef2f2, #fff); border: 1.5px solid #fecaca; border-radius: 14px; padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
-  .rt-val { font-family: 'Fraunces', Georgia, serif; font-size: 2.5rem; font-weight: 900; color: #ef4444; }
-  .btn-calc { width: 100%; padding: 16px; background: linear-gradient(135deg, #ef4444, #dc2626); border: none; border-radius: 12px; color: #fff; font-weight: 700; cursor: pointer; transition: 0.2s; }
-  
-  /* RESULTS */
-  .results { display: none; margin-top: 24px; }
-  .results.show { display: block; }
-  .score-display { text-align: center; margin-bottom: 20px; }
-  .score-big { font-family: 'Fraunces', Georgia, serif; font-size: 4.5rem; font-weight: 900; color: #ef4444; line-height: 1; }
-  .score-badge { display: inline-block; padding: 6px 20px; border-radius: 20px; font-size: 0.9rem; font-weight: 700; margin-top: 10px; }
-  
-  .b-low { background: #f0fdf4; color: #16a34a; border: 1.5px solid #bbf7d0; }
-  .b-mod { background: #fffbeb; color: #d97706; border: 1.5px solid #fde68a; }
-  .b-high { background: #fef2f2; color: #dc2626; border: 1.5px solid #fecaca; }
+/* ── CALCULATOR ── */
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#ef4444;border-radius:2px;flex-shrink:0}
+.criteria-list{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.crit{display:flex;align-items:flex-start;gap:14px;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px 16px;cursor:pointer;transition:all 0.2s;background:#f9fafb}
+.crit.sel{background:#fef2f2;border-color:#fecaca}
+.crit-letter{width:32px;height:32px;border-radius:8px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.9rem;color:#6b7280;flex-shrink:0;transition:all 0.2s}
+.crit.sel .crit-letter{background:#ef4444;color:#fff}
+.crit-body{flex:1}
+.crit-name{font-size:0.9rem;font-weight:700;color:#0d1b2a}
+.crit-detail{font-size:0.75rem;color:#6b7280;margin-top:2px;line-height:1.5}
+.crit-mod{font-size:0.68rem;font-weight:700;padding:2px 7px;border-radius:8px;margin-top:4px;display:inline-block}
+.mod-yes{background:#fef2f2;color:#dc2626;border:1px solid #fecaca}
+.mod-no{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0}
+.crit-pt{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#d1d5db;flex-shrink:0}
+.crit.sel .crit-pt{color:#ef4444}
 
-  .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 16px; }
-  .rbox { background: #f9fafb; border: 1.5px solid #e5e7eb; border-radius: 12px; padding: 14px; text-align: center; }
-  .rval { font-size: 1.2rem; font-weight: 700; color: #0d1b2a; }
+.running-total{background:linear-gradient(135deg,#fef2f2,#fff);border:1.5px solid #fecaca;border-radius:14px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.rt-label{font-size:0.8rem;font-weight:600;color:#6b7280}
+.rt-val{font-family:'Fraunces',Georgia,serif;font-size:2.5rem;font-weight:900;color:#ef4444}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#ef4444,#dc2626);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(239,68,68,0.3)}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(239,68,68,0.4)}
 
-  .rec-box { border-radius: 12px; padding: 16px; margin-bottom: 16px; font-size: 0.88rem; line-height: 1.75; white-space: pre-line; }
-  .rec-low { background: #f0fdf4; border: 1.5px solid #bbf7d0; color: #166534; }
-  .rec-high { background: #fef2f2; border: 1.5px solid #fecaca; color: #991b1b; }
+/* ── RESULTS ── */
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.score-display{text-align:center;margin-bottom:20px}
+.score-big{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;line-height:1;color:#ef4444}
+.score-badge{display:inline-block;padding:7px 24px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-top:10px}
+.b-low{background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0}
+.b-mod{background:#fffbeb;color:#d97706;border:1.5px solid #fde68a}
+.b-high{background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca}
 
-  /* CONTENT CARD */
-  .content-card { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 20px; padding: 32px; margin-bottom: 24px; }
-  .content-card h2 { font-family: 'Fraunces', Georgia, serif; font-size: 1.4rem; font-weight: 900; margin-bottom: 16px; }
-  .content-card p { font-size: 0.95rem; color: #4b5563; line-height: 1.8; margin-bottom: 12px; }
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a}
+.rbox.hi .rval{color:#ef4444}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
 
-  /* TABLE */
-  .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; margin: 16px 0; }
-  .bleed-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 450px; }
-  .bleed-table th { background: #fef2f2; color: #991b1b; padding: 12px; text-align: left; text-transform: uppercase; border-bottom: 2px solid #fecaca; }
-  .bleed-table td { padding: 12px; border-bottom: 1px solid #f3f4f6; }
+.mod-factors{background:#fff7ed;border:1.5px solid #fed7aa;border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.mf-title{font-size:0.72rem;font-weight:700;color:#9a3412;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px}
+.mf-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;font-size:0.84rem;color:#374151}
+.mf-icon{flex-shrink:0;margin-top:1px}
+.rec-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line}
+.rec-low{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.rec-high{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
 
-  @media(max-width:600px) {
-    .main { padding: 24px 16px; }
-    .calc-card, .content-card { padding: 24px 16px; }
-  }
+/* ── ACTIONS ── */
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#ef4444;color:#ef4444}
+
+/* ── CONTENT ── */
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#ef4444;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ef4444;font-size:0.8rem}
+
+.table-responsive {overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; margin: 14px 0; display: block;}
+.bleed-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin: 0; min-width: 400px;}
+.bleed-table th{background:#fef2f2;color:#991b1b;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;border-bottom:2px solid #fecaca}
+.bleed-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+
+.faq-item{border-bottom:1px solid #f3f4f6;padding:16px 0}.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.92rem;font-weight:600;color:#0d1b2a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.faq-q::after{content:'＋';color:#ef4444;font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.86rem;color:#4b5563;line-height:1.75}
+.faq-item.open .faq-a{max-height:300px;padding-top:10px}
+
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
 </style>
 </head>
 <body>
-
 <div class="page-header">
-  <div class="hero-inner-content">
-    <nav class="breadcrumb">
-      <a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>HAS-BLED</span>
-    </nav>
-    <div class="page-eyebrow">🩸 Cardiology · Anticoagulation</div>
-    <h1>HAS-BLED Score<br><em>Calculator</em></h1>
-    <p class="page-sub">Bleeding risk assessment for AF patients on anticoagulation. Identify modifiable risk factors per ESC 2020 guidelines.</p>
-  </div>
+  <div class="hero-inner-content">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>HAS-BLED</span></nav>
+    <div class="page-eyebrow">🩸 Cardiology · Anticoagulation · Bleeding Risk</div>
+    <h1>HAS-BLED Score<br><em>Calculator</em></h1>
+    <p class="page-sub">Bleeding risk assessment in atrial fibrillation patients on anticoagulation. Identify modifiable bleeding risk factors. ESC 2020 guidance — high HAS-BLED is NOT a reason to withhold anticoagulation.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ ESC 2020 Guidelines</span>
+      <span class="hbadge">✓ Modifiable Risk Factors</span>
+      <span class="hbadge">✓ Annual Bleeding Risk %</span>
+      <span class="hbadge">✓ DOAC vs Warfarin Context</span>
+    </div>
+  </div>
 </div>
-
 <main class="main">
-  <div class="calc-card">
-    <div class="calc-title">HAS-BLED Assessment</div>
-    <div class="criteria-list" id="crit-list"></div>
-    
-    <div class="running-total">
-      <span style="font-weight: 700; color: #6b7280;">Current Score</span>
-      <span class="rt-val" id="rt-val">0</span>
-    </div>
-    
-    <button class="btn-calc" onclick="calculate()">Calculate Bleeding Risk →</button>
-    
-    <div class="results" id="results">
-      <div class="score-display">
-        <div class="score-big" id="score-big">0</div>
-        <div class="score-badge" id="score-badge"></div>
-      </div>
-      
-      <div class="result-grid">
-        <div class="rbox"><div style="font-size:0.65rem; font-weight:700; color:#9ca3af;">ANNUAL RISK</div><div class="rval" id="r-bleed">—</div></div>
-        <div class="rbox"><div style="font-size:0.65rem; font-weight:700; color:#9ca3af;">CATEGORY</div><div class="rval" id="r-cat">—</div></div>
-      </div>
+  <div class="calc-card">
+    <div class="calc-title">HAS-BLED Score</div>
+    <div class="criteria-list" id="crit-list"></div>
+    <div class="running-total">
+      <span class="rt-label">Current HAS-BLED Score</span>
+      <span class="rt-val" id="rt-val">0</span>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Calculate Bleeding Risk →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-display">
+        <div class="score-big" id="score-big">0</div>
+        <div style="font-size:0.9rem;color:#6b7280;margin-top:4px">HAS-BLED Score (max 9)</div>
+        <div class="score-badge" id="score-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">HAS-BLED</div><div class="rval" id="r-score">—</div><div class="runit">/ 9</div></div>
+        <div class="rbox"><div class="rlabel">Annual Bleed Risk</div><div class="rval" id="r-bleed">—</div><div class="runit">% per year</div></div>
+        <div class="rbox"><div class="rlabel">Category</div><div class="rval" id="r-cat" style="font-size:1rem">—</div><div class="runit">bleeding risk</div></div>
+      </div>
+      <div class="mod-factors" id="mod-factors" style="display:none">
+        <div class="mf-title">⚠️ Modifiable Risk Factors Present — Address Before Anticoagulation</div>
+        <div id="mod-list"></div>
+      </div>
+      <div class="rec-box" id="rec-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
 
-      <div class="mod-factors" id="mod-factors" style="display:none; background:#fff7ed; border:1.5px solid #fed7aa; border-radius:12px; padding:16px; margin-bottom:16px;">
-        <div style="font-size:0.75rem; font-weight:800; color:#9a3412; margin-bottom:8px;">⚠️ ADDRESS MODIFIABLE FACTORS:</div>
-        <div id="mod-list" style="font-size:0.85rem; color:#374151;"></div>
-      </div>
+  <div class="content-card">
+    <h2>HAS-BLED — Complete Bleeding Risk Guide</h2>
+    <p>The HAS-BLED score was developed by Pisters et al. (2010) from the Euro Heart Survey on Atrial Fibrillation, a prospective registry of 3,978 AF patients across 35 European countries. It was the first bleeding risk score specifically validated in AF patients receiving antithrombotic therapy, and it remains the most widely used and recommended bleeding risk assessment tool in AF management, endorsed by the ESC 2020 AF guidelines. The score uses nine clinical variables to estimate the annual risk of clinically relevant major bleeding — defined as requiring hospitalisation, causing haemoglobin drop of ≥2 g/dL, or requiring blood transfusion.</p>
+    <p>A critical — and frequently misunderstood — clinical principle: the HAS-BLED score exists to identify <em>modifiable</em> bleeding risk factors that should be corrected, not to justify withholding anticoagulation from patients with high stroke risk. Numerous studies have confirmed that in AF patients with CHA₂DS₂-VASc ≥2 (male) or ≥3 (female), the absolute stroke risk reduction from anticoagulation far exceeds the absolute bleeding risk increase — even in patients with HAS-BLED 3 or higher. The ESC 2020 guidelines are explicit: a high HAS-BLED score alone should not lead to withholding anticoagulation.</p>
 
-      <div class="rec-box" id="rec-box"></div>
-      
-      <div style="display:flex; gap:10px; margin-top:20px;">
-        <button onclick="shareWA()" style="flex:1; padding:12px; background:#25d366; color:white; border:none; border-radius:10px; font-weight:700; cursor:pointer;">WhatsApp</button>
-        <button onclick="copyResult()" style="flex:1; padding:12px; background:#f3f4f6; border:1.5px solid #e5e7eb; border-radius:10px; font-weight:700; cursor:pointer;">Copy</button>
-      </div>
-      <button onclick="resetCalc()" style="width:100%; margin-top:10px; padding:10px; background:none; border:1px solid #e5e7eb; border-radius:10px; color:#9ca3af; cursor:pointer;">↺ Reset</button>
-    </div>
-  </div>
+    <h3>HAS-BLED Annual Bleeding Risk</h3>
+    <div class="table-responsive">
+      <table class="bleed-table">
+        <thead><tr><th>HAS-BLED Score</th><th>Annual Major Bleeding Risk</th><th>Risk Category</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>0.9%</td><td>Low</td></tr>
+          <tr><td>1</td><td>3.4%</td><td>Low–Moderate</td></tr>
+          <tr><td>2</td><td>4.1%</td><td>Moderate</td></tr>
+          <tr><td>3</td><td>5.8%</td><td>High — identify modifiable factors</td></tr>
+          <tr><td>4</td><td>8.9%</td><td>High — correct modifiable factors urgently</td></tr>
+          <tr><td>≥5</td><td>&gt;9.1%</td><td>Very High — specialist input recommended</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-  <section class="content-card">
-    <h2>Clinical Context</h2>
-    <p>A high HAS-BLED score should <strong>not</strong> be used alone to withhold anticoagulation. Instead, it serves as a tool to identify factors that can be corrected to make anticoagulation safer.</p>
-    
-    <div class="table-responsive">
-      <table class="bleed-table">
-        <thead><tr><th>Score</th><th>Annual Major Bleed</th><th>Risk</th></tr></thead>
-        <tbody>
-          <tr><td>0</td><td>0.9%</td><td>Low</td></tr>
-          <tr><td>1-2</td><td>3.4 - 4.1%</td><td>Moderate</td></tr>
-          <tr><td>≥3</td><td>5.8% +</td><td>High</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-  
-  <div class="disclaimer"><strong>⚠ Disclaimer:</strong> For healthcare professional use. Decisions require CHA₂DS₂-VASc cross-reference and full clinical judgment.</div>
+    <h3>Modifiable vs Non-Modifiable HAS-BLED Factors</h3>
+    <p>The key clinical utility of HAS-BLED is distinguishing which risk factors can be corrected to reduce bleeding risk without stopping anticoagulation:</p>
+    <ul>
+      <li><strong>Modifiable — Uncontrolled hypertension (H):</strong> Target BP &lt;130/80 mmHg. Hypertension is the most important modifiable bleeding risk factor. Good BP control reduces both stroke and bleeding risk simultaneously</li>
+      <li><strong>Modifiable — Labile INR (L):</strong> Warfarin with time in therapeutic range (TTR) &lt;60% = elevated risk. Switch to DOAC if TTR persistently low — DOACs have more predictable anticoagulation without monitoring requirement</li>
+      <li><strong>Modifiable — Drugs (D) — NSAIDs, antiplatelets:</strong> Stop NSAIDs if possible. Review antiplatelet therapy need — dual antiplatelet + anticoagulant (triple therapy) massively increases bleeding risk. Use proton pump inhibitor (PPI) if antiplatelet therapy unavoidable</li>
+      <li><strong>Modifiable — Alcohol excess (A):</strong> Heavy alcohol use (&gt;8 units/week) impairs liver function, coagulation, and adherence. Counselling and cessation support</li>
+      <li><strong>Partially modifiable — Bleeding history:</strong> Prior GI bleed — treat underlying cause (H. pylori, ulcer disease, endoscopy). Prior intracranial bleed — specialist neurology/cardiology review for anticoagulation decision</li>
+      <li><strong>Non-modifiable — Age &gt;65 (E — Elderly):</strong> Cannot be modified but falls prevention, medication review, and dose adjustment for DOACs in elderly may reduce risk</li>
+      <li><strong>Non-modifiable — Renal/hepatic impairment (A):</strong> Treat underlying disease. DOAC dose adjustment for CrCl &lt;50 mL/min</li>
+      <li><strong>Non-modifiable — Stroke history (S):</strong> Prior ischaemic stroke is paradoxically also a risk factor for AF-related stroke — this highlights the importance of not withholding anticoagulation based on HAS-BLED alone in stroke patients with AF</li>
+    </ul>
+
+    <h3>DOACs Reduce Bleeding Risk Compared to Warfarin</h3>
+    <p>An important consideration in patients with elevated HAS-BLED scores: DOACs (apixaban, rivaroxaban, dabigatran, edoxaban) are associated with significantly lower rates of intracranial haemorrhage — the most feared and often fatal type of bleeding — compared to warfarin (relative risk reduction approximately 50%). For patients with elevated HAS-BLED due to labile INR (warfarin-specific factor), switching to a DOAC both improves anticoagulation efficacy and reduces bleeding risk simultaneously. Apixaban has the most favourable bleeding profile across trials, including in elderly patients and those with CKD.</p>
+
+    <h3>HAS-BLED in Patients Refusing Anticoagulation</h3>
+    <p>When a patient refuses anticoagulation despite counselling, or when a genuine clinical decision is made to withhold anticoagulation, the HAS-BLED score can inform the rationale. However, the clinical decision should still be documented as part of shared decision-making, with clear notation that the patient understands the stroke risk. Aspirin is NOT recommended as an alternative to anticoagulation in AF — it has almost equivalent bleeding risk to DOACs with significantly inferior stroke prevention.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/cha2ds2-vasc" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">CHA₂DS₂-VASc Score</div><div class="rc-desc">Stroke risk — always use with HAS-BLED</div></div></a>
+      <a href="/medical-calculators/qtc-calculator" class="related-card"><span class="rc-icon">📈</span><div><div class="rc-title">QTc Calculator</div><div class="rc-desc">AF drug monitoring</div></div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">CrCl Calculator</div><div class="rc-desc">DOAC dose adjustment</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">BP control in AF</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> HAS-BLED is a bleeding risk stratification tool — it should never be used in isolation to withhold anticoagulation in patients with AF and high stroke risk. Anticoagulation decisions require comprehensive clinical assessment, patient preference, shared decision-making, and concurrent CHA₂DS₂-VASc assessment. Always follow current ESC, AHA/ACC, or local guidelines.</div>
 </main>
-
-<script>
-const CRITERIA = [
-  {l:'H', name:'Hypertension', detail:'Systolic BP >160 mmHg', mod:true, note:'Target <130/80 mmHg'},
-  {l:'A', name:'Renal Dysfunction', detail:'Dialysis or Cr >2.26 mg/dL', mod:false},
-  {l:'A', name:'Liver Dysfunction', detail:'Cirrhosis or elevated Bilirubin/LFTs', mod:false},
-  {l:'S', name:'Stroke History', detail:'Prior ischemic or hemorrhagic stroke', mod:false},
-  {l:'B', name:'Bleeding History', detail:'Prior major bleed or anemia', mod:true, note:'Treat GI causes/PPI use'},
-  {l:'L', name:'Labile INR', detail:'Time in range <60% (Warfarin)', mod:true, note:'Consider switch to DOAC'},
-  {l:'E', name:'Elderly', detail:'Age >65 years', mod:false},
-  {l:'D', name:'Drugs (NSAIDs/Antiplatelets)', detail:'Aspirin, Clopidogrel, or NSAID use', mod:true, note:'Review necessity/Stop NSAIDs'},
-  {l:'D', name:'Alcohol Excess', detail:'≥8 units/week', mod:true, note:'Counselling/Reduction'}
-];
-
-const RISK_VALS = [0.9, 3.4, 4.1, 5.8, 8.9, 9.1, 9.1, 9.1, 9.1, 9.1];
-let sel = new Set();
-let lastResult = "";
-
-const list = document.getElementById('crit-list');
-list.innerHTML = CRITERIA.map((c,i) => `
-  <div class="crit" id="cr${i}" onclick="toggle(${i})">
-    <div class="crit-letter">${c.l}</div>
-    <div class="crit-body">
-      <div class="crit-name">${c.name}</div>
-      <div class="crit-detail">${c.detail}</div>
-      <span class="crit-mod ${c.mod?'mod-yes':'mod-no'}">${c.mod?'Modifiable':'Non-modifiable'}</span>
-    </div>
-    <div style="font-family:Fraunces, serif; font-weight:900; color:#d1d5db;">+1</div>
-  </div>`).join('');
-
-function toggle(i) {
-  const el = document.getElementById('cr'+i);
-  if(sel.has(i)) { sel.delete(i); el.classList.remove('sel'); }
-  else { sel.add(i); el.classList.add('sel'); }
-  document.getElementById('rt-val').textContent = sel.size;
-}
-
-function calculate() {
-  const s = sel.size;
-  const risk = RISK_VALS[s];
-  document.getElementById('score-big').textContent = s;
-  document.getElementById('r-bleed').textContent = risk + '%';
-  
-  const badge = document.getElementById('score-badge');
-  const cat = document.getElementById('r-cat');
-  const rec = document.getElementById('rec-box');
-  
-  const modSelected = Array.from(sel).filter(i => CRITERIA[i].mod);
-  const modDiv = document.getElementById('mod-factors');
-  if(modSelected.length > 0) {
-    modDiv.style.display = 'block';
-    document.getElementById('mod-list').innerHTML = modSelected.map(i => `• <strong>${CRITERIA[i].name}</strong>: ${CRITERIA[i].note}`).join('<br>');
-  } else { modDiv.style.display = 'none'; }
-
-  if(s <= 1) {
-    badge.className = 'score-badge b-low'; badge.textContent = 'Low Risk'; cat.textContent = 'Low';
-    rec.className = 'rec-box rec-low'; rec.textContent = '✅ Standard anticoagulation is appropriate. Follow routine monitoring.';
-  } else if(s === 2) {
-    badge.className = 'score-badge b-mod'; badge.textContent = 'Moderate Risk'; cat.textContent = 'Moderate';
-    rec.className = 'rec-box rec-low'; rec.textContent = '⚠️ Address modifiable factors. DOAC preferred over Warfarin.';
-  } else {
-    badge.className = 'score-badge b-high'; badge.textContent = 'High Risk'; cat.textContent = 'High';
-    rec.className = 'rec-box rec-high'; rec.textContent = '🚨 High Risk (≥3). Do NOT stop anticoagulation if stroke risk is high. Urgently correct modifiable factors, use PPI, and strictly control BP.';
-  }
-
-  lastResult = `HAS-BLED Score: ${s}\nAnnual Bleed Risk: ${risk}%\nModifiable Factors: ${modSelected.map(i=>CRITERIA[i].name).join(', ')}`;
-  document.getElementById('results').className = 'results show';
-  setTimeout(() => document.getElementById('results').scrollIntoView({behavior:'smooth', block:'nearest'}), 50);
-}
-
-function shareWA() { window.open('https://wa.me/?text=' + encodeURIComponent('🩸 HAS-BLED Result\n' + lastResult), '_blank'); }
-function copyResult() { navigator.clipboard.writeText(lastResult).then(() => alert("Copied!")); }
-function resetCalc() { location.reload(); }
-</script>
-
 <script src="/assets/shared-nav.js"></script>
-</body>
-</html>
+<script>
+const CRITERIA=[
+  {l:'H',name:'Hypertension (uncontrolled)',detail:'Systolic BP >160 mmHg',mod:true,modNote:'Control BP to <130/80 mmHg — most impactful single intervention'},
+  {l:'A',name:'Abnormal Renal Function',detail:'Dialysis, transplant, or creatinine >200 µmol/L (>2.26 mg/dL)',mod:false},
+  {l:'A',name:'Abnormal Liver Function',detail:'Cirrhosis, or bilirubin >2× normal + AST/ALT/ALP >3× normal',mod:false},
+  {l:'S',name:'Prior Stroke History',detail:'History of ischaemic or haemorrhagic stroke',mod:false},
+  {l:'B',name:'Prior Bleeding / Predisposition',detail:'Anaemia, prior major bleed, or bleeding predisposition',mod:true,modNote:'Investigate and treat GI bleed causes (H. pylori, PPI, endoscopy)'},
+  {l:'L',name:'Labile INR',detail:'Unstable/high INR — time in therapeutic range <60% (warfarin patients)',mod:true,modNote:'Switch to DOAC — predictable anticoagulation without monitoring'},
+  {l:'E',name:'Elderly — Age >65',detail:'Age greater than 65 years',mod:false},
+  {l:'D',name:'Drugs — Antiplatelets / NSAIDs',detail:'Concomitant antiplatelet agents (aspirin, clopidogrel) or NSAIDs',mod:true,modNote:'Stop NSAIDs; review antiplatelet need; add PPI if antiplatelet unavoidable'},
+  {l:'D',name:'Alcohol Excess',detail:'≥8 units/week alcohol consumption',mod:true,modNote:'Counselling; alcohol cessation support; impairs coagulation and adherence'},
+];
+const BLEED_RISK=[0.9,3.4,4.1,5.8,8.9,9.1,9.1,9.1,9.1,9.1];
+let sel=new Set();let lastResult=null;
+const faqs=[
+  ["What HAS-BLED score is high risk?","Score ≥3 is high bleeding risk (~5.8%+ annual major bleeding). But this should NOT automatically lead to stopping anticoagulation — it should prompt correction of modifiable factors."],
+  ["Should I stop anticoagulation if HAS-BLED is high?","No. ESC 2020: high HAS-BLED alone should not withhold anticoagulation in AF patients with high CHA₂DS₂-VASc. Use HAS-BLED to identify and fix modifiable factors."],
+  ["Which DOAC has the lowest bleeding risk?","Apixaban (Eliquis) has the most favourable bleeding profile across major trials, including lower rates of GI and intracranial bleeding compared to warfarin and other DOAICs. Preferred in elderly and CKD."],
+  ["Can I use aspirin instead of anticoagulation in high HAS-BLED?","No. Aspirin has similar bleeding risk to DOACs but far inferior stroke prevention in AF. ESC 2020 explicitly states aspirin is NOT recommended as an alternative to anticoagulation in AF."],
+  ["What are the modifiable HAS-BLED factors?","Uncontrolled hypertension (most important), labile INR (switch to DOAC), concomitant NSAIDs/antiplatelets (stop if possible), alcohol excess (cessation). Correcting these reduces bleeding risk without stopping anticoagulation."]
+];
+document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
+function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}
+document.getElementById('crit-list').innerHTML=CRITERIA.map((c,i)=>`
+  <div class="crit" id="cr${i}" onclick="toggle(${i})">
+    <div class="crit-letter" id="cl${i}">${c.l}</div>
+    <div class="crit-body">
+      <div class="crit-name">${c.name}</div>
+      <div class="crit-detail">${c.detail}</div>
+      <span class="crit-mod ${c.mod?'mod-yes':'mod-no'}">${c.mod?'✗ Modifiable':'✓ Non-modifiable'}</span>
+    </div>
+    <div class="crit-pt">+1</div>
+  </div>`).join('');
+function toggle(i){
+  const el=document.getElementById('cr'+i);
+  if(sel.has(i)){sel.delete(i);el.classList.remove('sel')}else{sel.add(i);el.classList.add('sel')}
+  document.getElementById('rt-val').textContent=sel.size;
+}
+function calculate(){
+  const s=sel.size;
+  const bleedRisk=BLEED_RISK[Math.min(s,9)];
+  document.getElementById('score-big').textContent=s;
+  document.getElementById('r-score').textContent=s;
+  document.getElementById('r-bleed').textContent=bleedRisk+'%';
+  const badge=document.getElementById('score-badge');
+  const rec=document.getElementById('rec-box');
+  let bCls,bTxt,cat,rCls,rTxt;
+  // Find modifiable selected
+  const modSelected=Array.from(sel).filter(i=>CRITERIA[i].mod);
+  if(modSelected.length>0){
+    const mf=document.getElementById('mod-factors');mf.style.display='block';
+    document.getElementById('mod-list').innerHTML=modSelected.map(i=>`<div class="mf-item"><span class="mf-icon">⚠️</span><div><strong>${CRITERIA[i].name}:</strong> ${CRITERIA[i].modNote}</div></div>`).join('');
+  } else {document.getElementById('mod-factors').style.display='none';}
+  if(s<=1){bCls='b-low';bTxt='Low Bleeding Risk';cat='Low';rCls='rec-low';
+    rTxt='✅ Low HAS-BLED score. Annual major bleeding risk ~'+bleedRisk+'%.\n\nAnticoagulation is appropriate with standard precautions. Proceed with DOAC or warfarin per CHA₂DS₂-VASc recommendation.\n\nStandard management:\n• Ensure DOAC adherence (preferred over warfarin)\n• Patient education on bleeding signs\n• Annual review of medications and risk factors\n• Avoid NSAIDs and excessive alcohol';}
+  else if(s<=2){bCls='b-mod';bTxt='Moderate Bleeding Risk';cat='Moderate';rCls='rec-low';
+    rTxt='⚠️ Moderate HAS-BLED score. Annual major bleeding risk ~'+bleedRisk+'%.\n\nDo NOT withhold anticoagulation based on HAS-BLED alone.\n\nManagement:\n• Address all modifiable risk factors (shown above)\n• DOAC preferred over warfarin — lower intracranial haemorrhage risk\n• PPI cover if on antiplatelet therapy\n• Structured follow-up every 4–6 months\n• Check renal and hepatic function annually (more often if CKD)';}
+  else{bCls='b-high';bTxt='High Bleeding Risk';cat='High';rCls='rec-high';
+    rTxt='⚠️ High HAS-BLED score (≥3). Annual major bleeding risk ~'+bleedRisk+'%.\n\nCRITICAL: High HAS-BLED ≠ contraindication to anticoagulation.\nESC 2020: Continue anticoagulation if CHA₂DS₂-VASc ≥2 (M) / ≥3 (F).\n\nMandatory actions:\n• Correct ALL modifiable risk factors FIRST (listed above)\n• DOAC strongly preferred over warfarin — 50% lower intracranial bleed risk\n• Stop NSAIDs and review antiplatelet necessity\n• Strict BP control target <130/80 mmHg\n• GI bleed protection: PPI therapy\n• Consider haematology/cardiology specialist review for HAS-BLED ≥4\n• Document shared decision-making discussion in notes\n• Follow-up every 3 months';}
+  badge.textContent=bTxt;badge.className='score-badge '+bCls;
+  document.getElementById('r-cat').textContent=cat;
+  rec.textContent=rTxt;rec.className='rec-box '+rCls;
+  lastResult=`HAS-BLED Score: ${s} — ${bTxt}\nAnnual Major Bleeding Risk: ~${bleedRisk}%\nModifiable factors: ${modSelected.map(i=>CRITERIA[i].
