@@ -4,224 +4,254 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Hunt-Hess Scale Calculator | Subarachnoid Haemorrhage | SAH Severity | RxMedCalc</title>
-<meta name="description" content="Free Hunt-Hess scale calculator for subarachnoid haemorrhage (SAH) severity grading. Predict 30-day mortality, guide surgical timing, and assess surgical risk after aneurysmal SAH. Includes World Federation of Neurosurgical Societies (WFNS) grading comparison, hydrocephalus monitoring, and vasospasm management guide."/>
-<meta name="keywords" content="Hunt Hess scale calculator, Hunt Hess grade SAH, subarachnoid haemorrhage grading, SAH severity score, Hunt Hess mortality, subarachnoid haemorrhage prognosis, aneurysm surgery timing, Hunt Hess vs WFNS, SAH grading scale, Berry aneurysm rupture grading"/>
+<meta name="description" content="Free Hunt-Hess scale calculator for subarachnoid haemorrhage (SAH) severity grading. Predict 30-day mortality and guide surgical timing."/>
+<meta name="keywords" content="Hunt Hess scale calculator, Hunt Hess grade SAH, subarachnoid haemorrhage grading, SAH severity score, neurosurgery calculator"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
 <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/hunt-hess"/>
-<meta property="og:title" content="Hunt-Hess Scale Calculator | Subarachnoid Haemorrhage | SAH Severity | RxMedCalc"/>
-<meta property="og:description" content="Grade subarachnoid haemorrhage using Hunt-Hess scale. 30-day mortality prediction, surgical timing guidance. Free for neurosurgeons worldwide."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/hunt-hess"/>
-<meta property="og:site_name" content="RxMedCalc"/>
-<meta name="twitter:card" content="summary_large_image"/>
+
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-<link rel="stylesheet" href="/assets/shared.css"/>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
-.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#14102a 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
-.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(139,92,246,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,0.05) 1px,transparent 1px);background-size:40px 40px}
-.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(139,92,246,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
-.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
-.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
-.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
-.page-eyebrow{display:inline-flex;align-items:center;background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#c4b5fd;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
-h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
-h1 em{font-style:italic;color:#a78bfa}
-.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
-.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
-.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
-.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
-.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
-.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:24px;display:flex;align-items:center;gap:10px}
-.calc-title::before{content:'';display:block;width:4px;height:20px;background:#8b5cf6;border-radius:2px;flex-shrink:0}
-.grade-cards{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
-.grade-card{display:flex;align-items:stretch;border:2px solid #e5e7eb;border-radius:14px;overflow:hidden;cursor:pointer;transition:all 0.2s;background:#fff}
-.grade-card.sel{border-color:#8b5cf6;background:#faf5ff}
-.gc-num{width:60px;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:900;background:#f3f4f6;color:#d1d5db;flex-shrink:0;transition:all 0.2s}
-.grade-card.sel .gc-num{background:#8b5cf6;color:#fff}
-.gc-body{padding:14px 18px;flex:1}
-.gc-title{font-size:0.92rem;font-weight:700;color:#0d1b2a;margin-bottom:3px}
-.gc-desc{font-size:0.78rem;color:#6b7280;line-height:1.5}
-.gc-mort{font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:10px;margin-top:6px;display:inline-block}
-.m0{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0}
-.m1{background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe}
-.m2{background:#fffbeb;color:#d97706;border:1px solid #fde68a}
-.m3{background:#fef2f2;color:#dc2626;border:1px solid #fecaca}
-.m4{background:#dc2626;color:#fff}
-.m5{background:#7f1d1d;color:#fff}
-.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#8b5cf6,#7c3aed);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(139,92,246,0.3)}
-.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(139,92,246,0.4)}
-.results{display:none;margin-top:24px}.results.show{display:block}
-.divider{height:1px;background:#f3f4f6;margin:20px 0}
-.score-display{text-align:center;margin-bottom:20px;background:linear-gradient(135deg,#faf5ff,#fff);border:1.5px solid #e9d5ff;border-radius:14px;padding:24px}
-.sd-grade{font-family:'Fraunces',Georgia,serif;font-size:5rem;font-weight:900;color:#8b5cf6;line-height:1}
-.sd-title{font-size:1rem;font-weight:700;color:#0d1b2a;margin-top:4px}
-.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
-@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
-.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
-.rbox.hi{background:#faf5ff;border-color:#e9d5ff}
-.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
-.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a}
-.rbox.hi .rval{color:#8b5cf6}
-.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
-.mgmt-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line}
-.action-row{display:flex;gap:10px;margin-top:12px}
-.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
-.act-btn:hover{opacity:0.85}
-.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
-.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
-.reset-btn:hover{border-color:#8b5cf6;color:#8b5cf6}
-.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
-.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
-.content-card h3{font-size:1rem;font-weight:700;color:#8b5cf6;margin:20px 0 8px}
-.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
-.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
-.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
-.content-card li::before{content:'→';position:absolute;left:0;color:#8b5cf6;font-size:0.8rem}
-.sah-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:14px 0}
-.sah-table th{background:#faf5ff;color:#6d28d9;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;border-bottom:2px solid #e9d5ff}
-.sah-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
-.related-card:hover{border-color:#8b5cf6;background:#faf5ff;transform:translateX(3px)}
-.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
-.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { 
+    font-family: 'DM Sans', system-ui, sans-serif; 
+    background: #f8f6f2; 
+    color: #1a1a2e; 
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  /* HEADER */
+  .page-header { 
+    background: linear-gradient(135deg, #0d1b2a 0%, #14102a 60%, #0d1b2a 100%); 
+    padding: 40px 0 40px; 
+    position: relative; 
+    overflow: hidden; 
+  }
+  .page-header::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(139,92,246,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.05) 1px, transparent 1px); background-size: 40px 40px; }
+  .page-header::after { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%); top: -100px; right: -50px; pointer-events: none; }
+  
+  .hero-inner-content { max-width: 900px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-bottom: 20px; flex-wrap: wrap; }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  
+  .page-eyebrow { display: inline-flex; align-items: center; background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); border-radius: 20px; padding: 5px 14px; font-size: 0.72rem; font-weight: 700; color: #c4b5fd; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
+  h1 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: #fff; line-height: 1.15; margin-bottom: 12px; }
+  h1 em { font-style: italic; color: #a78bfa; }
+  .page-sub { font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 580px; margin-bottom: 24px; }
+  
+  .header-badges { display: flex; gap: 8px; flex-wrap: wrap; padding-bottom: 8px; }
+  .hbadge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 4px 12px; font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.7); }
+
+  /* MAIN LAYOUT */
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 24px 80px; }
+  
+  .calc-card { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 20px; padding: 32px; margin-bottom: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+  .calc-title { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 700; color: #0d1b2a; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+  .calc-title::before { content: ''; display: block; width: 4px; height: 20px; background: #8b5cf6; border-radius: 2px; flex-shrink: 0; }
+
+  /* GRADE CARDS */
+  .grade-cards { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+  .grade-card { display: flex; align-items: stretch; border: 2px solid #e5e7eb; border-radius: 14px; overflow: hidden; cursor: pointer; transition: all 0.2s; background: #fff; min-height: 80px; }
+  .grade-card.sel { border-color: #8b5cf6; background: #faf5ff; }
+  .gc-num { width: 60px; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 900; background: #f3f4f6; color: #d1d5db; flex-shrink: 0; }
+  .grade-card.sel .gc-num { background: #8b5cf6; color: #fff; }
+  .gc-body { padding: 12px 16px; flex: 1; }
+  .gc-title { font-size: 0.95rem; font-weight: 700; color: #0d1b2a; margin-bottom: 2px; }
+  .gc-desc { font-size: 0.8rem; color: #6b7280; line-height: 1.4; }
+  .gc-mort { font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-top: 6px; display: inline-block; text-transform: uppercase; }
+  
+  .m1 { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+  .m2 { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+  .m3 { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+  .m4 { background: #dc2626; color: #fff; }
+
+  .btn-calc { width: 100%; padding: 14px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border: none; border-radius: 12px; color: #fff; font-family: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 16px rgba(139,92,246,0.3); }
+  .btn-calc:hover { transform: translateY(-1px); }
+
+  /* RESULTS */
+  .results { display: none; margin-top: 24px; }
+  .results.show { display: block; }
+  .divider { height: 1px; background: #f3f4f6; margin: 20px 0; }
+  
+  .score-display { text-align: center; margin-bottom: 20px; background: linear-gradient(135deg, #faf5ff, #fff); border: 1.5px solid #e9d5ff; border-radius: 14px; padding: 24px; }
+  .sd-grade { font-family: 'Fraunces', Georgia, serif; font-size: 4.5rem; font-weight: 900; color: #8b5cf6; line-height: 1; }
+  .sd-title { font-size: 1rem; font-weight: 700; color: #0d1b2a; margin-top: 4px; }
+
+  .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+  @media(max-width: 500px) { .result-grid { grid-template-columns: 1fr; } }
+  
+  .rbox { background: #f9fafb; border: 1.5px solid #e5e7eb; border-radius: 12px; padding: 14px; text-align: center; }
+  .rbox.hi { background: #faf5ff; border-color: #e9d5ff; }
+  .rlabel { font-size: 0.65rem; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .rval { font-size: 1.2rem; font-weight: 700; color: #0d1b2a; }
+  .rbox.hi .rval { color: #8b5cf6; }
+
+  .mgmt-box { border-radius: 12px; padding: 16px; margin-bottom: 16px; font-size: 0.88rem; line-height: 1.7; white-space: pre-line; }
+
+  .action-row { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .act-btn { flex: 1; padding: 10px; border-radius: 10px; font-family: inherit; font-size: 0.82rem; font-weight: 600; cursor: pointer; border: none; min-width: 120px; }
+  .wa-btn { background: #25d366; color: #fff; }
+  .copy-btn { background: #f3f4f6; border: 1.5px solid #e5e7eb; color: #374151; }
+
+  /* CONTENT CARDS */
+  .content-card { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 20px; padding: 32px; margin-bottom: 24px; min-width: 0; }
+  .content-card h2 { font-family: 'Fraunces', Georgia, serif; font-size: 1.4rem; font-weight: 900; color: #0d1b2a; margin-bottom: 16px; }
+  .content-card h3 { font-size: 1rem; font-weight: 700; color: #8b5cf6; margin: 20px 0 8px; }
+  .content-card p { font-size: 0.9rem; color: #4b5563; line-height: 1.8; margin-bottom: 12px; }
+  .content-card li { font-size: 0.88rem; color: #4b5563; padding-left: 16px; position: relative; line-height: 1.6; margin-bottom: 6px; list-style: none; }
+  .content-card li::before { content: '→'; position: absolute; left: 0; color: #8b5cf6; }
+
+  .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; margin: 16px 0; }
+  .sah-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 0; }
+  .sah-table th { background: #faf5ff; color: #6d28d9; font-weight: 700; padding: 10px 12px; text-align: left; text-transform: uppercase; border-bottom: 2px solid #e9d5ff; white-space: nowrap; }
+  .sah-table td { padding: 10px 12px; border-bottom: 1px solid #f3f4f6; color: #374151; }
+
+  .disclaimer { background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 12px; padding: 16px 20px; font-size: 0.78rem; color: #78350f; line-height: 1.65; margin-top: 24px; }
+
+  @media(max-width:600px) {
+    .main { padding: 24px 16px 60px; }
+    .calc-card, .content-card { padding: 24px 16px; }
+    .gc-num { width: 45px; font-size: 1.5rem; }
+  }
 </style>
 </head>
 <body>
+
 <div class="page-header">
-  <div class="header-inner">
+  <div class="hero-inner-content">
     <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Hunt-Hess Scale</span></nav>
     <div class="page-eyebrow">🧠 Neurosurgery · SAH · Stroke</div>
     <h1>Hunt-Hess Scale<br><em>SAH Grading</em> Calculator</h1>
-    <p class="page-sub">Grade the severity of subarachnoid haemorrhage after aneurysmal rupture. Predict 30-day mortality, guide surgical timing, and direct neurocritical care intensity.</p>
+    <p class="page-sub">Grade the severity of aneurysmal subarachnoid haemorrhage. Predict mortality and guide neurosurgical intervention timing.</p>
     <div class="header-badges">
-      <span class="hbadge">✓ 5-Grade Classification</span>
+      <span class="hbadge">✓ 5-Grade System</span>
       <span class="hbadge">✓ 30-Day Mortality</span>
-      <span class="hbadge">✓ Surgical Timing Guidance</span>
-      <span class="hbadge">✓ WFNS Comparison</span>
+      <span class="hbadge">✓ Surgical Timing</span>
     </div>
   </div>
 </div>
+
 <main class="main">
-  <div class="calc-card">
+  <section class="calc-card">
     <div class="calc-title">Hunt-Hess Grade Selection</div>
     <div class="grade-cards" id="grade-cards"></div>
-    <button class="btn-calc" onclick="calculate()">Assess Outcome &amp; Management →</button>
+    <button class="btn-calc" onclick="calculate()">Assess Outcome →</button>
+    
     <div class="results" id="results">
       <div class="divider"></div>
       <div class="score-display">
         <div class="sd-grade" id="sd-grade">—</div>
         <div class="sd-title" id="sd-title">—</div>
       </div>
+      
       <div class="result-grid">
-        <div class="rbox hi"><div class="rlabel">Hunt-Hess Grade</div><div class="rval" id="r-grade">—</div><div class="runit">/ V</div></div>
-        <div class="rbox"><div class="rlabel">30-Day Mortality</div><div class="rval" id="r-mort">—</div><div class="runit">%</div></div>
-        <div class="rbox"><div class="rlabel">Surgery Timing</div><div class="rval" id="r-surg" style="font-size:0.9rem">—</div><div class="runit">recommendation</div></div>
+        <div class="rbox hi"><div class="rlabel">Grade</div><div class="rval" id="r-grade">—</div></div>
+        <div class="rbox"><div class="rlabel">30-Day Mortality</div><div class="rval" id="r-mort">—</div></div>
+        <div class="rbox"><div class="rlabel">Surgery Timing</div><div class="rval" id="r-surg" style="font-size:0.9rem">—</div></div>
       </div>
+      
       <div class="mgmt-box" id="mgmt-box"></div>
+      
       <div class="action-row">
         <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
         <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
       </div>
       <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
-  </div>
+  </section>
 
-  <div class="content-card">
-    <h2>Hunt-Hess Scale — Complete SAH Management Guide</h2>
-    <p>The Hunt-Hess scale was published by William E. Hunt and Robert M. Hess in 1968 as a simple clinical grading system for aneurysmal subarachnoid haemorrhage (SAH). It classifies patients into five grades based on presenting neurological status, from asymptomatic aneurysm detection (Grade 0, sometimes added) through coma with decerebrate posturing (Grade V). The scale predicts surgical risk and 30-day mortality and guides the timing of aneurysm surgery or endovascular coiling.</p>
-    <table class="sah-table">
-      <thead><tr><th>Grade</th><th>Clinical Features</th><th>30-Day Mortality</th><th>WFNS Equivalent</th></tr></thead>
-      <tbody>
-        <tr><td>I</td><td>Asymptomatic or mild headache, slight neck stiffness</td><td>~5%</td><td>I</td></tr>
-        <tr><td>II</td><td>Moderate-severe headache, meningismus, no neurological deficit except CN palsy</td><td>~10%</td><td>I–II</td></tr>
-        <tr><td>III</td><td>Drowsiness, confusion, or mild focal deficit</td><td>~25–30%</td><td>II–III</td></tr>
-        <tr><td>IV</td><td>Stupor, moderate-severe hemiparesis, early decerebrate</td><td>~45–60%</td><td>IV</td></tr>
-        <tr><td>V</td><td>Deep coma, decerebrate posturing, moribund</td><td>~70–80%</td><td>V</td></tr>
-      </tbody>
-    </table>
-    <h3>Aneurysm Securing — Surgery vs Endovascular Coiling</h3>
-    <p>Following the ISAT trial (2002) and ISUIA data, endovascular coiling (endovascular embolisation) has largely replaced open surgical clipping as the first-line treatment for ruptured berry aneurysms where both are technically feasible. Key principles:</p>
-    <ul>
-      <li><strong>Coiling preferred:</strong> Posterior circulation aneurysms, elderly patients, Hunt-Hess Grade I–II, aneurysms with favourable dome-to-neck ratio</li>
-      <li><strong>Clipping preferred:</strong> Middle cerebral artery (MCA) aneurysms, broad-neck aneurysms not amenable to coiling, patients with significant intraparenchymal haematoma requiring evacuation, young patients</li>
-      <li><strong>Timing:</strong> Early treatment (within 24–48 hours) strongly recommended for Grades I–III to prevent re-bleeding (highest risk in first 24 hours — ~4% per day). For Grades IV–V, treatment may be deferred until clinical improvement</li>
-    </ul>
-    <h3>Vasospasm — Critical Complication of SAH</h3>
-    <p>Delayed cerebral ischaemia (DCI) from vasospasm is the leading cause of death and disability in patients surviving the initial bleed. Vasospasm typically occurs between day 4 and day 14 (peak day 7–10), affecting the proximal cerebral arteries in response to subarachnoid blood products. Key management:</p>
-    <ul>
-      <li><strong>Nimodipine 60 mg every 4 hours orally for 21 days:</strong> Only proven pharmacological treatment to reduce DCI — reduces mortality and neurological deficit without reducing angiographic vasospasm</li>
-      <li><strong>Euvolaemia:</strong> Maintain adequate hydration — avoid hypovolaemia. Isotonic fluid preferred. Previous "triple H therapy" (hypertension, hypervolaemia, haemodilution) is no longer routinely recommended but induced hypertension is used for symptomatic vasospasm</li>
-      <li><strong>Monitoring:</strong> Daily transcranial Doppler (TCD) for mean flow velocities (&gt;120 cm/s = moderate, &gt;200 cm/s = severe vasospasm in MCA). Serial neurological examination</li>
-      <li><strong>Rescue therapy for symptomatic vasospasm:</strong> Induced hypertension (noradrenaline to MAP 100–120 mmHg), intra-arterial verapamil or nicardipine, angioplasty for refractory cases</li>
-    </ul>
-    <h3>Hydrocephalus in SAH</h3>
-    <p>Acute obstructive hydrocephalus occurs in 15–20% of SAH patients due to blood blocking CSF drainage pathways at the arachnoid granulations. It typically presents within 24–72 hours. Management: emergency external ventricular drain (EVD) if symptomatic (decreased LOC, upward gaze palsy). Chronic communicating hydrocephalus may develop weeks later, requiring ventriculoperitoneal shunting.</p>
-  </div>
-
-  <div class="content-card">
-    <h2>Related Calculators</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/gcs-calculator" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">GCS Calculator</div><div class="rc-desc">Consciousness assessment</div></div></a>
-      <a href="/medical-calculators/nihss-calculator" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">NIHSS Calculator</div><div class="rc-desc">Ischaemic stroke severity</div></div></a>
-      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">BP management in SAH</div></div></a>
-      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Neurocritical care ICU</div></div></a>
+  <section class="content-card">
+    <h2>Hunt-Hess Scale & SAH Management</h2>
+    <div class="table-responsive">
+      <table class="sah-table">
+        <thead><tr><th>Grade</th><th>Clinical Features</th><th>Mortality</th></tr></thead>
+        <tbody>
+          <tr><td>I</td><td>Asymptomatic or mild headache</td><td>~5%</td></tr>
+          <tr><td>II</td><td>Moderate-severe headache, neck stiffness</td><td>~10%</td></tr>
+          <tr><td>III</td><td>Drowsiness, confusion, mild deficit</td><td>~30%</td></tr>
+          <tr><td>IV</td><td>Stupor, hemiparesis</td><td>~50%</td></tr>
+          <tr><td>V</td><td>Deep coma, decerebrate</td><td>~80%</td></tr>
+        </tbody>
+      </table>
     </div>
-  </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Hunt-Hess grading requires trained clinical assessment by a neurosurgeon or neurologist. Management of subarachnoid haemorrhage requires urgent neurosurgical consultation, neuroimaging (CT, CT angiography), and multidisciplinary neurocritical care. This tool is for reference only and does not replace specialist evaluation.</div>
+    <h3>Clinical Guide</h3>
+    <ul>
+      <li><strong>Early Treatment:</strong> Treatment of the aneurysm (coiling or clipping) within 24–48h is usually recommended for grades I–III.</li>
+      <li><strong>Vasospasm:</strong> Peak risk occurs between day 4 and 14. Nimodipine is standard of care.</li>
+      <li><strong>Hydrocephalus:</strong> Common complication; may require EVD.</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Hunt-Hess grading is for clinical reference. SAH requires urgent neuroimaging and specialist neurosurgical consultation.</div>
 </main>
+
 <script>
 const GRADES=[
-  {g:'I',title:'Grade I — Asymptomatic / Minimal',desc:'Asymptomatic, or minimal headache and slight nuchal rigidity. No focal neurological deficit.',mort:'~5%',mCls:'m1',surg:'Early surgery (24–48h)',
-    mgmt:'✅ Hunt-Hess Grade I — Excellent surgical candidate.\n\nManagement:\n• Confirm aneurysm with CTA or DSA\n• Early surgical clipping or endovascular coiling within 24–48 hours (reduces re-bleed risk)\n• Nimodipine 60 mg every 4 hours × 21 days\n• ICU monitoring for vasospasm (peak day 4–14)\n• Daily TCD monitoring from day 3\n• Maintain euvolaemia — avoid hypovolaemia\n• 30-day mortality ~5%; excellent functional outcome expected'},
-  {g:'II',title:'Grade II — Moderate Headache',desc:'Moderate to severe headache, nuchal rigidity. No neurological deficit other than cranial nerve palsy (e.g. III nerve palsy from posterior communicating artery aneurysm).',mort:'~10%',mCls:'m2',surg:'Early surgery (24–48h)',
-    mgmt:'✅ Hunt-Hess Grade II — Good surgical candidate.\n\nManagement:\n• CTA/DSA for aneurysm characterisation\n• Early aneurysm treatment (24–48h) — coiling preferred if suitable anatomy\n• Nimodipine 60 mg 4-hourly × 21 days\n• Analgesia — avoid NSAIDs (antiplatelet effect). IV paracetamol + codeine\n• Bed rest, dim lighting, limit stimulation\n• Daily neurological assessment; TCD from day 3\n• SBP control <160 mmHg pre-aneurysm treatment; target MAP 70–100 post-treatment\n• 30-day mortality ~10%'},
-  {g:'III',title:'Grade III — Drowsy / Confused',desc:'Drowsiness, confusion, or mild focal neurological deficit. Moderate-severe headache and meningismus.',mort:'~25–30%',mCls:'m2',surg:'Early surgery if stable',
-    mgmt:'⚠️ Hunt-Hess Grade III — Moderate risk.\n\nManagement:\n• Urgent neurosurgical review — surgery within 24–48h if patient stable enough\n• Airway protection assessment — may require intubation if LOC declining\n• Nimodipine + fluid management + BP control\n• Rule out hydrocephalus on CT — external ventricular drain (EVD) if ventriculomegaly with clinical deterioration\n• Higher vasospasm risk — vigilant TCD monitoring\n• Consider repeat CT at 24h\n• ICU admission standard\n• 30-day mortality ~25–30%'},
-  {g:'IV',title:'Grade IV — Stupor / Hemiparesis',desc:'Stupor, moderate-severe hemiparesis, possible early decerebrate rigidity, vegetative disturbances.',mort:'~45–60%',mCls:'m3',surg:'Defer — stabilise first',
-    mgmt:'⚠️ Hunt-Hess Grade IV — High mortality.\n\nManagement:\n• Intubation and mechanical ventilation — airway protection\n• Neurocritical ICU admission\n• CT head: large hematoma evacuation may improve outcome\n• EVD for hydrocephalus — may improve grade\n• Defer definitive aneurysm treatment until grade improves to I–III\n• Aggressive medical stabilisation: BP control, ICP monitoring\n• Goals-of-care discussion with family (45–60% mortality)\n• Reassess surgical candidacy daily'},
-  {g:'V',title:'Grade V — Coma / Decerebrate',desc:'Deep coma, decerebrate posturing, moribund appearance. Worst prognosis.',mort:'~70–80%',mCls:'m4',surg:'Supportive care / palliative',
-    mgmt:'🚨 Hunt-Hess Grade V — Critical. 70–80% mortality.\n\nManagement:\n• Intubation, mechanical ventilation, ICP monitoring\n• EVD urgently — hydrocephalus correction may improve grade to IV\n• If grade improves to III–IV: reassess surgical candidacy\n• Neurocritical ICU with full organ support\n• Aggressive goals-of-care discussion:\n  – Realistic prognosis must be communicated to family\n  – Early palliative care involvement appropriate\n  – Some Grade V patients who survive to definitive treatment may have meaningful recovery — decision is individualised\n• Avoid prognostic nihilism in first 72 hours — grading can improve with EVD and supportive care'},
+  {g:'I',title:'Grade I — Minimal',desc:'Asymptomatic, or minimal headache and slight neck stiffness.',mort:'~5%',mCls:'m1',surg:'Early (24–48h)',mgmt:'✅ Grade I — Excellent prognosis. Proceed with early CTA/DSA and aneurysm treatment to prevent re-bleeding. Nimodipine 60mg q4h.'},
+  {g:'II',title:'Grade II — Moderate',desc:'Moderate-severe headache, neck stiffness. No deficit except CN palsy.',mort:'~10%',mCls:'m1',surg:'Early (24–48h)',mgmt:'✅ Grade II — Good prognosis. Monitor for vasospasm. Early surgical or endovascular treatment recommended.'},
+  {g:'III',title:'Grade III — Drowsy',desc:'Drowsiness, confusion, or mild focal neurological deficit.',mort:'~30%',mCls:'m2',surg:'Early if stable',mgmt:'⚠️ Grade III — Moderate risk. Urgent neurosurgical review. Monitor airway; rule out hydrocephalus.'},
+  {g:'IV',title:'Grade IV — Stupor',desc:'Stupor, moderate-severe hemiparesis, early decerebrate.',mort:'~50%',mCls:'m3',surg:'Stabilise first',mgmt:'⚠️ Grade IV — High mortality. Neurocritical ICU. EVD for hydrocephalus. Defer definitive aneurysm treatment until patient stabilises.'},
+  {g:'V',title:'Grade V — Coma',desc:'Deep coma, decerebrate posturing, moribund.',mort:'~80%',mCls:'m4',surg:'Palliative / Support',mgmt:'🚨 Grade V — Critical. Focus on aggressive life support and ICP management. Realistic prognosis discussion with family required.'}
 ];
-let selGrade=null;let lastResult=null;
+
+let selGrade=null;
+let lastResult=null;
+
 document.getElementById('grade-cards').innerHTML=GRADES.map((g,i)=>`
   <div class="grade-card" id="gc${i}" onclick="selectGrade(${i})">
-    <div class="gc-num" id="gn${i}">${g.g}</div>
+    <div class="gc-num">${g.g}</div>
     <div class="gc-body">
       <div class="gc-title">${g.title}</div>
       <div class="gc-desc">${g.desc}</div>
       <span class="gc-mort ${g.mCls}">${g.mort} mortality</span>
     </div>
   </div>`).join('');
-function selectGrade(i){selGrade=i;GRADES.forEach((_,j)=>document.getElementById('gc'+j).classList.toggle('sel',j===i))}
+
+function selectGrade(i){
+  selGrade=i;
+  GRADES.forEach((_,j)=>document.getElementById('gc'+j).classList.toggle('sel',j===i));
+}
+
 function calculate(){
-  if(selGrade===null){alert('Please select a Hunt-Hess grade.');return}
+  if(selGrade===null){alert('Please select a grade.');return}
   const g=GRADES[selGrade];
+  
   document.getElementById('sd-grade').textContent=g.g;
   document.getElementById('sd-title').textContent=g.title;
   document.getElementById('r-grade').textContent='Grade '+g.g;
   document.getElementById('r-mort').textContent=g.mort;
   document.getElementById('r-surg').textContent=g.surg;
-  const mClsMap={m0:'background:#f0fdf4;border-color:#bbf7d0;color:#166534',m1:'background:#eff6ff;border-color:#bfdbfe;color:#1e3a5f',m2:'background:#fffbeb;border-color:#fde68a;color:#92400e',m3:'background:#fef2f2;border-color:#fecaca;color:#991b1b',m4:'background:#fef2f2;border:2px solid #dc2626;color:#7f1d1d',m5:'background:#fef2f2;border:2px solid #7f1d1d;color:#450a0a'};
+  
   const mgmt=document.getElementById('mgmt-box');
-  mgmt.textContent=g.mgmt;mgmt.style.cssText=`${mClsMap[g.mCls]};border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line`;
-  lastResult=`Hunt-Hess Grade ${g.g}\n${g.title}\n30-Day Mortality: ${g.mort}\nSurgery: ${g.surg}\nCalculated at rxmedcalc.com/medical-calculators/hunt-hess`;
+  mgmt.textContent=g.mgmt;
+  mgmt.className = 'mgmt-box ' + (selGrade < 2 ? 'm1' : (selGrade === 2 ? 'm2' : 'm3'));
+  mgmt.style.background = selGrade < 2 ? '#f0fdf4' : (selGrade === 2 ? '#fffbeb' : '#fef2f2');
+  
+  lastResult=`Hunt-Hess Grade ${g.g} — ${g.mort} Mortality risk.\nCalculated at rxmedcalc.com`;
   document.getElementById('results').className='results show';
-  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
-  if(typeof umami!=='undefined')umami.track('hunt_hess_calc',{grade:g.g});
+  
+  setTimeout(() => {
+    document.getElementById('results').scrollIntoView({behavior:'smooth', block:'nearest'});
+  }, 50);
 }
-function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🧠 Hunt-Hess SAH\n'+lastResult),'_blank')}
-function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
-function resetCalc(){selGrade=null;GRADES.forEach((_,i)=>document.getElementById('gc'+i).classList.remove('sel'));document.getElementById('results').className='results';lastResult=null}
+
+function shareWA(){ if(!lastResult)return; window.open('https://wa.me/?text='+encodeURIComponent('🧠 Hunt-Hess SAH\n'+lastResult),'_blank'); }
+function copyResult(){ if(!lastResult)return; navigator.clipboard.writeText(lastResult).then(() => { alert('Copied!'); }); }
+function resetCalc(){ location.reload(); }
 </script>
+
 <script src="/assets/shared-nav.js"></script>
 </body>
 </html>
