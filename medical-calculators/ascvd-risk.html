@@ -401,5 +401,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['age','tc','hdl','sbp'].forEach(id=>{document.getElementById(id).value=''});['htnrx','dm','smoke'].forEach(id=>{document.getElementById(id).checked=false;document.getElementById('chk-'+id).classList.remove('checked')});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

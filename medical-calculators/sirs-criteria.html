@@ -370,5 +370,6 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){sirsSelected.clear();for(let i=0;i<4;i++){document.getElementById('cr'+i).classList.remove('met')}['od-infection','od-hypotension','od-lactate','od-organ','od-vasopressors'].forEach(id=>{document.getElementById(id).checked=false});document.getElementById('sirs-count').textContent='0';document.getElementById('results').className='results';lastResult=null}
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

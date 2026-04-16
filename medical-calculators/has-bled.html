@@ -296,5 +296,6 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){sel.clear();CRITERIA.forEach((_,i)=>document.getElementById('cr'+i).classList.remove('sel'));document.getElementById('rt-val').textContent='0';document.getElementById('mod-factors').style.display='none';document.getElementById('results').className='results';lastResult=null}
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

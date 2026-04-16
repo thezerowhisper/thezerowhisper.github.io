@@ -6,6 +6,9 @@
 <title>RxMedCalc | Free Medical Calculators for Doctors Worldwide</title>
 <meta name="description" content="Free medical calculators for doctors worldwide. CURB-65, NEWS2, GCS, MAP, IBW, CrCl, APGAR, PHQ-9, GAD-7, ARV dose, BMI, IV drip rate and 33+ tools. Built by a doctor. No login required."/>
 <meta name="robots" content="index, follow"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
+<link rel="stylesheet" href="/assets/shared.css"/>
 <meta name="msvalidate.01" content="DD1B665D2D6B3AE3B44369A7B7BC790C" />
 <link rel="canonical" href="https://rxmedcalc.com/"/>
 <meta property="og:title" content="RxMedCalc — Free Medical Calculators for Doctors Worldwide"/>
@@ -583,5 +586,6 @@ function ivShareWA(){if(!ivLastResult)return;window.open('https://wa.me/?text='+
 function ivCopy(){if(!ivLastResult)return;navigator.clipboard.writeText(ivLastResult).then(()=>{const b=document.querySelector('.iv-copy');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')ivCalc()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>
