@@ -337,6 +337,5 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){scores=[null,null,null,null,null];savedScores={1:null,5:null,10:null};currentTime=1;['1','5','10'].forEach(x=>{document.getElementById('tt'+x).classList.toggle('active',x==='1');});document.getElementById('saved-section').style.display='none';buildGrid();updateTotal();lastResult=null;}
 buildGrid();updateTotal();
 </script>
-<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

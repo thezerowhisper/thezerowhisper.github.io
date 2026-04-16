@@ -250,6 +250,5 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['pao2','paco2','age'].forEach(id=>{document.getElementById(id).value=''});setFiO2(0.21);document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
-<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

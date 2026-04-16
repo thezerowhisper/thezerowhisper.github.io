@@ -365,6 +365,5 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['age','weight','creatinine'].forEach(id=>{document.getElementById(id).value='';});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null;}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate();});
 </script>
-<script src="/assets/shared-nav.js"></script>
 </body>
 </html>
