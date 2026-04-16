@@ -13,84 +13,142 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--accent:#7c3aed;--accent-mid:#8b5cf6;--accent-light:#f5f3ff;--accent-dark:#5b21b6;--navy:#0d2b45;--navy-mid:#163d5c;--text:#1a2535;--text-mid:#4a5568;--text-muted:#8896a8;--border:#e2e8f0;--bg:#f7f9fc;--white:#ffffff;--amber-light:#fef3dc;--amber:#d48a0c;--radius:12px;--radius-sm:8px;--font:'DM Sans',sans-serif;--mono:'DM Mono',monospace}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
-a{color:var(--accent-mid);text-decoration:none}a:hover{text-decoration:underline}
-.topnav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.nav-logo{font-weight:600;font-size:17px;color:var(--navy);text-decoration:none}.nav-logo span{color:#0e9f7e}
-.back-link{font-size:14px;color:var(--text-mid)}.back-link:hover{color:var(--accent-mid);text-decoration:none}
-.breadcrumb-bar{background:var(--white);border-bottom:1px solid var(--border);padding:10px 24px;font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:6px}
-.breadcrumb-bar a{color:var(--navy-mid)}
-.drug-hero{background:linear-gradient(135deg,#2d1b69 0%,#4c1d95 55%,var(--accent-mid) 100%);padding:40px 24px 36px;position:relative;overflow:hidden}
-.drug-hero::after{content:'💜';position:absolute;right:20px;bottom:-20px;font-size:140px;opacity:.04;pointer-events:none}
-.drug-hero-inner{max-width:860px;margin:0 auto;position:relative}
-.drug-class-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:4px 12px;font-size:12px;color:rgba(255,255,255,.85);margin-bottom:12px}
-.drug-hero h1{font-size:clamp(24px,3.5vw,34px);font-weight:600;color:#fff;margin-bottom:8px;letter-spacing:-.4px}
-.drug-hero-sub{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:16px}
-.drug-meta-pills{display:flex;gap:8px;flex-wrap:wrap}
-.dmp{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:4px 12px;font-size:12px;color:rgba(255,255,255,.85)}
-.page-inner{max-width:860px;margin:0 auto;padding:28px 24px 64px;display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
-@media(max-width:760px){.page-inner{grid-template-columns:1fr}}
-.calc-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden}
-.calc-header{background:var(--accent-light);border-bottom:1px solid #ddd6fe;padding:16px 20px;display:flex;align-items:center;gap:10px}
-.calc-header h2{font-size:16px;font-weight:600;color:var(--accent-dark)}
-.calc-body{padding:20px}
-/* toggle */
-.toggle-group{display:flex;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:3px;margin-bottom:16px;gap:3px}
-.toggle-btn{flex:1;padding:8px;border:none;background:transparent;border-radius:6px;font-family:var(--font);font-size:13px;font-weight:500;color:var(--text-mid);cursor:pointer;transition:all .15s}
-.toggle-btn.active{background:var(--white);color:var(--accent-dark);box-shadow:0 1px 3px rgba(0,0,0,.1)}
-.form-row{margin-bottom:16px}
-.form-label{display:block;font-size:13px;font-weight:500;color:var(--text);margin-bottom:6px}
-.form-label span{color:var(--text-muted);font-weight:400}
-.form-input,.form-select{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:14px;color:var(--text);background:var(--white);outline:none;transition:border-color .15s}
-.form-input:focus,.form-select:focus{border-color:var(--accent-mid)}
-.input-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.calc-btn{width:100%;padding:13px;background:var(--accent-mid);color:var(--white);font-family:var(--font);font-size:15px;font-weight:600;border:none;border-radius:var(--radius-sm);cursor:pointer;transition:background .15s,transform .1s;margin-top:4px}
-.calc-btn:hover{background:var(--accent-dark)}.calc-btn:active{transform:scale(.98)}
-.result-box{background:var(--accent-light);border:1.5px solid #c4b5fd;border-radius:var(--radius-sm);padding:18px 20px;margin-top:16px;display:none}
-.result-box.show{display:block}
-.result-title{font-size:13px;font-weight:600;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
-.result-main{font-size:26px;font-weight:600;color:var(--accent-dark);line-height:1.2;margin-bottom:4px}
-.result-sub{font-size:14px;color:var(--accent-mid);margin-top:6px}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.result-item{background:var(--white);border-radius:8px;padding:10px 12px}
-.result-item .rl{font-size:11px;color:var(--text-muted);margin-bottom:3px}
-.result-item .rv{font-size:14px;font-weight:600;color:var(--accent-dark);font-family:var(--mono)}
-.warn-box{background:#fffbeb;border:1px solid #fcd34d;border-radius:var(--radius-sm);padding:12px 14px;font-size:13px;color:#78350f;margin-top:10px;display:none}
-.warn-box.show{display:flex;gap:8px;align-items:flex-start}
-.sidebar{display:flex;flex-direction:column;gap:16px}
-.info-widget{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden}
-.iw-header{padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:7px}
-.iw-body{padding:14px 16px}
-.iw-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px}
-.iw-row:last-child{border-bottom:none}
-.iw-label{color:var(--text-muted)}.iw-val{font-weight:500;color:var(--text);font-family:var(--mono);font-size:12px;text-align:right}
-.content-block{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px 32px;grid-column:1 / -1}
-.content-block h2{font-size:21px;font-weight:600;color:var(--navy);margin-bottom:14px;letter-spacing:-.3px}
-.content-block h3{font-size:16px;font-weight:600;color:var(--navy);margin:22px 0 8px}
-.content-block p{font-size:15px;color:var(--text-mid);line-height:1.8;margin-bottom:12px}
-.content-block ul{list-style:none;padding:0;margin:0 0 14px}
-.content-block ul li{font-size:15px;color:var(--text-mid);line-height:1.7;padding-left:18px;position:relative;margin-bottom:5px}
-.content-block ul li::before{content:'→';position:absolute;left:0;color:var(--accent-mid);font-size:12px;top:3px}
-.content-block table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
-.content-block table th{background:var(--bg);padding:10px 12px;text-align:left;font-weight:600;color:var(--navy);border-bottom:1.5px solid var(--border)}
-.content-block table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text-mid);vertical-align:top}
-.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
-.faq-item:last-child{border-bottom:none}
-.faq-q{font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.faq-toggle{flex-shrink:0;color:var(--accent-mid);font-size:20px;line-height:1;transition:transform .2s}
-.faq-a{font-size:14px;color:var(--text-mid);line-height:1.75;padding-top:10px;display:none}
-.faq-item.open .faq-a{display:block}.faq-item.open .faq-toggle{transform:rotate(45deg)}
-.disclaimer{background:#fffbeb;border:1px solid #fcd34d;border-radius:var(--radius-sm);padding:13px 16px;font-size:13px;color:#78350f;line-height:1.6;display:flex;gap:8px;margin-top:18px}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:14px}
-.rel-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;display:block;transition:all .15s}
-.rel-card:hover{border-color:var(--accent-mid);background:var(--accent-light);text-decoration:none}
-.rel-card .rc-name{font-size:14px;font-weight:600;color:var(--navy)}
-.rel-card .rc-desc{font-size:12px;color:var(--text-muted);margin-top:3px}
-.site-footer{background:var(--navy);color:rgba(255,255,255,.6);text-align:center;padding:24px;font-size:13px}
-.site-footer a{color:rgba(255,255,255,.8)}
-@media(max-width:600px){.page-inner{padding:16px 14px 48px}.content-block{padding:20px 16px}.result-grid{grid-template-columns:1fr}.input-row{grid-template-columns:1fr}}
+:root {
+  --accent: #7c3aed; --accent-mid: #8b5cf6; --accent-light: #f5f3ff; --accent-dark: #5b21b6;
+  --navy: #0d2b45; --navy-mid: #163d5c;
+  --text: #1a2535; --text-mid: #4a5568; --text-muted: #8896a8;
+  --border: #e2e8f0; --bg: #f7f9fc; --white: #ffffff;
+  --amber-light: #fef3dc; --amber: #d48a0c;
+  --radius: 12px; --radius-sm: 8px;
+  --font: 'DM Sans', sans-serif; --mono: 'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+  font-family: var(--font); background: var(--bg); color: var(--text); 
+  line-height: 1.6; font-size: 16px; 
+  overflow-wrap: break-word; word-wrap: break-word; /* Prevents long URLs/words from breaking mobile layout */
+}
+a { color: var(--accent-mid); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topnav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-weight: 600; font-size: 17px; color: var(--navy); text-decoration: none; }
+.nav-logo span { color: #0e9f7e; }
+.back-link { font-size: 14px; color: var(--text-mid); }
+.back-link:hover { color: var(--accent-mid); text-decoration: none; }
+.breadcrumb-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 10px 24px; font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.breadcrumb-bar a { color: var(--navy-mid); }
+
+/* HERO */
+.drug-hero { background: linear-gradient(135deg, #2d1b69 0%, #4c1d95 55%, var(--accent-mid) 100%); padding: 40px 24px 36px; position: relative; overflow: hidden; }
+.drug-hero::after { content: '💜'; position: absolute; right: 20px; bottom: -20px; font-size: 140px; opacity: .04; pointer-events: none; }
+.drug-hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+.drug-class-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,.85); margin-bottom: 12px; }
+.drug-hero h1 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -.4px; }
+.drug-hero-sub { font-size: 15px; color: rgba(255,255,255,.75); margin-bottom: 16px; }
+.drug-meta-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.dmp { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,.85); }
+
+/* LAYOUT */
+.page-inner { max-width: 860px; margin: 0 auto; padding: 28px 24px 64px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
+
+/* CALCULATOR */
+.calc-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.calc-header { background: var(--accent-light); border-bottom: 1px solid #ddd6fe; padding: 16px 20px; display: flex; align-items: center; gap: 10px; }
+.calc-header h2 { font-size: 16px; font-weight: 600; color: var(--accent-dark); }
+.calc-body { padding: 20px; }
+.toggle-group { display: flex; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 3px; margin-bottom: 16px; gap: 3px; }
+.toggle-btn { flex: 1; padding: 8px; border: none; background: transparent; border-radius: 6px; font-family: var(--font); font-size: 13px; font-weight: 500; color: var(--text-mid); cursor: pointer; transition: all .15s; }
+.toggle-btn.active { background: var(--white); color: var(--accent-dark); box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.form-row { margin-bottom: 16px; }
+.form-label { display: block; font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.form-label span { color: var(--text-muted); font-weight: 400; }
+.form-input, .form-select { width: 100%; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font); font-size: 14px; color: var(--text); background: var(--white); outline: none; transition: border-color .15s; }
+.form-input:focus, .form-select:focus { border-color: var(--accent-mid); }
+.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.calc-btn { width: 100%; padding: 13px; background: var(--accent-mid); color: var(--white); font-family: var(--font); font-size: 15px; font-weight: 600; border: none; border-radius: var(--radius-sm); cursor: pointer; transition: background .15s, transform .1s; margin-top: 4px; }
+.calc-btn:hover { background: var(--accent-dark); }
+.calc-btn:active { transform: scale(.98); }
+
+/* RESULTS */
+.result-box { background: var(--accent-light); border: 1.5px solid #c4b5fd; border-radius: var(--radius-sm); padding: 18px 20px; margin-top: 16px; display: none; }
+.result-box.show { display: block; }
+.result-title { font-size: 13px; font-weight: 600; color: var(--accent-dark); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; }
+.result-main { font-size: 26px; font-weight: 600; color: var(--accent-dark); line-height: 1.2; margin-bottom: 4px; }
+.result-sub { font-size: 14px; color: var(--accent-mid); margin-top: 6px; }
+.result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.result-item { background: var(--white); border-radius: 8px; padding: 10px 12px; }
+.result-item .rl { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.result-item .rv { font-size: 14px; font-weight: 600; color: var(--accent-dark); font-family: var(--mono); }
+.warn-box { background: #fffbeb; border: 1px solid #fcd34d; border-radius: var(--radius-sm); padding: 12px 14px; font-size: 13px; color: #78350f; margin-top: 10px; display: none; }
+.warn-box.show { display: flex; gap: 8px; align-items: flex-start; }
+
+/* SIDEBAR */
+.sidebar { display: flex; flex-direction: column; gap: 16px; }
+.info-widget { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.iw-header { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 7px; }
+.iw-body { padding: 14px 16px; }
+.iw-row { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.iw-row:last-child { border-bottom: none; }
+.iw-label { color: var(--text-muted); }
+.iw-val { font-weight: 500; color: var(--text); font-family: var(--mono); font-size: 12px; text-align: right; }
+
+/* CONTENT BLOCK */
+.content-block { 
+  background: var(--white); 
+  border: 1.5px solid var(--border); 
+  border-radius: var(--radius); 
+  padding: 28px 32px; 
+  grid-column: 1 / -1; 
+  min-width: 0; /* Important for preventing grid blowout */
+}
+.content-block h2 { font-size: 21px; font-weight: 600; color: var(--navy); margin-bottom: 14px; letter-spacing: -.3px; }
+.content-block h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin: 22px 0 8px; }
+.content-block p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 12px; }
+.content-block ul { list-style: none; padding: 0; margin: 0 0 14px; }
+.content-block ul li { font-size: 15px; color: var(--text-mid); line-height: 1.7; padding-left: 18px; position: relative; margin-bottom: 5px; }
+.content-block ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent-mid); font-size: 12px; top: 3px; }
+
+/* Responsive Table Styling */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  margin: 14px 0;
+}
+.content-block table { width: 100%; border-collapse: collapse; margin: 0; font-size: 14px; }
+.content-block table th { background: var(--bg); padding: 10px 12px; text-align: left; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); white-space: nowrap; }
+.content-block table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-mid); vertical-align: top; }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.faq-toggle { flex-shrink: 0; color: var(--accent-mid); font-size: 20px; line-height: 1; transition: transform .2s; }
+.faq-a { font-size: 14px; color: var(--text-mid); line-height: 1.75; padding-top: 10px; display: none; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+.disclaimer { background: #fffbeb; border: 1px solid #fcd34d; border-radius: var(--radius-sm); padding: 13px 16px; font-size: 13px; color: #78350f; line-height: 1.6; display: flex; gap: 8px; margin-top: 18px; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-top: 14px; }
+.rel-card { background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; display: block; transition: all .15s; }
+.rel-card:hover { border-color: var(--accent-mid); background: var(--accent-light); text-decoration: none; }
+.rel-card .rc-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+.rel-card .rc-desc { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+.site-footer { background: var(--navy); color: rgba(255,255,255,.6); text-align: center; padding: 24px; font-size: 13px; }
+.site-footer a { color: rgba(255,255,255,.8); }
+
+/* MEDIA QUERIES */
+@media (max-width: 760px) { 
+  .page-inner { grid-template-columns: 1fr; } 
+  .content-block { grid-column: 1; }
+}
+@media (max-width: 600px) { 
+  .page-inner { padding: 16px 14px 48px; gap: 16px; } 
+  .content-block { padding: 20px 16px; } 
+  .result-grid { grid-template-columns: 1fr; } 
+  .input-row { grid-template-columns: 1fr; } 
+}
 </style>
 </head>
 <body>
@@ -219,7 +277,7 @@ a{color:var(--accent-mid);text-decoration:none}a:hover{text-decoration:underline
 
   <div class="content-block">
     <h2>Famotidine Dosing Reference Table — Paediatric & Adult</h2>
-    <div style="overflow-x:auto">
+    <div class="table-responsive">
       <table>
         <thead><tr><th>Patient</th><th>Indication</th><th>Dose</th><th>Frequency</th><th>Duration</th></tr></thead>
         <tbody>
@@ -294,19 +352,25 @@ function calcFamotidine(){
     const ageM=parseFloat(document.getElementById('age-months').value)||null;
     const ind=document.getElementById('ped-indication').value;
     const form=document.getElementById('ped-form').value;
+    
     if(!wt||wt<1){alert('Please enter a valid weight.');return;}
+    
     const mgPerKg=0.5;
     let rawMg=wt*mgPerKg;
     let maxMg=40,doses=2,freq='Every 12 hours (twice daily)',dur='4–8 weeks';
+    
     if(ind==='ulcer'||ind==='infant'){doses=1;freq='Once daily at bedtime';if(ind==='infant')freq='Once daily';}
     if(ind==='stress'){doses=2;freq='Every 12 hours (IV)';dur='ICU duration';maxMg=20;}
+    
     let doseMg=Math.min(rawMg,maxMg);
     doseMg=Math.round(doseMg*10)/10;
+    
     let volStr='';
     if(form==='susp8'){const ml=doseMg/8;volStr=ml.toFixed(2)+' ml (8mg/ml susp)';}
     else if(form==='tab20'){volStr=(doseMg/20).toFixed(2)+' × 20mg tabs';}
     else if(form==='tab40'){volStr=(doseMg/40).toFixed(2)+' × 40mg tabs';}
     else{volStr=(doseMg/10).toFixed(2)+' ml (IV 20mg/2ml)';}
+    
     document.getElementById('res-dose').textContent=doseMg+' mg per dose';
     document.getElementById('res-freq').textContent=freq;
     document.getElementById('res-mg').textContent=doseMg+' mg';
@@ -314,19 +378,35 @@ function calcFamotidine(){
     document.getElementById('res-daily').textContent=(doseMg*doses)+' mg';
     document.getElementById('res-dur').textContent=dur;
     result.classList.add('show');
+    
     if(rawMg>maxMg){document.getElementById('warn-text').textContent='Dose capped at maximum '+maxMg+' mg per dose.';warnBox.classList.add('show');}
     if(ageM&&ageM<3&&ind!=='infant'){document.getElementById('warn-text').textContent='Infant ≤ 3 months: use once-daily dosing only. Select "Infant ≤ 3 months" indication above.';warnBox.classList.add('show');}
   } else {
     const ind=document.getElementById('adult-indication').value;
     const crcl=parseFloat(document.getElementById('adult-crcl').value)||null;
-    const doses_map={gerd:{mg:20,doses:2,freq:'Twice daily (BD)',dur:'6–12 weeks',vol:'1 × 20mg tab'},ulcer_heal:{mg:40,doses:1,freq:'Once daily at bedtime',dur:'4–8 weeks',vol:'1 × 40mg tab'},ulcer_maint:{mg:20,doses:1,freq:'Once daily at bedtime',dur:'Ongoing maintenance',vol:'1 × 20mg tab'},stress:{mg:20,doses:2,freq:'Every 12h (IV)',dur:'ICU duration',vol:'2ml (IV 20mg/2ml)'},zollinger:{mg:20,doses:4,freq:'Every 6 hours (QDS) — titrate',dur:'Ongoing',vol:'1 × 20mg tab'}};
+    
+    const doses_map={
+      gerd:{mg:20,doses:2,freq:'Twice daily (BD)',dur:'6–12 weeks',vol:'1 × 20mg tab'},
+      ulcer_heal:{mg:40,doses:1,freq:'Once daily at bedtime',dur:'4–8 weeks',vol:'1 × 40mg tab'},
+      ulcer_maint:{mg:20,doses:1,freq:'Once daily at bedtime',dur:'Ongoing maintenance',vol:'1 × 20mg tab'},
+      stress:{mg:20,doses:2,freq:'Every 12h (IV)',dur:'ICU duration',vol:'2ml (IV 20mg/2ml)'},
+      zollinger:{mg:20,doses:4,freq:'Every 6 hours (QDS) — titrate',dur:'Ongoing',vol:'1 × 20mg tab'}
+    };
+    
     let d=doses_map[ind];
     let doseMg=d.mg,freq=d.freq,dur=d.dur,vol=d.vol;
     let renalNote='';
+    
     if(crcl!==null){
       if(crcl<30){doseMg=20;freq='Every 36–48 hours';vol='1 × 20mg tab';renalNote='CrCl < 30 mL/min: 20 mg every 36–48 hours. Monitor for CNS effects.';}
-      else if(crcl<50){doseMg=Math.round(d.mg/2);freq=d.freq+' (halved dose)';vol=(doseMg===10?'½ × 20mg tab':doseMg+' mg');renalNote='CrCl 30–50 mL/min: reduce dose by 50%.';}
+      else if(crcl<50){
+        doseMg=Math.round(d.mg/2);
+        freq=d.freq+' (halved dose)';
+        vol=(doseMg===10?'½ × 20mg tab':doseMg+' mg');
+        renalNote='CrCl 30–50 mL/min: reduce dose by 50%.';
+      }
     }
+    
     document.getElementById('res-dose').textContent=doseMg+' mg per dose';
     document.getElementById('res-freq').textContent=freq;
     document.getElementById('res-mg').textContent=doseMg+' mg';
@@ -334,6 +414,7 @@ function calcFamotidine(){
     document.getElementById('res-daily').textContent=(doseMg*d.doses)+' mg';
     document.getElementById('res-dur').textContent=dur;
     result.classList.add('show');
+    
     if(renalNote){document.getElementById('warn-text').textContent=renalNote;warnBox.classList.add('show');}
   }
 }
