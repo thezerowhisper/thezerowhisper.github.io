@@ -74,17 +74,23 @@
   --font: 'DM Sans', sans-serif; --mono: 'DM Mono', monospace;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+body { 
+  font-family: var(--font); background: var(--bg); color: var(--text); 
+  line-height: 1.6; font-size: 16px; 
+  overflow-wrap: break-word; word-wrap: break-word; /* Prevents long URLs/words from breaking mobile layout */
+}
 a { color: var(--accent-mid); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
 .topnav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
 .nav-logo { font-weight: 600; font-size: 17px; color: var(--navy); display: flex; align-items: center; gap: 8px; text-decoration: none; }
 .nav-logo span { color: #0e9f7e; }
 .back-link { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--text-mid); }
 .back-link:hover { color: var(--accent-mid); text-decoration: none; }
-.breadcrumb-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 10px 24px; font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+.breadcrumb-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 10px 24px; font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .breadcrumb-bar a { color: var(--navy-mid); }
 
+/* HERO */
 .drug-hero {
   background: linear-gradient(135deg, #0a1f3a 0%, #0f4a7a 55%, var(--accent-mid) 100%);
   padding: 40px 24px 36px; position: relative; overflow: hidden;
@@ -97,36 +103,24 @@ a:hover { text-decoration: underline; }
 .drug-meta-pills { display: flex; gap: 8px; flex-wrap: wrap; }
 .dmp { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,0.85); }
 
+/* LAYOUT */
 .page-inner { max-width: 860px; margin: 0 auto; padding: 28px 24px 64px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
-@media (max-width: 760px) { .page-inner { grid-template-columns: 1fr; } }
 
+/* CALCULATOR */
 .calc-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; }
 .calc-header { background: var(--accent-light); border-bottom: 1px solid #c3d9f5; padding: 16px 20px; display: flex; align-items: center; gap: 10px; }
 .calc-header h2 { font-size: 16px; font-weight: 600; color: var(--accent-dark); }
 .calc-body { padding: 20px; }
 
-.egfr-visual {
-  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
-  padding: 16px; margin-bottom: 16px;
-}
+/* EGFR SLIDER */
+.egfr-visual { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 16px; }
 .egfr-visual-title { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 10px; }
-.egfr-track { height: 10px; border-radius: 5px; position: relative; overflow: visible;
-  background: linear-gradient(90deg, #dc2626 0%, #f97316 20%, #eab308 38%, #22c55e 55%, #3b82f6 100%);
-  margin-bottom: 6px;
-}
-.egfr-pointer {
-  position: absolute; top: -4px; width: 18px; height: 18px;
-  background: var(--white); border: 2.5px solid var(--navy);
-  border-radius: 50%; transform: translateX(-50%);
-  transition: left 0.3s ease;
-  left: 0%;
-}
+.egfr-track { height: 10px; border-radius: 5px; position: relative; overflow: visible; background: linear-gradient(90deg, #dc2626 0%, #f97316 20%, #eab308 38%, #22c55e 55%, #3b82f6 100%); margin-bottom: 6px; }
+.egfr-pointer { position: absolute; top: -4px; width: 18px; height: 18px; background: var(--white); border: 2.5px solid var(--navy); border-radius: 50%; transform: translateX(-50%); transition: left 0.3s ease; left: 0%; }
 .egfr-labels { display: flex; justify-content: space-between; font-size: 10px; font-family: var(--mono); color: var(--text-muted); }
-.ckd-stage-pill {
-  display: inline-block; padding: 3px 10px; border-radius: 12px;
-  font-size: 12px; font-weight: 600; margin-top: 8px;
-}
+.ckd-stage-pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-top: 8px; }
 
+/* FORM ELEMENTS */
 .form-row { margin-bottom: 16px; }
 .form-label { display: block; font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
 .form-label span { color: var(--text-muted); font-weight: 400; }
@@ -137,6 +131,7 @@ a:hover { text-decoration: underline; }
 .calc-btn:hover { background: var(--accent-dark); }
 .calc-btn:active { transform: scale(0.98); }
 
+/* RESULTS */
 .result-box { background: var(--accent-light); border: 1.5px solid #93c5fd; border-radius: var(--radius-sm); padding: 18px 20px; margin-top: 16px; display: none; }
 .result-box.show { display: block; }
 .result-box.danger { background: var(--danger-bg); border-color: var(--danger-border); }
@@ -172,7 +167,7 @@ a:hover { text-decoration: underline; }
 .iw-val { font-weight: 500; color: var(--text); font-family: var(--mono); font-size: 12px; text-align: right; }
 
 /* CKD STAGES TABLE in sidebar */
-.ckd-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.ckd-table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 0; }
 .ckd-table th { background: var(--bg); padding: 7px 8px; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); text-align: left; }
 .ckd-table td { padding: 7px 8px; border-bottom: 1px solid var(--border); }
 .ckd-table tr:last-child td { border-bottom: none; }
@@ -183,17 +178,33 @@ a:hover { text-decoration: underline; }
 .pill-red { background: #fee2e2; color: #7f1d1d; }
 
 /* CONTENT */
-.content-block { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 28px 32px; grid-column: 1 / -1; }
+.content-block { 
+  background: var(--white); 
+  border: 1.5px solid var(--border); 
+  border-radius: var(--radius); 
+  padding: 28px 32px; 
+  grid-column: 1 / -1; 
+  min-width: 0; /* Important for preventing grid blowout */
+}
 .content-block h2 { font-size: 21px; font-weight: 600; color: var(--navy); margin-bottom: 14px; letter-spacing: -0.3px; }
 .content-block h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin: 22px 0 8px; }
 .content-block p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 12px; }
 .content-block ul { list-style: none; padding: 0; margin: 0 0 14px; }
 .content-block ul li { font-size: 15px; color: var(--text-mid); line-height: 1.7; padding-left: 18px; position: relative; margin-bottom: 5px; }
 .content-block ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent-mid); font-size: 12px; top: 3px; }
-.content-block table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
-.content-block table th { background: var(--bg); padding: 10px 12px; text-align: left; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); }
+
+/* Responsive Table Styling */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  margin: 14px 0;
+}
+.content-block table { width: 100%; border-collapse: collapse; margin: 0; font-size: 14px; }
+.content-block table th { background: var(--bg); padding: 10px 12px; text-align: left; font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--border); white-space: nowrap; }
 .content-block table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-mid); vertical-align: top; }
 
+/* FAQ */
 .faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
 .faq-item:last-child { border-bottom: none; }
 .faq-q { font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
@@ -211,7 +222,17 @@ a:hover { text-decoration: underline; }
 .site-footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 24px; font-size: 13px; }
 .site-footer a { color: rgba(255,255,255,0.8); }
 
-@media (max-width: 600px) { .page-inner { padding: 16px 14px 48px; } .content-block { padding: 20px 16px; } .result-grid { grid-template-columns: 1fr; } .input-row { grid-template-columns: 1fr; } }
+/* MEDIA QUERIES */
+@media (max-width: 760px) { 
+  .page-inner { grid-template-columns: 1fr; } 
+  .content-block { grid-column: 1; }
+}
+@media (max-width: 600px) { 
+  .page-inner { padding: 16px 14px 48px; gap: 16px; } 
+  .content-block { padding: 20px 16px; } 
+  .result-grid { grid-template-columns: 1fr; } 
+  .input-row { grid-template-columns: 1fr; } 
+}
 </style>
 </head>
 <body>
@@ -242,14 +263,12 @@ a:hover { text-decoration: underline; }
 
 <div class="page-inner">
 
-  <!-- CALCULATOR -->
   <div class="calc-card">
     <div class="calc-header">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0f4a7a" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg>
       <h2>Metformin + Renal Dose Calculator</h2>
     </div>
     <div class="calc-body">
-      <!-- eGFR visual slider -->
       <div class="egfr-visual">
         <div class="egfr-visual-title">eGFR — kidney function meter</div>
         <div class="egfr-track" id="egfr-track">
@@ -312,7 +331,6 @@ a:hover { text-decoration: underline; }
     </div>
   </div>
 
-  <!-- SIDEBAR -->
   <div class="sidebar">
     <div class="info-widget">
       <div class="iw-header">💊 Drug profile</div>
@@ -329,15 +347,17 @@ a:hover { text-decoration: underline; }
     <div class="info-widget">
       <div class="iw-header">🫘 CKD dosing guide</div>
       <div class="iw-body" style="padding: 10px 14px;">
-        <table class="ckd-table">
-          <thead><tr><th>eGFR</th><th>Stage</th><th>Metformin</th></tr></thead>
-          <tbody>
-            <tr><td>&gt;60</td><td>G1–G2</td><td><span class="pill pill-green">Full dose</span></td></tr>
-            <tr><td>45–60</td><td>G3a</td><td><span class="pill pill-yellow">Full dose, monitor</span></td></tr>
-            <tr><td>30–44</td><td>G3b</td><td><span class="pill pill-orange">Max 1000mg/day</span></td></tr>
-            <tr><td>&lt;30</td><td>G4–G5</td><td><span class="pill pill-red">STOP — contraindicated</span></td></tr>
-          </tbody>
-        </table>
+        <div style="overflow-x: auto;">
+          <table class="ckd-table">
+            <thead><tr><th>eGFR</th><th>Stage</th><th>Metformin</th></tr></thead>
+            <tbody>
+              <tr><td>&gt;60</td><td>G1–G2</td><td><span class="pill pill-green">Full dose</span></td></tr>
+              <tr><td>45–60</td><td>G3a</td><td><span class="pill pill-yellow">Full dose, monitor</span></td></tr>
+              <tr><td>30–44</td><td>G3b</td><td><span class="pill pill-orange">Max 1000mg/day</span></td></tr>
+              <tr><td>&lt;30</td><td>G4–G5</td><td><span class="pill pill-red">STOP — contraindicated</span></td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -364,20 +384,21 @@ a:hover { text-decoration: underline; }
     </div>
   </div>
 
-  <!-- CONTENT BLOCK -->
   <div class="content-block">
     <h2>Metformin Dosing Guide — India · Kidney Disease · eGFR Adjustment</h2>
 
-    <table>
-      <thead><tr><th>eGFR (mL/min/1.73m²)</th><th>CKD Stage</th><th>Metformin dose</th><th>Max daily</th><th>Action</th></tr></thead>
-      <tbody>
-        <tr><td>&gt;90</td><td>G1 (normal/high)</td><td>500mg BD → titrate up</td><td>2000 mg</td><td>Full dose, routine monitoring</td></tr>
-        <tr><td>60–90</td><td>G2 (mildly decreased)</td><td>500mg BD → titrate up</td><td>2000 mg</td><td>Full dose, annual eGFR check</td></tr>
-        <tr><td>45–59</td><td>G3a (mild-moderate)</td><td>Standard dose with caution</td><td>2000 mg</td><td>Monitor eGFR every 3–6 months</td></tr>
-        <tr><td>30–44</td><td>G3b (moderate-severe)</td><td>Maximum 500mg BD</td><td>1000 mg</td><td>Halved max dose · monitor closely</td></tr>
-        <tr><td>&lt;30</td><td>G4–G5 (severe/failure)</td><td>CONTRAINDICATED</td><td>—</td><td>Stop metformin · seek alternative</td></tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table>
+        <thead><tr><th>eGFR (mL/min/1.73m²)</th><th>CKD Stage</th><th>Metformin dose</th><th>Max daily</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>&gt;90</td><td>G1 (normal/high)</td><td>500mg BD → titrate up</td><td>2000 mg</td><td>Full dose, routine monitoring</td></tr>
+          <tr><td>60–90</td><td>G2 (mildly decreased)</td><td>500mg BD → titrate up</td><td>2000 mg</td><td>Full dose, annual eGFR check</td></tr>
+          <tr><td>45–59</td><td>G3a (mild-moderate)</td><td>Standard dose with caution</td><td>2000 mg</td><td>Monitor eGFR every 3–6 months</td></tr>
+          <tr><td>30–44</td><td>G3b (moderate-severe)</td><td>Maximum 500mg BD</td><td>1000 mg</td><td>Halved max dose · monitor closely</td></tr>
+          <tr><td>&lt;30</td><td>G4–G5 (severe/failure)</td><td>CONTRAINDICATED</td><td>—</td><td>Stop metformin · seek alternative</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <h2 style="margin-top:28px;">Metformin in Type 2 Diabetes — India Clinical Guide</h2>
 
@@ -415,7 +436,6 @@ a:hover { text-decoration: underline; }
 
     <p>Lactic acidosis associated with metformin use is extremely rare when the drug is used correctly — estimated at approximately 3 cases per 100,000 patient-years. This rate is comparable to that seen in diabetic patients not on metformin, suggesting that lactic acidosis in these patients is often related to the underlying disease burden (sepsis, shock, cardiac failure) rather than metformin itself. The key message for Indian clinicians: metformin is safe in patients with eGFR ≥ 30 mL/min/1.73m², provided the drug is held during the recognised high-risk situations listed above.</p>
 
-    <!-- FAQ -->
     <h2 style="margin-top:30px;">Frequently Asked Questions</h2>
     <div id="faq">
       <div class="faq-item">
@@ -467,15 +487,18 @@ function updateEgfrViz() {
   const pointer = document.getElementById('egfr-pointer');
   const pill = document.getElementById('ckd-pill');
   if (isNaN(val)) return;
+  
   // Map 0-120 to 0-100%
   const pct = Math.min(Math.max((val / 120) * 100, 0), 100);
   pointer.style.left = pct + '%';
+  
   let stage, color, bg;
   if (val >= 90)      { stage = 'CKD G1 — Normal/High';      color = '#166534'; bg = '#dcfce7'; }
   else if (val >= 60) { stage = 'CKD G2 — Mildly decreased'; color = '#166534'; bg = '#dcfce7'; }
   else if (val >= 45) { stage = 'CKD G3a — Mild-moderate';   color = '#713f12'; bg = '#fef9c3'; }
   else if (val >= 30) { stage = 'CKD G3b — Mod-severe';      color = '#7c2d12'; bg = '#ffedd5'; }
   else                { stage = 'CKD G4/G5 — STOP metformin';color = '#7f1d1d'; bg = '#fee2e2'; }
+  
   pill.style.background = bg;
   pill.style.color = color;
   pill.textContent = stage;
@@ -491,20 +514,36 @@ function calcMetformin() {
   const holdBox = document.getElementById('hold-box');
   const holdText = document.getElementById('hold-text');
   const holdList = document.getElementById('hold-list');
+  
   if (holdSit !== 'none') {
     holdBox.classList.add('show');
     const holdData = {
       contrast: {
         text: 'Metformin should be held before and after iodinated contrast procedures.',
-        items: ['Hold metformin from the time of contrast injection', 'Restart 48 hours after contrast, only if renal function is stable', 'Applies to CT with contrast, coronary angiography, IVP, and all iodinated contrast', 'Ensure adequate hydration before the procedure']
+        items: [
+          'Hold metformin from the time of contrast injection', 
+          'Restart 48 hours after contrast, only if renal function is stable', 
+          'Applies to CT with contrast, coronary angiography, IVP, and all iodinated contrast', 
+          'Ensure adequate hydration before the procedure'
+        ]
       },
       surgery: {
         text: 'Metformin should be held around surgical procedures requiring anaesthesia.',
-        items: ['Hold metformin on the morning of surgery', 'Restart 48 hours post-operatively when eating normally and haemodynamically stable', 'Confirm eGFR has not changed before restarting', 'Coordinate with the surgical / anaesthesia team']
+        items: [
+          'Hold metformin on the morning of surgery', 
+          'Restart 48 hours post-operatively when eating normally and haemodynamically stable', 
+          'Confirm eGFR has not changed before restarting', 
+          'Coordinate with the surgical / anaesthesia team'
+        ]
       },
       aki: {
         text: 'Metformin must be withheld during acute illness with dehydration risk.',
-        items: ['Hold metformin if the patient has significant diarrhoea, vomiting, or is unable to maintain oral intake', 'Restart when hydration is restored and oral intake is normal', 'Check renal function before restarting if illness was severe', '"Sick day rules" — counsel all patients on metformin to hold during intercurrent illness']
+        items: [
+          'Hold metformin if the patient has significant diarrhoea, vomiting, or is unable to maintain oral intake', 
+          'Restart when hydration is restored and oral intake is normal', 
+          'Check renal function before restarting if illness was severe', 
+          '"Sick day rules" — counsel all patients on metformin to hold during intercurrent illness'
+        ]
       }
     };
     const d = holdData[holdSit];
@@ -515,7 +554,10 @@ function calcMetformin() {
     holdBox.classList.remove('show');
   }
 
-  if (!egfr || egfr < 0) { alert('Please enter the patient\'s eGFR to receive dosing advice.'); return; }
+  if (!egfr || egfr < 0) { 
+    alert('Please enter the patient\'s eGFR to receive dosing advice.'); 
+    return; 
+  }
 
   const resultBox = document.getElementById('result');
   const resTitle = document.getElementById('res-title');
@@ -569,7 +611,9 @@ function calcMetformin() {
   resTabs.textContent = tabCount + ' × ' + formMg + 'mg';
 }
 
-function toggleFaq(el) { el.closest('.faq-item').classList.toggle('open'); }
+function toggleFaq(el) { 
+  el.closest('.faq-item').classList.toggle('open'); 
+}
 </script>
 </body>
 </html>
