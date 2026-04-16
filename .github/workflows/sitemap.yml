@@ -26,7 +26,7 @@ jobs:
           for file in $(find . -name "*.html"); do
 
             # Clean path
-            path=$(echo $file | sed 's|^\./||' | sed 's|index.html$||' | sed 's|\.html$||')
+            path=$(echo $file | sed 's|^\./||' | sed 's|/index.html$||' | sed 's|\.html$||')
 
             # Skip unwanted files
             if [[ "$path" == "" || "$path" == "404" ]]; then
