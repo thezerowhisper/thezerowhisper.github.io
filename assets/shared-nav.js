@@ -5,7 +5,7 @@
   /* ══ 1. INJECT ADSENSE LOADER ══════════════════════════════
      Dynamically adds the AdSense script to <head> on every page.
      You never need to add it manually to individual pages again.
-     Just keep your <ins> ad slot tags wherever you want ads.       */
+     Just keep your <ins> ad slot tags wherever you want ads.        */
   (function injectAdSense() {
     const PUBLISHER_ID = 'ca-pub-9687081664589626';
     if (document.querySelector('script[src*="adsbygoogle"]')) return;
@@ -155,31 +155,30 @@
       .footer-inner {
         max-width: 1100px;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 32px;
         margin-bottom: 32px;
       }
-      @media (max-width: 768px) {
-        .footer-inner {
-          grid-template-columns: 1fr 1fr;
-          gap: 24px;
-        }
-      }
-      @media (max-width: 480px) {
-        .footer-inner { grid-template-columns: 1fr; }
-      }
       .footer-brand .brand-name {
-        font-size: 1rem;
+        font-size: 1.05rem;
         font-weight: 700;
         color: #fff;
         margin-bottom: 8px;
       }
       .footer-brand p {
-        font-size: 0.78rem;
+        font-size: 0.8rem;
         color: rgba(255,255,255,0.45);
         line-height: 1.65;
-        max-width: 260px;
+        max-width: 700px;
+      }
+      /* New 3-Column Layout for Links */
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-top: 24px;
       }
       .footer-col h4 {
         font-size: 0.72rem;
@@ -193,11 +192,25 @@
         display: block;
         color: rgba(255,255,255,0.55);
         text-decoration: none;
-        font-size: 0.8rem;
-        padding: 3px 0;
+        font-size: 0.82rem;
+        padding: 4px 0;
         transition: color 0.2s;
       }
       .footer-col a:hover { color: #f59e0b; }
+      
+      /* Mobile adjustments for the 3 columns */
+      @media (max-width: 600px) {
+        .footer-links {
+          grid-template-columns: repeat(2, 1fr); /* Drops to 2 cols on mobile so text fits */
+          gap: 20px;
+        }
+      }
+      @media (max-width: 400px) {
+        .footer-links {
+          grid-template-columns: 1fr; /* Stacks only on very tiny screens */
+        }
+      }
+
       .footer-bottom {
         max-width: 1100px;
         margin: 0 auto;
@@ -208,7 +221,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 10px;
-        font-size: 0.72rem;
+        font-size: 0.75rem;
         color: rgba(255,255,255,0.35);
       }
       .footer-bottom a {
@@ -243,7 +256,7 @@
       <a href="/" ${isActive('/') && !path.startsWith('/medical') && !path.startsWith('/rabies') && !path.startsWith('/about') && !path.startsWith('/privacy') && !path.startsWith('/contact') && !path.startsWith('/search') ? 'class="active"' : ''}>Home</a>
       <a href="/medical-calculators/" ${isActive('/medical-calculators') ? 'class="active"' : ''}>Medical Calculators</a>
       <a href="/rabies-scheduler/" ${isActive('/rabies-scheduler') ? 'class="active"' : ''}>Rabies PEP</a>
-      <a href="/drug-doses/" ${isActive('/rabies-scheduler') ? 'class="active"' : ''}>Drug Dosage Calculator</a>
+      <a href="/drug-doses/" ${isActive('/drug-doses') ? 'class="active"' : ''}>Drug Dosage Calculator</a>
       <a href="/search" ${isActive('/search') ? 'class="active"' : ''}>🔍 Search</a>
       <a href="/about" ${isActive('/about') ? 'class="active"' : ''}>About</a>
     </nav>
@@ -259,32 +272,34 @@
       <div class="brand-name">🩺 RxMedCalc</div>
       <p>Free, clinically accurate calculators for doctors, nurses and patients worldwide. Built on NCDC, IAP, FOGSI, WHO, NICE and BTS guidelines. No login. No data stored.</p>
     </div>
-    <div class="footer-col">
-      <h4>Emergency</h4>
-      <a href="/medical-calculators/curb65">CURB-65</a>
-      <a href="/medical-calculators/news2">NEWS2</a>
-      <a href="/medical-calculators/gcs-calculator">GCS</a>
-      <a href="/medical-calculators/sofa-score">SOFA Score</a>
-      <a href="/medical-calculators/shock-index">Shock Index</a>
-      <a href="/medical-calculators/map-calculator">MAP Calculator</a>
-    </div>
-    <div class="footer-col">
-      <h4>Cardiac / Renal</h4>
-      <a href="/medical-calculators/cha2ds2-vasc">CHA₂DS₂-VASc</a>
-      <a href="/medical-calculators/qtc-calculator">QTc Calculator</a>
-      <a href="/medical-calculators/egfr-calculator">eGFR</a>
-      <a href="/medical-calculators/creatinine-clearance">CrCl (Cockcroft)</a>
-      <a href="/medical-calculators/fena-calculator">FENa Calculator</a>
-      <a href="/medical-calculators/meld-score">MELD Score</a>
-    </div>
-    <div class="footer-col">
-      <h4>General</h4>
-      <a href="/rabies-scheduler/">Rabies PEP</a>
-      <a href="/medical-calculators/ibw-calculator">IBW Calculator</a>
-      <a href="/medical-calculators/bsa-calculator">BSA Calculator</a>
-      <a href="/medical-calculators/holliday-segar">IV Maintenance</a>
-      <a href="/medical-calculators/phq9-gad7">PHQ-9 &amp; GAD-7</a>
-      <a href="/medical-calculators/apgar-score">APGAR Score</a>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Emergency</h4>
+        <a href="/medical-calculators/curb65">CURB-65</a>
+        <a href="/medical-calculators/news2">NEWS2</a>
+        <a href="/medical-calculators/gcs-calculator">GCS</a>
+        <a href="/medical-calculators/sofa-score">SOFA Score</a>
+        <a href="/medical-calculators/shock-index">Shock Index</a>
+        <a href="/medical-calculators/map-calculator">MAP Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>Cardiac / Renal</h4>
+        <a href="/medical-calculators/cha2ds2-vasc">CHA₂DS₂-VASc</a>
+        <a href="/medical-calculators/qtc-calculator">QTc Calculator</a>
+        <a href="/medical-calculators/egfr-calculator">eGFR</a>
+        <a href="/medical-calculators/creatinine-clearance">CrCl (Cockcroft)</a>
+        <a href="/medical-calculators/fena-calculator">FENa Calculator</a>
+        <a href="/medical-calculators/meld-score">MELD Score</a>
+      </div>
+      <div class="footer-col">
+        <h4>General</h4>
+        <a href="/rabies-scheduler/">Rabies PEP</a>
+        <a href="/medical-calculators/ibw-calculator">IBW Calculator</a>
+        <a href="/medical-calculators/bsa-calculator">BSA Calculator</a>
+        <a href="/medical-calculators/holliday-segar">IV Maintenance</a>
+        <a href="/medical-calculators/phq9-gad7">PHQ-9 &amp; GAD-7</a>
+        <a href="/medical-calculators/apgar-score">APGAR Score</a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
