@@ -42,7 +42,7 @@
   .card { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); padding: clamp(1.5rem, 5vw, 2.5rem); margin-bottom: 24px; }
   
   .method-tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-bottom: 25px; }
-  .method-tab { padding: 12px 8px; border: 2px solid #f3f4f6; border-radius: 12px; font-weight: 600; cursor: pointer; background: #f9fafb; font-family: inherit; }
+  .method-tab { padding: 12px 8px; border: 2px solid #f3f4f6; border-radius: 12px; font-weight: 600; cursor: pointer; background: #f9fafb; font-family: inherit; transition: 0.2s;}
   .method-tab.active { border-color: var(--primary); background: #fdf2f8; color: var(--primary-dark); }
   
   .form-section { display: none; }
@@ -52,9 +52,11 @@
   @media(max-width: 560px) { .field-grid { grid-template-columns: 1fr; } }
   
   label { display: block; font-size: 0.88rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
-  input, select { width: 100%; padding: 12px 16px; border: 2px solid #f3f4f6; border-radius: 12px; font-size: 1rem; outline: none; }
+  input, select { width: 100%; padding: 12px 16px; border: 2px solid #f3f4f6; border-radius: 12px; font-size: 1rem; outline: none; transition: 0.2s; }
+  input:focus { border-color: var(--primary); background: #fff; }
 
-  .calc-btn { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 14px; font-weight: 700; font-size: 1.1rem; cursor: pointer; margin-top: 10px; }
+  .calc-btn { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 14px; font-weight: 700; font-size: 1.1rem; cursor: pointer; margin-top: 10px; transition: 0.2s; }
+  .calc-btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
 
   /* RESULTS */
   .results { display: none; margin-top: 32px; border-top: 2px dashed #fce7f3; padding-top: 32px; }
@@ -64,13 +66,20 @@
   .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
   .stat-box { background: #fff; padding: 15px; border-radius: 12px; border: 1px solid #f3f4f6; text-align: center; }
   .stat-val { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 800; color: var(--text); }
+  .stat-lbl { font-size: 0.7rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; }
 
-  /* CONTENT SECTIONS */
+  /* TRIME GRID */
+  .tri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+  @media(max-width: 600px) { .tri-grid { grid-template-columns: 1fr; } }
+  .tri-card { padding: 16px; border-radius: 12px; border: 2px solid #f3f4f6; text-align: center; }
+  .tri-card.active { border-color: var(--primary); background: #fdf2f8; }
+  .tri-name { font-weight: 800; font-size: 0.9rem; margin-bottom: 4px; }
+  .tri-dates { font-size: 0.75rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+
+  /* CONTENT */
   .info-content h2 { font-size: 1.6rem; font-weight: 800; color: var(--primary-dark); margin: 40px 0 20px; border-left: 5px solid var(--primary); padding-left: 15px; }
   .info-content h3 { font-size: 1.2rem; font-weight: 700; color: var(--text); margin: 25px 0 15px; }
   .info-content p { color: var(--text-muted); margin-bottom: 18px; font-size: 1.05rem; }
-  .info-content ul, .info-content ol { margin-bottom: 24px; padding-left: 20px; }
-  .info-content li { margin-bottom: 12px; color: var(--text-muted); }
 
   .table-responsive { overflow-x: auto; width: 100%; margin: 25px 0; border-radius: 12px; border: 1px solid #eee; }
   table { width: 100%; border-collapse: collapse; min-width: 500px; }
@@ -81,7 +90,7 @@
   .share-btn { flex: 1; padding: 14px; border-radius: 12px; font-weight: 700; cursor: pointer; border: none; display: flex; align-items: center; justify-content: center; gap: 8px; }
   .wa-btn { background: #25d366; color: white; }
 
-  .highlight-box { background: #fefce8; border: 1px solid #fef08a; padding: 20px; border-radius: 12px; margin: 20px 0; color: #854d0e; }
+  .disclaimer { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 12px; padding: 20px; font-size: 0.85rem; color: #9d174d; margin-top: 32px; }
 </style>
 </head>
 <body>
@@ -94,9 +103,9 @@
 
 <header class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Doctor Built · India Edition</div>
+    <div class="hero-badge">Obstetrics · India Edition</div>
     <h1>Pregnancy Due Date Calculator</h1>
-    <p>Calculate your EDD using LMP, IVF, or Ultrasound. Detailed week-by-week guide and Indian clinical schedule.</p>
+    <p>Determine your Estimated Due Date (EDD) using multiple clinical methods. Detailed prenatal guide for Indian mothers included.</p>
   </div>
 </header>
 
@@ -111,196 +120,189 @@
 
     <div id="form-lmp" class="form-section active">
       <div class="field-grid">
-        <div class="field"><label>First Day of Last Period</label><input type="date" id="lmp-date"></div>
-        <div class="field"><label>Cycle Length</label><select id="cycle-length"><option value="28">28 Days</option><option value="30">30 Days</option><option value="35">35 Days</option></select></div>
+        <div class="field">
+          <label>First Day of Last Period</label>
+          <input type="date" id="lmp-date">
+        </div>
+        <div class="field">
+          <label>Cycle Length</label>
+          <select id="cycle-length-select">
+            <option value="28">28 Days (Standard)</option>
+            <option value="21">21 Days</option>
+            <option value="30">30 Days</option>
+            <option value="35">35 Days</option>
+          </select>
+        </div>
       </div>
     </div>
 
     <div id="form-ultrasound" class="form-section">
       <div class="field-grid">
-        <div class="field"><label>Scan Date</label><input type="date" id="us-date"></div>
-        <div class="field"><label>Weeks at Scan</label><input type="number" id="us-weeks" placeholder="e.g. 8"></div>
+        <div class="field">
+          <label>Scan Date</label>
+          <input type="date" id="us-date">
+        </div>
+        <div class="field">
+          <label>Weeks at Scan</label>
+          <input type="number" id="us-weeks-input" placeholder="e.g. 8">
+        </div>
       </div>
     </div>
 
     <div id="form-ivf" class="form-section">
       <div class="field-grid">
-        <div class="field"><label>Transfer Date</label><input type="date" id="ivf-date"></div>
-        <div class="field"><label>Embryo Age</label><select id="ivf-type"><option value="5">Day 5 (Blastocyst)</option><option value="3">Day 3</option></select></div>
+        <div class="field">
+          <label>Transfer Date</label>
+          <input type="date" id="ivf-date">
+        </div>
+        <div class="field">
+          <label>Embryo Age</label>
+          <select id="ivf-type-select">
+            <option value="5">Day 5 (Blastocyst)</option>
+            <option value="3">Day 3</option>
+          </select>
+        </div>
       </div>
     </div>
 
-    <div id="form-conception" class="form-section"><div class="field"><label>Conception Date</label><input type="date" id="conception-date"></div></div>
+    <div id="form-conception" class="form-section">
+      <div class="field">
+        <label>Date of Conception</label>
+        <input type="date" id="conception-date-input">
+      </div>
+    </div>
 
     <button class="calc-btn" onclick="calculate()">Calculate My Due Date</button>
 
     <div id="results" class="results">
       <div class="due-banner">
+        <div style="font-size:0.85rem; font-weight:700; color:var(--primary); margin-bottom:10px; text-transform:uppercase;">Estimated Due Date</div>
         <div class="edd-date" id="res-edd">—</div>
+        
         <div class="stats-grid">
-          <div class="stat-box"><div class="stat-val" id="res-week">—</div><div style="font-size:0.7rem; font-weight:700;">WEEKS</div></div>
-          <div class="stat-box"><div class="stat-val" id="res-countdown">—</div><div style="font-size:0.7rem; font-weight:700;">DAYS TO GO</div></div>
-          <div class="stat-box"><div class="stat-val" id="res-size">—</div><div style="font-size:0.7rem; font-weight:700;">BABY SIZE</div></div>
+          <div class="stat-box"><div class="stat-val" id="res-week">—</div><div class="stat-lbl">Weeks</div></div>
+          <div class="stat-box"><div class="stat-val" id="res-countdown">—</div><div class="stat-lbl">Days Left</div></div>
+          <div class="stat-box"><div class="stat-val" id="res-size">—</div><div class="stat-lbl">Baby Size</div></div>
         </div>
       </div>
-      <div class="share-bar"><button class="share-btn wa-btn" onclick="shareWhatsApp()">📲 WhatsApp Results</button></div>
+
+      <div class="tri-grid" id="tri-grid"></div>
+
+      <div class="share-bar">
+        <button class="share-btn wa-btn" onclick="shareWhatsApp()">📲 WhatsApp Results</button>
+      </div>
     </div>
   </section>
 
   <section class="card info-content">
-    <h2>Complete Guide to Pregnancy Due Date Calculation</h2>
-    <p>Calculating your <strong>Estimated Due Date (EDD)</strong> is the first step in your 280-day journey. While the idea of a single "due date" is exciting, it is important to remember that it is an estimate. In India, standard obstetric practice considers a normal pregnancy to last anywhere between 37 and 42 weeks.</p>
+    <h2>Guide to Pregnancy Due Date & Care</h2>
+    <p>Calculating your <strong>Estimated Due Date (EDD)</strong> is essential for planning prenatal checkups, scans, and your baby’s arrival. In India, a standard full-term pregnancy is 40 weeks (280 days). Here is how it is calculated:</p>
     
-    <h3>1. The LMP Method (Naegele’s Rule)</h3>
-    <p>Most doctors in India use Naegele’s Rule to calculate your due date. This formula adds 7 days to the first day of your <strong>Last Menstrual Period (LMP)</strong> and then adds 9 months. This assumes a standard 28-day menstrual cycle. If your cycle is longer (e.g., 35 days), our calculator automatically adjusts the date to ensure accuracy.</p>
-
-    <h3>2. Ultrasound Dating (CRL)</h3>
-    <p>If you have irregular periods or were on birth control, your LMP might not be reliable. In such cases, an early ultrasound (performed between 7 and 13 weeks) is the "Gold Standard." The radiologist measures the <strong>Crown-Rump Length (CRL)</strong>. This is considered the most accurate way to date a pregnancy because fetal growth in the first trimester is very consistent across all babies.</p>
-
-    <h3>3. IVF and FET Due Dates</h3>
-    <p>For mothers undergoing IVF, calculating the due date is more precise. Since the date of fertilization or embryo transfer is known, we don't have to guess based on periods. 
-    <ul>
-      <li><strong>Day 5 Transfer:</strong> Transfer Date + 261 days.</li>
-      <li><strong>Day 3 Transfer:</strong> Transfer Date + 263 days.</li>
-    </ul>
-    </p>
-
-    <h2>Indian Prenatal Scan & Test Schedule</h2>
-    <p>Prenatal care in India is structured to monitor both the mother’s health (preventing anemia and gestational diabetes) and the baby’s development. Here is the typical schedule followed by Indian hospitals:</p>
+    <h3>Calculation Methods</h3>
+    <p><strong>Naegele's Rule:</strong> The most common method adds 7 days to your LMP and adds 9 months. Our calculator refines this by adjusting for your menstrual cycle length.</p>
+    <p><strong>Ultrasound (CRL):</strong> Performed in the first trimester (7-13 weeks), the Crown-Rump Length is the most accurate method, especially if periods are irregular.</p>
     
+    <h3>Indian Scan Schedule</h3>
     <div class="table-responsive">
       <table>
-        <thead>
-          <tr><th>Weeks</th><th>Scan/Test</th><th>Significance</th></tr>
-        </thead>
+        <thead><tr><th>Week</th><th>Scan/Test</th><th>Goal</th></tr></thead>
         <tbody>
-          <tr><td>8-10</td><td>Dating Scan</td><td>Confirms the pregnancy is inside the uterus (rules out ectopic) and detects the heartbeat.</td></tr>
-          <tr><td>11-13</td><td>NT Scan & Dual Marker</td><td>Measures the fluid behind the baby's neck. Screens for Trisomy 21 (Down Syndrome).</td></tr>
-          <tr><td>18-20</td><td>Anomaly Scan (Level II)</td><td>The most critical scan. A detailed head-to-toe check of the baby's heart, spine, and brain.</td></tr>
-          <tr><td>24-28</td><td>Glucose Tolerance (OGTT)</td><td>Testing for Gestational Diabetes, which is highly prevalent in the Indian population.</td></tr>
-          <tr><td>30-32</td><td>Growth Scan & Doppler</td><td>Checks the blood flow (Doppler) and estimates fetal weight.</td></tr>
+          <tr><td>11-13</td><td>NT Scan</td><td>Chromosomal screening</td></tr>
+          <tr><td>18-20</td><td>Anomaly Scan</td><td>Detailed organ check</td></tr>
+          <tr><td>28-32</td><td>Growth Scan</td><td>Monitor baby's weight</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h2>Fetal Weight Chart (Average Indian Baby)</h2>
-    <p>Mothers in India often worry about fetal weight. While every baby is different, here are the average weights (50th percentile) expected during the third trimester:</p>
-    <div class="table-responsive">
-      <table>
-        <thead>
-          <tr><th>Week</th><th>Length (cm)</th><th>Weight (grams)</th><th>Indian Fruit Comparison</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>28 Weeks</td><td>37.6 cm</td><td>1000g (1 kg)</td><td>Papaya</td></tr>
-          <tr><td>32 Weeks</td><td>42.4 cm</td><td>1700g (1.7 kg)</td><td>Custard Apple (large)</td></tr>
-          <tr><td>36 Weeks</td><td>47.4 cm</td><td>2600g (2.6 kg)</td><td>Small Watermelon</td></tr>
-          <tr><td>40 Weeks</td><td>51.2 cm</td><td>3300g (3.3 kg)</td><td>Pumpkin (Kaddu)</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h2>Signs of Labor: When to go to the Hospital?</h2>
-    <p>As you approach your due date, keep a "Go-Bag" ready. You should head to your maternity hospital if you experience:</p>
-    <ol>
-      <li><strong>Rupture of Membranes (Water Breaking):</strong> A sudden gush or continuous trickle of clear fluid.</li>
-      <li><strong>Regular Contractions:</strong> Pains that start in the back and move to the front, becoming stronger and closer together (e.g., every 5 minutes).</li>
-      <li><strong>Show:</strong> Passing of a mucus plug (bloody show).</li>
-      <li><strong>Reduced Fetal Movements:</strong> If you feel the baby is moving less than 10 times in 2 hours, call your doctor immediately.</li>
-    </ol>
-
-    <h2>Government Schemes for Pregnant Women in India</h2>
-    <p>The Government of India provides financial and nutritional support through various schemes:</p>
-    <ul>
-      <li><strong>PMMVY (Pradhan Mantri Matru Vandana Yojana):</strong> A cash incentive of ₹5,000 for the first-time mother to compensate for wage loss and ensure good nutrition.</li>
-      <li><strong>Janani Suraksha Yojana (JSY):</strong> Provides cash assistance for institutional deliveries (hospital births) to reduce maternal and neonatal mortality.</li>
-      <li><strong>MCP Card:</strong> The Mother and Child Protection card tracks your vaccinations (like Tetanus/Tdap) and scans. Ensure your hospital provides one.</li>
-    </ul>
-
-    <div class="highlight-box">
-      <strong>💡 Did you know?</strong> In India, it is traditional to follow <em>Garbhini Paricharya</em> (Ayurvedic prenatal care). While modern medicine is essential, incorporating warm milk with ghee (in moderation) and avoiding "hot" foods like raw papaya is a common cultural practice.
-    </div>
-
-    <h2>Pregnancy Diet Tips for Indian Mothers</h2>
-    <p>An Indian pregnancy diet should be rich in proteins and fiber. Focus on:</p>
-    <ul>
-      <li><strong>Dal & Pulses:</strong> Excellent source of protein and folic acid.</li>
-      <li><strong>Leafy Greens (Palak/Methi):</strong> Vital for iron to prevent pregnancy-induced anemia.</li>
-      <li><strong>Dairy:</strong> Curd (Dahi) and Milk provide necessary calcium for the baby’s bone development.</li>
-      <li><strong>Nuts:</strong> Walnuts (Akhrot) and Almonds (Badam) are great for fetal brain health.</li>
-    </ul>
-
-    <h2>Conclusion</h2>
-    <p>Your journey to motherhood is unique. Use this **due date calculator** as a guide, but always prioritize your doctor's clinical findings over arithmetic formulas. Regular check-ups, a balanced Indian diet, and staying active will help you have a safe delivery.</p>
-
-    <h3>Frequently Asked Questions</h3>
-    <div class="faq-item">
-      <h3>Can the due date change?</h3>
-      <p>Yes. If your first-trimester ultrasound date differs from your LMP date by more than 7 days, your doctor will usually "reset" your due date based on the ultrasound.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What happens if I go past my due date?</h3>
-      <p>If you reach 40 weeks without labor, your doctor will perform a "Biophysical Profile" or NST to check the baby’s health. Most Indian doctors will induce labor by 41 weeks to avoid complications.</p>
-    </div>
+    <h3>Indian Diet & Government Support</h3>
+    <p>Focus on iron-rich foods like Palak (Spinach) and proteins like Paneer and Dal. First-time mothers in India can benefit from the <strong>PMMVY Scheme</strong>, providing ₹5,000 in cash incentives for health and nutrition.</p>
   </section>
 
-  <div class="disclaimer">
-    ⚠️ <strong>Clinical Disclaimer:</strong> This calculator is for educational purposes. All medical decisions and EDD confirmations must be made by a registered medical practitioner.
-  </div>
+  <div class="disclaimer">⚠️ Disclaimer: This tool is for estimation. Always verify your EDD with your obstetrician.</div>
 </main>
 
 <script>
-  let method = 'lmp';
-  function switchMethod(m){
-    method = m;
-    document.querySelectorAll('.method-tab').forEach(t=>t.classList.remove('active'));
+  let currentMethod = 'lmp';
+
+  function switchMethod(m) {
+    currentMethod = m;
+    document.querySelectorAll('.method-tab').forEach(t => t.classList.remove('active'));
     event.target.classList.add('active');
-    document.querySelectorAll('.form-section').forEach(s=>s.classList.remove('active'));
-    document.getElementById('form-'+m).classList.add('active');
+    document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
+    document.getElementById('form-' + m).classList.add('active');
+    document.getElementById('results').style.display = 'none';
   }
 
-  function calculate(){
+  function calculate() {
     let edd = new Date();
     const today = new Date();
-    if(method==='lmp'){
-      const dt = new Date(document.getElementById('lmp-date').value);
-      if(isNaN(dt)){alert("Enter date"); return;}
-      edd = new Date(dt.getTime() + (280 * 24 * 60 * 60 * 1000));
-    } else if(method==='ultrasound'){
-      const dt = new Date(document.getElementById('us-date').value);
-      const w = parseInt(document.getElementById('us-weeks').value);
-      if(isNaN(dt)||isNaN(w)){alert("Enter data"); return;}
-      edd = new Date(dt.getTime() + ((40-w)*7*24*60*60*1000));
-    } else if(method==='ivf'){
-      const dt = new Date(document.getElementById('ivf-date').value);
-      const type = parseInt(document.getElementById('ivf-type').value);
-      edd = new Date(dt.getTime() + ((type===5?261:263)*24*60*60*1000));
-    } else {
-      const dt = new Date(document.getElementById('conception-date').value);
-      edd = new Date(dt.getTime() + (266*24*60*60*1000));
+    today.setHours(0,0,0,0);
+
+    if (currentMethod === 'lmp') {
+      const input = document.getElementById('lmp-date').value;
+      const cycle = parseInt(document.getElementById('cycle-length-select').value);
+      if (!input) { alert("Select a date"); return; }
+      const lmp = new Date(input);
+      // Corrected calculation for different cycles
+      edd = new Date(lmp.getTime() + ((280 + (cycle - 28)) * 24 * 60 * 60 * 1000));
+    } 
+    else if (currentMethod === 'ultrasound') {
+      const input = document.getElementById('us-date').value;
+      const weeks = parseInt(document.getElementById('us-weeks-input').value);
+      if (!input || isNaN(weeks)) { alert("Enter scan date and weeks"); return; }
+      const scanDate = new Date(input);
+      const daysRemaining = (40 - weeks) * 7;
+      edd = new Date(scanDate.getTime() + (daysRemaining * 24 * 60 * 60 * 1000));
+    } 
+    else if (currentMethod === 'ivf') {
+      const input = document.getElementById('ivf-date').value;
+      const type = parseInt(document.getElementById('ivf-type-select').value);
+      if (!input) { alert("Select transfer date"); return; }
+      const transferDate = new Date(input);
+      const offset = type === 5 ? 261 : 263;
+      edd = new Date(transferDate.getTime() + (offset * 24 * 60 * 60 * 1000));
+    } 
+    else {
+      const input = document.getElementById('conception-date-input').value;
+      if (!input) { alert("Select conception date"); return; }
+      const conDate = new Date(input);
+      edd = new Date(conDate.getTime() + (266 * 24 * 60 * 60 * 1000));
     }
 
     const diff = edd - today;
-    const daysToGo = Math.ceil(diff/(1000*60*60*24));
-    const weeksIn = Math.floor((280-daysToGo)/7);
-    
-    document.getElementById('res-edd').innerText = edd.toLocaleDateString('en-IN', {day:'numeric', month:'long', year:'numeric'});
-    document.getElementById('res-countdown').innerText = daysToGo;
-    document.getElementById('res-week').innerText = weeksIn;
-    document.getElementById('res-progress').innerText = Math.round(((280-daysToGo)/280)*100) + "%";
+    const daysToGo = Math.ceil(diff / (1000 * 60 * 60 * 24));
+    const weeksPregnant = Math.floor((280 - daysToGo) / 7);
+
+    // Update UI
+    document.getElementById('res-edd').innerText = edd.toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric'});
+    document.getElementById('res-countdown').innerText = Math.max(0, daysToGo);
+    document.getElementById('res-week').innerText = Math.max(0, weeksPregnant);
     
     let size = "Jamun";
-    if(weeksIn > 36) size = "Pumpkin";
-    else if(weeksIn > 28) size = "Papaya";
-    else if(weeksIn > 18) size = "Banana";
-    else if(weeksIn > 11) size = "Lemon";
+    if(weeksPregnant >= 36) size = "Pumpkin";
+    else if(weeksPregnant >= 28) size = "Papaya";
+    else if(weeksPregnant >= 20) size = "Banana";
+    else if(weeksPregnant >= 12) size = "Lemon";
     document.getElementById('res-size').innerText = size;
 
-    document.getElementById('results').style.display='block';
-    setTimeout(()=>document.getElementById('results').scrollIntoView({behavior:'smooth', block:'nearest'}), 50);
+    // Trimester Card Builder
+    const t1 = new Date(edd.getTime() - (27 * 7 * 24 * 60 * 60 * 1000));
+    const t2 = new Date(edd.getTime() - (13 * 7 * 24 * 60 * 60 * 1000));
+    
+    document.getElementById('tri-grid').innerHTML = `
+      <div class="tri-card ${weeksPregnant <= 13 ? 'active' : ''}"><div class="tri-name">Trimester 1</div><div class="tri-dates">Ends: ${t1.toLocaleDateString('en-IN')}</div></div>
+      <div class="tri-card ${weeksPregnant > 13 && weeksPregnant <= 27 ? 'active' : ''}"><div class="tri-name">Trimester 2</div><div class="tri-dates">Ends: ${t2.toLocaleDateString('en-IN')}</div></div>
+      <div class="tri-card ${weeksPregnant > 27 ? 'active' : ''}"><div class="tri-name">Trimester 3</div><div class="tri-dates">Due: ${edd.toLocaleDateString('en-IN')}</div></div>
+    `;
+
+    document.getElementById('results').style.display = 'block';
+    setTimeout(() => document.getElementById('results').scrollIntoView({behavior:'smooth', block:'nearest'}), 50);
   }
 
-  function shareWhatsApp(){
-    const text = `🤰 My Estimated Due Date is ${document.getElementById('res-edd').innerText}! I am ${document.getElementById('res-week').innerText} weeks pregnant. Check yours at https://rxmedcalc.com/medical-calculators/due-date`;
+  function shareWhatsApp() {
+    const eddStr = document.getElementById('res-edd').innerText;
+    const weeks = document.getElementById('res-week').innerText;
+    const text = `🤰 My Pregnancy Due Date: ${eddStr}\nI'm currently ${weeks} weeks pregnant!\nCalculate yours at: https://rxmedcalc.com/medical-calculators/due-date`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   }
 </script>
