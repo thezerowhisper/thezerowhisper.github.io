@@ -2,10 +2,7 @@
 (function () {
   const path = location.pathname;
 
-  /* ══ 1. INJECT ADSENSE LOADER ══════════════════════════════
-     Dynamically adds the AdSense script to <head> on every page.
-     You never need to add it manually to individual pages again.
-     Just keep your <ins> ad slot tags wherever you want ads.        */
+  /* ══ 1. INJECT ADSENSE LOADER ══════════════════════════════ */
   (function injectAdSense() {
     const PUBLISHER_ID = 'ca-pub-9687081664589626';
     if (document.querySelector('script[src*="adsbygoogle"]')) return;
@@ -16,14 +13,15 @@
     document.head.appendChild(s);
   })();
 
-  /* ══ 2. INJECT NAV + FOOTER CSS ═══════════════════════════
-     Inlined here so every page gets the styles even if /assets/shared.css
-     is not loaded or has different class names.                    */
+  /* ══ 2. INJECT NAV + FOOTER CSS ═══════════════════════════ */
   (function injectNavCSS() {
     if (document.getElementById('rxmc-nav-css')) return;
     const style = document.createElement('style');
     style.id = 'rxmc-nav-css';
     style.textContent = `
+      /* HIDE OLD HARDCODED NAV BARS SO THEY DON'T DUPLICATE */
+      nav.topnav { display: none !important; }
+
       /* ── SITE HEADER ── */
       .site-header {
         background: #0d1b2a;
@@ -34,7 +32,9 @@
         -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
       }
-      .header-inner {
+      
+      /* RENAMED to .site-header-inner to prevent breaking old pages */
+      .site-header-inner {
         max-width: 1100px;
         margin: 0 auto;
         padding: 0 24px;
@@ -44,6 +44,7 @@
         height: 60px;
         gap: 20px;
       }
+      
       .site-logo {
         display: flex;
         align-items: center;
@@ -94,7 +95,6 @@
         color: #f59e0b;
         background: rgba(245,158,11,0.1);
       }
-      /* Search link styling */
       .site-nav a[href="/search"] {
         color: rgba(255,255,255,0.5);
         font-size: 0.78rem;
@@ -102,6 +102,7 @@
       .site-nav a[href="/search"]:hover {
         color: #fff;
       }
+      
       /* Mobile nav toggle */
       .nav-toggle {
         display: none;
@@ -172,7 +173,7 @@
         line-height: 1.65;
         max-width: 700px;
       }
-      /* New 3-Column Layout for Links */
+      
       .footer-links {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -198,17 +199,11 @@
       }
       .footer-col a:hover { color: #f59e0b; }
       
-      /* Mobile adjustments for the 3 columns */
       @media (max-width: 600px) {
-        .footer-links {
-          grid-template-columns: repeat(2, 1fr); /* Drops to 2 cols on mobile so text fits */
-          gap: 20px;
-        }
+        .footer-links { grid-template-columns: repeat(2, 1fr); gap: 20px; }
       }
       @media (max-width: 400px) {
-        .footer-links {
-          grid-template-columns: 1fr; /* Stacks only on very tiny screens */
-        }
+        .footer-links { grid-template-columns: 1fr; }
       }
 
       .footer-bottom {
@@ -230,7 +225,6 @@
       }
       .footer-bottom a:hover { color: #f59e0b; }
 
-      /* ── BODY TOP PADDING for sticky header ── */
       body { padding-top: 0 !important; }
     `;
     document.head.appendChild(style);
@@ -245,7 +239,7 @@
   /* ══ 4. HEADER ═════════════════════════════════════════════ */
   const header = `
 <header class="site-header">
-  <div class="header-inner">
+  <div class="site-header-inner">
     <a href="/" class="site-logo">
       <span class="logo-icon">🩺</span>
       <span class="logo-name">RxMedCalc</span>
