@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="psi-calculator">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PSI Calculator | Pneumonia Severity Index | PORT Score | RxMedCalc</title>
+<meta name="description" content="Free PSI (Pneumonia Severity Index) / PORT score calculator for community-acquired pneumonia. Predict 30-day mortality, guide outpatient vs inpatient vs ICU admission decisions. Includes antibiotic recommendations per ATS/IDSA 2019 guidelines. Used by emergency physicians and pulmonologists worldwide."/>
+<meta name="keywords" content="PSI calculator, pneumonia severity index, PORT score calculator, community acquired pneumonia, CAP severity, PSI risk class, pneumonia admission criteria, PSI vs CURB-65, pneumonia mortality, CAP treatment guidelines"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/psi-calculator"/>
+<meta property="og:title" content="PSI Calculator | Pneumonia Severity Index | PORT Score | RxMedCalc"/>
+<meta property="og:description" content="Calculate PSI/PORT score for CAP severity. 30-day mortality, admission decisions, antibiotic guidance. Free for emergency physicians worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/psi-calculator"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/psi-calculator","name":"PSI Calculator — Pneumonia Severity Index","description":"PSI/PORT score for community-acquired pneumonia severity and admission decisions.","inLanguage":"en","dateModified":"2025-04-14"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"PSI Calculator","item":"https://rxmedcalc.com/medical-calculators/psi-calculator"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a high PSI score?","acceptedAnswer":{"@type":"Answer","text":"PSI Class IV (score 91–130) and Class V (score >130) indicate high-risk pneumonia with 30-day mortality of 8.2% and 29.2% respectively. Class IV/V patients require hospital admission, with Class V typically requiring ICU-level care. PSI Classes I–III (score ≤90) are low-risk and can generally be managed as outpatients with close follow-up."}},
+{"@type":"Question","name":"PSI vs CURB-65 — which is better?","acceptedAnswer":{"@type":"Answer","text":"Both are validated tools. PSI (PORT score) uses more variables (20 items) and better identifies low-risk patients for outpatient treatment — more conservative, avoids unnecessary admissions. CURB-65 uses only 5 variables and is quicker at the bedside. IDSA/ATS 2019 recommends either tool. PSI is preferred when identifying low-risk patients; CURB-65 is preferred for quick severity assessment in the ED."}}
+]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0f2030 60%,#0d1b2a 100%);padding:36px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.05) 1px,transparent 1px);background-size:40px 40px}
+.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:16px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}
+.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#93c5fd;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:14px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.6rem,5vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px}
+h1 em{font-style:italic;color:#60a5fa}
+.page-sub{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:20px}
+.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:28px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:24px 20px 80px}
+/* CARDS */
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:24px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+@media(min-width:600px){.calc-card{padding:28px}}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;color:#0d1b2a;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.calc-title::before{content:'';display:block;width:4px;height:18px;background:#3b82f6;border-radius:2px;flex-shrink:0}
+.calc-subtitle{font-size:0.78rem;color:#6b7280;margin-bottom:20px}
+/* STEP SECTIONS */
+.step-label{font-size:0.7rem;font-weight:700;color:#3b82f6;text-transform:uppercase;letter-spacing:0.07em;margin:20px 0 10px;display:flex;align-items:center;gap:8px}
+.step-label::after{content:'';flex:1;height:1px;background:#e5e7eb}
+/* DEMOGRAPHICS GRID */
+.input-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:4px}
+@media(min-width:480px){.input-grid{grid-template-columns:1fr 1fr}}
+.field label{display:block;font-size:0.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px}
+.field input,.field select{width:100%;padding:11px 13px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:9px;font-family:inherit;font-size:16px;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none;appearance:none}
+.field input:focus,.field select:focus{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,0.1)}
+.field .hint{font-size:0.68rem;color:#9ca3af;margin-top:3px}
+/* CHECKBOX CRITERIA */
+.criteria-group{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.crit{display:flex;align-items:flex-start;gap:12px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px 14px;cursor:pointer;transition:all 0.2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;user-select:none}
+.crit.sel{background:#eff6ff;border-color:#bfdbfe}
+.crit-chk{width:20px;height:20px;border:2px solid #d1d5db;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all 0.2s;background:#fff;font-size:0.8rem}
+.crit.sel .crit-chk{background:#3b82f6;border-color:#3b82f6;color:#fff}
+.crit-text{flex:1}
+.crit-name{font-size:0.86rem;font-weight:600;color:#0d1b2a;line-height:1.3}
+.crit-detail{font-size:0.7rem;color:#6b7280;margin-top:2px;line-height:1.4}
+.crit-pts{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:900;color:#d1d5db;flex-shrink:0;min-width:32px;text-align:right}
+.crit.sel .crit-pts{color:#3b82f6}
+/* RUNNING TOTAL */
+.running-total{background:linear-gradient(135deg,#eff6ff,#fff);border:1.5px solid #bfdbfe;border-radius:12px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;margin:16px 0}
+.rt-label{font-size:0.78rem;font-weight:600;color:#6b7280}
+.rt-right{display:flex;align-items:baseline;gap:6px}
+.rt-val{font-family:'Fraunces',Georgia,serif;font-size:2.2rem;font-weight:900;color:#3b82f6}
+.rt-max{font-size:0.85rem;color:#9ca3af}
+.btn-calc{width:100%;padding:14px;border:none;border-radius:11px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;background:linear-gradient(135deg,#3b82f6,#2563eb);box-shadow:0 4px 16px rgba(59,130,246,0.3);touch-action:manipulation}
+.btn-calc:active{transform:scale(0.98)}
+.error-msg{color:#dc2626;font-size:0.78rem;margin-top:8px;display:none}
+.error-msg.show{display:block}
+/* RESULTS */
+.results{display:none;margin-top:20px}
+.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:18px 0}
+.score-display{text-align:center;margin-bottom:18px;background:linear-gradient(135deg,#eff6ff,#fff);border:1.5px solid #bfdbfe;border-radius:14px;padding:20px}
+.sc-num{font-family:'Fraunces',Georgia,serif;font-size:4rem;font-weight:900;color:#3b82f6;line-height:1}
+.sc-class{font-size:1rem;font-weight:700;color:#0d1b2a;margin-top:4px}
+.sc-badge{display:inline-block;padding:5px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;margin-top:8px}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+@media(min-width:480px){.result-grid{grid-template-columns:repeat(3,1fr)}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:11px;padding:12px;text-align:center}
+.rbox.hi{background:#eff6ff;border-color:#bfdbfe}
+.rlabel{font-size:0.6rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px}
+.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#2563eb}
+.runit{font-size:0.65rem;color:#9ca3af;margin-top:2px}
+.mgmt-box{border-radius:11px;padding:14px;margin-bottom:14px;font-size:0.85rem;line-height:1.75;white-space:pre-line}
+.action-row{display:flex;gap:8px;margin-top:10px}
+.act-btn{flex:1;padding:11px 8px;border-radius:10px;font-family:inherit;font-size:0.8rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s;touch-action:manipulation}
+.act-btn:active{opacity:0.7}
+.wa-btn{background:#25d366;color:#fff}
+.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:9px;color:#9ca3af;font-family:inherit;font-size:0.8rem;cursor:pointer;transition:all 0.2s;touch-action:manipulation}
+.reset-btn:hover,.reset-btn:active{border-color:#3b82f6;color:#3b82f6}
+/* CONTENT CARD */
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:20px}
+@media(min-width:600px){.content-card{padding:28px}}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:900;color:#0d1b2a;margin-bottom:14px}
+.content-card h3{font-size:0.95rem;font-weight:700;color:#3b82f6;margin:18px 0 8px}
+.content-card p{font-size:0.87rem;color:#4b5563;line-height:1.8;margin-bottom:10px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+.content-card li{font-size:0.85rem;color:#4b5563;padding-left:14px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#3b82f6;font-size:0.78rem}
+.psi-table{width:100%;border-collapse:collapse;font-size:0.78rem;margin:12px 0;overflow-x:auto;display:block}
+@media(min-width:600px){.psi-table{display:table}}
+.psi-table th{background:#eff6ff;color:#1e3a5f;font-weight:700;padding:8px 10px;text-align:left;font-size:0.68rem;text-transform:uppercase;border-bottom:2px solid #bfdbfe;white-space:nowrap}
+.psi-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top}
+.faq-item{border-bottom:1px solid #f3f4f6;padding:14px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.88rem;font-weight:600;color:#0d1b2a;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none;touch-action:manipulation}
+.faq-q::after{content:'＋';color:#3b82f6;font-size:1rem;flex-shrink:0;transition:transform 0.2s;margin-top:1px}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.83rem;color:#4b5563;line-height:1.75}
+.faq-item.open .faq-a{max-height:400px;padding-top:8px}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:11px;padding:14px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;transition:all 0.2s;touch-action:manipulation}
+.related-card:hover,.related-card:active{border-color:#3b82f6;background:#eff6ff}
+.rc-icon{font-size:1.3rem;flex-shrink:0}
+.rc-title{font-size:0.82rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}
+.rc-desc{font-size:0.68rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:11px;padding:14px;font-size:0.75rem;color:#78350f;line-height:1.65;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>PSI Calculator</span></nav>
+    <div class="page-eyebrow">🫁 Pulmonology · Emergency · CAP</div>
+    <h1>PSI / PORT Score<br><em>Calculator</em></h1>
+    <p class="page-sub">Pneumonia Severity Index for community-acquired pneumonia. Predict 30-day mortality and guide outpatient vs inpatient vs ICU admission decisions per IDSA/ATS 2019.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ Risk Classes I–V</span>
+      <span class="hbadge">✓ 30-Day Mortality</span>
+      <span class="hbadge">✓ Admission Decisions</span>
+      <span class="hbadge">✓ Antibiotic Guide</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">PSI Score Calculator</div>
+    <div class="calc-subtitle">Complete all sections. Demographic factors calculated automatically. Tick clinical findings present.</div>
+
+    <!-- STEP 1: DEMOGRAPHICS -->
+    <div class="step-label">Step 1 — Demographics</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="e.g. 65" min="18" max="110" inputmode="decimal"/>
+        <div class="hint">years</div>
+      </div>
+      <div class="field">
+        <label for="sex">Sex</label>
+        <select id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female (−10 pts)</option>
+        </select>
+      </div>
+    </div>
+    <div class="criteria-group">
+      <div class="crit" id="dc-nursing" onclick="toggle('dc-nursing',10)">
+        <div class="crit-chk" id="chk-dc-nursing">✓</div>
+        <div class="crit-text"><div class="crit-name">Nursing home resident</div></div>
+        <div class="crit-pts">+10</div>
+      </div>
+    </div>
+
+    <!-- STEP 2: COMORBIDITIES -->
+    <div class="step-label">Step 2 — Comorbid Illnesses</div>
+    <div class="criteria-group">
+      <div class="crit" id="co-neoplasm" onclick="toggle('co-neoplasm',30)">
+        <div class="crit-chk" id="chk-co-neoplasm">✓</div>
+        <div class="crit-text"><div class="crit-name">Active neoplastic disease</div><div class="crit-detail">Any cancer except basal cell carcinoma of skin, active/treated in past year</div></div>
+        <div class="crit-pts">+30</div>
+      </div>
+      <div class="crit" id="co-liver" onclick="toggle('co-liver',20)">
+        <div class="crit-chk" id="chk-co-liver">✓</div>
+        <div class="crit-text"><div class="crit-name">Liver disease</div><div class="crit-detail">Cirrhosis or chronic active hepatitis</div></div>
+        <div class="crit-pts">+20</div>
+      </div>
+      <div class="crit" id="co-chf" onclick="toggle('co-chf',10)">
+        <div class="crit-chk" id="chk-co-chf">✓</div>
+        <div class="crit-text"><div class="crit-name">Congestive heart failure</div></div>
+        <div class="crit-pts">+10</div>
+      </div>
+      <div class="crit" id="co-cvd" onclick="toggle('co-cvd',10)">
+        <div class="crit-chk" id="chk-co-cvd">✓</div>
+        <div class="crit-text"><div class="crit-name">Cerebrovascular disease</div><div class="crit-detail">Prior stroke or TIA</div></div>
+        <div class="crit-pts">+10</div>
+      </div>
+      <div class="crit" id="co-renal" onclick="toggle('co-renal',10)">
+        <div class="crit-chk" id="chk-co-renal">✓</div>
+        <div class="crit-text"><div class="crit-name">Renal disease</div><div class="crit-detail">Chronic dialysis or elevated creatinine &gt;1.2 mg/dL at baseline</div></div>
+        <div class="crit-pts">+10</div>
+      </div>
+    </div>
+
+    <!-- STEP 3: EXAM -->
+    <div class="step-label">Step 3 — Physical Examination</div>
+    <div class="criteria-group">
+      <div class="crit" id="ex-ams" onclick="toggle('ex-ams',20)">
+        <div class="crit-chk" id="chk-ex-ams">✓</div>
+        <div class="crit-text"><div class="crit-name">Altered mental status</div><div class="crit-detail">Disorientation, stupor, or coma (not baseline)</div></div>
+        <div class="crit-pts">+20</div>
+      </div>
+      <div class="crit" id="ex-rr" onclick="toggle('ex-rr',20)">
+        <div class="crit-chk" id="chk-ex-rr">✓</div>
+        <div class="crit-text"><div class="crit-name">Respiratory rate ≥30 breaths/min</div></div>
+        <div class="crit-pts">+20</div>
+      </div>
+      <div class="crit" id="ex-sbp" onclick="toggle('ex-sbp',20)">
+        <div class="crit-chk" id="chk-ex-sbp">✓</div>
+        <div class="crit-text"><div class="crit-name">Systolic BP &lt;90 mmHg</div></div>
+        <div class="crit-pts">+20</div>
+      </div>
+      <div class="crit" id="ex-temp" onclick="toggle('ex-temp',15)">
+        <div class="crit-chk" id="chk-ex-temp">✓</div>
+        <div class="crit-text"><div class="crit-name">Temperature &lt;35°C or ≥40°C</div></div>
+        <div class="crit-pts">+15</div>
+      </div>
+      <div class="crit" id="ex-hr" onclick="toggle('ex-hr',10)">
+        <div class="crit-chk" id="chk-ex-hr">✓</div>
+        <div class="crit-text"><div class="crit-name">Heart rate ≥125 bpm</div></div>
+        <div class="crit-pts">+10</div>
+      </div>
+    </div>
+
+    <!-- STEP 4: LABS & CXR -->
+    <div class="step-label">Step 4 — Lab &amp; Imaging Findings</div>
+    <div class="criteria-group">
+      <div class="crit" id="lb-ph" onclick="toggle('lb-ph',30)">
+        <div class="crit-chk" id="chk-lb-ph">✓</div>
+        <div class="crit-text"><div class="crit-name">Arterial pH &lt;7.35</div></div>
+        <div class="crit-pts">+30</div>
+      </div>
+      <div class="crit" id="lb-bun" onclick="toggle('lb-bun',20)">
+        <div class="crit-chk" id="chk-lb-bun">✓</div>
+        <div class="crit-text"><div class="crit-name">BUN ≥30 mg/dL (≥10.7 mmol/L)</div></div>
+        <div class="crit-pts">+20</div>
+      </div>
+      <div class="crit" id="lb-na" onclick="toggle('lb-na',20)">
+        <div class="crit-chk" id="chk-lb-na">✓</div>
+        <div class="crit-text"><div class="crit-name">Sodium &lt;130 mmol/L</div></div>
+        <div class="crit-pts">+20</div>
+      </div>
+      <div class="crit" id="lb-gluc" onclick="toggle('lb-gluc',10)">
+        <div class="crit-chk" id="chk-lb-gluc">✓</div>
+        <div class="crit-text"><div class="crit-name">Glucose ≥250 mg/dL (≥13.9 mmol/L)</div></div>
+        <div class="crit-pts">+10</div>
+      </div>
+      <div class="crit" id="lb-hct" onclick="toggle('lb-hct',10)">
+        <div class="crit-chk" id="chk-lb-hct">✓</div>
+        <div class="crit-text"><div class="crit-name">Haematocrit &lt;30%</div></div>
+        <div class="crit-pts">+10</div>
+      </div>
+      <div class="crit" id="lb-po2" onclick="toggle('lb-po2',10)">
+        <div class="crit-chk" id="chk-lb-po2">✓</div>
+        <div class="crit-text"><div class="crit-name">PaO₂ &lt;60 mmHg or SpO₂ &lt;90% on room air</div></div>
+        <div class="crit-pts">+10</div>
+      </div>
+      <div class="crit" id="lb-pe" onclick="toggle('lb-pe',10)">
+        <div class="crit-chk" id="chk-lb-pe">✓</div>
+        <div class="crit-text"><div class="crit-name">Pleural effusion on imaging</div></div>
+        <div class="crit-pts">+10</div>
+      </div>
+    </div>
+
+    <div class="running-total">
+      <span class="rt-label">PSI Score (before age)</span>
+      <div class="rt-right">
+        <span class="rt-val" id="rt-val">0</span>
+        <span class="rt-max">pts</span>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate PSI Score →</button>
+
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-display">
+        <div class="sc-num" id="sc-num">—</div>
+        <div class="sc-class" id="sc-class">—</div>
+        <div class="sc-badge" id="sc-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">PSI Score</div><div class="rval" id="r-score">—</div><div class="runit">points</div></div>
+        <div class="rbox"><div class="rlabel">Risk Class</div><div class="rval" id="r-class">—</div><div class="runit">I–V</div></div>
+        <div class="rbox"><div class="rlabel">30-Day Mortality</div><div class="rval" id="r-mort">—</div><div class="runit">%</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>PSI Risk Classes &amp; Mortality</h2>
+    <table class="psi-table">
+      <thead><tr><th>Class</th><th>Score</th><th>30-Day Mortality</th><th>Recommended Setting</th></tr></thead>
+      <tbody>
+        <tr><td><strong>I</strong></td><td>Age ≤50 + no comorbidities + no abnormal signs</td><td>0.1%</td><td>Outpatient</td></tr>
+        <tr><td><strong>II</strong></td><td>≤70</td><td>0.6%</td><td>Outpatient</td></tr>
+        <tr><td><strong>III</strong></td><td>71–90</td><td>2.8%</td><td>Outpatient or brief inpatient</td></tr>
+        <tr><td><strong>IV</strong></td><td>91–130</td><td>8.2%</td><td>Inpatient</td></tr>
+        <tr><td><strong>V</strong></td><td>&gt;130</td><td>29.2%</td><td>Inpatient (consider ICU)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>CAP Antibiotic Recommendations — IDSA/ATS 2019</h3>
+    <ul>
+      <li><strong>Outpatient (Class I–III), previously healthy, no recent antibiotics:</strong> Amoxicillin 500 mg TDS × 5 days. Or doxycycline 100 mg BD × 5 days (atypical cover). Azithromycin if low local pneumococcal resistance</li>
+      <li><strong>Outpatient with comorbidities (diabetes, heart/lung/liver/renal disease, immunosuppression):</strong> Amoxicillin-clavulanate 875/125 mg BD + azithromycin 500 mg OD × 5 days. Or respiratory fluoroquinolone (levofloxacin 750 mg OD × 5 days)</li>
+      <li><strong>Inpatient, non-ICU (Class IV):</strong> IV β-lactam (ampicillin-sulbactam 3g QID, or ceftriaxone 1–2g OD) + azithromycin 500 mg OD. Or respiratory fluoroquinolone monotherapy</li>
+      <li><strong>ICU (Class V, severe CAP):</strong> IV β-lactam + IV azithromycin or IV fluoroquinolone. Add anti-MRSA coverage (vancomycin or linezolid) if MRSA risk factors. Add anti-Pseudomonal β-lactam if Pseudomonas risk</li>
+    </ul>
+
+    <h3>PSI vs CURB-65 — Key Differences</h3>
+    <ul>
+      <li><strong>PSI (PORT score):</strong> 20 variables, validated in 51,000+ patients, better at identifying LOW-risk patients for outpatient treatment, recommended by IDSA/ATS 2007/2019</li>
+      <li><strong>CURB-65:</strong> 5 variables (Confusion, Urea, RR, BP, Age ≥65), simpler bedside tool, better for quick HIGH-risk identification, endorsed by BTS guidelines</li>
+      <li>Either tool is acceptable per IDSA/ATS 2019. PSI is more conservative (fewer unnecessary admissions); CURB-65 is faster</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/curb65" class="related-card"><span class="rc-icon">🫁</span><div><div class="rc-title">CURB-65</div><div class="rc-desc">Quick CAP severity</div></div></a>
+      <a href="/medical-calculators/news2" class="related-card"><span class="rc-icon">📉</span><div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Early deterioration</div></div></a>
+      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Severe CAP / sepsis</div></div></a>
+      <a href="/medical-calculators/aa-gradient" class="related-card"><span class="rc-icon">🫁</span><div><div class="rc-title">A-a Gradient</div><div class="rc-desc">Hypoxaemia assessment</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> PSI is a severity prediction tool — not a substitute for clinical judgement. Patients with social factors, inability to maintain oral intake, or clinical instability may require admission regardless of low PSI score. Always apply clinical context alongside the score.</div>
+</main>
+<script src="/assets/shared-nav.js"></script>
+<script>
+const pts={};let lastResult=null;
+const faqs=[
+  ["What is a high PSI score?","PSI Class IV (score 91–130): 8.2% mortality — admit. Class V (>130): 29.2% mortality — consider ICU. Classes I–III (≤90) are low risk and can be managed outpatient in most cases."],
+  ["PSI vs CURB-65 — which is better?","Both are validated. PSI has more variables and is better at identifying low-risk patients for outpatient management. CURB-65 is simpler and faster at the bedside. IDSA/ATS 2019 endorses either."],
+  ["Can I discharge a Class III patient?","Class III (score 71–90, mortality 2.8%) — short inpatient observation then outpatient is acceptable if social situation is adequate, patient can take oral medications, and reliable follow-up is arranged. Clinical judgement overrides the score."],
+  ["What antibiotics for severe CAP?","Class V (ICU-level): IV beta-lactam (ceftriaxone or piperacillin-tazobactam) + IV azithromycin or fluoroquinolone. Add vancomycin/linezolid if MRSA risk. Add antipseudomonal agent if Pseudomonas risk factors."]
+];
+document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
+function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}
+function toggle(id,p){
+  const el=document.getElementById(id);
+  const chk=document.getElementById('chk-'+id);
+  if(pts[id]){delete pts[id];el.classList.remove('sel');chk.style.background='';chk.style.borderColor='';chk.style.color=''}
+  else{pts[id]=p;el.classList.add('sel')}
+  updateTotal();
+}
+function updateTotal(){
+  const t=Object.values(pts).reduce((a,b)=>a+b,0);
+  document.getElementById('rt-val').textContent=t;
+}
+function calculate(){
+  const age=parseInt(document.getElementById('age').value);
+  const sex=document.getElementById('sex').value;
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!age||age<18){errEl.textContent='Please enter patient age (18+).';errEl.className='error-msg show';return}
+  let score=age;
+  if(sex==='female')score-=10;
+  score+=Object.values(pts).reduce((a,b)=>a+b,0);
+  // Determine Class I eligibility
+  const hasComorbid=pts['co-neoplasm']||pts['co-liver']||pts['co-chf']||pts['co-cvd']||pts['co-renal'];
+  const hasAbnormal=pts['ex-ams']||pts['ex-rr']||pts['ex-sbp']||pts['ex-temp']||pts['ex-hr'];
+  const classI=age<=50&&sex!='nursing'&&!hasComorbid&&!hasAbnormal&&!pts['dc-nursing'];
+  let riskClass,mortality,admTxt,badgeCls,mStyle,mTxt;
+  if(classI){riskClass='I';mortality='0.1';admTxt='Outpatient';badgeCls='background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0';mStyle='background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534';}
+  else if(score<=70){riskClass='II';mortality='0.6';admTxt='Outpatient';badgeCls='background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0';mStyle='background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534';}
+  else if(score<=90){riskClass='III';mortality='2.8';admTxt='Outpatient or short stay';badgeCls='background:#fffbeb;color:#d97706;border:1.5px solid #fde68a';mStyle='background:#fffbeb;border:1.5px solid #fde68a;color:#92400e';}
+  else if(score<=130){riskClass='IV';mortality='8.2';admTxt='Inpatient';badgeCls='background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca';mStyle='background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b';}
+  else{riskClass='V';mortality='29.2';admTxt='Inpatient / ICU';badgeCls='background:#dc2626;color:#fff';mStyle='background:#fef2f2;border:2px solid #dc2626;color:#7f1d1d';}
+  document.getElementById('sc-num').textContent=classI?'Class I':score;
+  document.getElementById('sc-class').textContent='PSI Risk Class '+riskClass;
+  const badge=document.getElementById('sc-badge');badge.textContent=admTxt;badge.style.cssText=badgeCls+';display:inline-block;padding:5px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;margin-top:8px';
+  document.getElementById('r-score').textContent=classI?'N/A':score;
+  document.getElementById('r-class').textContent='Class '+riskClass;
+  document.getElementById('r-mort').textContent=mortality+'%';
+  const mgmt=document.getElementById('mgmt-box');
+  if(riskClass==='I'||riskClass==='II'){mTxt='✅ PSI Class '+riskClass+' — Outpatient management appropriate (mortality '+mortality+'%).\n\nAntibiotic options:\n• Amoxicillin 500 mg TDS × 5 days (first-line, no comorbidities)\n• Doxycycline 100 mg BD × 5 days (atypical organisms)\n• With comorbidities: Amoxicillin-clavulanate + azithromycin\n• Or: Levofloxacin 750 mg OD × 5 days\n\nFollow-up: 48–72 hours. Return if worsening. Ensure adequate oral intake. Avoid in patients with social isolation, inability to comply.';}
+  else if(riskClass==='III'){mTxt='⚠️ PSI Class III — Short inpatient observation or outpatient with reliable follow-up.\n\nConsider admission if: poor social support, unable to maintain oral intake, oxygen required, or worsening.\n\nInpatient antibiotics: IV ceftriaxone 1g OD + azithromycin 500 mg OD. Switch to oral when stable (temp <37.8°C × 48h, HR <100, O₂ sat >90% on room air, tolerating oral). Discharge with 24–48h follow-up.';}
+  else if(riskClass==='IV'){mTxt='⚠️ PSI Class IV — Inpatient admission required (mortality 8.2%).\n\nAntibiotics: IV ceftriaxone 1–2g OD + IV/PO azithromycin 500 mg OD.\nOr: IV levofloxacin 750 mg OD monotherapy.\n\nMonitoring: SpO₂, serial bloods (CRP, WBC, renal function at 48h), sputum culture, blood cultures × 2 before antibiotics.\nSupplemental O₂ to maintain SpO₂ ≥94%. Review CURB-65/PSI at 48h — step-down to outpatient when stable.';}
+  else{mTxt='🚨 PSI Class V — Severe CAP (mortality 29.2%). Inpatient with ICU consideration.\n\nICU criteria (ATS Minor Criteria — ≥3 of): RR ≥30, PaO₂/FiO₂ <250, multilobar infiltrates, confusion, BUN ≥20 mg/dL, leukopenia, thrombocytopenia, hypothermia, hypotension requiring fluids.\n\nAntibiotics (IDSA/ATS Severe CAP): IV β-lactam + IV azithromycin or fluoroquinolone. Add vancomycin if MRSA risk. Add antipseudomonal coverage (piperacillin-tazobactam or meropenem) if Pseudomonas risk.\nUrgent blood/sputum cultures. Respiratory support. Vasopressors if septic shock.';}
+  mgmt.textContent=mTxt;mgmt.style.cssText=mStyle+';border-radius:11px;padding:14px;margin-bottom:14px;font-size:0.85rem;line-height:1.75;white-space:pre-line';
+  lastResult=`PSI Score: ${classI?'Class I':score} — Class ${riskClass}\n30-Day Mortality: ${mortality}%\nSetting: ${admTxt}\nCalculated at rxmedcalc.com/medical-calculators/psi-calculator`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('psi_calc',{class:riskClass,score:classI?0:score});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🫁 PSI Score\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){Object.keys(pts).forEach(k=>{delete pts[k];const el=document.getElementById(k);if(el)el.classList.remove('sel')});document.getElementById('age').value='';document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>

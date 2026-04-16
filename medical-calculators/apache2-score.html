@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="apache2-score">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>APACHE II Score Calculator | ICU Mortality Prediction | RxMedCalc</title>
+<meta name="description" content="Free APACHE II (Acute Physiology and Chronic Health Evaluation II) score calculator for ICU mortality prediction. Calculate score from 12 acute physiology variables, age, and chronic health points. Includes ICU mortality percentage and management guidance. Used by intensivists and critical care physicians worldwide."/>
+<meta name="keywords" content="APACHE II calculator, APACHE 2 score, ICU mortality score, APACHE II mortality, acute physiology score, ICU prognosis calculator, APACHE score interpretation, critical care score, APACHE II points, ICU severity score"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/apache2-score"/>
+<meta property="og:title" content="APACHE II Score Calculator | ICU Mortality | RxMedCalc"/>
+<meta property="og:description" content="Calculate APACHE II score for ICU mortality prediction. 12 physiology variables + age + chronic health. Free for intensivists worldwide."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/apache2-score"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a1010 60%,#0d1b2a 100%);padding:36px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(239,68,68,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(239,68,68,0.05) 1px,transparent 1px);background-size:40px 40px}
+.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:16px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}
+.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#fca5a5;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:14px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.6rem,5vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px}
+h1 em{font-style:italic;color:#f87171}
+.page-sub{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:20px}
+.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:28px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:24px 20px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:24px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+@media(min-width:600px){.calc-card{padding:28px}}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;color:#0d1b2a;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.calc-title::before{content:'';display:block;width:4px;height:18px;background:#ef4444;border-radius:2px;flex-shrink:0}
+.calc-subtitle{font-size:0.78rem;color:#6b7280;margin-bottom:20px}
+.step-label{font-size:0.7rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.07em;margin:20px 0 10px;display:flex;align-items:center;gap:8px}
+.step-label::after{content:'';flex:1;height:1px;background:#e5e7eb}
+/* PHYSIOLOGY ITEMS - Dropdown per variable */
+.phys-items{display:flex;flex-direction:column;gap:10px;margin-bottom:8px}
+.phys-item{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px 14px}
+.pi-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
+.pi-name{font-size:0.85rem;font-weight:700;color:#0d1b2a}
+.pi-score{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#d1d5db;min-width:28px;text-align:right;flex-shrink:0}
+.pi-score.active{color:#ef4444}
+.pi-opts{display:flex;flex-wrap:wrap;gap:5px}
+.pi-opt{padding:6px 10px;border:1.5px solid #e5e7eb;border-radius:7px;background:#fff;font-family:inherit;font-size:0.75rem;font-weight:600;color:#374151;cursor:pointer;transition:all 0.2s;touch-action:manipulation;line-height:1.2;text-align:center}
+.pi-opt:hover,.pi-opt:active{border-color:#ef4444;background:#fef2f2}
+.pi-opt.sel{border-color:#ef4444;background:#ef4444;color:#fff}
+/* age + chronic */
+.input-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:4px}
+@media(min-width:480px){.input-grid{grid-template-columns:1fr 1fr}}
+.field label{display:block;font-size:0.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px}
+.field input,.field select{width:100%;padding:11px 13px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:9px;font-family:inherit;font-size:16px;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none;appearance:none}
+.field input:focus,.field select:focus{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,0.1)}
+.field .hint{font-size:0.68rem;color:#9ca3af;margin-top:3px}
+.crit{display:flex;align-items:flex-start;gap:12px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px 14px;cursor:pointer;transition:all 0.2s;touch-action:manipulation;user-select:none}
+.crit.sel{background:#fef2f2;border-color:#fecaca}
+.crit-chk{width:20px;height:20px;border:2px solid #d1d5db;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all 0.2s;background:#fff;font-size:0.8rem}
+.crit.sel .crit-chk{background:#ef4444;border-color:#ef4444;color:#fff}
+.crit-text{flex:1}
+.crit-name{font-size:0.86rem;font-weight:600;color:#0d1b2a}
+.crit-detail{font-size:0.7rem;color:#6b7280;margin-top:1px;line-height:1.4}
+/* running total */
+.running-total{background:linear-gradient(135deg,#fef2f2,#fff);border:1.5px solid #fecaca;border-radius:12px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;margin:16px 0}
+.rt-label{font-size:0.78rem;font-weight:600;color:#6b7280}
+.rt-val{font-family:'Fraunces',Georgia,serif;font-size:2.2rem;font-weight:900;color:#ef4444}
+.btn-calc{width:100%;padding:14px;border:none;border-radius:11px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#ef4444,#dc2626);box-shadow:0 4px 16px rgba(239,68,68,0.3);touch-action:manipulation;transition:all 0.2s}
+.btn-calc:active{transform:scale(0.98)}
+.error-msg{color:#dc2626;font-size:0.78rem;margin-top:8px;display:none}
+.error-msg.show{display:block}
+.results{display:none;margin-top:20px}
+.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:18px 0}
+.score-display{text-align:center;margin-bottom:18px}
+.sc-num{font-family:'Fraunces',Georgia,serif;font-size:4rem;font-weight:900;color:#ef4444;line-height:1}
+.sc-badge{display:inline-block;padding:5px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;margin-top:8px}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+@media(min-width:480px){.result-grid{grid-template-columns:repeat(3,1fr)}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:11px;padding:12px;text-align:center}
+.rbox.hi{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.6rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px}
+.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a}
+.rbox.hi .rval{color:#ef4444}
+.runit{font-size:0.65rem;color:#9ca3af;margin-top:2px}
+.mgmt-box{border-radius:11px;padding:14px;margin-bottom:14px;font-size:0.85rem;line-height:1.75;white-space:pre-line}
+.action-row{display:flex;gap:8px;margin-top:10px}
+.act-btn{flex:1;padding:11px 8px;border-radius:10px;font-family:inherit;font-size:0.8rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation}
+.act-btn:active{opacity:0.7}
+.wa-btn{background:#25d366;color:#fff}
+.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:9px;color:#9ca3af;font-family:inherit;font-size:0.8rem;cursor:pointer;touch-action:manipulation}
+.reset-btn:active{border-color:#ef4444;color:#ef4444}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:20px}
+@media(min-width:600px){.content-card{padding:28px}}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:900;color:#0d1b2a;margin-bottom:14px}
+.content-card h3{font-size:0.95rem;font-weight:700;color:#ef4444;margin:18px 0 8px}
+.content-card p{font-size:0.87rem;color:#4b5563;line-height:1.8;margin-bottom:10px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.content-card li{font-size:0.85rem;color:#4b5563;padding-left:14px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ef4444;font-size:0.78rem}
+.apache-table{width:100%;border-collapse:collapse;font-size:0.78rem;margin:12px 0;overflow-x:auto;display:block}
+@media(min-width:600px){.apache-table{display:table}}
+.apache-table th{background:#fef2f2;color:#991b1b;font-weight:700;padding:8px 10px;text-align:left;font-size:0.68rem;text-transform:uppercase;border-bottom:2px solid #fecaca;white-space:nowrap}
+.apache-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;color:#374151}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:11px;padding:14px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;transition:all 0.2s;touch-action:manipulation}
+.related-card:active{border-color:#ef4444;background:#fef2f2}
+.rc-icon{font-size:1.3rem;flex-shrink:0}
+.rc-title{font-size:0.82rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}
+.rc-desc{font-size:0.68rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:11px;padding:14px;font-size:0.75rem;color:#78350f;line-height:1.65;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>APACHE II</span></nav>
+    <div class="page-eyebrow">🏥 Critical Care · ICU · Prognosis</div>
+    <h1>APACHE II<br><em>Score Calculator</em></h1>
+    <p class="page-sub">Acute Physiology and Chronic Health Evaluation II — ICU mortality prediction from 12 physiology variables, age, and chronic health status. Validates within 24 hours of ICU admission.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 12 Physiology Variables</span>
+      <span class="hbadge">✓ ICU Mortality %</span>
+      <span class="hbadge">✓ Age & Chronic Health</span>
+      <span class="hbadge">✓ Knaus 1985 Validated</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">APACHE II Score</div>
+    <div class="calc-subtitle">Use worst values in the first 24h of ICU admission. Select the range that matches the patient's value.</div>
+
+    <!-- SECTION A: PHYSIOLOGY -->
+    <div class="step-label">Section A — Acute Physiology (12 variables)</div>
+    <div class="phys-items" id="phys-items"></div>
+
+    <!-- SECTION B: AGE -->
+    <div class="step-label">Section B — Age Points</div>
+    <div class="input-grid">
+      <div class="field">
+        <label for="age">Patient Age</label>
+        <input type="number" id="age" placeholder="e.g. 55" min="16" max="110" inputmode="decimal"/>
+        <div class="hint">years — auto-calculates age points</div>
+      </div>
+    </div>
+    <div style="background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px 14px;font-size:0.8rem;color:#6b7280;margin-bottom:4px">
+      Age &lt;45 = 0 pts &nbsp;|&nbsp; 45–54 = 2 pts &nbsp;|&nbsp; 55–64 = 3 pts &nbsp;|&nbsp; 65–74 = 5 pts &nbsp;|&nbsp; ≥75 = 6 pts
+    </div>
+
+    <!-- SECTION C: CHRONIC HEALTH -->
+    <div class="step-label">Section C — Chronic Health Points</div>
+    <div style="font-size:0.78rem;color:#6b7280;margin-bottom:8px">If patient has severe organ insufficiency or is immunocompromised:</div>
+    <div id="chronic-items" style="display:flex;flex-direction:column;gap:8px;margin-bottom:8px"></div>
+    <div style="background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px 14px;font-size:0.78rem;color:#6b7280;margin-bottom:4px">
+      Nonoperative or emergency postoperative admission = <strong>5 pts</strong><br>
+      Elective postoperative admission = <strong>2 pts</strong>
+    </div>
+    <div id="chronic-pts-items" style="display:flex;flex-direction:column;gap:8px;margin-bottom:4px"></div>
+
+    <div class="running-total">
+      <span class="rt-label">Current APACHE II Score</span>
+      <span class="rt-val" id="rt-val">0</span>
+    </div>
+    <div class="error-msg" id="error-msg"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate ICU Mortality →</button>
+
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-display">
+        <div class="sc-num" id="sc-num">—</div>
+        <div style="font-size:0.88rem;color:#6b7280;margin-top:4px">APACHE II Score (max 71)</div>
+        <div class="sc-badge" id="sc-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">APACHE II</div><div class="rval" id="r-score">—</div><div class="runit">/ 71</div></div>
+        <div class="rbox"><div class="rlabel">ICU Mortality</div><div class="rval" id="r-mort">—</div><div class="runit">%</div></div>
+        <div class="rbox"><div class="rlabel">Severity</div><div class="rval" id="r-sev" style="font-size:0.95rem">—</div><div class="runit">category</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>APACHE II — ICU Mortality Reference</h2>
+    <table class="apache-table">
+      <thead><tr><th>APACHE II Score</th><th>Non-Operative</th><th>Post-Operative</th><th>Severity</th></tr></thead>
+      <tbody>
+        <tr><td>0–4</td><td>4%</td><td>1%</td><td>Low</td></tr>
+        <tr><td>5–9</td><td>8%</td><td>3%</td><td>Low–Moderate</td></tr>
+        <tr><td>10–14</td><td>15%</td><td>7%</td><td>Moderate</td></tr>
+        <tr><td>15–19</td><td>25%</td><td>12%</td><td>Moderate–High</td></tr>
+        <tr><td>20–24</td><td>40%</td><td>30%</td><td>High</td></tr>
+        <tr><td>25–29</td><td>55%</td><td>35%</td><td>High</td></tr>
+        <tr><td>30–34</td><td>73%</td><td>73%</td><td>Very High</td></tr>
+        <tr><td>≥35</td><td>&gt;85%</td><td>&gt;85%</td><td>Critical</td></tr>
+      </tbody>
+    </table>
+    <h3>APACHE II — Clinical Context</h3>
+    <p>APACHE II was developed by Knaus et al. (1985) from data on 5,815 ICU admissions across 13 US hospitals. It remains one of the most widely used and externally validated ICU severity scores globally. The score is calculated from the worst physiological values recorded in the first 24 hours of ICU admission, reflecting the severity of acute illness at its worst. Age and chronic health status add independent prognostic weight.</p>
+    <p>APACHE II is used for: ICU performance benchmarking, research stratification, quality improvement, resource allocation decisions, and family counselling regarding prognosis. It should NOT be used as the sole determinant for treatment limitation decisions, which require full multidisciplinary assessment and patient/family consultation.</p>
+    <h3>APACHE II Limitations</h3>
+    <ul>
+      <li>Derived from 1979–1982 data — overestimates mortality in modern ICUs due to improved treatment</li>
+      <li>Does not account for lead-time bias or pre-ICU treatment</li>
+      <li>Poorly calibrated for some diagnoses (burns, post-cardiac arrest, liver failure)</li>
+      <li>APACHE IV and SOFA have largely replaced APACHE II in research; APACHE II remains widely used clinically</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Sepsis-3 organ failure</div></div></a>
+      <a href="/medical-calculators/gcs-calculator" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">GCS Calculator</div><div class="rc-desc">APACHE II GCS component</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Mean arterial pressure</div></div></a>
+      <a href="/medical-calculators/fena-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">FENa Calculator</div><div class="rc-desc">AKI in ICU</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> APACHE II is a prognostic tool for populations, not individuals. ICU outcome decisions require comprehensive clinical assessment, serial evaluation, and multidisciplinary team input. Never use APACHE II score alone for treatment limitation or withdrawal of care decisions.</div>
+</main>
+<script src="/assets/shared-nav.js"></script>
+<script>
+// APACHE II physiology variables: [name, options: [label, points]]
+const PHYS=[
+  {n:'Temperature (°C)',id:'temp',opts:[['≥41 / ≤29.9',4],['39–40.9 / 30–31.9',3],['38.5–38.9 / 32–33.9',1],['36–38.4 (Normal)',0],['34–35.9',1],['32–33.9 already counted',''],['30–31.9 already counted',''],['≤29.9 already counted','']]},
+  {n:'Mean Arterial Pressure (mmHg)',id:'map',opts:[['≥160 / ≤49',4],['130–159 / 50–69',3],['110–129',2],['70–109 (Normal)',0]]},
+  {n:'Heart Rate (bpm)',id:'hr',opts:[['≥180 / ≤39',4],['140–179 / 40–54',3],['110–139',2],['70–109 (Normal)',0],['55–69',2],['40–54 already counted','']]},
+  {n:'Respiratory Rate (breaths/min)',id:'rr',opts:[['≥50 / ≤5',4],['35–49 / 6–9',3],['25–34 / 10–11',1],['12–24 (Normal)',0]]},
+  {n:'Oxygenation — A-aDO₂ or PaO₂',id:'oxy',opts:[['A-aDO₂ ≥500 (FiO₂≥0.5)',4],['A-aDO₂ 350–499 (FiO₂≥0.5)',3],['A-aDO₂ 200–349 (FiO₂≥0.5)',2],['PaO₂ ≥70 (FiO₂<0.5)',0],['PaO₂ 61–70 (FiO₂<0.5)',1],['PaO₂ 55–60 (FiO₂<0.5)',3],['PaO₂ <55 (FiO₂<0.5)',4]]},
+  {n:'Arterial pH',id:'ph',opts:[['≥7.7 / <7.15',4],['7.6–7.69 / 7.15–7.24',3],['7.5–7.59 / 7.25–7.32',1],['7.33–7.49 (Normal)',0]]},
+  {n:'Serum Sodium (mmol/L)',id:'na',opts:[['≥180 / ≤110',4],['160–179 / 111–119',3],['155–159 / 120–129',2],['150–154 / 130–149',1],['130–149 already counted',''],['Normal (130–149)',0]]},
+  {n:'Serum Potassium (mmol/L)',id:'k',opts:[['≥7 / <2.5',4],['6–6.9 / 2.5–2.9',3],['5.5–5.9 / 3–3.4',1],['3.5–5.4 (Normal)',0]]},
+  {n:'Serum Creatinine (mg/dL) — double points if AKI',id:'cr',opts:[['≥3.5 (×2 if AKI)',4],['2–3.4 (×2 if AKI)',3],['1.5–1.9 (×2 if AKI)',2],['0.6–1.4 (Normal)',0],['<0.6',2]]},
+  {n:'Haematocrit (%)',id:'hct',opts:[['≥60 / <20',4],['50–59.9 / 20–29.9',2],['46–49.9',1],['30–45.9 (Normal)',0]]},
+  {n:'WBC (×10³/µL)',id:'wbc',opts:[['≥40 / <1',4],['20–39.9 / 1–2.9',2],['15–19.9',1],['3–14.9 (Normal)',0]]},
+  {n:'Glasgow Coma Scale (GCS)',id:'gcs',opts:[['15 (Normal) → 0 pts',0],['13–14 → 1 pt',1],['10–12 → 2 pts',2],['7–9 → 3 pts',3],['6 → 4 pts',4],['5 → 5 pts',5],['4 → 6 pts',6],['3 → 7 pts',7]]},
+];
+const CHRONIC=[
+  {id:'ch-liver',name:'Liver: Biopsy-proven cirrhosis, portal hypertension, or prior hepatic encephalopathy/failure'},
+  {id:'ch-cvs',name:'Cardiovascular: NYHA Class IV heart failure'},
+  {id:'ch-resp',name:'Respiratory: Chronic hypoxia, hypercapnia, polycythaemia, severe pulmonary hypertension, or ventilator dependency'},
+  {id:'ch-renal',name:'Renal: Receiving chronic dialysis'},
+  {id:'ch-immune',name:'Immunocompromised: Immunosuppressants, chemotherapy, radiation, steroids, or disease affecting immune response (leukaemia, lymphoma, AIDS)'},
+];
+let physScores={};let chronicSel=new Set();let surgType='none';let lastResult=null;
+// Build physiology items
+document.getElementById('phys-items').innerHTML=PHYS.map(p=>`
+  <div class="phys-item">
+    <div class="pi-header">
+      <div class="pi-name">${p.n}</div>
+      <div class="pi-score" id="ps-${p.id}">—</div>
+    </div>
+    <div class="pi-opts">
+      ${p.opts.filter(o=>o[1]!=='').map((o,i)=>`<button class="pi-opt" id="po-${p.id}-${i}" onclick="setPhys('${p.id}',${i},${o[1]})">${o[0]}</button>`).join('')}
+    </div>
+  </div>`).join('');
+// Chronic checkboxes
+document.getElementById('chronic-items').innerHTML=CHRONIC.map(c=>`
+  <div class="crit" id="${c.id}" onclick="toggleChronic('${c.id}')">
+    <div class="crit-chk" id="chk-${c.id}">✓</div>
+    <div class="crit-text"><div class="crit-name" style="font-size:0.82rem">${c.name}</div></div>
+  </div>`).join('');
+// Surgery type
+document.getElementById('chronic-pts-items').innerHTML=`
+  <div class="crit" id="surg-none" onclick="setSurg('none')" style="background:#f0fdf4;border-color:#bbf7d0">
+    <div class="crit-chk" id="chk-surg-none" style="background:#10b981;border-color:#10b981;color:#fff">✓</div>
+    <div class="crit-text"><div class="crit-name">No chronic condition above / Elective post-op → 2 pts if chronic condition present</div></div>
+  </div>
+  <div class="crit" id="surg-nonop" onclick="setSurg('nonop')">
+    <div class="crit-chk" id="chk-surg-nonop">✓</div>
+    <div class="crit-text"><div class="crit-name">Non-operative OR Emergency post-op admission <span style="font-size:0.7rem;color:#9ca3af">+5 pts if chronic condition above present</span></div></div>
+  </div>
+  <div class="crit" id="surg-elec" onclick="setSurg('elec')">
+    <div class="crit-chk" id="chk-surg-elec">✓</div>
+    <div class="crit-text"><div class="crit-name">Elective post-op admission <span style="font-size:0.7rem;color:#9ca3af">+2 pts if chronic condition above present</span></div></div>
+  </div>`;
+function setPhys(id,optIdx,pts){
+  // clear previous selection for this variable
+  const prev=physScores[id];
+  if(prev!==undefined){document.querySelectorAll(`[id^="po-${id}-"]`).forEach(b=>b.classList.remove('sel'))}
+  physScores[id]=pts;
+  document.getElementById(`po-${id}-${optIdx}`).classList.add('sel');
+  const scoreEl=document.getElementById('ps-'+id);scoreEl.textContent=pts;scoreEl.className='pi-score active';
+  updateTotal();
+}
+function toggleChronic(id){
+  const el=document.getElementById(id);
+  if(chronicSel.has(id)){chronicSel.delete(id);el.classList.remove('sel')}
+  else{chronicSel.add(id);el.classList.add('sel')}
+  updateTotal();
+}
+function setSurg(type){
+  surgType=type;
+  ['none','nonop','elec'].forEach(t=>{
+    const el=document.getElementById('surg-'+t);const chk=document.getElementById('chk-surg-'+t);
+    if(t===type){el.style.background='#fef2f2';el.style.borderColor='#fecaca';chk.style.background='#ef4444';chk.style.borderColor='#ef4444';chk.style.color='#fff'}
+    else{el.style.background='';el.style.borderColor='';chk.style.background='';chk.style.borderColor='';chk.style.color=''}
+  });
+  updateTotal();
+}
+function getAgePoints(age){if(age<45)return 0;if(age<55)return 2;if(age<65)return 3;if(age<75)return 5;return 6;}
+function getChronicPts(){
+  if(chronicSel.size===0)return 0;
+  if(surgType==='elec')return 2;
+  return 5;// nonop or none
+}
+function updateTotal(){
+  const physTotal=Object.values(physScores).reduce((a,b)=>a+b,0);
+  const age=parseInt(document.getElementById('age').value)||0;
+  const ageP=getAgePoints(age);
+  const chP=getChronicPts();
+  document.getElementById('rt-val').textContent=physTotal+ageP+chP;
+}
+function getMortality(s){
+  if(s<=4)return{m:'~4',sev:'Low',c:'#16a34a',bg:'#f0fdf4',bc:'#bbf7d0'};
+  if(s<=9)return{m:'~8',sev:'Low–Moderate',c:'#16a34a',bg:'#f0fdf4',bc:'#bbf7d0'};
+  if(s<=14)return{m:'~15',sev:'Moderate',c:'#d97706',bg:'#fffbeb',bc:'#fde68a'};
+  if(s<=19)return{m:'~25',sev:'Moderate–High',c:'#d97706',bg:'#fffbeb',bc:'#fde68a'};
+  if(s<=24)return{m:'~40',sev:'High',c:'#dc2626',bg:'#fef2f2',bc:'#fecaca'};
+  if(s<=29)return{m:'~55',sev:'High',c:'#dc2626',bg:'#fef2f2',bc:'#fecaca'};
+  if(s<=34)return{m:'~73',sev:'Very High',c:'#7f1d1d',bg:'#fef2f2',bc:'#dc2626'};
+  return{m:'>85',sev:'Critical',c:'#7f1d1d',bg:'#fef2f2',bc:'#dc2626'};
+}
+function calculate(){
+  const age=parseInt(document.getElementById('age').value);
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!age||age<16){errEl.textContent='Please enter patient age.';errEl.className='error-msg show';return}
+  const physTotal=Object.values(physScores).reduce((a,b)=>a+b,0);
+  const ageP=getAgePoints(age);const chP=getChronicPts();
+  const total=physTotal+ageP+chP;
+  const{m,sev,c,bg,bc}=getMortality(total);
+  document.getElementById('sc-num').textContent=total;
+  const badge=document.getElementById('sc-badge');badge.textContent=sev;badge.style.cssText=`background:${bg};color:${c};border:1.5px solid ${bc};display:inline-block;padding:5px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;margin-top:8px`;
+  document.getElementById('r-score').textContent=total+'/71';
+  document.getElementById('r-mort').textContent=m+'%';
+  document.getElementById('r-sev').textContent=sev;
+  const mTxt=total<=9?`✅ APACHE II ${total} — Low severity.\n\nICU mortality ~${m}%. Standard ICU care with monitoring. Goal-directed therapy for primary diagnosis. Serial reassessment at 24–48h. Anticipate discharge to HDU/ward if improving.`:
+    total<=19?`⚠️ APACHE II ${total} — Moderate severity (mortality ~${m}%).\n\nFull ICU support. Identify and treat primary organ failure. Vasopressors if haemodynamically unstable (noradrenaline first-line). Serial organ function monitoring. Nutritional support within 24–48h (enteral preferred). Specialist consultations as needed. Goals-of-care discussion if plateau or deterioration.`:
+    `🚨 APACHE II ${total} — High/Critical severity (mortality ~${m}%).\n\nMaximum ICU support. Multidisciplinary team review. Early goals-of-care discussion with family — prognosis should be communicated clearly. Serial APACHE II/SOFA to assess trajectory. Palliative care involvement if appropriate. Avoid futile escalation if consistent deterioration without reversible cause.`;
+  const mgmt=document.getElementById('mgmt-box');
+  mgmt.textContent=mTxt;mgmt.style.cssText=`background:${bg};border:1.5px solid ${bc};color:${c==='#16a34a'?'#166534':c==='#d97706'?'#92400e':'#7f1d1d'};border-radius:11px;padding:14px;margin-bottom:14px;font-size:0.85rem;line-height:1.75;white-space:pre-line`;
+  lastResult=`APACHE II Score: ${total}/71 — ${sev}\nICU Mortality: ~${m}%\nAge points: ${ageP} | Chronic health: ${chP} | Physiology: ${physTotal}\nCalculated at rxmedcalc.com/medical-calculators/apache2-score`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('apache2_calc',{score:total});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🏥 APACHE II\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){physScores={};chronicSel.clear();surgType='none';document.getElementById('age').value='';document.querySelectorAll('.pi-opt').forEach(b=>b.classList.remove('sel'));PHYS.forEach(p=>{const el=document.getElementById('ps-'+p.id);if(el){el.textContent='—';el.className='pi-score'}});CHRONIC.forEach(c=>document.getElementById(c.id).classList.remove('sel'));['none','nonop','elec'].forEach(t=>{const el=document.getElementById('surg-'+t);const chk=document.getElementById('chk-surg-'+t);if(el){el.style.background='';el.style.borderColor='';chk.style.background='';chk.style.borderColor='';chk.style.color=''}});document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+setSurg('none');// default
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>

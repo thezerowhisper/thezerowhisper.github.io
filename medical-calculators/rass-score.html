@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="rass-score">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RASS Score | Richmond Agitation-Sedation Scale | ICU Sedation | RxMedCalc</title>
+<meta name="description" content="Free RASS (Richmond Agitation-Sedation Scale) calculator and reference. Assess and target sedation depth in ICU and mechanically ventilated patients. Includes target RASS ranges by clinical scenario, sedative drug guide, and PADIS 2018 guidelines. Used by intensivists and critical care nurses worldwide."/>
+<meta name="keywords" content="RASS score, Richmond Agitation Sedation Scale, RASS sedation, RASS agitation, ICU sedation score, RASS -2 -1 0, propofol midazolam sedation, RASS target, ICU sedation guidelines, PADIS guidelines, ventilator sedation score"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/rass-score"/>
+<meta property="og:title" content="RASS Score | Richmond Agitation-Sedation Scale | ICU | RxMedCalc"/>
+<meta property="og:description" content="Assess ICU sedation depth using RASS scale. Target sedation ranges, sedative drug guide, PADIS 2018 guidelines. Free for intensivists."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/rass-score"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0f1f35 60%,#0d1b2a 100%);padding:36px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(99,102,241,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.05) 1px,transparent 1px);background-size:40px 40px}
+.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:16px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}
+.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#a5b4fc;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:14px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.6rem,5vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px}
+h1 em{font-style:italic;color:#818cf8}
+.page-sub{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:20px}
+.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:28px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:24px 20px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:24px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+@media(min-width:600px){.calc-card{padding:28px}}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;color:#0d1b2a;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.calc-title::before{content:'';display:block;width:4px;height:18px;background:#6366f1;border-radius:2px;flex-shrink:0}
+.calc-subtitle{font-size:0.78rem;color:#6b7280;margin-bottom:20px}
+/* RASS SCALE CARDS - large tap targets */
+.rass-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.rass-item{display:flex;align-items:stretch;border:2px solid #e5e7eb;border-radius:12px;overflow:hidden;cursor:pointer;transition:all 0.2s;background:#fff;touch-action:manipulation;-webkit-tap-highlight-color:transparent;user-select:none;min-height:60px}
+.rass-item:active{opacity:0.85}
+.ri-score{width:54px;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-size:1.5rem;font-weight:900;color:#9ca3af;flex-shrink:0;transition:all 0.2s;background:#f3f4f6}
+.rass-item.sel .ri-score{color:#fff}
+.ri-body{padding:12px 14px;flex:1;display:flex;flex-direction:column;justify-content:center}
+.ri-name{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}
+.ri-desc{font-size:0.72rem;color:#6b7280;line-height:1.4}
+/* colour coding by level */
+.rass-item[data-level="agitated"]{border-color:#e5e7eb}
+.rass-item[data-level="agitated"].sel{border-color:#ef4444;background:#fef2f2}
+.rass-item[data-level="agitated"].sel .ri-score{background:#ef4444}
+.rass-item[data-level="alert"]{border-color:#e5e7eb}
+.rass-item[data-level="alert"].sel{border-color:#10b981;background:#f0fdf4}
+.rass-item[data-level="alert"].sel .ri-score{background:#10b981}
+.rass-item[data-level="light"]{border-color:#e5e7eb}
+.rass-item[data-level="light"].sel{border-color:#3b82f6;background:#eff6ff}
+.rass-item[data-level="light"].sel .ri-score{background:#3b82f6}
+.rass-item[data-level="mod"]{border-color:#e5e7eb}
+.rass-item[data-level="mod"].sel{border-color:#8b5cf6;background:#faf5ff}
+.rass-item[data-level="mod"].sel .ri-score{background:#8b5cf6}
+.rass-item[data-level="deep"]{border-color:#e5e7eb}
+.rass-item[data-level="deep"].sel{border-color:#1e293b;background:#f1f5f9}
+.rass-item[data-level="deep"].sel .ri-score{background:#1e293b}
+/* result */
+.result-card{border-radius:14px;padding:20px;margin-bottom:16px;border:2px solid}
+.result-score{font-family:'Fraunces',Georgia,serif;font-size:3.5rem;font-weight:900;line-height:1}
+.result-name{font-size:1rem;font-weight:700;margin-top:4px}
+.result-desc{font-size:0.85rem;margin-top:8px;line-height:1.65}
+.target-box{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:14px}
+.tb-title{font-size:0.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px}
+.target-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f3f4f6;font-size:0.82rem}
+.target-row:last-child{border-bottom:none}
+.tr-label{color:#374151;font-weight:600}
+.tr-val{font-weight:700;color:#6366f1}
+.action-row{display:flex;gap:8px;margin-top:10px}
+.act-btn{flex:1;padding:11px 8px;border-radius:10px;font-family:inherit;font-size:0.8rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation}
+.act-btn:active{opacity:0.7}
+.wa-btn{background:#25d366;color:#fff}
+.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:20px}
+@media(min-width:600px){.content-card{padding:28px}}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:900;color:#0d1b2a;margin-bottom:14px}
+.content-card h3{font-size:0.95rem;font-weight:700;color:#6366f1;margin:18px 0 8px}
+.content-card p{font-size:0.87rem;color:#4b5563;line-height:1.8;margin-bottom:10px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.content-card li{font-size:0.85rem;color:#4b5563;padding-left:14px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#6366f1;font-size:0.78rem}
+.rass-ref-table{width:100%;border-collapse:collapse;font-size:0.78rem;margin:12px 0;overflow-x:auto;display:block}
+@media(min-width:600px){.rass-ref-table{display:table}}
+.rass-ref-table th{background:#eef2ff;color:#3730a3;font-weight:700;padding:8px 10px;text-align:left;font-size:0.68rem;text-transform:uppercase;border-bottom:2px solid #c7d2fe}
+.rass-ref-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:11px;padding:14px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;transition:all 0.2s;touch-action:manipulation}
+.related-card:active{border-color:#6366f1;background:#eef2ff}
+.rc-icon{font-size:1.3rem;flex-shrink:0}
+.rc-title{font-size:0.82rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}
+.rc-desc{font-size:0.68rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:11px;padding:14px;font-size:0.75rem;color:#78350f;line-height:1.65;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>RASS Score</span></nav>
+    <div class="page-eyebrow">🏥 Critical Care · ICU · Sedation</div>
+    <h1>RASS Score<br><em>Richmond Agitation-Sedation Scale</em></h1>
+    <p class="page-sub">Assess and target sedation depth in ICU and ventilated patients. Score −5 (unarousable) to +4 (combative). Includes PADIS 2018 target ranges and sedative drug guide.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ −5 to +4 Scale</span>
+      <span class="hbadge">✓ PADIS 2018 Targets</span>
+      <span class="hbadge">✓ Drug Guidance</span>
+      <span class="hbadge">✓ Daily SAT Reminder</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">RASS Assessment</div>
+    <div class="calc-subtitle">Tap the level that best describes the patient's current state. Reassess every 2–4 hours in ICU.</div>
+    <div class="rass-list" id="rass-list"></div>
+    <div class="action-row" style="margin-top:0">
+      <button class="act-btn wa-btn" onclick="shareWA()">📲 Share</button>
+      <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+    </div>
+  </div>
+
+  <div id="result-section" style="display:none">
+    <div class="result-card" id="result-card">
+      <div class="result-score" id="result-score">—</div>
+      <div class="result-name" id="result-name">—</div>
+      <div class="result-desc" id="result-desc">—</div>
+    </div>
+    <div class="target-box">
+      <div class="tb-title">🎯 Recommended RASS Targets — PADIS 2018</div>
+      <div class="target-row"><span class="tr-label">Most ventilated ICU patients</span><span class="tr-val">RASS −1 to 0</span></div>
+      <div class="target-row"><span class="tr-label">Acute ARDS / high ventilator requirements</span><span class="tr-val">RASS −2 to −3</span></div>
+      <div class="target-row"><span class="tr-label">Raised intracranial pressure (ICP)</span><span class="tr-val">RASS −2 to −4</span></div>
+      <div class="target-row"><span class="tr-label">Alcohol or drug withdrawal</span><span class="tr-val">RASS 0 (CIWA-guided)</span></div>
+      <div class="target-row"><span class="tr-label">Spontaneous breathing trial (SBT)</span><span class="tr-val">RASS 0 to −1</span></div>
+      <div class="target-row"><span class="tr-label">Post-cardiac arrest (targeted cooling)</span><span class="tr-val">RASS −2 to −4</span></div>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>Complete RASS Reference</h2>
+    <table class="rass-ref-table">
+      <thead><tr><th>Score</th><th>Level</th><th>Description</th><th>Assessment Method</th></tr></thead>
+      <tbody>
+        <tr><td><strong>+4</strong></td><td>Combative</td><td>Overtly combative, violent, immediate danger to staff</td><td>Observe patient</td></tr>
+        <tr><td><strong>+3</strong></td><td>Very Agitated</td><td>Pulls/removes tubes or catheters; aggressive</td><td>Observe patient</td></tr>
+        <tr><td><strong>+2</strong></td><td>Agitated</td><td>Frequent non-purposeful movement, fights ventilator</td><td>Observe patient</td></tr>
+        <tr><td><strong>+1</strong></td><td>Restless</td><td>Anxious, apprehensive but movements not aggressive</td><td>Observe patient</td></tr>
+        <tr><td><strong>0</strong></td><td>Alert &amp; Calm</td><td>Spontaneously alert and calm</td><td>Observe patient</td></tr>
+        <tr><td><strong>−1</strong></td><td>Drowsy</td><td>Not fully alert; sustained eye contact &gt;10s to voice</td><td>Call patient's name</td></tr>
+        <tr><td><strong>−2</strong></td><td>Light Sedation</td><td>Brief awakening, eye contact &lt;10s to voice</td><td>Call patient's name</td></tr>
+        <tr><td><strong>−3</strong></td><td>Moderate Sedation</td><td>Movement/eye opening to voice, no eye contact</td><td>Call patient's name</td></tr>
+        <tr><td><strong>−4</strong></td><td>Deep Sedation</td><td>No response to voice, movement to physical stimulation</td><td>Physical stimulation</td></tr>
+        <tr><td><strong>−5</strong></td><td>Unarousable</td><td>No response to voice or physical stimulation</td><td>Physical stimulation</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Sedative Drug Guide — ICU</h3>
+    <ul>
+      <li><strong>Propofol (IV infusion):</strong> First-line for short-term sedation and when rapid awakening needed (e.g. neurological assessment). Start 0.5 mg/kg/hr, titrate to RASS target. Max 4 mg/kg/hr (propofol infusion syndrome risk at high doses &gt;48h). Monitor triglycerides every 48h. Caution in haemodynamic instability</li>
+      <li><strong>Midazolam (IV infusion):</strong> Benzodiazepine, accumulates in obesity/renal failure. Use when propofol/dex unavailable. Associated with delirium (CAM-ICU). Avoid for prolonged sedation per PADIS 2018</li>
+      <li><strong>Dexmedetomidine (IV infusion):</strong> Alpha-2 agonist — sedation without respiratory depression, patients remain arousable. Preferred for light sedation (RASS 0 to −2) and delirium treatment. Start 0.2–0.7 µg/kg/hr. Bradycardia is main side effect</li>
+      <li><strong>Morphine / Fentanyl (IV):&nbsp;</strong>Analgesia first (A1C protocol) — treat pain before titrating sedation upward. Fentanyl preferred in renal failure (no active metabolite accumulation)</li>
+      <li><strong>Ketamine (bolus/infusion):</strong> Dissociative, bronchodilator, haemodynamically stimulating. Useful in reactive airways, haemodynamic instability, procedural sedation</li>
+    </ul>
+
+    <h3>Daily Spontaneous Awakening Trial (SAT) — ABCDEF Bundle</h3>
+    <p>PADIS 2018 and the ABCDEF Bundle (A2F) recommend daily SAT (stopping sedation) and SBT (spontaneous breathing trial) in all eligible ICU patients. The AWAKENING AND BREATHING CONTROLLED (ABC) trial demonstrated reduced ICU LOS and mortality with paired SAT+SBT. Contraindications to SAT: active seizures, alcohol withdrawal, agitation requiring continuous sedation, FiO₂ &gt;0.6 or PEEP &gt;10 in ARDS, vasopressor escalation within 1h, active myocardial ischaemia.</p>
+
+    <h3>Delirium Monitoring — CAM-ICU</h3>
+    <p>All ICU patients should be assessed for delirium daily using the Confusion Assessment Method for ICU (CAM-ICU). CAM-ICU requires RASS ≥−3 to perform — patients at RASS −4 or −5 cannot be assessed. PADIS 2018 recommends: non-pharmacological prevention first (reorientation, sleep hygiene, early mobilisation, minimise sedation, treat pain, avoid benzodiazepines). Haloperidol and quetiapine are used for symptom management in hyperactive delirium but do not reduce duration.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Organ failure in ICU</div></div></a>
+      <a href="/medical-calculators/gcs-calculator" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">GCS Calculator</div><div class="rc-desc">Consciousness level</div></div></a>
+      <a href="/medical-calculators/news2" class="related-card"><span class="rc-icon">📉</span><div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Early deterioration</div></div></a>
+      <a href="/medical-calculators/qsofa-score" class="related-card"><span class="rc-icon">⚡</span><div><div class="rc-title">qSOFA</div><div class="rc-desc">Sepsis screening</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> RASS assessment requires trained clinical or nursing staff. Sedation targets should be prescribed by the ICU physician and reassessed every 2–4 hours. Always integrate RASS with pain assessment (NRS/BPS), delirium monitoring (CAM-ICU), and clinical context. Never deepen sedation without identifying and treating the underlying cause of agitation.</div>
+</main>
+<script src="/assets/shared-nav.js"></script>
+<script>
+const LEVELS=[
+  {s:'+4',n:'Combative',d:'Overtly combative or violent. Immediate danger to staff.',level:'agitated'},
+  {s:'+3',n:'Very Agitated',d:'Pulls on or removes tube(s) or catheter(s) or has aggressive behaviour toward staff.',level:'agitated'},
+  {s:'+2',n:'Agitated',d:'Frequent non-purposeful movement or patient-ventilator dyssynchrony.',level:'agitated'},
+  {s:'+1',n:'Restless',d:'Anxious or apprehensive but movements not aggressive or vigorous.',level:'agitated'},
+  {s:'0',n:'Alert and Calm',d:'Alert, calm, and interactive.',level:'alert'},
+  {s:'−1',n:'Drowsy',d:'Not fully alert, but has sustained (>10 seconds) awakening, with eye contact, to voice.',level:'light'},
+  {s:'−2',n:'Light Sedation',d:'Briefly (<10 seconds) awakens with eye contact to voice.',level:'light'},
+  {s:'−3',n:'Moderate Sedation',d:'Any movement (but no eye contact) to voice.',level:'mod'},
+  {s:'−4',n:'Deep Sedation',d:'No response to voice, but any movement to physical stimulation.',level:'deep'},
+  {s:'−5',n:'Unarousable',d:'No response to voice or physical stimulation.',level:'deep'},
+];
+let selIdx=null;let lastResult=null;
+document.getElementById('rass-list').innerHTML=LEVELS.map((l,i)=>`
+  <div class="rass-item" id="ri${i}" data-level="${l.level}" onclick="select(${i})">
+    <div class="ri-score" id="rs${i}">${l.s}</div>
+    <div class="ri-body">
+      <div class="ri-name">${l.n}</div>
+      <div class="ri-desc">${l.d}</div>
+    </div>
+  </div>`).join('');
+const COLOURS={agitated:{bg:'#fef2f2',border:'#ef4444',c:'#7f1d1d'},alert:{bg:'#f0fdf4',border:'#10b981',c:'#065f46'},light:{bg:'#eff6ff',border:'#3b82f6',c:'#1e3a5f'},mod:{bg:'#faf5ff',border:'#8b5cf6',c:'#4c1d95'},deep:{bg:'#f1f5f9',border:'#1e293b',c:'#0f172a'}};
+function select(i){
+  if(selIdx!==null)document.getElementById('ri'+selIdx).classList.remove('sel');
+  selIdx=i;
+  document.getElementById('ri'+i).classList.add('sel');
+  const l=LEVELS[i];
+  const col=COLOURS[l.level];
+  const rc=document.getElementById('result-card');
+  rc.style.cssText=`background:${col.bg};border-color:${col.border};border-radius:14px;padding:20px;margin-bottom:16px`;
+  document.getElementById('result-score').textContent=l.s;
+  document.getElementById('result-score').style.color=col.border;
+  document.getElementById('result-name').textContent=l.n;
+  document.getElementById('result-name').style.color=col.c;
+  document.getElementById('result-desc').textContent=l.d;
+  document.getElementById('result-desc').style.color=col.c;
+  document.getElementById('result-section').style.display='block';
+  lastResult=`RASS Score: ${l.s} — ${l.n}\n${l.d}\nCalculated at rxmedcalc.com/medical-calculators/rass-score`;
+  if(typeof umami!=='undefined')umami.track('rass_select',{score:l.s,name:l.n});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🏥 RASS Score\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+</script>
+</body>
+</html>
