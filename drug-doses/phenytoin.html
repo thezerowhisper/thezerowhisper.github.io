@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phenytoin Dose Calculator India | Loading · Maintenance · TDM · Albumin Correction | RxMedCalc</title>
+<meta name="description" content="Phenytoin dose calculator India. Loading dose, maintenance dose, IBW-based dosing. TDM target levels, albumin-corrected phenytoin, free phenytoin calculation. Eptoin, Dilantin brands. BNF aligned.">
+<meta name="keywords" content="phenytoin dose calculator India, phenytoin loading dose, phenytoin maintenance dose, phenytoin TDM levels, phenytoin albumin correction India, eptoin dose, dilantin dose India, phenytoin IBW dose, phenytoin IV loading dose India, corrected phenytoin level">
+<link rel="canonical" href="https://rxmedcalc.com/drug-doses/phenytoin">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Phenytoin Dose Calculator — RxMedCalc","description":"Phenytoin dose calculator with loading dose, maintenance dose, IBW-based dosing, TDM targets, and albumin-corrected phenytoin level calculation. India brands BNF aligned.","url":"https://rxmedcalc.com/drug-doses/phenytoin","about":{"@type":"Drug","name":"Phenytoin sodium"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Drug Doses","item":"https://rxmedcalc.com/drug-doses"},{"@type":"ListItem","position":3,"name":"Phenytoin","item":"https://rxmedcalc.com/drug-doses/phenytoin"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the phenytoin loading dose for adults?","acceptedAnswer":{"@type":"Answer","text":"Phenytoin IV loading dose for adults: 15–20 mg/kg IV at a maximum rate of 50 mg/min (1 mg/kg/min in children). For a 70 kg adult: 1050–1400 mg IV. Dilute in normal saline (NOT dextrose — precipitates form). Monitor ECG and BP during infusion. DO NOT give IV faster than 50 mg/min (arrhythmia risk)."}},{"@type":"Question","name":"How is phenytoin dose calculated in obese patients?","acceptedAnswer":{"@type":"Answer","text":"In obese patients, phenytoin loading dose should be based on adjusted body weight (AdjBW), not actual weight. AdjBW = IBW + 1.33 × (actual weight − IBW). For maintenance dosing, use actual body weight. This is because phenytoin distributes partly into fat but with a lower partition coefficient than water-soluble tissues."}},{"@type":"Question","name":"What is the albumin-corrected phenytoin level?","acceptedAnswer":{"@type":"Answer","text":"Phenytoin is 90% protein-bound. In hypoalbuminaemia, the measured total phenytoin level underestimates the pharmacologically active free drug. Correction formula: Corrected phenytoin = Measured level ÷ [0.9 × (albumin/4.4) + 0.1]. For patients with renal failure (CrCl <10 mL/min): Corrected = Measured ÷ [0.1 × (albumin/4.4) + 0.1]. Target corrected level: 10–20 mg/L."}}]}</script>
+<link rel="stylesheet" href="/assets/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:#f7f9fc;color:#1a2535;line-height:1.6;font-size:16px;min-width:0}
+a{color:#b45309;text-decoration:none}a:hover{text-decoration:underline}
+:root{
+  --ac:#b45309;--acm:#d97706;--acl:#fffbeb;--acd:#92400e;
+  --navy:#0d2b45;--t:#1a2535;--tm:#4a5568;--tmu:#8896a8;
+  --br:#e2e8f0;--bg:#f7f9fc;--w:#fff;
+  --al:#fffbeb;--rl:#fef2f2;--gl:#ecfdf5;--bl:#eff6ff;
+  --r:12px;--rs:8px;--mono:'DM Mono',monospace;
+  --px:16px;--gap:12px;
+}
+@media(min-width:640px){:root{--px:24px;--gap:16px}}
+.topnav{background:var(--w);border-bottom:1px solid var(--br);padding:0 var(--px);height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+.nav-logo{font-weight:600;font-size:17px;color:var(--navy);text-decoration:none}.nav-logo em{color:#0e9f7e;font-style:normal}
+.back-link{font-size:13px;color:var(--tm);text-decoration:none;white-space:nowrap}.back-link:hover{color:var(--acm)}
+.bc{background:var(--w);border-bottom:1px solid var(--br);padding:8px var(--px);font-size:12px;color:var(--tmu);display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.bc a{color:var(--navy);text-decoration:none}.bc a:hover{text-decoration:underline}
+/* IV rate warning */
+.iv-bar{background:#991b1b;color:#fff;padding:12px var(--px);font-size:13px;line-height:1.5;display:flex;gap:10px;align-items:center}
+.hero{background:linear-gradient(135deg,#451a03 0%,#78350f 55%,#d97706 100%);padding:32px var(--px) 28px;position:relative;overflow:hidden}
+.hero::after{content:'🧠';position:absolute;right:-10px;bottom:-24px;font-size:120px;opacity:.05;pointer-events:none;line-height:1}
+.hi{max-width:820px;margin:0 auto;position:relative}
+.hbadge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:3px 11px;font-size:11px;color:rgba(255,255,255,.85);margin-bottom:10px}
+.hero h1{font-size:clamp(20px,4vw,30px);font-weight:600;color:#fff;margin-bottom:6px;letter-spacing:-.3px;line-height:1.25}
+.hero p{font-size:13px;color:rgba(255,255,255,.72);margin-bottom:14px;line-height:1.55}
+.hpills{display:flex;gap:6px;flex-wrap:wrap}
+.hp{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:3px 10px;font-size:11px;color:rgba(255,255,255,.85)}
+.pw{max-width:820px;margin:0 auto;padding:20px var(--px) 60px}
+.grid{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+@media(min-width:760px){.grid{grid-template-columns:1fr 280px;align-items:start}}
+.card{background:var(--w);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden}
+.ch{padding:13px 16px;border-bottom:1px solid var(--br);display:flex;align-items:center;gap:9px}
+.ch h2{font-size:14px;font-weight:600;color:var(--acd)}
+.cb{padding:16px}
+.seg{display:flex;background:var(--bg);border:1.5px solid var(--br);border-radius:var(--rs);padding:3px;gap:3px;margin-bottom:14px;flex-wrap:wrap}
+.sb{flex:1;min-width:60px;padding:8px 4px;border:none;background:transparent;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;color:var(--tm);cursor:pointer;transition:all .15s;text-align:center;min-height:44px}
+.sb.on{background:var(--w);color:var(--acd);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.f{margin-bottom:13px}
+.lb{display:block;font-size:12px;font-weight:500;color:var(--t);margin-bottom:5px}
+.lb small{color:var(--tmu);font-weight:400}
+.inp,.sel{width:100%;padding:10px 12px;border:1.5px solid var(--br);border-radius:var(--rs);font-family:'DM Sans',sans-serif;font-size:16px;color:var(--t);background:var(--w);outline:none;transition:border-color .15s}
+@media(min-width:480px){.inp,.sel{font-size:14px}}
+.inp:focus,.sel:focus{border-color:var(--acm)}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.r3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+@media(max-width:480px){.r3{grid-template-columns:1fr 1fr}}
+@media(max-width:360px){.r2,.r3{grid-template-columns:1fr}}
+.btn{width:100%;padding:13px;background:var(--acm);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;border:none;border-radius:var(--rs);cursor:pointer;transition:background .15s,transform .1s;margin-top:6px;min-height:48px}
+.btn:hover{background:var(--acd)}.btn:active{transform:scale(.98)}
+.res{background:var(--acl);border:1.5px solid #fcd34d;border-radius:var(--rs);padding:16px;margin-top:14px;display:none}
+.res.on{display:block}
+.rl{font-size:11px;font-weight:600;color:var(--acd);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.rm{font-size:22px;font-weight:600;color:var(--acd);line-height:1.2;margin-bottom:3px}
+.rsub{font-size:13px;color:var(--ac);margin-bottom:10px}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:340px){.rg{grid-template-columns:1fr}}
+.rc{background:var(--w);border-radius:7px;padding:9px 11px}
+.rc .xl{font-size:10px;color:var(--tmu);margin-bottom:2px}
+.rc .xv{font-size:12px;font-weight:600;color:var(--acd);font-family:var(--mono)}
+/* TDM panel */
+.tdm{background:var(--gl);border:1.5px solid #6ee7b7;border-radius:var(--rs);padding:14px;margin-top:10px;display:none}
+.tdm.on{display:block}
+.tdm-title{font-size:12px;font-weight:600;color:#065f46;text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.tdm-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #a7f3d0;font-size:12px}
+.tdm-row:last-child{border-bottom:none}
+.tdm-l{color:#166534}.tdm-v{font-weight:600;color:#064e3b;font-family:var(--mono)}
+/* Albumin correction section */
+.alb-box{background:var(--bl);border:1.5px solid #93c5fd;border-radius:var(--rs);padding:14px;margin-top:10px;display:none}
+.alb-box.on{display:block}
+.al{border-radius:var(--rs);padding:12px 14px;font-size:13px;line-height:1.6;margin-top:10px;display:none}
+.al.on{display:block}
+.alw{background:var(--al);border:1.5px solid #fcd34d;color:#78350f}
+.ald{background:var(--rl);border:1.5px solid #fca5a5;color:#7f1d1d}
+.ali{background:var(--gl);border:1.5px solid #6ee7b7;color:#065f46}
+.sw{display:flex;flex-direction:column;gap:var(--gap)}
+.wg{background:var(--w);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden}
+.wh{padding:11px 14px;border-bottom:1px solid var(--br);font-size:12px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:6px}
+.wb{padding:12px 14px}
+.wr{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--br);font-size:12px}
+.wr:last-child{border-bottom:none}
+.wl{color:var(--tmu)}.wv{font-weight:500;color:var(--t);font-family:var(--mono);font-size:11px;text-align:right;max-width:160px}
+.ct{background:var(--w);border:1.5px solid var(--br);border-radius:var(--r);padding:24px 20px;margin-top:var(--gap)}
+@media(min-width:640px){.ct{padding:28px 28px}}
+.ct h2{font-size:19px;font-weight:600;color:var(--navy);margin-bottom:12px;letter-spacing:-.3px}
+.ct h3{font-size:15px;font-weight:600;color:var(--navy);margin:20px 0 7px}
+.ct p{font-size:14px;color:var(--tm);line-height:1.8;margin-bottom:11px}
+.ct ul{list-style:none;padding:0;margin:0 0 12px}
+.ct ul li{font-size:14px;color:var(--tm);line-height:1.7;padding-left:16px;position:relative;margin-bottom:4px}
+.ct ul li::before{content:'→';position:absolute;left:0;color:var(--acm);font-size:11px;top:3px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
+.tb{width:100%;border-collapse:collapse;font-size:13px;min-width:440px}
+.tb th{background:var(--bg);padding:9px 10px;text-align:left;font-weight:600;color:var(--navy);border-bottom:1.5px solid var(--br);white-space:nowrap}
+.tb td{padding:9px 10px;border-bottom:1px solid var(--br);color:var(--tm);vertical-align:top}
+.tb tr:last-child td{border-bottom:none}
+.fi{border-bottom:1px solid var(--br);padding:14px 0}
+.fi:last-child{border-bottom:none}
+.fq{font-size:14px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:2px 0}
+.fi-ico{flex-shrink:0;color:var(--acm);font-size:18px;line-height:1;transition:transform .2s}
+.fa{font-size:13px;color:var(--tm);line-height:1.75;padding-top:8px;display:none}
+.fi.op .fa{display:block}.fi.op .fi-ico{transform:rotate(45deg)}
+.disc{background:var(--al);border:1px solid #fcd34d;border-radius:var(--rs);padding:12px 14px;font-size:12px;color:#78350f;line-height:1.6;display:flex;gap:8px;margin-top:16px}
+.rg2{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px;margin-top:12px}
+.rc2{background:var(--bg);border:1.5px solid var(--br);border-radius:var(--rs);padding:11px 12px;display:block;transition:all .15s;text-decoration:none}
+.rc2:hover{border-color:var(--acm);background:var(--acl)}
+.rc2 .rn{font-size:13px;font-weight:600;color:var(--navy)}.rc2 .rd{font-size:11px;color:var(--tmu);margin-top:2px}
+.ft{background:var(--navy);color:rgba(255,255,255,.55);text-align:center;padding:20px var(--px);font-size:12px}
+.ft a{color:rgba(255,255,255,.75)}
+</style>
+</head>
+<body>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
+<nav class="topnav">
+  <a href="https://rxmedcalc.com" class="nav-logo">Rx<em>Med</em>Calc</a>
+  <a href="https://rxmedcalc.com/drug-doses" class="back-link">← Drug Doses</a>
+</nav>
+<div class="bc">
+  <a href="https://rxmedcalc.com">Home</a><span>›</span>
+  <a href="https://rxmedcalc.com/drug-doses">Drug Doses</a><span>›</span>
+  <span>Phenytoin</span>
+</div>
+<div class="iv-bar">
+  <span>⚡</span>
+  <span><strong>IV phenytoin: MAX 50 mg/min (adult) · 1 mg/kg/min (child).</strong> Faster rates cause cardiac arrhythmia, hypotension, and cardiac arrest. ECG and BP monitoring mandatory during loading. Dilute in Normal Saline ONLY — never dextrose.</span>
+</div>
+<section class="hero">
+  <div class="hi">
+    <div class="hbadge">💊 Anticonvulsant · Narrow therapeutic index · TDM mandatory</div>
+    <h1>Phenytoin Dose Calculator</h1>
+    <p>India · Loading · Maintenance · IBW-Based Dosing · TDM Targets · Albumin-Corrected Level · Eptoin · Dilantin</p>
+    <div class="hpills">
+      <span class="hp">Load: 15–20 mg/kg IV</span>
+      <span class="hp">Maint: 4–8 mg/kg/day</span>
+      <span class="hp">TDM: 10–20 mg/L</span>
+      <span class="hp">IBW-based dosing</span>
+    </div>
+  </div>
+</section>
+
+<div class="pw">
+  <div class="grid">
+    <div class="card">
+      <div class="ch">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#92400e" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg>
+        <h2>Phenytoin Dose Calculator</h2>
+      </div>
+      <div class="cb">
+        <div class="seg">
+          <button class="sb on" onclick="setMode('loading',this)">⚡ Loading Dose</button>
+          <button class="sb" onclick="setMode('maintenance',this)">💊 Maintenance</button>
+          <button class="sb" onclick="setMode('tdm',this)">🧪 TDM / Albumin</button>
+        </div>
+
+        <!-- LOADING -->
+        <div id="loading-sec">
+          <div class="r3">
+            <div class="f">
+              <label class="lb">Actual weight <small>(kg)</small></label>
+              <input class="inp" id="load-wt" type="number" placeholder="e.g. 68" min="5" max="200" step="0.5" inputmode="decimal">
+            </div>
+            <div class="f">
+              <label class="lb">Height <small>(cm)</small></label>
+              <input class="inp" id="load-ht" type="number" placeholder="e.g. 165" min="100" max="220" inputmode="decimal">
+            </div>
+            <div class="f">
+              <label class="lb">Sex</label>
+              <select class="sel" id="load-sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="f">
+            <label class="lb">Indication</label>
+            <select class="sel" id="load-ind">
+              <option value="status_adult">Status epilepticus — adult / older child</option>
+              <option value="acute_seizure_child">Acute seizure — child (5–10 mg/kg initial)</option>
+              <option value="seizure_prevention">Seizure prevention — post-craniotomy / TBI</option>
+            </select>
+          </div>
+          <div class="f">
+            <label class="lb">Route</label>
+            <select class="sel" id="load-route">
+              <option value="iv">IV infusion (preferred)</option>
+              <option value="oral">Oral loading (if IV not available)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- MAINTENANCE -->
+        <div id="maintenance-sec" style="display:none">
+          <div class="r3">
+            <div class="f">
+              <label class="lb">Actual weight <small>(kg)</small></label>
+              <input class="inp" id="maint-wt" type="number" placeholder="e.g. 65" min="5" max="200" step="0.5" inputmode="decimal">
+            </div>
+            <div class="f">
+              <label class="lb">Height <small>(cm)</small></label>
+              <input class="inp" id="maint-ht" type="number" placeholder="e.g. 162" min="100" max="220" inputmode="decimal">
+            </div>
+            <div class="f">
+              <label class="lb">Sex</label>
+              <select class="sel" id="maint-sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="r2">
+            <div class="f">
+              <label class="lb">Age <small>(years)</small></label>
+              <input class="inp" id="maint-age" type="number" placeholder="e.g. 35" min="1" max="100" inputmode="decimal">
+            </div>
+            <div class="f">
+              <label class="lb">Current level <small>(mg/L, if known)</small></label>
+              <input class="inp" id="maint-level" type="number" placeholder="e.g. 8" min="1" max="40" step="0.5" inputmode="decimal">
+            </div>
+          </div>
+          <div class="f">
+            <label class="lb">Formulation</label>
+            <select class="sel" id="maint-form">
+              <option value="cap100">Capsule 100mg — Eptoin 100 · Dilantin</option>
+              <option value="tab50">Tablet 50mg (Infatabs)</option>
+              <option value="susp125">Suspension 125mg/5ml — Eptoin susp</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- TDM / ALBUMIN CORRECTION -->
+        <div id="tdm-sec" style="display:none">
+          <div class="r2">
+            <div class="f">
+              <label class="lb">Measured phenytoin level <small>(mg/L)</small></label>
+              <input class="inp" id="tdm-level" type="number" placeholder="e.g. 6" min="0.5" max="50" step="0.5" inputmode="decimal">
+            </div>
+            <div class="f">
+              <label class="lb">Serum albumin <small>(g/dL)</small></label>
+              <input class="inp" id="tdm-albumin" type="number" placeholder="e.g. 2.5" min="0.5" max="5.5" step="0.1" inputmode="decimal">
+            </div>
+          </div>
+          <div class="f">
+            <label class="lb">Renal function</label>
+            <select class="sel" id="tdm-renal">
+              <option value="normal">Normal (CrCl &gt; 30 mL/min)</option>
+              <option value="ckd">Severe CKD (CrCl &lt; 10 mL/min or dialysis)</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn" onclick="calc()">Calculate</button>
+
+        <div class="res" id="res">
+          <div class="rl" id="r-label">Phenytoin Dose</div>
+          <div class="rm" id="r-dose">—</div>
+          <div class="rsub" id="r-freq">—</div>
+          <div class="rg">
+            <div class="rc"><div class="xl">Dosing weight</div><div class="xv" id="r-wt">—</div></div>
+            <div class="rc"><div class="xl">Formulation</div><div class="xv" id="r-vol">—</div></div>
+            <div class="rc"><div class="xl">Infusion rate / Notes</div><div class="xv" id="r-rate">—</div></div>
+            <div class="rc"><div class="xl">TDM check</div><div class="xv" id="r-tdm">—</div></div>
+          </div>
+        </div>
+
+        <div class="tdm" id="tdm-box">
+          <div class="tdm-title" id="tdm-title">🧪 TDM Targets</div>
+          <div class="tdm-row"><span class="tdm-l">Therapeutic range</span><span class="tdm-v" id="t-range">10–20 mg/L</span></div>
+          <div class="tdm-row"><span class="tdm-l">Target for epilepsy</span><span class="tdm-v">10–20 mg/L (trough)</span></div>
+          <div class="tdm-row"><span class="tdm-l">Toxic level</span><span class="tdm-v">&gt;20 mg/L (nystagmus); &gt;40 mg/L (encephalopathy)</span></div>
+          <div class="tdm-row"><span class="tdm-l">Sample timing</span><span class="tdm-v">Trough (pre-dose) after 5–7 days of stable dosing</span></div>
+          <div class="tdm-row"><span class="tdm-l">Half-life</span><span class="tdm-v">Highly variable: 7–42 hours (dose-dependent)</span></div>
+        </div>
+
+        <div class="alb-box" id="alb-box">
+          <div class="tdm-title" style="color:#1e3a8a">🩺 Albumin-Corrected Phenytoin Level</div>
+          <div class="tdm-row" style="border-color:#bae6fd"><span class="tdm-l" style="color:#1e40af">Measured level</span><span class="tdm-v" style="color:#1e3a8a;font-family:var(--mono)" id="alb-measured">—</span></div>
+          <div class="tdm-row" style="border-color:#bae6fd"><span class="tdm-l" style="color:#1e40af">Albumin</span><span class="tdm-v" style="color:#1e3a8a;font-family:var(--mono)" id="alb-alb">—</span></div>
+          <div class="tdm-row" style="border-color:#bae6fd;background:#dbeafe"><span class="tdm-l" style="color:#1e40af;font-weight:600">✅ Corrected level</span><span class="tdm-v" style="color:#1e3a8a;font-family:var(--mono);font-size:14px" id="alb-corrected">—</span></div>
+          <div class="tdm-row" style="border-color:#bae6fd"><span class="tdm-l" style="color:#1e40af">Interpretation</span><span class="tdm-v" style="color:#1e3a8a;font-family:var(--mono)" id="alb-interp">—</span></div>
+        </div>
+
+        <div class="al alw" id="warn">⚠️ <span id="warn-t"></span></div>
+        <div class="al ald" id="danger">🚫 <span id="danger-t"></span></div>
+        <div class="al ali" id="info">ℹ️ <span id="info-t"></span></div>
+      </div>
+    </div>
+
+    <div class="sw">
+      <div class="wg">
+        <div class="wh">💊 Drug profile</div>
+        <div class="wb">
+          <div class="wr"><span class="wl">Class</span><span class="wv">Hydantoin anticonvulsant</span></div>
+          <div class="wr"><span class="wl">Routes</span><span class="wv">Oral · IV (slow)</span></div>
+          <div class="wr"><span class="wl">Half-life</span><span class="wv">7–42h (dose-dependent)</span></div>
+          <div class="wr"><span class="wl">Protein binding</span><span class="wv">~90%</span></div>
+          <div class="wr"><span class="wl">TDM target</span><span class="wv">10–20 mg/L (total)</span></div>
+          <div class="wr"><span class="wl">Bioavailability</span><span class="wv">~100% capsule; ~90% tablet</span></div>
+          <div class="wr"><span class="wl">Kinetics</span><span class="wv">Non-linear (Michaelis-Menten)</span></div>
+        </div>
+      </div>
+      <div class="wg">
+        <div class="wh">🏷️ Indian brands</div>
+        <div class="wb">
+          <div class="wr"><span class="wl">Cap 100mg</span><span class="wv">Eptoin 100 · Dilantin · Phenytek</span></div>
+          <div class="wr"><span class="wl">Tab 50mg (Infatabs)</span><span class="wv">Eptoin 50 · Dilantin Infatab</span></div>
+          <div class="wr"><span class="wl">Susp 125mg/5ml</span><span class="wv">Eptoin susp · Dilantin susp</span></div>
+          <div class="wr"><span class="wl">IV 50mg/ml</span><span class="wv">Eptoin IV · Phenytoin Inj (generic)</span></div>
+        </div>
+      </div>
+      <div class="wg">
+        <div class="wh">⚠️ Major drug interactions</div>
+        <div class="wb" style="font-size:12px;color:var(--tm);line-height:1.7">
+          <p>🔼 Levels increased by: isoniazid, fluconazole, omeprazole, valproate, cimetidine</p>
+          <p style="margin-top:6px">🔽 Levels decreased by: carbamazepine, rifampicin, phenobarbitone, St John's Wort</p>
+          <p style="margin-top:6px">⚠️ Reduces effectiveness of: OCP, warfarin, digoxin, dexamethasone, cyclosporine</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ct">
+    <h2>Phenytoin — Clinical Guide India</h2>
+    <p>Phenytoin (Eptoin, Dilantin) remains one of the most widely used anticonvulsants in India for generalised tonic-clonic seizures, focal epilepsy, status epilepticus, and post-neurosurgical seizure prophylaxis. It has a narrow therapeutic index and highly non-linear (Michaelis-Menten) pharmacokinetics — small dose increases can cause disproportionately large rises in serum levels. TDM is mandatory for safe phenytoin use, and the albumin correction formula must be applied in any patient with hypoalbuminaemia.</p>
+
+    <h3>IBW-based dosing — why it matters</h3>
+    <p>For IV loading and initial oral maintenance, phenytoin dose should be calculated on Ideal Body Weight (IBW) rather than actual body weight in obese patients. IBW underestimates the appropriate dose because phenytoin does partly distribute into adipose tissue. Use Adjusted Body Weight (AdjBW) for loading: AdjBW = IBW + 1.33 × (actual − IBW). For maintenance, actual weight-based dosing gives reasonable starting estimates, but TDM is essential for individualisation due to highly variable pharmacokinetics.</p>
+
+    <h3>IV phenytoin — rate is everything</h3>
+    <p>The maximum IV infusion rate for phenytoin in adults is 50 mg/min. Faster rates cause cardiovascular toxicity (hypotension, bradycardia, ventricular arrhythmia, cardiac arrest) due to the propylene glycol diluent in the formulation. For a typical adult loading dose of 1000–1400 mg: infuse over at least 20–28 minutes. Continuous ECG monitoring and blood pressure monitoring are mandatory during loading. Have resuscitation equipment at the bedside. Dilute in 0.9% normal saline — NOT in dextrose (phenytoin precipitates in glucose solutions).</p>
+
+    <h3>Albumin-corrected phenytoin — essential in India</h3>
+    <p>Phenytoin is ~90% bound to serum albumin. In patients with hypoalbuminaemia (malnutrition, liver disease, nephrotic syndrome, critical illness — all common in India), the measured total phenytoin level underestimates pharmacologically active free drug. The Winter-Tozer formula corrects for this: <strong>Corrected phenytoin = Measured level ÷ [0.9 × (albumin/4.4) + 0.1]</strong>. For patients with severe CKD (CrCl &lt;10 mL/min): <strong>Corrected = Measured ÷ [0.1 × (albumin/4.4) + 0.1]</strong>. Target: corrected level 10–20 mg/L. A patient with measured level 6 mg/L but albumin of 2 g/dL actually has a corrected level of approximately 12 mg/L — within therapeutic range despite appearing subtherapeutic.</p>
+
+    <h2 style="margin-top:24px">Frequently Asked Questions</h2>
+    <div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What is the phenytoin IV loading dose for a 70 kg adult?<span class="fi-ico">+</span></div><div class="fa">Standard phenytoin IV loading dose: 15–20 mg/kg. For a 70 kg adult: 1050–1400 mg IV. Use 15 mg/kg (1050 mg) for seizure prevention; 20 mg/kg (1400 mg) for active status epilepticus. Infuse at maximum 50 mg/min → minimum 21–28 minutes infusion time. Dilute in 100–250 ml of 0.9% normal saline. Monitor ECG and BP throughout.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Why does phenytoin have non-linear pharmacokinetics?<span class="fi-ico">+</span></div><div class="fa">Phenytoin undergoes saturable (Michaelis-Menten) hepatic metabolism — at low doses, the metabolising enzyme (CYP2C9/2C19) is not saturated and phenytoin behaves linearly. As doses approach saturation, small dose increases cause disproportionately large rises in plasma levels. This is why dose adjustments must be made in small increments (25–50 mg at a time for adults) and TDM is essential. A dose increase from 300mg to 350mg/day may raise levels from 10 to 20 mg/L.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What are the signs of phenytoin toxicity?<span class="fi-ico">+</span></div><div class="fa">Phenytoin toxicity is dose-related: nystagmus (level >20 mg/L), ataxia and gait instability (>25 mg/L), diplopia and dysarthria (>30 mg/L), drowsiness and confusion (>35 mg/L), severe encephalopathy (>40 mg/L). Chronic toxicity causes peripheral neuropathy, gingival hyperplasia, hirsutism, and folate deficiency. If toxicity is suspected, hold phenytoin and check a trough level immediately.</div></div>
+    </div>
+    <div class="disc"><span>⚠️</span><span>Phenytoin has a narrow therapeutic index and non-linear kinetics. IV infusion must never exceed 50 mg/min. Always apply albumin correction in hypoalbuminaemia. TDM is mandatory. Verify against BNF, BNFC, and current prescribing information.</span></div>
+    <h2 style="margin-top:24px">Related Tools</h2>
+    <div class="rg2">
+      <a href="/drug-doses/phenobarbitone" class="rc2"><div class="rn">Phenobarbitone</div><div class="rd">Alternative anticonvulsant</div></a>
+      <a href="/medical-calculators/ibw-calculator" class="rc2"><div class="rn">IBW Calculator</div><div class="rd">Dosing weight for phenytoin</div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="rc2"><div class="rn">CrCl Calculator</div><div class="rd">Albumin correction — CKD</div></a>
+      <a href="/medical-calculators/corrected-calcium" class="rc2"><div class="rn">Corrected Calcium</div><div class="rd">Similar albumin correction concept</div></a>
+    </div>
+  </div>
+</div>
+
+<footer class="ft"><p>RxMedCalc · Free Clinical Tools for India · <a href="/medical-calculators">Medical Calculators</a> · <a href="/drug-doses">Drug Doses</a></p></footer>
+
+<script>
+let mode='loading';
+function setMode(m,btn){mode=m;document.querySelectorAll('.sb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');['loading-sec','maintenance-sec','tdm-sec'].forEach(id=>document.getElementById(id).style.display='none');document.getElementById(m+'-sec').style.display='block';hideAll();}
+function hideAll(){['res','tdm-box','alb-box','warn','danger','info'].forEach(id=>document.getElementById(id).classList.remove('on'))}
+function show(id){document.getElementById(id).classList.add('on')}
+function set(id,v){document.getElementById(id).textContent=v}
+function tf(el){el.closest('.fi').classList.toggle('op')}
+
+function calcIBW(htCm,sex){const h=htCm-152.4;return sex==='male'?50+0.906*h:45.5+0.906*h;}
+function calcAdjBW(ibw,actual){return ibw+1.33*(actual-ibw);}
+
+function calc(){
+  hideAll();
+  if(mode==='loading'){
+    const actual=parseFloat(document.getElementById('load-wt').value);
+    const ht=parseFloat(document.getElementById('load-ht').value);
+    const sex=document.getElementById('load-sex').value;
+    const ind=document.getElementById('load-ind').value;
+    const route=document.getElementById('load-route').value;
+    if(!actual||!ht){alert('Please enter weight and height.');return;}
+    const ibw=calcIBW(ht,sex);
+    let dosingWt=actual;
+    let wtNote='Actual';
+    if(actual>ibw*1.2){dosingWt=Math.round(calcAdjBW(ibw,actual)*10)/10;wtNote='AdjBW (obese)';}
+    else if(actual<ibw*0.9){dosingWt=actual;wtNote='Actual (lean)';}
+    const mgKg=ind==='acute_seizure_child'?7.5:ind==='seizure_prevention'?15:20;
+    const loadMg=Math.round(dosingWt*mgKg/50)*50;
+    const maxRate=50; // mg/min for adults
+    const minInfMins=Math.ceil(loadMg/maxRate);
+    const volNS=loadMg<=1000?100:250;
+    set('r-label','IV Loading Dose');
+    set('r-dose',loadMg+' mg phenytoin');
+    set('r-freq',route==='iv'?'IV infusion over minimum '+minInfMins+' minutes (max 50 mg/min)':'Oral loading: divide into 3 doses over 24h (e.g. 400mg then 300mg then 300mg for 1000mg)');
+    set('r-wt',dosingWt+' kg ('+wtNote+')');
+    set('r-vol',route==='iv'?loadMg+'mg in '+volNS+'ml 0.9% NaCl — do NOT use dextrose':'Capsules/tablets in divided oral doses');
+    set('r-rate',route==='iv'?'MAX 50 mg/min — ECG + BP monitoring mandatory':'Oral loading less reliable — IV preferred for status');
+    set('r-tdm','Check level 2–4h after IV load; target 10–20 mg/L');
+    show('res');
+    document.getElementById('warn-t').textContent='IV phenytoin: maximum 50 mg/min. Faster infusion causes cardiac arrhythmia and hypotension. Monitor ECG and BP throughout. Have resuscitation equipment available.';show('warn');
+    show('tdm-box');
+    if(ind==='status_adult'){document.getElementById('info-t').textContent='Status epilepticus: phenytoin is 2nd-line after benzodiazepines. If seizures persist after loading, consider phenobarbitone or general anaesthesia. Specialist neurology/ICU care required.';show('info');}
+  } else if(mode==='maintenance'){
+    const actual=parseFloat(document.getElementById('maint-wt').value);
+    const ht=parseFloat(document.getElementById('maint-ht').value);
+    const sex=document.getElementById('maint-sex').value;
+    const age=parseFloat(document.getElementById('maint-age').value)||30;
+    const level=parseFloat(document.getElementById('maint-level').value)||null;
+    const form=document.getElementById('maint-form').value;
+    if(!actual){alert('Please enter weight.');return;}
+    // Use actual weight for maintenance
+    const mgKgDay=age<1?5:age<3?8:age<10?7:age<16?6:age>65?4:5;
+    const dailyMg=Math.round(Math.min(actual*mgKgDay,300)/50)*50;
+    const doses=dailyMg>200?2:1;
+    const perDose=dailyMg/doses;
+    let volStr='';
+    if(form==='cap100'){volStr=(perDose/100).toFixed(0)+'× 100mg cap, '+(doses===1?'once daily at bedtime':'twice daily');}
+    else if(form==='tab50'){volStr=(perDose/50).toFixed(0)+'× 50mg tab';}
+    else{volStr=(perDose/125*5).toFixed(1)+'ml of 125mg/5ml susp';}
+    set('r-label','Maintenance Dose (starting estimate)');
+    set('r-dose',dailyMg+' mg per day');
+    set('r-freq',doses===1?'Once daily at bedtime (preferred — adherence)':'Twice daily (BD)');
+    set('r-wt',actual+' kg actual weight');
+    set('r-vol',volStr);
+    set('r-rate','Titrate in 25–50mg steps only. Non-linear kinetics — small increases cause large level rises.');
+    set('r-tdm','Check trough after 5–7 days; target 10–20 mg/L');
+    show('res');
+    show('tdm-box');
+    if(level){
+      let msg='';
+      if(level<5) msg='Level very low (<5 mg/L): increase dose by 25–50mg/day. Recheck after 5–7 days.';
+      else if(level<10) msg='Level sub-therapeutic (5–10 mg/L): consider increasing by 25mg/day. Check compliance and interactions.';
+      else if(level>20) msg='Level above therapeutic range (>20 mg/L): reduce dose by 25–50mg/day. Check for interactions (isoniazid, fluconazole). Assess for signs of toxicity.';
+      else msg='Current level '+level+' mg/L is within therapeutic range (10–20 mg/L).';
+      document.getElementById('info-t').textContent=msg;show('info');
+    }
+    document.getElementById('warn-t').textContent='This is a starting estimate only. Due to non-linear kinetics, dose adjustments must be made in 25–50mg increments with TDM recheck after each change. Always apply albumin correction if albumin is below normal.';show('warn');
+  } else {
+    // TDM / albumin correction
+    const measured=parseFloat(document.getElementById('tdm-level').value);
+    const albumin=parseFloat(document.getElementById('tdm-albumin').value);
+    const renal=document.getElementById('tdm-renal').value;
+    if(!measured||!albumin){alert('Please enter measured level and albumin.');return;}
+    const normalAlb=4.4;
+    let corrected;
+    if(renal==='ckd'){corrected=measured/(0.1*(albumin/normalAlb)+0.1);}
+    else{corrected=measured/(0.9*(albumin/normalAlb)+0.1);}
+    corrected=Math.round(corrected*10)/10;
+    let interp='';
+    if(corrected<5)interp='Very low — likely subtherapeutic. Review dose.';
+    else if(corrected<10)interp='Below therapeutic range (10–20 mg/L). Consider dose increase.';
+    else if(corrected<=20)interp='✅ Within therapeutic range (10–20 mg/L).';
+    else if(corrected<=30)interp='⚠️ Above therapeutic range. Assess for toxicity signs. Consider dose reduction.';
+    else interp='🚫 Toxic range (>30 mg/L). Hold dose, assess for nystagmus/ataxia/confusion. Reduce significantly.';
+    set('r-label','Albumin-Corrected Phenytoin');
+    set('r-dose','Corrected level: '+corrected+' mg/L');
+    set('r-freq','Winter-Tozer '+(renal==='ckd'?'(CKD formula)':'(standard formula)'));
+    set('r-wt',albumin+' g/dL albumin');
+    set('r-vol','Measured: '+measured+' mg/L → Corrected: '+corrected+' mg/L');
+    set('r-rate','Target corrected level: 10–20 mg/L');
+    set('r-tdm',interp);
+    show('res');
+    set('alb-measured',measured+' mg/L');
+    set('alb-alb',albumin+' g/dL (normal: 4.4)');
+    set('alb-corrected',corrected+' mg/L');
+    set('alb-interp',interp);
+    show('alb-box');
+    if(albumin<3){document.getElementById('warn-t').textContent='Albumin '+albumin+' g/dL — significantly low. Measured total phenytoin substantially underestimates free drug. Always use corrected level for clinical decisions.';show('warn');}
+  }
+}
+</script>
+
+<script src="/assets/shared-nav.js"></script>
+</body>
+</html>
