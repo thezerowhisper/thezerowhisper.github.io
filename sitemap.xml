@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://rxmedcalc.com/</loc><priority>1.0</priority></url>
 <url><loc>https://rxmedcalc.com/index</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/drug-doses/dexamethasone</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/drug-doses/phenobarbitone</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/amoxicillin</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/famotidine</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/drug-doses/omeprazole-pantoprazole</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/prednisolone</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/drug-doses/domperidone</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/ibuprofen</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/cetirizine</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/amikacin-gentamicin</loc><priority>0.64</priority></url>
