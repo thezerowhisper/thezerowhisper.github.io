@@ -24,6 +24,7 @@
 <url><loc>https://rxmedcalc.com/medical-calculators/arv-dose-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/corrected-calcium</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/milestones</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators/albumin-corrected-ag</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/meld-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/mentzer-index-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/pediatric-weight</loc><priority>0.64</priority></url>
@@ -56,6 +57,7 @@
 <url><loc>https://rxmedcalc.com/medical-calculators/pediatric-asthma</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/ibw-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators/ktv-dialysis</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/burn-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/apache2-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/neonatal-jaundice</loc><priority>0.64</priority></url>
@@ -72,9 +74,13 @@
 <url><loc>https://rxmedcalc.com/medical-calculators/obs-calc</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/nihss-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/tsh-interpreter</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators/framingham-risk</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators/upcr-calculator</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators/sodium-correction</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/ascvd-risk</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/grace-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/qtc-calculator</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators/pediatric-dehydration</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/about</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/search</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/contact</loc><priority>0.64</priority></url>
