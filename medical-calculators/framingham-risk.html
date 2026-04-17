@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="framingham-risk">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Framingham Risk Score | 10-Year CHD Risk | RxMedCalc</title>
+<meta name="description" content="Free Framingham Risk Score calculator for 10-year coronary heart disease (CHD) risk. Calculates risk from age, sex, total cholesterol, HDL, blood pressure, smoking status, and diabetes. Includes statin and lifestyle recommendations. Used by cardiologists and GPs worldwide."/>
+<meta name="keywords" content="Framingham risk score, Framingham risk calculator, 10 year CHD risk, coronary heart disease risk, cardiovascular risk score, Framingham heart study, cholesterol cardiovascular risk, Framingham risk interpretation, heart disease risk calculator"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/framingham-risk"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a0e15 60%,#0d1b2a 100%);padding:36px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(239,68,68,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(239,68,68,0.05) 1px,transparent 1px);background-size:40px 40px}
+.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:14px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#fca5a5;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:12px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.6rem,5vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px}
+h1 em{font-style:italic;color:#f87171}
+.page-sub{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:18px}
+.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:26px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:24px 20px 80px}
+.calc-card,.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:20px;box-shadow:0 4px 24px rgba(0,0,0,0.05)}
+@media(min-width:600px){.calc-card,.content-card{padding:28px}}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;color:#0d1b2a;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.calc-title::before{content:'';display:block;width:4px;height:18px;background:#ef4444;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:10px}
+@media(min-width:480px){.input-grid{grid-template-columns:1fr 1fr}}
+.field label{display:block;font-size:0.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px}
+.field input,.field select{width:100%;padding:11px 13px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:9px;font-family:inherit;font-size:16px;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none;appearance:none}
+.field input:focus,.field select:focus{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,0.1)}
+.field .hint{font-size:0.68rem;color:#9ca3af;margin-top:3px}
+.toggle-row{display:flex;align-items:center;gap:12px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:9px;padding:11px 13px;cursor:pointer;touch-action:manipulation;user-select:none;transition:all 0.2s}
+.toggle-row.on{background:#fef2f2;border-color:#fecaca}
+.toggle-chk{width:20px;height:20px;border:2px solid #d1d5db;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s;background:#fff;font-size:0.8rem}
+.toggle-row.on .toggle-chk{background:#ef4444;border-color:#ef4444;color:#fff}
+.toggle-label{font-size:0.88rem;font-weight:600;color:#374151}
+.btn-calc{width:100%;padding:14px;border:none;border-radius:11px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#ef4444,#dc2626);box-shadow:0 4px 16px rgba(239,68,68,0.3);touch-action:manipulation;margin-top:14px}
+.btn-calc:active{transform:scale(0.98)}
+.error-msg{color:#dc2626;font-size:0.78rem;margin-top:8px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:18px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:16px 0}
+.risk-display{text-align:center;padding:20px;border-radius:14px;border:2px solid;margin-bottom:14px}
+.rd-pct{font-family:'Fraunces',Georgia,serif;font-size:4rem;font-weight:900;line-height:1}
+.rd-label{font-size:0.88rem;font-weight:600;margin-top:4px;opacity:0.85}
+.rd-badge{display:inline-block;padding:5px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;margin-top:8px;border:1.5px solid}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+@media(min-width:480px){.result-grid{grid-template-columns:repeat(3,1fr)}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:11px;padding:12px;text-align:center}
+.rbox.hi{background:#fef2f2;border-color:#fecaca}
+.rlabel{font-size:0.6rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px}
+.rval{font-size:1.1rem;font-weight:700;color:#0d1b2a}
+.rbox.hi .rval{color:#ef4444}
+.runit{font-size:0.65rem;color:#9ca3af;margin-top:2px}
+.mgmt-box{border-radius:11px;padding:14px;margin-bottom:14px;font-size:0.85rem;line-height:1.75;white-space:pre-line}
+.action-row{display:flex;gap:8px;margin-top:10px}
+.act-btn{flex:1;padding:11px 8px;border-radius:10px;font-family:inherit;font-size:0.8rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation}
+.act-btn:active{opacity:0.7}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:9px;color:#9ca3af;font-family:inherit;font-size:0.8rem;cursor:pointer;touch-action:manipulation}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.25rem;font-weight:900;color:#0d1b2a;margin-bottom:12px}
+.content-card h3{font-size:0.92rem;font-weight:700;color:#ef4444;margin:16px 0 7px}
+.content-card p{font-size:0.85rem;color:#4b5563;line-height:1.8;margin-bottom:10px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.content-card li{font-size:0.83rem;color:#4b5563;padding-left:14px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#ef4444;font-size:0.78rem}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:11px;padding:12px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;touch-action:manipulation}
+.related-card:active{border-color:#ef4444;background:#fef2f2}
+.rc-icon{font-size:1.3rem;flex-shrink:0}.rc-title{font-size:0.8rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.67rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:11px;padding:12px;font-size:0.74rem;color:#78350f;line-height:1.6;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Framingham Risk</span></nav>
+    <div class="page-eyebrow">❤️ Cardiology · Prevention</div>
+    <h1>Framingham Risk Score<br><em>10-Year CHD Risk</em></h1>
+    <p class="page-sub">Calculate 10-year coronary heart disease risk using the Framingham Heart Study equations. Includes statin therapy guidance and cardiovascular risk reduction strategies.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ Sex-Specific Equations</span>
+      <span class="hbadge">✓ 10-Year CHD Risk %</span>
+      <span class="hbadge">✓ Statin Guidance</span>
+      <span class="hbadge">✓ Framingham 1998</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">Framingham Risk Score</div>
+    <div class="input-grid">
+      <div class="field">
+        <label>Sex</label>
+        <select id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Age (years)</label>
+        <input type="number" id="age" placeholder="e.g. 50" min="30" max="79" inputmode="decimal"/>
+        <div class="hint">validated 30–79 years</div>
+      </div>
+      <div class="field">
+        <label>Total Cholesterol (mg/dL)</label>
+        <input type="number" id="tc" placeholder="e.g. 200" inputmode="decimal"/>
+      </div>
+      <div class="field">
+        <label>HDL Cholesterol (mg/dL)</label>
+        <input type="number" id="hdl" placeholder="e.g. 50" inputmode="decimal"/>
+      </div>
+      <div class="field">
+        <label>Systolic BP (mmHg)</label>
+        <input type="number" id="sbp" placeholder="e.g. 130" inputmode="decimal"/>
+      </div>
+    </div>
+    <div class="field" style="margin-bottom:10px">
+      <label>BP Treatment</label>
+      <select id="bptx">
+        <option value="no">Not on BP treatment</option>
+        <option value="yes">On antihypertensive treatment</option>
+      </select>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:4px">
+      <div class="toggle-row" id="tog-smoke" onclick="toggleRow('tog-smoke')">
+        <div class="toggle-chk" id="tc-smoke">✓</div>
+        <span class="toggle-label">Current smoker</span>
+      </div>
+      <div class="toggle-row" id="tog-dm" onclick="toggleRow('tog-dm')">
+        <div class="toggle-chk" id="tc-dm">✓</div>
+        <span class="toggle-label">Diabetes mellitus</span>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate 10-Year CHD Risk →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="risk-display" id="risk-display">
+        <div class="rd-pct" id="rd-pct">—</div>
+        <div class="rd-label">10-Year CHD Risk</div>
+        <div class="rd-badge" id="rd-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">CHD Risk</div><div class="rval" id="r-risk">—</div><div class="runit">% / 10 years</div></div>
+        <div class="rbox"><div class="rlabel">Risk Category</div><div class="rval" id="r-cat" style="font-size:0.95rem">—</div><div class="runit">Framingham</div></div>
+        <div class="rbox"><div class="rlabel">Statin</div><div class="rval" id="r-statin" style="font-size:0.85rem">—</div><div class="runit">recommendation</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>Framingham Risk Score — Clinical Guide</h2>
+    <p>The Framingham Risk Score was developed from the Framingham Heart Study, a landmark prospective cohort study initiated in 1948 in Framingham, Massachusetts. The 1998 Wilson et al. equations (JAMA) use age, total cholesterol, HDL cholesterol, systolic blood pressure, antihypertensive treatment, smoking, and diabetes to predict 10-year risk of coronary heart disease events (MI, coronary death, unstable angina, coronary insufficiency) in adults aged 30–79 without existing CHD.</p>
+    <h3>Risk Categories</h3>
+    <ul>
+      <li><strong>Low (&lt;10%):</strong> Lifestyle counselling. Statin not routinely indicated unless LDL ≥190 mg/dL</li>
+      <li><strong>Intermediate (10–19%):</strong> Consider statin; individualise based on risk factors and patient preference</li>
+      <li><strong>High (≥20%):</strong> Statin therapy recommended — high-intensity preferred (atorvastatin 40–80 mg or rosuvastatin 20–40 mg)</li>
+    </ul>
+    <h3>Framingham vs ASCVD — Key Differences</h3>
+    <ul>
+      <li>Framingham predicts CHD events only; ASCVD (Pooled Cohort Equations) predicts both MI and stroke — broader endpoint</li>
+      <li>Framingham is validated for ages 30–79; ASCVD for 40–79</li>
+      <li>Both validated primarily in White populations; apply with caution in South Asian and other populations</li>
+      <li>For South Asian patients (including Indian subcontinent), multiply risk by 1.4–1.5 to account for higher intrinsic risk</li>
+    </ul>
+    <h3>Lifestyle Risk Reduction — Evidence-Based</h3>
+    <ul>
+      <li>Smoking cessation: reduces CHD risk by 50% within 1 year — most impactful single intervention</li>
+      <li>Diet: Mediterranean or DASH diet — reduces LDL by 10–15%, lowers BP, reduces inflammation</li>
+      <li>Physical activity: 150 min/week moderate aerobic exercise — reduces CHD risk by 30–35%</li>
+      <li>BP control to &lt;130/80 mmHg: each 10 mmHg SBP reduction reduces CHD risk by 25%</li>
+      <li>Diabetes control: HbA1c &lt;7% — reduces microvascular risk; SGLT2 inhibitors reduce MACE in T2DM</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/ascvd-risk" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">ASCVD Risk</div><div class="rc-desc">AHA/ACC 10-year risk</div></div></a>
+      <a href="/medical-calculators/cha2ds2-vasc" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">CHA₂DS₂-VASc</div><div class="rc-desc">AF stroke risk</div></div></a>
+      <a href="/medical-calculators/bmi" class="related-card"><span class="rc-icon">⚖️</span><div><div class="rc-title">BMI Calculator</div><div class="rc-desc">Obesity &amp; CV risk</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Blood pressure</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Framingham Risk Score is a screening tool validated in specific populations. It may not accurately estimate risk in South Asian, East Asian, Hispanic, or other non-White populations. Always apply clinical judgement alongside the score. Statin decisions require shared decision-making with the patient.</div>
+</main>
+<script src="/assets/shared-nav.js"></script>
+<script>
+const toggles={};let lastResult=null;
+function toggleRow(id){const row=document.getElementById(id);const on=row.classList.toggle('on');toggles[id]=on}
+// Framingham 1998 point-based scoring (Wilson et al.)
+const MALE_TC=[[160,0],[200,3],[240,5],[280,7],[999,8]];
+const FEM_TC=[[160,0],[200,3],[240,6],[280,8],[999,10]];
+const MALE_AGE=[[34,0],[39,2],[44,5],[49,6],[54,8],[59,10],[64,11],[69,12],[74,14],[999,15]];
+const FEM_AGE=[[34,0],[39,2],[44,4],[49,5],[54,7],[59,8],[64,9],[69,10],[74,11],[999,12]];
+const MALE_HDL=[[35,2],[45,1],[50,0],[60,-1],[999,-2]];
+const FEM_HDL=[[35,5],[45,2],[50,1],[60,0],[999,-2]];
+const MALE_SBP_TX=[[120,0],[130,1],[140,2],[160,2],[999,3]];
+const MALE_SBP_NO=[[120,0],[130,0],[140,1],[160,1],[999,2]];
+const FEM_SBP_TX=[[120,4],[130,5],[140,6],[160,7],[999,8]];
+const FEM_SBP_NO=[[120,0],[130,1],[140,2],[160,3],[999,4]];
+const MALE_RISK=[1,1,1,2,2,3,4,5,7,8,10,12,14,17,20,24,27,32,36,42,48];
+const FEM_RISK=[0,0,0,0,1,1,1,1,2,2,3,4,5,6,7,8,10,11,14,16,19,22,26,29];
+function lookup(val,table){for(const[max,pts]of table){if(val<=max)return pts}return table[table.length-1][1]}
+function calculate(){
+  const sex=document.getElementById('sex').value;
+  const age=parseFloat(document.getElementById('age').value);
+  const tc=parseFloat(document.getElementById('tc').value);
+  const hdl=parseFloat(document.getElementById('hdl').value);
+  const sbp=parseFloat(document.getElementById('sbp').value);
+  const bptx=document.getElementById('bptx').value==='yes';
+  const smoke=!!toggles['tog-smoke'];
+  const dm=!!toggles['tog-dm'];
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!age||!tc||!hdl||!sbp){errEl.textContent='Please fill all fields.';errEl.className='error-msg show';return}
+  if(age<30||age>79){errEl.textContent='Age must be 30–79. Framingham not validated outside this range.';errEl.className='error-msg show';return}
+  let pts=0;
+  if(sex==='male'){
+    pts+=lookup(age,MALE_AGE)+lookup(tc,MALE_TC)+lookup(hdl,MALE_HDL);
+    pts+=bptx?lookup(sbp,MALE_SBP_TX):lookup(sbp,MALE_SBP_NO);
+    pts+=smoke?4:0;pts+=dm?3:0;
+    pts=Math.max(0,Math.min(pts,20));
+  } else {
+    pts+=lookup(age,FEM_AGE)+lookup(tc,FEM_TC)+lookup(hdl,FEM_HDL);
+    pts+=bptx?lookup(sbp,FEM_SBP_TX):lookup(sbp,FEM_SBP_NO);
+    pts+=smoke?3:0;pts+=dm?4:0;
+    pts=Math.max(0,Math.min(pts,22));
+  }
+  const riskArr=sex==='male'?MALE_RISK:FEM_RISK;
+  const risk=riskArr[Math.min(pts,riskArr.length-1)];
+  const rd=document.getElementById('risk-display');
+  document.getElementById('rd-pct').textContent=risk+'%';
+  let cat,bg,bc,c,statin,mTxt;
+  if(risk<10){cat='Low Risk';bg='#f0fdf4';bc='#bbf7d0';c='#065f46';statin='Not routine';mTxt='✅ Low 10-year CHD risk (<10%). Statin not routinely recommended.\n\nPriorities:\n• Smoking cessation if applicable (most impactful single change)\n• Mediterranean or DASH diet — reduces LDL 10–15%\n• 150 min/week aerobic activity\n• Blood pressure to <130/80 mmHg\n• Annual risk reassessment';}
+  else if(risk<20){cat='Intermediate Risk';bg='#fffbeb';bc='#fde68a';c='#78350f';statin='Consider';mTxt='⚠️ Intermediate 10-year CHD risk (10–19%). Consider statin therapy after shared decision-making.\n\nStatin options:\n• Atorvastatin 10–20 mg or rosuvastatin 5–10 mg (moderate intensity)\n• Target ≥30–49% LDL reduction\n• Assess risk-enhancing factors: South Asian descent, hsCRP ≥2, Lp(a) ≥50 mg/dL, CKD, family history of premature ASCVD\n• CAC score may help reclassify — CAC=0: defer statin. CAC≥100: initiate statin\n• Lifestyle optimisation regardless';}
+  else{cat='High Risk';bg='#fef2f2';bc='#fecaca';c='#7f1d1d';statin='Recommended';mTxt='🚨 High 10-year CHD risk (≥20%). Statin therapy recommended.\n\nHigh-intensity statin:\n• Atorvastatin 40–80 mg OD or rosuvastatin 20–40 mg OD\n• Target ≥50% LDL reduction; aim LDL <70 mg/dL\n• Add ezetimibe 10 mg if LDL goal not met after 3 months\n• Aspirin 75–100 mg OD — discuss benefit vs GI bleed risk\n• Aggressive lifestyle: Mediterranean diet, exercise, smoking cessation, BP control\n• Annual lipid panel monitoring';}
+  rd.style.cssText=`background:${bg};border-color:${bc};text-align:center;padding:20px;border-radius:14px;border:2px solid;margin-bottom:14px`;
+  document.getElementById('rd-pct').style.color=bc==='#bbf7d0'?'#16a34a':bc==='#fde68a'?'#d97706':'#dc2626';
+  const badge=document.getElementById('rd-badge');badge.textContent=cat;badge.style.cssText=`background:${bg};color:${c};border:1.5px solid ${bc};display:inline-block;padding:5px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;margin-top:8px`;
+  document.getElementById('r-risk').textContent=risk+'%';
+  document.getElementById('r-cat').textContent=cat.replace(' Risk','');
+  document.getElementById('r-statin').textContent=statin;
+  const mgmt=document.getElementById('mgmt-box');mgmt.textContent=mTxt;mgmt.style.cssText=`background:${bg};border:1.5px solid ${bc};color:${c};border-radius:11px;padding:14px;margin-bottom:14px;font-size:0.85rem;line-height:1.75;white-space:pre-line`;
+  lastResult=`Framingham Risk: ${risk}% — ${cat}\nAge: ${age} | Sex: ${sex} | TC: ${tc} | HDL: ${hdl} | SBP: ${sbp}\nStatin: ${statin}\nCalculated at rxmedcalc.com/medical-calculators/framingham-risk`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('framingham_calc',{risk,cat});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('❤️ Framingham Risk\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['age','tc','hdl','sbp'].forEach(id=>document.getElementById(id).value='');['tog-smoke','tog-dm'].forEach(id=>{document.getElementById(id).classList.remove('on');delete toggles[id]});document.getElementById('bptx').value='no';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>

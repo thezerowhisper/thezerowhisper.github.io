@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="upcr-calculator">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>UPCR Calculator | Urine Protein Creatinine Ratio | Proteinuria | RxMedCalc</title>
+<meta name="description" content="Free UPCR (urine protein-to-creatinine ratio) calculator. Estimate 24-hour urinary protein excretion from a spot urine sample. CKD staging, nephrotic syndrome diagnosis, and KDIGO proteinuria classification. Used by nephrologists worldwide."/>
+<meta name="keywords" content="UPCR calculator, urine protein creatinine ratio, spot urine protein, 24 hour protein equivalent, UPCR CKD, proteinuria calculator, nephrotic syndrome UPCR, KDIGO proteinuria, urine ACR UPCR, protein creatinine ratio interpretation"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/upcr-calculator"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0f1e30 60%,#0d1b2a 100%);padding:34px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(99,102,241,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.05) 1px,transparent 1px);background-size:40px 40px}
+.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:12px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#a5b4fc;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.5rem,5vw,2.3rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:8px}
+h1 em{font-style:italic;color:#818cf8}
+.page-sub{font-size:0.87rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:16px}
+.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:22px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:22px 20px 80px}
+.calc-card,.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:18px;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+@media(min-width:600px){.calc-card,.content-card{padding:26px}}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:0.98rem;font-weight:700;color:#0d1b2a;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.calc-title::before{content:'';display:block;width:4px;height:16px;background:#6366f1;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px}
+@media(min-width:480px){.input-grid{grid-template-columns:1fr 1fr}}
+.field label{display:block;font-size:0.69rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.field input,.field select{width:100%;padding:11px 13px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:9px;font-family:inherit;font-size:16px;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none;appearance:none}
+.field input:focus,.field select:focus{border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,0.1)}
+.field .hint{font-size:0.67rem;color:#9ca3af;margin-top:3px}
+.btn-calc{width:100%;padding:13px;border:none;border-radius:10px;color:#fff;font-family:inherit;font-size:0.95rem;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#6366f1,#4f46e5);box-shadow:0 4px 14px rgba(99,102,241,0.3);touch-action:manipulation}
+.btn-calc:active{transform:scale(0.98)}
+.error-msg{color:#dc2626;font-size:0.77rem;margin-top:7px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:16px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:14px 0}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+@media(min-width:480px){.result-grid{grid-template-columns:repeat(3,1fr)}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-align:center}
+.rbox.hi{background:#eef2ff;border-color:#c7d2fe}
+.rlabel{font-size:0.59rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px}
+.rval{font-size:1.15rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#4f46e5}
+.runit{font-size:0.63rem;color:#9ca3af;margin-top:2px}
+.interp{border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:0.84rem;line-height:1.7;white-space:pre-line}
+.action-row{display:flex;gap:8px;margin-top:10px}
+.act-btn{flex:1;padding:10px 8px;border-radius:9px;font-family:inherit;font-size:0.78rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation}
+.act-btn:active{opacity:0.7}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:7px;padding:8px;background:transparent;border:1.5px solid #e5e7eb;border-radius:9px;color:#9ca3af;font-family:inherit;font-size:0.78rem;cursor:pointer;touch-action:manipulation}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:900;color:#0d1b2a;margin-bottom:12px}
+.content-card h3{font-size:0.9rem;font-weight:700;color:#6366f1;margin:14px 0 6px}
+.content-card p{font-size:0.84rem;color:#4b5563;line-height:1.78;margin-bottom:8px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.content-card li{font-size:0.82rem;color:#4b5563;padding-left:13px;position:relative;line-height:1.55}
+.content-card li::before{content:'→';position:absolute;left:0;color:#6366f1;font-size:0.76rem}
+.formula-box{background:#eef2ff;border:1.5px solid #c7d2fe;border-radius:9px;padding:12px;font-family:'Courier New',monospace;font-size:0.82rem;color:#3730a3;margin:8px 0;line-height:1.9}
+.upcr-table{width:100%;border-collapse:collapse;font-size:0.78rem;margin:10px 0;overflow-x:auto;display:block}
+@media(min-width:600px){.upcr-table{display:table}}
+.upcr-table th{background:#eef2ff;color:#3730a3;font-weight:700;padding:7px 9px;text-align:left;font-size:0.67rem;text-transform:uppercase;border-bottom:2px solid #c7d2fe}
+.upcr-table td{padding:7px 9px;border-bottom:1px solid #f3f4f6;color:#374151}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;touch-action:manipulation}
+.related-card:active{border-color:#6366f1;background:#eef2ff}
+.rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>UPCR Calculator</span></nav>
+    <div class="page-eyebrow">🫘 Nephrology · Proteinuria · CKD</div>
+    <h1>UPCR Calculator<br><em>Urine Protein:Creatinine Ratio</em></h1>
+    <p class="page-sub">Calculate UPCR from a spot urine sample to estimate 24-hour urinary protein excretion. KDIGO proteinuria classification, CKD staging, nephrotic syndrome diagnosis.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ KDIGO Classification</span>
+      <span class="hbadge">✓ 24h Protein Estimate</span>
+      <span class="hbadge">✓ mg/dL &amp; g/L units</span>
+      <span class="hbadge">✓ Nephrotic Threshold</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">UPCR Calculator</div>
+    <div class="input-grid">
+      <div class="field">
+        <label>Urine Protein</label>
+        <input type="number" id="uprot" placeholder="e.g. 300" inputmode="decimal"/>
+      </div>
+      <div class="field">
+        <label>Urine Creatinine</label>
+        <input type="number" id="ucr" placeholder="e.g. 100" inputmode="decimal"/>
+      </div>
+      <div class="field">
+        <label>Units</label>
+        <select id="units">
+          <option value="mgdl">mg/dL (both values)</option>
+          <option value="gl">g/L (protein) / mmol/L (creatinine)</option>
+        </select>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg"></div>
+    <button class="btn-calc" onclick="calculate()">Calculate UPCR →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">UPCR</div><div class="rval" id="r-upcr">—</div><div class="runit">mg/mg (≈ g/g)</div></div>
+        <div class="rbox"><div class="rlabel">Est. 24h Protein</div><div class="rval" id="r-24h">—</div><div class="runit">mg/day</div></div>
+        <div class="rbox"><div class="rlabel">KDIGO Category</div><div class="rval" id="r-cat" style="font-size:0.9rem">—</div><div class="runit">proteinuria</div></div>
+      </div>
+      <div class="interp" id="interp"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 Share</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>UPCR Reference Guide</h2>
+    <div class="formula-box">
+      UPCR = Urine Protein (mg/dL) ÷ Urine Creatinine (mg/dL)<br>
+      Estimated 24h protein (g) ≈ UPCR (in g/g) × 1<br>
+      UPCR 1.0 mg/mg ≈ 1000 mg/day proteinuria
+    </div>
+    <table class="upcr-table">
+      <thead><tr><th>UPCR (mg/mg)</th><th>Est. 24h Protein</th><th>KDIGO Category</th><th>Clinical Significance</th></tr></thead>
+      <tbody>
+        <tr><td>&lt;0.15</td><td>&lt;150 mg/day</td><td>A1 Normal</td><td>Normal proteinuria</td></tr>
+        <tr><td>0.15–0.5</td><td>150–500 mg/day</td><td>A2 Mild</td><td>Microalbuminuria range — CKD progression risk</td></tr>
+        <tr><td>0.5–3.5</td><td>500–3500 mg/day</td><td>A3 Moderate–Severe</td><td>Significant proteinuria — nephrology referral</td></tr>
+        <tr><td>≥3.5</td><td>≥3500 mg/day</td><td>Nephrotic Range</td><td>Nephrotic syndrome — urgent nephrology</td></tr>
+      </tbody>
+    </table>
+    <h3>Why Use UPCR vs 24-Hour Urine?</h3>
+    <p>UPCR from a spot urine specimen correlates well with 24-hour urinary protein excretion (r &gt;0.9 in most studies) and eliminates the inconvenience and inaccuracy of 24-hour urine collection. KDIGO 2012 guidelines recommend UPCR or ACR (albumin-creatinine ratio) as the standard for proteinuria quantification in CKD. First morning void is preferred to avoid postural (orthostatic) proteinuria.</p>
+    <h3>Causes of Elevated UPCR</h3>
+    <ul>
+      <li><strong>Glomerular proteinuria:</strong> Diabetic nephropathy, IgA nephropathy, membranous nephropathy, FSGS, lupus nephritis, amyloidosis — typically high UPCR, may reach nephrotic range</li>
+      <li><strong>Tubular proteinuria:</strong> AKI, Fanconi syndrome, heavy metal toxicity — low molecular weight proteins, UPCR typically &lt;1.5</li>
+      <li><strong>Overflow proteinuria:</strong> Multiple myeloma (Bence-Jones proteins), haemoglobin, myoglobin — standard urine dipstick may not detect Bence-Jones</li>
+      <li><strong>Transient/benign:</strong> Fever, exercise, orthostatic (postural) — check first morning void</li>
+    </ul>
+    <h3>ACR vs UPCR</h3>
+    <ul>
+      <li><strong>ACR (albumin-creatinine ratio):</strong> Preferred for diabetic nephropathy and cardiovascular risk assessment — detects early microalbuminuria (&gt;30 mg/g). Normal &lt;30 mg/g, microalbuminuria 30–300 mg/g, macroalbuminuria &gt;300 mg/g</li>
+      <li><strong>UPCR:</strong> Preferred for general proteinuria quantification, non-diabetic CKD, and monitoring known heavy proteinuria. Measures all urinary proteins including albumin, globulins, and tubular proteins</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">CKD staging</div></div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">CrCl Calculator</div><div class="rc-desc">Drug dosing in CKD</div></div></a>
+      <a href="/medical-calculators/fena-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">FENa Calculator</div><div class="rc-desc">AKI classification</div></div></a>
+      <a href="/medical-calculators/corrected-calcium" class="related-card"><span class="rc-icon">🔬</span><div><div class="rc-title">Corrected Calcium</div><div class="rc-desc">Electrolytes in CKD</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> UPCR is an estimate. Factors affecting urine creatinine (muscle mass, hydration, time of day) affect accuracy. Confirm with repeat testing. First morning void minimises orthostatic proteinuria. Persistent UPCR &gt;0.5 warrants nephrology referral.</div>
+</main>
+<script src="/assets/shared-nav.js"></script>
+<script>
+let lastResult=null;
+function calculate(){
+  let uprot=parseFloat(document.getElementById('uprot').value);
+  let ucr=parseFloat(document.getElementById('ucr').value);
+  const units=document.getElementById('units').value;
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!uprot||!ucr){errEl.textContent='Please enter urine protein and creatinine.';errEl.className='error-msg show';return}
+  // Convert g/L and mmol/L to mg/dL
+  if(units==='gl'){uprot=uprot*100;ucr=ucr*11.312;}
+  const upcr=Math.round((uprot/ucr)*100)/100;
+  const est24h=Math.round(upcr*1000);
+  document.getElementById('r-upcr').textContent=upcr;
+  document.getElementById('r-24h').textContent=est24h.toLocaleString();
+  let cat,bg,bc,c,txt;
+  if(upcr<0.15){cat='A1 Normal';bg='#f0fdf4';bc='#bbf7d0';c='#065f46';txt='✅ UPCR '+upcr+' — Normal proteinuria (<150 mg/day).\n\nNo significant proteinuria. Routine CKD monitoring if risk factors present (diabetes, hypertension). Annual UPCR recommended if CKD or cardiovascular risk factors.';}
+  else if(upcr<0.5){cat='A2 Mild';bg='#fffbeb';bc='#fde68a';c='#78350f';txt='⚠️ UPCR '+upcr+' — Mild proteinuria (150–500 mg/day).\n\nCorresponds to KDIGO Category A2. Investigate cause: diabetic nephropathy (check HbA1c, ACR), early glomerular disease, hypertensive nephrosclerosis.\nManagement: ACE inhibitor or ARB (if diabetic or hypertensive nephropathy), BP target <130/80 mmHg, salt restriction. Monitor UPCR every 3–6 months.';}
+  else if(upcr<3.5){cat='A3 Significant';bg='#fef2f2';bc='#fecaca';c='#991b1b';txt='⚠️ UPCR '+upcr+' — Significant proteinuria (500–3500 mg/day).\n\nKDIGO Category A3. Nephrology referral recommended. Investigate with: renal ultrasound, blood tests (ANA, ANCA, complement, anti-GBM, serum protein electrophoresis), urine microscopy for casts.\nTreatment: High-dose ACE inhibitor or ARB (ramipril 10 mg OD or losartan 100 mg OD). BP target <125/75 mmHg. Low-sodium diet. Consider biopsy.';}
+  else{cat='Nephrotic Range';bg='#fef2f2';bc='#dc2626';c:'#7f1d1d';bg='#fef2f2';c='#7f1d1d';txt='🚨 UPCR '+upcr+' — Nephrotic range proteinuria (≥3500 mg/day).\n\nUrgent nephrology referral. Check for nephrotic syndrome: hypoalbuminaemia (<30 g/L), oedema, hyperlipidaemia. Common causes: minimal change disease, FSGS, membranous nephropathy, diabetic nephropathy, amyloidosis.\nManagement: Renal biopsy (usually), diuretics for oedema, statins for hyperlipidaemia, anticoagulation if albumin <20 g/L (thrombosis risk), ACE/ARB, dietary protein 0.8 g/kg/day.';}
+  document.getElementById('r-cat').textContent=cat;
+  const interp=document.getElementById('interp');interp.textContent=txt;interp.style.cssText=`background:${bg};border:1.5px solid ${bc};color:${c};border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:0.84rem;line-height:1.7;white-space:pre-line`;
+  lastResult=`UPCR: ${upcr} mg/mg — ${cat}\nEst. 24h protein: ${est24h.toLocaleString()} mg/day\nCalculated at rxmedcalc.com/medical-calculators/upcr-calculator`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('upcr_calc',{upcr,cat});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🫘 UPCR\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){['uprot','ucr'].forEach(id=>document.getElementById(id).value='');document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>

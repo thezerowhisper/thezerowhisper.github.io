@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="pediatric-dehydration">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pediatric Dehydration Calculator | Dehydration Assessment | DHAKA Score | RxMedCalc</title>
+<meta name="description" content="Free pediatric dehydration assessment calculator using WHO clinical signs and DHAKA score. Assess dehydration severity (no/some/severe) in children with diarrhoea and vomiting. Includes WHO ORT Plan A/B/C, fluid rehydration volumes, and zinc supplementation guide. Used by paediatricians worldwide."/>
+<meta name="keywords" content="pediatric dehydration calculator, child dehydration assessment, DHAKA score, WHO dehydration scale, ORS rehydration plan, Plan A Plan B Plan C dehydration, paediatric ORS, dehydration signs children, WHO diarrhoea management, child dehydration severity"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/pediatric-dehydration"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0a1e2e 60%,#0d1b2a 100%);padding:34px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(6,182,212,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,0.05) 1px,transparent 1px);background-size:40px 40px}
+.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:12px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#67e8f9;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.5rem,5vw,2.3rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:8px}
+h1 em{font-style:italic;color:#22d3ee}
+.page-sub{font-size:0.87rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:16px}
+.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:22px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:22px 20px 80px}
+.calc-card,.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:18px;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+@media(min-width:600px){.calc-card,.content-card{padding:26px}}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:0.98rem;font-weight:700;color:#0d1b2a;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.calc-title::before{content:'';display:block;width:4px;height:16px;background:#06b6d4;border-radius:2px;flex-shrink:0}
+.calc-subtitle{font-size:0.77rem;color:#6b7280;margin-bottom:16px}
+.field label{display:block;font-size:0.69rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.field input{width:100%;padding:11px 13px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:9px;font-family:inherit;font-size:16px;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none}
+.field input:focus{border-color:#06b6d4;box-shadow:0 0 0 3px rgba(6,182,212,0.1)}
+.field .hint{font-size:0.67rem;color:#9ca3af;margin-top:3px}
+/* SIGN ITEMS - 4 WHO signs as 3-option buttons */
+.sign-section{margin-bottom:16px}
+.sign-item{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.sign-name{font-size:0.86rem;font-weight:700;color:#0d1b2a;margin-bottom:8px}
+.sign-opts{display:flex;gap:6px;flex-wrap:wrap}
+.sign-opt{flex:1;min-width:80px;padding:8px 10px;border:1.5px solid #e5e7eb;border-radius:8px;background:#fff;font-family:inherit;font-size:0.75rem;font-weight:600;color:#374151;cursor:pointer;transition:all 0.2s;text-align:center;touch-action:manipulation;line-height:1.3}
+.sign-opt:active{opacity:0.8}
+.sign-opt.sel0{border-color:#10b981;background:#10b981;color:#fff}
+.sign-opt.sel1{border-color:#f59e0b;background:#f59e0b;color:#fff}
+.sign-opt.sel2{border-color:#ef4444;background:#ef4444;color:#fff}
+.score-bar{background:#f3f4f6;border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.sb-label{font-size:0.78rem;font-weight:600;color:#6b7280}
+.sb-val{font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:900;color:#06b6d4}
+.btn-calc{width:100%;padding:13px;border:none;border-radius:10px;color:#fff;font-family:inherit;font-size:0.95rem;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#06b6d4,#0891b2);box-shadow:0 4px 14px rgba(6,182,212,0.3);touch-action:manipulation}
+.btn-calc:active{transform:scale(0.98)}
+.error-msg{color:#dc2626;font-size:0.77rem;margin-top:7px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:16px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:14px 0}
+.dx-card{border-radius:14px;padding:18px;border:2px solid;text-align:center;margin-bottom:14px}
+.dx-sev{font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:900;line-height:1;margin-bottom:4px}
+.dx-name{font-size:0.92rem;font-weight:700;margin-bottom:4px}
+.dx-loss{font-size:0.8rem;opacity:0.85}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-align:center}
+.rbox.hi{background:#ecfeff;border-color:#a5f3fc}
+.rlabel{font-size:0.59rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px}
+.rval{font-size:1.05rem;font-weight:700;color:#0d1b2a}
+.rbox.hi .rval{color:#0891b2}
+.runit{font-size:0.63rem;color:#9ca3af;margin-top:2px}
+.mgmt-box{border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:0.84rem;line-height:1.72;white-space:pre-line}
+.action-row{display:flex;gap:8px;margin-top:10px}
+.act-btn{flex:1;padding:10px 8px;border-radius:9px;font-family:inherit;font-size:0.78rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation}
+.act-btn:active{opacity:0.7}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:7px;padding:8px;background:transparent;border:1.5px solid #e5e7eb;border-radius:9px;color:#9ca3af;font-family:inherit;font-size:0.78rem;cursor:pointer;touch-action:manipulation}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:900;color:#0d1b2a;margin-bottom:12px}
+.content-card h3{font-size:0.9rem;font-weight:700;color:#06b6d4;margin:14px 0 6px}
+.content-card p{font-size:0.84rem;color:#4b5563;line-height:1.78;margin-bottom:8px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.content-card li{font-size:0.82rem;color:#4b5563;padding-left:13px;position:relative;line-height:1.55}
+.content-card li::before{content:'→';position:absolute;left:0;color:#06b6d4;font-size:0.76rem}
+.dehy-table{width:100%;border-collapse:collapse;font-size:0.77rem;margin:10px 0;overflow-x:auto;display:block}
+@media(min-width:600px){.dehy-table{display:table}}
+.dehy-table th{background:#ecfeff;color:#075985;font-weight:700;padding:7px 9px;text-align:left;font-size:0.66rem;text-transform:uppercase;border-bottom:2px solid #a5f3fc}
+.dehy-table td{padding:7px 9px;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;touch-action:manipulation}
+.related-card:active{border-color:#06b6d4;background:#ecfeff}
+.rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Pediatric Dehydration</span></nav>
+    <div class="page-eyebrow">👶 Paediatrics · Diarrhoea · ORS</div>
+    <h1>Pediatric Dehydration<br><em>Assessment</em></h1>
+    <p class="page-sub">Assess dehydration severity in children using WHO 4-sign clinical assessment. Calculates ORS volume and guides WHO Plan A, B, or C rehydration management.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ WHO 4-Sign Assessment</span>
+      <span class="hbadge">✓ Plan A / B / C</span>
+      <span class="hbadge">✓ ORS Volume Calculator</span>
+      <span class="hbadge">✓ Zinc Supplementation</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">Dehydration Assessment</div>
+    <div class="calc-subtitle">Assess each of the 4 WHO clinical signs. Select the option that best matches the child.</div>
+
+    <div class="field" style="margin-bottom:14px">
+      <label>Child's Weight (kg)</label>
+      <input type="number" id="wt" placeholder="e.g. 12" min="1" max="80" inputmode="decimal"/>
+      <div class="hint">kg — for ORS volume calculation</div>
+    </div>
+
+    <div class="sign-section" id="signs-container"></div>
+
+    <div class="score-bar">
+      <span class="sb-label">Dehydration Score (0–8)</span>
+      <span class="sb-val" id="score-val">0</span>
+    </div>
+    <div class="error-msg" id="error-msg"></div>
+    <button class="btn-calc" onclick="calculate()">Assess Dehydration →</button>
+
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="dx-card" id="dx-card">
+        <div class="dx-sev" id="dx-sev">—</div>
+        <div class="dx-name" id="dx-name">—</div>
+        <div class="dx-loss" id="dx-loss">—</div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">WHO Plan</div><div class="rval" id="r-plan">—</div><div class="runit">rehydration</div></div>
+        <div class="rbox"><div class="rlabel">ORS (4h)</div><div class="rval" id="r-ors">—</div><div class="runit">mL</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 Share</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>WHO Dehydration Classification</h2>
+    <table class="dehy-table">
+      <thead><tr><th>Sign</th><th>0 — No Dehydration</th><th>1 — Some Dehydration</th><th>2 — Severe Dehydration</th></tr></thead>
+      <tbody>
+        <tr><td><strong>General appearance</strong></td><td>Well, alert</td><td>Restless, irritable</td><td>Lethargic, unconscious, floppy</td></tr>
+        <tr><td><strong>Eyes</strong></td><td>Normal</td><td>Sunken</td><td>Very sunken and dry</td></tr>
+        <tr><td><strong>Thirst / drinking</strong></td><td>Drinks normally, not thirsty</td><td>Thirsty, drinks eagerly</td><td>Drinks poorly or not able</td></tr>
+        <tr><td><strong>Skin pinch</strong></td><td>Returns immediately</td><td>Returns slowly (&lt;2s)</td><td>Returns very slowly (&gt;2s)</td></tr>
+      </tbody>
+    </table>
+    <h3>WHO Rehydration Plans</h3>
+    <ul>
+      <li><strong>Plan A (No/Minimal Dehydration — Score 0–1):</strong> Home treatment with ORS. Give 10 mL/kg ORS for each loose stool passed. Continue breastfeeding. Zinc 20 mg OD × 10 days (10 mg if &lt;6 months). Return if worsening</li>
+      <li><strong>Plan B (Some Dehydration — Score 2–4):</strong> ORS 75 mL/kg over 4 hours in clinic. Reassess every hour. If vomiting: 5–10 mL/kg NG ORS. After rehydration, continue Plan A. Zinc 20 mg OD × 10 days</li>
+      <li><strong>Plan C (Severe Dehydration — Score ≥5):</strong> IV Ringer's Lactate (preferred) or NS: 100 mL/kg. Children: 30 mL/kg over 30 min, then 70 mL/kg over 2.5 hours. Reassess every 15–30 min. Start ORS as soon as child can drink. Admit to hospital</li>
+    </ul>
+    <h3>Zinc Supplementation — Why It Matters</h3>
+    <p>WHO and UNICEF recommend zinc supplementation for all children with diarrhoea: 20 mg/day for children ≥6 months, 10 mg/day for infants &lt;6 months, for 10–14 days. Zinc reduces the duration of diarrhoea by ~25%, reduces stool output, and reduces the risk of subsequent diarrhoeal episodes for up to 3 months. In India and South Asia, zinc supplementation is part of the national diarrhoea management protocol alongside ORS.</p>
+    <h3>Red Flags — When to Refer Urgently</h3>
+    <ul>
+      <li>Severe dehydration (Plan C) — always admit</li>
+      <li>Bloody diarrhoea (dysentery) — antibiotic therapy needed</li>
+      <li>High fever (&gt;39°C) with diarrhoea in infants &lt;6 months</li>
+      <li>Persistent vomiting preventing ORS administration</li>
+      <li>Abdominal distension — possible ileus or obstruction</li>
+      <li>Worsening dehydration despite Plan B</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/ors" class="related-card"><span class="rc-icon">💧</span><div><div class="rc-title">ORS Calculator</div><div class="rc-desc">ORS volume calculation</div></div></a>
+      <a href="/medical-calculators/holliday-segar" class="related-card"><span class="rc-icon">💧</span><div><div class="rc-title">IV Maintenance</div><div class="rc-desc">Holliday-Segar fluids</div></div></a>
+      <a href="/medical-calculators/pediatric-weight" class="related-card"><span class="rc-icon">⚖️</span><div><div class="rc-title">Paediatric Weight</div><div class="rc-desc">Weight estimation</div></div></a>
+      <a href="/medical-calculators/paracetamol" class="related-card"><span class="rc-icon">🌡️</span><div><div class="rc-title">Paracetamol Dose</div><div class="rc-desc">Fever management</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Clinical dehydration assessment must integrate all 4 WHO signs, vital signs, urine output, and weight loss. This tool is a decision-support guide. Children with severe dehydration, shock, or inability to drink require immediate IV therapy and hospital admission. Always reassess after rehydration.</div>
+</main>
+<script src="/assets/shared-nav.js"></script>
+<script>
+const SIGNS=[
+  {id:'general',name:'General Appearance / Condition',opts:['Well, alert (0)','Restless or irritable (1)','Lethargic, floppy, or unconscious (2)']},
+  {id:'eyes',name:'Eyes',opts:['Normal (0)','Sunken (1)','Very sunken and dry (2)']},
+  {id:'thirst',name:'Thirst / Drinking',opts:['Drinks normally, not thirsty (0)','Thirsty, drinks eagerly (1)','Drinks poorly or unable to drink (2)']},
+  {id:'skin',name:'Skin Pinch',opts:['Returns immediately (0)','Returns slowly — <2 seconds (1)','Returns very slowly — >2 seconds (2)']},
+];
+const signScores={};let lastResult=null;
+document.getElementById('signs-container').innerHTML=SIGNS.map(s=>`
+  <div class="sign-item">
+    <div class="sign-name">${s.name}</div>
+    <div class="sign-opts">
+      ${s.opts.map((o,i)=>`<button class="sign-opt" id="so-${s.id}-${i}" onclick="setSign('${s.id}',${i})">${o}</button>`).join('')}
+    </div>
+  </div>`).join('');
+function setSign(id,val){
+  SIGNS.find(s=>s.id===id).opts.forEach((_,i)=>{
+    const btn=document.getElementById(`so-${id}-${i}`);
+    btn.className='sign-opt'+(i===val?' sel'+val:'');
+  });
+  signScores[id]=val;
+  const total=Object.values(signScores).reduce((a,b)=>a+b,0);
+  document.getElementById('score-val').textContent=total;
+  document.getElementById('score-val').style.color=total<=1?'#16a34a':total<=4?'#d97706':'#dc2626';
+}
+function calculate(){
+  const wt=parseFloat(document.getElementById('wt').value);
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!wt||wt<1){errEl.textContent='Please enter child\'s weight.';errEl.className='error-msg show';return}
+  if(Object.keys(signScores).length<4){errEl.textContent='Please assess all 4 clinical signs.';errEl.className='error-msg show';return}
+  const score=Object.values(signScores).reduce((a,b)=>a+b,0);
+  const hasSevere=signScores.general===2||signScores.skin===2;
+  const dx=document.getElementById('dx-card');
+  let sev,name,loss,plan,ors,bg,bc,c,mTxt;
+  if(hasSevere||score>=5){
+    sev='Severe';name='Severe Dehydration';loss='≥10% body weight';plan='Plan C';bg='#fef2f2';bc='#dc2626';c='#7f1d1d';
+    const ivVol=Math.round(wt*100);
+    ors='IV Required';
+    mTxt=`🚨 SEVERE DEHYDRATION — WHO Plan C (IV Fluids Required)\n\nImmediate IV rehydration:\n• Ringer's Lactate preferred (or 0.9% NaCl)\n• Children: 30 mL/kg over 30 min → then 70 mL/kg over 2.5 hours\n• Total: ${ivVol} mL (100 mL/kg)\n• Reassess every 15–30 minutes\n• Admit to hospital immediately\n• Start ORS 5 mL/kg/hr as soon as child can drink\n\nZinc: 20 mg OD × 10 days (10 mg if <6 months)\nAntibiotics only if bloody stools (dysentery) or cholera suspected`;
+  } else if(score>=2){
+    sev='Some';name='Some Dehydration';loss='5–9% body weight';plan='Plan B';bg='#fffbeb';bc='#fde68a';c='#78350f';
+    const orsVol=Math.round(wt*75);ors=orsVol+' mL';
+    mTxt=`⚠️ SOME DEHYDRATION — WHO Plan B (ORS in clinic/hospital)\n\nORS rehydration:\n• Give ${orsVol} mL (75 mL/kg) over 4 hours\n• Small frequent sips — 5 mL every 1–2 min if vomiting\n• If unable to drink: NG tube ORS at same rate\n\nReassess every 1–2 hours. After 4h:\n• If improved → continue Plan A at home\n• If worsening → escalate to Plan C\n\nZinc: 20 mg OD × 10 days\nContinue breastfeeding throughout\nDo not restrict diet once tolerating fluids`;
+  } else {
+    sev='No/Minimal';name='No or Minimal Dehydration';loss='<5% body weight';plan='Plan A';bg='#f0fdf4';bc='#bbf7d0';c='#065f46';
+    const orsVol=Math.round(wt*10)*3;ors=orsVol+' mL/day';// 10 mL/kg per stool ×3 stools estimate
+    mTxt=`✅ NO/MINIMAL DEHYDRATION — WHO Plan A (Home Treatment)\n\nHome ORS:\n• Give ${Math.round(wt*10)} mL ORS after each loose stool\n• Continue breastfeeding — more frequently than usual\n• Continue age-appropriate diet\n\nORS sachets: 1 sachet in 200 mL boiled cooled water\n\nZinc: 20 mg OD × 10–14 days (reduces duration by 25%)\n\nReturn immediately if:\n• Cannot drink or breastfeed\n• Worsening diarrhoea or vomiting\n• High fever\n• Blood in stool\n• Appears sicker`;
+  }
+  dx.style.cssText=`background:${bg};border:2px solid ${bc};border-radius:14px;padding:18px;text-align:center;margin-bottom:14px`;
+  document.getElementById('dx-sev').textContent=sev;document.getElementById('dx-sev').style.color=bc;
+  document.getElementById('dx-name').textContent=name;document.getElementById('dx-name').style.color=c;
+  document.getElementById('dx-loss').textContent='Estimated fluid loss: '+loss;document.getElementById('dx-loss').style.color=c;
+  document.getElementById('r-plan').textContent=plan;
+  document.getElementById('r-ors').textContent=ors;
+  const mgmt=document.getElementById('mgmt-box');mgmt.textContent=mTxt;mgmt.style.cssText=`background:${bg};border:1.5px solid ${bc};color:${c};border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:0.84rem;line-height:1.72;white-space:pre-line`;
+  lastResult=`Dehydration: ${name} (WHO ${plan})\nORS: ${ors} | Weight: ${wt} kg | Score: ${score}/8\nCalculated at rxmedcalc.com/medical-calculators/pediatric-dehydration`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('ped_dehydration',{sev,plan,score});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('👶 Dehydration\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){Object.keys(signScores).forEach(k=>delete signScores[k]);document.querySelectorAll('.sign-opt').forEach(b=>{b.className='sign-opt'});document.getElementById('wt').value='';document.getElementById('score-val').textContent='0';document.getElementById('score-val').style.color='#06b6d4';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>
