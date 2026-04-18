@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="abcd2-score">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ABCD2 Score Calculator | TIA Stroke Risk | 2-Day & 7-Day Risk | RxMedCalc</title>
+<meta name="description" content="Free ABCD2 score calculator for TIA stroke risk stratification. Calculate 2-day and 7-day stroke risk after transient ischaemic attack. Identifies high-risk TIA patients needing urgent investigation. AHA/ASA 2021 guidelines."/>
+<meta name="keywords" content="ABCD2 score, TIA stroke risk, ABCD2 calculator, transient ischaemic attack, TIA risk stratification, stroke after TIA, ABCD2 interpretation, TIA emergency management, crescendo TIA, TIA high risk"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/abcd2-score"/>
+<meta property="og:title" content="ABCD2 Score | TIA Stroke Risk Calculator | RxMedCalc"/>
+<meta property="og:description" content="Calculate ABCD2 score for TIA. 2-day and 7-day stroke risk. Urgent investigation criteria. AHA/ASA 2021."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/abcd2-score"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/abcd2-score","name":"ABCD2 Score — TIA Stroke Risk Calculator","description":"ABCD2 score for TIA stroke risk stratification. 2-day and 7-day risk estimation. AHA/ASA 2021.","inLanguage":"en","dateModified":"2025-04-17"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"ABCD2 Score","item":"https://rxmedcalc.com/medical-calculators/abcd2-score"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What ABCD2 score is high risk?","acceptedAnswer":{"@type":"Answer","text":"ABCD2 score ≥4 is considered high risk. Score 4–5 = moderate-high risk (~4% 2-day stroke risk). Score 6–7 = high risk (~8% 2-day stroke risk). These patients require urgent same-day specialist assessment and should not be discharged from the ED without imaging and specialist review."}},
+{"@type":"Question","name":"What is the 2-day stroke risk after TIA?","acceptedAnswer":{"@type":"Answer","text":"The 2-day stroke risk after TIA by ABCD2 score: Score 0–3 (low risk): ~1%. Score 4–5 (moderate): ~4%. Score 6–7 (high): ~8%. However, the EXPRESS trial showed that urgent same-day treatment of all TIAs (regardless of ABCD2) reduces 90-day stroke risk by 80%, so urgency should be applied to all TIAs."}}
+]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a1030 60%,#0d1b2a 100%);padding:36px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(139,92,246,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,0.05) 1px,transparent 1px);background-size:40px 40px}
+.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:14px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#c4b5fd;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:12px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px}
+h1 em{font-style:italic;color:#a78bfa}
+.page-sub{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:18px}
+.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:26px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:24px 20px 80px}
+.calc-card,.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+@media(min-width:600px){.calc-card,.content-card{padding:26px}}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:0.98rem;font-weight:700;color:#0d1b2a;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.calc-title::before{content:'';display:block;width:4px;height:16px;background:#8b5cf6;border-radius:2px;flex-shrink:0}
+.calc-subtitle{font-size:0.78rem;color:#6b7280;margin-bottom:18px}
+/* CRITERIA */
+.criteria-list{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+/* Multi-option criteria */
+.crit-group{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px}
+.crit-name{font-size:0.9rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}
+.crit-detail{font-size:0.72rem;color:#6b7280;margin-bottom:10px;line-height:1.4}
+.opts{display:flex;flex-direction:column;gap:6px}
+@media(min-width:480px){.opts.row{flex-direction:row;flex-wrap:wrap}}
+.opt-btn{padding:9px 14px;border:1.5px solid #e5e7eb;border-radius:9px;background:#fff;font-family:inherit;font-size:0.82rem;font-weight:600;color:#374151;cursor:pointer;transition:all 0.15s;text-align:left;touch-action:manipulation;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.opt-btn:active{transform:scale(0.97)}
+.opt-btn.sel{border-color:#8b5cf6;background:#faf5ff;color:#6d28d9;font-weight:700}
+.opt-pts{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:900;color:#d1d5db;flex-shrink:0}
+.opt-btn.sel .opt-pts{color:#8b5cf6}
+/* running total */
+.running-total{background:linear-gradient(135deg,#faf5ff,#fff);border:1.5px solid #e9d5ff;border-radius:12px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.rt-label{font-size:0.78rem;font-weight:600;color:#6b7280}
+.rt-val{font-family:'Fraunces',Georgia,serif;font-size:2.2rem;font-weight:900;color:#8b5cf6}
+.btn-calc{width:100%;padding:13px;border:none;border-radius:11px;color:#fff;font-family:inherit;font-size:0.95rem;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#8b5cf6,#7c3aed);box-shadow:0 4px 14px rgba(139,92,246,0.3);touch-action:manipulation}
+.btn-calc:active{transform:scale(0.98)}
+.results{display:none;margin-top:16px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:14px 0}
+.score-display{text-align:center;margin-bottom:16px;background:linear-gradient(135deg,#faf5ff,#fff);border:1.5px solid #e9d5ff;border-radius:14px;padding:20px}
+.sc-num{font-family:'Fraunces',Georgia,serif;font-size:4rem;font-weight:900;color:#8b5cf6;line-height:1}
+.sc-badge{display:inline-block;padding:5px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;margin-top:8px}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+@media(min-width:480px){.result-grid{grid-template-columns:repeat(3,1fr)}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-align:center}
+.rbox.hi{background:#faf5ff;border-color:#e9d5ff}
+.rlabel{font-size:0.59rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px}
+.rval{font-size:1.1rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+.rbox.hi .rval{color:#7c3aed}
+.runit{font-size:0.63rem;color:#9ca3af;margin-top:2px}
+.mgmt-box{border-radius:11px;padding:13px;margin-bottom:12px;font-size:0.85rem;line-height:1.75;white-space:pre-line}
+.action-row{display:flex;gap:8px;margin-top:10px}
+.act-btn{flex:1;padding:10px 8px;border-radius:9px;font-family:inherit;font-size:0.78rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation}
+.act-btn:active{opacity:0.7}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:7px;padding:8px;background:transparent;border:1.5px solid #e5e7eb;border-radius:9px;color:#9ca3af;font-family:inherit;font-size:0.78rem;cursor:pointer;touch-action:manipulation}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:900;color:#0d1b2a;margin-bottom:12px}
+.content-card h3{font-size:0.92rem;font-weight:700;color:#8b5cf6;margin:14px 0 6px}
+.content-card p{font-size:0.85rem;color:#4b5563;line-height:1.78;margin-bottom:8px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;margin-bottom:8px}
+.content-card li{font-size:0.83rem;color:#4b5563;padding-left:13px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#8b5cf6;font-size:0.76rem}
+.abcd2-table{width:100%;border-collapse:collapse;font-size:0.8rem;margin:10px 0;overflow-x:auto;display:block}
+@media(min-width:600px){.abcd2-table{display:table}}
+.abcd2-table th{background:#faf5ff;color:#6d28d9;font-weight:700;padding:8px 10px;text-align:left;font-size:0.68rem;text-transform:uppercase;border-bottom:2px solid #e9d5ff}
+.abcd2-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;color:#374151}
+.faq-item{border-bottom:1px solid #f3f4f6;padding:14px 0}.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.88rem;font-weight:600;color:#0d1b2a;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none;touch-action:manipulation}
+.faq-q::after{content:'＋';color:#8b5cf6;font-size:1rem;flex-shrink:0;transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.83rem;color:#4b5563;line-height:1.75}
+.faq-item.open .faq-a{max-height:400px;padding-top:8px}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;touch-action:manipulation;transition:border-color 0.15s}
+.related-card:active,.related-card:hover{border-color:#8b5cf6;background:#faf5ff}
+.rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>ABCD2 Score</span></nav>
+    <div class="page-eyebrow">🧠 Neurology · TIA · Stroke Prevention</div>
+    <h1>ABCD2 Score<br><em>TIA Stroke Risk</em></h1>
+    <p class="page-sub">Risk stratify transient ischaemic attacks. Predict 2-day and 7-day stroke risk. Identifies patients needing urgent same-day investigation and secondary prevention.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 2-Day &amp; 7-Day Stroke Risk</span>
+      <span class="hbadge">✓ AHA/ASA 2021</span>
+      <span class="hbadge">✓ Urgent Investigation Guide</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">ABCD2 Score</div>
+    <div class="calc-subtitle">Select one option per criterion. Maximum score = 7.</div>
+
+    <div class="criteria-list">
+      <!-- A: Age -->
+      <div class="crit-group">
+        <div class="crit-name">A — Age</div>
+        <div class="crit-detail">Patient's age at time of TIA</div>
+        <div class="opts row">
+          <button class="opt-btn" id="a0" onclick="setScore('A',0,'a0')">Age &lt;60 years<span class="opt-pts">+0</span></button>
+          <button class="opt-btn" id="a1" onclick="setScore('A',1,'a1')">Age ≥60 years<span class="opt-pts">+1</span></button>
+        </div>
+      </div>
+      <!-- B: BP -->
+      <div class="crit-group">
+        <div class="crit-name">B — Blood Pressure</div>
+        <div class="crit-detail">BP at first assessment after TIA (even if on antihypertensives)</div>
+        <div class="opts row">
+          <button class="opt-btn" id="b0" onclick="setScore('B',0,'b0')">SBP &lt;140 AND DBP &lt;90<span class="opt-pts">+0</span></button>
+          <button class="opt-btn" id="b1" onclick="setScore('B',1,'b1')">SBP ≥140 OR DBP ≥90<span class="opt-pts">+1</span></button>
+        </div>
+      </div>
+      <!-- C: Clinical features -->
+      <div class="crit-group">
+        <div class="crit-name">C — Clinical Features</div>
+        <div class="crit-detail">Predominant presenting symptom of the TIA episode</div>
+        <div class="opts">
+          <button class="opt-btn" id="c0" onclick="setScore('C',0,'c0')">Other symptom (sensory loss, visual, vertigo, etc.)<span class="opt-pts">+0</span></button>
+          <button class="opt-btn" id="c1" onclick="setScore('C',1,'c1')">Speech disturbance WITHOUT unilateral weakness<span class="opt-pts">+1</span></button>
+          <button class="opt-btn" id="c2" onclick="setScore('C',2,'c2')">Unilateral weakness (arm, leg, or face)<span class="opt-pts">+2</span></button>
+        </div>
+      </div>
+      <!-- D1: Duration -->
+      <div class="crit-group">
+        <div class="crit-name">D — Duration of Symptoms</div>
+        <div class="crit-detail">Total duration of TIA symptoms from onset to complete resolution</div>
+        <div class="opts row">
+          <button class="opt-btn" id="d0" onclick="setScore('D',0,'d0')">&lt;10 minutes<span class="opt-pts">+0</span></button>
+          <button class="opt-btn" id="d1" onclick="setScore('D',1,'d1')">10–59 minutes<span class="opt-pts">+1</span></button>
+          <button class="opt-btn" id="d2" onclick="setScore('D',2,'d2')">≥60 minutes<span class="opt-pts">+2</span></button>
+        </div>
+      </div>
+      <!-- D2: Diabetes -->
+      <div class="crit-group">
+        <div class="crit-name">D — Diabetes</div>
+        <div class="crit-detail">Known diabetes mellitus (on treatment or previously diagnosed)</div>
+        <div class="opts row">
+          <button class="opt-btn" id="dm0" onclick="setScore('DM',0,'dm0')">No diabetes<span class="opt-pts">+0</span></button>
+          <button class="opt-btn" id="dm1" onclick="setScore('DM',1,'dm1')">Diabetes present<span class="opt-pts">+1</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="running-total">
+      <span class="rt-label">ABCD2 Score (max 7)</span>
+      <span class="rt-val" id="rt-val">0</span>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Calculate TIA Stroke Risk →</button>
+
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-display">
+        <div class="sc-num" id="sc-num">—</div>
+        <div style="font-size:0.85rem;color:#6b7280;margin-top:4px">ABCD2 Score (max 7)</div>
+        <div class="sc-badge" id="sc-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">ABCD2 Score</div><div class="rval" id="r-score">—</div><div class="runit">/ 7</div></div>
+        <div class="rbox"><div class="rlabel">2-Day Stroke Risk</div><div class="rval" id="r-2day">—</div><div class="runit">%</div></div>
+        <div class="rbox"><div class="rlabel">7-Day Stroke Risk</div><div class="rval" id="r-7day">—</div><div class="runit">%</div></div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>ABCD2 Score — Stroke Risk Reference</h2>
+    <table class="abcd2-table">
+      <thead><tr><th>Score</th><th>Risk Category</th><th>2-Day Stroke Risk</th><th>7-Day Stroke Risk</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td>0–3</td><td>Low</td><td>~1%</td><td>~1.2%</td><td>Urgent outpatient clinic within 24h</td></tr>
+        <tr><td>4–5</td><td>Moderate</td><td>~4%</td><td>~5.9%</td><td>Same-day specialist review. Do not discharge without assessment</td></tr>
+        <tr><td>6–7</td><td>High</td><td>~8%</td><td>~11.7%</td><td>Admission recommended. Immediate investigation</td></tr>
+      </tbody>
+    </table>
+    <h3>Urgent Investigation for ALL TIA Patients (AHA/ASA 2021)</h3>
+    <p>The ABCD2 score identifies risk but <strong>all TIA patients</strong> warrant urgent investigation regardless of score. The EXPRESS and SOS-TIA trials showed that rapid same-day treatment reduced 90-day stroke risk by 80%.</p>
+    <ul>
+      <li><strong>Brain imaging:</strong> MRI with DWI within 24h (preferred) — identifies acute infarct in ~50% of TIAs confirming stroke diagnosis. CT head if MRI unavailable or contraindicated</li>
+      <li><strong>Vascular imaging:</strong> CT angiography or carotid duplex — urgent if anterior circulation TIA. Carotid stenosis &gt;50% = surgery within 2 weeks (CEA or stenting)</li>
+      <li><strong>Cardiac monitoring:</strong> ECG, 24-72h Holter (or prolonged monitoring if cryptogenic) — AF found in 10–15% of TIA patients</li>
+      <li><strong>Bloods:</strong> FBC, ESR, glucose, lipids, HbA1c, coagulation screen</li>
+      <li><strong>Echocardiography:</strong> If cardioembolic source suspected (AF, valvular disease, young patient)</li>
+    </ul>
+    <h3>Immediate Secondary Prevention — Start Within Hours</h3>
+    <ul>
+      <li><strong>Dual antiplatelet therapy (DAPT):</strong> Aspirin 300 mg loading dose IMMEDIATELY + Clopidogrel 300 mg loading dose. Then aspirin 75 mg + clopidogrel 75 mg daily for 21 days (POINT trial / CHANCE trial). After 21 days: aspirin 75 mg alone long-term</li>
+      <li><strong>Statin:</strong> Start high-intensity statin immediately — atorvastatin 40–80 mg OD. Target LDL &lt;1.8 mmol/L (70 mg/dL)</li>
+      <li><strong>Blood pressure:</strong> If SBP &gt;140 mmHg, start/optimise antihypertensive within 24h. Target &lt;130/80 mmHg long-term. Do not lower aggressively in acute phase</li>
+      <li><strong>Anticoagulation:</strong> If AF confirmed — start DOAC after ruling out haemorrhage on imaging. Do not give DAPT if anticoagulating</li>
+      <li><strong>No tPA:</strong> Thrombolytics are NOT recommended for TIA (symptoms fully resolved)</li>
+    </ul>
+    <h3>Limitations of ABCD2 Score</h3>
+    <ul>
+      <li>ABCD2 does not replace clinical judgement — even a score of 0–3 does not make TIA "safe" to discharge without investigation</li>
+      <li>ABCD2 was not designed to differentiate TIA from TIA mimics (hypoglycaemia, migraine aura, Todd's paresis, functional disorder)</li>
+      <li>DWI-positive lesion on MRI is a better predictor of early stroke than ABCD2 score alone</li>
+      <li>Crescendo TIA (≥2 TIAs in 1 week): very high risk regardless of ABCD2 score — treat as stroke emergency</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/nihss-calculator" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">NIHSS Calculator</div><div class="rc-desc">Ischaemic stroke severity</div></div></a>
+      <a href="/medical-calculators/cha2ds2-vasc" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">CHA₂DS₂-VASc</div><div class="rc-desc">AF anticoagulation after TIA</div></div></a>
+      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">BP management in TIA</div></div></a>
+      <a href="/medical-calculators/hunt-hess" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">Hunt-Hess Scale</div><div class="rc-desc">SAH severity</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> ABCD2 score is a risk stratification tool — it does not replace urgent clinical assessment. All TIA patients require urgent specialist evaluation, neuroimaging, and vascular imaging regardless of score. Never use ABCD2 alone to justify discharge from the emergency department. If in doubt, admit.</div>
+</main>
+<script src="/assets/shared-nav.js"></script>
+<script>
+const scores={A:null,B:null,C:null,D:null,DM:null};let lastResult=null;
+const faqs=[
+  ['What ABCD2 score is high risk?','ABCD2 ≥4 is considered high risk requiring same-day specialist review. Score 6–7 is very high risk (~8% 2-day stroke risk) and usually warrants admission. However, all TIA patients need urgent assessment regardless of score.'],
+  ['Should I admit all TIA patients?','AHA/ASA 2021 recommends considering admission for all high-risk TIA (ABCD2 ≥4, crescendo TIA, cardioembolic source, known carotid stenosis, or no access to rapid outpatient TIA clinic). Low-risk patients (ABCD2 0–3) can be seen in a specialist TIA clinic within 24 hours if reliably available.'],
+  ['What is the difference between TIA and stroke?','TIA = transient neurological deficit fully resolving within 24 hours (usually <60 minutes) without brain infarction on MRI. Minor ischaemic stroke = DWI-positive infarct on MRI regardless of clinical resolution. About 50% of clinical TIAs show acute infarct on DWI — these are better classified as minor strokes.'],
+  ['What dual antiplatelet therapy is recommended after TIA?','DAPT (aspirin + clopidogrel) for 21 days immediately after TIA, based on POINT and CHANCE trials — reduces early stroke by 25% vs aspirin alone. Loading doses: aspirin 300 mg + clopidogrel 300 mg immediately. Then aspirin 75 mg + clopidogrel 75 mg daily. After 21 days: aspirin 75 mg monotherapy long-term.'],
+];
+document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
+function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}
+function setScore(key,val,btnId){
+  // Deselect all buttons for this key
+  document.querySelectorAll(`[id^="${key.toLowerCase()}"]`).forEach(b=>b.classList.remove('sel'));
+  document.getElementById(btnId).classList.add('sel');
+  scores[key]=val;
+  const total=Object.values(scores).filter(v=>v!==null).reduce((a,b)=>a+b,0);
+  document.getElementById('rt-val').textContent=total;
+}
+function calculate(){
+  const unanswered=Object.keys(scores).filter(k=>scores[k]===null);
+  if(unanswered.length>0){const errEl=document.getElementById('results');errEl.className='results';alert('Please answer all 5 criteria.');return;}
+  const total=Object.values(scores).reduce((a,b)=>a+b,0);
+  document.getElementById('sc-num').textContent=total;
+  document.getElementById('r-score').textContent=total+'/7';
+  let risk2,risk7,cat,bg,bc,c,mTxt;
+  if(total<=3){risk2='~1';risk7='~1.2';cat='Low Risk';bg='#f0fdf4';bc='#bbf7d0';c='#065f46';
+    mTxt='✅ ABCD2 '+total+' — Low TIA stroke risk (~1% at 2 days).\n\nHowever, all TIAs require urgent assessment:\n• Urgent outpatient TIA clinic within 24 hours\n• Start DAPT immediately: Aspirin 300 mg loading + Clopidogrel 300 mg\n• Start atorvastatin 40–80 mg OD\n• Brain MRI with DWI + carotid duplex within 24h\n• 12-lead ECG + 24h Holter monitor\n• Blood pressure control — target <130/80 long-term\n• Do NOT drive until cleared by specialist';}
+  else if(total<=5){risk2='~4';risk7='~5.9';cat='Moderate Risk';bg='#fffbeb';bc='#fde68a';c='#92400e';
+    mTxt='⚠️ ABCD2 '+total+' — Moderate TIA stroke risk (~4% at 2 days).\n\nDo NOT discharge without same-day specialist review:\n• Same-day specialist neurology assessment\n• Immediate DAPT: Aspirin 300 mg + Clopidogrel 300 mg loading\n• Atorvastatin 40–80 mg OD — start now\n• Urgent brain MRI (DWI) + CT angiography\n• Consider admission if rapid outpatient pathway unavailable\n• 72h cardiac monitoring for AF\n• Patient must not drive until reviewed';}
+  else{risk2='~8';risk7='~11.7';cat='High Risk';bg='#fef2f2';bc='#fecaca';c='#7f1d1d';
+    mTxt='🚨 ABCD2 '+total+' — High TIA stroke risk (~8% at 2 days).\n\nAdmit or immediate specialist review:\n• Admit to stroke unit for monitoring and investigation\n• Immediate DAPT: Aspirin 300 mg + Clopidogrel 300 mg loading\n• Atorvastatin 80 mg OD\n• Urgent MRI brain (DWI) + CT angiography — same day\n• Continuous cardiac monitoring for AF\n• Carotid stenosis >50% → surgery within 2 weeks (CEA)\n• BP: if >220/120, treat cautiously. Otherwise optimise over next 24–48h\n• Crescendo TIA (≥2 in 1 week): treat as stroke emergency';}
+  const badge=document.getElementById('sc-badge');badge.textContent=cat;badge.style.cssText=`background:${bg};color:${c};border:1.5px solid ${bc};display:inline-block;padding:5px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;margin-top:8px`;
+  document.getElementById('r-2day').textContent=risk2+'%';
+  document.getElementById('r-7day').textContent=risk7+'%';
+  const mgmt=document.getElementById('mgmt-box');mgmt.textContent=mTxt;mgmt.style.cssText=`background:${bg};border:1.5px solid ${bc};color:${c};border-radius:11px;padding:13px;margin-bottom:12px;font-size:0.85rem;line-height:1.75;white-space:pre-line`;
+  lastResult=`ABCD2 Score: ${total}/7 — ${cat}\n2-Day Stroke Risk: ${risk2}% | 7-Day: ${risk7}%\nCalculated at rxmedcalc.com/medical-calculators/abcd2-score`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('abcd2_calc',{score:total,cat});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🧠 ABCD2 TIA\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){Object.keys(scores).forEach(k=>scores[k]=null);document.querySelectorAll('.opt-btn').forEach(b=>b.classList.remove('sel'));document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
+</script>
+</body>
+</html>

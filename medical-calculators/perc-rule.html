@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="perc-rule">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PERC Rule Calculator | Pulmonary Embolism Rule-Out | PE Low Risk | RxMedCalc</title>
+<meta name="description" content="Free PERC rule calculator for pulmonary embolism rule-out in low-risk patients. If all 8 PERC criteria are negative AND pre-test probability is low, PE is safely excluded without D-dimer or imaging. AHA/ESC guidelines."/>
+<meta name="keywords" content="PERC rule, PERC calculator, pulmonary embolism rule out, PE rule out criteria, PERC negative PE, D-dimer PE, low risk PE, pulmonary embolism emergency, PERC 8 criteria, PERC vs D-dimer"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/perc-rule"/>
+<meta property="og:title" content="PERC Rule Calculator | PE Rule-Out | RxMedCalc"/>
+<meta property="og:description" content="PERC rule for pulmonary embolism rule-out. 8 criteria — if all negative in low pre-test probability, safely excludes PE without D-dimer."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/perc-rule"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0f1e2e 60%,#0d1b2a 100%);padding:36px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.05) 1px,transparent 1px);background-size:40px 40px}
+.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:14px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#93c5fd;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:12px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px}
+h1 em{font-style:italic;color:#60a5fa}
+.page-sub{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:18px}
+.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:26px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:24px 20px 80px}
+.calc-card,.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+@media(min-width:600px){.calc-card,.content-card{padding:26px}}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:0.98rem;font-weight:700;color:#0d1b2a;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.calc-title::before{content:'';display:block;width:4px;height:16px;background:#3b82f6;border-radius:2px;flex-shrink:0}
+.calc-subtitle{font-size:0.78rem;color:#6b7280;margin-bottom:4px}
+/* Pre-test prompt */
+.pretest-box{background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:10px;padding:12px 14px;margin-bottom:16px;font-size:0.82rem;color:#1d4ed8;line-height:1.6}
+.pretest-box strong{display:block;margin-bottom:4px;font-size:0.85rem}
+/* PERC criteria checklist */
+.perc-list{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.perc-item{display:flex;align-items:flex-start;gap:12px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:11px;padding:12px 14px;cursor:pointer;transition:all 0.15s;touch-action:manipulation;user-select:none;-webkit-tap-highlight-color:transparent}
+.perc-item.positive{background:#fef2f2;border-color:#fecaca}
+.pi-chk{width:22px;height:22px;border:2px solid #d1d5db;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all 0.15s;background:#fff;font-size:0.85rem}
+.perc-item.positive .pi-chk{background:#ef4444;border-color:#ef4444;color:#fff}
+.pi-body{flex:1}
+.pi-name{font-size:0.88rem;font-weight:700;color:#0d1b2a;line-height:1.3}
+.pi-detail{font-size:0.7rem;color:#6b7280;margin-top:2px;line-height:1.4}
+.pi-warn{font-size:0.68rem;color:#ef4444;font-weight:600;margin-top:3px}
+/* Running total */
+.perc-summary{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.ps-label{font-size:0.78rem;font-weight:600;color:#6b7280}
+.ps-count{font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:900;color:#ef4444}
+.ps-count.zero{color:#10b981}
+.btn-calc{width:100%;padding:13px;border:none;border-radius:11px;color:#fff;font-family:inherit;font-size:0.95rem;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#3b82f6,#2563eb);box-shadow:0 4px 14px rgba(59,130,246,0.3);touch-action:manipulation}
+.btn-calc:active{transform:scale(0.98)}
+.results{display:none;margin-top:16px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:14px 0}
+.verdict-card{border-radius:14px;padding:20px;border:2px solid;text-align:center;margin-bottom:14px}
+.verdict-icon{font-size:3rem;margin-bottom:8px}
+.verdict-title{font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:900;line-height:1.2;margin-bottom:6px}
+.verdict-sub{font-size:0.85rem;opacity:0.85}
+.mgmt-box{border-radius:11px;padding:13px;margin-bottom:12px;font-size:0.85rem;line-height:1.75;white-space:pre-line}
+.action-row{display:flex;gap:8px;margin-top:10px}
+.act-btn{flex:1;padding:10px 8px;border-radius:9px;font-family:inherit;font-size:0.78rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation}
+.act-btn:active{opacity:0.7}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:7px;padding:8px;background:transparent;border:1.5px solid #e5e7eb;border-radius:9px;color:#9ca3af;font-family:inherit;font-size:0.78rem;cursor:pointer;touch-action:manipulation}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:900;color:#0d1b2a;margin-bottom:12px}
+.content-card h3{font-size:0.92rem;font-weight:700;color:#3b82f6;margin:14px 0 6px}
+.content-card p{font-size:0.85rem;color:#4b5563;line-height:1.78;margin-bottom:8px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;margin-bottom:8px}
+.content-card li{font-size:0.83rem;color:#4b5563;padding-left:13px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#3b82f6;font-size:0.76rem}
+.flowchart{background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:12px;padding:14px;font-size:0.82rem;color:#1d4ed8;line-height:1.9;margin:10px 0;font-family:'Courier New',monospace}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;touch-action:manipulation;transition:border-color 0.15s}
+.related-card:active,.related-card:hover{border-color:#3b82f6;background:#eff6ff}
+.rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>PERC Rule</span></nav>
+    <div class="page-eyebrow">🫁 Emergency · Pulmonology · PE</div>
+    <h1>PERC Rule<br><em>PE Rule-Out Criteria</em></h1>
+    <p class="page-sub">8-point Pulmonary Embolism Rule-out Criteria. If ALL 8 are absent AND pre-test probability is low, PE can be safely excluded without D-dimer testing or imaging.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 8 Bedside Criteria</span>
+      <span class="hbadge">✓ Avoids Unnecessary D-dimer</span>
+      <span class="hbadge">✓ Low Pre-test Probability Only</span>
+      <span class="hbadge">✓ AHA/ESC Endorsed</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">PERC Rule Assessment</div>
+    <div class="pretest-box">
+      <strong>⚠️ PREREQUISITE — Low Pre-Test Probability Required</strong>
+      PERC is only valid if pre-test probability of PE is LOW (Wells PE score ≤4, or gestalt clinical impression &lt;15%). Do NOT apply PERC to moderate or high pre-test probability patients — proceed directly to D-dimer or CT-PA.
+    </div>
+    <div class="calc-subtitle">Tap each criterion that is PRESENT (positive findings). PERC is negative only if ALL 8 are absent.</div>
+
+    <div class="perc-list" id="perc-list"></div>
+
+    <div class="perc-summary">
+      <span class="ps-label">Positive PERC Criteria</span>
+      <span class="ps-count zero" id="perc-count">0 / 8</span>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Apply PERC Rule →</button>
+
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="verdict-card" id="verdict-card">
+        <div class="verdict-icon" id="v-icon">—</div>
+        <div class="verdict-title" id="v-title">—</div>
+        <div class="verdict-sub" id="v-sub">—</div>
+      </div>
+      <div class="mgmt-box" id="mgmt-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>PERC Rule — Complete PE Workup Algorithm</h2>
+    <div class="flowchart">
+Suspected PE (dyspnoea, pleuritic pain, tachycardia)
+         ↓
+Assess Pre-Test Probability (Wells PE Score or gestalt)
+         ↓
+    ┌─────┴─────┐
+  LOW           MODERATE / HIGH
+  (Wells ≤4)    (Wells >4)
+    ↓               ↓
+Apply PERC       D-dimer OR
+                 CT Pulmonary Angiogram
+    ↓
+All 8 PERC negative?
+    ↓
+  YES → PE EXCLUDED. No further workup.
+   NO → Send D-dimer.
+         D-dimer negative → PE excluded.
+         D-dimer positive → CT-PA.
+    </div>
+    <h3>Why PERC Matters — Avoiding Over-Testing</h3>
+    <p>Pulmonary embolism is over-investigated in emergency departments globally. Up to 40% of patients who receive CT-PA for PE have a low pre-test probability and negative D-dimer — they could have been PERC-negative and discharged without radiation exposure, contrast risk, or cost. The PERC rule was validated to safely exclude PE in low-risk patients with a miss rate of &lt;2% — equivalent to the accepted threshold for "safe" PE rule-out.</p>
+    <h3>When NOT to Use PERC</h3>
+    <ul>
+      <li>Moderate or high pre-test probability (Wells PE score &gt;4) — go directly to D-dimer or CT-PA</li>
+      <li>Patient is haemodynamically unstable — PE likely, urgent CT-PA or echocardiogram</li>
+      <li>Pregnancy — D-dimer unreliable, use clinical judgement, ultrasound compression, V/Q scan preferred</li>
+      <li>Post-surgery or immobilisation in past 4 weeks — higher baseline risk, PERC not validated</li>
+      <li>Known thrombophilia or prior VTE — automatic higher risk category</li>
+    </ul>
+    <h3>PERC vs D-dimer vs Wells Score</h3>
+    <ul>
+      <li><strong>Wells PE score:</strong> Calculates pre-test probability (low/moderate/high). Should be applied first. Low Wells (≤4) allows PERC application</li>
+      <li><strong>PERC rule:</strong> Applied AFTER establishing low pre-test probability. Allows exclusion of PE without D-dimer in truly low-risk patients</li>
+      <li><strong>D-dimer:</strong> Very sensitive (&gt;95%) but non-specific. Elevated in infection, pregnancy, post-op, malignancy, inflammation. Age-adjusted D-dimer: threshold = age × 10 µg/L (for age &gt;50)</li>
+      <li><strong>CT Pulmonary Angiogram:</strong> Gold standard for PE confirmation. Risk of contrast nephropathy, radiation (5–10 mSv), gadolinium allergy. Reserve for positive D-dimer in appropriate pre-test probability</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/wells-score" class="related-card"><span class="rc-icon">🩸</span><div><div class="rc-title">Wells Score DVT/PE</div><div class="rc-desc">Pre-test probability first</div></div></a>
+      <a href="/medical-calculators/aa-gradient" class="related-card"><span class="rc-icon">🫁</span><div><div class="rc-title">A-a Gradient</div><div class="rc-desc">Hypoxaemia in suspected PE</div></div></a>
+      <a href="/medical-calculators/shock-index" class="related-card"><span class="rc-icon">⚡</span><div><div class="rc-title">Shock Index</div><div class="rc-desc">Massive PE haemodynamics</div></div></a>
+      <a href="/medical-calculators/abcd2-score" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">ABCD2 Score</div><div class="rc-desc">TIA rule-out tool</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> PERC rule is only valid in patients with a low pre-test probability for PE (Wells ≤4 or gestalt &lt;15%). A negative PERC rule does not completely exclude PE — the miss rate is ~1.4%. Always apply clinical judgement. If there is clinical concern despite a negative PERC, proceed with D-dimer and/or CT-PA.</div>
+</main>
+<script src="/assets/shared-nav.js"></script>
+<script>
+const CRITERIA=[
+  {n:'Age ≥50 years',d:'Patient is 50 years old or older',w:'Each year of age above 50 increases PE risk — part of age-adjusted D-dimer threshold'},
+  {n:'Heart rate ≥100 bpm',d:'Resting heart rate at time of assessment ≥100 beats per minute',w:'Sustained tachycardia is a key PE feature — if present, PERC fails'},
+  {n:'SpO₂ <95% on room air',d:'Oxygen saturation below 95% on room air by pulse oximetry',w:'Hypoxaemia not explained by another cause suggests VQ mismatch from PE'},
+  {n:'Haemoptysis',d:'Coughing up blood or blood-tinged sputum — new onset',w:''},
+  {n:'Exogenous oestrogen use',d:'OCP, HRT, selective oestrogen receptor modulators, or other exogenous oestrogens',w:'Oestrogen significantly increases VTE risk (3–4×)'},
+  {n:'Prior VTE (DVT or PE)',d:'Previously diagnosed and confirmed DVT or pulmonary embolism',w:''},
+  {n:'Unilateral leg swelling',d:'Asymmetric leg oedema — clinical suspicion of DVT',w:'Calf or thigh swelling on one side only'},
+  {n:'Surgery or trauma requiring hospitalisation within 4 weeks',d:'Any significant surgery, injury, or hospitalisation within the past 4 weeks',w:'Post-operative/post-trauma state is major VTE risk — PERC not validated'},
+];
+const sel=new Set();let lastResult=null;
+document.getElementById('perc-list').innerHTML=CRITERIA.map((c,i)=>`
+  <div class="perc-item" id="pi${i}" onclick="toggle(${i})">
+    <div class="pi-chk" id="pc${i}">✓</div>
+    <div class="pi-body">
+      <div class="pi-name">${c.n}</div>
+      <div class="pi-detail">${c.d}</div>
+      ${c.w?`<div class="pi-warn">⚠ ${c.w}</div>`:''}
+    </div>
+  </div>`).join('');
+function toggle(i){
+  const el=document.getElementById('pi'+i);
+  if(sel.has(i)){sel.delete(i);el.classList.remove('positive');}
+  else{sel.add(i);el.classList.add('positive');}
+  const cnt=document.getElementById('perc-count');
+  cnt.textContent=sel.size+' / 8';
+  cnt.className='ps-count'+(sel.size===0?' zero':'');
+}
+function calculate(){
+  const vc=document.getElementById('verdict-card');
+  const mgmt=document.getElementById('mgmt-box');
+  let bg,bc,c,icon,title,sub,mTxt;
+  if(sel.size===0){
+    bg='#f0fdf4';bc='#10b981';c='#065f46';icon='✅';title='PERC Negative';sub='PE can be safely ruled out — no further workup required (if pre-test probability was low)';
+    mTxt='✅ PERC NEGATIVE — All 8 criteria absent.\n\nPE is safely excluded in low pre-test probability patients.\nNo D-dimer or CT-PA required.\n\nDocument:\n• Wells PE score ≤4 (or gestalt <15%) confirmed before applying PERC\n• All 8 PERC criteria documented as negative\n• Clinical impression that PE is not the most likely diagnosis\n\nDischarge with:\n• Return precautions: worsening dyspnoea, syncope, haemoptysis, chest pain\n• Consider alternative diagnoses: pneumonia, pleuritis, MSK, anxiety, pneumothorax\n• If any doubt persists — send D-dimer. PERC requires full clinical confidence.';
+  } else {
+    bg='#fef2f2';bc='#ef4444';c='#7f1d1d';icon='🔴';title='PERC Positive';sub=sel.size+' criterion/a positive — PE cannot be excluded. Proceed to D-dimer or CT-PA.';
+    const posNames=Array.from(sel).map(i=>CRITERIA[i].n).join(', ');
+    mTxt=`🔴 PERC POSITIVE — ${sel.size} criterion/a present: ${posNames}\n\nPE CANNOT be excluded by PERC. Proceed with:\n\n• D-dimer (age-adjusted threshold: age × 10 µg/L for age >50)\n  - If D-dimer NEGATIVE → PE excluded\n  - If D-dimer POSITIVE → CT Pulmonary Angiogram\n\n• If haemodynamically UNSTABLE → Urgent CT-PA or bedside echo (right heart strain)\n\n• Wells PE score ≥5 or clinically obvious → CT-PA directly, no D-dimer needed\n\n• Anticoagulation: Start therapeutic LMWH (enoxaparin 1 mg/kg BD) if CT-PA delayed and high suspicion. Confirm diagnosis before starting if low probability.`;
+  }
+  vc.style.cssText=`background:${bg};border:2px solid ${bc};border-radius:14px;padding:20px;text-align:center;margin-bottom:14px`;
+  document.getElementById('v-icon').textContent=icon;
+  document.getElementById('v-title').textContent=title;document.getElementById('v-title').style.color=c;
+  document.getElementById('v-sub').textContent=sub;document.getElementById('v-sub').style.color=c;
+  mgmt.textContent=mTxt;mgmt.style.cssText=`background:${bg};border:1.5px solid ${bc};color:${c};border-radius:11px;padding:13px;margin-bottom:12px;font-size:0.85rem;line-height:1.75;white-space:pre-line`;
+  lastResult=`PERC Rule: ${sel.size===0?'NEGATIVE — PE excluded':'POSITIVE ('+sel.size+'/8 present)'}\nPositive: ${sel.size>0?Array.from(sel).map(i=>CRITERIA[i].n).join(', '):'None'}\nCalculated at rxmedcalc.com/medical-calculators/perc-rule`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('perc_calc',{positive:sel.size,result:sel.size===0?'negative':'positive'});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🫁 PERC Rule\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){sel.clear();document.querySelectorAll('.perc-item').forEach(el=>el.classList.remove('positive'));document.getElementById('perc-count').textContent='0 / 8';document.getElementById('perc-count').className='ps-count zero';document.getElementById('results').className='results';lastResult=null}
+</script>
+</body>
+</html>

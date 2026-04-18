@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="steroid-equivalence">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Steroid Equivalence Calculator | Corticosteroid Dose Conversion | RxMedCalc</title>
+<meta name="description" content="Free corticosteroid dose equivalence calculator. Convert between prednisolone, dexamethasone, methylprednisolone, hydrocortisone, betamethasone, and triamcinolone. Includes mineralocorticoid potency, duration of action, and tapering guidance."/>
+<meta name="keywords" content="steroid equivalence calculator, corticosteroid dose conversion, prednisolone to dexamethasone, dexamethasone to prednisolone, steroid conversion table, methylprednisolone equivalent, hydrocortisone equivalent dose, steroid dose calculator, corticosteroid equivalent potency"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/steroid-equivalence"/>
+<meta property="og:title" content="Steroid Equivalence Calculator | Corticosteroid Conversion | RxMedCalc"/>
+<meta property="og:description" content="Convert between prednisolone, dexamethasone, methylprednisolone, hydrocortisone and other steroids. Anti-inflammatory and mineralocorticoid potency. Free clinical tool."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/steroid-equivalence"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<link rel="stylesheet" href="/assets/shared.css"/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#1a100a 60%,#0d1b2a 100%);padding:36px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(251,146,60,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(251,146,60,0.05) 1px,transparent 1px);background-size:40px 40px}
+.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:14px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(251,146,60,0.15);border:1px solid rgba(251,146,60,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#fdba74;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:12px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px}
+h1 em{font-style:italic;color:#fb923c}
+.page-sub{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:18px}
+.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:26px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:24px 20px 80px}
+.calc-card,.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+@media(min-width:600px){.calc-card,.content-card{padding:26px}}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:0.98rem;font-weight:700;color:#0d1b2a;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.calc-title::before{content:'';display:block;width:4px;height:16px;background:#f97316;border-radius:2px;flex-shrink:0}
+.input-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px}
+@media(min-width:480px){.input-grid{grid-template-columns:1fr 1fr}}
+.field label{display:block;font-size:0.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px}
+.field input,.field select{width:100%;padding:12px 14px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-family:inherit;font-size:16px;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none;appearance:none}
+.field input:focus,.field select:focus{border-color:#f97316;box-shadow:0 0 0 3px rgba(249,115,22,0.1)}
+.field .hint{font-size:0.67rem;color:#9ca3af;margin-top:3px}
+.btn-calc{width:100%;padding:13px;border:none;border-radius:11px;color:#fff;font-family:inherit;font-size:0.95rem;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#f97316,#ea580c);box-shadow:0 4px 14px rgba(249,115,22,0.3);touch-action:manipulation}
+.btn-calc:active{transform:scale(0.98)}
+.error-msg{color:#dc2626;font-size:0.77rem;margin-top:7px;display:none}.error-msg.show{display:block}
+.results{display:none;margin-top:16px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:14px 0}
+/* Equivalence grid */
+.equiv-title{font-size:0.72rem;font-weight:700;color:#f97316;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px}
+.equiv-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.equiv-item{background:#fff7ed;border:1.5px solid #fed7aa;border-radius:11px;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.equiv-item.source{background:#f0fdf4;border-color:#bbf7d0}
+.ei-name{font-size:0.86rem;font-weight:700;color:#0d1b2a}
+.ei-sub{font-size:0.68rem;color:#9ca3af;margin-top:1px}
+.ei-dose{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#ea580c;white-space:nowrap}
+.equiv-item.source .ei-dose{color:#16a34a}
+.ei-unit{font-size:0.67rem;color:#9ca3af}
+/* Steroid info boxes */
+.steroid-info{background:#fff7ed;border:1.5px solid #fed7aa;border-radius:11px;padding:13px;margin-bottom:12px;font-size:0.84rem;line-height:1.7;white-space:pre-line;color:#78350f}
+.action-row{display:flex;gap:8px;margin-top:10px}
+.act-btn{flex:1;padding:10px 8px;border-radius:9px;font-family:inherit;font-size:0.78rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation}
+.act-btn:active{opacity:0.7}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:7px;padding:8px;background:transparent;border:1.5px solid #e5e7eb;border-radius:9px;color:#9ca3af;font-family:inherit;font-size:0.78rem;cursor:pointer;touch-action:manipulation}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:900;color:#0d1b2a;margin-bottom:12px}
+.content-card h3{font-size:0.92rem;font-weight:700;color:#f97316;margin:14px 0 6px}
+.content-card p{font-size:0.85rem;color:#4b5563;line-height:1.78;margin-bottom:8px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;margin-bottom:8px}
+.content-card li{font-size:0.83rem;color:#4b5563;padding-left:13px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#f97316;font-size:0.76rem}
+.steroid-table{width:100%;border-collapse:collapse;font-size:0.78rem;margin:10px 0;overflow-x:auto;display:block}
+@media(min-width:600px){.steroid-table{display:table}}
+.steroid-table th{background:#fff7ed;color:#9a3412;font-weight:700;padding:8px 10px;text-align:left;font-size:0.67rem;text-transform:uppercase;border-bottom:2px solid #fed7aa;white-space:nowrap}
+.steroid-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;color:#374151}
+.steroid-table tr.highlight{background:#fff7ed;font-weight:700}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;touch-action:manipulation;transition:border-color 0.15s}
+.related-card:active,.related-card:hover{border-color:#f97316;background:#fff7ed}
+.rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
+.disclaimer{background:#fef2f2;border:1.5px solid #fecaca;border-radius:10px;padding:12px;font-size:0.73rem;color:#991b1b;line-height:1.6;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div class="header-inner">
+    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Steroid Equivalence</span></nav>
+    <div class="page-eyebrow">💊 Pharmacology · General Medicine · ICU</div>
+    <h1>Steroid Dose<br><em>Equivalence Calculator</em></h1>
+    <p class="page-sub">Convert between corticosteroids — prednisolone, dexamethasone, methylprednisolone, hydrocortisone, betamethasone, and more. Anti-inflammatory potency with mineralocorticoid activity and duration of action.</p>
+    <div class="header-badges">
+      <span class="hbadge">✓ 8 Corticosteroids</span>
+      <span class="hbadge">✓ Anti-inflammatory Equivalence</span>
+      <span class="hbadge">✓ Mineralocorticoid Potency</span>
+      <span class="hbadge">✓ Tapering Guide</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="calc-card">
+    <div class="calc-title">Corticosteroid Dose Converter</div>
+    <div class="input-grid">
+      <div class="field">
+        <label>Current Steroid</label>
+        <select id="from-steroid">
+          <option value="hydrocortisone">Hydrocortisone (Cortisol)</option>
+          <option value="prednisolone" selected>Prednisolone</option>
+          <option value="methylprednisolone">Methylprednisolone</option>
+          <option value="dexamethasone">Dexamethasone</option>
+          <option value="betamethasone">Betamethasone</option>
+          <option value="triamcinolone">Triamcinolone</option>
+          <option value="budesonide">Budesonide (oral)</option>
+          <option value="cortisone">Cortisone acetate</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Dose (mg)</label>
+        <input type="number" id="from-dose" placeholder="e.g. 40" inputmode="decimal"/>
+        <div class="hint">Enter dose in milligrams (mg)</div>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg"></div>
+    <button class="btn-calc" onclick="calculate()">Convert to All Steroids →</button>
+
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="equiv-title">Equivalent Doses for <span id="equiv-from-name">—</span> <span id="equiv-from-dose">—</span> mg</div>
+      <div class="equiv-grid" id="equiv-grid"></div>
+      <div class="steroid-info" id="steroid-info"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>Corticosteroid Equivalence Reference Table</h2>
+    <table class="steroid-table">
+      <thead><tr><th>Steroid</th><th>Anti-inflammatory Equiv. (mg)</th><th>Anti-inflam. Potency</th><th>Mineralo. Potency</th><th>Duration (hours)</th><th>HPA Suppression</th></tr></thead>
+      <tbody>
+        <tr><td>Cortisone acetate</td><td>25</td><td>0.8×</td><td>2+</td><td>8–12h</td><td>Short</td></tr>
+        <tr><td>Hydrocortisone (cortisol)</td><td>20</td><td>1× (reference)</td><td>2+</td><td>8–12h</td><td>Short</td></tr>
+        <tr><td><strong>Prednisolone / Prednisone</strong></td><td><strong>5</strong></td><td><strong>4×</strong></td><td>1+</td><td>12–36h</td><td>Intermediate</td></tr>
+        <tr><td>Methylprednisolone</td><td>4</td><td>5×</td><td>0</td><td>12–36h</td><td>Intermediate</td></tr>
+        <tr><td>Triamcinolone</td><td>4</td><td>5×</td><td>0</td><td>12–36h</td><td>Intermediate</td></tr>
+        <tr><td><strong>Dexamethasone</strong></td><td><strong>0.75</strong></td><td><strong>25–30×</strong></td><td>0</td><td>36–54h</td><td>Long (strong)</td></tr>
+        <tr><td>Betamethasone</td><td>0.6</td><td>25–30×</td><td>0</td><td>36–54h</td><td>Long (strong)</td></tr>
+        <tr><td>Budesonide (oral)</td><td>~1.2</td><td>~15×</td><td>0</td><td>12–24h</td><td>Moderate (first-pass)</td></tr>
+      </tbody>
+    </table>
+    <h3>Key Clinical Notes</h3>
+    <ul>
+      <li><strong>Prednisolone vs Prednisone:</strong> Prednisone is converted to prednisolone in the liver. They are clinically interchangeable for most patients. Prednisolone is preferred in severe hepatic impairment (bypasses hepatic conversion)</li>
+      <li><strong>Dexamethasone has no mineralocorticoid activity:</strong> Does NOT cause sodium/water retention. Preferred when oedema is a concern, or in patients with hypertension or heart failure needing high-dose steroids. Also preferred for brain oedema, pre-term lung maturation, and COVID-19 (RECOVERY trial)</li>
+      <li><strong>Hydrocortisone has strong mineralocorticoid activity:</strong> Used for physiological replacement in adrenal insufficiency. 20 mg hydrocortisone = daily cortisol production. At stress doses (200–300 mg/day) it provides both glucocorticoid AND mineralocorticoid cover in septic shock</li>
+      <li><strong>Methylprednisolone IV:</strong> No mineralocorticoid activity, rapid onset, widely used for acute severe asthma (1–2 mg/kg/day), ARDS, MS relapse (1g IV × 3 days), spinal cord injury (controversial), organ rejection prophylaxis</li>
+      <li><strong>Budesonide (oral, e.g. Budecort):</strong> High first-pass metabolism means 90% is inactivated by liver — much lower systemic exposure than equivalent prednisolone dose. Used in Crohn's disease, microscopic colitis, and as bridge therapy</li>
+    </ul>
+    <h3>Steroid Tapering — Preventing Adrenal Insufficiency</h3>
+    <ul>
+      <li>HPA axis suppression occurs after approximately 3 weeks of any dose equivalent to prednisolone ≥5 mg/day, or any dose of dexamethasone for &gt;1 week</li>
+      <li>Taper rule of thumb: reduce by 10–20% of total dose every 1–2 weeks once the underlying condition is controlled. Slower taper as you approach physiological doses</li>
+      <li>Physiological dose: prednisolone 5 mg/day = approximately 20 mg hydrocortisone/day. Do NOT stop abruptly at this dose — continue until morning cortisol/short Synacthen test confirms HPA recovery</li>
+      <li>Sick day rules: patients on long-term steroids should double or triple their dose during acute illness, surgery, or trauma to prevent Addisonian crisis</li>
+      <li>Stress doses (surgery/critical illness): IV hydrocortisone 200 mg/day continuous infusion, or 50 mg QID, for major surgery. Can switch to oral as soon as patient tolerating</li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/ibw-calculator" class="related-card"><span class="rc-icon">⚖️</span><div><div class="rc-title">IBW Calculator</div><div class="rc-desc">Weight-based dosing</div></div></a>
+      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">CrCl Calculator</div><div class="rc-desc">Drug dose in renal failure</div></div></a>
+      <a href="/medical-calculators/bsa-calculator" class="related-card"><span class="rc-icon">📐</span><div><div class="rc-title">BSA Calculator</div><div class="rc-desc">Body surface area dosing</div></div></a>
+      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Steroids in septic shock</div></div></a>
+    </div>
+  </div>
+  <div class="disclaimer"><strong>⚠ Critical Safety Warning:</strong> Steroid dose equivalences are approximate and based on anti-inflammatory potency only. They do NOT account for differences in route of administration, pharmacokinetics, mineralocorticoid activity, or individual patient factors (hepatic/renal impairment). Do NOT convert steroid doses in patients with adrenal insufficiency using this table — physiological replacement dosing is different from anti-inflammatory dosing. Always verify with a pharmacist or senior physician before switching steroids in critically ill patients.</div>
+</main>
+<script src="/assets/shared-nav.js"></script>
+<script>
+// Steroid data: {name, equiv_pred (mg prednisolone equivalent per 1 mg), minCorticoid, duration, halfLife, note}
+const STEROIDS={
+  hydrocortisone:{name:'Hydrocortisone',predEq:4,minPotency:'High (2+)',duration:'8–12h',key:'Physiological replacement, stress dosing in adrenal insufficiency. 200–300 mg/day in septic shock.'},
+  prednisolone:{name:'Prednisolone',predEq:1,minPotency:'Mild (1+)',duration:'12–36h',key:'Most commonly used oral steroid. Reference compound.'},
+  methylprednisolone:{name:'Methylprednisolone',predEq:1.25,minPotency:'None (0)',duration:'12–36h',key:'IV preferred for acute asthma, ARDS, MS relapse, transplant rejection. No fluid retention.'},
+  dexamethasone:{name:'Dexamethasone',predEq:6.67,minPotency:'None (0)',duration:'36–54h',key:'RECOVERY trial COVID: 6 mg/day. Pre-term lung maturity: 12 mg IM ×2. Brain oedema: 4–8 mg QID. Long HPA suppression.'},
+  betamethasone:{name:'Betamethasone',predEq:8.33,minPotency:'None (0)',duration:'36–54h',key:'Antenatal corticosteroids for foetal lung maturity (12 mg IM ×2, 24h apart). FOGSI/WHO recommendation.'},
+  triamcinolone:{name:'Triamcinolone',predEq:1.25,minPotency:'None (0)',duration:'12–36h',key:'Used for intra-articular injections and skin conditions. No mineralocorticoid effect.'},
+  budesonide:{name:'Budesonide (oral)',predEq:2.5,minPotency:'None',duration:'12–24h',key:'High first-pass hepatic metabolism. Low systemic effect. Used in Crohn\'s disease and microscopic colitis.'},
+  cortisone:{name:'Cortisone acetate',predEq:0.8,minPotency:'Moderate (2+)',duration:'8–12h',key:'Prodrug (converted to cortisol). Used for physiological replacement. Less potent than prednisolone.'},
+};
+// predEq = how many mg prednisolone is equivalent to 1 mg of this steroid
+// So equiv prednisolone dose = dose × predEq
+// To convert: equiv_prednisolone = dose_from × predEq_from; then target_dose = equiv_pred / predEq_target
+let lastResult=null;
+function calculate(){
+  const from=document.getElementById('from-steroid').value;
+  const dose=parseFloat(document.getElementById('from-dose').value);
+  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
+  if(!dose||dose<=0){errEl.textContent='Please enter a dose in mg.';errEl.className='error-msg show';return}
+  const src=STEROIDS[from];
+  const equivPred=dose*src.predEq;// prednisolone equivalent dose
+  document.getElementById('equiv-from-name').textContent=src.name;
+  document.getElementById('equiv-from-dose').textContent=dose;
+  const grid=document.getElementById('equiv-grid');
+  const lines=[];
+  grid.innerHTML=Object.entries(STEROIDS).map(([key,s])=>{
+    const eqDose=Math.round((equivPred/s.predEq)*100)/100;
+    const isSource=key===from;
+    lines.push(`${s.name}: ${eqDose} mg`);
+    return `<div class="equiv-item${isSource?' source':''}">
+      <div><div class="ei-name">${s.name}${isSource?' (source)':''}</div><div class="ei-sub">${s.minPotency} mineralocorticoid · ${s.duration}</div></div>
+      <div style="text-align:right"><div class="ei-dose">${eqDose}</div><div class="ei-unit">mg</div></div>
+    </div>`;
+  }).join('');
+  const info=document.getElementById('steroid-info');
+  info.textContent=`ℹ️ About ${src.name}:\n${src.key}\n\nMineralocorticoid activity: ${src.minPotency}\nDuration of action: ${src.duration}\nPrednisolone equivalent: ${equivPred} mg`;
+  lastResult=`Steroid Equivalence — ${src.name} ${dose} mg:\n${lines.join('\n')}\nCalculated at rxmedcalc.com/medical-calculators/steroid-equivalence`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('steroid_calc',{from,dose,equivPred});
+}
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('💊 Steroid Equivalence\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){document.getElementById('from-dose').value='';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+</script>
+</body>
+</html>
