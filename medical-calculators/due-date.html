@@ -21,7 +21,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
 <link rel="stylesheet" href="/assets/shared.css"/>
-<script defer src="/assets/umami-events.js"></script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -45,7 +44,7 @@ body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#fdf4fb
 .page-header{background:linear-gradient(135deg,#4a0030 0%,#9d174d 50%,#db2777 100%);padding:36px 0 0;position:relative;overflow:hidden}
 .page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:40px 40px}
 .page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(244,114,182,0.2) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
-.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.calc-header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
 .breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:14px;flex-wrap:wrap}
 .breadcrumb a{color:rgba(255,255,255,0.65);text-decoration:none}
 .breadcrumb span{color:rgba(255,255,255,0.3)}
@@ -192,10 +191,21 @@ h1 em{font-style:italic;color:#f9a8d4}
 .rc-desc{font-size:0.66rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:11px;padding:12px;font-size:0.74rem;color:#78350f;line-height:1.6;margin-top:16px}
 </style>
+<style>
+/* ── MOBILE NAV FIX ── prevents shared-nav overlay on page header */
+.page-header { margin-top: 0; position: relative; z-index: 1; }
+.calc-header-inner { position: relative; z-index: 2; }
+.site-header { z-index: 1000 !important; }
+@media (max-width: 768px) {
+  .site-nav.open { z-index: 999 !important; }
+  /* Ensure page content sits below sticky nav */
+  .page-header { padding-top: 0 !important; }
+}
+</style>
 </head>
 <body>
 <div class="page-header">
-  <div class="header-inner">
+  <div class="calc-header-inner">
     <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Due Date</span></nav>
     <div class="page-eyebrow">🤰 Obstetrics · India Edition</div>
     <h1>Pregnancy Due Date<br><em>Calculator</em></h1>
