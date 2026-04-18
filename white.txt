@@ -4,6 +4,7 @@
 akamaihd.net
 akamaitechnologies.com
 akamaized.net
+adsense.google.com
 amazonaws.com
 android.clients.google.com
 api.ipify.org
