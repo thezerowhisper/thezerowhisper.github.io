@@ -19,23 +19,32 @@ jobs:
           echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
           echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
 
-          # Add homepage
+          # 1. Add homepage (1.0)
           echo "<url><loc>$DOMAIN/</loc><priority>1.0</priority></url>" >> sitemap.xml
 
-          # Loop through all HTML files
-          for file in $(find . -name "*.html"); do
+          # 2. Loop through all HTML files
+          # Using -not -path '*/.*' to skip hidden folders like .github
+          for file in $(find . -name "*.html" -not -path '*/.*'); do
 
-            # Clean path
+            # Clean path: remove ./, remove index.html, remove .html extension
             path=$(echo $file | sed 's|^\./||' | sed 's|/index.html$||' | sed 's|\.html$||')
 
             # Skip unwanted files
-            if [[ "$path" == "" || "$path" == "404" ]]; then
+            if [[ "$path" == "" || "$path" == "404" || "$path" == "index" ]]; then
               continue
             fi
 
             url="$DOMAIN/$path"
+            
+            # --- Dynamic Priority Logic ---
+            # Set hub pages to 0.8, others to 0.64
+            if [[ "$path" == "medical-calculators" || "$path" == "drug-doses" ]]; then
+              priority="0.8"
+            else
+              priority="0.64"
+            fi
 
-            echo "<url><loc>$url</loc><priority>0.64</priority></url>" >> sitemap.xml
+            echo "<url><loc>$url</loc><priority>$priority</priority></url>" >> sitemap.xml
 
           done
 
@@ -46,5 +55,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add sitemap.xml
-          git commit -m "Auto update sitemap" || echo "No changes"
+          git commit -m "Auto update sitemap [0.8 priority for hubs]" || echo "No changes"
           git push
