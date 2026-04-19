@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="vitamin-d3-calculator">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Vitamin D3 (Cholecalciferol) Dose Calculator – 60k Weekly, Stoss Therapy | RxMedCalc</title>
+  <meta name="description" content="Calculate Vitamin D3 (Cholecalciferol) doses for Rickets, Osteomalacia, and deficiency. 60,000 IU weekly loading, Stoss therapy protocols, and pediatric maintenance. Unit converter included."/>
+  <meta name="keywords" content="vitamin d3 calculator india, cholecalciferol 60k weekly dose, rickets stoss therapy dose, vitamin d deficiency treatment protocol, ng/ml to nmol/l converter, pediatric vitamin d maintenance"/>
+  <link rel="canonical" href="https://rxmedcalc.com/vitamins/vitamin-d3-cholecalciferol"/>
+  
+  <link rel="stylesheet" href="/assets/shared.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:wght@700;900&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{--primary:#0d2b45;--teal:#0e9f7e;--amber:#f59e0b;--bg:#f0f9ff;--surface:#ffffff;--border:#bae6fd;--sans:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace}
+    body{font-family:var(--sans);background:var(--bg);color:var(--primary);line-height:1.6}
+    
+    .page-hero{background:linear-gradient(135deg,#0d2b45 0%,#163d5c 100%);color:white;padding:50px 24px;text-align:center;position:relative;overflow:hidden}
+    .hero-badge{display:inline-flex;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:4px 14px;font-size:12px;margin-bottom:15px}
+    .page-hero h1{font-family:'Fraunces',serif;font-size:clamp(24px,5vw,36px);margin-bottom:10px}
+    
+    .container{max-width:900px;margin:0 auto;padding:0 16px 60px}
+    .breadcrumb{padding:15px 0;font-size:13px;opacity:0.7}
+    .breadcrumb a{color:var(--primary);text-decoration:none}
+    
+    .grid-main{display:grid;grid-template-columns:1.5fr 1fr;gap:20px}
+    @media(max-width:768px){.grid-main{grid-template-columns:1fr}}
+
+    .card{background:var(--surface);border-radius:16px;padding:25px;border:1.5px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,0.05);margin-bottom:20px}
+    .card-title{font-size:16px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;color:var(--primary)}
+    
+    label{font-size:12px;font-weight:700;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:8px}
+    select, input{width:100%;padding:12px;border-radius:8px;border:1.5px solid var(--border);background:#f8fafc;font-family:inherit;margin-bottom:15px;outline:none}
+    
+    .btn-calc{width:100%;padding:15px;background:var(--teal);color:white;border:none;border-radius:10px;font-weight:700;cursor:pointer;transition:0.2s}
+    .btn-calc:hover{background:#0a856a;transform:translateY(-2px)}
+
+    .result-area{display:none;margin-top:25px;animation:fadeIn 0.4s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    
+    .dose-highlight{background:var(--primary);color:white;padding:25px;border-radius:12px;text-align:center;margin-bottom:15px}
+    .dose-value{font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--amber)}
+    
+    .converter-card{background:#fffbeb;border-color:#fde68a}
+    
+    /* SEO/FAQ Styles */
+    .info-section{margin-top:40px}
+    .info-section h2{font-family:'Fraunces',serif;margin-bottom:15px;border-bottom:2px solid var(--border);padding-bottom:10px}
+    .info-section p{margin-bottom:15px;font-size:15px;color:#475569}
+    .faq-item{border-bottom:1px solid var(--border);padding:15px 0}
+    .faq-q{font-weight:700;cursor:pointer;display:flex;justify-content:space-between}
+  </style>
+</head>
+<body>
+
+<section class="page-hero">
+    <div class="hero-badge">☀️ Clinical Nutrition Hub</div>
+    <h1>Vitamin D3 Cholecalciferol <em>Dose Calculator</em></h1>
+    <p>Replacement protocols for Rickets, Osteomalacia, and Deficiency. Units in IU.</p>
+</section>
+
+<div class="container">
+    <nav class="breadcrumb">
+        <a href="/">Home</a> › <a href="/vitamins/">Vitamins</a> › <span>Vitamin D3 Calculator</span>
+    </nav>
+
+    <div class="grid-main">
+        <div class="calc-col">
+            <div class="card">
+                <div class="card-title">⚕️ Treatment Calculator</div>
+                
+                <label>Clinical Indication</label>
+                <select id="indication" onchange="toggleWeight()">
+                    <option value="deficiency_adult">Adult Deficiency (Loading)</option>
+                    <option value="deficiency_paeds">Paediatric Deficiency / Rickets</option>
+                    <option value="stoss">Stoss Therapy (High Dose Pulse)</option>
+                    <option value="maintenance">Maintenance / Prophylaxis</option>
+                </select>
+
+                <div id="weight-box" style="display:none">
+                    <label>Patient Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="e.g. 15">
+                </div>
+
+                <label>Age Group</label>
+                <select id="age">
+                    <option value="infant">Infant (< 1 year)</option>
+                    <option value="child">Child (1–18 years)</option>
+                    <option value="adult">Adult (> 18 years)</option>
+                </select>
+
+                <button class="btn-calc" onclick="calculateD3()">Calculate Dosage →</button>
+
+                <div id="result-box" class="result-area">
+                    <div class="dose-highlight">
+                        <div style="font-size:12px; opacity:0.7; text-transform:uppercase">Recommended Regimen</div>
+                        <div class="dose-value" id="res-dose">--</div>
+                        <div id="res-freq" style="font-size:14px; margin-top:5px"></div>
+                    </div>
+                    <div id="res-notes" style="font-size:13px; background:#f1f5f9; padding:15px; border-radius:8px; color:#475569"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-col">
+            <div class="card converter-card">
+                <div class="card-title">🧪 Unit Converter</div>
+                <label>Serum 25(OH)D Level</label>
+                <div style="display:flex; gap:10px">
+                    <input type="number" id="val-in" placeholder="Value" oninput="convertD3()">
+                    <select id="unit-in" style="width:120px" onchange="convertD3()">
+                        <option value="ng">ng/mL</option>
+                        <option value="nmol">nmol/L</option>
+                    </select>
+                </div>
+                <div id="conv-res" style="font-weight:700; text-align:center; color:var(--primary); font-size:1.1rem; margin-top:10px">---</div>
+                <p style="font-size:11px; margin-top:10px; opacity:0.6">Conversion: 1 ng/mL = 2.496 nmol/L</p>
+            </div>
+
+            <div class="card" style="background:var(--primary); color:white">
+                <div class="card-title" style="color:white">📊 Deficiency Severity</div>
+                <div style="font-size:13px">
+                    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.1); padding:5px 0"><span>Deficiency</span> <span>< 20 ng/mL</span></div>
+                    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.1); padding:5px 0"><span>Insufficiency</span> <span>21–29 ng/mL</span></div>
+                    <div style="display:flex; justify-content:space-between; padding:5px 0"><span>Sufficient</span> <span>> 30 ng/mL</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article class="info-section">
+        <h2>Comprehensive Guide to Vitamin D3 (Cholecalciferol) Replacement</h2>
+        <p>Vitamin D3, often referred to as the "pro-hormone" cholecalciferol, is vital for calcium homeostasis and bone mineralization. In India, despite abundant sunlight, the prevalence of Vitamin D deficiency (VDD) ranges from 70% to 90% across various demographics. This "Indian Vitamin D Paradox" is attributed to higher melanin content in the skin, atmospheric pollution, and cultural dressing habits that limit UV-B exposure.</p>
+
+        <h3>Understanding Serum 25(OH)D Levels</h3>
+        <p>The standard biomarker for Vitamin D status is serum 25-hydroxyvitamin D [25(OH)D]. Clinical interpretation in the Indian context generally follows these thresholds:</p>
+        <ul>
+            <li><strong>Deficiency:</strong> < 20 ng/mL (50 nmol/L). Associated with Rickets in children and Osteomalacia in adults.</li>
+            <li><strong>Insufficiency:</strong> 21–29 ng/mL. Associated with secondary hyperparathyroidism and reduced bone density.</li>
+            <li><strong>Sufficiency:</strong> > 30 ng/mL. Optimal for musculoskeletal health.</li>
+            <li><strong>Toxicity:</strong> > 150 ng/mL. Risk of hypercalcemia and soft tissue calcification.</li>
+        </ul>
+
+        <h3>The "60,000 IU" Protocol: India's Clinical Standard</h3>
+        <p>In Indian clinical practice, the **60k weekly dose** is the gold standard for correcting deficiency. Unlike daily low-dose supplementation (800-2000 IU) common in Western countries, the weekly 60,000 IU regimen for 8 weeks is highly effective for improving compliance. This is typically dispensed as granules, sachets, or soft-gel capsules (e.g., Calcirol, Uprise-D3).</p>
+
+        <h3>Stoss Therapy for Nutritional Rickets</h3>
+        <p>For pediatric patients with clinical rickets (bowed legs, rachitic rosary, Harrison's groove) where medication adherence is doubtful, <strong>Stoss Therapy</strong> is recommended. This involves a high-dose pulse of 300,000 IU to 600,000 IU administered as a single dose (Oral or IM). Clinicians must ensure the patient is "calcium-primed" with 50-75 mg/kg/day of elemental calcium to prevent "Hungry Bone Syndrome" and hypocalcemic tetany immediately following the dose.</p>
+
+        <h3>The Importance of Calcium Co-Supplementation</h3>
+        <p>Vitamin D replacement is ineffective without adequate elemental calcium. For adults undergoing the 60k weekly protocol, a daily intake of 1,000mg to 1,200mg of elemental calcium is required. In pediatric deficiency, calcium supplementation must be adjusted by weight (usually 500mg daily) to support the rapid mineralization of osteoid tissue.</p>
+
+        <h3>Sunlight Exposure in India</h3>
+        <p>While supplementation is often necessary, the ICMR suggests that for adequate endogenous synthesis, an individual in India needs 15 to 30 minutes of midday (11 AM to 3 PM) sun exposure on the face, arms, and legs at least 3 times a week. However, during the summer months in North India (Punjab/Haryana), clinicians should advise patients to balance UV exposure with the risk of heatstroke.</p>
+
+        <div class="card" style="background:#fefce8; border-color:#fef08a">
+            <h3>Clinical Warning: Vitamin D Toxicity</h3>
+            <p>Hypervitaminosis D is rare but clinically significant. It usually occurs due to accidental megadosing or prolonged intake of high doses without monitoring. It leads to <strong>Hypercalcemia</strong>, presenting as:</p>
+            <ul>
+                <li>Polyuria and Polydipsia (kidney's inability to concentrate urine)</li>
+                <li>Nausea, vomiting, and severe constipation</li>
+                <li>Confusion and lethargy</li>
+                <li>Ectopic calcification in blood vessels and kidneys (Nephrocalcinosis)</li>
+            </ul>
+            <p><em>Management:</em> Immediate cessation of Vitamin D and Calcium, IV hydration with normal saline, and in severe cases, glucocorticoids or bisphosphonates.</p>
+        </div>
+
+        <h3>Frequently Asked Questions for Clinicians</h3>
+        <div class="faq-item">
+            <div class="faq-q" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">Should I check Vitamin D levels before starting the 60k dose? <span>+</span></div>
+            <p style="display:none; font-size:14px; padding:10px 0; color:#475569">While ideal, the high cost of the 25(OH)D test in India often makes it prohibitive. Empirical treatment with 60,000 IU weekly for 8 weeks is generally considered safe and cost-effective for symptomatic patients in high-risk groups.</p>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">What is the best maintenance dose after the loading phase? <span>+</span></div>
+            <p style="display:none; font-size:14px; padding:10px 0; color:#475569">Once sufficiency (>30 ng/mL) is achieved, maintenance is typically 60,000 IU once a month or 1,000-2,000 IU daily, depending on the patient's lifestyle and risk of recurrence.</p>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">Is Vitamin D2 (Ergocalciferol) as effective as D3? <span>+</span></div>
+            <p style="display:none; font-size:14px; padding:10px 0; color:#475569">Current evidence suggests that Vitamin D3 (Cholecalciferol) is more effective at raising and maintaining serum 25(OH)D levels compared to Vitamin D2. Most Indian pharmaceutical formulations utilize D3.</p>
+        </div>
+    </article>
+
+<script>
+function toggleWeight() {
+    const ind = document.getElementById('indication').value;
+    document.getElementById('weight-box').style.display = (ind === 'stoss') ? 'block' : 'none';
+}
+
+function convertD3() {
+    const val = parseFloat(document.getElementById('val-in').value);
+    const unit = document.getElementById('unit-in').value;
+    const resEl = document.getElementById('conv-res');
+    if(!val) { resEl.innerText = "---"; return; }
+    
+    if(unit === 'ng') {
+        resEl.innerText = (val * 2.496).toFixed(1) + " nmol/L";
+    } else {
+        resEl.innerText = (val / 2.496).toFixed(1) + " ng/mL";
+    }
+}
+
+function calculateD3() {
+    const ind = document.getElementById('indication').value;
+    const age = document.getElementById('age').value;
+    const weight = parseFloat(document.getElementById('weight').value) || 0;
+    
+    let dose = "";
+    let freq = "";
+    let notes = "";
+
+    if(ind === 'deficiency_adult') {
+        dose = "60,000 IU";
+        freq = "Once Weekly for 8 Weeks";
+        notes = "Followed by 60,000 IU once monthly for maintenance. Check levels after 3 months.";
+    } else if (ind === 'deficiency_paeds') {
+        if(age === 'infant') {
+            dose = "2,000 IU"; freq = "Daily for 3 Months";
+        } else {
+            dose = "60,000 IU"; freq = "Once Weekly for 6 Weeks";
+        }
+        notes = "Ensure adequate calcium intake (500mg daily) during replacement.";
+    } else if (ind === 'stoss') {
+        if(weight < 10) dose = "300,000 IU";
+        else dose = "600,000 IU";
+        freq = "Single Dose (Oral/IM)";
+        notes = "Monitor for hypercalcemia. Usually reserved for severe rickets with poor compliance.";
+    } else {
+        dose = (age === 'adult') ? "1,000 - 2,000 IU" : "400 - 600 IU";
+        freq = "Daily Maintenance";
+        notes = "Recommended daily allowance (RDA) for healthy individuals.";
+    }
+
+    document.getElementById('res-dose').innerText = dose;
+    document.getElementById('res-freq').innerText = freq;
+    document.getElementById('res-notes').innerText = notes;
+    document.getElementById('result-box').style.display = "block";
+}
+</script>
+<script src="/assets/shared-nav.js"></script>
+</body>
+</html>
