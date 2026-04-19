@@ -1,115 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://rxmedcalc.com/</loc><priority>1.0</priority></url>
-<url><loc>https://rxmedcalc.com/index</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/dexamethasone</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/digoxin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/calcium-vitamind</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/insulin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/amlodipine</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/valproate</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/phenytoin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/phenobarbitone</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/spironolactone</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/amoxicillin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/furosemide</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/famotidine</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/enoxaparin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/omeprazole-pantoprazole</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/glibenclamide</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/zinc</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/iron</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/dextromethorphan-phenylephrine</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/prednisolone</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/diazepam</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/domperidone</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/vancomycin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/ibuprofen</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/ceftriaxone</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/cotrimoxazole</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/metronidazole</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/cetirizine</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/diclofenac</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/amikacin-gentamicin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/salbutamol</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/ondansetron</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/atenolol</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/metformin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/azithromycin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/clindamycin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses/levothyroxine</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/ors</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/news2</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/aa-gradient</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/arv-dose-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/corrected-calcium</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/milestones</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/albumin-corrected-ag</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/meld-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/perc-rule</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/ldl-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/mentzer-index-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/pediatric-weight</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/steroid-equivalence</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/phq9-gad7</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/cha2ds2-vasc</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/bmi</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/creatinine-clearance</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/lab-unit-converter</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/serum-osmolality</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/rass-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/map-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/child-pugh</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/psi-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/wells-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/uip-vaccine</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/qsofa-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/hba1c-converter</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/hunt-hess</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/growth-chart</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/fena-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/due-date</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/apgar-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/anion-gap</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/bisap-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/paracetamol</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/abcd2-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/gcs-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/spirometry</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/holliday-segar</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/pediatric-asthma</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/ibw-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/ktv-dialysis</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/burn-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/apache2-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/neonatal-jaundice</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/sofa-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/bsa-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/biomedical-waste</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/egfr-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/has-bled</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/shock-index</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/sirs-criteria</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/doses</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/curb65</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/rcri-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/obs-calc</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/nihss-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/tsh-interpreter</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/framingham-risk</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/upcr-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/sodium-correction</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/ascvd-risk</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/grace-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/qtc-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/pediatric-dehydration</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/about</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/search</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/contact</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/privacy</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/rabies-scheduler</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/rabies-scheduler/doses</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/</loc><priority>0.8</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/</loc><priority>0.8</priority></url>
+
+  <url><loc>https://rxmedcalc.com/drug-doses/amoxicillin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/azithromycin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/ceftriaxone</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/metronidazole</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/cotrimoxazole</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/vancomycin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/clindamycin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/amikacin-gentamicin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/metformin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/insulin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/glibenclamide</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/levothyroxine</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/amlodipine</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/atenolol</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/digoxin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/enoxaparin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/furosemide</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/spironolactone</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/phenytoin</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/valproate</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/phenobarbitone</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/diazepam</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/ibuprofen</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/diclofenac</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/paracetamol</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/prednisolone</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/dexamethasone</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/salbutamol</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/cetirizine</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/omeprazole-pantoprazole</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/ondansetron</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/domperidone</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/famotidine</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/zinc</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/iron</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/drug-doses/calcium-vitamind</loc><priority>0.64</priority></url>
+
+  <url><loc>https://rxmedcalc.com/rabies-scheduler/</loc><priority>0.8</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/uip-vaccine</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/bmi</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/curb65</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/news2</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/gcs-calculator</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/burn-calculator</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/wells-score</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/anion-gap</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/mentzer-index-calculator</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/map-calculator</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/egfr-calculator</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/creatinine-clearance</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/hba1c-converter</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/corrected-calcium</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/child-pugh</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/meld-score</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/ibw-calculator</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/qsofa-score</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/shock-index</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/perc-rule</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/aa-gradient</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/phq9-gad7</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/neonatal-jaundice</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/growth-chart</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/milestones</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/apgar-score</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/due-date</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/obs-calc</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/spirometry</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/biomedical-waste</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/steroid-equivalence</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/lab-unit-converter</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/fena-calculator</loc><priority>0.64</priority></url>
+  <url><loc>https://rxmedcalc.com/medical-calculators/sodium-correction</loc><priority>0.64</priority></url>
+
+  <url><loc>https://rxmedcalc.com/about</loc><priority>0.5</priority></url>
+  <url><loc>https://rxmedcalc.com/contact</loc><priority>0.5</priority></url>
+  <url><loc>https://rxmedcalc.com/privacy</loc><priority>0.5</priority></url>
 </urlset>
