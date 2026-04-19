@@ -23,21 +23,22 @@ jobs:
           echo "<url><loc>$DOMAIN/</loc><priority>1.0</priority></url>" >> sitemap.xml
 
           # 2. Loop through all HTML files
-          # Using -not -path '*/.*' to skip hidden folders like .github
           for file in $(find . -name "*.html" -not -path '*/.*'); do
 
             # Clean path: remove ./, remove index.html, remove .html extension
-            path=$(echo $file | sed 's|^\./||' | sed 's|/index.html$||' | sed 's|\.html$||')
+            # This logic turns "./medical-calculators/index.html" into "medical-calculators"
+            path=$(echo $file | sed 's|^\./||' | sed 's|/index.html$||' | sed 's|index.html$||' | sed 's|\.html$||')
 
-            # Skip unwanted files
-            if [[ "$path" == "" || "$path" == "404" || "$path" == "index" ]]; then
+            # --- DEDUPLICATION LOGIC ---
+            # If path is empty (it was the root index) or is specifically "index", skip it 
+            # because we already added the homepage manually above.
+            if [[ "$path" == "" || "$path" == "index" || "$path" == "404" ]]; then
               continue
             fi
 
             url="$DOMAIN/$path"
             
-            # --- Dynamic Priority Logic ---
-            # Set hub pages to 0.8, others to 0.64
+            # Dynamic Priority
             if [[ "$path" == "medical-calculators" || "$path" == "drug-doses" ]]; then
               priority="0.8"
             else
@@ -55,5 +56,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add sitemap.xml
-          git commit -m "Auto update sitemap [0.8 priority for hubs]" || echo "No changes"
+          git commit -m "Auto update sitemap [Deduplicated Clean URLs]" || echo "No changes"
           git push
