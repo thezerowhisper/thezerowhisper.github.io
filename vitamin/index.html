@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitamin Dosage Calculators & Clinical Replacement Guide India | RxMedCalc</title>
+<meta name="description" content="Clinical vitamin dosage calculators for Indian doctors. Evidence-based replacement for Vitamin D3, B12, B-Complex, A, E, and K. Paediatric and adult deficiency protocols.">
+<meta name="keywords" content="vitamin dosage calculator, vitamin d3 calculator india, b12 replacement protocol, vitamin a prophylaxis, vitamin e dosage, clinical nutrition india">
+<link rel="canonical" href="https://rxmedcalc.com/vitamins/"/>
+
+<link rel="stylesheet" href="/assets/shared.css"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #0d2b45; --navy-mid: #163d5c; --teal: #0e9f7e; --teal-light: #e1f5ee;
+    --amber: #f59e0b; --amber-light: #fef3dc; --bg: #f7f9fc; --border: #e2e8f0;
+}
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--navy); line-height: 1.6; }
+
+/* HERO SECTION */
+.hero-vits {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    padding: 80px 24px; color: #fff; text-align: center; position: relative; overflow: hidden;
+}
+.hero-vits h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 18px; line-height: 1.1; }
+.hero-vits h1 em { font-style: italic; color: var(--teal); }
+.hero-vits p { max-width: 650px; margin: 0 auto; opacity: 0.85; font-size: 1.15rem; }
+
+/* SEARCH BOX */
+.search-container { max-width: 700px; margin: -35px auto 50px; padding: 0 24px; position: relative; z-index: 20; }
+.search-container input {
+    width: 100%; padding: 18px 28px; border-radius: 15px; border: 1.5px solid var(--border);
+    box-shadow: 0 10px 25px rgba(13, 43, 69, 0.1); font-size: 1.1rem; outline: none; transition: 0.3s;
+}
+.search-container input:focus { border-color: var(--teal); box-shadow: 0 10px 30px rgba(14, 159, 126, 0.15); }
+
+.vit-main { max-width: 1100px; margin: 0 auto; padding-bottom: 80px; }
+
+/* CATEGORY HEADERS */
+.sec-head { display: flex; align-items: center; gap: 15px; margin: 50px 24px 25px; padding-bottom: 15px; border-bottom: 2px solid var(--border); }
+.sec-title { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 700; }
+
+/* VITAMIN CARDS */
+.vit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 0 24px; }
+.vit-card {
+    background: #fff; border: 1.5px solid var(--border); border-radius: 18px; padding: 28px;
+    text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex; flex-direction: column; position: relative; overflow: hidden;
+}
+.vit-card:hover { transform: translateY(-5px); border-color: var(--teal); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+.vit-card::before { content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--teal); }
+.vit-card.fat::before { background: var(--amber); }
+
+.v-alias { font-size: 0.8rem; color: var(--teal); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.vit-card.fat .v-alias { color: var(--amber); }
+.v-name { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+.v-desc { font-size: 0.92rem; color: #64748b; margin-bottom: 20px; flex: 1; line-height: 1.5; }
+.v-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.v-tag { font-size: 0.72rem; font-weight: 600; padding: 4px 12px; border-radius: 30px; background: var(--bg); border: 1px solid var(--border); }
+
+/* SEO CONTENT BLOCK */
+.seo-content { background: #fff; margin: 60px 24px; padding: 45px; border-radius: 24px; border: 1.5px solid var(--border); }
+.seo-content h2 { font-family: 'Fraunces', serif; font-size: 2rem; margin-bottom: 20px; color: var(--navy); }
+.seo-content h3 { font-size: 1.3rem; margin: 30px 0 15px; color: var(--navy-mid); }
+.seo-content p { color: #475569; margin-bottom: 18px; line-height: 1.8; }
+.seo-content ul { margin-bottom: 20px; padding-left: 20px; }
+.seo-content li { margin-bottom: 10px; color: #475569; }
+
+@media (max-width: 600px) { .vit-grid { grid-template-columns: 1fr; } .seo-content { padding: 25px; } }
+</style>
+</head>
+<body>
+
+<section class="hero-vits">
+    <h1>Vitamin Dosage <em>Calculators</em></h1>
+    <p>Clinical nutrition tools for replacement, prophylaxis, and maintenance therapy. Built for Indian clinicians following ICMR, WHO, and IAP guidelines.</p>
+</section>
+
+<div class="search-container">
+    <input type="text" id="vitSearch" placeholder="Search by name, symbol (B12, D3), or clinical indication..." onkeyup="searchVitamins()">
+</div>
+
+<main class="vit-main">
+
+    <div class="sec-head">
+        <span style="font-size: 1.8rem;">🥑</span>
+        <h2 class="sec-title">Fat-Soluble Vitamins (A, D, E, K)</h2>
+    </div>
+    
+    <div class="vit-grid">
+        <a href="/vitamins/vitamin-a-retinol" class="vit-card fat">
+            <div class="v-alias">Vitamin A</div>
+            <div class="v-name">Retinol</div>
+            <p class="v-desc">WHO Xerophthalmia protocol, measles-associated dosing, and routine childhood prophylaxis schedule.</p>
+            <div class="v-tags"><span class="v-tag">Xerophthalmia</span><span class="v-tag">Measles</span></div>
+        </a>
+
+        <a href="/vitamins/vitamin-d3-cholecalciferol" class="vit-card fat">
+            <div class="v-alias">Vitamin D3</div>
+            <div class="v-name">Cholecalciferol</div>
+            <p class="v-desc">Stoss therapy for Rickets, 60,000 IU weekly loading, and maintenance schedules for Osteomalacia.</p>
+            <div class="v-tags"><span class="v-tag">60k Weekly</span><span class="v-tag">Rickets</span></div>
+        </a>
+
+        <a href="/vitamins/vitamin-e-tocopherol" class="vit-card fat">
+            <div class="v-alias">Vitamin E</div>
+            <div class="v-name">Tocopherol</div>
+            <p class="v-desc">Cholestatic liver disease replacement, Premature infant dosing, and Abetalipoproteinemia protocols.</p>
+            <div class="v-tags"><span class="v-tag">Malabsorption</span><span class="v-tag">NICU</span></div>
+        </a>
+
+        <a href="/vitamins/vitamin-k-phytonadione" class="vit-card fat">
+            <div class="v-alias">Vitamin K</div>
+            <div class="v-name">Phytonadione</div>
+            <p class="v-desc">Neonatal HDN prophylaxis and emergency Warfarin/INR reversal protocols (Oral vs IV).</p>
+            <div class="v-tags"><span class="v-tag">INR Reversal</span><span class="v-tag">Birth Dose</span></div>
+        </a>
+    </div>
+
+    <div class="sec-head">
+        <span style="font-size: 1.8rem;">💧</span>
+        <h2 class="sec-title">Water-Soluble B-Complex & C</h2>
+    </div>
+
+    <div class="vit-grid">
+        <a href="/vitamins/b1-thiamine-calculator" class="vit-card">
+            <div class="v-alias">Vitamin B1</div>
+            <div class="v-name">Thiamine</div>
+            <p class="v-desc">Wernicke-Korsakoff (Pabst protocol) and Wet/Dry Beriberi treatment dosing.</p>
+            <div class="v-tags"><span class="v-tag">Alcohol Use</span><span class="v-tag">Wernicke</span></div>
+        </a>
+        <a href="/vitamins/b6-pyridoxine-calculator" class="vit-card">
+            <div class="v-alias">Vitamin B6</div>
+            <div class="v-name">Pyridoxine</div>
+            <p class="v-desc">INH-induced neuropathy prophylaxis in ATT and treatment for Sideroblastic anemia.</p>
+            <div class="v-tags"><span class="v-tag">TB/ATT</span><span class="v-tag">Neuropathy</span></div>
+        </a>
+        <a href="/vitamins/b12-cobalamin-calculator" class="vit-card">
+            <div class="v-alias">Vitamin B12</div>
+            <div class="v-name">Methylcobalamin</div>
+            <p class="v-desc">Loading and maintenance for Pernicious Anemia and Neurological deficits.</p>
+            <div class="v-tags"><span class="v-tag">Anemia</span><span class="v-tag">IM Loading</span></div>
+        </a>
+        </div>
+
+    <article class="seo-content">
+        <h2>Clinical Importance of Vitamin Supplementation in India</h2>
+        <p>Micronutrient deficiencies, often termed "hidden hunger," remain a significant public health challenge in clinical practice across India. From Vitamin D deficiency in urban populations to Vitamin A deficiency in rural pediatric groups, accurate clinical dosing is essential for effective treatment and avoiding toxicity.</p>
+
+        <h3>Fat-Soluble vs. Water-Soluble Vitamins</h3>
+        <p>Clinicians must differentiate between the two for safe prescribing. <strong>Fat-soluble vitamins (A, D, E, K)</strong> are stored in the liver and fatty tissues; therefore, they carry a higher risk of hypervitaminosis. For instance, Vitamin D toxicity can lead to hypercalcemia and renal stones if not monitored using specific IU/kg guidelines.</p>
+        <p><strong>Water-soluble vitamins (B-complex, C)</strong> are generally excreted via the kidneys, making them safer but requiring more frequent dosing. However, high-dose B6 (Pyridoxine) can still cause sensory neuropathy if levels are not managed during prolonged therapy like Anti-Tubercular Treatment (ATT).</p>
+
+        <h3>Why use a Vitamin Calculator?</h3>
+        <ul>
+            <li><strong>Age & Weight Specificity:</strong> Pediatric doses for Vitamin A prophylaxis (WHO) change strictly at the 6-month and 12-month marks.</li>
+            <li><strong>Loading vs Maintenance:</strong> Calculators help clinicians determine the initial loading dose (e.g., Vitamin D3 60,000 IU/week) versus long-term maintenance.</li>
+            <li><strong>Indication-Based Dosing:</strong> Vitamin K dosing differs vastly between a routine birth dose and an emergency INR reversal for a patient on Warfarin.</li>
+        </ul>
+
+        <p>RxMedCalc provides these interactive tools to ensure that healthcare workers can verify doses against the latest IAP (Indian Academy of Pediatrics) and ICMR (Indian Council of Medical Research) standards instantly at the bedside.</p>
+    </article>
+
+</main>
+
+<script>
+function searchVitamins() {
+    let input = document.getElementById('vitSearch').value.toLowerCase();
+    let cards = document.getElementsByClassName('vit-card');
+    for (let i = 0; i < cards.length; i++) {
+        let text = cards[i].innerText.toLowerCase();
+        cards[i].style.display = text.includes(input) ? "" : "none";
+    }
+}
+</script>
+
+</body>
+</html>
