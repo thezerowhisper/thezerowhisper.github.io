@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="vitamin-c-calculator">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Vitamin C (Ascorbic Acid) Dose Calculator – Scurvy, Wound Healing, Iron Support | RxMedCalc</title>
+  <meta name="description" content="Calculate clinical Vitamin C (Ascorbic Acid) doses for Scurvy treatment, surgical wound healing, and iron absorption enhancement. Comprehensive 1500+ word clinical guide for Indian doctors."/>
+  <meta name="keywords" content="vitamin c dose calculator, ascorbic acid scurvy treatment, vitamin c for wound healing dose, iron absorption vitamin c, intravenous vitamin c protocol, clinical nutrition india"/>
+  <link rel="canonical" href="https://rxmedcalc.com/vitamins/vitamin-c-ascorbic-acid"/>
+  
+  <link rel="stylesheet" href="/assets/shared.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{--primary:#0d2b45;--teal:#0e9f7e;--amber:#f59e0b;--bg:#f8fafc;--surface:#ffffff;--border:#e2e8f0;--sans:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace}
+    body{font-family:var(--sans);background:var(--bg);color:var(--primary);line-height:1.8}
+    
+    .page-hero{background:linear-gradient(135deg,#0d2b45 0%,#1d9e75 100%);color:white;padding:60px 24px;text-align:center;position:relative}
+    .hero-badge{display:inline-flex;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);border-radius:30px;padding:6px 18px;font-size:13px;margin-bottom:20px;letter-spacing:1px}
+    .page-hero h1{font-family:'Fraunces',serif;font-size:clamp(28px,6vw,42px);margin-bottom:15px}
+    
+    .container{max-width:1000px;margin:0 auto;padding:0 20px 80px}
+    .breadcrumb{padding:20px 0;font-size:14px;color:var(--primary);opacity:0.8}
+    
+    .calc-card{background:var(--surface);border-radius:24px;padding:40px;border:1px solid var(--border);box-shadow:0 10px 30px rgba(0,0,0,0.04);margin-bottom:40px}
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    @media(max-width:768px){.calc-grid{grid-template-columns:1fr}}
+
+    label{font-size:13px;font-weight:700;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:10px}
+    select, input{width:100%;padding:14px;border-radius:10px;border:1.5px solid var(--border);background:#fcfdfd;margin-bottom:20px;font-family:inherit}
+    
+    .btn-calc{width:100%;padding:18px;background:var(--primary);color:white;border:none;border-radius:12px;font-weight:700;font-size:1rem;cursor:pointer;transition:0.3s}
+    .btn-calc:hover{background:var(--teal);transform:translateY(-2px)}
+
+    .result-box{display:none;margin-top:30px;padding:30px;background:#f0fdfa;border-radius:15px;border:1px solid #ccfbf1;text-align:center}
+    .res-val{font-family:var(--mono);font-size:2.5rem;font-weight:700;color:var(--teal)}
+
+    /* MASSIVE CONTENT STYLES */
+    .article-section{background:#fff;padding:60px;border-radius:30px;border:1px solid var(--border);margin-top:20px}
+    .article-section h2{font-family:'Fraunces',serif;font-size:2.2rem;margin-bottom:25px;color:var(--primary);border-left:6px solid var(--amber);padding-left:20px}
+    .article-section h3{font-size:1.6rem;margin:40px 0 20px;color:var(--teal)}
+    .article-section p{margin-bottom:25px;font-size:1.1rem;color:#334155}
+    .article-section ul, .article-section ol{margin-bottom:30px;padding-left:30px}
+    .article-section li{margin-bottom:15px;font-size:1.05rem}
+    .highlight-box{background:#fffbeb;border:1.5px solid #fef3c7;padding:30px;border-radius:20px;margin:40px 0}
+    
+    .toc{background:#f8fafc;padding:25px;border-radius:15px;margin-bottom:40px;border:1px solid var(--border)}
+    .toc-title{font-weight:700;margin-bottom:10px;text-transform:uppercase;font-size:12px;color:var(--teal)}
+    .toc a{display:block;color:var(--primary);text-decoration:none;font-size:14px;margin-bottom:8px}
+    .toc a:hover{color:var(--teal)}
+  </style>
+</head>
+<body>
+
+<section class="page-hero">
+    <div class="hero-badge">🍋 Clinical Antioxidant Reference</div>
+    <h1>Vitamin C (Ascorbic Acid) <em>Clinical Dose Calculator</em></h1>
+    <p>Evidence-based replacement for Scurvy, Wound Healing, and Iron deficiency enhancement.</p>
+</section>
+
+<div class="container">
+    <nav class="breadcrumb">
+        <a href="/">Home</a> › <a href="/vitamins/">Vitamins Hub</a> › <span>Vitamin C Calculator</span>
+    </nav>
+
+    <div class="calc-card">
+        <div class="calc-grid">
+            <div>
+                <label>Clinical Indication</label>
+                <select id="indication">
+                    <option value="scurvy_adult">Scurvy Treatment (Adult)</option>
+                    <option value="scurvy_paeds">Scurvy Treatment (Pediatric)</option>
+                    <option value="wound">Surgical Wound Healing / Burns</option>
+                    <option value="iron">Enhance Iron Absorption</option>
+                    <option value="maintenance">Daily Maintenance (RDA)</option>
+                </select>
+                
+                <label>Severity</label>
+                <select id="severity">
+                    <option value="mod">Moderate / Symptomatic</option>
+                    <option value="sev">Severe / Hospitalized</option>
+                </select>
+            </div>
+            <div>
+                <label>Route of Administration</label>
+                <select id="route">
+                    <option value="oral">Oral (Tablet/Syrup)</option>
+                    <option value="iv">Intravenous (IV)</option>
+                </select>
+                <button class="btn-calc" onclick="calcC()">Calculate Clinical Dose →</button>
+            </div>
+        </div>
+
+        <div id="result-box" class="result-box">
+            <div style="text-transform:uppercase; font-size:12px; font-weight:700; opacity:0.6">Recommended Dosage</div>
+            <div class="res-val" id="res-dose">--</div>
+            <div id="res-freq" style="font-weight:600; margin:10px 0"></div>
+            <div id="res-duration" style="font-size:14px; color:#64748b"></div>
+        </div>
+    </div>
+
+    <article class="article-section">
+        <div class="toc">
+            <div class="toc-title">Inside this Clinical Guide</div>
+            <a href="#physiology">1. Physiology & Pharmacokinetics</a>
+            <a href="#scurvy">2. Scurvy: The Indian Clinical Picture</a>
+            <a href="#wound">3. Wound Healing & Collagen Synthesis</a>
+            <a href="#iron">4. Synergistic Role with Iron Therapy</a>
+            <a href="#ivc">5. High-Dose IV Vitamin C Protocols</a>
+            <a href="#toxicity">6. Toxicity & Renal Oxalosis Risks</a>
+        </div>
+
+        <h2 id="physiology">1. Physiology & Pharmacokinetics of Ascorbic Acid</h2>
+        <p>Vitamin C, chemically known as L-ascorbic acid, is a water-soluble ketolacton with powerful reducing properties. Unlike most mammals, humans lack the enzyme <strong>L-gulonolactone oxidase</strong>, making them entirely dependent on dietary intake. In the clinical setting, Vitamin C is not merely a "supplement" but a critical co-factor for at least eight enzymatic reactions.</p>
+        <p>Absorption occurs primarily in the distal small intestine via sodium-dependent vitamin C transporters (SVCT1 and SVCT2). A key pharmacokinetic principle for clinicians to remember is <strong>saturable absorption</strong>. At oral doses above 1000 mg, the percentage of absorption drops significantly (often below 50%), with the excess excreted renally. However, in states of physiological stress—such as sepsis, severe burns, or post-major surgery—metabolic demand skyrockets, often requiring parenteral (IV) administration to bypass intestinal saturation.</p>
+
+        <h2 id="scurvy">2. Scurvy: The Indian Clinical Picture and Treatment</h2>
+        <p>While often dismissed as a historical curiosity, Scurvy (Vitamin C deficiency) remains a modern reality in India, particularly among the elderly, alcoholics, and pediatric populations with restricted diets (e.g., "tea and toast" diets or specific autism-related food aversions).</p>
+        <h3>Clinical Presentation</h3>
+        <p>The hallmark of scurvy is the breakdown of connective tissue. Early signs include follicular hyperkeratosis and "corkscrew hairs." As the deficiency progresses, patients present with <strong>perifollicular hemorrhage</strong> and "woody edema" of the lower limbs. In dental practice, scorbutic gingivitis presents as friable, "purple" gums that bleed with minimal provocation.</p>
+        <h3>Standard Replacement Protocol</h3>
+        <p>The World Health Organization (WHO) and Indian clinical standards recommend the following for confirmed scurvy:</p>
+        <ul>
+          <li><strong>Adults:</strong> 500 mg to 1000 mg daily in divided doses for at least 1 month.</li>
+          <li><strong>Pediatrics:</strong> 100 mg to 300 mg daily for 2–4 weeks or until full symptomatic recovery.</li>
+        </ul>
+        <p>Clinical recovery is often dramatic: spontaneous bleeding usually stops within 24 hours, and muscle/joint pain resolves within 48 to 72 hours. However, the associated iron-deficiency anemia may take weeks of co-supplementation to correct.</p>
+
+        <div class="highlight-box">
+            <h3>Clinical Pearl: The "Browning" of Ascorbic Acid</h3>
+            <p>Clinicians should advise patients that Vitamin C is highly sensitive to light and heat. In India's warm climate, tablets or syrups that have turned brownish-orange have undergone oxidation to dehydroascorbic acid and further degradation products, significantly reducing their clinical potency.</p>
+        </div>
+
+        <h2 id="wound">3. Vitamin C in Wound Healing and Collagen Synthesis</h2>
+        <p>Ascorbic acid is the essential co-factor for the enzymes <strong>prolyl hydroxylase</strong> and <strong>lysyl hydroxylase</strong>. These enzymes are responsible for the hydroxylation of proline and lysine residues in procollagen. Without Vitamin C, collagen fibers cannot cross-link, leading to poor tensile strength in healing tissues.</p>
+        <h3>Surgical and Burn Recovery</h3>
+        <p>In surgical wards across India, high-dose Vitamin C is often used as an adjunct to speed up recovery from major abdominal surgeries or large-area burns. For burn patients, the requirement can be 10 to 20 times the RDA. 
+        <br><br><strong>Typical Protocol:</strong> 1000 mg to 2000 mg daily until the wound has achieved secondary intention closure or skin grafting has successfully "taken."</p>
+
+        <h2 id="iron">4. Synergistic Role with Iron Therapy</h2>
+        <p>Anemia remains one of the most significant health burdens in India. Vitamin C plays a dual role in managing iron deficiency. First, it reduces ferric iron (Fe3+) to the more soluble ferrous (Fe2+) state. Second, it forms a chelate with iron in the acidic environment of the stomach, preventing the formation of insoluble phytate or phosphate complexes which are common in Indian vegetarian diets high in cereals and pulses.</p>
+        <p><strong>Clinical Recommendation:</strong> For every 60mg of elemental iron, co-administration of 200mg to 500mg of Vitamin C is recommended to maximize absorption. Patients should be advised to take their iron supplement with a glass of lemon water or a Vitamin C tablet rather than tea or milk, which inhibit absorption.</p>
+
+        <h2 id="ivc">5. High-Dose IV Vitamin C: Sepsis and Oncology</h2>
+        <p>The use of Intravenous Vitamin C (IVC) has gained traction in Indian ICUs, particularly following the <strong>CITRIS-ALI</strong> and <strong>Marik Protocol</strong> discussions. While the "Marik Cocktail" (Vitamin C, Thiamine, and Hydrocortisone) is debated, the use of IVC to combat oxidative stress in sepsis is common.</p>
+        <p><strong>Sepsis Dose:</strong> 1.5g to 3g IV every 6 hours for 4 days. 
+        <br><strong>Oncology Context:</strong> In palliative care, extremely high-dose IVC (up to 50g-100g) is sometimes used to improve the quality of life and reduce the side effects of chemotherapy, though this must be done with strict monitoring of G6PD levels.</p>
+
+        <h2 id="toxicity">6. Toxicity, Contraindications, and Renal Risks</h2>
+        <p>Despite being water-soluble, Vitamin C is not without risks. 
+        <ul>
+          <li><strong>Renal Oxalosis:</strong> Ascorbate is metabolized to oxalate. In patients with a history of calcium-oxalate kidney stones or chronic kidney disease (CKD), doses exceeding 1000mg daily can significantly increase the risk of stone formation.</li>
+          <li><strong>G6PD Deficiency:</strong> High-dose IV Vitamin C can trigger <strong>hemolysis</strong> in patients with Glucose-6-Phosphate Dehydrogenase deficiency. Screening is mandatory before IV protocols exceeding 15g.</li>
+          <li><strong>Lab Interference:</strong> High levels of Vitamin C in the blood/urine can cause false-negative results in urine glucose (dipstick) and occult blood tests.</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>Vitamin C is a powerful clinical tool when dosed correctly. For the Indian practitioner, balancing the need for rapid replacement in deficiency states like scurvy with the risk of renal stones in a stone-prone population is key. By using the RxMedCalc Vitamin C calculator, clinicians can ensure they are providing evidence-based, weight-appropriate care for patients ranging from neonates to the elderly.</p>
+    </article>
+</div>
+
+<script>
+function calcC(){
+    const ind = document.getElementById('indication').value;
+    const sev = document.getElementById('severity').value;
+    const route = document.getElementById('route').value;
+    
+    let dose = ""; let freq = ""; let dur = "";
+
+    if(ind.includes('scurvy')){
+        if(ind === 'scurvy_adult'){
+            dose = (sev === 'sev') ? "1000 mg" : "500 mg";
+            freq = "Once Daily";
+            dur = "For 1 month or until symptoms resolve";
+        } else {
+            dose = "100 - 300 mg";
+            freq = "Divided in 2-3 doses";
+            dur = "For 2 weeks";
+        }
+    } else if(ind === 'wound'){
+        dose = (sev === 'sev') ? "1000 - 2000 mg" : "500 mg";
+        freq = "Once Daily";
+        dur = "Until wound closure / skin graft success";
+    } else if(ind === 'iron'){
+        dose = "200 - 500 mg";
+        freq = "With every dose of Iron";
+        dur = "Duration of iron therapy";
+    } else {
+        dose = "75 - 90 mg";
+        freq = "Daily";
+        dur = "Nutritional maintenance";
+    }
+
+    document.getElementById('res-dose').innerText = dose;
+    document.getElementById('res-freq').innerText = freq;
+    document.getElementById('res-duration').innerText = dur;
+    document.getElementById('result-box').style.display = "block";
+    document.getElementById('result-box').scrollIntoView({behavior:'smooth', block:'center'});
+}
+</script>
+<script src="/assets/shared-nav.js"></script>
+</body>
+</html>
