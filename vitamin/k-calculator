@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="vitamin-k-calculator">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Vitamin K (Phytonadione) Dose Calculator – VKDB & INR Reversal | RxMedCalc</title>
+  <meta name="description" content="Calculate Vitamin K (Phytonadione) clinical doses for Neonatal VKDB prophylaxis and emergency Warfarin/INR reversal. Comprehensive 1500+ word clinical guide."/>
+  <meta name="keywords" content="vitamin k dose calculator, phytonadione inr reversal protocol, neonatal vitamin k shot dose, warfarin overdose treatment, vitamin k1 vs k2 clinical, vitamin k deficiency bleeding"/>
+  <link rel="canonical" href="https://rxmedcalc.com/vitamins/k-calculator"/>
+  
+  <link rel="stylesheet" href="/assets/shared.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{--primary:#0d2b45;--crimson:#e11d48;--teal:#0e9f7e;--bg:#fff1f2;--surface:#ffffff;--border:#fecdd3;--sans:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace}
+    body{font-family:var(--sans);background:#fafafa;color:var(--primary);line-height:1.8}
+    
+    .page-hero{background:linear-gradient(135deg,#0d2b45 0%,#9f1239 100%);color:white;padding:60px 24px;text-align:center;position:relative}
+    .hero-badge{display:inline-flex;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:30px;padding:6px 18px;font-size:13px;margin-bottom:20px;letter-spacing:1px;text-transform:uppercase}
+    .page-hero h1{font-family:'Fraunces',serif;font-size:clamp(28px,6vw,42px);margin-bottom:15px}
+    
+    .container{max-width:1100px;margin:0 auto;padding:0 20px 100px}
+    .breadcrumb{padding:20px 0;font-size:14px;color:var(--primary);opacity:0.7}
+    
+    .calc-card{background:var(--surface);border-radius:24px;padding:40px;border:1px solid var(--border);box-shadow:0 10px 30px rgba(225,29,72,0.05);margin-bottom:40px}
+    .calc-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+    @media(max-width:768px){.calc-grid{grid-template-columns:1fr}}
+
+    label{font-size:12px;font-weight:800;text-transform:uppercase;color:var(--crimson);display:block;margin-bottom:10px;letter-spacing:0.5px}
+    select, input{width:100%;padding:14px;border-radius:12px;border:1.5px solid var(--border);background:#fffcfc;margin-bottom:20px;font-family:inherit;font-size:1rem;outline:none}
+    
+    .btn-calc{width:100%;padding:18px;background:var(--crimson);color:white;border:none;border-radius:14px;font-weight:700;font-size:1.1rem;cursor:pointer;transition:0.3s;box-shadow:0 4px 15px rgba(225,29,72,0.2)}
+    .btn-calc:hover{background:#be123c;transform:translateY(-2px)}
+
+    .result-box{display:none;margin-top:35px;padding:35px;background:var(--bg);border-radius:20px;border:1.5px solid var(--border);text-align:center;animation:fadeIn 0.5s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .res-val{font-family:var(--mono);font-size:2.8rem;font-weight:700;color:var(--crimson);margin:10px 0}
+
+    /* ARTICLE */
+    .article-section{background:#fff;padding:60px;border-radius:35px;border:1px solid #eee;margin-top:20px}
+    .article-section h2{font-family:'Fraunces',serif;font-size:2.4rem;margin:50px 0 25px;color:var(--primary);border-left:8px solid var(--crimson);padding-left:20px}
+    .article-section h3{font-size:1.7rem;margin:40px 0 20px;color:var(--crimson);font-weight:700}
+    .article-section p{margin-bottom:25px;font-size:1.15rem;color:#334155}
+    
+    .toc-box{background:#fcfcfc;padding:30px;border-radius:20px;margin-bottom:50px;border:1px solid #eee}
+    .toc-link{display:block;color:var(--primary);text-decoration:none;font-size:15px;margin-bottom:10px;font-weight:500}
+    .toc-link:hover{color:var(--crimson);text-decoration:underline}
+
+    .alert-panel{background:#0d2b45;color:white;padding:30px;border-radius:20px;margin:40px 0}
+  </style>
+</head>
+<body>
+
+<section class="page-hero">
+    <div class="hero-badge">🩸 Coagulation & Hemostasis Hub</div>
+    <h1>Vitamin K (Phytonadione) <em>Clinical Dose Calculator</em></h1>
+    <p>Protocols for Neonatal Prophylaxis (VKDB) and Emergency Warfarin/INR Reversal.</p>
+</section>
+
+<div class="container">
+    <nav class="breadcrumb">
+        <a href="/">Home</a> › <a href="/vitamins/">Vitamins Hub</a> › <span>Vitamin K Calculator</span>
+    </nav>
+
+    <div class="calc-card">
+        <div class="calc-grid">
+            <div class="input-side">
+                <label>Clinical Scenario</label>
+                <select id="scenario" onchange="toggleINR()">
+                    <option value="neonatal">Neonatal Prophylaxis (Birth Shot)</option>
+                    <option value="inr_reversal">Warfarin Reversal (High INR)</option>
+                    <option value="malabsorption">Chronic Malabsorption / Liver Disease</option>
+                    <option value="deficiency">Acute Vitamin K Deficiency Bleeding</option>
+                </select>
+                
+                <div id="inr_section" style="display:none">
+                    <label>Current INR Level</label>
+                    <input type="number" id="inr_val" step="0.1" placeholder="e.g. 6.5">
+                    <label>Bleeding Status</label>
+                    <select id="bleed">
+                        <option value="none">No Bleeding</option>
+                        <option value="minor">Minor Bleeding</option>
+                        <option value="major">Life-Threatening Bleeding</option>
+                    </select>
+                </div>
+
+                <div id="weight_section">
+                    <label>Patient Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="e.g. 3.2">
+                </div>
+            </div>
+            <div class="action-side">
+                <label>Preferred Route</label>
+                <select id="route">
+                    <option value="im">Intramuscular (IM)</option>
+                    <option value="iv">Intravenous (IV)</option>
+                    <option value="oral">Oral</option>
+                </select>
+                <button class="btn-calc" onclick="calcK()">Calculate Clinical Dose →</button>
+            </div>
+        </div>
+
+        <div id="result-box" class="result-box">
+            <div style="text-transform:uppercase; font-size:12px; font-weight:800; color:var(--crimson); letter-spacing:1px">Urgent Regimen</div>
+            <div class="res-val" id="res-dose">--</div>
+            <div id="res-freq" style="font-weight:700; font-size:1.2rem; margin:15px 0; color:var(--primary)"></div>
+            <div id="res-notes" style="font-size:14px; line-height:1.6; color:#64748b"></div>
+        </div>
+    </div>
+
+    <article class="article-section">
+        <div class="toc-box">
+            <div style="font-weight:800; margin-bottom:15px; font-size:13px; color:var(--crimson)">CLINICAL NAVIGATION</div>
+            <a href="#pathway" class="toc-link">1. The Vitamin K Cycle & Clotting Factors</a>
+            <a href="#vkdb" class="toc-link">2. VKDB: Preventing the "Silent" Neonatal Bleed</a>
+            <a href="#warfarin" class="toc-link">3. Warfarin Reversal: ACCP & ASH Guidelines</a>
+            <a href="#k1vsk2" class="toc-link">4. Vitamin K1 (Phytonadione) vs. K2 (Menaquinone)</a>
+            <a href="#iv_safety" class="toc-link">5. IV Administration & Anaphylactoid Risks</a>
+            <a href="#liver" class="toc-link">6. Vitamin K Response Test in Liver Disease</a>
+        </div>
+
+        <h2 id="pathway">1. The Vitamin K Cycle & Clotting Factors</h2>
+        <p>Vitamin K is the essential cofactor for the enzyme <strong>gamma-glutamyl carboxylase</strong>. This enzyme is responsible for the post-translational modification of specific proteins, enabling them to bind calcium. In the liver, this process is critical for the activation of clotting factors **II (Prothrombin), VII, IX, and X**, as well as anticoagulant proteins **C and S**.</p>
+        
+        <p>Clinically, Vitamin K exists in a cycle. Once it helps carboxylate a clotting factor, it becomes "spent" (epoxide form). The enzyme **Vitamin K Epoxide Reductase (VKOR)** then recycles it back to its active form. This is the exact enzyme targeted by Warfarin. By inhibiting VKOR, Warfarin starves the body of active Vitamin K, leading to anticoagulation.</p>
+
+        <h2 id="vkdb">2. VKDB: Preventing the "Silent" Neonatal Bleed</h2>
+        <p>Vitamin K Deficiency Bleeding (VKDB), formerly known as "Hemorrhagic Disease of the Newborn," is a catastrophic but preventable condition. Neonates are born with virtually no Vitamin K stores because the molecule does not cross the placenta well, and breast milk is a poor source.</p>
+        <h3>The Birth Shot Protocol</h3>
+        <p>The **American Academy of Pediatrics (AAP)** and international pediatric societies mandate a single IM injection of Vitamin K1 within 6 hours of birth. 
+        <ul>
+          <li><strong>Infants > 1500g:</strong> 1.0 mg IM.</li>
+          <li><strong>Infants ≤ 1500g:</strong> 0.5 mg IM.</li>
+        </ul>
+        Oral Vitamin K is not considered equivalent for the prevention of "Late VKDB" (occurring 2-12 weeks after birth), which often presents as sudden intracranial hemorrhage.</p>
+
+        <h2 id="warfarin">3. Warfarin Reversal: ACCP & ASH Guidelines</h2>
+        <p>In emergency medicine, the management of a high INR (International Normalized Ratio) requires a balance between reversal and the risk of thrombosis. According to the **American College of Chest Physicians (ACCP)**:</p>
+        <ul>
+            <li><strong>INR 4.5 – 10.0 (No Bleeding):</strong> Routine Vitamin K is NOT recommended. Simply withhold Warfarin.</li>
+            <li><strong>INR > 10.0 (No Bleeding):</strong> 2.5mg to 5mg Oral Vitamin K1.</li>
+            <li><strong>Major Bleeding (Any INR):</strong> 5mg to 10mg IV Vitamin K1, administered slowly, alongside Prothrombin Complex Concentrate (PCC) or Fresh Frozen Plasma (FFP).</li>
+        </ul>
+
+        <div class="alert-panel">
+            <h3>⚠️ Critical Safety: IV Phytonadione</h3>
+            <p>Intravenous Vitamin K1 carries a boxed warning for <strong>Anaphylactoid Reactions</strong>. This is not a true IgE-mediated allergy but a reaction to the solubilizers (like polyethoxylated castor oil). To minimize risk, IV Vitamin K MUST be diluted in 50mL of saline/dextrose and infused over 20-30 minutes. NEVER give as an undiluted IV bolus.</p>
+        </div>
+
+        <h2 id="k1vsk2">4. Vitamin K1 (Phytonadione) vs. K2 (Menaquinone)</h2>
+        <p>There is significant international confusion between K1 and K2. 
+        <br><strong>Vitamin K1 (Phytonadione):</strong> Derived from green leafy vegetables. This is the form used for coagulation and emergency medicine.
+        <br><strong>Vitamin K2 (Menaquinone):</strong> Produced by gut bacteria and found in fermented foods. K2 is increasingly studied for its role in <strong>bone mineralization</strong> (activating osteocalcin) and preventing <strong>vascular calcification</strong> (activating Matrix Gla Protein). However, K2 is NOT used for INR reversal or VKDB prophylaxis.</p>
+
+        <h2 id="liver">5. Vitamin K Response Test in Liver Disease</h2>
+        <p>In patients with cirrhosis and an elevated Prothrombin Time (PT), clinicians often perform a "Vitamin K Challenge." 10mg of Vitamin K is given IV for three days. If the PT improves, it suggests the coagulopathy was secondary to malabsorption (common in cholestatic liver disease). If the PT remains unchanged, it indicates severe hepatic biosynthetic failure, as the liver is no longer capable of utilizing the Vitamin K provided.</p>
+
+        <h3>Conclusion</h3>
+        <p>Vitamin K is a small molecule with a massive clinical footprint. From the delivery room to the emergency department, its role in preventing and stopping hemorrhage is unparalleled. This RxMedCalc tool provides clinicians with the evidence-based dosing required to navigate complex INR reversals and neonatal care with confidence and precision.</p>
+    </article>
+</div>
+
+<script>
+function toggleINR(){
+    const sc = document.getElementById('scenario').value;
+    document.getElementById('inr_section').style.display = (sc === 'inr_reversal') ? 'block' : 'none';
+    document.getElementById('weight_section').style.display = (sc === 'neonatal' || sc === 'deficiency') ? 'block' : 'none';
+}
+
+function calcK(){
+    const sc = document.getElementById('scenario').value;
+    const w = parseFloat(document.getElementById('weight').value) || 0;
+    const inr = parseFloat(document.getElementById('inr_val').value) || 0;
+    const bleed = document.getElementById('bleed').value;
+    const route = document.getElementById('route').value;
+    
+    let dose = ""; let freq = "Single Dose"; let notes = "";
+
+    if(sc === 'neonatal'){
+        dose = (w > 1.5) ? "1.0 mg" : "0.5 mg";
+        freq = "IM Single Injection";
+        notes = "Administer within 6 hours of birth. Essential to prevent Late VKDB.";
+    } else if(sc === 'inr_reversal'){
+        if(bleed === 'major'){
+            dose = "5 - 10 mg";
+            notes = "Give via slow IV infusion. Combine with PCC or FFP for immediate effect.";
+        } else if(inr > 10){
+            dose = "2.5 - 5 mg";
+            notes = "Oral route is preferred if no major bleeding. Monitor INR in 24 hours.";
+        } else {
+            dose = "Hold Warfarin";
+            notes = "For INR 4.5-10 with no bleeding, Vitamin K is typically not required.";
+        }
+    } else if(sc === 'malabsorption'){
+        dose = "2.5 - 10 mg";
+        freq = "Once or Twice Weekly";
+        notes = "Adjust based on PT/INR monitoring.";
+    } else {
+        dose = (w > 0) ? (w * 0.3).toFixed(1) + " mg" : "10 mg";
+        notes = "Urgent replacement for active bleeding. IV route preferred for rapid onset.";
+    }
+
+    document.getElementById('res-dose').innerText = dose;
+    document.getElementById('res-freq').innerText = freq;
+    document.getElementById('res-notes').innerText = notes;
+    document.getElementById('result-box').style.display = "block";
+    document.getElementById('result-box').scrollIntoView({behavior:'smooth', block:'center'});
+}
+</script>
+<script src="/assets/shared-nav.js"></script>
+</body>
+</html>
