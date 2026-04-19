@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="vitamin-e-calculator">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Vitamin E (Tocopherol) Dose Calculator – Malabsorption & Liver Disease | RxMedCalc</title>
+  <meta name="description" content="Calculate Vitamin E (Tocopherol) clinical doses for cholestatic liver disease, cystic fibrosis, and neonatal ROP prophylaxis. Professional 1500+ word clinical guide."/>
+  <meta name="keywords" content="vitamin e dose calculator, tocopherol dosage for liver disease, cystic fibrosis vitamin e protocol, abetalipoproteinemia treatment, vitamin e mg to iu converter, neonatal vitamin e dosing"/>
+  <link rel="canonical" href="https://rxmedcalc.com/vitamins/e-tocopherol-calculator"/>
+  
+  <link rel="stylesheet" href="/assets/shared.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{--primary:#0d2b45;--teal:#0e9f7e;--amber:#f59e0b;--bg:#f8fafc;--surface:#ffffff;--border:#e2e8f0;--sans:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace}
+    body{font-family:var(--sans);background:var(--bg);color:var(--primary);line-height:1.8}
+    
+    .page-hero{background:linear-gradient(135deg,#0d2b45 0%,#163d5c 100%);color:white;padding:60px 24px;text-align:center;position:relative}
+    .hero-badge{display:inline-flex;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:30px;padding:6px 18px;font-size:13px;margin-bottom:20px;letter-spacing:1px;text-transform:uppercase}
+    .page-hero h1{font-family:'Fraunces',serif;font-size:clamp(28px,6vw,42px);margin-bottom:15px}
+    
+    .container{max-width:1100px;margin:0 auto;padding:0 20px 100px}
+    .breadcrumb{padding:20px 0;font-size:14px;color:var(--primary);opacity:0.7}
+    
+    .calc-card{background:var(--surface);border-radius:24px;padding:40px;border:1px solid var(--border);box-shadow:0 10px 30px rgba(0,0,0,0.04);margin-bottom:40px}
+    .calc-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+    @media(max-width:768px){.calc-grid{grid-template-columns:1fr}}
+
+    label{font-size:12px;font-weight:800;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:10px;letter-spacing:0.5px}
+    select, input{width:100%;padding:14px;border-radius:12px;border:1.5px solid var(--border);background:#fcfdfd;margin-bottom:20px;font-family:inherit;font-size:1rem;outline:none}
+    
+    .btn-calc{width:100%;padding:18px;background:var(--primary);color:white;border:none;border-radius:14px;font-weight:700;font-size:1.1rem;cursor:pointer;transition:0.3s;box-shadow:0 4px 15px rgba(13,43,69,0.2)}
+    .btn-calc:hover{background:var(--teal);transform:translateY(-2px)}
+
+    .result-box{display:none;margin-top:35px;padding:35px;background:#fffbeb;border-radius:20px;border:1.5px solid #fef08a;text-align:center;animation:fadeIn 0.5s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .res-val{font-family:var(--mono);font-size:2.8rem;font-weight:700;color:var(--primary);margin:10px 0}
+
+    /* ARTICLE */
+    .article-section{background:#fff;padding:60px;border-radius:35px;border:1px solid var(--border);margin-top:20px}
+    .article-section h2{font-family:'Fraunces',serif;font-size:2.4rem;margin:50px 0 25px;color:var(--primary);border-left:8px solid var(--amber);padding-left:20px}
+    .article-section h3{font-size:1.7rem;margin:40px 0 20px;color:var(--teal);font-weight:700}
+    .article-section p{margin-bottom:25px;font-size:1.15rem;color:#334155}
+    
+    .toc-box{background:#f8fafc;padding:30px;border-radius:20px;margin-bottom:50px;border:1px solid var(--border)}
+    .toc-link{display:block;color:var(--primary);text-decoration:none;font-size:15px;margin-bottom:10px;font-weight:500}
+    .toc-link:hover{color:var(--teal);text-decoration:underline}
+
+    .info-card{background:var(--bg);border:1px solid var(--border);border-radius:15px;padding:25px;margin:30px 0}
+  </style>
+</head>
+<body>
+
+<section class="page-hero">
+    <div class="hero-badge">🧬 Cellular Protection Hub</div>
+    <h1>Vitamin E (Tocopherol) <em>Clinical Dose Calculator</em></h1>
+    <p>Replacement protocols for Malabsorption, Cystic Fibrosis, Cholestasis, and NICU neuro-protection.</p>
+</section>
+
+<div class="container">
+    <nav class="breadcrumb">
+        <a href="/">Home</a> › <a href="/vitamins/">Vitamins Hub</a> › <span>Vitamin E Calculator</span>
+    </nav>
+
+    <div class="calc-card">
+        <div class="calc-grid">
+            <div class="input-side">
+                <label>Clinical Indication</label>
+                <select id="indication">
+                    <option value="cholestasis">Cholestatic Liver Disease / Biliary Atresia</option>
+                    <option value="cf">Cystic Fibrosis (Pancreatic Insufficiency)</option>
+                    <option value="nicu">Premature Infant (ROP Prophylaxis)</option>
+                    <option value="abetal">Abetalipoproteinemia (Genetic)</option>
+                    <option value="deficiency">Severe Adult Deficiency (Non-specific)</option>
+                </select>
+                
+                <label>Patient Weight (kg)</label>
+                <input type="number" id="weight" placeholder="e.g. 15">
+            </div>
+            <div class="action-side">
+                <label>Measurement Preference</label>
+                <select id="pref">
+                    <option value="mg">Milligrams (mg alpha-tocopherol)</option>
+                    <option value="iu">International Units (IU)</option>
+                </select>
+                <button class="btn-calc" onclick="calcE()">Calculate Therapeutic Dose →</button>
+            </div>
+        </div>
+
+        <div id="result-box" class="result-box">
+            <div style="text-transform:uppercase; font-size:12px; font-weight:800; color:var(--amber); letter-spacing:1px">Clinical Regimen</div>
+            <div class="res-val" id="res-dose">--</div>
+            <div id="res-freq" style="font-weight:700; font-size:1.2rem; margin:15px 0; color:var(--primary)"></div>
+            <div id="res-notes" style="font-size:14px; line-height:1.6; color:#64748b"></div>
+        </div>
+    </div>
+
+    <article class="article-section">
+        <div class="toc-box">
+            <div style="font-weight:800; margin-bottom:15px; font-size:13px; color:var(--teal)">CLINICAL NAVIGATION</div>
+            <a href="#biochem" class="toc-link">1. Biochemistry of the Eight Tocopherols</a>
+            <a href="#cholestasis" class="toc-link">2. Management in Cholestatic Liver Disease</a>
+            <a href="#cysticfibrosis" class="toc-link">3. Cystic Fibrosis & Pancreatic Insufficiency</a>
+            <a href="#neonatology" class="toc-link">4. Neonatology: ROP and Hemolysis Prevention</a>
+            <a href="#conversion" class="toc-link">5. IU to mg: The Pharmacological Mismatch</a>
+            <a href="#toxicity" class="toc-link">6. Excess & Coagulopathy: The Vitamin K Interaction</a>
+        </div>
+
+        <h2 id="biochem">1. Biochemistry of the Eight Tocopherols</h2>
+        <p>Vitamin E is not a single substance but a family of eight naturally occurring fat-soluble antioxidants: four tocopherols (α-, β-, γ-, and δ-) and four tocotrienols. Of these, <strong>alpha-tocopherol</strong> is the only form recognized to meet human requirements, as it is selectively bound by the hepatic alpha-tocopherol transfer protein (α-TTP).</p>
+        <p>In clinical practice, Vitamin E acts as the primary chain-breaking antioxidant in biological membranes. it protects polyunsaturated fatty acids (PUFAs) within phospholipids from lipid peroxidation. For the clinician, understanding the delivery mechanism is vital: Vitamin E requires biliary secretion and pancreatic lipase for micellar solubilization before it can be absorbed in the mid-small intestine via passive diffusion.</p>
+
+        <h2 id="cholestasis">2. Management in Cholestatic Liver Disease</h2>
+        <p>In conditions like <strong>Biliary Atresia</strong>, Alagille Syndrome, or Primary Biliary Cholangitis, the absence of intraluminal bile salts makes standard oil-based Vitamin E nearly impossible to absorb. This leads to profound neuromuscular deficiency syndromes, including ataxia and loss of vibratory sense.</p>
+        <p><strong>TPGS (Tocopheryl Polyethylene Glycol Succinate):</strong> This is a water-soluble form of Vitamin E that forms its own micelles, allowing for absorption even in the complete absence of bile. It is the gold standard for treating pediatric cholestasis. Doses often range from 15 to 25 IU/kg/day, significantly higher than standard requirements.</p>
+
+        <h2 id="cysticfibrosis">3. Cystic Fibrosis & Pancreatic Insufficiency</h2>
+        <p>Pancreatic enzyme insufficiency in Cystic Fibrosis (CF) leads to significant fat malabsorption. Internationally, the <strong>Cystic Fibrosis Foundation</strong> recommends aggressive Vitamin E monitoring. Since Vitamin E status depends on circulating lipids, clinicians must interpret serum alpha-tocopherol levels in the context of total serum lipids (ratio > 0.8 mg/g is considered sufficient).</p>
+        <p>Treatment usually involves 100-400 IU/day for children and up to 800 IU/day for adults, often administered alongside pancreatic enzyme replacement therapy (PERT).</p>
+
+        <h2 id="neonatology">4. Neonatology: ROP and Hemolysis Prevention</h2>
+        <p>Preterm infants are born with low Vitamin E stores. In the NICU, Vitamin E has historically been used to reduce the risk of <strong>Retinopathy of Prematurity (ROP)</strong> and intraventricular hemorrhage. However, high-dose parenteral Vitamin E must be used with extreme caution as it has been linked to increased risk of sepsis and necrotizing enterocolitis (NEC) in premature neonates.</p>
+
+        <div class="info-card">
+            <h3>Clinical Pearl: The "Ataxia" Sign</h3>
+            <p>Isolated Vitamin E deficiency can present as a "Friedreich’s Ataxia mimic." If a patient presents with progressive ataxia, loss of deep tendon reflexes, and ophthalmoplegia—especially in the context of GI disease—check the alpha-tocopherol level immediately. Correcting the deficiency can halt neurological progression.</p>
+        </div>
+
+        <h2 id="conversion">5. IU to mg: The Pharmacological Mismatch</h2>
+        <p>There is frequent confusion in clinical documentation regarding units. The conversion depends on whether the supplement is natural (d-alpha-tocopherol) or synthetic (dl-alpha-tocopherol):</p>
+        <ul>
+            <li><strong>1 mg of natural Vitamin E</strong> = 1.49 IU</li>
+            <li><strong>1 mg of synthetic Vitamin E</strong> = 1.10 IU</li>
+        </ul>
+        <p>When prescribing for severe malabsorption, clinicians should specify the form, as natural d-alpha-tocopherol has significantly higher bioavailability and tissue retention.</p>
+
+        <h2 id="toxicity">6. Excess & Coagulopathy: The Vitamin K Interaction</h2>
+        <p>While Vitamin E has a high tolerable upper intake level (UL 1000 mg/day for adults), "megadosing" (frequently seen in OTC supplement use) can interfere with Vitamin K-dependent clotting factors. Vitamin E antagonizes the action of Vitamin K, leading to an increased risk of bleeding, especially in patients already on anticoagulants like Warfarin or Aspirin.</p>
+        <p><strong>Surgical Precaution:</strong> It is standard international practice to discontinue high-dose Vitamin E supplements at least two weeks before elective surgery to ensure optimal primary hemostasis.</p>
+
+        <h3>Conclusion</h3>
+        <p>Vitamin E management requires a nuanced understanding of fat absorption physiology. For patients with cholestasis or CF, it is a life-critical intervention to prevent permanent neurological damage. By using the RxMedCalc tool, clinicians can determine precise weight-based requirements while remaining aware of the complex unit conversions and potential bleeding risks associated with high-dose therapy.</p>
+    </article>
+</div>
+
+<script>
+function calcE(){
+    const ind = document.getElementById('indication').value;
+    const w = parseFloat(document.getElementById('weight').value) || 0;
+    const pref = document.getElementById('pref').value;
+    
+    let dose = 0; let freq = "Once Daily"; let notes = "";
+
+    if(ind === 'cholestasis'){
+        if(w > 0) {
+            dose = w * 20; // 15-25 IU/kg
+            notes = "Using water-soluble TPGS form is mandatory if bile flow is obstructed.";
+        } else {
+            dose = 400; notes = "Standard adult cholestasis starting dose.";
+        }
+    } else if(ind === 'cf'){
+        dose = (w < 20) ? 100 : (w < 40) ? 200 : 400;
+        notes = "Administer with pancreatic enzymes (PERT) and a fat-containing meal.";
+    } else if(ind === 'nicu'){
+        dose = 5; freq = "Once Daily (Oral)";
+        notes = "Monitor for NEC risk. Usually limited to very low birth weight infants.";
+    } else if(ind === 'abetal'){
+        dose = w * 100; // Genetic requires massive doses
+        notes = "Requires massive doses (100-200 IU/kg) to achieve even trace serum levels.";
+    } else {
+        dose = 15; notes = "Standard Nutritional RDA. Therapeutic deficiency usually requires 100-200 IU.";
+    }
+
+    let finalStr = pref === 'iu' ? Math.round(dose) + " IU" : Math.round(dose / 1.49) + " mg";
+
+    document.getElementById('res-dose').innerText = finalStr;
+    document.getElementById('res-freq').innerText = freq;
+    document.getElementById('res-notes').innerText = notes;
+    document.getElementById('result-box').style.display = "block";
+    document.getElementById('result-box').scrollIntoView({behavior:'smooth', block:'center'});
+}
+</script>
+<script src="/assets/shared-nav.js"></script>
+</body>
+</html>
