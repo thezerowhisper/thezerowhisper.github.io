@@ -140,7 +140,7 @@
           font-size: 0.9rem;
           border-radius: 10px;
         }
-        .site-header { position: sticky; top: 0; }
+        .site-header { position: relative; }  /* mobile: scrolls with page, no overlay */
       }
 
       /* ── SITE FOOTER ── */
