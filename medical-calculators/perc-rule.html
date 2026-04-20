@@ -185,7 +185,7 @@ All 8 PERC negative?
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> PERC rule is only valid in patients with a low pre-test probability for PE (Wells ≤4 or gestalt &lt;15%). A negative PERC rule does not completely exclude PE — the miss rate is ~1.4%. Always apply clinical judgement. If there is clinical concern despite a negative PERC, proceed with D-dimer and/or CT-PA.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 const CRITERIA=[
   {n:'Age ≥50 years',d:'Patient is 50 years old or older',w:'Each year of age above 50 increases PE risk — part of age-adjusted D-dimer threshold'},
@@ -241,5 +241,6 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){sel.clear();document.querySelectorAll('.perc-item').forEach(el=>el.classList.remove('positive'));document.getElementById('perc-count').textContent='0 / 8';document.getElementById('perc-count').className='ps-count zero';document.getElementById('results').className='results';lastResult=null}
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

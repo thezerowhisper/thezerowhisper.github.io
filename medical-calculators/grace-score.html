@@ -248,7 +248,7 @@ h1 em{font-style:italic;color:#f87171}
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> The GRACE score is a validated prognostic tool for ACS risk stratification, not a diagnostic tool. Clinical decisions must integrate complete clinical assessment and serial troponins.</div>
 </main>
 
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let lastResult=null;
 function getAgePoints(a){if(a<30)return 0;if(a<40)return 8;if(a<50)return 25;if(a<60)return 41;if(a<70)return 58;if(a<80)return 75;return 91;}
@@ -327,5 +327,6 @@ function shareWA(){ if(!lastResult)return; window.open('https://wa.me/?text='+en
 function copyResult(){ if(!lastResult)return; navigator.clipboard.writeText(lastResult).then(() => { alert('Copied!'); }); }
 function resetCalc(){ location.reload(); }
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

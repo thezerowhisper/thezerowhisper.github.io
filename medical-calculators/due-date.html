@@ -482,7 +482,7 @@ h1 em{font-style:italic;color:#f9a8d4}
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> This calculator provides an estimated due date only. Clinical decisions including EDD confirmation, gestational age assessment, and pregnancy management must be made by a registered obstetrician or gynaecologist. All calculations follow FOGSI and WHO guidelines.</div>
 </main>
 
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let lastResult=null;let currentEDD=null;let currentWeeks=0;
 
@@ -676,5 +676,6 @@ const faqs=[
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

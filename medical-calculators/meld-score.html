@@ -244,7 +244,7 @@ h1 em{font-style:italic;color:#fbbf24}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> MELD score is a mathematical model validated for prognostication and organ allocation. Clinical decisions regarding transplant listing, surgical risk, and acute management require comprehensive hepatology assessment. MELD does not account for all causes of mortality in liver disease. Always involve a hepatologist or transplant centre for complex decisions.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let lastResult=null;
 const MORTALITY=[1.9,6,6,20,20,20,53,53,71,71,71,71];
@@ -308,5 +308,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['bilirubin','inr','creatinine','sodium'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

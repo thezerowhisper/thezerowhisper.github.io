@@ -194,7 +194,7 @@ h1 em{font-style:italic;color:#818cf8}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> RASS assessment requires trained clinical or nursing staff. Sedation targets should be prescribed by the ICU physician and reassessed every 2–4 hours. Always integrate RASS with pain assessment (NRS/BPS), delirium monitoring (CAM-ICU), and clinical context. Never deepen sedation without identifying and treating the underlying cause of agitation.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 const LEVELS=[
   {s:'+4',n:'Combative',d:'Overtly combative or violent. Immediate danger to staff.',level:'agitated'},
@@ -239,5 +239,6 @@ function select(i){
 function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🏥 RASS Score\n'+lastResult),'_blank')}
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

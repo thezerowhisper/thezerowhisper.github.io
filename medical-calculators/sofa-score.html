@@ -196,7 +196,7 @@ h1 em{font-style:italic;color:#f87171}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> SOFA score is a severity and prognostic tool for ICU patients. It should not be used in isolation for treatment limitation decisions, which require comprehensive clinical assessment, patient values, and multidisciplinary input. SOFA was validated in ICU populations and may not apply to non-ICU settings.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 const ORGANS=[
   {name:'Respiratory',icon:'🫁',param:'PaO₂/FiO₂ (mmHg)',opts:[{s:0,d:'≥400'},{s:1,d:'300–399'},{s:2,d:'200–299'},{s:3,d:'100–199 + ventilated'},{s:4,d:'<100 + ventilated'}]},
@@ -259,5 +259,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){scores=new Array(6).fill(0);buildOrgans();document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
 buildOrgans();
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

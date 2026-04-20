@@ -72,7 +72,7 @@ body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2
   <div id="no-results" class="no-results" style="display:none"><div style="font-size:3rem;margin-bottom:12px">🔍</div><div style="font-size:0.9rem">No results for "<span id="no-q"></span>"</div></div>
   <div id="results-container" class="tools-grid"></div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 const T=[
   {i:'🫁',t:'CURB-65',d:'Pneumonia severity. 30-day mortality and admission decisions.',g:['pneumonia','CAP','antibiotic','BTS','admission'],c:'Emergency',u:'/medical-calculators/curb65',col:'#ef4444'},
@@ -163,5 +163,6 @@ const urlQ=new URLSearchParams(location.search).get('q');
 if(urlQ)document.getElementById('search-input').value=urlQ;
 render();
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

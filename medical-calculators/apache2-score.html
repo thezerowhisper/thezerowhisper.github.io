@@ -235,7 +235,7 @@ h1 em{font-style:italic;color:#f87171}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> APACHE II is a prognostic tool for populations, not individuals. ICU outcome decisions require comprehensive clinical assessment, serial evaluation, and multidisciplinary team input. Never use APACHE II score alone for treatment limitation or withdrawal of care decisions.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 // APACHE II physiology variables: [name, options: [label, points]]
 const PHYS=[
@@ -367,5 +367,6 @@ function resetCalc(){physScores={};chronicSel.clear();surgType='none';document.g
 setSurg('none');// default
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

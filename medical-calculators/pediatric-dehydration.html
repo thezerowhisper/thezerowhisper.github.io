@@ -191,7 +191,7 @@ h1 em{font-style:italic;color:#22d3ee}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Clinical dehydration assessment must integrate all 4 WHO signs, vital signs, urine output, and weight loss. This tool is a decision-support guide. Children with severe dehydration, shock, or inability to drink require immediate IV therapy and hospital admission. Always reassess after rehydration.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 const SIGNS=[
   {id:'general',name:'General Appearance / Condition',opts:['Well, alert (0)','Restless or irritable (1)','Lethargic, floppy, or unconscious (2)']},
@@ -257,5 +257,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){Object.keys(signScores).forEach(k=>delete signScores[k]);document.querySelectorAll('.sign-opt').forEach(b=>{b.className='sign-opt'});document.getElementById('wt').value='';document.getElementById('score-val').textContent='0';document.getElementById('score-val').style.color='#06b6d4';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

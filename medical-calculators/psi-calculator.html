@@ -359,7 +359,7 @@ h1 em{font-style:italic;color:#60a5fa}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> PSI is a severity prediction tool — not a substitute for clinical judgement. Patients with social factors, inability to maintain oral intake, or clinical instability may require admission regardless of low PSI score. Always apply clinical context alongside the score.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 const pts={};let lastResult=null;
 const faqs=[
@@ -421,5 +421,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){Object.keys(pts).forEach(k=>{delete pts[k];const el=document.getElementById(k);if(el)el.classList.remove('sel')});document.getElementById('age').value='';document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

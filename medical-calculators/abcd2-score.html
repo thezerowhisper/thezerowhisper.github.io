@@ -259,7 +259,7 @@ h1 em{font-style:italic;color:#a78bfa}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> ABCD2 score is a risk stratification tool — it does not replace urgent clinical assessment. All TIA patients require urgent specialist evaluation, neuroimaging, and vascular imaging regardless of score. Never use ABCD2 alone to justify discharge from the emergency department. If in doubt, admit.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 const scores={A:null,B:null,C:null,D:null,DM:null};let lastResult=null;
 const faqs=[
@@ -304,5 +304,6 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){Object.keys(scores).forEach(k=>scores[k]=null);document.querySelectorAll('.opt-btn').forEach(b=>b.classList.remove('sel'));document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

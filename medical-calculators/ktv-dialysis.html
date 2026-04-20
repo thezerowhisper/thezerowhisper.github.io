@@ -178,7 +178,7 @@ h1 em{font-style:italic;color:#34d399}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Kt/V calculation requires accurate BUN sampling — post-dialysis sample within 30 seconds of stopping dialysis (slow-flow sample). Kt/V is one measure of dialysis adequacy; clinical status, dry weight achievement, and phosphate/potassium control are equally important. Consult nephrology for persistently inadequate dialysis.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let lastResult=null;
 function calculate(){
@@ -214,5 +214,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['bun-pre','bun-post','tdur','uf','wt'].forEach(id=>document.getElementById(id).value='');document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

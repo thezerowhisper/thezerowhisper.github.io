@@ -249,7 +249,7 @@ h1 em{font-style:italic;color:#f87171}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> CHA₂DS₂-VASc is a clinical decision-support tool. Anticoagulation decisions require full clinical assessment including bleeding risk (HAS-BLED), renal function, patient preferences, and current medication review. Always follow local guidelines and consult a cardiologist for complex cases.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 const CRITERIA=[
   {id:'C',name:'Congestive Heart Failure',desc:'Signs/symptoms of HF or reduced LVEF',points:1},
@@ -323,5 +323,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){selected.clear();buildCriteria();document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
 buildCriteria();
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

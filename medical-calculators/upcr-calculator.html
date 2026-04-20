@@ -177,7 +177,7 @@ h1 em{font-style:italic;color:#818cf8}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> UPCR is an estimate. Factors affecting urine creatinine (muscle mass, hydration, time of day) affect accuracy. Confirm with repeat testing. First morning void minimises orthostatic proteinuria. Persistent UPCR &gt;0.5 warrants nephrology referral.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let lastResult=null;
 function calculate(){
@@ -209,5 +209,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['uprot','ucr'].forEach(id=>document.getElementById(id).value='');document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

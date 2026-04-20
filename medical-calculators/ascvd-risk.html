@@ -299,7 +299,7 @@ h1 em{font-style:italic;color:#f87171}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> The ASCVD risk calculator is for primary prevention risk estimation only. It is not validated for patients with existing cardiovascular disease, extreme LDL values, or most non-White/non-African-American populations. Statin therapy decisions require comprehensive clinical assessment, patient preferences, and shared decision-making. Always refer to current AHA/ACC and local guidelines.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let lastResult=null;
 const faqs=[
@@ -402,5 +402,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['age','tc','hdl','sbp'].forEach(id=>{document.getElementById(id).value=''});['htnrx','dm','smoke'].forEach(id=>{document.getElementById(id).checked=false;document.getElementById('chk-'+id).classList.remove('checked')});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

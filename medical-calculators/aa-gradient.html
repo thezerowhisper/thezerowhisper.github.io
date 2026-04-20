@@ -216,7 +216,7 @@ h1 em{font-style:italic;color:#60a5fa}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> The A-a gradient calculator assumes standard atmospheric pressure (760 mmHg at sea level) and standard RQ of 0.8. At high altitude, modify Patm accordingly. ABG interpretation requires clinical context — always interpret alongside clinical findings, patient history, and other investigations.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let fio2=0.21;let lastResult=null;
 function setFiO2(v){fio2=v;document.getElementById('fio2').value=v;document.querySelectorAll('.fio2-chip').forEach(c=>c.classList.toggle('sel',parseFloat(c.dataset.v)===v));}
@@ -251,5 +251,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['pao2','paco2','age'].forEach(id=>{document.getElementById(id).value=''});setFiO2(0.21);document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

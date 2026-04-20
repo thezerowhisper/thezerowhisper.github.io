@@ -206,7 +206,7 @@ h1 em{font-style:italic;color:#f87171}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Framingham Risk Score is a screening tool validated in specific populations. It may not accurately estimate risk in South Asian, East Asian, Hispanic, or other non-White populations. Always apply clinical judgement alongside the score. Statin decisions require shared decision-making with the patient.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 const toggles={};let lastResult=null;
 function toggleRow(id){const row=document.getElementById(id);const on=row.classList.toggle('on');toggles[id]=on}
@@ -273,5 +273,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['age','tc','hdl','sbp'].forEach(id=>document.getElementById(id).value='');['tog-smoke','tog-dm'].forEach(id=>{document.getElementById(id).classList.remove('on');delete toggles[id]});document.getElementById('bptx').value='no';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

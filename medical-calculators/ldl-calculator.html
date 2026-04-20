@@ -211,7 +211,7 @@ h1 em{font-style:italic;color:#34d399}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Friedewald-calculated LDL is an estimate. Always request direct LDL measurement when TG &gt;400 mg/dL or sample is non-fasting. Statin decisions require comprehensive cardiovascular risk assessment including ASCVD calculation, shared decision-making, and clinical context. Consult a cardiologist or physician for personalised lipid management.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let unit='mgdl';let lastResult=null;
 function setUnit(u){
@@ -280,5 +280,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['tc','hdl','tg'].forEach(id=>document.getElementById(id).value='');document.getElementById('tg-warning').className='tg-warning';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

@@ -226,7 +226,7 @@ h1 em{font-style:italic;color:#22d3ee}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Maintenance fluid calculations are starting estimates. Actual fluid requirements must be individualised based on clinical assessment, ongoing losses, electrolyte levels, renal function, and haemodynamic status. Monitor input/output, urine output (target 0.5–1 mL/kg/hr), daily weight, and electrolytes. Always adjust based on clinical response.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let lastResult=null;
 function calculate(){
@@ -261,5 +261,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){document.getElementById('weight').value='';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

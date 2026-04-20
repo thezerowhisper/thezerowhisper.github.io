@@ -196,7 +196,7 @@ h1 em{font-style:italic;color:#38bdf8}
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Suspected toxic alcohol poisoning is a medical emergency. Do not wait for confirmation before initiating treatment. Contact Poison Control, give fomepizole or ethanol antidote empirically, and arrange haemodialysis. Osmol gap has significant limitations — a normal gap does not exclude toxic ingestion at late presentation.</div>
 </main>
-<script src="/assets/shared-nav.js"></script>
+
 <script>
 let lastResult=null;
 function calculate(){
@@ -236,5 +236,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['na','bun','glucose','measured','etoh'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>
