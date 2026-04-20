@@ -440,7 +440,7 @@ function updateZone(){
 }
 
 function shareWA(){
-  const text="Pediatric Asthma Action Plan:\n🟢 Green Zone: Continue controller meds. No symptoms.\n🟡 Yellow Zone: Give 2-4 puffs salbutamol via spacer every 4h. Call doctor if no improvement in 24h.\n🔴 Red Zone: EMERGENCY — Give 6-10 puffs salbutamol, CALL 112, go to A&E immediately.\n\nFull action plan: https://rxmedcalc.com/medical-calculators/pediatric-asthma.html";
+  const text="Pediatric Asthma Action Plan:\n🟢 Green Zone: Continue controller meds. No symptoms.\n🟡 Yellow Zone: Give 2-4 puffs salbutamol via spacer every 4h. Call doctor if no improvement in 24h.\n🔴 Red Zone: EMERGENCY — Give 6-10 puffs salbutamol, CALL 112, go to A&E immediately.\n\nFull action plan: https://rxmedcalc.com/medical-calculators/pediatric-asthma";
   try{uTrack('share_whatsapp',{tool:'pediatric-asthma'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
 }
 </script>
