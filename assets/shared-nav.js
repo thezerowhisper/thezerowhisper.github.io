@@ -1,5 +1,5 @@
 /* shared-nav.js — RxMedCalc Universal Controller
-   Handles: .html Redirects, AdSense, Navigation, and Footer Injection
+   Handles: .html Redirects, AdSense, Hub Navigation, and Footer
 */
 
 (function() {
@@ -62,7 +62,7 @@
     function checkActive(href) {
         const path = window.location.pathname;
         if (href === '/') return path === '/' || path === '/index';
-        // Check if current path starts with the folder name
+        // Improved logic to match both folder/ and folder
         return path.startsWith(href);
     }
 
@@ -78,9 +78,9 @@
         <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
         <nav class="site-nav">
           <a href="/" ${checkActive('/') && !checkActive('/medical') && !checkActive('/drug') && !checkActive('/rabies') && !checkActive('/vitamin') ? 'class="active"' : ''}>Home</a>
-          <a href="/medical-calculators" ${checkActive('/medical-calculators') ? 'class="active"' : ''}>Calculators</a>
-          <a href="/drug-doses" ${checkActive('/drug-doses') ? 'class="active"' : ''}>Drug Doses</a>
-          <a href="/rabies-scheduler" ${checkActive('/rabies-scheduler') ? 'class="active"' : ''}>Rabies PEP</a>
+          <a href="/medical-calculators/" ${checkActive('/medical-calculators') ? 'class="active"' : ''}>Calculators</a>
+          <a href="/drug-doses/" ${checkActive('/drug-doses') ? 'class="active"' : ''}>Drug Doses</a>
+          <a href="/rabies-scheduler/" ${checkActive('/rabies-scheduler') ? 'class="active"' : ''}>Rabies PEP</a>
           <a href="/search" ${checkActive('/search') ? 'class="active"' : ''}>🔍 Search</a>
         </nav>
       </div>
