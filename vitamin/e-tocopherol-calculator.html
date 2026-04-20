@@ -1,187 +1,1309 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="vitamin-e-calculator">
+<html lang="en" data-tool="vitamin-e-tocopherol-calculator">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Vitamin E (Tocopherol) Dose Calculator – Malabsorption & Liver Disease | RxMedCalc</title>
-  <meta name="description" content="Calculate Vitamin E (Tocopherol) clinical doses for cholestatic liver disease, cystic fibrosis, and neonatal ROP prophylaxis. Professional 1500+ word clinical guide."/>
-  <meta name="keywords" content="vitamin e dose calculator, tocopherol dosage for liver disease, cystic fibrosis vitamin e protocol, abetalipoproteinemia treatment, vitamin e mg to iu converter, neonatal vitamin e dosing"/>
+
+  <!-- ── PRIMARY SEO ── -->
+  <title>Vitamin E (Tocopherol) Dose Calculator – Cholestasis, Cystic Fibrosis, Abetalipoproteinemia | RxMedCalc</title>
+  <meta name="description" content="Clinical Vitamin E (alpha-tocopherol) dose calculator for cholestatic liver disease, biliary atresia, cystic fibrosis, abetalipoproteinemia, neonatal ROP prophylaxis, and deficiency. TPGS water-soluble form. IU-to-mg converter. Weight-based paediatric dosing. Evidence-based guide for Indian doctors."/>
+  <meta name="keywords" content="vitamin E dose calculator, tocopherol cholestasis dose, TPGS water-soluble vitamin E, biliary atresia vitamin E, cystic fibrosis vitamin E protocol, abetalipoproteinemia treatment dose, vitamin E neonatal ROP, vitamin E IU to mg conversion, alpha-tocopherol deficiency ataxia, vitamin E malabsorption India, vitamin K vitamin E interaction coagulopathy"/>
+  <meta name="robots" content="index,follow"/>
+  <meta name="author" content="RxMedCalc"/>
   <link rel="canonical" href="https://rxmedcalc.com/vitamin/e-tocopherol-calculator"/>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 
   <link rel="stylesheet" href="/assets/shared.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet"/>
+
+  <!-- ── OPEN GRAPH ── -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Vitamin E Dose Calculator – Cholestasis, Cystic Fibrosis, Abetalipoproteinemia | RxMedCalc"/>
+  <meta property="og:description" content="Weight-based Vitamin E dosing for cholestatic liver disease, biliary atresia, cystic fibrosis, and neonatal ROP. TPGS and standard forms. IU/mg converter."/>
+  <meta property="og:url" content="https://rxmedcalc.com/vitamin/e-tocopherol-calculator"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Vitamin E Dose Calculator – Cholestasis, CF, Abetalipoproteinemia"/>
+  <meta name="twitter:description" content="Evidence-based Vitamin E dosing for fat malabsorption syndromes. TPGS, IU-to-mg conversion, weight-based paediatric protocols."/>
+
+  <!-- ── SCHEMA.ORG ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "name": "Vitamin E (Tocopherol) Dose Calculator",
+        "url": "https://rxmedcalc.com/vitamin/e-tocopherol-calculator",
+        "description": "Calculate weight-based Vitamin E doses for cholestatic liver disease, cystic fibrosis, abetalipoproteinemia, neonatal ROP, and severe deficiency. Includes IU-to-mg conversion and TPGS guidance.",
+        "audience": { "@type": "MedicalAudience", "audienceType": "Clinicians" },
+        "medicalSpecialty": ["GeneralPractice","Paediatrics","Gastroenterology","Neonatology","Neurology"],
+        "about": { "@type": "Drug", "name": "Vitamin E (Alpha-Tocopherol)", "nonProprietaryName": "d-alpha-tocopherol; dl-alpha-tocopherol; Tocopheryl Polyethylene Glycol Succinate (TPGS)" },
+        "citation": "Cystic Fibrosis Foundation Nutrition Guidelines; ESPGHAN Cholestasis Guidelines"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Vitamins Hub", "item": "https://rxmedcalc.com/vitamin/" },
+          { "@type": "ListItem", "position": 3, "name": "Vitamin E Calculator", "item": "https://rxmedcalc.com/vitamin/e-tocopherol-calculator" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Vitamin E dose for cholestatic liver disease in children?",
+            "acceptedAnswer": { "@type": "Answer", "text": "For cholestatic liver disease (biliary atresia, Alagille syndrome), the standard dose is 15–25 IU/kg/day of water-soluble TPGS (Tocopheryl Polyethylene Glycol Succinate). TPGS is mandatory when bile flow is obstructed — standard oil-based Vitamin E cannot be absorbed without bile salts. Target serum alpha-tocopherol: >11.6 µmol/L or ratio to total lipids >0.8 mg/g." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Vitamin E dose for cystic fibrosis?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Cystic Fibrosis Foundation guidelines recommend: infants 40–50 IU/day; children 1–3 years 80–150 IU/day; 4–8 years 100–200 IU/day; 9–18 years 200–400 IU/day; adults up to 400–800 IU/day. Always administer with pancreatic enzyme replacement therapy (PERT) and a fat-containing meal." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you convert Vitamin E IU to mg?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Natural Vitamin E (d-alpha-tocopherol): 1 IU = 0.67 mg (or 1 mg = 1.49 IU). Synthetic Vitamin E (dl-alpha-tocopherol): 1 IU = 0.91 mg (or 1 mg = 1.10 IU). Natural d-alpha-tocopherol has significantly higher bioavailability and is preferred for clinical supplementation, especially in malabsorption syndromes." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Vitamin E dose for abetalipoproteinemia?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Abetalipoproteinemia requires massive doses: 100–200 IU/kg/day orally, as patients lack chylomicrons entirely and absorb Vitamin E at a fraction of normal efficiency. This can mean 5,000–10,000 IU/day or more. Monitor serum alpha-tocopherol and lipid-adjusted levels carefully. Early treatment prevents irreversible neurological damage." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Vitamin E interfere with Vitamin K and warfarin?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. High-dose Vitamin E (above 400 IU/day) antagonises Vitamin K-dependent clotting factors (II, VII, IX, X), increasing bleeding risk — particularly dangerous in patients on warfarin or antiplatelet therapy. INR should be monitored. Discontinue high-dose Vitamin E at least 2 weeks before elective surgery." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ── FONTS ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="/assets/shared.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 
   <style>
-    :root{--primary:#0d2b45;--teal:#0e9f7e;--amber:#f59e0b;--bg:#f8fafc;--surface:#ffffff;--border:#e2e8f0;--sans:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace}
-    body{font-family:var(--sans);background:var(--bg);color:var(--primary);line-height:1.8}
-    
-    .page-hero{background:linear-gradient(135deg,#0d2b45 0%,#163d5c 100%);color:white;padding:60px 24px;text-align:center;position:relative}
-    .hero-badge{display:inline-flex;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:30px;padding:6px 18px;font-size:13px;margin-bottom:20px;letter-spacing:1px;text-transform:uppercase}
-    .page-hero h1{font-family:'Fraunces',serif;font-size:clamp(28px,6vw,42px);margin-bottom:15px}
-    
-    .container{max-width:1100px;margin:0 auto;padding:0 20px 100px}
-    .breadcrumb{padding:20px 0;font-size:14px;color:var(--primary);opacity:0.7}
-    
-    .calc-card{background:var(--surface);border-radius:24px;padding:40px;border:1px solid var(--border);box-shadow:0 10px 30px rgba(0,0,0,0.04);margin-bottom:40px}
-    .calc-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
-    @media(max-width:768px){.calc-grid{grid-template-columns:1fr}}
+    /* ══════════════════════════════════════════
+       DESIGN SYSTEM — Vitamin E / Tocopherol
+       Accent: Warm Amber-Gold (#d97706 family)
+       Distinct from B1 amber via deeper warmth
+    ══════════════════════════════════════════ */
+    :root {
+      --navy:         #0d2b45;
+      --navy-mid:     #1a3a5c;
+      --navy-lt:      #234e72;
+      --accent:       #b45309;
+      --accent-lt:    #d97706;
+      --accent-bright:#f59e0b;
+      --accent-bg:    #fffbeb;
+      --danger:       #dc2626;
+      --danger-bg:    #fef2f2;
+      --success:      #059669;
+      --warn-bg:      #fff7ed;
+      --warn-border:  #fed7aa;
+      --bg:           #fdf8ef;
+      --surface:      #ffffff;
+      --surface2:     #fffcf5;
+      --border:       #e9d9c0;
+      --border-strong:#d4c4a0;
+      --text:         #1c0f00;
+      --text-mid:     #3d2b0f;
+      --text-muted:   #78716c;
+      --text-light:   #a8a29e;
+      --mono:         'JetBrains Mono', monospace;
+      --sans:         'Outfit', sans-serif;
+      --serif:        'Fraunces', serif;
+      --r:            14px;
+      --r-lg:         22px;
+      --shadow-sm:    0 1px 4px rgba(180,83,9,.06);
+      --shadow:       0 4px 20px rgba(180,83,9,.08);
+      --shadow-lg:    0 12px 40px rgba(180,83,9,.13);
+    }
 
-    label{font-size:12px;font-weight:800;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:10px;letter-spacing:0.5px}
-    select, input{width:100%;padding:14px;border-radius:12px;border:1.5px solid var(--border);background:#fcfdfd;margin-bottom:20px;font-family:inherit;font-size:1rem;outline:none}
-    
-    .btn-calc{width:100%;padding:18px;background:var(--primary);color:white;border:none;border-radius:14px;font-weight:700;font-size:1.1rem;cursor:pointer;transition:0.3s;box-shadow:0 4px 15px rgba(13,43,69,0.2)}
-    .btn-calc:hover{background:var(--teal);transform:translateY(-2px)}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
 
-    .result-box{display:none;margin-top:35px;padding:35px;background:#fffbeb;border-radius:20px;border:1.5px solid #fef08a;text-align:center;animation:fadeIn 0.5s ease}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-    .res-val{font-family:var(--mono);font-size:2.8rem;font-weight:700;color:var(--primary);margin:10px 0}
+    /* ── HERO ── */
+    .page-hero {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      padding: 72px 24px 64px;
+      text-align: center;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -80px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(245,158,11,.22) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-hero::after {
+      content: 'Vit E';
+      position: absolute;
+      font-family: var(--mono);
+      font-size: 180px;
+      font-weight: 700;
+      color: rgba(255,255,255,.04);
+      right: -10px;
+      bottom: -30px;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
 
-    /* ARTICLE */
-    .article-section{background:#fff;padding:60px;border-radius:35px;border:1px solid var(--border);margin-top:20px}
-    .article-section h2{font-family:'Fraunces',serif;font-size:2.4rem;margin:50px 0 25px;color:var(--primary);border-left:8px solid var(--amber);padding-left:20px}
-    .article-section h3{font-size:1.7rem;margin:40px 0 20px;color:var(--teal);font-weight:700}
-    .article-section p{margin-bottom:25px;font-size:1.15rem;color:#334155}
-    
-    .toc-box{background:#f8fafc;padding:30px;border-radius:20px;margin-bottom:50px;border:1px solid var(--border)}
-    .toc-link{display:block;color:var(--primary);text-decoration:none;font-size:15px;margin-bottom:10px;font-weight:500}
-    .toc-link:hover{color:var(--teal);text-decoration:underline}
+    .hero-inner { position: relative; max-width: 720px; margin: 0 auto; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(245,158,11,.15);
+      border: 1px solid rgba(245,158,11,.38);
+      border-radius: 30px;
+      padding: 6px 16px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--accent-bright);
+      margin-bottom: 22px;
+    }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(26px,5vw,44px); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 14px; }
+    .page-hero h1 em { font-style: italic; color: var(--accent-bright); }
+    .page-hero p { font-size: 16px; color: rgba(255,255,255,.62); max-width: 560px; margin: 0 auto 28px; }
+    .hero-pills { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+    .hero-pill { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,.68); font-weight: 500; }
+    .hero-pill.warn-pill { background: rgba(220,38,38,.18); border-color: rgba(220,38,38,.35); color: #fca5a5; }
+    .hero-pill.gold-pill { background: rgba(245,158,11,.2); border-color: rgba(245,158,11,.4); color: #fde68a; }
 
-    .info-card{background:var(--bg);border:1px solid var(--border);border-radius:15px;padding:25px;margin:30px 0}
+    /* ── LAYOUT ── */
+    .container { max-width: 1040px; margin: 0 auto; padding: 0 20px 100px; }
+    .breadcrumb { padding: 16px 0; font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* ── WARN BANNER ── */
+    .warn-banner {
+      background: linear-gradient(135deg, #1c0f00 0%, #2d1a00 100%);
+      border: 1px solid rgba(245,158,11,.3);
+      border-radius: var(--r-lg);
+      padding: 18px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .warn-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(45deg, transparent, transparent 12px, rgba(245,158,11,.05) 12px, rgba(245,158,11,.05) 14px);
+      pointer-events: none;
+    }
+    .wb-icon { font-size: 22px; flex-shrink: 0; position: relative; }
+    .wb-body { position: relative; }
+    .wb-title { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; color: #fde68a; margin-bottom: 4px; }
+    .wb-text { font-size: 14px; color: #fef3c7; line-height: 1.6; }
+    .wb-text strong { color: white; }
+
+    /* ── CONVERTER STRIP ── */
+    .converter-strip {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .converter-strip .cv-label { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); white-space: nowrap; }
+    .cv-group { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .cv-input { font-family: var(--mono); font-size: 15px; padding: 9px 14px; border: 1.5px solid var(--border); border-radius: var(--r); width: 110px; background: var(--surface2); color: var(--text); outline: none; }
+    .cv-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(180,83,9,.1); }
+    .cv-type { font-size: 13px; padding: 9px 14px; border: 1.5px solid var(--border); border-radius: var(--r); background: var(--surface2); font-family: var(--sans); color: var(--text); outline: none; appearance: none; cursor: pointer; }
+    .cv-type:focus { border-color: var(--accent); }
+    .cv-result { font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--accent); background: var(--accent-bg); padding: 9px 16px; border-radius: var(--r); border: 1.5px solid var(--warn-border); min-width: 140px; text-align: center; }
+    .cv-sep { font-size: 20px; color: var(--accent-bright); font-weight: 700; }
+
+    /* ── CALC CARD ── */
+    .calc-card { background: var(--surface); border-radius: var(--r-lg); border: 1px solid var(--border); box-shadow: var(--shadow-lg); overflow: hidden; margin-bottom: 28px; }
+    .calc-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); padding: 22px 30px; display: flex; align-items: center; gap: 14px; }
+    .ch-icon { width: 42px; height: 42px; background: rgba(245,158,11,.2); border: 1px solid rgba(245,158,11,.4); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .ch-text h2 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .ch-text p { font-size: 13px; color: rgba(255,255,255,.5); }
+    .calc-body { padding: 30px; }
+
+    .step-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 10px; display: block; }
+
+    /* Context cards */
+    .ctx-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 26px; }
+    @media (max-width: 760px) { .ctx-grid { grid-template-columns: 1fr 1fr; } }
+    .ctx-card { border: 1.5px solid var(--border); border-radius: var(--r); padding: 14px 10px; text-align: center; cursor: pointer; transition: all .18s; background: var(--surface2); position: relative; }
+    .ctx-card:hover { border-color: var(--accent-lt); background: var(--accent-bg); }
+    .ctx-card.active { border-color: var(--accent); background: var(--accent-bg); box-shadow: 0 0 0 3px rgba(180,83,9,.12); }
+    .ctx-card.emerg-ctx.active { border-color: var(--danger); background: var(--danger-bg); box-shadow: 0 0 0 3px rgba(220,38,38,.12); }
+    .ctx-card .ctx-icon { font-size: 24px; margin-bottom: 6px; }
+    .ctx-card .ctx-label { font-size: 12px; font-weight: 700; color: var(--text); line-height: 1.3; }
+    .ctx-card .ctx-sub { font-size: 10px; color: var(--text-muted); margin-top: 3px; }
+    .ctx-badge { position: absolute; top: 7px; right: 7px; background: var(--accent); color: white; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; padding: 2px 6px; border-radius: 6px; }
+
+    /* Form tabs */
+    .form-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+    .form-tab { padding: 7px 16px; border-radius: 20px; border: 1.5px solid var(--border); background: transparent; font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--text-muted); cursor: pointer; transition: all .18s; }
+    .form-tab:hover { border-color: var(--accent-lt); color: var(--accent); }
+    .form-tab.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+    /* Route cards */
+    .route-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+    .route-card { display: flex; align-items: center; gap: 8px; border: 1.5px solid var(--border); border-radius: var(--r); padding: 10px 16px; cursor: pointer; transition: all .18s; background: var(--surface2); flex: 1; min-width: 100px; }
+    .route-card:hover { border-color: var(--accent-lt); background: var(--accent-bg); }
+    .route-card.active { border-color: var(--accent); background: var(--accent-bg); box-shadow: 0 0 0 3px rgba(180,83,9,.1); }
+    .route-card .ri { font-size: 18px; }
+    .route-card .rl { font-size: 13px; font-weight: 700; color: var(--text); }
+    .route-card .rs { font-size: 11px; color: var(--text-muted); }
+
+    /* Indication chips */
+    .ind-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .ind-chip { padding: 7px 15px; border-radius: 20px; border: 1.5px solid var(--border); font-size: 13px; font-weight: 500; cursor: pointer; transition: all .18s; color: var(--text-muted); background: var(--surface2); }
+    .ind-chip:hover { border-color: var(--accent-lt); color: var(--accent); }
+    .ind-chip.active { background: var(--accent); border-color: var(--accent); color: white; }
+    .ind-chip.urgent { border-color: #fca5a5; color: #991b1b; }
+    .ind-chip.urgent.active { background: var(--danger); border-color: var(--danger); color: white; }
+
+    /* Patient fields */
+    .field-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+    @media (max-width: 600px) { .field-row { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .field-row { grid-template-columns: 1fr 1fr; } }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); }
+
+    select, input[type="number"] {
+      font-family: var(--sans); font-size: 14px; padding: 11px 14px; border: 1.5px solid var(--border); border-radius: var(--r); background: var(--surface2); color: var(--text); outline: none; appearance: none; -webkit-appearance: none; width: 100%; transition: border-color .2s, box-shadow .2s;
+    }
+    select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2378716c' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
+    select:focus, input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(180,83,9,.1); }
+    .hint { font-size: 12px; color: var(--text-light); }
+
+    .btn-calc { width: 100%; padding: 15px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-lt) 100%); color: white; border: none; border-radius: var(--r); font-family: var(--sans); font-size: 15px; font-weight: 700; cursor: pointer; transition: all .2s; position: relative; overflow: hidden; letter-spacing: .02em; }
+    .btn-calc::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(180,83,9,.4) 0%, transparent 60%); opacity: 0; transition: opacity .2s; }
+    .btn-calc:hover::after { opacity: 1; }
+    .btn-calc:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(13,43,69,.25); }
+    .btn-calc:active { transform: translateY(0); }
+
+    /* ── RESULT ── */
+    .result-wrap { display: none; animation: slideUp .35s ease; margin-top: 24px; }
+    .result-wrap.show { display: block; }
+    @keyframes slideUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+
+    .result-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-radius: var(--r-lg); padding: 28px 32px; color: white; margin-bottom: 14px; position: relative; overflow: hidden; }
+    .result-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 75% 25%, rgba(180,83,9,.3) 0%, transparent 55%); pointer-events: none; }
+    .res-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; color: var(--accent-bright); margin-bottom: 6px; }
+    .res-dose { font-family: var(--mono); font-size: 42px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 10px; position: relative; }
+    .res-schedule { font-size: 15px; font-weight: 600; color: var(--accent-bright); margin-bottom: 6px; position: relative; }
+    .res-notes { font-size: 13px; color: rgba(255,255,255,.58); line-height: 1.7; position: relative; }
+
+    /* dual-unit display */
+    .dose-both { display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+    .dose-unit-card { flex: 1; min-width: 140px; border-radius: var(--r); padding: 14px 18px; border: 1.5px solid; }
+    .dose-unit-card.du-iu   { border-color: #fbbf24; background: #fffbeb; }
+    .dose-unit-card.du-mg   { border-color: var(--border-strong); background: var(--surface2); }
+    .du-tag  { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
+    .du-iu .du-tag  { color: var(--accent); }
+    .du-mg .du-tag  { color: var(--text-muted); }
+    .du-val  { font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--text); }
+    .du-note { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+
+    .phase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    @media (max-width: 500px) { .phase-grid { grid-template-columns: 1fr; } }
+    .phase-card { border-radius: var(--r); padding: 15px 17px; border: 1.5px solid; }
+    .phase-card.p-load  { border-color: #fbbf24; background: #fffbeb; }
+    .phase-card.p-maint { border-color: #34d399; background: #ecfdf5; }
+    .phase-card.p-warn  { border-color: #fca5a5; background: var(--danger-bg); }
+    .phase-card.p-info  { border-color: #93c5fd; background: #eff6ff; }
+    .ph-tag    { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 5px; }
+    .phase-card.p-load  .ph-tag { color: var(--accent); }
+    .phase-card.p-maint .ph-tag { color: var(--success); }
+    .phase-card.p-warn  .ph-tag { color: var(--danger); }
+    .phase-card.p-info  .ph-tag { color: #1d4ed8; }
+    .ph-dose   { font-size: 17px; font-weight: 700; font-family: var(--mono); color: var(--text); }
+    .ph-detail { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+
+    .bullets-box { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); padding: 15px 18px; margin-bottom: 14px; }
+    .bullets-box ul { padding-left: 18px; }
+    .bullets-box li { font-size: 13px; color: var(--text-muted); margin-bottom: 5px; line-height: 1.6; }
+
+    .no-data-notice { background: var(--warn-bg); border: 1.5px solid var(--warn-border); border-radius: var(--r); padding: 16px 18px; font-size: 14px; color: #78350f; margin-bottom: 14px; line-height: 1.7; }
+
+    .caution-strip { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: var(--r); padding: 12px 16px; font-size: 13px; color: #78350f; display: flex; gap: 8px; align-items: flex-start; margin-bottom: 14px; }
+
+    .action-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-sm { padding: 9px 18px; border-radius: var(--r); font-family: var(--sans); font-size: 13px; font-weight: 600; cursor: pointer; transition: all .18s; border: 1.5px solid; }
+    .btn-out { background: transparent; border-color: var(--navy); color: var(--navy); }
+    .btn-out:hover { background: var(--navy); color: white; }
+    .btn-wa { background: #25d366; border-color: #25d366; color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-wa:hover { background: #20b858; }
+
+    /* ── ARTICLE ── */
+    .article-card { background: var(--surface); border-radius: var(--r-lg); border: 1px solid var(--border); box-shadow: var(--shadow); overflow: hidden; margin-top: 24px; }
+    .art-header { padding: 30px 38px 0; }
+    .art-header h2 { font-family: var(--serif); font-size: 24px; font-weight: 900; color: var(--navy); margin-bottom: 5px; }
+    .art-header p { font-size: 14px; color: var(--text-muted); padding-bottom: 24px; }
+    .toc-strip { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 38px; background: var(--surface2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .toc-chip { padding: 5px 13px; background: white; border: 1.5px solid var(--border); border-radius: 20px; font-size: 12px; font-weight: 600; color: var(--text-mid); text-decoration: none; transition: all .15s; }
+    .toc-chip:hover { border-color: var(--accent); color: var(--accent); }
+    .art-body { padding: 38px; }
+    .art-body h2 { font-family: var(--serif); font-size: 26px; font-weight: 900; color: var(--navy); margin: 44px 0 14px; padding-top: 44px; border-top: 1px solid var(--border); line-height: 1.2; }
+    .art-body h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+    .art-body h3 { font-size: 17px; font-weight: 700; color: var(--accent); margin: 26px 0 10px; }
+    .art-body p { font-size: 15px; color: var(--text-mid); margin-bottom: 16px; line-height: 1.85; }
+    .art-body strong { color: var(--text); }
+    .art-body ul, .art-body ol { padding-left: 22px; margin-bottom: 18px; }
+    .art-body li { font-size: 15px; color: var(--text-mid); margin-bottom: 7px; line-height: 1.7; }
+
+    .data-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 18px 0 26px; border-radius: var(--r); overflow: hidden; border: 1px solid var(--border); }
+    .data-table thead th { background: var(--navy); color: white; padding: 11px 15px; text-align: left; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+    .data-table td { padding: 10px 15px; border-bottom: 1px solid var(--border); color: var(--text-mid); vertical-align: top; }
+    .data-table tr:nth-child(even) td { background: var(--surface2); }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table td:first-child { font-weight: 600; color: var(--text); }
+
+    .callout { border-radius: var(--r); padding: 17px 20px; margin: 22px 0; display: flex; gap: 13px; }
+    .callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .callout-body { flex: 1; }
+    .callout-title { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 5px; }
+    .callout-text { font-size: 14px; line-height: 1.7; }
+    .callout.danger  { background: var(--danger-bg); border: 1.5px solid #fecaca; }
+    .callout.danger  .callout-title { color: var(--danger); }
+    .callout.danger  .callout-text  { color: #7f1d1d; }
+    .callout.warning { background: var(--warn-bg); border: 1.5px solid var(--warn-border); }
+    .callout.warning .callout-title { color: #92400e; }
+    .callout.warning .callout-text  { color: #78350f; }
+    .callout.info    { background: #eff6ff; border: 1.5px solid #bfdbfe; }
+    .callout.info    .callout-title { color: #1d4ed8; }
+    .callout.info    .callout-text  { color: #1e3a8a; }
+    .callout.success { background: #ecfdf5; border: 1.5px solid #a7f3d0; }
+    .callout.success .callout-title { color: var(--success); }
+    .callout.success .callout-text  { color: #064e3b; }
+    .callout.amber   { background: var(--accent-bg); border: 1.5px solid var(--warn-border); }
+    .callout.amber   .callout-title { color: var(--accent); }
+    .callout.amber   .callout-text  { color: #78350f; }
+
+    /* Conversion reference box */
+    .conv-box { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0 26px; }
+    @media (max-width: 500px) { .conv-box { grid-template-columns: 1fr; } }
+    .conv-card { border-radius: var(--r); padding: 16px 18px; border: 1.5px solid var(--border); background: var(--surface2); }
+    .conv-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); margin-bottom: 8px; }
+    .conv-formula { font-family: var(--mono); font-size: 14px; color: var(--text); margin-bottom: 4px; }
+    .conv-note { font-size: 12px; color: var(--text-muted); }
+
+    /* Spectrum bar */
+    .spectrum-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 18px 0; }
+    .spec-item { border-radius: var(--r); padding: 12px 14px; text-align: center; border: 1.5px solid; }
+    .spec-item .spec-label { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+    .spec-item .spec-dose  { font-family: var(--mono); font-size: 13px; }
+    .spec-item .spec-sub   { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+    .spec-rda  { border-color: #fde68a; background: #fffbeb; }
+    .spec-rda  .spec-label { color: var(--accent); }
+    .spec-def  { border-color: #fdba74; background: #fff7ed; }
+    .spec-def  .spec-label { color: #c2410c; }
+    .spec-mal  { border-color: #fca5a5; background: var(--danger-bg); }
+    .spec-mal  .spec-label { color: var(--danger); }
+    .spec-gen  { border-color: #818cf8; background: #eef2ff; }
+    .spec-gen  .spec-label { color: #3730a3; }
+
+    /* FAQ */
+    .faq-list { margin-top: 22px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; user-select: none; padding: 17px 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+    .faq-q::after { content: '+'; font-size: 20px; color: var(--accent); flex-shrink: 0; line-height: 1; }
+    .faq-item.open .faq-q::after { content: '\2212'; }
+    .faq-a { font-size: 14px; color: var(--text-muted); line-height: 1.8; padding-bottom: 17px; display: none; }
+    .faq-item.open .faq-a { display: block; }
+
+    .disclaimer { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); padding: 14px 18px; font-size: 12px; color: var(--text-muted); margin-top: 34px; line-height: 1.7; }
+
+    @media (max-width: 600px) {
+      .art-header, .toc-strip, .art-body { padding-left: 20px; padding-right: 20px; }
+      .calc-body { padding: 20px; }
+      .spectrum-bar { grid-template-columns: 1fr 1fr; }
+      .converter-strip { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media print {
+      .page-hero, .breadcrumb, .warn-banner, .converter-strip,
+      .ctx-grid, .form-tabs, .route-row, .ind-grid, .field-row,
+      .btn-calc, .action-row, .article-card, .disclaimer { display: none !important; }
+      .result-wrap { display: block !important; }
+      body { background: white; }
+      .calc-card { box-shadow: none; border: 1px solid #ccc; }
+    }
   </style>
 </head>
 <body>
+<script src="/assets/shared-nav.js"></script>
 
+<!-- ══ HERO ══ -->
 <section class="page-hero">
-    <div class="hero-badge">🧬 Cellular Protection Hub</div>
-    <h1>Vitamin E (Tocopherol) <em>Clinical Dose Calculator</em></h1>
-    <p>Replacement protocols for Malabsorption, Cystic Fibrosis, Cholestasis, and NICU neuro-protection.</p>
+  <div class="hero-inner">
+    <div class="hero-badge">🧬 Fat-Soluble Antioxidant Series</div>
+    <h1>Vitamin E (Tocopherol)<br><em>Clinical Dose Calculator</em></h1>
+    <p>Weight-based dosing for cholestatic liver disease, cystic fibrosis, abetalipoproteinemia, neonatal ROP, and fat malabsorption syndromes. TPGS and standard forms.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">ESPGHAN / CFF Guidelines</span>
+      <span class="hero-pill">Weight-Based Paediatric</span>
+      <span class="hero-pill">IU ↔ mg Converter</span>
+      <span class="hero-pill gold-pill">🟡 TPGS for Cholestasis</span>
+      <span class="hero-pill warn-pill">⚠️ High Dose Antagonises Vitamin K</span>
+    </div>
+  </div>
 </section>
 
+<!-- ══ MAIN ══ -->
 <div class="container">
-    <nav class="breadcrumb">
-        <a href="/">Home</a> › <a href="/vitamin/">Vitamins Hub</a> › <span>Vitamin E Calculator</span>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/vitamin/">Vitamins Hub</a> <span>›</span>
+    <span>Vitamin E Tocopherol Calculator</span>
+  </nav>
+
+  <!-- Warning banner -->
+  <div class="warn-banner">
+    <div class="wb-icon">⚠️</div>
+    <div class="wb-body">
+      <div class="wb-title">Two Critical Safety Rules</div>
+      <div class="wb-text">
+        <strong>1. In cholestasis: only water-soluble TPGS is absorbed</strong> — standard oil-based Vitamin E is ineffective without bile.
+        <strong>2. High doses (&gt;400 IU/day) antagonise Vitamin K</strong> — monitor INR in anticoagulated patients; stop 2 weeks before surgery.
+      </div>
+    </div>
+  </div>
+
+  <!-- IU ↔ mg Converter -->
+  <div class="converter-strip">
+    <span class="cv-label">Quick IU ↔ mg Converter</span>
+    <div class="cv-group">
+      <input type="number" class="cv-input" id="cvInput" placeholder="Enter value" min="0" step="any"/>
+      <select class="cv-type" id="cvFrom">
+        <option value="iu_natural">IU → mg (Natural d-α)</option>
+        <option value="iu_synthetic">IU → mg (Synthetic dl-α)</option>
+        <option value="mg_natural">mg → IU (Natural d-α)</option>
+        <option value="mg_synthetic">mg → IU (Synthetic dl-α)</option>
+      </select>
+      <span class="cv-sep">=</span>
+      <div class="cv-result" id="cvResult">—</div>
+    </div>
+  </div>
+
+  <!-- ══ CALCULATOR ══ -->
+  <div class="calc-card">
+    <div class="calc-header">
+      <div class="ch-icon">🧬</div>
+      <div class="ch-text">
+        <h2>Vitamin E Dose Calculator</h2>
+        <p>ESPGHAN / Cystic Fibrosis Foundation / ESPGAN / WHO Guidelines</p>
+      </div>
+    </div>
+    <div class="calc-body">
+
+      <!-- Step 1 -->
+      <span class="step-label">Step 1 — Clinical Context</span>
+      <div class="ctx-grid" id="ctxGrid">
+        <div class="ctx-card emerg-ctx active" data-ctx="cholestasis">
+          <div class="ctx-badge">CRITICAL</div>
+          <div class="ctx-icon">🟡</div>
+          <div class="ctx-label">Cholestatic Liver Disease</div>
+          <div class="ctx-sub">Biliary atresia, Alagille, PBC</div>
+        </div>
+        <div class="ctx-card" data-ctx="cf">
+          <div class="ctx-icon">🫁</div>
+          <div class="ctx-label">Cystic Fibrosis</div>
+          <div class="ctx-sub">Pancreatic insufficiency</div>
+        </div>
+        <div class="ctx-card" data-ctx="abetal">
+          <div class="ctx-icon">🧬</div>
+          <div class="ctx-label">Abetalipoproteinemia</div>
+          <div class="ctx-sub">Genetic chylomicron failure</div>
+        </div>
+        <div class="ctx-card" data-ctx="nicu">
+          <div class="ctx-icon">👶</div>
+          <div class="ctx-label">Premature / NICU</div>
+          <div class="ctx-sub">ROP &amp; haemolysis prevention</div>
+        </div>
+        <div class="ctx-card" data-ctx="deficiency">
+          <div class="ctx-icon">💊</div>
+          <div class="ctx-label">Deficiency / Maintenance</div>
+          <div class="ctx-sub">Adult RDA &amp; non-specific</div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <span class="step-label">Step 2 — Formulation</span>
+      <div class="form-tabs" id="formTabs">
+        <button class="form-tab active" data-form="tpgs">TPGS (Water-Soluble)</button>
+        <button class="form-tab" data-form="oral_standard">d-alpha-tocopherol (Oral)</button>
+        <button class="form-tab" data-form="oral_synthetic">dl-alpha-tocopherol (Oral)</button>
+      </div>
+
+      <!-- Step 3 -->
+      <span class="step-label">Step 3 — Route</span>
+      <div class="route-row" id="routeRow"></div>
+
+      <!-- Step 4 -->
+      <span class="step-label">Step 4 — Specific Indication</span>
+      <div class="ind-grid" id="indGrid"></div>
+
+      <!-- Step 5 -->
+      <div class="field-row">
+        <div class="field">
+          <label>Age Group</label>
+          <select id="ageGroup">
+            <option value="adult">Adult (18–64 years)</option>
+            <option value="elderly">Elderly (≥65 years)</option>
+            <option value="paediatric">Paediatric (&lt;18 years)</option>
+            <option value="neonate">Neonate / Premature</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Weight (kg)</label>
+          <input type="number" id="weightInput" placeholder="e.g. 12" min="0.5" max="150" step="0.1"/>
+          <span class="hint">Required for weight-based dosing</span>
+        </div>
+        <div class="field">
+          <label>Severity / Phase</label>
+          <select id="severity">
+            <option value="severe">Severe / Active Deficiency</option>
+            <option value="moderate">Moderate</option>
+            <option value="mild">Mild / Maintenance</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Unit Preference</label>
+          <select id="unitPref">
+            <option value="both">Show Both IU and mg</option>
+            <option value="iu">IU Only</option>
+            <option value="mg">mg Only</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-calc" id="calcBtn">Generate Vitamin E Regimen →</button>
+
+      <!-- ── RESULT ── -->
+      <div class="result-wrap" id="resultWrap">
+        <div class="result-hero">
+          <div class="res-label" id="resLabel">Dose Recommendation</div>
+          <div class="res-dose" id="resDose">—</div>
+          <div class="res-schedule" id="resSched"></div>
+          <div class="res-notes" id="resNotes"></div>
+        </div>
+
+        <div class="dose-both" id="doseBoth"></div>
+        <div class="phase-grid" id="phaseGrid"></div>
+        <div class="bullets-box" id="bulletsBox" style="display:none">
+          <ul id="bulletList"></ul>
+        </div>
+        <div id="noDataNotice" class="no-data-notice" style="display:none"></div>
+
+        <div class="caution-strip">
+          ⚠️ <span>Evidence-based guidance aligned with ESPGHAN cholestasis guidelines, Cystic Fibrosis Foundation nutrition protocols, and published clinical literature. Always monitor serum alpha-tocopherol and lipid-adjusted levels. Clinical judgement is essential.</span>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-sm btn-out" onclick="window.print()">🖨 Print</button>
+          <a id="waLink" class="btn-sm btn-wa" href="#" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.849L.057 23.5a.5.5 0 00.598.632l5.765-1.513A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.663-.518-5.178-1.419l-.369-.221-3.823 1.003 1.02-3.73-.241-.383A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Share
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ARTICLE ══ -->
+  <article class="article-card" itemscope itemtype="https://schema.org/MedicalWebPage">
+    <div class="art-header">
+      <h2>Vitamin E (Tocopherol) — Complete Clinical Reference</h2>
+      <p>Biochemistry, fat-malabsorption syndromes, TPGS, cholestasis, cystic fibrosis, abetalipoproteinemia, neonatal protocols, IU-to-mg conversion, and Vitamin K interaction.</p>
+    </div>
+    <nav class="toc-strip" aria-label="Article sections">
+      <a href="#biochem"      class="toc-chip">1. Biochemistry</a>
+      <a href="#absorption"   class="toc-chip">2. Absorption</a>
+      <a href="#cholestasis"  class="toc-chip">3. Cholestasis &amp; TPGS</a>
+      <a href="#cf"           class="toc-chip">4. Cystic Fibrosis</a>
+      <a href="#abetal"       class="toc-chip">5. Abetalipoproteinemia</a>
+      <a href="#neonatology"  class="toc-chip">6. Neonatology</a>
+      <a href="#conversion"   class="toc-chip">7. IU ↔ mg</a>
+      <a href="#toxicity"     class="toc-chip">8. Toxicity &amp; VitK</a>
+      <a href="#faq"          class="toc-chip">9. FAQ</a>
     </nav>
 
-    <div class="calc-card">
-        <div class="calc-grid">
-            <div class="input-side">
-                <label>Clinical Indication</label>
-                <select id="indication">
-                    <option value="cholestasis">Cholestatic Liver Disease / Biliary Atresia</option>
-                    <option value="cf">Cystic Fibrosis (Pancreatic Insufficiency)</option>
-                    <option value="nicu">Premature Infant (ROP Prophylaxis)</option>
-                    <option value="abetal">Abetalipoproteinemia (Genetic)</option>
-                    <option value="deficiency">Severe Adult Deficiency (Non-specific)</option>
-                </select>
-                
-                <label>Patient Weight (kg)</label>
-                <input type="number" id="weight" placeholder="e.g. 15">
-            </div>
-            <div class="action-side">
-                <label>Measurement Preference</label>
-                <select id="pref">
-                    <option value="mg">Milligrams (mg alpha-tocopherol)</option>
-                    <option value="iu">International Units (IU)</option>
-                </select>
-                <button class="btn-calc" onclick="calcE()">Calculate Therapeutic Dose →</button>
-            </div>
-        </div>
+    <div class="art-body">
 
-        <div id="result-box" class="result-box">
-            <div style="text-transform:uppercase; font-size:12px; font-weight:800; color:var(--amber); letter-spacing:1px">Clinical Regimen</div>
-            <div class="res-val" id="res-dose">--</div>
-            <div id="res-freq" style="font-weight:700; font-size:1.2rem; margin:15px 0; color:var(--primary)"></div>
-            <div id="res-notes" style="font-size:14px; line-height:1.6; color:#64748b"></div>
+      <h2 id="biochem">1. Biochemistry — Eight Tocopherols, One Active Form</h2>
+      <p>Vitamin E is not a single compound but a family of eight fat-soluble molecules: four <strong>tocopherols</strong> (α, β, γ, δ) and four <strong>tocotrienols</strong> (α, β, γ, δ). Of these, only <strong>alpha-tocopherol</strong> fulfils human requirements, as it is the sole form selectively retained by the liver through the <strong>alpha-tocopherol transfer protein (α-TTP)</strong>. Other forms — gamma-tocopherol being the most abundant in the Western diet — are metabolised and excreted rather than incorporated into tissues.</p>
+      <p>Alpha-tocopherol's primary biological role is as a <strong>lipophilic chain-breaking antioxidant</strong> within cell membranes. It donates a hydrogen atom to neutralise lipid peroxyl radicals (ROO•), interrupting the chain reaction of lipid peroxidation that would otherwise destroy polyunsaturated fatty acids (PUFAs) in phospholipid bilayers. This protective function is particularly critical in tissues with high PUFA content: myelin, erythrocyte membranes, the retina, and spermatozoa — all sites of pathology in clinical deficiency.</p>
+
+      <table class="data-table">
+        <thead><tr><th>Form</th><th>Source</th><th>Relative Bioactivity</th><th>Clinical Relevance</th></tr></thead>
+        <tbody>
+          <tr><td>d-alpha-tocopherol (natural)</td><td>Wheat germ, sunflower oil, nuts</td><td>100% (reference)</td><td>Preferred for clinical supplementation; higher tissue retention</td></tr>
+          <tr><td>dl-alpha-tocopherol (synthetic)</td><td>Synthetic; most OTC supplements</td><td>~67% vs natural</td><td>Cheaper; widely available; lower mg-per-IU potency</td></tr>
+          <tr><td>TPGS (water-soluble)</td><td>Semi-synthetic; d-alpha-tocopherol + PEG</td><td>Equivalent to natural</td><td>Mandatory in cholestasis — self-emulsifying; absorbed without bile</td></tr>
+          <tr><td>gamma-tocopherol</td><td>Soybean oil, corn oil, peanuts</td><td>~10–15% vs alpha</td><td>Not counted in clinical dosing; not retained by α-TTP</td></tr>
+          <tr><td>Tocotrienols</td><td>Palm oil, rice bran, annatto</td><td>Variable; not standard</td><td>Investigational; not included in recommended dietary allowances</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="absorption">2. Fat-Dependent Absorption — Why Deficiency Occurs</h2>
+      <p>Vitamin E absorption mirrors the fate of all fat-soluble vitamins: it requires <strong>biliary bile salt secretion</strong> for micellar solubilisation, <strong>pancreatic lipase</strong> activity for triglyceride hydrolysis, and intact <strong>enterocyte chylomicron synthesis</strong> for packaging into the lymphatic circulation. This three-step dependency explains why Vitamin E deficiency occurs preferentially in specific disease states rather than simply from dietary inadequacy, which is rare in adults with normal GI function.</p>
+      <p>The clinical corollary is critical: <strong>standard oil-based Vitamin E supplements given to a child with biliary atresia or a patient with total bile duct obstruction will not be absorbed</strong>. Measuring serum alpha-tocopherol after months of oil-based supplementation in a cholestatic patient may reveal profound deficiency despite "compliance" with treatment, because the formulation was physiologically incompatible.</p>
+
+      <div class="spectrum-bar">
+        <div class="spec-item spec-rda">
+          <div class="spec-label">Adult RDA</div>
+          <div class="spec-dose">15 mg (22 IU)</div>
+          <div class="spec-sub">ICMR / IOM recommendation</div>
         </div>
+        <div class="spec-item spec-def">
+          <div class="spec-label">Adult Deficiency</div>
+          <div class="spec-dose">200–400 IU/day</div>
+          <div class="spec-sub">Non-specific malabsorption</div>
+        </div>
+        <div class="spec-item spec-mal">
+          <div class="spec-label">Cholestasis / CF</div>
+          <div class="spec-dose">15–25 IU/kg/day</div>
+          <div class="spec-sub">TPGS mandatory in cholestasis</div>
+        </div>
+        <div class="spec-item spec-gen">
+          <div class="spec-label">Abetalipoproteinemia</div>
+          <div class="spec-dose">100–200 IU/kg/day</div>
+          <div class="spec-sub">Massive doses required</div>
+        </div>
+      </div>
+
+      <h2 id="cholestasis">3. Cholestatic Liver Disease — TPGS is Mandatory</h2>
+      <p>Cholestatic liver disease — including <strong>biliary atresia</strong> (the most common indication for paediatric liver transplantation in India), <strong>Alagille syndrome</strong>, progressive familial intrahepatic cholestasis (PFIC), and primary biliary cholangitis in adults — all cause bile salt deficiency in the intestinal lumen. Without bile salts, standard oil-based Vitamin E cannot form micelles, and absorption approaches zero.</p>
+
+      <h3>TPGS — The Water-Soluble Solution</h3>
+      <p><strong>Tocopheryl Polyethylene Glycol Succinate (TPGS)</strong> is a semi-synthetic water-soluble form of d-alpha-tocopherol that self-emulsifies in aqueous environments — it does not require bile salts to form micelles. This unique property makes it the only form of Vitamin E that can be absorbed in cholestatic patients. Multiple paediatric trials have demonstrated its superiority over oil-based alpha-tocopherol in children with biliary atresia, with serum levels normalising in weeks rather than remaining deficient for months or years.</p>
+
+      <table class="data-table">
+        <thead><tr><th>Condition</th><th>Form</th><th>Dose</th><th>Target Serum Level</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Biliary Atresia (paediatric)</td><td>TPGS only</td><td>15–25 IU/kg/day</td><td>&gt;11.6 µmol/L or ratio &gt;0.8 mg/g lipid</td><td>Monitor every 3–6 months; adjust dose</td></tr>
+          <tr><td>Alagille Syndrome</td><td>TPGS only</td><td>15–25 IU/kg/day</td><td>&gt;11.6 µmol/L</td><td>Neurological monitoring essential — early ataxia reversible</td></tr>
+          <tr><td>PFIC (types 1, 2, 3)</td><td>TPGS only</td><td>15–25 IU/kg/day</td><td>&gt;11.6 µmol/L</td><td>Continue post-partial external biliary diversion</td></tr>
+          <tr><td>Primary Biliary Cholangitis (adult)</td><td>TPGS or water-miscible</td><td>400–800 IU/day</td><td>&gt;20 µmol/L</td><td>Oil-based may be partially absorbed if bile flow partially maintained</td></tr>
+          <tr><td>Neonatal cholestasis</td><td>TPGS only</td><td>15–25 IU/kg/day</td><td>&gt;11.6 µmol/L</td><td>Begin immediately — neurological window is short in neonates</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout danger">
+        <div class="callout-icon">🚫</div>
+        <div class="callout-body">
+          <div class="callout-title">The Ataxia Window — Treat Before Neurology Appears</div>
+          <div class="callout-text">Vitamin E deficiency in cholestatic children causes a progressive spinocerebellar syndrome: loss of deep tendon reflexes, ataxia, ophthalmoplegia, and proprioception loss. Neurological damage begins silently — by the time ataxia is visible, significant axonal degeneration has already occurred. The window for full neurological recovery narrows with each month of untreated deficiency. Supplementation must begin at diagnosis of cholestasis, not when symptoms appear.</div>
+        </div>
+      </div>
+
+      <h2 id="cf">4. Cystic Fibrosis and Pancreatic Insufficiency</h2>
+      <p>In cystic fibrosis, pancreatic exocrine insufficiency impairs lipase secretion, reducing fat absorption to a fraction of normal and creating significant fat-soluble vitamin deficiency. Approximately 85–90% of CF patients have pancreatic insufficiency. Unlike cholestasis, bile secretion is typically preserved in CF — standard Vitamin E formulations can be absorbed, though at reduced efficiency.</p>
+      <p>The Cystic Fibrosis Foundation Nutrition Consensus recommends routine Vitamin E supplementation for all patients with CF and pancreatic insufficiency, with age-adjusted dosing and annual serum monitoring. Since serum alpha-tocopherol is highly influenced by circulating lipid concentrations, interpret levels as a ratio to total serum lipids: a ratio above <strong>0.8 mg/g</strong> is considered adequate.</p>
+
+      <table class="data-table">
+        <thead><tr><th>Age Group</th><th>CF Foundation Dose</th><th>Formulation</th><th>Timing</th></tr></thead>
+        <tbody>
+          <tr><td>Infants 0–12 months</td><td>40–50 IU/day</td><td>Water-miscible drops</td><td>With PERT and fat-containing feed</td></tr>
+          <tr><td>Children 1–3 years</td><td>80–150 IU/day</td><td>Water-miscible liquid or chewable</td><td>With PERT; largest meal</td></tr>
+          <tr><td>Children 4–8 years</td><td>100–200 IU/day</td><td>Water-miscible; chewable or tablet</td><td>With PERT; largest meal</td></tr>
+          <tr><td>Children 9–18 years</td><td>200–400 IU/day</td><td>d-alpha-tocopherol tablet</td><td>With PERT; largest meal</td></tr>
+          <tr><td>Adults</td><td>400–800 IU/day</td><td>d-alpha-tocopherol (natural preferred)</td><td>With PERT; largest meal; split BD if tolerated</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout info">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body">
+          <div class="callout-title">Always Co-administer with PERT</div>
+          <div class="callout-text">In cystic fibrosis, Vitamin E must always be administered simultaneously with Pancreatic Enzyme Replacement Therapy (PERT) and a fat-containing meal. Without PERT, fat-soluble vitamins remain undigested regardless of the dose given. A practical instruction for CF families: "Give the Vitamin E capsule at the same time as the first enzyme capsule at the largest meal of the day."</div>
+        </div>
+      </div>
+
+      <h2 id="abetal">5. Abetalipoproteinemia — Massive Doses Required</h2>
+      <p>Abetalipoproteinemia (Bassen-Kornzweig syndrome) is a rare autosomal recessive disorder caused by mutations in <em>MTTP</em> (Microsomal Triglyceride Transfer Protein), resulting in complete failure of chylomicron and VLDL assembly. Without chylomicrons, fat-soluble vitamins cannot exit the intestinal enterocyte into the lymphatic system, and serum levels of all fat-soluble vitamins — particularly E and A — remain profoundly deficient despite adequate dietary intake.</p>
+      <p>Treatment requires <strong>massive oral doses of Vitamin E</strong>: 100–200 IU/kg/day, which may amount to 5,000–15,000 IU/day in adults. Even at these doses, serum levels remain far below normal — the goal is to prevent progressive neurological damage rather than to normalise levels. Without treatment, patients develop a devastating spinocerebellar ataxia, peripheral neuropathy, and retinitis pigmentosa by the second decade of life, which is largely irreversible.</p>
+
+      <div class="callout amber">
+        <div class="callout-icon">🧬</div>
+        <div class="callout-body">
+          <div class="callout-title">Abetalipoproteinemia — The Ataxia Mimic</div>
+          <div class="callout-text">Abetalipoproteinemia can mimic Friedreich's ataxia clinically: progressive ataxia, loss of deep tendon reflexes, extensor plantar responses, and cardiomyopathy. The diagnostic clue is acanthocytosis (spiked red blood cells) on peripheral smear and undetectable serum LDL and VLDL cholesterol. Check serum alpha-tocopherol in any young patient with ataxia and GI malabsorption — correcting Vitamin E deficiency can halt progression and may partially reverse some deficits if caught early.</div>
+        </div>
+      </div>
+
+      <table class="data-table">
+        <thead><tr><th>Patient</th><th>Dose</th><th>Form</th><th>Target</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Paediatric (&lt;18 years)</td><td>100–200 IU/kg/day</td><td>d-alpha-tocopherol (water-miscible)</td><td>Prevent neurological progression; levels will remain low</td><td>Monitor ophthalmology for retinitis pigmentosa; cardiology</td></tr>
+          <tr><td>Adult</td><td>5,000–10,000 IU/day</td><td>d-alpha-tocopherol (water-miscible)</td><td>Halt neurological progression</td><td>Annual serum VitE, peripheral smear, nerve conduction studies</td></tr>
+          <tr><td>Any age</td><td>Concomitant Vitamin A</td><td>Water-miscible retinol</td><td>100,000 IU/day</td><td>A, K, D supplementation also required — pan-fat-soluble deficiency</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="neonatology">6. Neonatology — ROP Prophylaxis and Haemolytic Anaemia</h2>
+      <p>Preterm infants are born with low Vitamin E stores — third-trimester transfer from mother to foetus accounts for most neonatal vitamin E stores, so the more premature the infant, the greater the deficiency. The deficiency manifests as <strong>haemolytic anaemia</strong> (due to oxidative damage to PUFA-rich erythrocyte membranes) and, historically, has been associated with increased risk of <strong>Retinopathy of Prematurity (ROP)</strong> and intraventricular haemorrhage.</p>
+      <p>Current neonatology practice is more conservative than historical protocols. Enteral Vitamin E supplementation at physiological doses (to achieve serum levels of 1–3.5 mg/dL) is appropriate. High-dose parenteral Vitamin E has been abandoned after trials showed increased risk of sepsis and NEC at pharmacological doses — this is a historically important lesson in neonatology where supplementation seemed protective in theory but was harmful in practice at high doses.</p>
+
+      <table class="data-table">
+        <thead><tr><th>Indication</th><th>Dose</th><th>Route</th><th>Target Serum Level</th><th>Caution</th></tr></thead>
+        <tbody>
+          <tr><td>ROP prophylaxis / general premature supplementation</td><td>5–25 IU/day</td><td>Oral (preferred)</td><td>1–3.5 mg/dL</td><td>Do NOT exceed 25 IU/day oral — sepsis/NEC risk above this</td></tr>
+          <tr><td>Haemolytic anaemia of prematurity</td><td>15–25 IU/day</td><td>Oral</td><td>1–3.5 mg/dL</td><td>High-dose IV: avoided — increased infection risk</td></tr>
+          <tr><td>Very low birth weight (&lt;1500g)</td><td>25 IU/day oral</td><td>Oral</td><td>1–3.5 mg/dL</td><td>Monitor LFTs; enterally fed only when tolerated</td></tr>
+          <tr><td>TPN-dependent premature infant</td><td>2.8–3.5 IU/kg/day IV</td><td>In TPN multivitamin</td><td>1–3.5 mg/dL</td><td>Use paediatric IV multivitamin (Peditrace); protect from light</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout danger">
+        <div class="callout-icon">🚫</div>
+        <div class="callout-body">
+          <div class="callout-title">High-Dose IV Vitamin E in Neonates — Abandoned for Safety</div>
+          <div class="callout-text">Pharmacological-dose IV Vitamin E in premature neonates was trialled in the 1980s–90s with the hope of preventing ROP and IVH. Trials were halted after finding significantly increased rates of sepsis and necrotising enterocolitis (NEC) — the immune-modulating effects of high-dose tocopherol impaired neonatal bactericidal function. This is a seminal example of a biologically plausible intervention proving harmful at high doses. Current protocols use physiological oral supplementation only.</div>
+        </div>
+      </div>
+
+      <h2 id="conversion">7. IU to mg Conversion — Natural vs Synthetic</h2>
+      <p>The conversion between IU and milligrams of Vitamin E is one of the most common sources of prescribing confusion. The conversion factor differs between natural and synthetic forms because <strong>alpha-tocopherol is a chiral molecule</strong>, and biological systems are stereoselective. Natural d-alpha-tocopherol is the single RRR-stereoisomer with full biological activity. Synthetic dl-alpha-tocopherol is an equimolar mixture of all eight stereoisomers, of which only the RRR form is fully active — hence the lower mg-per-IU equivalence.</p>
+
+      <div class="conv-box">
+        <div class="conv-card">
+          <div class="conv-title">Natural d-alpha-tocopherol</div>
+          <div class="conv-formula">1 IU = 0.67 mg</div>
+          <div class="conv-formula">1 mg = 1.49 IU</div>
+          <div class="conv-note">Higher bioavailability; preferred for clinical supplementation, especially in malabsorption syndromes</div>
+        </div>
+        <div class="conv-card">
+          <div class="conv-title">Synthetic dl-alpha-tocopherol</div>
+          <div class="conv-formula">1 IU = 0.91 mg</div>
+          <div class="conv-formula">1 mg = 1.10 IU</div>
+          <div class="conv-note">Cheaper; widely available OTC; ~33% less bioavailable than natural form at equivalent IU dosing</div>
+        </div>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body">
+          <div class="callout-title">Prescribe by IU Not mg for Therapeutic Use</div>
+          <div class="callout-text">When prescribing therapeutic Vitamin E for malabsorption syndromes, specify the form (natural vs synthetic) and prescribe in IU — this removes ambiguity from the conversion. For patients in India where the natural form may not be available, switching to synthetic dl-alpha-tocopherol requires upward dose adjustment to maintain equivalent biological activity. Specify "natural d-alpha-tocopherol preferred; if unavailable use dl-alpha-tocopherol at 1.5× the IU dose" in high-stakes indications.</div>
+        </div>
+      </div>
+
+      <h2 id="toxicity">8. Toxicity — The Vitamin K Interaction and Surgical Risk</h2>
+      <p>Vitamin E has one of the highest tolerable upper intake levels (UL) of any fat-soluble vitamin: <strong>1000 mg (approximately 1500 IU) per day for adults</strong>, reflecting its low acute toxicity. However, "high-dose" Vitamin E in the 400–1000 IU/day range has clinically important interactions that make it hazardous in specific populations.</p>
+
+      <h3>Vitamin K Antagonism — The Mechanism</h3>
+      <p>Alpha-tocopherol, at pharmacological doses, antagonises the action of <strong>Vitamin K-dependent carboxylation</strong> of clotting factors II, VII, IX, and X in the liver. The exact mechanism involves competition for Vitamin K epoxide reductase activity. The result is a prolonged prothrombin time and elevated INR — particularly dangerous in patients already anticoagulated with warfarin, in those with underlying liver disease (where clotting factor synthesis is already impaired), and in patients taking antiplatelet agents.</p>
+
+      <table class="data-table">
+        <thead><tr><th>Risk / Interaction</th><th>Threshold</th><th>Management</th></tr></thead>
+        <tbody>
+          <tr><td>Warfarin INR potentiation</td><td>&gt;400 IU/day</td><td>Monitor INR weekly when starting/stopping high-dose VitE; adjust warfarin dose</td></tr>
+          <tr><td>Antiplatelet potentiation (aspirin, clopidogrel)</td><td>&gt;400 IU/day</td><td>Caution; increased bleeding risk; discuss with cardiologist before high-dose supplementation</td></tr>
+          <tr><td>Pre-surgical bleeding risk</td><td>&gt;400 IU/day</td><td>Discontinue 2 weeks before elective surgery; document cessation</td></tr>
+          <tr><td>Liver disease — baseline coagulopathy</td><td>Any supplemental dose</td><td>Monitor INR monthly; use minimum effective dose; prefer TPGS over synthetic forms</td></tr>
+          <tr><td>Haemorrhagic stroke risk</td><td>&gt;400 IU/day chronic</td><td>Meta-analysis signal for increased haemorrhagic stroke — avoid prolonged high-dose supplementation in at-risk patients</td></tr>
+          <tr><td>Prostate cancer risk (SELECT trial)</td><td>&gt;400 IU/day (synthetic)</td><td>SELECT trial 2011: synthetic VitE 400 IU/day increased prostate cancer risk by 17%; avoid long-term high-dose in men without specific indication</td></tr>
+          <tr><td>All-cause mortality signal</td><td>&gt;400 IU/day chronic</td><td>JAMA meta-analysis (2005): high-dose (≥400 IU/day) associated with small but significant increased all-cause mortality; use minimum effective dose</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout success">
+        <div class="callout-icon">✅</div>
+        <div class="callout-body">
+          <div class="callout-title">Monitoring Protocol for Vitamin E Therapy</div>
+          <div class="callout-text">For all patients on therapeutic Vitamin E: (1) Serum alpha-tocopherol at baseline and every 3–6 months; (2) Interpret level as ratio to total serum lipids (target &gt;0.8 mg/g in deficiency states); (3) INR or PT if on anticoagulants or with liver disease; (4) Neurological examination every 6 months in cholestatic children — looking for loss of deep tendon reflexes or ataxia; (5) Ophthalmology in abetalipoproteinemia — annual retinal examination for retinitis pigmentosa.</div>
+        </div>
+      </div>
+
+      <h2 id="faq">9. Frequently Asked Questions</h2>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <div class="faq-q">What is the Vitamin E dose for cholestatic liver disease in children?</div>
+          <div class="faq-a">ESPGHAN recommends 15–25 IU/kg/day of water-soluble TPGS (Tocopheryl Polyethylene Glycol Succinate) for children with cholestatic liver disease including biliary atresia and Alagille syndrome. TPGS is mandatory — standard oil-based Vitamin E cannot be absorbed without bile salts. Target serum alpha-tocopherol above 11.6 µmol/L, or a lipid-adjusted ratio above 0.8 mg/g total lipids. Monitor levels every 3–6 months and adjust the dose accordingly. Begin supplementation at diagnosis — do not wait for neurological symptoms.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the Vitamin E dose for cystic fibrosis?</div>
+          <div class="faq-a">Cystic Fibrosis Foundation guidelines recommend: infants 40–50 IU/day; children 1–3 years 80–150 IU/day; 4–8 years 100–200 IU/day; 9–18 years 200–400 IU/day; adults 400–800 IU/day. Always administer simultaneously with Pancreatic Enzyme Replacement Therapy (PERT) and a fat-containing meal — without PERT, fat-soluble vitamins cannot be absorbed regardless of dose. Annual monitoring: serum alpha-tocopherol ratio to total lipids (target &gt;0.8 mg/g).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do you convert Vitamin E IU to mg?</div>
+          <div class="faq-a">For natural d-alpha-tocopherol: 1 IU = 0.67 mg alpha-tocopherol, or 1 mg = 1.49 IU. For synthetic dl-alpha-tocopherol: 1 IU = 0.91 mg, or 1 mg = 1.10 IU. Natural d-alpha-tocopherol has approximately 33% higher biological activity per IU compared to the synthetic form, due to the liver's selective retention of the RRR-stereoisomer. Use the quick converter above the calculator to convert between units instantly. Prefer prescribing in IU with the form specified to avoid ambiguity.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the Vitamin E dose for abetalipoproteinemia?</div>
+          <div class="faq-a">Abetalipoproteinemia requires massive doses: 100–200 IU/kg/day orally, typically 5,000–15,000 IU/day. Patients lack chylomicron assembly entirely and absorb only a fraction of any oral dose — serum levels will remain low despite treatment, but supplementation prevents progressive neurological deterioration. Use water-miscible natural d-alpha-tocopherol. Supplement all fat-soluble vitamins (A, D, K as well). Annual monitoring: serum alpha-tocopherol, neurological examination, retinal examination, nerve conduction studies, and echocardiography (cardiomyopathy is a feature).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does Vitamin E interfere with warfarin and Vitamin K?</div>
+          <div class="faq-a">Yes — this is a clinically important interaction. High-dose Vitamin E (above 400 IU/day) antagonises Vitamin K-dependent carboxylation of clotting factors II, VII, IX, and X, leading to elevated INR and increased bleeding risk. In patients on warfarin, INR should be monitored weekly when initiating or stopping high-dose Vitamin E supplementation and the warfarin dose adjusted accordingly. High-dose Vitamin E should be stopped at least 2 weeks before elective surgery. The interaction is particularly dangerous in patients with pre-existing coagulopathy from liver disease.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What are the signs of Vitamin E deficiency and how does it present?</div>
+          <div class="faq-a">Vitamin E deficiency from dietary inadequacy is extremely rare in healthy adults. Clinical deficiency occurs almost exclusively in fat malabsorption syndromes. Presentation is a spinocerebellar syndrome: progressive loss of deep tendon reflexes (earliest sign), followed by ataxia, sensory neuropathy (vibration and proprioception loss), ophthalmoplegia, and skeletal muscle weakness. In children with cholestasis, this can begin before 2 years of age. It can mimic Friedreich's ataxia clinically — always check alpha-tocopherol in ataxia with GI malabsorption. Haemolytic anaemia occurs in premature infants due to PUFA peroxidation in erythrocyte membranes.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the Vitamin E dose for a premature neonate in the NICU?</div>
+          <div class="faq-a">Enteral: 5–25 IU/day orally to achieve serum levels of 1–3.5 mg/dL. High-dose parenteral Vitamin E is avoided in neonates — trials showed increased rates of sepsis and NEC at pharmacological IV doses. For TPN-dependent neonates: Vitamin E is included in standard paediatric IV multivitamin preparations at 2.8–3.5 IU/kg/day. Protect IV preparations from light. The goal is physiological repletion, not pharmacological dosing.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This calculator provides evidence-based guidance aligned with ESPGHAN cholestasis guidelines, Cystic Fibrosis Foundation Nutrition Consensus, and published clinical literature on fat-soluble vitamin supplementation. All weight-based doses must be verified against current prescribing information and adjusted for individual patient factors including hepatic function, coagulation status, and serum monitoring. This tool is for qualified healthcare professionals and does not replace clinical judgement or specialist consultation.
+      </div>
     </div>
+  </article>
 
-    <article class="article-section">
-        <div class="toc-box">
-            <div style="font-weight:800; margin-bottom:15px; font-size:13px; color:var(--teal)">CLINICAL NAVIGATION</div>
-            <a href="#biochem" class="toc-link">1. Biochemistry of the Eight Tocopherols</a>
-            <a href="#cholestasis" class="toc-link">2. Management in Cholestatic Liver Disease</a>
-            <a href="#cysticfibrosis" class="toc-link">3. Cystic Fibrosis & Pancreatic Insufficiency</a>
-            <a href="#neonatology" class="toc-link">4. Neonatology: ROP and Hemolysis Prevention</a>
-            <a href="#conversion" class="toc-link">5. IU to mg: The Pharmacological Mismatch</a>
-            <a href="#toxicity" class="toc-link">6. Excess & Coagulopathy: The Vitamin K Interaction</a>
-        </div>
-
-        <h2 id="biochem">1. Biochemistry of the Eight Tocopherols</h2>
-        <p>Vitamin E is not a single substance but a family of eight naturally occurring fat-soluble antioxidants: four tocopherols (α-, β-, γ-, and δ-) and four tocotrienols. Of these, <strong>alpha-tocopherol</strong> is the only form recognized to meet human requirements, as it is selectively bound by the hepatic alpha-tocopherol transfer protein (α-TTP).</p>
-        <p>In clinical practice, Vitamin E acts as the primary chain-breaking antioxidant in biological membranes. it protects polyunsaturated fatty acids (PUFAs) within phospholipids from lipid peroxidation. For the clinician, understanding the delivery mechanism is vital: Vitamin E requires biliary secretion and pancreatic lipase for micellar solubilization before it can be absorbed in the mid-small intestine via passive diffusion.</p>
-
-        <h2 id="cholestasis">2. Management in Cholestatic Liver Disease</h2>
-        <p>In conditions like <strong>Biliary Atresia</strong>, Alagille Syndrome, or Primary Biliary Cholangitis, the absence of intraluminal bile salts makes standard oil-based Vitamin E nearly impossible to absorb. This leads to profound neuromuscular deficiency syndromes, including ataxia and loss of vibratory sense.</p>
-        <p><strong>TPGS (Tocopheryl Polyethylene Glycol Succinate):</strong> This is a water-soluble form of Vitamin E that forms its own micelles, allowing for absorption even in the complete absence of bile. It is the gold standard for treating pediatric cholestasis. Doses often range from 15 to 25 IU/kg/day, significantly higher than standard requirements.</p>
-
-        <h2 id="cysticfibrosis">3. Cystic Fibrosis & Pancreatic Insufficiency</h2>
-        <p>Pancreatic enzyme insufficiency in Cystic Fibrosis (CF) leads to significant fat malabsorption. Internationally, the <strong>Cystic Fibrosis Foundation</strong> recommends aggressive Vitamin E monitoring. Since Vitamin E status depends on circulating lipids, clinicians must interpret serum alpha-tocopherol levels in the context of total serum lipids (ratio > 0.8 mg/g is considered sufficient).</p>
-        <p>Treatment usually involves 100-400 IU/day for children and up to 800 IU/day for adults, often administered alongside pancreatic enzyme replacement therapy (PERT).</p>
-
-        <h2 id="neonatology">4. Neonatology: ROP and Hemolysis Prevention</h2>
-        <p>Preterm infants are born with low Vitamin E stores. In the NICU, Vitamin E has historically been used to reduce the risk of <strong>Retinopathy of Prematurity (ROP)</strong> and intraventricular hemorrhage. However, high-dose parenteral Vitamin E must be used with extreme caution as it has been linked to increased risk of sepsis and necrotizing enterocolitis (NEC) in premature neonates.</p>
-
-        <div class="info-card">
-            <h3>Clinical Pearl: The "Ataxia" Sign</h3>
-            <p>Isolated Vitamin E deficiency can present as a "Friedreich’s Ataxia mimic." If a patient presents with progressive ataxia, loss of deep tendon reflexes, and ophthalmoplegia—especially in the context of GI disease—check the alpha-tocopherol level immediately. Correcting the deficiency can halt neurological progression.</p>
-        </div>
-
-        <h2 id="conversion">5. IU to mg: The Pharmacological Mismatch</h2>
-        <p>There is frequent confusion in clinical documentation regarding units. The conversion depends on whether the supplement is natural (d-alpha-tocopherol) or synthetic (dl-alpha-tocopherol):</p>
-        <ul>
-            <li><strong>1 mg of natural Vitamin E</strong> = 1.49 IU</li>
-            <li><strong>1 mg of synthetic Vitamin E</strong> = 1.10 IU</li>
-        </ul>
-        <p>When prescribing for severe malabsorption, clinicians should specify the form, as natural d-alpha-tocopherol has significantly higher bioavailability and tissue retention.</p>
-
-        <h2 id="toxicity">6. Excess & Coagulopathy: The Vitamin K Interaction</h2>
-        <p>While Vitamin E has a high tolerable upper intake level (UL 1000 mg/day for adults), "megadosing" (frequently seen in OTC supplement use) can interfere with Vitamin K-dependent clotting factors. Vitamin E antagonizes the action of Vitamin K, leading to an increased risk of bleeding, especially in patients already on anticoagulants like Warfarin or Aspirin.</p>
-        <p><strong>Surgical Precaution:</strong> It is standard international practice to discontinue high-dose Vitamin E supplements at least two weeks before elective surgery to ensure optimal primary hemostasis.</p>
-
-        <h3>Conclusion</h3>
-        <p>Vitamin E management requires a nuanced understanding of fat absorption physiology. For patients with cholestasis or CF, it is a life-critical intervention to prevent permanent neurological damage. By using the RxMedCalc tool, clinicians can determine precise weight-based requirements while remaining aware of the complex unit conversions and potential bleeding risks associated with high-dose therapy.</p>
-    </article>
-</div>
+</div><!-- /container -->
 
 <script>
-function calcE(){
-    const ind = document.getElementById('indication').value;
-    const w = parseFloat(document.getElementById('weight').value) || 0;
-    const pref = document.getElementById('pref').value;
-    
-    let dose = 0; let freq = "Once Daily"; let notes = "";
+/* ══════════════════════════════════════════════════════════
+   CONVERTER
+══════════════════════════════════════════════════════════ */
+document.getElementById('cvInput').addEventListener('input', runConverter);
+document.getElementById('cvFrom').addEventListener('change', runConverter);
 
-    if(ind === 'cholestasis'){
-        if(w > 0) {
-            dose = w * 20; // 15-25 IU/kg
-            notes = "Using water-soluble TPGS form is mandatory if bile flow is obstructed.";
-        } else {
-            dose = 400; notes = "Standard adult cholestasis starting dose.";
-        }
-    } else if(ind === 'cf'){
-        dose = (w < 20) ? 100 : (w < 40) ? 200 : 400;
-        notes = "Administer with pancreatic enzymes (PERT) and a fat-containing meal.";
-    } else if(ind === 'nicu'){
-        dose = 5; freq = "Once Daily (Oral)";
-        notes = "Monitor for NEC risk. Usually limited to very low birth weight infants.";
-    } else if(ind === 'abetal'){
-        dose = w * 100; // Genetic requires massive doses
-        notes = "Requires massive doses (100-200 IU/kg) to achieve even trace serum levels.";
-    } else {
-        dose = 15; notes = "Standard Nutritional RDA. Therapeutic deficiency usually requires 100-200 IU.";
-    }
+function runConverter() {
+  const val = parseFloat(document.getElementById('cvInput').value);
+  const type = document.getElementById('cvFrom').value;
+  const out = document.getElementById('cvResult');
+  if (!val || isNaN(val) || val <= 0) { out.textContent = '—'; return; }
+  let result, unit;
+  switch (type) {
+    case 'iu_natural':   result = val * 0.67;  unit = 'mg (natural)'; break;
+    case 'iu_synthetic': result = val * 0.91;  unit = 'mg (synthetic)'; break;
+    case 'mg_natural':   result = val * 1.49;  unit = 'IU (natural)'; break;
+    case 'mg_synthetic': result = val * 1.10;  unit = 'IU (synthetic)'; break;
+  }
+  out.textContent = `${Math.round(result * 10) / 10} ${unit}`;
+}
 
-    let finalStr = pref === 'iu' ? Math.round(dose) + " IU" : Math.round(dose / 1.49) + " mg";
+/* ══════════════════════════════════════════════════════════
+   DATA
+══════════════════════════════════════════════════════════ */
+const ROUTES_MAP = {
+  tpgs:           [{ id:'oral', icon:'💊', label:'Oral / Enteral', sub:'TPGS solution or capsule' }],
+  oral_standard:  [{ id:'oral', icon:'💊', label:'Oral', sub:'d-alpha-tocopherol' }],
+  oral_synthetic: [{ id:'oral', icon:'💊', label:'Oral', sub:'dl-alpha-tocopherol (synthetic)' }],
+};
 
-    document.getElementById('res-dose').innerText = finalStr;
-    document.getElementById('res-freq').innerText = freq;
-    document.getElementById('res-notes').innerText = notes;
-    document.getElementById('result-box').style.display = "block";
-    document.getElementById('result-box').scrollIntoView({behavior:'smooth', block:'center'});
+const INDICATIONS_MAP = {
+  cholestasis: ['Biliary Atresia (Paediatric)', 'Alagille Syndrome', 'PFIC (Types 1, 2, 3)', 'Adult Cholestasis (PBC / PSC)', 'Neonatal Cholestasis'],
+  cf:          ['CF — Infant (0–12 months)', 'CF — Child (1–8 years)', 'CF — Child/Adolescent (9–18 years)', 'CF — Adult'],
+  abetal:      ['Abetalipoproteinemia (Paediatric)', 'Abetalipoproteinemia (Adult)', 'Hypobetalipoproteinemia'],
+  nicu:        ['Premature — ROP Prophylaxis', 'Premature — Haemolytic Anaemia', 'VLBW (&lt;1500g)', 'TPN-Dependent Premature'],
+  deficiency:  ['Adult Non-specific Deficiency', 'Malabsorption (Non-cholestatic)', 'Adult RDA / Maintenance', 'Elderly Maintenance'],
+};
+
+/* IU/kg or fixed IU — compute at calculate() time using weight */
+/* Stored as IU throughout; conversion shown in result */
+const DOSES = {
+  tpgs: {
+    oral: {
+      'Biliary Atresia (Paediatric)': {
+        paediatric: { severe: { dosePerKg:20, doseFixed:null, schedule:'Once daily with food', phases:[{t:'p-load',tag:'⚡ TPGS Loading (Weight-Based)',dose:'15–25 IU/kg/day',detail:'Target: serum >11.6 µmol/L or ratio >0.8 mg/g lipid'},{t:'p-maint',tag:'✅ Ongoing Monitoring',dose:'Adjust per serum levels',detail:'Check every 3–6 months; titrate up/down'}], bullets:['TPGS is the ONLY form absorbed in complete cholestasis — standard oil-based VitE is ineffective','Begin supplementation at diagnosis — do NOT wait for neurological signs','Neurological examination every 6 months for early ataxia and loss of DTRs','Target: serum alpha-tocopherol >11.6 µmol/L or lipid-adjusted ratio >0.8 mg/g','If level low despite TPGS: check compliance and absorption; increase dose to 25–35 IU/kg/day'] }},
+        neonate: { severe: { dosePerKg:20, doseFixed:null, schedule:'Once daily with feed', phases:[{t:'p-load',tag:'⚡ Neonatal TPGS',dose:'15–25 IU/kg/day',detail:'TPGS solution; with each feed'},{t:'p-warn',tag:'⚠️ Neurological Window',dose:'Monitor monthly',detail:'Neonates: neurological damage progresses rapidly — check levels monthly'}], bullets:['Neonatal cholestasis: neurological window is short — treat immediately','TPGS oral solution can be mixed with small volume of milk or formula','Serum alpha-tocopherol monthly in first 6 months; then every 3 months'] }},
+      },
+      'Alagille Syndrome': {
+        paediatric: { severe: { dosePerKg:20, doseFixed:null, schedule:'Once daily', phases:[{t:'p-load',tag:'⚡ TPGS — Alagille',dose:'15–25 IU/kg/day',detail:'TPGS form essential; monitor every 3–6 months'}], bullets:['Alagille syndrome: cholestasis severity varies — monitor levels and titrate dose','Ophthalmological involvement (posterior embryotoxon) does not worsen with VitE — but retinal function monitoring advisable','Neurological status: check deep tendon reflexes at every visit'] }},
+      },
+      'PFIC (Types 1, 2, 3)': {
+        paediatric: { severe: { dosePerKg:20, doseFixed:null, schedule:'Once daily; continue post-biliary diversion', phases:[{t:'p-load',tag:'⚡ TPGS — PFIC',dose:'15–25 IU/kg/day TPGS',detail:'Continue even post-partial external biliary diversion'}], bullets:['PFIC types 1 and 2: severe cholestasis — TPGS mandatory','PFIC type 3: less severe; may partially respond to standard formulation, but TPGS preferred','Continue supplementation after Kasai or biliary diversion procedures — cholestasis often persists'] }},
+      },
+      'Adult Cholestasis (PBC / PSC)': {
+        adult: {
+          severe: { dosePerKg:null, doseFixed:800, schedule:'Once daily or BD', phases:[{t:'p-load',tag:'⚡ Adult Cholestasis',dose:'400–800 IU/day TPGS',detail:'If bile flow significantly obstructed; check levels at 3 months'},{t:'p-maint',tag:'✅ Maintenance',dose:'400 IU/day',detail:'If levels normalised; adjust based on monitoring'}], bullets:['PBC with significant cholestasis: TPGS preferred over standard forms','PSC: bile flow may be intermittent — TPGS remains safer choice','Monitor INR in PBC patients (often on ursodeoxycholic acid — check VitK status too)','If partial bile flow: standard d-alpha-tocopherol may be partially absorbed — trial and check levels'] },
+          moderate: { dosePerKg:null, doseFixed:400, schedule:'Once daily', phases:[{t:'p-maint',tag:'Moderate Cholestasis',dose:'400 IU/day TPGS',detail:'Check serum levels at 3 months; adjust dose'}], bullets:['Mild-moderate PBC: 400 IU/day TPGS; check levels at 3 months','If levels adequate at 3 months, may trial switching to natural d-alpha-tocopherol'] },
+        },
+      },
+      'Neonatal Cholestasis': {
+        neonate: { severe: { dosePerKg:20, doseFixed:null, schedule:'Once daily with feed', phases:[{t:'p-load',tag:'⚡ Neonatal TPGS',dose:'15–25 IU/kg/day',detail:'TPGS oral solution from diagnosis'},{t:'p-warn',tag:'⚠️ Monitor Monthly',dose:'Serum VitE monthly',detail:'Rapidly deteriorating if untreated'}], bullets:['Begin TPGS from diagnosis of neonatal cholestasis — do not delay','Monthly serum alpha-tocopherol in first 6 months','Neurological: check Moro reflex, limb tone; developmental milestones monitoring'] }},
+        paediatric: { severe: { dosePerKg:20, doseFixed:null, schedule:'Once daily', phases:[{t:'p-load',tag:'⚡ TPGS',dose:'15–25 IU/kg/day',detail:'Standard paediatric cholestasis protocol'}], bullets:['Same protocol as biliary atresia/Alagille for older infants'] }},
+      },
+    },
+  },
+
+  oral_standard: {
+    oral: {
+      'CF — Infant (0–12 months)': {
+        paediatric: { mild: { dosePerKg:null, doseFixed:50, schedule:'Once daily with PERT and feed', phases:[{t:'p-maint',tag:'CF Infant',dose:'40–50 IU/day',detail:'Water-miscible drops; with PERT and fat-containing feed'}], bullets:['Water-miscible drops preferred for infants — easier mixing with formula','Always co-administer with PERT — without lipase, fat-soluble vitamins cannot be absorbed','Check alpha-tocopherol / total lipid ratio annually: target >0.8 mg/g'] }},
+        neonate: { mild: { dosePerKg:null, doseFixed:40, schedule:'Once daily with PERT', phases:[{t:'p-maint',tag:'CF Neonate/Infant',dose:'40–50 IU/day',detail:'From diagnosis'}], bullets:['Begin at CF diagnosis; co-administer with PERT from first feed'] }},
+      },
+      'CF — Child (1–8 years)': {
+        paediatric: { mild: { dosePerKg:null, doseFixed:150, schedule:'Once daily with PERT; largest meal', phases:[{t:'p-maint',tag:'CF Child 1–8y',dose:'80–150 IU/day (1–3y); 100–200 IU/day (4–8y)',detail:'Water-miscible chewable or tablet; with PERT'},{t:'p-info',tag:'ℹ️ Monitoring',dose:'Annual serum ratio',detail:'Alpha-tocopherol / total lipids: target >0.8 mg/g'}], bullets:['1–3 years: 80–150 IU/day','4–8 years: 100–200 IU/day','Annual serum alpha-tocopherol interpreted as ratio to total lipids','Administer with PERT and fat-containing meal — essential for absorption'] }},
+      },
+      'CF — Child/Adolescent (9–18 years)': {
+        paediatric: { mild: { dosePerKg:null, doseFixed:300, schedule:'Once daily with PERT; largest meal', phases:[{t:'p-maint',tag:'CF Adolescent',dose:'200–400 IU/day',detail:'d-alpha-tocopherol tablet or capsule; with PERT'},{t:'p-info',tag:'ℹ️ Monitoring',dose:'Annual serum ratio',detail:'Target alpha-tocopherol / lipid >0.8 mg/g'}], bullets:['200–400 IU/day for 9–18 year age group (CFF guidelines)','Annual monitoring essential — absorption varies with pancreatic insufficiency severity','Counsel on importance of taking with PERT every time'] }},
+        adult: { mild: { dosePerKg:null, doseFixed:300, schedule:'Once daily with PERT', phases:[{t:'p-maint',tag:'CF Adolescent (Adult Range)',dose:'200–400 IU/day',detail:'Standard d-alpha-tocopherol'}], bullets:['Same protocol as adult for late adolescents > 16 years'] }},
+      },
+      'CF — Adult': {
+        adult: { mild: { dosePerKg:null, doseFixed:600, schedule:'Once daily or BD with PERT; largest meal', phases:[{t:'p-maint',tag:'CF Adult',dose:'400–800 IU/day',detail:'d-alpha-tocopherol; natural form preferred; with PERT'},{t:'p-info',tag:'ℹ️ Monitoring',dose:'Annual serum + lipid ratio',detail:'Target alpha-tocopherol / total lipids >0.8 mg/g'}], bullets:['400–800 IU/day for CF adults (CFF guidelines)','Natural d-alpha-tocopherol preferred — higher tissue retention','If on warfarin (rare in CF): monitor INR; high-dose VitE potentiates anticoagulation','Annual monitoring: serum alpha-tocopherol, lipid profile, full clinical review'] }},
+      },
+      'Abetalipoproteinemia (Paediatric)': {
+        paediatric: { severe: { dosePerKg:150, doseFixed:null, schedule:'Divided BD–TDS; with each fat-containing meal', phases:[{t:'p-load',tag:'⚡ Abetalipoproteinemia',dose:'100–200 IU/kg/day',detail:'Divided doses; water-miscible natural d-alpha-tocopherol'},{t:'p-warn',tag:'⚠️ Levels Will Remain Low',dose:'Goal: halt progression',detail:'Serum levels stay low despite treatment — normal monitoring thresholds do not apply'}], bullets:['Levels will remain far below normal despite massive doses — do not increase dose based on low levels alone','Goal: prevent neurological progression — even trace serum levels provide some protection','Annual: neurological exam, nerve conduction study, retinal exam (retinitis pigmentosa), echo (cardiomyopathy)','Supplement all fat-soluble vitamins: Vitamin A (water-miscible retinol), D, K — pan-deficiency','Genetic counselling; autosomal recessive; siblings should be screened'] }},
+      },
+      'Abetalipoproteinemia (Adult)': {
+        adult: { severe: { dosePerKg:null, doseFixed:7500, schedule:'Divided TDS; with each meal', phases:[{t:'p-load',tag:'⚡ Abetalipoproteinemia Adult',dose:'5,000–10,000 IU/day',detail:'Divided TDS; water-miscible natural d-alpha-tocopherol'},{t:'p-warn',tag:'⚠️ Monitor INR',dose:'Anticoagulant risk at this dose',detail:'Monitor INR monthly; adjust anticoagulants if present'}], bullets:['Doses of 5,000–10,000 IU/day are standard — serum levels remain low','Monitor INR at these doses — high-dose VitE antagonises Vitamin K clotting factors','Annual retinal examination — retinitis pigmentosa; ophthalmology referral','Supplement Vitamin A, D, and K simultaneously','Neurological: check proprioception, vibration sense, DTRs every 6 months'] }},
+      },
+      'Hypobetalipoproteinemia': {
+        adult: { moderate: { dosePerKg:null, doseFixed:800, schedule:'Once or BD daily', phases:[{t:'p-maint',tag:'Hypobetalipoproteinemia',dose:'400–800 IU/day',detail:'Lower doses than abetalipoproteinemia — some chylomicron function preserved'}], bullets:['Heterozygous hypobetalipoproteinemia: milder form; lower doses adequate','Monitor serum levels; target as close to normal as achievable','Annual neurological assessment'] }},
+      },
+      'Premature — ROP Prophylaxis': {
+        neonate: { mild: { dosePerKg:null, doseFixed:15, schedule:'Once daily oral; with feed', phases:[{t:'p-maint',tag:'NICU — Oral VitE',dose:'5–25 IU/day oral',detail:'Target serum 1–3.5 mg/dL; do not exceed 25 IU/day'},{t:'p-warn',tag:'⚠️ Do Not Exceed 25 IU/day',dose:'Sepsis/NEC risk above this',detail:'High-dose IV avoided in neonates — increased sepsis and NEC risk'}], bullets:['Physiological oral supplementation only — high-dose IV abandoned after trial safety signals','Target serum alpha-tocopherol: 1–3.5 mg/dL','Do NOT exceed 25 IU/day oral in premature neonates','Enteral route only when tolerated; IV only via TPN multivitamin at standard neonatal dose'] }},
+        paediatric: { mild: { dosePerKg:null, doseFixed:15, schedule:'Once daily oral', phases:[{t:'p-maint',tag:'ROP Prophylaxis',dose:'5–25 IU/day oral',detail:'Physiological supplementation; check serum level'}], bullets:['Physiological dose only; monitor serum level; do not exceed 25 IU/day'] }},
+      },
+      'Premature — Haemolytic Anaemia': {
+        neonate: { moderate: { dosePerKg:null, doseFixed:20, schedule:'Once daily oral', phases:[{t:'p-maint',tag:'Haemolytic Anaemia Prevention',dose:'15–25 IU/day oral',detail:'Target serum 1–3.5 mg/dL'},{t:'p-info',tag:'ℹ️ Monitor',dose:'Serum alpha-tocopherol weekly → monthly',detail:'In very premature infants'}], bullets:['Haemolytic anaemia: PUFA peroxidation of erythrocyte membranes — VitE supplementation protective','Monitor reticulocyte count and haemoglobin alongside serum tocopherol','Enteral route once tolerated; IV TPN multivitamin until enteral feeding established'] }},
+      },
+      'VLBW (&lt;1500g)': {
+        neonate: { moderate: { dosePerKg:null, doseFixed:25, schedule:'Once daily oral; start when tolerating enteral feeds', phases:[{t:'p-load',tag:'VLBW Supplementation',dose:'25 IU/day oral',detail:'Maximum oral dose for premature neonates'},{t:'p-warn',tag:'⚠️ IV: TPN Multivitamin Only',dose:'2.8–3.5 IU/kg/day in TPN',detail:'IV only via paediatric TPN multivitamin; never bolus IV in neonates'}], bullets:['VLBW: begin VitE supplementation as soon as enteral feeds started','25 IU/day maximum oral dose — above this, sepsis/NEC risk increases','If on TPN: ensure paediatric multivitamin includes VitE at 2.8–3.5 IU/kg/day','Protect TPN bags from light — alpha-tocopherol is photosensitive'] }},
+      },
+      'TPN-Dependent Premature': {
+        neonate: { moderate: { dosePerKg:3, doseFixed:null, schedule:'Daily in TPN multivitamin', phases:[{t:'p-maint',tag:'TPN VitE',dose:'2.8–3.5 IU/kg/day',detail:'In paediatric TPN multivitamin (Peditrace/Soluvit)'},{t:'p-warn',tag:'⚠️ Protect from Light',dose:'Wrap TPN bag in foil',detail:'VitE degrades in light; opaque tubing recommended'}], bullets:['Standard paediatric TPN multivitamin contains 2.8–3.5 IU/kg/day VitE — adequate','Never administer bolus IV Vitamin E in neonates','Protect TPN bag and lines from light exposure','Transition to oral supplementation when tolerating enteral feeds'] }},
+      },
+      'Adult Non-specific Deficiency': {
+        adult: {
+          severe:   { dosePerKg:null, doseFixed:400, schedule:'Once daily with a fat-containing meal', phases:[{t:'p-load',tag:'⚡ Deficiency Treatment',dose:'200–400 IU/day',detail:'With fat-containing meal; check cause'},{t:'p-maint',tag:'✅ Maintenance',dose:'15 mg (22 IU)/day',detail:'After normalisation; RDA dietary intake'}], bullets:['Always identify and treat the underlying cause of deficiency','Fat-containing meal essential for absorption','Monitor serum alpha-tocopherol at 3 months','If levels fail to normalise: check for unrecognised fat malabsorption (CF, IBD, coeliac)'] },
+          moderate: { dosePerKg:null, doseFixed:200, schedule:'Once daily with meal', phases:[{t:'p-maint',tag:'Moderate Deficiency',dose:'200 IU/day',detail:'With fat; check underlying cause'}], bullets:['Dietary Vitamin E deficiency alone is extremely rare in adults — investigate for malabsorption','Dietary sources: sunflower oil (63 mg/100g), wheat germ oil (149 mg/100g), almonds, sunflower seeds'] },
+        },
+        elderly: { moderate: { dosePerKg:null, doseFixed:200, schedule:'Once daily with meal', phases:[{t:'p-maint',tag:'Elderly Supplementation',dose:'200 IU/day',detail:'With fat-containing meal; monitor INR if on warfarin'}], bullets:['Elderly with fat malabsorption (coeliac, IBD, chronic pancreatitis): supplement and monitor','Monitor INR if on warfarin — even 200 IU/day can have modest anticoagulant potentiation in elderly'] }},
+      },
+      'Malabsorption (Non-cholestatic)': {
+        adult: { moderate: { dosePerKg:null, doseFixed:400, schedule:'Once daily or BD with food and digestive enzymes if applicable', phases:[{t:'p-load',tag:'Malabsorption',dose:'200–400 IU/day',detail:'With fat-containing meal; with PERT if pancreatic insufficiency'},{t:'p-maint',tag:'✅ Monitor and Titrate',dose:'Adjust per serum levels',detail:'Target serum alpha-tocopherol >11.6 µmol/L (>0.5 mg/dL)'}], bullets:['Non-cholestatic malabsorption (coeliac, IBD, chronic pancreatitis, post-gastric surgery): standard oil-based VitE may be adequate','If response inadequate: check serum levels; consider water-miscible form or TPGS','Correct co-existing fat-soluble vitamin deficiencies (A, D, K)'] }},
+        paediatric: { moderate: { dosePerKg:null, doseFixed:100, schedule:'Once daily with food; with PERT if indicated', phases:[{t:'p-maint',tag:'Paediatric Malabsorption',dose:'1–2 IU/kg/day',detail:'With food; adjust to serum levels'}], bullets:['Adjust dose based on serum monitoring','Consider TPGS if response inadequate'] }},
+      },
+      'Adult RDA / Maintenance': {
+        adult:    { mild: { dosePerKg:null, doseFixed:22, schedule:'Daily; in diet or multivitamin', phases:[{t:'p-maint',tag:'Adult RDA',dose:'15 mg (22 IU)/day',detail:'ICMR / IOM; dietary sources preferred'}], bullets:['ICMR / IOM RDA: 15 mg alpha-tocopherol equivalent per day','Dietary sources: sunflower oil, almonds, wheat germ, avocado','Supplementation only if dietary intake clearly inadequate or malabsorption risk'] }},
+        elderly:  { mild: { dosePerKg:null, doseFixed:22, schedule:'Daily; in multivitamin', phases:[{t:'p-maint',tag:'Elderly RDA',dose:'15 mg (22 IU)/day',detail:'RDA; do not exceed 400 IU/day without indication — long-term mortality signal'}], bullets:['Healthy elderly: RDA sufficient; no evidence that higher doses prevent cardiovascular disease','Do not routinely prescribe >400 IU/day without specific indication — SELECT trial / mortality meta-analysis signals'] }},
+      },
+      'Elderly Maintenance': {
+        elderly: { mild: { dosePerKg:null, doseFixed:100, schedule:'Daily with meal', phases:[{t:'p-maint',tag:'Elderly Maintenance',dose:'100–200 IU/day',detail:'With fat-containing meal; avoid >400 IU/day'}], bullets:['100–200 IU/day reasonable for elderly with suboptimal diet or mild malabsorption','Monitor INR if on warfarin — even moderate doses can have interaction at elderly renal clearance','Avoid >400 IU/day in elderly without specific clinical indication — mortality signal at high doses'] }},
+      },
+    },
+  },
+
+  oral_synthetic: {
+    oral: {
+      /* Synthetic dl-alpha-tocopherol — same clinical use, lower bioavailability */
+      'CF — Adult': {
+        adult: { mild: { dosePerKg:null, doseFixed:800, schedule:'Once daily or BD with PERT; largest meal', phases:[{t:'p-maint',tag:'CF Adult — Synthetic Form',dose:'400–800 IU/day (synthetic dl-alpha)',detail:'Note: synthetic form has ~33% lower activity per mg vs natural'},{t:'p-info',tag:'ℹ️ Switch to Natural if Available',dose:'Natural d-alpha preferred',detail:'If natural d-alpha available, preferred for clinical use'}], bullets:['Synthetic dl-alpha-tocopherol: 1 IU = 0.91 mg (vs natural 0.67 mg per IU)','At same IU dose: synthetic provides ~33% less biological activity than natural form','Switch to natural d-alpha-tocopherol if available — superior tissue retention','Annual serum alpha-tocopherol / lipid ratio monitoring; target >0.8 mg/g'] }},
+      },
+      'Adult Non-specific Deficiency': {
+        adult: { moderate: { dosePerKg:null, doseFixed:400, schedule:'Once daily with fat-containing meal', phases:[{t:'p-maint',tag:'Deficiency — Synthetic Form',dose:'400 IU/day dl-alpha-tocopherol',detail:'Standard OTC synthetic form'},{t:'p-info',tag:'ℹ️ Natural Preferred',dose:'Switch if available',detail:'Natural d-alpha has better tissue retention'}], bullets:['Synthetic form: widely available OTC in India at lower cost','At therapeutic doses, consider switching to natural d-alpha for better clinical outcomes','Monitor serum levels at 3 months — may need higher synthetic dose for equivalent clinical effect'] }},
+      },
+      'Adult RDA / Maintenance': {
+        adult: { mild: { dosePerKg:null, doseFixed:22, schedule:'Daily in multivitamin', phases:[{t:'p-maint',tag:'RDA — Synthetic',dose:'15 mg (22 IU)/day',detail:'In multivitamin as dl-alpha-tocopherol'}], bullets:['Most Indian OTC multivitamins contain synthetic dl-alpha-tocopherol','For RDA purposes (general nutritional maintenance), the synthetic form is adequate','Only for specific therapeutic indications should natural form be preferentially sourced'] }},
+      },
+      'Malabsorption (Non-cholestatic)': {
+        adult: { moderate: { dosePerKg:null, doseFixed:400, schedule:'Once daily with food', phases:[{t:'p-maint',tag:'Malabsorption — Synthetic',dose:'400 IU/day dl-alpha',detail:'Check response; increase if levels remain low'},{t:'p-info',tag:'ℹ️ Consider Natural or TPGS',dose:'If inadequate response at 3 months',detail:'Switch formulation if serum levels remain deficient'}], bullets:['Synthetic form adequate for mild malabsorption with partial fat absorption','If serum levels remain low at 3 months: switch to natural d-alpha or TPGS','Avoid in complete bile duct obstruction — use TPGS form'] }},
+      },
+    },
+  },
+};
+
+/* ══════════════════════════════════════════════════════════
+   STATE
+══════════════════════════════════════════════════════════ */
+const S = {
+  ctx:        'cholestasis',
+  form:       'tpgs',
+  route:      'oral',
+  indication: 'Biliary Atresia (Paediatric)',
+  age:        'paediatric',
+  severity:   'severe',
+  weight:     0,
+  unitPref:   'both',
+};
+
+/* ══════════════════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
+  renderRoutes();
+  renderIndications();
+
+  document.getElementById('ctxGrid').addEventListener('click', e => {
+    const card = e.target.closest('.ctx-card');
+    if (!card) return;
+    selectCtx(card.dataset.ctx, card);
+  });
+
+  document.querySelectorAll('.form-tab').forEach(t => t.addEventListener('click', () => {
+    document.querySelectorAll('.form-tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    S.form = t.dataset.form;
+    renderRoutes();
+    renderIndications();
+    hideResult();
+  }));
+
+  document.getElementById('ageGroup').addEventListener('change', e => { S.age = e.target.value; });
+  document.getElementById('severity').addEventListener('change', e => { S.severity = e.target.value; });
+  document.getElementById('unitPref').addEventListener('change', e => { S.unitPref = e.target.value; });
+  document.getElementById('calcBtn').addEventListener('click', calculate);
+
+  document.getElementById('faqList').addEventListener('click', e => {
+    const q = e.target.closest('.faq-q');
+    if (!q) return;
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+/* ══════════════════════════════════════════════════════════
+   RENDER
+══════════════════════════════════════════════════════════ */
+function selectCtx(ctx, el) {
+  S.ctx = ctx;
+  document.querySelectorAll('.ctx-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  /* Smart default form per context */
+  const defaultForm = (ctx === 'cholestasis' || ctx === 'nicu') ? 'tpgs' : 'oral_standard';
+  S.form = defaultForm;
+  document.querySelectorAll('.form-tab').forEach(t => t.classList.toggle('active', t.dataset.form === defaultForm));
+  renderRoutes();
+  renderIndications();
+  hideResult();
+}
+
+function renderRoutes() {
+  const routes = ROUTES_MAP[S.form] || [];
+  S.route = routes[0]?.id || 'oral';
+  document.getElementById('routeRow').innerHTML = routes.map((r, i) => `
+    <div class="route-card ${i === 0 ? 'active' : ''}" data-route="${r.id}">
+      <span class="ri">${r.icon}</span>
+      <div><div class="rl">${r.label}</div><div class="rs">${r.sub}</div></div>
+    </div>
+  `).join('');
+  const rr = document.getElementById('routeRow');
+  rr.onclick = e => {
+    const card = e.target.closest('.route-card');
+    if (!card) return;
+    rr.querySelectorAll('.route-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    S.route = card.dataset.route;
+    hideResult();
+  };
+}
+
+function renderIndications() {
+  const inds = INDICATIONS_MAP[S.ctx] || [];
+  S.indication = inds[0] || '';
+  document.getElementById('indGrid').innerHTML = inds.map((ind, i) => {
+    const urgent = ind.toLowerCase().includes('atresia') || ind.toLowerCase().includes('abetal') || ind.toLowerCase().includes('vlbw');
+    return `<div class="ind-chip ${urgent ? 'urgent' : ''} ${i === 0 ? 'active' : ''}" data-ind="${escHtml(ind)}">${escHtml(ind)}</div>`;
+  }).join('');
+  const ig = document.getElementById('indGrid');
+  ig.onclick = e => {
+    const chip = e.target.closest('.ind-chip');
+    if (!chip) return;
+    ig.querySelectorAll('.ind-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    S.indication = chip.dataset.ind;
+    hideResult();
+  };
+}
+
+function hideResult() { document.getElementById('resultWrap').classList.remove('show'); }
+
+/* ══════════════════════════════════════════════════════════
+   DOSE LOOKUP
+══════════════════════════════════════════════════════════ */
+function getDose() {
+  const fd = DOSES[S.form];
+  if (!fd) return null;
+  const rd = fd[S.route];
+  if (!rd) return null;
+  let indData = rd[S.indication] || rd[Object.keys(rd)[0]];
+  if (!indData) return null;
+  let ageData = indData[S.age] || indData['adult'] || indData['paediatric'] || indData[Object.keys(indData)[0]];
+  if (!ageData) return null;
+  const sevOrder = ['severe','moderate','mild'];
+  if (ageData[S.severity]) return ageData[S.severity];
+  for (const sev of sevOrder) {
+    if (ageData[sev]) return ageData[sev];
+  }
+  if (typeof ageData.schedule === 'string') return ageData;
+  return null;
+}
+
+/* ══════════════════════════════════════════════════════════
+   IU ↔ mg CONVERSION HELPERS
+══════════════════════════════════════════════════════════ */
+function iuToMg(iu, form) {
+  /* natural: 1 IU = 0.67 mg; synthetic: 1 IU = 0.91 mg; TPGS treated as natural */
+  const factor = (form === 'oral_synthetic') ? 0.91 : 0.67;
+  return Math.round(iu * factor * 10) / 10;
+}
+
+/* ══════════════════════════════════════════════════════════
+   CALCULATE
+══════════════════════════════════════════════════════════ */
+function calculate() {
+  S.age      = document.getElementById('ageGroup').value;
+  S.severity = document.getElementById('severity').value;
+  S.unitPref = document.getElementById('unitPref').value;
+  S.weight   = parseFloat(document.getElementById('weightInput').value) || 0;
+
+  const data = getDose();
+  const noDataEl = document.getElementById('noDataNotice');
+  const rw = document.getElementById('resultWrap');
+
+  if (!data) {
+    noDataEl.style.display = 'block';
+    noDataEl.innerHTML = `
+      <strong>Dose data not available for this combination.</strong><br>
+      The selected formulation (<em>${fLabel()}</em>) and indication (<em>${escHtml(S.indication)}</em>) may not be represented in the built-in dataset.
+      For cholestasis: <strong>TPGS 15–25 IU/kg/day</strong>. For CF adults: <strong>400–800 IU/day natural d-alpha-tocopherol with PERT</strong>.
+    `;
+    document.getElementById('resDose').textContent = 'See note below';
+    document.getElementById('resLabel').textContent = fLabel();
+    document.getElementById('resSched').textContent = '';
+    document.getElementById('resNotes').textContent = `${S.indication} · ${S.age} · ${S.severity}`;
+    document.getElementById('phaseGrid').innerHTML = '';
+    document.getElementById('phaseGrid').style.display = 'none';
+    document.getElementById('bulletsBox').style.display = 'none';
+    document.getElementById('doseBoth').innerHTML = '';
+    rw.classList.add('show');
+    rw.scrollIntoView({ behavior:'smooth', block:'start' });
+    return;
+  }
+
+  noDataEl.style.display = 'none';
+
+  /* Compute actual IU dose */
+  let computedIU = data.doseFixed;
+  let isWeightBased = false;
+  if (data.dosePerKg && S.weight > 0) {
+    computedIU = Math.round(data.dosePerKg * S.weight);
+    isWeightBased = true;
+  } else if (data.dosePerKg && S.weight <= 0) {
+    /* Weight needed but not entered — show range */
+    computedIU = null;
+  }
+
+  const computedMg = computedIU ? iuToMg(computedIU, S.form) : null;
+  const weightNote = isWeightBased ? ` (${S.weight} kg × ${data.dosePerKg} IU/kg)` : '';
+
+  /* Primary dose display */
+  let primaryDoseStr;
+  if (computedIU) {
+    if (S.unitPref === 'iu') primaryDoseStr = `${computedIU} IU/day${weightNote}`;
+    else if (S.unitPref === 'mg') primaryDoseStr = `${computedMg} mg/day${weightNote}`;
+    else primaryDoseStr = `${computedIU} IU/day${weightNote}`;
+  } else if (data.dosePerKg) {
+    primaryDoseStr = `${data.dosePerKg} IU/kg/day — enter weight`;
+  } else {
+    primaryDoseStr = data.dose || '—';
+  }
+
+  document.getElementById('resLabel').textContent = fLabel() + ' — ' + rLabel();
+  document.getElementById('resDose').textContent  = primaryDoseStr;
+  document.getElementById('resSched').textContent = data.schedule || '';
+  document.getElementById('resNotes').textContent = `${S.indication} · ${S.age} · ${S.severity}`;
+
+  /* Dual-unit cards */
+  const db = document.getElementById('doseBoth');
+  if (computedIU && S.unitPref === 'both') {
+    db.innerHTML = `
+      <div class="dose-unit-card du-iu">
+        <div class="du-tag">In IU</div>
+        <div class="du-val">${computedIU} IU/day</div>
+        <div class="du-note">${isWeightBased ? `${S.weight} kg × ${data.dosePerKg} IU/kg` : fLabel()}</div>
+      </div>
+      <div class="dose-unit-card du-mg">
+        <div class="du-tag">In mg alpha-tocopherol</div>
+        <div class="du-val">${computedMg} mg/day</div>
+        <div class="du-note">${S.form === 'oral_synthetic' ? '× 0.91 (synthetic conversion)' : '× 0.67 (natural conversion)'}</div>
+      </div>
+    `;
+  } else {
+    db.innerHTML = '';
+  }
+
+  /* Phases */
+  const pg = document.getElementById('phaseGrid');
+  if (data.phases && data.phases.length) {
+    pg.innerHTML = data.phases.map(p => `
+      <div class="phase-card ${p.t}">
+        <div class="ph-tag">${p.tag}</div>
+        <div class="ph-dose">${p.dose}</div>
+        <div class="ph-detail">${p.detail}</div>
+      </div>
+    `).join('');
+    pg.style.display = 'grid';
+  } else {
+    pg.innerHTML = '';
+    pg.style.display = 'none';
+  }
+
+  /* Bullets */
+  const bb = document.getElementById('bulletsBox');
+  const bl = document.getElementById('bulletList');
+  if (data.bullets && data.bullets.length) {
+    bl.innerHTML = data.bullets.map(b => `<li>${b}</li>`).join('');
+    bb.style.display = 'block';
+  } else {
+    bb.style.display = 'none';
+  }
+
+  /* WhatsApp */
+  const msgParts = [
+    `*Vitamin E (Tocopherol) Dose — ${fLabel()} (${rLabel()})*`,
+    `Context: ${S.indication} | Age: ${S.age} | Severity: ${S.severity}${S.weight ? ` | Weight: ${S.weight} kg` : ''}`,
+    computedIU ? `Dose: ${computedIU} IU/day (${computedMg} mg/day)` : `Dose: ${data.dosePerKg} IU/kg/day`,
+    `Schedule: ${data.schedule}`,
+  ];
+  if (data.bullets && data.bullets.length) {
+    msgParts.push('\nClinical notes:\n\u2022 ' + data.bullets.join('\n\u2022 '));
+  }
+  msgParts.push('\n_From: RxMedCalc — rxmedcalc.com_');
+  document.getElementById('waLink').href = 'https://wa.me/?text=' + encodeURIComponent(msgParts.filter(Boolean).join('\n'));
+
+  rw.classList.add('show');
+  rw.scrollIntoView({ behavior:'smooth', block:'start' });
+
+  if (typeof umami !== 'undefined') {
+    umami.track('calc_result', { tool:'vitamin-e', form:S.form, route:S.route, indication:S.indication });
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════════════════════════ */
+const FORM_LABELS = { tpgs:'TPGS (Water-Soluble)', oral_standard:'d-alpha-tocopherol (Natural)', oral_synthetic:'dl-alpha-tocopherol (Synthetic)' };
+function fLabel() { return FORM_LABELS[S.form] || S.form; }
+function rLabel() { return (ROUTES_MAP[S.form]?.find(r => r.id === S.route) || {}).label || S.route; }
+function escHtml(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 </script>
-
-<script src="/assets/shared-nav.js"></script>
+<script src="/assets/shared-nav.js"></script>  
 </body>
 </html>
