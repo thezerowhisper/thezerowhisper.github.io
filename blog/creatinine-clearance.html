@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creatinine Clearance & Cockcroft-Gault: Drug Dosing Guide | RxMedCalc</title>
+  <meta name="description" content="A complete clinical guide to creatinine clearance using the Cockcroft-Gault equation — including drug dosing thresholds, CrCl vs eGFR, IBW in obesity, and worked examples." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand:       #1a5c96;
+      --brand-light: #e8f2fb;
+      --accent:      #d64f12;
+      --text:        #1c1c1e;
+      --muted:       #5a5a6a;
+      --border:      #dde3ea;
+      --bg:          #f7f9fc;
+      --white:       #ffffff;
+      --max:         740px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--brand);
+      color: #fff;
+      padding: 14px 24px;
+      font-size: 15px;
+      letter-spacing: .02em;
+    }
+    header a { color: #fff; text-decoration: none; font-weight: 600; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0d3d6b 0%, #1a5c96 60%, #1e7ecf 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero .tag {
+      display: inline-block;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.25;
+      max-width: 680px;
+      margin: 0 auto 18px;
+    }
+    .hero .subtitle {
+      font-size: 16px;
+      opacity: .88;
+      max-width: 560px;
+      margin: 0 auto 28px;
+    }
+    .hero .meta {
+      font-size: 13px;
+      opacity: .7;
+      font-style: italic;
+    }
+
+    /* ── CONTENT WRAPPER ── */
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin: 2.6rem 0 .8rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--brand-light);
+    }
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.8rem 0 .5rem;
+    }
+    p { margin-bottom: 1.1rem; }
+    strong { font-weight: 600; color: var(--text); }
+    em { font-style: italic; color: var(--muted); }
+    a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+
+    /* ── CALLOUT BOXES ── */
+    .callout {
+      border-left: 4px solid var(--brand);
+      background: var(--brand-light);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 1.6rem 0;
+      font-size: 15.5px;
+    }
+    .callout.warning {
+      border-color: #c0392b;
+      background: #fdf0ee;
+    }
+    .callout.tip {
+      border-color: #1e8c4a;
+      background: #edf7f1;
+    }
+    .callout p { margin: 0; }
+
+    /* ── FORMULA BOX ── */
+    .formula-box {
+      background: #0d3d6b;
+      color: #e8f4ff;
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin: 1.6rem 0;
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .formula-box .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      opacity: .65;
+      margin-bottom: 8px;
+    }
+
+    /* ── TABLES ── */
+    .table-wrap { overflow-x: auto; margin: 1.4rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    thead tr { background: var(--brand); color: #fff; }
+    thead th { padding: 10px 14px; text-align: left; font-weight: 600; }
+    tbody tr:nth-child(even) { background: var(--brand-light); }
+    tbody tr:nth-child(odd)  { background: var(--white); }
+    td { padding: 9px 14px; border-bottom: 1px solid var(--border); }
+
+    /* ── WORKED EXAMPLE ── */
+    .example {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin: 1.6rem 0;
+    }
+    .example .ex-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .example p { margin-bottom: .5rem; }
+
+    /* ── DRUG CARDS ── */
+    .drug-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 1.4rem 0;
+    }
+    .drug-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--brand);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+    .drug-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--brand);
+    }
+    .drug-card p { font-size: 14px; margin: 0; color: var(--muted); }
+
+    /* ── TAKEAWAYS ── */
+    .takeaways {
+      background: var(--brand);
+      color: #fff;
+      border-radius: 12px;
+      padding: 26px 28px;
+      margin: 2.4rem 0;
+    }
+    .takeaways h2 {
+      font-family: 'Lora', serif;
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.3);
+      margin-top: 0;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      font-size: 1.25rem;
+    }
+    .takeaways ul { padding-left: 20px; }
+    .takeaways li { margin-bottom: 8px; font-size: 15.5px; line-height: 1.6; }
+
+    /* ── REFERENCES ── */
+    .references {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 2rem;
+    }
+    .references h2 { font-size: 1.1rem; margin-top: 0; }
+    .references ol { padding-left: 20px; font-size: 14px; color: var(--muted); }
+    .references li { margin-bottom: 6px; line-height: 1.55; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      margin-top: 2.4rem;
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 36px 16px 32px; }
+      .wrap { padding: 32px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; Articles &nbsp;›&nbsp; Creatinine Clearance
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="tag">Renal Pharmacology</div>
+  <h1>Creatinine Clearance &amp; the Cockcroft-Gault Equation</h1>
+  <p class="subtitle">A complete guide to calculating CrCl for drug dosing — including worked examples, IBW in obesity, CrCl vs eGFR, and high-risk drug thresholds.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on FDA, EMA &amp; CKD-EPI Guidelines</p>
+</div>
+
+<!-- BODY -->
+<div class="wrap">
+
+  <p>When a patient has kidney disease, giving them the wrong drug dose can be dangerous — sometimes fatal. Drugs cleared by the kidneys accumulate when kidney function is impaired, leading to toxicity. Give too little and the treatment fails. Give too much and you risk poisoning the patient.</p>
+  <p>This is why <strong>creatinine clearance (CrCl)</strong> — estimated using the <strong>Cockcroft-Gault equation</strong> — is one of the most practically important calculations in clinical medicine. It is used every day by doctors, pharmacists, and nurses to adjust doses of antibiotics, anticoagulants, diabetes medications, and chemotherapy drugs.</p>
+
+  <!-- ── SECTION 1 ── -->
+  <h2>What Is Creatinine — and Why Does It Matter?</h2>
+  <p><strong>Creatinine</strong> is a waste product produced by the breakdown of <em>creatine phosphate</em> in muscle tissue. It is produced at a fairly constant rate depending on a person's muscle mass, and is almost entirely excreted by the kidneys through filtration.</p>
+  <p>Because the kidneys are the primary route of creatinine elimination, <strong>serum creatinine rises when the kidneys are not working well.</strong> A healthy kidney keeps serum creatinine within the normal range (approximately <em>0.6–1.2 mg/dL</em> in adults, though this varies by age, sex, and muscle mass).</p>
+  <p>However, serum creatinine alone is a crude marker. A muscular young man and a frail elderly woman may have the same serum creatinine of 1.0 mg/dL — but very different actual kidney function. This is why we calculate creatinine clearance, which accounts for age, weight, and sex to give a more accurate picture.</p>
+
+  <!-- ── SECTION 2 ── -->
+  <h2>What Is Creatinine Clearance?</h2>
+  <p><strong>Creatinine clearance (CrCl)</strong> is an estimate of the <em>glomerular filtration rate (GFR)</em> — the volume of blood the kidneys filter per minute, expressed in <strong>mL/min</strong>. A higher CrCl means better kidney function. Normal CrCl in a healthy adult is approximately <strong>80–120 mL/min</strong>, declining naturally with age.</p>
+
+  <!-- ── SECTION 3 ── -->
+  <h2>The Cockcroft-Gault Equation</h2>
+  <p>Developed in <strong>1976</strong> by Donald Cockcroft and Henry Gault, this formula remains the <strong>gold standard for renal drug dosing</strong> and is specified in FDA and EMA drug labels worldwide.</p>
+
+  <div class="formula-box">
+    <div class="label">Cockcroft-Gault Formula</div>
+    CrCl (mL/min) = <strong>[ (140 − Age) × Weight (kg) × (0.85 if female) ]</strong><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ÷ <strong>[ 72 × Serum Creatinine (mg/dL) ]</strong><br><br>
+    <span style="font-size:.9rem; opacity:.8;">If creatinine in µmol/L: divide denominator by <strong>0.815 × SCr (µmol/L)</strong> instead</span>
+  </div>
+
+  <h3>Breaking Down Each Variable</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Variable</th><th>What It Represents</th><th>Clinical Note</th></tr></thead>
+      <tbody>
+        <tr><td><strong>140 − Age</strong></td><td>Kidney function declines with age</td><td>An 80-year-old with "normal" creatinine may have severely reduced CrCl</td></tr>
+        <tr><td><strong>Weight (kg)</strong></td><td>Proxy for muscle mass</td><td>Use Ideal Body Weight (IBW) in obese patients — see below</td></tr>
+        <tr><td><strong>0.85 (female)</strong></td><td>Women have less muscle mass on average</td><td>Always apply this correction for female patients</td></tr>
+        <tr><td><strong>Serum Creatinine</strong></td><td>Measured from blood test</td><td>Must be a stable, non-acute value for accuracy</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p>💊 Use the <a href="https://rxmedcalc.com/medical-calculators/creatinine-clearance" target="_blank"><strong>RxMedCalc Creatinine Clearance Calculator</strong></a> to calculate CrCl instantly — supports both mg/dL and µmol/L inputs, with IBW guidance for obese patients.</p>
+  </div>
+
+  <!-- ── WORKED EXAMPLE ── -->
+  <h2>Worked Example</h2>
+  <div class="example">
+    <div class="ex-label">📋 Clinical Scenario</div>
+    <p><strong>Patient:</strong> 68-year-old woman, weight 62 kg, serum creatinine <strong>1.4 mg/dL</strong></p>
+    <p><strong>Numerator:</strong> (140 − 68) × 62 × 0.85 = 72 × 62 × 0.85 = <strong>3,794.4</strong></p>
+    <p><strong>Denominator:</strong> 72 × 1.4 = <strong>100.8</strong></p>
+    <p><strong>CrCl = 3,794.4 ÷ 100.8 = <span style="color:#1a5c96">37.6 mL/min</span></strong></p>
+    <p style="margin-top:10px; font-size:14.5px; color:#5a5a6a;"><em>A CrCl of 37.6 mL/min indicates <strong>moderate-to-severe kidney impairment (CKD Stage 3b)</strong>. This patient requires dose reduction for many drugs. Looking only at SCr 1.4 mg/dL might suggest only mild impairment — a potentially dangerous underestimate.</em></p>
+  </div>
+
+  <!-- ── WEIGHT ── -->
+  <h2>The Weight Problem: When to Use Ideal Body Weight</h2>
+  <p>In obese patients, a large proportion of excess weight is <strong>fat, not muscle.</strong> Fat produces very little creatinine. Using actual body weight (ABW) in an obese patient will <em>overestimate</em> kidney function and risk drug overdosing.</p>
+
+  <h3>Standard Approach for Obese Patients (BMI &gt; 30)</h3>
+  <p><strong>Step 1 — Calculate Ideal Body Weight (IBW):</strong></p>
+  <ul style="padding-left:20px; margin-bottom:1rem;">
+    <li>Males: IBW = 50 + 2.3 × (Height in inches − 60)</li>
+    <li>Females: IBW = 45.5 + 2.3 × (Height in inches − 60)</li>
+  </ul>
+  <p><strong>Step 2 — Calculate Adjusted Body Weight (AdjBW):</strong><br>
+  AdjBW = IBW + 0.4 × (ABW − IBW)</p>
+  <p><strong>Step 3 — Use AdjBW</strong> in the Cockcroft-Gault equation when ABW &gt; 30% above IBW.</p>
+
+  <div class="callout tip">
+    <p>⚖️ Use the <a href="https://rxmedcalc.com/medical-calculators/ibw-calculator" target="_blank"><strong>RxMedCalc IBW Calculator</strong></a> to calculate Ideal Body Weight before running Cockcroft-Gault.</p>
+  </div>
+
+  <!-- ── CrCl vs eGFR ── -->
+  <h2>CrCl vs. eGFR — Which One to Use and When</h2>
+  <p>This is one of the most common sources of confusion in clinical practice. Both estimate kidney function but <strong>are not interchangeable</strong> — they serve different purposes.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Feature</th><th>CrCl (Cockcroft-Gault)</th><th>eGFR (CKD-EPI 2021)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Used for</strong></td><td>Drug dose adjustments</td><td>Diagnosing &amp; staging CKD</td></tr>
+        <tr><td><strong>Why</strong></td><td>FDA/EMA drug labels specify CrCl</td><td>Standardised, BSA-adjusted for population use</td></tr>
+        <tr><td><strong>Examples</strong></td><td>Vancomycin, DOACs, Metformin, Chemotherapy</td><td>CKD staging G1–G5, nephrology referral</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>The practical rule:</strong> Adjusting a drug dose? → Use <strong>CrCl (Cockcroft-Gault).</strong> Staging kidney disease? → Use <strong>eGFR (CKD-EPI).</strong> Using eGFR for drug dosing when the guideline specifies CrCl can lead to incorrect dose adjustments.</p>
+  </div>
+
+  <!-- ── THRESHOLDS ── -->
+  <h2>CrCl Thresholds — What the Numbers Mean</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>CrCl (mL/min)</th><th>Kidney Function</th><th>CKD Stage Equivalent</th></tr></thead>
+      <tbody>
+        <tr><td>&gt; 90</td><td>Normal or high</td><td>G1</td></tr>
+        <tr><td>60 – 89</td><td>Mildly reduced</td><td>G2</td></tr>
+        <tr><td>45 – 59</td><td>Mildly-moderately reduced</td><td>G3a</td></tr>
+        <tr><td>30 – 44</td><td>Moderately-severely reduced</td><td>G3b</td></tr>
+        <tr><td>15 – 29</td><td>Severely reduced</td><td>G4</td></tr>
+        <tr><td>&lt; 15</td><td>Kidney failure</td><td>G5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── HIGH RISK DRUGS ── -->
+  <h2>High-Risk Drugs Requiring CrCl-Based Dose Adjustment</h2>
+
+  <h3>Antibiotics</h3>
+  <div class="drug-grid">
+    <div class="drug-card">
+      <h4>Vancomycin</h4>
+      <p>Almost entirely renally cleared. Reduced CrCl causes toxic accumulation → nephrotoxicity &amp; ototoxicity. Requires AUC-guided dosing + therapeutic drug monitoring (TDM).</p>
+    </div>
+    <div class="drug-card">
+      <h4>Aminoglycosides</h4>
+      <p>Narrow therapeutic index. Nephrotoxic and ototoxic. Extended-interval dosing required based on CrCl. Mandatory drug level monitoring.</p>
+    </div>
+    <div class="drug-card">
+      <h4>Beta-Lactams</h4>
+      <p>Piperacillin-Tazobactam, Meropenem require dose reduction when CrCl &lt; 40–50 mL/min. Extended infusions may optimise target attainment.</p>
+    </div>
+    <div class="drug-card">
+      <h4>Nitrofurantoin</h4>
+      <p><strong>Do not use</strong> when CrCl &lt; 30 mL/min — inadequate urinary concentrations and systemic toxic metabolite accumulation.</p>
+    </div>
+  </div>
+
+  <h3>Anticoagulants (DOACs)</h3>
+  <div class="drug-grid">
+    <div class="drug-card">
+      <h4>Apixaban (Eliquis)</h4>
+      <p>Dose reduction criteria include SCr ≥ 1.5 mg/dL. <strong>Contraindicated</strong> when CrCl &lt; 15 mL/min.</p>
+    </div>
+    <div class="drug-card">
+      <h4>Rivaroxaban (Xarelto)</h4>
+      <p>Dose reduction for CrCl 15–50 mL/min (indication-dependent). Avoid when CrCl &lt; 15 mL/min.</p>
+    </div>
+    <div class="drug-card">
+      <h4>Dabigatran (Pradaxa)</h4>
+      <p>~80% renally excreted. <strong>Contraindicated when CrCl &lt; 30 mL/min</strong> — strongest renal restriction among DOACs.</p>
+    </div>
+  </div>
+
+  <h3>Diabetes Medications</h3>
+  <div class="drug-grid">
+    <div class="drug-card">
+      <h4>Metformin</h4>
+      <p>Risk of lactic acidosis in severe impairment.<br>
+      CrCl 45–60: use with caution<br>
+      CrCl 30–44: reduce dose, monitor<br>
+      CrCl &lt; 30: <strong>Contraindicated</strong></p>
+    </div>
+    <div class="drug-card">
+      <h4>SGLT2 Inhibitors</h4>
+      <p>Lose glycaemic efficacy below CrCl 45 mL/min. Not recommended for glucose lowering below this threshold (some retain cardiorenal benefits).</p>
+    </div>
+  </div>
+
+  <h3>Other High-Risk Drugs</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Drug</th><th>Concern</th><th>Key Threshold</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Digoxin</strong></td><td>Narrow therapeutic index; renally cleared</td><td>Dose reduce as CrCl falls</td></tr>
+        <tr><td><strong>Lithium</strong></td><td>Almost entirely renally excreted</td><td>Close monitoring; dose reduce in impairment</td></tr>
+        <tr><td><strong>Acyclovir/Valacyclovir</strong></td><td>Crystalline nephropathy at high doses</td><td>Reduce dose when CrCl &lt; 50 mL/min</td></tr>
+        <tr><td><strong>Allopurinol</strong></td><td>Risk of severe cutaneous reactions (SJS)</td><td>Dose must be reduced based on CrCl</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── LIMITATIONS ── -->
+  <h2>Limitations of the Cockcroft-Gault Equation</h2>
+  <p>Cockcroft-Gault is a useful <em>estimate</em> — not a perfect measurement. Key limitations:</p>
+  <ul style="padding-left:20px; margin-bottom:1rem; line-height:2;">
+    <li><strong>Derived from a male-only population</strong> — the 0.85 female correction is an approximation</li>
+    <li><strong>Inaccurate at extremes of body weight</strong> — use IBW/AdjBW in obesity; cachexia can underestimate CrCl</li>
+    <li><strong>Assumes stable renal function</strong> — unreliable in acute kidney injury (AKI)</li>
+    <li><strong>Less accurate in the very elderly</strong> — low muscle mass may mask significant impairment</li>
+    <li><strong>Does not account for race</strong> — generally considered an advantage over older race-adjusted equations</li>
+  </ul>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>In Acute Kidney Injury (AKI):</strong> Creatinine is rapidly rising — do not trust a single value. Use the <em>highest recent creatinine</em> for drug dosing. Consider empirical dose reduction and involve pharmacy or nephrology for high-risk drugs.</p>
+  </div>
+
+  <!-- ── KEY TAKEAWAYS ── -->
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Cockcroft-Gault is the standard method for <strong>renal drug dose adjustments</strong> — not eGFR</li>
+      <li>The formula accounts for <strong>age, weight, sex, and serum creatinine</strong></li>
+      <li>In <strong>obese patients</strong>, use Ideal Body Weight or Adjusted Body Weight — not actual weight</li>
+      <li><strong>CrCl = drug dosing; eGFR = CKD staging</strong> — do not use them interchangeably</li>
+      <li>High-risk drugs requiring CrCl adjustment include <strong>vancomycin, aminoglycosides, DOACs, metformin</strong>, and many more</li>
+      <li>In <strong>AKI</strong>, use the worst recent creatinine and apply conservative clinical caution</li>
+    </ul>
+  </div>
+
+  <!-- ── REFERENCES ── -->
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Cockcroft DW, Gault MH. <em>Prediction of creatinine clearance from serum creatinine.</em> Nephron. 1976;16(1):31-41.</li>
+      <li>Inker LA et al. <em>New Creatinine- and Cystatin C–Based Equations to Estimate GFR without Race — CKD-EPI 2021.</em> N Engl J Med. 2021.</li>
+      <li>US Food and Drug Administration (FDA). <em>Pharmacokinetics in Patients with Impaired Renal Function.</em> Guidance for Industry, 2010.</li>
+      <li>European Medicines Agency (EMA). <em>Guideline on the evaluation of the pharmacokinetics of medicinal products in patients with decreased renal function.</em> 2016.</li>
+      <li>Levey AS et al. <em>A new equation to estimate glomerular filtration rate.</em> Ann Intern Med. 2009.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is written for educational purposes and is based on internationally recognised clinical guidelines. It is not a substitute for professional medical advice. Always consult the drug's prescribing information and a qualified pharmacist or physician for individual patient dosing decisions.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+
+</div><!-- /wrap -->
+</body>
+</html>
