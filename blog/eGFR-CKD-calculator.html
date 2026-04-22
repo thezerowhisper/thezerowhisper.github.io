@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eGFR & CKD Staging: Complete Guide to Kidney Function | RxMedCalc</title>
+  <meta name="description" content="A complete guide to eGFR — what it is, how it's calculated using CKD-EPI 2021, how to stage chronic kidney disease, and what each CKD stage means for patients and clinicians." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand:       #5b3d8a;
+      --brand-dark:  #36245a;
+      --brand-light: #f0ebfb;
+      --accent:      #c0392b;
+      --teal:        #0e7c74;
+      --text:        #1c1c1e;
+      --muted:       #5a5a6a;
+      --border:      #ddd5f0;
+      --bg:          #f8f5fd;
+      --white:       #ffffff;
+      --max:         740px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.8; color: var(--text); background: var(--bg); }
+
+    header { background: var(--brand-dark); color: #fff; padding: 14px 24px; font-size: 15px; }
+    header a { color: #fff; text-decoration: none; font-weight: 600; }
+
+    .hero {
+      background: linear-gradient(135deg, #36245a 0%, #5b3d8a 55%, #7b56b5 100%);
+      color: #fff; padding: 56px 24px 48px; text-align: center;
+    }
+    .hero .tag { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35); border-radius: 20px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 4px 14px; margin-bottom: 20px; }
+    .hero h1 { font-family: 'Lora', serif; font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 700; line-height: 1.25; max-width: 680px; margin: 0 auto 18px; }
+    .hero .subtitle { font-size: 16px; opacity: .88; max-width: 560px; margin: 0 auto 28px; }
+    .hero .meta { font-size: 13px; opacity: .7; font-style: italic; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 48px 24px 64px; }
+
+    h2 { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: var(--brand); margin: 2.6rem 0 .8rem; padding-bottom: .4rem; border-bottom: 2px solid var(--brand-light); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 1.08rem; font-weight: 600; color: var(--text); margin: 1.8rem 0 .5rem; }
+    p { margin-bottom: 1.1rem; }
+    strong { font-weight: 600; }
+    em { font-style: italic; color: var(--muted); }
+    a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    ul, ol { padding-left: 22px; margin-bottom: 1rem; }
+    li { margin-bottom: .45rem; line-height: 1.75; }
+
+    /* CKD stage colour bar */
+    .ckd-stages { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-radius: 10px; overflow: hidden; margin: 1.4rem 0; }
+    .ckd-stage { padding: 14px 10px; text-align: center; color: #fff; }
+    .ckd-stage.g1 { background: #1a6b3c; }
+    .ckd-stage.g2 { background: #5a8a1a; }
+    .ckd-stage.g3 { background: #c07a00; }
+    .ckd-stage.g4 { background: #c05000; }
+    .ckd-stage.g5 { background: #8a1515; }
+    .ckd-stage .stage-label { font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 700; }
+    .ckd-stage .stage-gfr   { font-size: 12px; margin-top: 4px; opacity: .9; }
+    .ckd-stage .stage-name  { font-size: 11.5px; margin-top: 2px; opacity: .8; font-weight: 600; }
+
+    .formula-box { background: var(--brand-dark); color: #ede7ff; border-radius: 10px; padding: 22px 24px; margin: 1.6rem 0; font-family: 'Lora', serif; font-size: 1rem; line-height: 1.8; }
+    .formula-box .label { font-family: 'DM Sans', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; opacity: .65; margin-bottom: 8px; }
+
+    .table-wrap { overflow-x: auto; margin: 1.4rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    thead tr { background: var(--brand); color: #fff; }
+    thead th { padding: 10px 14px; text-align: left; font-weight: 600; }
+    tbody tr:nth-child(even) { background: var(--brand-light); }
+    tbody tr:nth-child(odd)  { background: var(--white); }
+    td { padding: 9px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+
+    .callout { border-left: 4px solid var(--brand); background: var(--brand-light); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 1.6rem 0; font-size: 15.5px; }
+    .callout.warning { border-color: #c0392b; background: #fdf0ee; }
+    .callout.tip { border-color: #0e7c74; background: #e6f6f5; }
+    .callout.blue { border-color: #1a4e8a; background: #e8f0fb; }
+    .callout p { margin: 0; }
+
+    /* albuminuria grid */
+    .alb-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 1.2rem 0; }
+    .alb-card { border-radius: 8px; padding: 14px 16px; text-align: center; }
+    .alb-card.a1 { background: #d4edda; border: 1px solid #b3d9be; }
+    .alb-card.a2 { background: #fff3cd; border: 1px solid #ffe082; }
+    .alb-card.a3 { background: #f8d7da; border: 1px solid #f5b9bc; }
+    .alb-card .alb-label { font-weight: 700; font-size: 1.05rem; }
+    .alb-card .alb-val { font-size: 13px; color: var(--muted); margin-top: 3px; }
+
+    .example { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; margin: 1.6rem 0; }
+    .example .ex-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 10px; }
+    .example p { margin-bottom: .55rem; }
+
+    .takeaways { background: var(--brand); color: #fff; border-radius: 12px; padding: 26px 28px; margin: 2.4rem 0; }
+    .takeaways h2 { font-family: 'Lora', serif; color: #fff; border-bottom: 1px solid rgba(255,255,255,.3); margin-top: 0; padding-bottom: 10px; margin-bottom: 16px; font-size: 1.25rem; }
+    .takeaways ul { padding-left: 20px; }
+    .takeaways li { margin-bottom: 8px; font-size: 15.5px; line-height: 1.6; }
+
+    .references { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-top: 2rem; }
+    .references h2 { font-size: 1.1rem; margin-top: 0; }
+    .references ol { padding-left: 20px; font-size: 14px; color: var(--muted); }
+    .references li { margin-bottom: 6px; line-height: 1.55; }
+
+    .disclaimer { margin-top: 2.4rem; font-size: 13px; color: var(--muted); font-style: italic; border-top: 1px solid var(--border); padding-top: 16px; line-height: 1.6; }
+
+    @media (max-width: 600px) { .ckd-stages { grid-template-columns: repeat(3,1fr); } .alb-grid { grid-template-columns: 1fr; } .hero { padding: 36px 16px 32px; } .wrap { padding: 32px 16px 48px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; Articles &nbsp;›&nbsp; eGFR &amp; CKD Staging
+</header>
+
+<div class="hero">
+  <div class="tag">Nephrology</div>
+  <h1>eGFR &amp; Chronic Kidney Disease: What Your Kidney Numbers Mean</h1>
+  <p class="subtitle">A complete guide to estimated GFR — how it's calculated using CKD-EPI 2021, how to stage CKD, what each stage means clinically, and how eGFR differs from creatinine clearance.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on KDIGO 2024 &amp; CKD-EPI 2021 Guidelines</p>
+</div>
+
+<div class="wrap">
+
+  <p>Your kidneys filter around <strong>180 litres of blood every day</strong> — nearly 125 mL every minute. They remove waste products, regulate blood pressure, control fluid balance, produce hormones that stimulate red blood cell production, and activate vitamin D for bone health. When the kidneys start failing, none of these functions can be substituted by any other organ.</p>
+  <p>Chronic kidney disease (CKD) affects approximately <strong>850 million people worldwide</strong> — making it more common than diabetes. In India, an estimated 17% of the urban adult population has some form of CKD. Most of them don't know it — because CKD is largely <em>silent</em> until it is advanced.</p>
+  <p>The <strong>estimated Glomerular Filtration Rate (eGFR)</strong> is the single most important number in kidney medicine. It tells you how well the kidneys are filtering, stages the severity of kidney disease, guides treatment decisions, determines when to refer to a nephrologist, and predicts the risk of kidney failure. Understanding eGFR is essential for anyone with kidney disease — and for every clinician who manages patients with diabetes, hypertension, or cardiovascular disease.</p>
+
+  <h2>What Is GFR — and Why Do We Estimate It?</h2>
+  <p>The <strong>glomerular filtration rate (GFR)</strong> is the volume of fluid filtered from the glomerular capillaries into Bowman's capsule per unit time — essentially, how many millilitres of blood the kidneys filter per minute.</p>
+  <p>True GFR can only be measured by infusing a substance like inulin that is freely filtered and neither secreted nor reabsorbed by the tubules, then measuring its clearance. This is cumbersome, expensive, and impractical for routine clinical use.</p>
+  <p>Instead, clinicians use serum creatinine — combined with age, sex, and occasionally other factors — to <em>estimate</em> GFR. This is the <strong>estimated GFR (eGFR)</strong>. While not perfect, eGFR is accurate enough for clinical staging of CKD and monitoring of kidney function over time.</p>
+
+  <h2>The CKD-EPI 2021 Equation</h2>
+  <p>The most widely used and currently recommended equation is the <strong>CKD-EPI Creatinine Equation (2021 revision)</strong>, developed by the Chronic Kidney Disease Epidemiology Collaboration.</p>
+
+  <div class="formula-box">
+    <div class="label">CKD-EPI 2021 Creatinine Equation</div>
+    eGFR = <strong>142 × min(SCr/κ, 1)^α × max(SCr/κ, 1)^(−1.200)</strong><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>× 0.9938^Age</strong><br><br>
+    Where: κ = 0.7 (female) or 0.9 (male)<br>
+    α = −0.241 (female) or −0.302 (male)<br>
+    SCr = Serum creatinine in mg/dL<br><br>
+    <span style="font-size:.88rem; opacity:.75;">The 2021 revision removed the race coefficient present in older equations. eGFR is expressed in mL/min/1.73 m² (standardised to average body surface area).</span>
+  </div>
+
+  <p>The formula looks complex, but the key inputs are straightforward: <strong>serum creatinine, age, and sex</strong>. Most laboratories now automatically report eGFR alongside every serum creatinine result. The formula is also built into calculators, EMRs, and point-of-care tools.</p>
+
+  <div class="callout">
+    <p>🫘 Use the <a href="https://rxmedcalc.com/medical-calculators/egfr-calculator" target="_blank"><strong>RxMedCalc eGFR Calculator</strong></a> — supports both CKD-EPI 2021 and MDRD equations, with automatic CKD staging.</p>
+  </div>
+
+  <h2>Why Was Race Removed from the 2021 Equation?</h2>
+  <p>The 2009 version of CKD-EPI (and the older MDRD equation before it) included a race coefficient that assigned higher eGFR values to Black patients. This was based on the observation that Black individuals had, on average, higher serum creatinine values for the same measured GFR — possibly reflecting higher average muscle mass.</p>
+  <p>The 2021 revision removed this race adjustment for several important reasons:</p>
+  <ul>
+    <li>Race is a <strong>social construct</strong>, not a biological variable — and individual variation within racial groups is enormous</li>
+    <li>The race coefficient was derived from relatively small datasets and its biological justification is contested</li>
+    <li>Using it could delay nephrology referral and dialysis access for Black patients by artificially inflating their eGFR</li>
+    <li>A race-free equation performs comparably in diverse populations and avoids perpetuating race-based medicine</li>
+  </ul>
+  <p>The CKD-EPI 2021 race-free equation is now recommended by KDIGO, ASN, and most major nephrology societies worldwide.</p>
+
+  <h2>CKD Staging — The G Categories</h2>
+  <p>Kidney disease is staged using both eGFR (G categories) and albuminuria (A categories). eGFR alone captures the <em>degree of filtration loss</em>; albuminuria captures <em>kidney damage</em> even before filtration is significantly impaired.</p>
+
+  <div class="ckd-stages">
+    <div class="ckd-stage g1"><div class="stage-label">G1</div><div class="stage-gfr">≥ 90</div><div class="stage-name">Normal</div></div>
+    <div class="ckd-stage g2"><div class="stage-label">G2</div><div class="stage-gfr">60–89</div><div class="stage-name">Mildly reduced</div></div>
+    <div class="ckd-stage g3"><div class="stage-label">G3a/3b</div><div class="stage-gfr">30–59</div><div class="stage-name">Mod. reduced</div></div>
+    <div class="ckd-stage g4"><div class="stage-label">G4</div><div class="stage-gfr">15–29</div><div class="stage-name">Severely reduced</div></div>
+    <div class="ckd-stage g5"><div class="stage-label">G5</div><div class="stage-gfr">&lt; 15</div><div class="stage-name">Kidney failure</div></div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Stage</th><th>eGFR (mL/min/1.73m²)</th><th>Description</th><th>Key Clinical Actions</th></tr></thead>
+      <tbody>
+        <tr><td><strong>G1</strong></td><td>≥ 90</td><td>Normal or high — but kidney damage present (e.g. proteinuria)</td><td>Treat underlying cause; control BP and blood sugar</td></tr>
+        <tr><td><strong>G2</strong></td><td>60–89</td><td>Mildly reduced kidney function</td><td>Monitor annually; cardiovascular risk reduction</td></tr>
+        <tr><td><strong>G3a</strong></td><td>45–59</td><td>Mild-to-moderate reduction</td><td>Monitor every 6 months; review all medications for renal dosing</td></tr>
+        <tr><td><strong>G3b</strong></td><td>30–44</td><td>Moderate-to-severe reduction</td><td>Nephrology referral; phosphate monitoring; anaemia assessment</td></tr>
+        <tr><td><strong>G4</strong></td><td>15–29</td><td>Severely reduced</td><td>Prepare for renal replacement therapy; dietitian referral</td></tr>
+        <tr><td><strong>G5</strong></td><td>&lt; 15</td><td>Kidney failure</td><td>Dialysis or transplant; or conservative management if chosen</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>CKD requires two readings &gt; 3 months apart.</strong> A single low eGFR does not diagnose CKD — it could represent acute kidney injury (AKI). CKD is only diagnosed when kidney function is reduced or kidney damage (proteinuria, haematuria, structural abnormality) is present for <em>more than 3 months.</em></p>
+  </div>
+
+  <h2>The A Categories — Albuminuria Staging</h2>
+  <p>Albuminuria (protein in the urine) is a key marker of kidney damage. It is measured as the <strong>urine albumin-to-creatinine ratio (uACR)</strong> on a spot urine sample:</p>
+
+  <div class="alb-grid">
+    <div class="alb-card a1">
+      <div class="alb-label">A1 — Normal</div>
+      <div class="alb-val">uACR &lt; 30 mg/g<br>&lt; 3 mg/mmol</div>
+    </div>
+    <div class="alb-card a2">
+      <div class="alb-label">A2 — Moderately increased</div>
+      <div class="alb-val">uACR 30–300 mg/g<br>3–30 mg/mmol</div>
+    </div>
+    <div class="alb-card a3">
+      <div class="alb-label">A3 — Severely increased</div>
+      <div class="alb-val">uACR &gt; 300 mg/g<br>&gt; 30 mg/mmol</div>
+    </div>
+  </div>
+
+  <p>A patient can have <strong>G1 eGFR (normal filtration) but A3 albuminuria</strong> — this still constitutes CKD, because proteinuria itself indicates kidney damage even when GFR is preserved. This is common in early diabetic nephropathy. Together, the G and A categories create a <strong>risk grid</strong> (KDIGO heat map) that guides monitoring frequency and intensity of treatment.</p>
+
+  <h2>What Causes CKD?</h2>
+  <p>The two leading causes of CKD worldwide — and in India — are <strong>diabetes mellitus</strong> and <strong>hypertension</strong>. Together they account for over 60% of all CKD cases.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Cause</th><th>Mechanism</th><th>Key Feature</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Diabetic nephropathy</strong></td><td>Glomerular hyperfiltration → glomerulosclerosis</td><td>Early microalbuminuria; progresses over years</td></tr>
+        <tr><td><strong>Hypertensive nephrosclerosis</strong></td><td>Arteriolar sclerosis → ischaemic glomerular injury</td><td>Gradual decline in eGFR; mild proteinuria</td></tr>
+        <tr><td><strong>Glomerulonephritis</strong></td><td>Immune-mediated glomerular inflammation</td><td>Haematuria + proteinuria; often younger patients</td></tr>
+        <tr><td><strong>Polycystic kidney disease (ADPKD)</strong></td><td>Progressive cyst formation destroying parenchyma</td><td>Family history; large kidneys on ultrasound</td></tr>
+        <tr><td><strong>Obstructive uropathy</strong></td><td>Chronic obstruction → back-pressure injury</td><td>Prostatic disease, stones, congenital abnormalities</td></tr>
+        <tr><td><strong>Recurrent UTIs / pyelonephritis</strong></td><td>Repeated infection → scarring</td><td>Common in women; often underdiagnosed</td></tr>
+        <tr><td><strong>Drug-induced nephropathy</strong></td><td>Direct tubular toxicity or interstitial nephritis</td><td>NSAIDs, aminoglycosides, contrast agents, lithium</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Symptoms of CKD — Why It's Called the Silent Disease</h2>
+  <p>CKD is notoriously asymptomatic until it is advanced. Most patients with G1–G3 CKD have <strong>no symptoms at all</strong>. This is why screening high-risk groups (diabetics, hypertensives, those with family history of kidney disease) is essential.</p>
+  <p>Symptoms typically begin to appear at <strong>G4 and G5</strong>, and include:</p>
+  <ul>
+    <li><strong>Fatigue and weakness</strong> — from anaemia of chronic disease (reduced erythropoietin production)</li>
+    <li><strong>Oedema</strong> — swelling of ankles and legs from fluid retention</li>
+    <li><strong>Breathlessness</strong> — from fluid overload or anaemia</li>
+    <li><strong>Nausea, vomiting, loss of appetite</strong> — from uraemia (accumulation of urea and toxins)</li>
+    <li><strong>Itching (pruritus)</strong> — from phosphate accumulation and uraemic toxins</li>
+    <li><strong>Reduced urine output</strong> — in late-stage disease</li>
+    <li><strong>Confusion, seizures</strong> — in severe uraemia (uraemic encephalopathy)</li>
+    <li><strong>Hypertension</strong> — both a cause and consequence of CKD; often worsens as kidneys lose the ability to regulate sodium and fluid</li>
+    <li><strong>Bone pain</strong> — from renal osteodystrophy (impaired vitamin D activation and phosphate-calcium imbalance)</li>
+  </ul>
+
+  <h2>Managing CKD — Slowing Progression</h2>
+  <p>CKD is often progressive, but the rate of progression varies enormously. With optimal management, many patients — particularly those with early CKD — never reach kidney failure in their lifetime.</p>
+
+  <h3>Blood Pressure Control</h3>
+  <p>Target BP in CKD is generally <strong>&lt; 120/80 mmHg</strong> (KDIGO 2024 update), or &lt; 130/80 if proteinuria is present. ACE inhibitors (e.g. ramipril, enalapril) or ARBs (e.g. losartan, telmisartan) are the preferred antihypertensive agents in CKD — they reduce intraglomerular pressure and slow proteinuria-driven damage. Do not combine an ACEi and ARB (dual blockade) — this increases harm without additional benefit.</p>
+
+  <h3>Blood Sugar Control in Diabetic CKD</h3>
+  <p>Target HbA1c ~7% (53 mmol/mol) in most patients with diabetic CKD. <strong>SGLT2 inhibitors</strong> (empagliflozin, dapagliflozin, canagliflozin) are now first-line in diabetic CKD alongside metformin — they reduce intraglomerular hyperfiltration and have demonstrated significant reductions in CKD progression and cardiovascular events in large clinical trials. Check eGFR before prescribing: most SGLT2 inhibitors require eGFR ≥ 20–25 for initiation.</p>
+  <p><strong>Finerenone</strong> (a novel non-steroidal mineralocorticoid receptor antagonist) is also approved for CKD in type 2 diabetes, with evidence for reducing CKD progression and cardiovascular events.</p>
+
+  <h3>Dietary Modification</h3>
+  <ul>
+    <li><strong>Protein:</strong> Low-protein diet (0.6–0.8 g/kg/day) in advanced CKD (G4–G5) to reduce uraemic toxin production — but only under dietitian supervision</li>
+    <li><strong>Sodium:</strong> Restrict to &lt; 2 g/day (&lt; 5 g salt) to control BP and reduce proteinuria</li>
+    <li><strong>Potassium:</strong> Restrict in G4–G5 or if hyperkalaemia is present (avoid high-potassium foods: bananas, oranges, potatoes, tomatoes)</li>
+    <li><strong>Phosphate:</strong> Restrict in advanced CKD; phosphate binders may be needed</li>
+  </ul>
+
+  <h3>Avoid Nephrotoxins</h3>
+  <ul>
+    <li><strong>NSAIDs</strong> (ibuprofen, diclofenac, naproxen) — regularly avoided in CKD G3+; cause acute-on-chronic kidney injury and reduce efficacy of antihypertensives</li>
+    <li><strong>Contrast agents</strong> — use iso-osmolar contrast and hydrate well; pre-procedure review of eGFR is mandatory</li>
+    <li><strong>Aminoglycosides</strong> — use with extreme caution and TDM in CKD</li>
+    <li><strong>Herbal remedies</strong> — many traditional and herbal preparations contain nephrotoxic compounds (aristolochic acid, heavy metals); particularly relevant in the Indian context</li>
+  </ul>
+
+  <h2>When Should eGFR Trigger a Nephrology Referral?</h2>
+  <p>KDIGO guidelines recommend nephrology referral when:</p>
+  <ul>
+    <li>eGFR <strong>&lt; 30 mL/min/1.73 m²</strong> (G4 or worse)</li>
+    <li>Rapid decline in eGFR: <strong>&gt; 5 mL/min/year</strong> or &gt; 25% decrease in 12 months</li>
+    <li>uACR <strong>&gt; 300 mg/g</strong> (severely increased albuminuria) that is unexplained or worsening</li>
+    <li>Persistent <strong>haematuria</strong> with proteinuria (suggests glomerular disease needing biopsy)</li>
+    <li>Difficult-to-control hypertension despite 3 agents</li>
+    <li>Suspected <strong>renovascular disease</strong></li>
+    <li>Any suspicion of rare or genetic kidney disease</li>
+  </ul>
+
+  <h2>eGFR vs. Creatinine Clearance — A Quick Reminder</h2>
+  <div class="callout blue">
+    <p>📌 <strong>eGFR (CKD-EPI)</strong> is used for <em>diagnosing and staging CKD</em>. <strong>Creatinine clearance (Cockcroft-Gault)</strong> is used for <em>adjusting drug doses</em>. They serve different purposes and should not be used interchangeably. See our companion article: <a href="https://rxmedcalc.com/articles/creatinine-clearance" target="_blank"><strong>Creatinine Clearance &amp; the Cockcroft-Gault Equation →</strong></a></p>
+  </div>
+
+  <h2>Worked Example</h2>
+  <div class="example">
+    <div class="ex-label">📋 Clinical Scenario</div>
+    <p><strong>Patient:</strong> 58-year-old woman with a 10-year history of type 2 diabetes and hypertension. Routine blood test shows serum creatinine <strong>1.6 mg/dL</strong>. Spot urine shows uACR <strong>380 mg/g</strong>.</p>
+    <p><strong>eGFR (CKD-EPI 2021):</strong> ~38 mL/min/1.73 m² (using age 58, female, SCr 1.6 mg/dL)</p>
+    <p><strong>CKD Stage:</strong> <strong>G3b</strong> (eGFR 30–44) + <strong>A3</strong> (uACR &gt; 300) = <em>very high risk</em> on KDIGO heat map</p>
+    <p style="margin-top:10px; font-size:14.5px; color:#5a5a6a;"><em>This patient requires: ACEi or ARB for BP and proteinuria, SGLT2 inhibitor (check eGFR eligibility), dietitian review, phosphate and potassium monitoring, anaemia workup, review of all medications for renal dosing, and <strong>nephrology referral</strong> given eGFR &lt; 45 with severe proteinuria. Stop NSAIDs if being used.</em></p>
+  </div>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>eGFR is the primary measure of <strong>kidney filtration function</strong>, expressed in mL/min/1.73 m²</li>
+      <li>The <strong>CKD-EPI 2021</strong> equation (race-free) is the current recommended standard</li>
+      <li>CKD staging uses <strong>both eGFR (G1–G5)</strong> and <strong>albuminuria (A1–A3)</strong> — not eGFR alone</li>
+      <li>CKD requires <strong>two readings &gt; 3 months apart</strong> — a single low eGFR could be AKI</li>
+      <li><strong>CKD is silent</strong> in early stages — routine screening of diabetics and hypertensives is essential</li>
+      <li><strong>SGLT2 inhibitors</strong> and ACEi/ARBs are cornerstones of slowing CKD progression</li>
+      <li>Avoid <strong>NSAIDs, nephrotoxic antibiotics, and herbal nephrotoxins</strong> in CKD</li>
+      <li>eGFR is for <strong>staging CKD</strong>; Cockcroft-Gault CrCl is for <strong>drug dose adjustment</strong> — do not confuse them</li>
+      <li>Refer to nephrology when eGFR <strong>&lt; 30</strong>, rapidly declining, or unexplained severe proteinuria</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <p>🫘 Calculate your eGFR and see your CKD stage instantly: <a href="https://rxmedcalc.com/medical-calculators/egfr-calculator" target="_blank"><strong>RxMedCalc eGFR Calculator →</strong></a></p>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Inker LA et al. <em>New Creatinine- and Cystatin C–Based Equations to Estimate GFR without Race.</em> N Engl J Med. 2021;385(19):1737-1749.</li>
+      <li>Kidney Disease: Improving Global Outcomes (KDIGO). <em>KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease.</em> Kidney Int. 2024.</li>
+      <li>Levey AS et al. <em>A new equation to estimate glomerular filtration rate.</em> Ann Intern Med. 2009;150(9):604-612.</li>
+      <li>Bikbov B et al. <em>Global, regional, and national burden of chronic kidney disease, 1990–2017.</em> Lancet. 2020;395(10225):709-733.</li>
+      <li>Perkovic V et al. <em>Canagliflozin and Renal Outcomes in Type 2 Diabetes and Nephropathy.</em> N Engl J Med. 2019;380(24):2295-2306.</li>
+      <li>GBD Chronic Kidney Disease Collaboration. <em>Global, regional, and national burden of chronic kidney disease.</em> Lancet. 2020.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is written for educational purposes based on KDIGO and CKD-EPI guidelines current at time of publication. It is not a substitute for professional medical advice. CKD management should always be individualised and guided by a qualified physician or nephrologist.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+
+</div>
+</body>
+</html>
