@@ -78,6 +78,7 @@
         <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
         <nav class="site-nav">
           <a href="/" ${checkActive('/') && !checkActive('/medical') && !checkActive('/drug') && !checkActive('/rabies') && !checkActive('/vitamin') ? 'class="active"' : ''}>Home</a>
+          <a href="/blog/" ${checkActive('/blog') ? 'class="active"' : ''}>Blog</a>
           <a href="/medical-calculators/" ${checkActive('/medical-calculators') ? 'class="active"' : ''}>Calculators</a>
           <a href="/drug-doses/" ${checkActive('/drug-doses') ? 'class="active"' : ''}>Drug Doses</a>
           <a href="/rabies-scheduler/" ${checkActive('/rabies-scheduler') ? 'class="active"' : ''}>Rabies PEP</a>
