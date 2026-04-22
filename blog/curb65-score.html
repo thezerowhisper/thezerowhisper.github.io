@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CURB-65 Score: Pneumonia Severity & Hospital Admission Guide | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the CURB-65 score for community-acquired pneumonia — how to calculate it, what it means, when to admit, and how to choose the right antibiotic." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand:       #1a6b3c;
+      --brand-dark:  #0d4226;
+      --brand-light: #e8f7ee;
+      --accent:      #c0392b;
+      --text:        #1c1c1e;
+      --muted:       #5a5a6a;
+      --border:      #cde5d6;
+      --bg:          #f5fbf7;
+      --white:       #ffffff;
+      --max:         740px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.8; color: var(--text); background: var(--bg); }
+
+    header { background: var(--brand-dark); color: #fff; padding: 14px 24px; font-size: 15px; }
+    header a { color: #fff; text-decoration: none; font-weight: 600; }
+
+    .hero {
+      background: linear-gradient(135deg, #0d4226 0%, #1a6b3c 55%, #27a05a 100%);
+      color: #fff; padding: 56px 24px 48px; text-align: center;
+    }
+    .hero .tag { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35); border-radius: 20px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 4px 14px; margin-bottom: 20px; }
+    .hero h1 { font-family: 'Lora', serif; font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 700; line-height: 1.25; max-width: 680px; margin: 0 auto 18px; }
+    .hero .subtitle { font-size: 16px; opacity: .88; max-width: 560px; margin: 0 auto 28px; }
+    .hero .meta { font-size: 13px; opacity: .7; font-style: italic; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 48px 24px 64px; }
+
+    h2 { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: var(--brand); margin: 2.6rem 0 .8rem; padding-bottom: .4rem; border-bottom: 2px solid var(--brand-light); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 1.08rem; font-weight: 600; color: var(--text); margin: 1.8rem 0 .5rem; }
+    p { margin-bottom: 1.1rem; }
+    strong { font-weight: 600; }
+    em { font-style: italic; color: var(--muted); }
+    a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    ul, ol { padding-left: 22px; margin-bottom: 1rem; }
+    li { margin-bottom: .45rem; line-height: 1.75; }
+
+    /* CURB letter cards */
+    .curb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 1.4rem 0; }
+    .curb-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--brand); border-radius: 8px; padding: 16px 18px; }
+    .curb-card .letter { font-family: 'Lora', serif; font-size: 2rem; font-weight: 700; color: var(--brand); line-height: 1; margin-bottom: 6px; }
+    .curb-card h4 { font-size: 14.5px; font-weight: 600; margin-bottom: 4px; }
+    .curb-card p { font-size: 13.5px; color: var(--muted); margin: 0; }
+
+    .table-wrap { overflow-x: auto; margin: 1.4rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    thead tr { background: var(--brand); color: #fff; }
+    thead th { padding: 10px 14px; text-align: left; font-weight: 600; }
+    tbody tr:nth-child(even) { background: var(--brand-light); }
+    tbody tr:nth-child(odd)  { background: var(--white); }
+    td { padding: 9px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+
+    .badge { display: inline-block; border-radius: 4px; font-size: 12px; font-weight: 600; padding: 2px 8px; }
+    .badge.low  { background: #d4edda; color: #155724; }
+    .badge.mod  { background: #fff3cd; color: #856404; }
+    .badge.high { background: #f8d7da; color: #721c24; }
+    .badge.crit { background: #721c24; color: #fff; }
+
+    /* Severity traffic light */
+    .severity-blocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-radius: 10px; overflow: hidden; margin: 1.4rem 0; }
+    .sev { padding: 18px 14px; text-align: center; color: #fff; }
+    .sev.green  { background: #1a6b3c; }
+    .sev.yellow { background: #8a6a00; }
+    .sev.red    { background: #a93226; }
+    .sev .sev-score { font-family: 'Lora', serif; font-size: 1.6rem; font-weight: 700; }
+    .sev .sev-label { font-size: 12px; margin-top: 4px; opacity: .85; font-weight: 600; letter-spacing: .04em; }
+    .sev .sev-action { font-size: 13px; margin-top: 6px; opacity: .9; }
+
+    .callout { border-left: 4px solid var(--brand); background: var(--brand-light); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 1.6rem 0; font-size: 15.5px; }
+    .callout.warning { border-color: #c0392b; background: #fdf0ee; }
+    .callout.blue { border-color: #1a4e8a; background: #e8f0fb; }
+    .callout p { margin: 0; }
+
+    .example { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; margin: 1.6rem 0; }
+    .example .ex-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 10px; }
+    .example p { margin-bottom: .55rem; }
+    .example .score-total { font-family: 'Lora', serif; font-size: 2rem; font-weight: 700; color: var(--brand); }
+
+    .takeaways { background: var(--brand); color: #fff; border-radius: 12px; padding: 26px 28px; margin: 2.4rem 0; }
+    .takeaways h2 { font-family: 'Lora', serif; color: #fff; border-bottom: 1px solid rgba(255,255,255,.3); margin-top: 0; padding-bottom: 10px; margin-bottom: 16px; font-size: 1.25rem; }
+    .takeaways ul { padding-left: 20px; }
+    .takeaways li { margin-bottom: 8px; font-size: 15.5px; line-height: 1.6; }
+
+    .references { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-top: 2rem; }
+    .references h2 { font-size: 1.1rem; margin-top: 0; }
+    .references ol { padding-left: 20px; font-size: 14px; color: var(--muted); }
+    .references li { margin-bottom: 6px; line-height: 1.55; }
+
+    .disclaimer { margin-top: 2.4rem; font-size: 13px; color: var(--muted); font-style: italic; border-top: 1px solid var(--border); padding-top: 16px; line-height: 1.6; }
+
+    @media (max-width: 600px) { .severity-blocks { grid-template-columns: 1fr; } .hero { padding: 36px 16px 32px; } .wrap { padding: 32px 16px 48px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; Articles &nbsp;›&nbsp; CURB-65 Score
+</header>
+
+<div class="hero">
+  <div class="tag">Respiratory Medicine</div>
+  <h1>CURB-65 Score: Pneumonia Severity &amp; Hospital Admission</h1>
+  <p class="subtitle">A complete clinical guide to CURB-65 — how to calculate it, what each score means for management, antibiotic selection, and when to consider ICU admission.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on BTS, IDSA/ATS &amp; WHO Guidelines</p>
+</div>
+
+<div class="wrap">
+
+  <p>Pneumonia is one of the leading causes of death worldwide — and also one of the most common conditions a doctor will encounter in any clinical setting. Every year, over 450 million people develop pneumonia globally, and over 4 million die from it. In India, pneumonia remains a major killer across all age groups, from infants to the elderly.</p>
+  <p>When a patient presents with suspected pneumonia, one of the most important early decisions is deceptively simple: <strong>can this patient be safely treated at home, or do they need to be admitted to hospital?</strong> Send a high-risk patient home and they may deteriorate rapidly. Admit every patient unnecessarily and you overwhelm hospital resources, expose patients to nosocomial infections, and drive up costs.</p>
+  <p>The <strong>CURB-65 score</strong> — developed by the British Thoracic Society — is a quick, validated, five-point bedside tool designed to answer exactly that question. It predicts 30-day mortality in community-acquired pneumonia (CAP) and guides the appropriate level of care.</p>
+
+  <h2>What Is Community-Acquired Pneumonia?</h2>
+  <p><strong>Community-acquired pneumonia (CAP)</strong> is a lung infection that develops in a person who has not recently been hospitalised and is not living in a healthcare facility. It is distinct from hospital-acquired (nosocomial) pneumonia, which involves different organisms and requires different management.</p>
+  <p>CAP is most commonly caused by bacteria, with <em>Streptococcus pneumoniae</em> (pneumococcus) being the single most common causative organism. Other common pathogens include <em>Haemophilus influenzae</em>, <em>Mycoplasma pneumoniae</em>, <em>Klebsiella pneumoniae</em> (particularly in diabetics and alcoholics in India), and respiratory viruses including influenza.</p>
+  <p>Clinically, patients typically present with fever, cough (productive or dry), breathlessness, pleuritic chest pain, and general malaise. Physical examination may reveal dullness to percussion, bronchial breathing, and increased vocal resonance over the affected area. A chest X-ray showing a new consolidation confirms the diagnosis.</p>
+
+  <h2>The CURB-65 Score — What Does It Stand For?</h2>
+  <p>CURB-65 assigns <strong>one point for each of five clinical parameters</strong>, giving a maximum score of 5:</p>
+
+  <div class="curb-grid">
+    <div class="curb-card">
+      <div class="letter">C</div>
+      <h4>Confusion</h4>
+      <p>New-onset confusion or disorientation. Defined as an AMT (Abbreviated Mental Test) score of ≤ 8, or new confusion as reported by patient or family.</p>
+    </div>
+    <div class="curb-card">
+      <div class="letter">U</div>
+      <h4>Urea &gt; 7 mmol/L</h4>
+      <p>Blood urea nitrogen (BUN) &gt; 19 mg/dL. Reflects dehydration and early renal impairment — a marker of physiological stress.</p>
+    </div>
+    <div class="curb-card">
+      <div class="letter">R</div>
+      <h4>Respiratory Rate ≥ 30/min</h4>
+      <p>Tachypnoea at rest. A key sign of respiratory compromise and the body's effort to maintain oxygenation.</p>
+    </div>
+    <div class="curb-card">
+      <div class="letter">B</div>
+      <h4>Blood Pressure &lt; 90/60 mmHg</h4>
+      <p>Systolic BP &lt; 90 mmHg or diastolic BP &lt; 60 mmHg. Indicates haemodynamic compromise — a serious sign.</p>
+    </div>
+    <div class="curb-card">
+      <div class="letter">65</div>
+      <h4>Age ≥ 65 Years</h4>
+      <p>Advanced age is an independent predictor of poor outcomes in pneumonia. Elderly patients have reduced physiological reserve.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>🫁 Use the <a href="https://rxmedcalc.com/medical-calculators/curb65" target="_blank"><strong>RxMedCalc CURB-65 Calculator</strong></a> to score your patient instantly at the bedside.</p>
+  </div>
+
+  <h2>Interpreting the Score — What to Do at Each Level</h2>
+
+  <div class="severity-blocks">
+    <div class="sev green">
+      <div class="sev-score">0 – 1</div>
+      <div class="sev-label">LOW RISK</div>
+      <div class="sev-action">30-day mortality &lt; 3%<br>Consider home treatment</div>
+    </div>
+    <div class="sev yellow">
+      <div class="sev-score">2</div>
+      <div class="sev-label">MODERATE RISK</div>
+      <div class="sev-action">30-day mortality ~9%<br>Consider hospital admission</div>
+    </div>
+    <div class="sev red">
+      <div class="sev-score">3 – 5</div>
+      <div class="sev-label">HIGH RISK</div>
+      <div class="sev-action">30-day mortality 15–40%<br>Urgent hospital admission</div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>CURB-65 Score</th><th>30-Day Mortality</th><th>Risk</th><th>Recommended Action</th></tr></thead>
+      <tbody>
+        <tr><td><strong>0</strong></td><td>0.6%</td><td><span class="badge low">Low</span></td><td>Treat at home with oral antibiotics</td></tr>
+        <tr><td><strong>1</strong></td><td>2.7%</td><td><span class="badge low">Low</span></td><td>Home treatment generally safe; reassess if worsening</td></tr>
+        <tr><td><strong>2</strong></td><td>6.8–9%</td><td><span class="badge mod">Moderate</span></td><td>Short-stay hospital admission or closely supervised outpatient care</td></tr>
+        <tr><td><strong>3</strong></td><td>14–17%</td><td><span class="badge high">High</span></td><td>Hospital admission; consider HDU if deteriorating</td></tr>
+        <tr><td><strong>4</strong></td><td>27–36%</td><td><span class="badge high">High</span></td><td>Urgent admission; assess for ICU need</td></tr>
+        <tr><td><strong>5</strong></td><td>40–57%</td><td><span class="badge crit">Critical</span></td><td>ICU-level care; aggressive management</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>CURB-65 is a guide, not a rule.</strong> Clinical judgement must always accompany the score. A patient scoring 1 who lives alone, has no carer, lives far from a hospital, or is deteriorating rapidly may warrant admission regardless. Conversely, a score of 2 in a young patient with good social support and daily GP review may be safely managed at home.</p>
+  </div>
+
+  <h2>Worked Example</h2>
+  <div class="example">
+    <div class="ex-label">📋 Clinical Scenario</div>
+    <p><strong>Patient:</strong> 70-year-old man with 3-day history of fever, productive cough, and breathlessness. On examination: confused and disoriented, RR 34/min, BP 118/76 mmHg, temperature 38.9°C. Blood urea 9.2 mmol/L.</p>
+    <p style="margin-top:12px;"><strong>Scoring:</strong></p>
+    <ul style="margin-bottom:12px;">
+      <li>C — Confusion: <strong>1</strong> (new disorientation present)</li>
+      <li>U — Urea &gt; 7 mmol/L: <strong>1</strong> (urea = 9.2 mmol/L)</li>
+      <li>R — RR ≥ 30/min: <strong>1</strong> (RR = 34/min)</li>
+      <li>B — BP &lt; 90/60: <strong>0</strong> (BP = 118/76)</li>
+      <li>65 — Age ≥ 65: <strong>1</strong> (age = 70)</li>
+    </ul>
+    <p>Total Score: <span class="score-total">4</span></p>
+    <p style="font-size:14.5px; color:#5a5a6a; margin-top:8px;"><em>CURB-65 of 4 = <strong>high risk</strong>, predicted 30-day mortality ~27–36%. This patient requires <strong>urgent hospital admission</strong>. Assess for ICU suitability given confusion and significant tachypnoea. Start IV antibiotics immediately — do not delay for confirmatory investigations.</em></p>
+  </div>
+
+  <h2>CRB-65 — The Community Version (No Blood Test Needed)</h2>
+  <p>In primary care settings — a GP clinic, a rural health centre, or an emergency home visit — blood urea measurement may not be immediately available. The <strong>CRB-65 score</strong> removes the urea criterion and uses only the four clinical parameters:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>CRB-65 Score</th><th>Risk</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td><strong>0</strong></td><td><span class="badge low">Low</span></td><td>Home treatment appropriate</td></tr>
+        <tr><td><strong>1 – 2</strong></td><td><span class="badge mod">Moderate</span></td><td>Consider hospital assessment</td></tr>
+        <tr><td><strong>3 – 4</strong></td><td><span class="badge high">High</span></td><td>Urgent hospital admission</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>CRB-65 is particularly useful in Indian primary care settings where point-of-care blood tests may be unavailable, allowing rapid triage with information that can be gathered in under two minutes at the bedside.</p>
+
+  <h2>CURB-65 vs. PSI — Which Is Better?</h2>
+  <p>The <strong>Pneumonia Severity Index (PSI)</strong> is an alternative scoring system developed by Fine et al. that uses 20 variables — including age, nursing home residence, comorbidities, physical examination findings, and laboratory results — to classify patients into 5 risk classes.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Feature</th><th>CURB-65</th><th>PSI / PORT Score</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Variables</strong></td><td>5</td><td>20</td></tr>
+        <tr><td><strong>Calculation</strong></td><td>Immediate, bedside</td><td>Requires lab results &amp; calculation</td></tr>
+        <tr><td><strong>Better at identifying</strong></td><td>High-risk patients needing admission</td><td>Low-risk patients safe for discharge</td></tr>
+        <tr><td><strong>Used in</strong></td><td>UK (BTS), Europe, Asia</td><td>USA (IDSA/ATS guidelines)</td></tr>
+        <tr><td><strong>Weakness</strong></td><td>May overestimate risk in elderly with comorbidities</td><td>Unwieldy in acute settings; complex to calculate</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>For most clinical settings — especially in India — <strong>CURB-65 is the preferred tool</strong> due to its simplicity and speed. PSI is better suited for research settings or where the primary goal is identifying patients safe for outpatient management.</p>
+
+  <h2>Antibiotic Selection in Community-Acquired Pneumonia</h2>
+  <p>Antibiotic choice depends on the severity of pneumonia (guided by CURB-65), likely pathogens based on clinical presentation, and local resistance patterns.</p>
+
+  <h3>Mild CAP (CURB-65: 0–1) — Outpatient Treatment</h3>
+  <ul>
+    <li><strong>Previously healthy, no antibiotic use in past 3 months:</strong> Amoxicillin 500 mg–1 g three times daily for 5–7 days. Alternatively, doxycycline or a macrolide (azithromycin) if atypical organisms suspected.</li>
+    <li><strong>Comorbidities or recent antibiotic use:</strong> Amoxicillin-clavulanate + azithromycin, or a respiratory fluoroquinolone (levofloxacin, moxifloxacin) as monotherapy.</li>
+    <li><strong>Suspected <em>Mycoplasma</em> / atypical (younger patient, dry cough, gradual onset):</strong> Azithromycin 500 mg on Day 1, then 250 mg for 4 days; or doxycycline 100 mg twice daily for 7 days.</li>
+  </ul>
+
+  <h3>Moderate CAP (CURB-65: 2) — Hospital Admission</h3>
+  <ul>
+    <li>IV or oral beta-lactam (amoxicillin-clavulanate or co-amoxiclav) <strong>plus</strong> a macrolide (clarithromycin or azithromycin)</li>
+    <li>Or a respiratory fluoroquinolone (levofloxacin 750 mg OD or moxifloxacin 400 mg OD) as monotherapy</li>
+    <li>Duration: 5–7 days; step down to oral when patient is clinically improving and afebrile for 24 hours</li>
+  </ul>
+
+  <h3>Severe CAP (CURB-65: 3–5) — Hospital / ICU</h3>
+  <ul>
+    <li>IV beta-lactam with broad-spectrum coverage (co-amoxiclav, cefotaxime, or ceftriaxone 1–2 g OD) <strong>plus</strong> IV macrolide (clarithromycin)</li>
+    <li>Or IV respiratory fluoroquinolone (levofloxacin) as monotherapy or in combination</li>
+    <li><strong>Suspected <em>Pseudomonas</em></strong> (structural lung disease, bronchiectasis, recent antibiotics): Anti-pseudomonal beta-lactam (piperacillin-tazobactam, cefepime, meropenem) + anti-pseudomonal fluoroquinolone or aminoglycoside</li>
+    <li><strong>Suspected <em>Klebsiella</em></strong> (diabetics, alcoholics, nursing home residents — common in India): Ceftriaxone or a carbapenem in resistant cases</li>
+    <li>Duration: typically 7–10 days for most severe CAP; longer for <em>Klebsiella</em>, <em>Pseudomonas</em>, or cavitating disease</li>
+  </ul>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Antibiotic resistance in India:</strong> <em>Klebsiella pneumoniae</em> producing extended-spectrum beta-lactamases (ESBLs) is increasingly common in India, including in community settings. In patients with risk factors (diabetes, prior hospitalisation, prior antibiotic use), consider broader empirical coverage and send cultures before starting antibiotics wherever possible.</p>
+  </div>
+
+  <h2>Investigations to Order in Pneumonia</h2>
+  <p>The extent of investigation should match the severity:</p>
+
+  <h3>All Patients</h3>
+  <ul>
+    <li>Chest X-ray (PA view) — confirms diagnosis, identifies complications (effusion, cavitation, multilobar disease)</li>
+    <li>SpO₂ (pulse oximetry) — SpO₂ &lt; 94% on air is a red flag; &lt; 90% requires immediate oxygen</li>
+    <li>Blood urea, creatinine, electrolytes</li>
+    <li>FBC (full blood count) — leucocytosis supports bacterial aetiology; leucopenia is an ominous sign</li>
+    <li>CRP — not diagnostic alone, but very elevated CRP (&gt; 100 mg/L) supports bacterial pneumonia</li>
+  </ul>
+
+  <h3>Hospitalised Patients (CURB-65 ≥ 2)</h3>
+  <ul>
+    <li>Blood cultures × 2 (before antibiotics) — positive in ~10–15% of hospitalised CAP</li>
+    <li>Sputum Gram stain and culture — if productive cough and patient can produce a good sample</li>
+    <li>Arterial blood gas (ABG) — if SpO₂ &lt; 94% or respiratory distress</li>
+    <li>Liver function tests, blood glucose, HbA1c (if first presentation of diabetes)</li>
+    <li>COVID-19 testing and influenza rapid antigen test (where clinically indicated)</li>
+    <li>Urine <em>Legionella</em> antigen — in severe CAP, cluster cases, or travel history</li>
+    <li>Urine pneumococcal antigen — in severe CAP; positive even after antibiotics started</li>
+  </ul>
+
+  <h2>When to Consider ICU Admission</h2>
+  <p>CURB-65 identifies severity but is not specifically calibrated for ICU triage. The IDSA/ATS minor criteria for severe CAP and ICU admission include:</p>
+  <ul>
+    <li>RR ≥ 30/min</li>
+    <li>PaO₂/FiO₂ ratio &lt; 250 (on ABG)</li>
+    <li>Multilobar infiltrates on CXR</li>
+    <li>Confusion / disorientation</li>
+    <li>Urea &gt; 7 mmol/L</li>
+    <li>WBC &lt; 4,000 cells/mm³</li>
+    <li>Platelets &lt; 100,000 cells/mm³</li>
+    <li>Temperature &lt; 36°C (hypothermia — an ominous sign in elderly)</li>
+    <li>Hypotension requiring aggressive IV fluids</li>
+  </ul>
+  <p>The presence of <strong>1 major criterion</strong> (septic shock requiring vasopressors, or respiratory failure requiring mechanical ventilation) or <strong>3 or more minor criteria</strong> strongly suggests ICU admission is needed.</p>
+
+  <h2>CURB-65 in Special Populations</h2>
+
+  <h3>Elderly Patients</h3>
+  <p>CURB-65 was developed in a largely elderly population and performs well in this group. However, elderly patients may present atypically — without fever, with confusion as the only symptom, or with a relatively normal CXR early in the illness. A low CURB-65 score in an elderly patient with a general deterioration warrants careful reassessment before discharging.</p>
+
+  <h3>Immunocompromised Patients</h3>
+  <p>CURB-65 was <strong>not validated</strong> for immunocompromised patients (HIV, transplant recipients, patients on chemotherapy or biologics). These patients may have atypical organisms (Pneumocystis jirovecii, fungi, CMV), require broader investigations, and should generally be assessed by a specialist. CURB-65 should be applied with caution in this group.</p>
+
+  <h3>Pregnant Women</h3>
+  <p>Pneumonia in pregnancy carries higher risks of preterm labour and foetal compromise. A lower threshold for admission is appropriate. Avoid fluoroquinolones and tetracyclines — use amoxicillin ± macrolide as first-line, and involve obstetrics early.</p>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>CURB-65 uses <strong>5 clinical parameters</strong> — each scoring 1 point — to predict 30-day mortality in CAP</li>
+      <li>Score <strong>0–1</strong> = low risk → consider home treatment with oral antibiotics</li>
+      <li>Score <strong>2</strong> = moderate risk → consider hospital admission</li>
+      <li>Score <strong>3–5</strong> = high risk → urgent hospital admission; assess for ICU</li>
+      <li><strong>CRB-65</strong> (no urea test) is ideal for primary care and community settings</li>
+      <li>CURB-65 guides admission — but <strong>always integrate clinical judgement</strong>, social circumstances, and comorbidities</li>
+      <li><em>S. pneumoniae</em> is the most common cause of CAP; <strong><em>Klebsiella</em></strong> is a major concern in Indian diabetic and alcoholic patients</li>
+      <li>Send blood cultures and sputum cultures <strong>before starting antibiotics</strong> in hospitalised patients</li>
+      <li>SpO₂ &lt; 94% on room air = red flag; &lt; 90% = immediate oxygen therapy</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <p>🫁 Calculate CURB-65 instantly at the bedside: <a href="https://rxmedcalc.com/medical-calculators/curb65" target="_blank"><strong>RxMedCalc CURB-65 Calculator →</strong></a></p>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Lim WS et al. <em>Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study.</em> Thorax. 2003;58(5):377-382.</li>
+      <li>British Thoracic Society. <em>BTS Guidelines for the Management of Community Acquired Pneumonia in Adults.</em> Thorax. 2009;64(Suppl III):iii1-iii55.</li>
+      <li>Mandell LA et al. <em>Infectious Diseases Society of America/American Thoracic Society Consensus Guidelines on the Management of Community-Acquired Pneumonia in Adults.</em> Clin Infect Dis. 2007;44(Suppl 2):S27-72.</li>
+      <li>Fine MJ et al. <em>A prediction rule to identify low-risk patients with community-acquired pneumonia.</em> N Engl J Med. 1997;336(4):243-250.</li>
+      <li>World Health Organization. <em>Pneumonia Fact Sheet.</em> WHO, 2022.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is written for educational purposes based on internationally recognised guidelines. It is not a substitute for professional medical advice. Antibiotic choices should always be guided by local resistance patterns and individual patient factors. Always consult a qualified physician for clinical decisions.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+
+</div>
+</body>
+</html>
