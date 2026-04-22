@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anion Gap: Metabolic Acidosis, MUDPILES, Delta Ratio & Mixed Disorders | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the anion gap — how to calculate it, albumin correction, the MUDPILES and HARDUPS mnemonics, delta ratio for mixed disorders, Winter's formula, and a step-by-step ABG interpretation framework." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#0e5c6b;--brand-dark:#073a44;--brand-light:#e6f5f7;--accent:#c0392b;--text:#1c1c1e;--muted:#5a5a6a;--border:#c4dde2;--bg:#f4fbfc;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#073a44 0%,#0e5c6b 55%,#1a8599 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--brand);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--accent);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    .formula-box{background:var(--brand-dark);color:#e6f5f7;border-radius:10px;padding:22px 24px;margin:1.6rem 0;font-family:'Lora',serif;font-size:1.05rem;line-height:1.8;}
+    .formula-box .label{font-family:'DM Sans',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.65;margin-bottom:8px;}
+    /* mnemonic cards */
+    .mnemonic-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.4rem 0;}
+    .mnem-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:18px 20px;}
+    .mnem-card .mnem-title{font-weight:700;font-size:15px;margin-bottom:12px;}
+    .mnem-card.hagma .mnem-title{color:#8a1515;}
+    .mnem-card.nagma .mnem-title{color:#1a6b3c;}
+    .mnem-card ul{list-style:none;padding:0;font-size:14px;}
+    .mnem-card li{display:flex;gap:10px;margin-bottom:6px;line-height:1.55;}
+    .mnem-card .letter{font-family:'Lora',serif;font-weight:700;font-size:1.15rem;min-width:18px;color:inherit;}
+    .mnem-card.hagma .letter{color:#8a1515;}
+    .mnem-card.nagma .letter{color:#1a6b3c;}
+    /* ABG steps */
+    .step-grid{counter-reset:abg;list-style:none;padding:0;margin:1.2rem 0;}
+    .step-grid li{counter-increment:abg;display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);align-items:flex-start;}
+    .step-grid li:last-child{border-bottom:none;}
+    .step-grid li::before{content:counter(abg);background:var(--brand);color:#fff;border-radius:50%;min-width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.tip{border-color:#1e8c4a;background:#edf7f1;}
+    .callout p{margin:0;}
+    .example{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:22px 24px;margin:1.6rem 0;}
+    .example .ex-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:10px;}
+    .example p{margin-bottom:.55rem;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.mnemonic-grid{grid-template-columns:1fr;}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; Anion Gap</header>
+<div class="hero">
+  <div class="tag">🧪 Acid-Base &amp; Electrolytes</div>
+  <h1>Anion Gap: Metabolic Acidosis, MUDPILES, Delta Ratio &amp; Mixed Disorders</h1>
+  <p class="subtitle">How to calculate the anion gap, albumin correction, MUDPILES vs HARDUPS causes of acidosis, the delta ratio for detecting mixed disorders, Winter's formula, and a step-by-step ABG interpretation framework.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on Standard Acid-Base Physiology &amp; Clinical References</p>
+</div>
+<div class="wrap">
+
+  <p>The anion gap is one of the most powerful and frequently used calculations in emergency medicine and internal medicine. It takes three numbers from a basic metabolic panel — sodium, chloride, and bicarbonate — and reveals something the individual values cannot: <strong>whether there are unmeasured acids hiding in the blood.</strong></p>
+  <p>A high anion gap can be the first clue to DKA in an apparently "stable" diabetic, lactic acidosis in a septic patient, salicylate poisoning in a confused teenager, or renal failure in someone who was thought to be well. A normal anion gap metabolic acidosis points to completely different diagnoses — diarrhoea, renal tubular acidosis, adrenal insufficiency.</p>
+  <p>This guide explains the anion gap calculation from first principles, how to correct it for albumin, how to use the delta ratio to find mixed disorders that would otherwise be missed, and how it fits into the broader framework of ABG interpretation.</p>
+
+  <h2>The Concept of the Anion Gap</h2>
+  <p>The body must maintain <strong>electrical neutrality</strong> — the total concentration of positive ions (cations) must equal the total concentration of negative ions (anions) in plasma. The main measured cation is sodium (Na⁺). The main measured anions are chloride (Cl⁻) and bicarbonate (HCO₃⁻).</p>
+  <p>However, there are many anions in plasma that are <em>not routinely measured</em> — including albumin, phosphate, sulphate, and organic acids. These "unmeasured anions" always account for a small gap between the measured cations and measured anions. This gap is the <strong>anion gap</strong>.</p>
+  <p>When abnormal acids (like lactic acid, ketoacids, or toxins) accumulate in the blood, they add unmeasured anions to plasma while bicarbonate is consumed in buffering them. The anion gap rises. This is the signal of a <strong>high anion gap metabolic acidosis (HAGMA)</strong>.</p>
+
+  <h2>Calculating the Anion Gap</h2>
+
+  <div class="formula-box">
+    <div class="label">Anion Gap Formula</div>
+    <strong>AG = Na⁺ − (Cl⁻ + HCO₃⁻)</strong><br><br>
+    Normal range: <strong>8–12 mEq/L</strong> (with modern analysers; older range was 12–16)<br><br>
+    <span style="font-size:.88rem;opacity:.75;">All values in mEq/L or mmol/L. Potassium (K⁺) is sometimes included in older formulae but is typically omitted in modern practice.</span>
+  </div>
+
+  <p><strong>Example:</strong> Na⁺ = 140, Cl⁻ = 102, HCO₃⁻ = 14<br>
+  AG = 140 − (102 + 14) = 140 − 116 = <strong>24 mEq/L</strong> → Elevated → HAGMA present</p>
+
+  <h2>Albumin Correction — The Most Commonly Missed Step</h2>
+  <p>Albumin is the largest contributor to unmeasured anions in plasma. A patient with <strong>low albumin</strong> (hypoalbuminaemia) will have a falsely <em>low</em> baseline anion gap. In a critically ill, malnourished, or cirrhotic patient with albumin of 2.0 g/dL, an anion gap of 14 might actually represent a <strong>significantly elevated</strong> corrected gap — and a HAGMA would be missed entirely.</p>
+
+  <div class="formula-box">
+    <div class="label">Albumin-Corrected Anion Gap</div>
+    <strong>Corrected AG = AG + 2.5 × (4.0 − Albumin g/dL)</strong><br><br>
+    <span style="font-size:.88rem;opacity:.75;">Always calculate the corrected AG before concluding the anion gap is normal in any patient who might have low albumin — especially ICU, liver disease, nephrotic syndrome, or malnutrition.</span>
+  </div>
+
+  <p><strong>Example:</strong> Measured AG = 14, Albumin = 2.0 g/dL<br>
+  Corrected AG = 14 + 2.5 × (4.0 − 2.0) = 14 + 5 = <strong>19 mEq/L</strong> → Elevated despite "normal" measured AG</p>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Always correct the anion gap for albumin</strong> in any patient who may be hypoalbuminaemic. Failure to do so is one of the most common causes of missed HAGMA in clinical practice.</p>
+  </div>
+
+  <h2>Causes of High Anion Gap Metabolic Acidosis (HAGMA) — MUDPILES</h2>
+
+  <div class="mnemonic-grid">
+    <div class="mnem-card hagma">
+      <div class="mnem-title">🔴 HAGMA — MUDPILES</div>
+      <ul>
+        <li><span class="letter">M</span><span><strong>Methanol</strong> poisoning — formic acid accumulation</span></li>
+        <li><span class="letter">U</span><span><strong>Uraemia</strong> — renal failure, sulphates and phosphates</span></li>
+        <li><span class="letter">D</span><span><strong>DKA</strong> — diabetic ketoacidosis; beta-hydroxybutyrate</span></li>
+        <li><span class="letter">P</span><span><strong>Propylene glycol / Paracetamol</strong> (hepatic failure)</span></li>
+        <li><span class="letter">I</span><span><strong>Isoniazid / Iron</strong> overdose → lactic acidosis</span></li>
+        <li><span class="letter">L</span><span><strong>Lactic acidosis</strong> — type A (hypoperfusion) or type B (drugs, liver)</span></li>
+        <li><span class="letter">E</span><span><strong>Ethylene glycol</strong> — antifreeze; oxalic acid</span></li>
+        <li><span class="letter">S</span><span><strong>Salicylate</strong> toxicity (aspirin overdose)</span></li>
+      </ul>
+    </div>
+    <div class="mnem-card nagma">
+      <div class="mnem-title">🟢 NAGMA — HARDUPS</div>
+      <ul>
+        <li><span class="letter">H</span><span><strong>Hyperalimentation</strong> (TPN — excess chloride)</span></li>
+        <li><span class="letter">A</span><span><strong>Addison's disease</strong> — adrenal insufficiency</span></li>
+        <li><span class="letter">R</span><span><strong>Renal tubular acidosis</strong> (types 1, 2, 4)</span></li>
+        <li><span class="letter">D</span><span><strong>Diarrhoea</strong> — bicarbonate loss from gut</span></li>
+        <li><span class="letter">U</span><span><strong>Ureteroenteric fistula</strong> / diversion</span></li>
+        <li><span class="letter">P</span><span><strong>Pancreatic fistula</strong> — HCO₃⁻ loss</span></li>
+        <li><span class="letter">S</span><span><strong>Saline excess</strong> — hyperchloraemic acidosis</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <p>✅ <strong>In India,</strong> lactic acidosis from sepsis and DKA are the most common causes of HAGMA in emergency settings. Salicylate and paracetamol overdose are important in poisoning cases. Methanol and ethylene glycol poisoning occur from illicit alcohol (hooch) consumption — a recurrent public health emergency.</p>
+  </div>
+
+  <h2>The Delta Ratio — Detecting Mixed Disorders</h2>
+  <p>When a HAGMA is present, a crucial next question is: <strong>is there a hidden second acid-base disorder?</strong> In a pure HAGMA, every 1 mEq/L rise in the anion gap should be matched by an approximately equal fall in bicarbonate. If the bicarbonate is higher or lower than expected, there is a mixed disorder.</p>
+  <p>The <strong>delta ratio</strong> quantifies this relationship:</p>
+
+  <div class="formula-box">
+    <div class="label">Delta Ratio (only valid when HAGMA confirmed — corrected AG &gt; 12)</div>
+    <strong>Δ/Δ = (Corrected AG − 12) ÷ (24 − HCO₃⁻)</strong>
+  </div>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Delta Ratio</th><th>Interpretation</th></tr></thead>
+    <tbody>
+      <tr><td><strong>&lt; 0.4</strong></td><td>Pure non-gap metabolic acidosis — no HAGMA contribution (recalculate, check correction)</td></tr>
+      <tr><td><strong>0.4 – 1.0</strong></td><td><strong>Mixed HAGMA + non-gap metabolic acidosis</strong> — both present simultaneously</td></tr>
+      <tr><td><strong>1.0 – 2.0</strong></td><td>Pure HAGMA — expected range for uncomplicated high anion gap acidosis</td></tr>
+      <tr><td><strong>&gt; 2.0</strong></td><td><strong>HAGMA + concurrent metabolic alkalosis</strong> — HCO₃ higher than expected; look for vomiting, diuretics, NG suction</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Winter's Formula — Checking Respiratory Compensation</h2>
+  <p>In a metabolic acidosis, the lungs compensate by hyperventilating to "blow off" CO₂ and raise the pH. <strong>Winter's formula</strong> predicts the expected compensatory pCO₂:</p>
+
+  <div class="formula-box">
+    <div class="label">Winter's Formula — Expected pCO₂ in Metabolic Acidosis</div>
+    <strong>Expected pCO₂ = (1.5 × HCO₃⁻) + 8 ± 2 mmHg</strong>
+  </div>
+
+  <ul>
+    <li>If actual pCO₂ is <strong>equal to expected</strong> → appropriate respiratory compensation → pure metabolic acidosis</li>
+    <li>If actual pCO₂ is <strong>higher than expected</strong> → additional respiratory acidosis (e.g. COPD, respiratory failure)</li>
+    <li>If actual pCO₂ is <strong>lower than expected</strong> → additional respiratory alkalosis (e.g. sepsis-driven hyperventilation, salicylate toxicity)</li>
+  </ul>
+
+  <h2>Step-by-Step ABG Interpretation Framework</h2>
+  <ol class="step-grid">
+    <li><strong>Check the pH:</strong> &lt; 7.35 = acidaemia; &gt; 7.45 = alkalaemia; 7.35–7.45 = normal (but may still have a mixed disorder)</li>
+    <li><strong>Identify the primary disorder:</strong> Low HCO₃ + low pH = metabolic acidosis. High pCO₂ + low pH = respiratory acidosis. (And vice versa for alkalosis)</li>
+    <li><strong>Calculate the anion gap:</strong> AG = Na − (Cl + HCO₃). If albumin is low, calculate corrected AG.</li>
+    <li><strong>If HAGMA:</strong> Use MUDPILES to identify cause. Calculate delta ratio to detect mixed disorders.</li>
+    <li><strong>If NAGMA:</strong> Use HARDUPS to identify cause.</li>
+    <li><strong>Check compensation:</strong> Is it appropriate? Use Winter's formula for metabolic acidosis. (Similar formulae exist for other primary disorders.)</li>
+    <li><strong>Interpret in full clinical context:</strong> ABG numbers alone never make a diagnosis — correlate with history, examination, and investigations.</li>
+  </ol>
+
+  <h2>Worked Example</h2>
+  <div class="example">
+    <div class="ex-label">📋 Clinical Scenario</div>
+    <p><strong>Patient:</strong> 24-year-old woman with type 1 diabetes, 2-day history of vomiting and polyuria. Na⁺ 138, Cl⁻ 96, HCO₃⁻ 8, pCO₂ 20, pH 7.22, albumin 4.0 g/dL.</p>
+    <p><strong>Step 1 — pH:</strong> 7.22 → acidaemia ✓</p>
+    <p><strong>Step 2 — Primary disorder:</strong> Low HCO₃ (8) + low pH → metabolic acidosis ✓</p>
+    <p><strong>Step 3 — Anion gap:</strong> AG = 138 − (96 + 8) = <strong>34 mEq/L</strong> → significant HAGMA</p>
+    <p><strong>Step 4 — MUDPILES:</strong> DKA in type 1 diabetic → <strong>ketoacidosis</strong>. Send ketones and glucose urgently.</p>
+    <p><strong>Step 5 — Delta ratio:</strong> (34 − 12) ÷ (24 − 8) = 22 ÷ 16 = <strong>1.375</strong> → Pure HAGMA, no mixed disorder ✓</p>
+    <p><strong>Step 6 — Winter's formula:</strong> Expected pCO₂ = (1.5 × 8) + 8 = <strong>20 mmHg</strong>. Actual pCO₂ = 20 → appropriate compensation (Kussmaul breathing) ✓</p>
+    <p style="font-size:14.5px;color:var(--muted);margin-top:8px;"><em>Pure HAGMA from DKA with appropriate respiratory compensation. No mixed disorder. Management: IV fluids, insulin infusion, electrolyte monitoring (especially potassium before insulin).</em></p>
+  </div>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>AG = <strong>Na − (Cl + HCO₃)</strong>; normal 8–12 mEq/L</li>
+      <li><strong>Always correct for albumin</strong> — Corrected AG = AG + 2.5 × (4 − albumin g/dL)</li>
+      <li><strong>HAGMA (AG &gt; 12):</strong> MUDPILES — Methanol, Uraemia, DKA, Propylene glycol, Isoniazid/Iron, Lactic acidosis, Ethylene glycol, Salicylates</li>
+      <li><strong>NAGMA (normal AG):</strong> HARDUPS — Hyperalimentation, Addison's, RTA, Diarrhoea, Ureteroenteric, Pancreatic fistula, Saline</li>
+      <li><strong>Delta ratio</strong> (only in HAGMA): 0.4–1.0 = mixed HAGMA+NAGMA; 1–2 = pure HAGMA; &gt;2 = HAGMA + metabolic alkalosis</li>
+      <li><strong>Winter's formula:</strong> Expected pCO₂ = (1.5 × HCO₃) + 8 ± 2 — checks respiratory compensation</li>
+      <li>In India: lactic acidosis (sepsis), DKA, and methanol (hooch) are the most clinically important HAGMA causes</li>
+    </ul>
+  </div>
+
+  <div class="callout" style="border-color:var(--brand);background:var(--brand-light);">
+    <p>🧪 Calculate anion gap, albumin-corrected AG, delta ratio, and Winter's formula instantly: <a href="https://rxmedcalc.com/medical-calculators/anion-gap" target="_blank"><strong>RxMedCalc Anion Gap Calculator →</strong></a></p>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Emmett M, Narins RG. <em>Clinical use of the anion gap.</em> Medicine (Baltimore). 1977;56(1):38-54.</li>
+      <li>Figge J et al. <em>Serum proteins and acid-base equilibria: a follow-up.</em> J Lab Clin Med. 1992;120(5):713-719.</li>
+      <li>Winter SD et al. <em>The fall of the serum anion gap.</em> Arch Intern Med. 1990;150(2):311-313.</li>
+      <li>Kraut JA, Madias NE. <em>Metabolic acidosis: pathophysiology, diagnosis, and management.</em> Nat Rev Nephrol. 2010;6(5):274-285.</li>
+      <li>Berend K et al. <em>Physiological approach to assessment of acid-base disturbances.</em> N Engl J Med. 2014;371(15):1434-1445.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes. Acid-base interpretation must always be made in the full clinical context by a qualified physician. ABG results are one component of patient assessment and should not be interpreted in isolation.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
