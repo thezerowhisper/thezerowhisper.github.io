@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wells Score for DVT & PE: Diagnosing Blood Clots | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the Wells Score for DVT and PE — how to calculate pre-test probability, when to use D-Dimer vs direct imaging, and how to safely rule out or diagnose venous thromboembolism." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#6b1a1a;--brand-dark:#3d0e0e;--brand-light:#faeaea;--accent:#1a5c96;--text:#1c1c1e;--muted:#5a5a6a;--border:#e5cece;--bg:#fdf8f8;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#3d0e0e 0%,#6b1a1a 55%,#962828 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--brand);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    /* pathway cards */
+    .pathway{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.4rem 0;}
+    .path-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:18px 20px;}
+    .path-card .path-title{font-weight:700;font-size:15px;margin-bottom:8px;color:var(--brand);}
+    .path-card ol{padding-left:18px;font-size:14.5px;}
+    .path-card li{margin-bottom:6px;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.blue{border-color:#1a5c96;background:#e8f2fb;}
+    .callout.tip{border-color:#1e8c4a;background:#edf7f1;}
+    .callout p{margin:0;}
+    .example{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:22px 24px;margin:1.6rem 0;}
+    .example .ex-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#c0392b;margin-bottom:10px;}
+    .example p{margin-bottom:.55rem;}
+    .score-total{font-family:'Lora',serif;font-size:2rem;font-weight:700;color:var(--brand);}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.pathway{grid-template-columns:1fr;}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; Wells Score DVT &amp; PE</header>
+<div class="hero">
+  <div class="tag">🩸 Haematology &amp; Emergency</div>
+  <h1>Wells Score for DVT &amp; PE: Diagnosing Venous Blood Clots</h1>
+  <p class="subtitle">How to calculate pre-test probability for DVT and PE, when to use D-Dimer vs direct imaging, the CTPA and ultrasound pathways, and when to start anticoagulation before imaging.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on NICE, ESC 2019 PE Guidelines &amp; Wells et al.</p>
+</div>
+<div class="wrap">
+
+  <p>A swollen leg. Unexplained breathlessness. A sudden sharp chest pain with a racing heart. These symptoms bring patients to doctors every day — and the critical diagnostic question is always: <strong>could this be a blood clot?</strong></p>
+  <p>Venous thromboembolism (VTE) — which includes deep vein thrombosis (DVT) in the legs and pulmonary embolism (PE) in the lungs — is a major cause of preventable death worldwide. Missed PE is a leading cause of unexpected in-hospital death. But the symptoms of DVT and PE are non-specific and can mimic dozens of other conditions. Scanning every patient who comes in with a swollen leg or chest pain would overwhelm radiology departments and expose millions to unnecessary radiation.</p>
+  <p>The <strong>Wells Score</strong> solves this problem. Developed by Dr Philip Wells and colleagues, it calculates the pre-test probability of DVT or PE from clinical features alone — telling the clinician whether to go straight to imaging, or first check a D-Dimer blood test to safely rule out VTE without a scan.</p>
+
+  <h2>What Is Venous Thromboembolism (VTE)?</h2>
+  <p><strong>Deep vein thrombosis (DVT)</strong> occurs when a blood clot forms in a deep vein, most commonly in the calf, thigh, or pelvis. The leg becomes swollen, warm, red, and painful. The danger is that the clot can break off and travel through the bloodstream to the lungs.</p>
+  <p><strong>Pulmonary embolism (PE)</strong> occurs when a clot (usually from a DVT) lodges in the pulmonary arteries, blocking blood flow to part of the lung. Symptoms include sudden breathlessness, pleuritic chest pain, haemoptysis (coughing blood), and in severe cases, haemodynamic collapse and cardiac arrest. Massive PE is immediately life-threatening.</p>
+  <p>DVT and PE are part of the same disease spectrum — collectively called <strong>venous thromboembolism (VTE)</strong>. DVT is present in approximately 70% of patients diagnosed with PE.</p>
+
+  <h2>Risk Factors for VTE</h2>
+  <p>Understanding VTE risk factors helps explain why the Wells Score includes elements like recent surgery and active cancer. Key risk factors include:</p>
+  <ul>
+    <li><strong>Recent surgery or trauma</strong> — especially orthopaedic surgery (hip/knee replacement carries very high VTE risk)</li>
+    <li><strong>Prolonged immobility</strong> — long-haul flights, bed rest, hospitalisation, plaster casts</li>
+    <li><strong>Active cancer</strong> — Trousseau's syndrome: cancer causes a hypercoagulable state; VTE may be the first presentation of occult malignancy</li>
+    <li><strong>Previous VTE</strong> — the strongest individual risk factor</li>
+    <li><strong>Pregnancy and the postpartum period</strong> — especially the 6 weeks after delivery</li>
+    <li><strong>Oral contraceptive pill (OCP) and HRT</strong> — oestrogen increases coagulability</li>
+    <li><strong>Thrombophilia</strong> — inherited clotting disorders: Factor V Leiden, prothrombin mutation, antiphospholipid syndrome</li>
+    <li><strong>Obesity</strong> — BMI &gt; 30 doubles VTE risk</li>
+    <li><strong>Age &gt; 60 years</strong> — VTE incidence rises steeply with age</li>
+  </ul>
+
+  <h2>The Wells DVT Score</h2>
+  <p>There are two separate Wells Scores — one for DVT and one for PE. They use different criteria and should not be confused.</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Clinical Feature</th><th>Points</th></tr></thead>
+    <tbody>
+      <tr><td>Active cancer (treatment ongoing, within 6 months, or palliative)</td><td>+1</td></tr>
+      <tr><td>Paralysis, paresis, or recent plaster immobilisation of lower extremity</td><td>+1</td></tr>
+      <tr><td>Recently bedridden &gt; 3 days OR major surgery within 12 weeks</td><td>+1</td></tr>
+      <tr><td>Localised tenderness along the deep venous system</td><td>+1</td></tr>
+      <tr><td>Entire leg swollen</td><td>+1</td></tr>
+      <tr><td>Calf swelling &gt; 3 cm compared to asymptomatic leg</td><td>+1</td></tr>
+      <tr><td>Pitting oedema confined to symptomatic leg</td><td>+1</td></tr>
+      <tr><td>Collateral superficial veins (non-varicose)</td><td>+1</td></tr>
+      <tr><td>Previously documented DVT</td><td>+1</td></tr>
+      <tr><td><strong>Alternative diagnosis at least as likely as DVT</strong></td><td><strong>−2</strong></td></tr>
+    </tbody>
+  </table></div>
+
+  <p><strong>Interpretation:</strong> Score &lt; 2 = DVT Unlikely. Score ≥ 2 = DVT Likely.</p>
+  <div class="callout warning">
+    <p>⚠️ <strong>The −2 "alternative diagnosis" criterion is critical and often missed.</strong> If cellulitis, Baker's cyst rupture, muscle haematoma, or post-thrombotic syndrome is equally or more likely than DVT, subtract 2 points. This item requires clinical judgement and significantly changes management.</p>
+  </div>
+
+  <h2>The Wells PE Score</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Clinical Feature</th><th>Points</th></tr></thead>
+    <tbody>
+      <tr><td>Clinical signs and symptoms of DVT (leg swelling, tenderness)</td><td>+3</td></tr>
+      <tr><td>PE is the most likely diagnosis or equally likely</td><td>+3</td></tr>
+      <tr><td>Heart rate &gt; 100 bpm</td><td>+1.5</td></tr>
+      <tr><td>Immobilisation ≥ 3 days or surgery in the previous 4 weeks</td><td>+1.5</td></tr>
+      <tr><td>Previous DVT or PE</td><td>+1.5</td></tr>
+      <tr><td>Haemoptysis (coughing blood)</td><td>+1</td></tr>
+      <tr><td>Active malignancy (treatment within 6 months or palliative)</td><td>+1</td></tr>
+    </tbody>
+  </table></div>
+
+  <p><strong>Interpretation:</strong> Score ≤ 4 = PE Unlikely. Score &gt; 4 = PE Likely.</p>
+
+  <h2>The Diagnostic Pathway — What to Do with the Score</h2>
+
+  <div class="pathway">
+    <div class="path-card">
+      <div class="path-title">🦵 DVT Pathway</div>
+      <ol>
+        <li><strong>Score &lt; 2 (Unlikely):</strong> Send high-sensitivity D-Dimer</li>
+        <li>D-Dimer negative → DVT excluded, no further imaging needed</li>
+        <li>D-Dimer positive → Proximal leg vein <strong>ultrasound</strong></li>
+        <li><strong>Score ≥ 2 (Likely):</strong> Arrange proximal leg ultrasound directly — do not wait for D-Dimer</li>
+        <li>Consider interim anticoagulation while awaiting ultrasound if high clinical suspicion</li>
+      </ol>
+    </div>
+    <div class="path-card">
+      <div class="path-title">🫁 PE Pathway</div>
+      <ol>
+        <li><strong>Score ≤ 4 (Unlikely):</strong> Send high-sensitivity D-Dimer</li>
+        <li>D-Dimer negative → PE excluded, no further imaging needed</li>
+        <li>D-Dimer positive → <strong>CTPA</strong> (CT pulmonary angiography)</li>
+        <li><strong>Score &gt; 4 (Likely):</strong> Arrange CTPA directly — do not delay for D-Dimer</li>
+        <li>If haemodynamically unstable: immediate CTPA or bedside echocardiography</li>
+      </ol>
+    </div>
+  </div>
+
+  <h2>D-Dimer — Understanding the Test</h2>
+  <p>D-Dimer is a fibrin degradation product — a substance produced when the body breaks down a blood clot. A <strong>negative D-Dimer</strong> in a low-probability patient has a very high negative predictive value — it effectively rules out VTE without any imaging. This is its primary clinical value.</p>
+  <p>However, D-Dimer is notoriously <strong>non-specific</strong>. It is elevated in dozens of conditions where clot formation and breakdown occurs:</p>
+  <ul>
+    <li>Infection and sepsis</li>
+    <li>Active cancer</li>
+    <li>Pregnancy (D-Dimer rises throughout all three trimesters)</li>
+    <li>Recent surgery or trauma</li>
+    <li>Atrial fibrillation</li>
+    <li>Liver disease</li>
+    <li>Simply with increasing age</li>
+  </ul>
+  <p>A positive D-Dimer alone does <em>not</em> diagnose VTE — it only indicates the need for imaging. In high-probability patients (Wells score likely), D-Dimer adds no value and imaging should proceed directly.</p>
+
+  <h3>Age-Adjusted D-Dimer</h3>
+  <p>In patients over 50, a fixed D-Dimer threshold of 500 ng/mL becomes less useful — D-Dimer rises with age even without VTE, leading to many false positives. The <strong>age-adjusted D-Dimer</strong> threshold improves specificity in older patients:</p>
+  <p style="text-align:center; font-family:'Lora',serif; font-size:1.1rem; background:var(--brand-light); padding:14px; border-radius:8px;"><strong>Age-adjusted threshold = Age × 10 ng/mL</strong> (for patients &gt; 50 years)</p>
+  <p>For example, an 80-year-old patient would have an adjusted D-Dimer threshold of 800 ng/mL rather than the standard 500 ng/mL — safely excluding more elderly patients from unnecessary CT scans.</p>
+
+  <h2>Worked Example</h2>
+  <div class="example">
+    <div class="ex-label">📋 Clinical Scenario — PE</div>
+    <p><strong>Patient:</strong> 55-year-old woman, 2 weeks post right knee replacement surgery. Presents with sudden onset breathlessness and right-sided pleuritic chest pain. Heart rate 114 bpm. No leg swelling. No prior VTE or malignancy. No haemoptysis.</p>
+    <ul style="margin-bottom:12px;">
+      <li>Clinical signs of DVT: <strong>0</strong> (no leg swelling)</li>
+      <li>PE most likely diagnosis: <strong>+3</strong> (no other clear cause)</li>
+      <li>Heart rate &gt; 100 bpm: <strong>+1.5</strong></li>
+      <li>Surgery within 4 weeks: <strong>+1.5</strong></li>
+      <li>Previous DVT/PE: <strong>0</strong></li>
+      <li>Haemoptysis: <strong>0</strong></li>
+      <li>Active cancer: <strong>0</strong></li>
+    </ul>
+    <p>Wells PE Score = <span class="score-total">6.0</span> → <strong>PE Likely</strong></p>
+    <p style="font-size:14.5px;color:var(--muted);margin-top:8px;"><em>Score &gt; 4 = PE Likely. Do NOT send D-Dimer — proceed directly to <strong>CTPA.</strong> Start therapeutic anticoagulation (LMWH or DOAC) immediately while awaiting the scan unless there is a strong contraindication.</em></p>
+  </div>
+
+  <h2>Treatment — Anticoagulation for VTE</h2>
+  <p>Once VTE is confirmed on imaging, anticoagulation is the cornerstone of treatment. Goals are to prevent clot extension, prevent PE (if DVT), prevent recurrence, and allow natural clot resolution.</p>
+  <h3>DOACs — Preferred First Line</h3>
+  <p>Direct oral anticoagulants are now the preferred treatment for most patients with acute DVT or PE (NICE, ESC, ASH guidelines):</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Drug</th><th>Dosing (VTE Treatment)</th><th>Key Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Rivaroxaban (Xarelto)</strong></td><td>15 mg BD × 21 days, then 20 mg OD</td><td>No bridging LMWH needed. With food.</td></tr>
+      <tr><td><strong>Apixaban (Eliquis)</strong></td><td>10 mg BD × 7 days, then 5 mg BD</td><td>No bridging needed. Most studied in cancer-VTE.</td></tr>
+      <tr><td><strong>Dabigatran (Pradaxa)</strong></td><td>150 mg BD after 5–10 days LMWH</td><td>Requires LMWH bridge. Avoid CrCl &lt; 30.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>When Warfarin or LMWH Is Still Used</h3>
+  <ul>
+    <li><strong>Pregnancy:</strong> DOACs are contraindicated — use LMWH throughout pregnancy and 6 weeks postpartum</li>
+    <li><strong>Antiphospholipid syndrome (APS):</strong> Warfarin is preferred over DOACs — DOACs have shown higher recurrence in triple-positive APS</li>
+    <li><strong>Active cancer:</strong> LMWH (dalteparin) or DOACs (apixaban, rivaroxaban) — specific cancer-VTE guidelines apply</li>
+    <li><strong>Severe renal impairment</strong> (CrCl &lt; 15–30): Most DOACs are contraindicated; LMWH or warfarin with close monitoring</li>
+  </ul>
+
+  <h2>Duration of Anticoagulation</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Clinical Scenario</th><th>Minimum Duration</th></tr></thead>
+    <tbody>
+      <tr><td>Provoked DVT/PE (surgery, trauma, immobility) — major transient risk factor</td><td>3 months</td></tr>
+      <tr><td>Unprovoked DVT/PE — first episode, low bleed risk</td><td>Minimum 3–6 months; extended treatment considered</td></tr>
+      <tr><td>Recurrent VTE</td><td>Long-term (indefinite anticoagulation)</td></tr>
+      <tr><td>Active cancer-associated VTE</td><td>Continue until cancer resolved or inactive</td></tr>
+      <tr><td>Antiphospholipid syndrome</td><td>Long-term (indefinite)</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>There are <strong>two separate Wells Scores</strong> — one for DVT and one for PE — use the correct one</li>
+      <li>DVT Wells &lt; 2 = Unlikely; ≥ 2 = Likely. PE Wells ≤ 4 = Unlikely; &gt; 4 = Likely</li>
+      <li><strong>Unlikely + negative D-Dimer = VTE safely excluded</strong> without imaging</li>
+      <li><strong>Likely = go directly to imaging</strong> — D-Dimer adds no value in high probability patients</li>
+      <li>The <strong>−2 "alternative diagnosis" criterion</strong> in DVT score is critical — do not omit it</li>
+      <li>D-Dimer is highly sensitive but <strong>non-specific</strong> — positive result means imaging, not diagnosis</li>
+      <li>Use <strong>age-adjusted D-Dimer</strong> (age × 10) in patients over 50 to improve specificity</li>
+      <li><strong>DOACs are preferred first-line</strong> for most VTE — LMWH or warfarin for pregnancy, APS, and severe renal impairment</li>
+    </ul>
+  </div>
+
+  <div class="callout blue">
+    <p>🩸 Calculate Wells DVT and PE pre-test probability: <a href="https://rxmedcalc.com/medical-calculators/wells-score" target="_blank"><strong>RxMedCalc Wells Score Calculator →</strong></a></p>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Wells PS et al. <em>Value of assessment of pretest probability of deep-vein thrombosis in clinical management.</em> Lancet. 1997;350(9094):1795-1798.</li>
+      <li>Wells PS et al. <em>Derivation of a simple clinical model to categorize patients' probability of pulmonary embolism.</em> Thromb Haemost. 2000;83(3):416-420.</li>
+      <li>Konstantinides SV et al. <em>2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism.</em> Eur Heart J. 2020;41(4):543-603.</li>
+      <li>NICE. <em>Venous thromboembolic diseases: diagnosis, management and thrombophilia testing.</em> Clinical Guideline NG158, 2020.</li>
+      <li>Righini M et al. <em>Age-adjusted D-dimer cutoff levels to rule out pulmonary embolism.</em> JAMA. 2014;311(11):1117-1124.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes based on NICE and ESC guidelines. VTE diagnosis and management decisions must be made by a qualified physician with full clinical assessment of the individual patient.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
