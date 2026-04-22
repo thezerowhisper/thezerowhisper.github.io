@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHA₂DS₂-VASc Score: Stroke Risk in Atrial Fibrillation | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the CHA₂DS₂-VASc score for stroke risk stratification in atrial fibrillation — including how to calculate it, what the score means, and when to start anticoagulation." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand:       #1a4e8a;
+      --brand-dark:  #0f2f57;
+      --brand-light: #e8f0fb;
+      --accent:      #c0392b;
+      --text:        #1c1c1e;
+      --muted:       #5a5a6a;
+      --border:      #d5dfef;
+      --bg:          #f5f8fd;
+      --white:       #ffffff;
+      --max:         740px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.8; color: var(--text); background: var(--bg); }
+
+    header { background: var(--brand-dark); color: #fff; padding: 14px 24px; font-size: 15px; }
+    header a { color: #fff; text-decoration: none; font-weight: 600; }
+
+    .hero {
+      background: linear-gradient(135deg, #0f2f57 0%, #1a4e8a 55%, #2566b8 100%);
+      color: #fff; padding: 56px 24px 48px; text-align: center;
+    }
+    .hero .tag {
+      display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35);
+      border-radius: 20px; font-size: 13px; font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase; padding: 4px 14px; margin-bottom: 20px;
+    }
+    .hero h1 { font-family: 'Lora', serif; font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 700; line-height: 1.25; max-width: 680px; margin: 0 auto 18px; }
+    .hero .subtitle { font-size: 16px; opacity: .88; max-width: 560px; margin: 0 auto 28px; }
+    .hero .meta { font-size: 13px; opacity: .7; font-style: italic; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 48px 24px 64px; }
+
+    h2 { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: var(--brand); margin: 2.6rem 0 .8rem; padding-bottom: .4rem; border-bottom: 2px solid var(--brand-light); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 1.08rem; font-weight: 600; color: var(--text); margin: 1.8rem 0 .5rem; }
+    p { margin-bottom: 1.1rem; }
+    strong { font-weight: 600; }
+    em { font-style: italic; color: var(--muted); }
+    a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    ul, ol { padding-left: 22px; margin-bottom: 1rem; }
+    li { margin-bottom: .45rem; line-height: 1.75; }
+
+    /* Score breakdown cards */
+    .score-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 1.4rem 0; }
+    .score-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 8px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px;
+    }
+    .score-card .pts {
+      background: var(--brand); color: #fff; border-radius: 6px;
+      font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700;
+      min-width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .score-card .pts.two { background: var(--accent); }
+    .score-card .info h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .score-card .info p { font-size: 13px; color: var(--muted); margin: 0; }
+
+    /* Risk table */
+    .table-wrap { overflow-x: auto; margin: 1.4rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    thead tr { background: var(--brand); color: #fff; }
+    thead th { padding: 10px 14px; text-align: left; font-weight: 600; }
+    tbody tr:nth-child(even) { background: var(--brand-light); }
+    tbody tr:nth-child(odd)  { background: var(--white); }
+    td { padding: 9px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+
+    /* Risk level badges */
+    .badge { display: inline-block; border-radius: 4px; font-size: 12px; font-weight: 600; padding: 2px 8px; }
+    .badge.low  { background: #d4edda; color: #155724; }
+    .badge.mod  { background: #fff3cd; color: #856404; }
+    .badge.high { background: #f8d7da; color: #721c24; }
+
+    .callout { border-left: 4px solid var(--brand); background: var(--brand-light); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 1.6rem 0; font-size: 15.5px; }
+    .callout.warning { border-color: #c0392b; background: #fdf0ee; }
+    .callout.tip { border-color: #1e8c4a; background: #edf7f1; }
+    .callout p { margin: 0; }
+
+    .example { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; margin: 1.6rem 0; }
+    .example .ex-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 10px; }
+    .example p { margin-bottom: .55rem; }
+    .example .score-total { font-family: 'Lora', serif; font-size: 2rem; font-weight: 700; color: var(--brand); }
+
+    .takeaways { background: var(--brand); color: #fff; border-radius: 12px; padding: 26px 28px; margin: 2.4rem 0; }
+    .takeaways h2 { font-family: 'Lora', serif; color: #fff; border-bottom: 1px solid rgba(255,255,255,.3); margin-top: 0; padding-bottom: 10px; margin-bottom: 16px; font-size: 1.25rem; }
+    .takeaways ul { padding-left: 20px; }
+    .takeaways li { margin-bottom: 8px; font-size: 15.5px; line-height: 1.6; }
+
+    .references { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-top: 2rem; }
+    .references h2 { font-size: 1.1rem; margin-top: 0; }
+    .references ol { padding-left: 20px; font-size: 14px; color: var(--muted); }
+    .references li { margin-bottom: 6px; line-height: 1.55; }
+
+    .disclaimer { margin-top: 2.4rem; font-size: 13px; color: var(--muted); font-style: italic; border-top: 1px solid var(--border); padding-top: 16px; line-height: 1.6; }
+
+    @media (max-width: 600px) { .hero { padding: 36px 16px 32px; } .wrap { padding: 32px 16px 48px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; Articles &nbsp;›&nbsp; CHA₂DS₂-VASc Score
+</header>
+
+<div class="hero">
+  <div class="tag">Cardiology</div>
+  <h1>CHA₂DS₂-VASc Score: Stroke Risk in Atrial Fibrillation</h1>
+  <p class="subtitle">A complete guide to calculating stroke risk in AFib — what each point means, when to start anticoagulation, and how to choose the right blood thinner.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on ESC, ACC/AHA &amp; Indian Heart Rhythm Society Guidelines</p>
+</div>
+
+<div class="wrap">
+
+  <p>Atrial fibrillation (AFib) is the most common sustained cardiac arrhythmia in the world, affecting over 33 million people globally. It is not just an irregular heartbeat — it is a powerful and independent risk factor for stroke. People with AFib have a stroke risk <strong>5 times higher</strong> than those without it.</p>
+  <p>But not every person with AFib has the same stroke risk. A healthy 45-year-old with no other medical problems has a very different risk profile than a 75-year-old with diabetes, hypertension, and a history of heart failure. Treating everyone the same — either giving blood thinners to all, or withholding them from all — would cause unnecessary harm.</p>
+  <p>This is exactly the problem the <strong>CHA₂DS₂-VASc score</strong> was designed to solve. It is a simple, validated scoring tool that assigns points for known stroke risk factors, and uses the total to guide decisions about anticoagulation therapy.</p>
+
+  <h2>What Is Atrial Fibrillation?</h2>
+  <p>In a normal heart, the upper chambers (atria) contract in a coordinated rhythm to push blood into the lower chambers (ventricles). In atrial fibrillation, the atria fire chaotically and irregularly instead of contracting properly.</p>
+  <p>When the atria quiver rather than pump, blood can <strong>pool and stagnate</strong> — particularly in a small pouch called the <em>left atrial appendage (LAA)</em>. Stagnant blood is prone to clotting. If a clot forms and breaks off, it travels through the bloodstream to the brain and causes a <strong>cardioembolic stroke</strong> — typically a large, devastating stroke with high disability and mortality.</p>
+  <p>Anticoagulation therapy (blood thinners) prevents these clots from forming, dramatically reducing stroke risk. The challenge is that anticoagulants also increase the risk of bleeding. The CHA₂DS₂-VASc score helps clinicians decide whether the benefit of anticoagulation outweighs the risk.</p>
+
+  <h2>What Does CHA₂DS₂-VASc Stand For?</h2>
+  <p>Each letter represents a clinical risk factor. Points are assigned based on the strength of evidence for each factor's contribution to stroke risk:</p>
+
+  <div class="score-grid">
+    <div class="score-card">
+      <div class="pts">1</div>
+      <div class="info"><h4>C — Congestive Heart Failure</h4><p>Or left ventricular dysfunction (EF &lt; 40%)</p></div>
+    </div>
+    <div class="score-card">
+      <div class="pts">1</div>
+      <div class="info"><h4>H — Hypertension</h4><p>BP &gt; 140/90 mmHg, or on antihypertensive treatment</p></div>
+    </div>
+    <div class="score-card">
+      <div class="pts two">2</div>
+      <div class="info"><h4>A₂ — Age ≥ 75 years</h4><p>Scores 2 points — a major independent risk factor</p></div>
+    </div>
+    <div class="score-card">
+      <div class="pts">1</div>
+      <div class="info"><h4>D — Diabetes Mellitus</h4><p>Fasting glucose &gt; 125 mg/dL, or on diabetes treatment</p></div>
+    </div>
+    <div class="score-card">
+      <div class="pts two">2</div>
+      <div class="info"><h4>S₂ — Stroke / TIA / Thromboembolism</h4><p>Prior history — scores 2 points, strongest single predictor</p></div>
+    </div>
+    <div class="score-card">
+      <div class="pts">1</div>
+      <div class="info"><h4>V — Vascular Disease</h4><p>Prior MI, peripheral artery disease, or aortic plaque</p></div>
+    </div>
+    <div class="score-card">
+      <div class="pts">1</div>
+      <div class="info"><h4>A — Age 65–74 years</h4><p>Moderate age-related risk (1 point)</p></div>
+    </div>
+    <div class="score-card">
+      <div class="pts">1</div>
+      <div class="info"><h4>Sc — Sex Category (Female)</h4><p>Female sex adds 1 point as a risk modifier</p></div>
+    </div>
+  </div>
+
+  <p><strong>Maximum possible score: 9 points</strong> (in a woman with all risk factors).</p>
+
+  <div class="callout">
+    <p>🫀 Use the <a href="https://rxmedcalc.com/medical-calculators/cha2ds2-vasc" target="_blank"><strong>RxMedCalc CHA₂DS₂-VASc Calculator</strong></a> to calculate the score instantly and get guideline-based anticoagulation recommendations.</p>
+  </div>
+
+  <h2>A Note on the Female Sex Category</h2>
+  <p>Female sex (the "Sc" component) is sometimes misunderstood. It is <strong>not an independent stroke risk factor</strong> on its own — a woman with no other risk factors (score = 1 from sex alone) is not considered high enough risk to warrant anticoagulation. Rather, female sex is a <em>risk modifier</em> that amplifies the risk contributed by other factors. The ESC guidelines specify that female sex should only be used to guide anticoagulation decisions when at least one other clinical risk factor is present.</p>
+
+  <h2>Worked Example</h2>
+  <div class="example">
+    <div class="ex-label">📋 Clinical Scenario</div>
+    <p><strong>Patient:</strong> 72-year-old woman with newly diagnosed atrial fibrillation. Has hypertension (on amlodipine), type 2 diabetes (on metformin), and no prior stroke or heart failure. No vascular disease.</p>
+    <p style="margin-top:12px;"><strong>Scoring:</strong></p>
+    <ul style="margin-bottom:12px;">
+      <li>C — Congestive Heart Failure: <strong>0</strong></li>
+      <li>H — Hypertension: <strong>1</strong></li>
+      <li>A₂ — Age ≥ 75: <strong>0</strong> (she is 72)</li>
+      <li>D — Diabetes: <strong>1</strong></li>
+      <li>S₂ — Prior Stroke/TIA: <strong>0</strong></li>
+      <li>V — Vascular Disease: <strong>0</strong></li>
+      <li>A — Age 65–74: <strong>1</strong></li>
+      <li>Sc — Female: <strong>1</strong></li>
+    </ul>
+    <p>Total Score: <span class="score-total">4</span></p>
+    <p style="font-size:14.5px; color:#5a5a6a; margin-top:8px;"><em>A score of 4 in a woman = <strong>high stroke risk.</strong> Annual stroke risk approximately 4%. Oral anticoagulation is strongly recommended. The presence of at least one non-sex clinical risk factor (hypertension, diabetes, age 65–74) confirms anticoagulation is indicated.</em></p>
+  </div>
+
+  <h2>What Does the Score Mean? — Risk Interpretation</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Score (Male)</th><th>Score (Female)</th><th>Risk Level</th><th>Approx. Annual Stroke Risk</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>1 (sex only)</td><td><span class="badge low">Low</span></td><td>&lt; 1%</td><td>No antithrombotic therapy needed</td></tr>
+        <tr><td>1</td><td>2</td><td><span class="badge mod">Moderate</span></td><td>~1.3–2%</td><td>Consider anticoagulation; assess bleeding risk</td></tr>
+        <tr><td>≥ 2</td><td>≥ 3</td><td><span class="badge high">High</span></td><td>2–15%+</td><td>Oral anticoagulation recommended</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Aspirin is not an adequate substitute for anticoagulation in AFib.</strong> Despite older guidelines suggesting aspirin for low-to-moderate risk patients, current ESC (2020) and ACC/AHA guidelines no longer recommend anticoagulation with aspirin alone for AFib stroke prevention — its benefit is minimal and bleeding risk is comparable to anticoagulants.</p>
+  </div>
+
+  <h2>Choosing the Right Anticoagulant</h2>
+  <p>Once the decision to anticoagulate is made, the next question is which drug to use. There are two main categories:</p>
+
+  <h3>Direct Oral Anticoagulants (DOACs) — Preferred First Line</h3>
+  <p>DOACs are now the preferred choice over warfarin for non-valvular AFib in most guidelines (ESC 2020, ACC/AHA 2023). They offer predictable pharmacokinetics, no routine INR monitoring, fewer drug interactions, and a lower risk of intracranial haemorrhage.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Drug</th><th>Mechanism</th><th>Dosing</th><th>Key Renal Caution</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Apixaban (Eliquis)</strong></td><td>Factor Xa inhibitor</td><td>5 mg BD (or 2.5 mg BD if ≥2 of: age ≥80, weight ≤60 kg, SCr ≥1.5 mg/dL)</td><td>Avoid if CrCl &lt; 15 mL/min</td></tr>
+        <tr><td><strong>Rivaroxaban (Xarelto)</strong></td><td>Factor Xa inhibitor</td><td>20 mg OD with evening meal</td><td>Reduce dose if CrCl 15–50 mL/min</td></tr>
+        <tr><td><strong>Dabigatran (Pradaxa)</strong></td><td>Direct thrombin inhibitor</td><td>150 mg BD (or 110 mg BD in elderly/high bleed risk)</td><td>Contraindicated if CrCl &lt; 30 mL/min</td></tr>
+        <tr><td><strong>Edoxaban (Lixiana)</strong></td><td>Factor Xa inhibitor</td><td>60 mg OD (or 30 mg if CrCl 15–50, weight ≤60 kg, or P-gp inhibitor use)</td><td>Avoid if CrCl &gt; 95 mL/min (reduced efficacy) or &lt; 15 mL/min</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Warfarin (Vitamin K Antagonist) — When DOACs Are Not Suitable</h3>
+  <p>Warfarin remains the anticoagulant of choice in specific situations where DOACs are not appropriate:</p>
+  <ul>
+    <li><strong>Mechanical heart valves</strong> — DOACs are contraindicated; warfarin is mandatory</li>
+    <li><strong>Moderate-to-severe mitral stenosis</strong> — DOACs are not approved; warfarin is used</li>
+    <li><strong>Severe renal impairment</strong> (CrCl &lt; 15 mL/min) — most DOACs are contraindicated</li>
+    <li><strong>Cost and access constraints</strong> — warfarin is significantly cheaper in many settings</li>
+  </ul>
+  <p>Warfarin requires regular <strong>INR monitoring</strong> with a target range of <strong>2.0–3.0</strong> for AFib. Time in therapeutic range (TTR) should be maintained above 70% for optimal stroke prevention.</p>
+
+  <h2>Assessing Bleeding Risk — The HAS-BLED Score</h2>
+  <p>Before starting anticoagulation, it is important to assess the patient's bleeding risk. The <strong>HAS-BLED score</strong> is the most widely used tool for this:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Letter</th><th>Risk Factor</th><th>Points</th></tr></thead>
+      <tbody>
+        <tr><td><strong>H</strong></td><td>Hypertension (uncontrolled, SBP &gt; 160 mmHg)</td><td>1</td></tr>
+        <tr><td><strong>A</strong></td><td>Abnormal renal or liver function (1 point each)</td><td>1–2</td></tr>
+        <tr><td><strong>S</strong></td><td>Stroke history</td><td>1</td></tr>
+        <tr><td><strong>B</strong></td><td>Bleeding history or predisposition</td><td>1</td></tr>
+        <tr><td><strong>L</strong></td><td>Labile INRs (if on warfarin, TTR &lt; 60%)</td><td>1</td></tr>
+        <tr><td><strong>E</strong></td><td>Elderly (age &gt; 65 years)</td><td>1</td></tr>
+        <tr><td><strong>D</strong></td><td>Drugs (antiplatelets, NSAIDs) or alcohol use</td><td>1–2</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A HAS-BLED score <strong>≥ 3</strong> indicates high bleeding risk — but <strong>this is not a reason to withhold anticoagulation.</strong> Rather, it is a signal to identify and correct modifiable bleeding risk factors (control blood pressure, stop NSAIDs, address alcohol use) and to monitor the patient closely. In most high-risk AFib patients, the stroke risk outweighs the bleeding risk.</p>
+
+  <h2>Special Situations</h2>
+
+  <h3>AFib After Cardioversion or Ablation</h3>
+  <p>Patients undergoing cardioversion (electrical or pharmacological restoration of normal rhythm) or catheter ablation require anticoagulation for <strong>at least 4 weeks before and after the procedure</strong>, regardless of CHA₂DS₂-VASc score — because the procedure itself carries a risk of thrombus formation. Long-term anticoagulation post-procedure is then guided by the CHA₂DS₂-VASc score.</p>
+
+  <h3>Paroxysmal vs. Permanent AFib</h3>
+  <p>The stroke risk and anticoagulation recommendations are the same regardless of whether AFib is paroxysmal (comes and goes), persistent, or permanent. The CHA₂DS₂-VASc score and anticoagulation decision apply equally to all AFib subtypes.</p>
+
+  <h3>AFib in Chronic Kidney Disease</h3>
+  <p>CKD patients with AFib have both higher stroke risk and higher bleeding risk. Warfarin in CKD patients can paradoxically increase stroke risk due to calciphylaxis and vascular calcification. DOACs, with appropriate renal dose adjustments, are generally preferred — but choices vary by CrCl. Always check renal function before prescribing any DOAC.</p>
+
+  <h3>Rate vs. Rhythm Control</h3>
+  <p>Anticoagulation decisions are <strong>independent of whether rate control or rhythm control is chosen</strong> as the primary strategy. A patient successfully cardioverted to normal sinus rhythm who has a CHA₂DS₂-VASc score ≥ 2 (male) still requires long-term anticoagulation, because AFib often recurs silently.</p>
+
+  <h2>Common Misconceptions</h2>
+  <ul>
+    <li><strong>"My AFib is paroxysmal — I don't need anticoagulation."</strong> Incorrect. Paroxysmal AFib carries the same stroke risk as permanent AFib. The scoring and treatment decisions are identical.</li>
+    <li><strong>"My heart is back in normal rhythm after ablation — I can stop the blood thinner."</strong> Not necessarily. Long-term anticoagulation post-ablation is guided by CHA₂DS₂-VASc score — not by perceived rhythm status.</li>
+    <li><strong>"Aspirin is safer than warfarin and gives similar protection."</strong> Incorrect. Aspirin provides minimal stroke protection in AFib (~20% relative risk reduction vs ~65% with anticoagulants) while carrying a similar bleeding risk.</li>
+    <li><strong>"I feel fine — my AFib must be under control."</strong> AFib is frequently asymptomatic. Patients can be in AFib without knowing it, making anticoagulation based on score (not symptoms) essential.</li>
+  </ul>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>CHA₂DS₂-VASc assigns points for <strong>8 clinical risk factors</strong> — maximum score is 9</li>
+      <li>Prior stroke/TIA and age ≥ 75 score <strong>2 points each</strong> — the most heavily weighted factors</li>
+      <li>Score ≥ 2 in men or ≥ 3 in women → <strong>oral anticoagulation strongly recommended</strong></li>
+      <li>Female sex alone (score = 1) is <strong>not sufficient</strong> to recommend anticoagulation — at least one other risk factor must be present</li>
+      <li><strong>DOACs are preferred</strong> over warfarin for non-valvular AFib; warfarin is reserved for mechanical valves and certain other indications</li>
+      <li><strong>Aspirin is not an acceptable substitute</strong> for anticoagulation in AFib stroke prevention</li>
+      <li>High HAS-BLED score means <strong>correct modifiable bleeding risks</strong> — not withhold anticoagulation</li>
+      <li>Anticoagulation decisions apply equally to <strong>paroxysmal, persistent, and permanent</strong> AFib</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <p>🫀 Calculate CHA₂DS₂-VASc score and get anticoagulation recommendations instantly: <a href="https://rxmedcalc.com/medical-calculators/cha2ds2-vasc" target="_blank"><strong>RxMedCalc CHA₂DS₂-VASc Calculator →</strong></a></p>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Lip GYH et al. <em>Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach.</em> Chest. 2010;137(2):263-272.</li>
+      <li>Hindricks G et al. <em>2020 ESC Guidelines for the diagnosis and management of atrial fibrillation.</em> Eur Heart J. 2021;42(5):373-498.</li>
+      <li>January CT et al. <em>2019 AHA/ACC/HRS Focused Update of the 2014 AHA/ACC/HRS Guideline for the Management of Patients With Atrial Fibrillation.</em> J Am Coll Cardiol. 2019;74(1):104-132.</li>
+      <li>Pisters R et al. <em>A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation.</em> Chest. 2010;138(5):1093-1100.</li>
+      <li>Indian Heart Rhythm Society (IHRS). <em>Consensus Document on Management of Atrial Fibrillation.</em> 2019.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is written for educational purposes and is based on internationally recognised cardiology guidelines. It is not a substitute for professional medical advice. Anticoagulation decisions must be made by a qualified physician after full clinical assessment of individual patient risks and preferences.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+
+</div>
+</body>
+</html>
