@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parkland Formula for Burn Resuscitation: Complete Clinical Guide | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the Parkland Formula for fluid resuscitation in burn injuries — including TBSA calculation, Rule of Nines, modified Brooke, and common clinical pitfalls." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand:       #b83c14;
+      --brand-dark:  #7a2209;
+      --brand-light: #fdf0ec;
+      --accent:      #1a5c96;
+      --text:        #1c1c1e;
+      --muted:       #5a5a6a;
+      --border:      #e5d8d4;
+      --bg:          #fdf8f6;
+      --white:       #ffffff;
+      --max:         740px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    header {
+      background: var(--brand-dark);
+      color: #fff;
+      padding: 14px 24px;
+      font-size: 15px;
+      letter-spacing: .02em;
+    }
+    header a { color: #fff; text-decoration: none; font-weight: 600; }
+
+    .hero {
+      background: linear-gradient(135deg, #7a2209 0%, #b83c14 55%, #d95f2a 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero .tag {
+      display: inline-block;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.25;
+      max-width: 680px;
+      margin: 0 auto 18px;
+    }
+    .hero .subtitle {
+      font-size: 16px;
+      opacity: .88;
+      max-width: 560px;
+      margin: 0 auto 28px;
+    }
+    .hero .meta { font-size: 13px; opacity: .7; font-style: italic; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin: 2.6rem 0 .8rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--brand-light);
+    }
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.8rem 0 .5rem;
+    }
+    p { margin-bottom: 1.1rem; }
+    strong { font-weight: 600; }
+    em { font-style: italic; color: var(--muted); }
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--brand); }
+    ul, ol { padding-left: 22px; margin-bottom: 1rem; }
+    li { margin-bottom: .45rem; line-height: 1.75; }
+
+    .formula-box {
+      background: #7a2209;
+      color: #fdeee8;
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin: 1.6rem 0;
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .formula-box .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      opacity: .65;
+      margin-bottom: 8px;
+    }
+
+    .callout {
+      border-left: 4px solid var(--brand);
+      background: var(--brand-light);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 1.6rem 0;
+      font-size: 15.5px;
+    }
+    .callout.warning {
+      border-color: #c0392b;
+      background: #fdf0ee;
+    }
+    .callout.blue {
+      border-color: #1a5c96;
+      background: #e8f2fb;
+    }
+    .callout.tip {
+      border-color: #1e8c4a;
+      background: #edf7f1;
+    }
+    .callout p { margin: 0; }
+
+    .example {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin: 1.6rem 0;
+    }
+    .example .ex-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+    .example p { margin-bottom: .55rem; }
+
+    .table-wrap { overflow-x: auto; margin: 1.4rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    thead tr { background: var(--brand); color: #fff; }
+    thead th { padding: 10px 14px; text-align: left; font-weight: 600; }
+    tbody tr:nth-child(even) { background: var(--brand-light); }
+    tbody tr:nth-child(odd)  { background: var(--white); }
+    td { padding: 9px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+
+    /* Rule of Nines visual grid */
+    .nines-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin: 1.4rem 0;
+    }
+    .nine-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--brand);
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .nine-card .pct {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--brand);
+      line-height: 1;
+    }
+    .nine-card .region {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Timing infographic */
+    .timeline {
+      display: flex;
+      gap: 0;
+      margin: 1.6rem 0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .tl-block {
+      flex: 1;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .tl-block:first-child { background: var(--brand); color: #fff; }
+    .tl-block:last-child  { background: var(--brand-dark); color: #fff; }
+    .tl-block .tl-time { font-size: 13px; opacity: .8; margin-bottom: 4px; font-weight: 600; letter-spacing: .04em; }
+    .tl-block .tl-vol  { font-family: 'Lora', serif; font-size: 1.25rem; font-weight: 700; }
+    .tl-block .tl-desc { font-size: 13px; margin-top: 6px; opacity: .85; }
+
+    .takeaways {
+      background: var(--brand);
+      color: #fff;
+      border-radius: 12px;
+      padding: 26px 28px;
+      margin: 2.4rem 0;
+    }
+    .takeaways h2 {
+      font-family: 'Lora', serif;
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.3);
+      margin-top: 0;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      font-size: 1.25rem;
+    }
+    .takeaways ul { padding-left: 20px; }
+    .takeaways li { margin-bottom: 8px; font-size: 15.5px; line-height: 1.6; }
+
+    .references {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 2rem;
+    }
+    .references h2 { font-size: 1.1rem; margin-top: 0; }
+    .references ol { padding-left: 20px; font-size: 14px; color: var(--muted); }
+    .references li { margin-bottom: 6px; line-height: 1.55; }
+
+    .disclaimer {
+      margin-top: 2.4rem;
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .timeline { flex-direction: column; }
+      .hero { padding: 36px 16px 32px; }
+      .wrap { padding: 32px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; Articles &nbsp;›&nbsp; Parkland Formula
+</header>
+
+<div class="hero">
+  <div class="tag">Emergency &amp; Trauma</div>
+  <h1>The Parkland Formula for Burn Resuscitation</h1>
+  <p class="subtitle">A complete clinical guide to calculating fluid requirements in burn injuries — TBSA assessment, Rule of Nines, delivery timing, Modified Brooke, and common pitfalls.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on ABA &amp; WHO Burn Care Guidelines</p>
+</div>
+
+<div class="wrap">
+
+  <p>Burns are among the most physiologically devastating injuries a human body can sustain. A large burn triggers a cascade of systemic responses — fluid pours out of blood vessels into surrounding tissues, blood pressure drops, organs fail. Without rapid and precisely calculated fluid resuscitation, a patient with a severe burn can die within hours from hypovolaemic shock — even if the burn itself does not seem immediately life-threatening.</p>
+  <p>The <strong>Parkland Formula</strong> is the most widely used calculation in burn resuscitation. It tells clinicians exactly how much intravenous fluid to give — and critically, <em>when</em> to give it — based on the patient's weight and the extent of the burn.</p>
+  <p>This guide covers everything you need to know: the formula itself, how to accurately estimate burn size, delivery timing, the Modified Brooke alternative, paediatric considerations, and common errors that can harm patients.</p>
+
+  <!-- ── WHY FLUIDS ── -->
+  <h2>Why Do Burns Cause Such Severe Fluid Loss?</h2>
+  <p>When the skin is burned, the barrier that normally keeps fluid inside the body is destroyed. Simultaneously, the burn triggers a massive inflammatory response: capillaries throughout the body — not just at the burn site — become "leaky," allowing plasma (the fluid component of blood) to pour into surrounding tissues.</p>
+  <p>This process, called <strong>capillary leak</strong> or <em>burn oedema</em>, is most intense in the <strong>first 8 hours</strong> after injury and continues for up to 48 hours. The result is a dramatic drop in circulating blood volume — called <strong>hypovolaemia</strong> — that can rapidly lead to shock, organ failure, and death if not corrected with IV fluids.</p>
+  <p>The goal of burn resuscitation is to replace this lost volume precisely — enough to maintain organ perfusion, but not so much that you cause dangerous fluid overload (a condition called <em>oedema</em> in unburned tissues, which can cause its own complications including abdominal compartment syndrome and pulmonary oedema).</p>
+
+  <!-- ── THE FORMULA ── -->
+  <h2>The Parkland Formula</h2>
+  <p>Developed by <strong>Dr Charles Baxter</strong> at Parkland Memorial Hospital in Dallas in the 1960s, the Parkland Formula estimates the total volume of <strong>Ringer's Lactate (RL)</strong> solution required in the first 24 hours after a burn injury.</p>
+
+  <div class="formula-box">
+    <div class="label">Parkland Formula — First 24 Hours</div>
+    <strong>Total Fluid (mL) = 4 mL × Body Weight (kg) × % TBSA Burned</strong><br><br>
+    <span style="font-size:.88rem; opacity:.8;">TBSA = Total Body Surface Area burned (second and third degree burns only)<br>
+    Fluid used: <strong>Ringer's Lactate (Hartmann's Solution)</strong></span>
+  </div>
+
+  <p>This total volume is <strong>not given all at once</strong>. It is divided into two halves and administered over specific time windows:</p>
+
+  <div class="timeline">
+    <div class="tl-block">
+      <div class="tl-time">First 8 Hours</div>
+      <div class="tl-vol">½ of Total Volume</div>
+      <div class="tl-desc">Counted from time of burn — not from arrival at hospital</div>
+    </div>
+    <div class="tl-block">
+      <div class="tl-time">Next 16 Hours</div>
+      <div class="tl-vol">½ of Total Volume</div>
+      <div class="tl-desc">Slower infusion rate over the remaining period</div>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Critical timing rule:</strong> The 8-hour clock starts from the <em>time of the burn injury</em> — not the time the patient arrives at hospital. If 3 hours have already passed by the time the patient reaches you, the first half must be delivered in the remaining 5 hours. This often requires a significantly higher initial infusion rate.</p>
+  </div>
+
+  <div class="callout blue">
+    <p>🔥 Use the <a href="https://rxmedcalc.com/medical-calculators/burn-calculator" target="_blank"><strong>RxMedCalc Parkland Formula Calculator</strong></a> to instantly calculate total fluid volume, 8-hour rate, and 16-hour rate by entering weight and % TBSA.</p>
+  </div>
+
+  <!-- ── WORKED EXAMPLE ── -->
+  <h2>Worked Example</h2>
+  <div class="example">
+    <div class="ex-label">📋 Clinical Scenario</div>
+    <p><strong>Patient:</strong> 40-year-old man, weight 70 kg, 35% TBSA burn (flame injury to trunk and both legs). Arrived at hospital 2 hours after injury.</p>
+    <p><strong>Total fluid = 4 × 70 × 35 = <span style="color:#b83c14">9,800 mL of Ringer's Lactate</span></strong></p>
+    <p><strong>First half (4,900 mL)</strong> to be given in the <em>remaining 6 hours</em> (8 hrs from burn − 2 hrs already elapsed)
+    → Rate: 4,900 ÷ 6 = <strong>~817 mL/hr</strong></p>
+    <p><strong>Second half (4,900 mL)</strong> over the next 16 hours
+    → Rate: 4,900 ÷ 16 = <strong>~306 mL/hr</strong></p>
+    <p style="margin-top:10px; font-size:14.5px; color:#5a5a6a;"><em>These are starting rates. Adjust based on urine output (target 0.5–1 mL/kg/hr in adults) and clinical response — do not simply follow the calculated rate rigidly.</em></p>
+  </div>
+
+  <!-- ── TBSA ── -->
+  <h2>Estimating Burn Size — The Rule of Nines</h2>
+  <p>The Parkland Formula is only as accurate as your TBSA estimate. <strong>Overestimating TBSA leads to fluid overload; underestimating leads to inadequate resuscitation.</strong> Only <strong>partial thickness (second degree)</strong> and <strong>full thickness (third degree)</strong> burns are counted — superficial (first degree) burns are excluded.</p>
+  <p>The most widely used method for adults is the <strong>Rule of Nines</strong>:</p>
+
+  <div class="nines-grid">
+    <div class="nine-card"><div class="pct">9%</div><div class="region">Head &amp; Neck</div></div>
+    <div class="nine-card"><div class="pct">9%</div><div class="region">Each Arm (× 2 = 18%)</div></div>
+    <div class="nine-card"><div class="pct">18%</div><div class="region">Chest (front trunk)</div></div>
+    <div class="nine-card"><div class="pct">18%</div><div class="region">Back (rear trunk)</div></div>
+    <div class="nine-card"><div class="pct">18%</div><div class="region">Each Leg (× 2 = 36%)</div></div>
+    <div class="nine-card"><div class="pct">1%</div><div class="region">Perineum / Genitalia</div></div>
+  </div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>The Rule of Nines is inaccurate in children.</strong> A child's head is proportionally much larger (up to 19% in an infant) and legs are smaller than in adults. For children, always use the <strong>Lund and Browder Chart</strong>, which accounts for age-specific proportions.</p>
+  </div>
+
+  <h3>The Palmar Method — For Scattered or Patchy Burns</h3>
+  <p>When burns are patchy, irregular, or scattered across the body, the Rule of Nines becomes difficult to apply. In these cases, use the <strong>Palmar Method</strong>: the patient's own palm (including fingers) represents approximately <strong>1% of their TBSA</strong>. Count how many "palms" the burn covers to estimate percentage.</p>
+
+  <!-- ── BURN DEPTH ── -->
+  <h2>Burn Depth Classification — What Counts Toward TBSA?</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Depth</th><th>Old Term</th><th>Appearance</th><th>Sensation</th><th>Count in TBSA?</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Superficial</strong></td>
+          <td>First degree</td>
+          <td>Red, dry, no blisters (like sunburn)</td>
+          <td>Painful</td>
+          <td><strong>No</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Superficial partial thickness</strong></td>
+          <td>Second degree (superficial)</td>
+          <td>Blisters, moist, red/pink base</td>
+          <td>Very painful</td>
+          <td><strong>Yes</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Deep partial thickness</strong></td>
+          <td>Second degree (deep)</td>
+          <td>Pale, mottled, blisters may be absent</td>
+          <td>Reduced pain</td>
+          <td><strong>Yes</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Full thickness</strong></td>
+          <td>Third degree</td>
+          <td>Leathery, white/brown/black, dry</td>
+          <td>Painless (nerves destroyed)</td>
+          <td><strong>Yes</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Fourth degree</strong></td>
+          <td>—</td>
+          <td>Charred, involves muscle/bone</td>
+          <td>Painless</td>
+          <td><strong>Yes</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── MODIFIED BROOKE ── -->
+  <h2>The Modified Brooke Formula — An Alternative</h2>
+  <p>The <strong>Modified Brooke Formula</strong> is an alternative to Parkland, preferred by some centres because it uses a lower fluid volume (reducing the risk of fluid overload) and incorporates colloid in the second 24 hours.</p>
+
+  <div class="formula-box">
+    <div class="label">Modified Brooke Formula — First 24 Hours</div>
+    <strong>Total Fluid (mL) = 2 mL × Body Weight (kg) × % TBSA Burned</strong><br><br>
+    <span style="font-size:.88rem; opacity:.8;">Fluid: Ringer's Lactate only in first 24 hours<br>
+    Delivery: Same split — ½ in first 8 hrs, ½ in next 16 hrs</span>
+  </div>
+
+  <p>In the <strong>second 24 hours</strong>, Modified Brooke uses:</p>
+  <ul>
+    <li><strong>Colloid (albumin or FFP):</strong> 0.3–0.5 mL/kg/% TBSA to help restore oncotic pressure</li>
+    <li><strong>Dextrose 5% in water (D5W):</strong> titrated to maintain urine output</li>
+  </ul>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Feature</th><th>Parkland</th><th>Modified Brooke</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Volume multiplier</strong></td><td>4 mL/kg/%TBSA</td><td>2 mL/kg/%TBSA</td></tr>
+        <tr><td><strong>First 24h fluid</strong></td><td>Ringer's Lactate only</td><td>Ringer's Lactate only</td></tr>
+        <tr><td><strong>Colloid</strong></td><td>Not in first 24h</td><td>Added in second 24h</td></tr>
+        <tr><td><strong>Preferred in</strong></td><td>Most centres worldwide</td><td>Centres concerned about fluid creep</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── MONITORING ── -->
+  <h2>Monitoring Resuscitation — Urine Output Is Key</h2>
+  <p>The Parkland formula gives you a <em>starting point</em> — not a rigid prescription. The primary endpoint for titrating fluid resuscitation is <strong>urine output</strong>, measured via a urinary catheter:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Patient</th><th>Target Urine Output</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Adults</strong></td><td>0.5 mL/kg/hr (approximately 30–50 mL/hr)</td></tr>
+        <tr><td><strong>Children (&lt; 30 kg)</strong></td><td>1 mL/kg/hr</td></tr>
+        <tr><td><strong>Electrical burns / myoglobinuria</strong></td><td>1–1.5 mL/kg/hr (to flush myoglobin and prevent renal tubular damage)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul>
+    <li>If urine output is <strong>too low</strong> → increase the infusion rate by 20%</li>
+    <li>If urine output is <strong>too high</strong> → reduce the infusion rate by 20%</li>
+    <li>Never use diuretics to increase urine output in burn resuscitation — this masks inadequate volume replacement</li>
+  </ul>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>"Fluid Creep"</strong> — giving significantly more fluid than the Parkland formula predicts — is a recognised and dangerous phenomenon in burn care. It is associated with abdominal compartment syndrome, pulmonary oedema, and limb compartment syndrome. Avoid aggressive over-resuscitation. Aim for the lower end of the urine output target range.</p>
+  </div>
+
+  <!-- ── PAEDIATRICS ── -->
+  <h2>Paediatric Considerations</h2>
+  <p>Children are <em>not simply small adults</em> when it comes to burn resuscitation. Key differences:</p>
+  <ul>
+    <li><strong>TBSA estimation:</strong> Always use the <strong>Lund and Browder Chart</strong> — the Rule of Nines is inaccurate in children under 15 years</li>
+    <li><strong>Fluid formula:</strong> Same Parkland calculation (3–4 mL/kg/%TBSA), but add <strong>maintenance fluids</strong> on top (calculated by the Holliday-Segar method) — children have higher baseline fluid requirements</li>
+    <li><strong>Glucose monitoring:</strong> Children, especially infants, are at risk of hypoglycaemia during resuscitation — monitor blood glucose regularly and use glucose-containing maintenance fluids</li>
+    <li><strong>Urine output target:</strong> 1 mL/kg/hr (higher than adults)</li>
+    <li><strong>Hypothermia risk:</strong> Children lose heat rapidly through burned skin — keep the environment warm and use warm fluids</li>
+  </ul>
+
+  <!-- ── WHEN TO REFER ── -->
+  <h2>When to Transfer to a Specialist Burns Centre</h2>
+  <p>Not all burns can be managed at a general hospital. Transfer to a specialist burns centre is indicated for:</p>
+  <ul>
+    <li>Burns &gt; <strong>10% TBSA</strong> in children or elderly; &gt; <strong>20% TBSA</strong> in adults</li>
+    <li>Any <strong>full thickness (third degree)</strong> burn</li>
+    <li>Burns involving <strong>face, hands, feet, genitalia, perineum, or major joints</strong></li>
+    <li><strong>Circumferential burns</strong> of limbs or chest</li>
+    <li><strong>Inhalation injury</strong> (suspected or confirmed)</li>
+    <li><strong>Electrical or chemical burns</strong></li>
+    <li>Burns in patients with <strong>significant comorbidities</strong> (diabetes, immunosuppression, cardiac disease)</li>
+    <li>Burns in <strong>pregnant women</strong></li>
+  </ul>
+
+  <!-- ── COMMON MISTAKES ── -->
+  <h2>Common Clinical Mistakes in Burn Resuscitation</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Mistake</th><th>Consequence</th><th>Correction</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Counting first-degree burns in TBSA</strong></td>
+          <td>Overestimates volume needed → fluid overload</td>
+          <td>Count only second and third degree burns</td>
+        </tr>
+        <tr>
+          <td><strong>Starting the 8-hour clock from hospital arrival</strong></td>
+          <td>First half delivered too slowly → under-resuscitation early</td>
+          <td>Clock runs from time of burn injury, not ED arrival</td>
+        </tr>
+        <tr>
+          <td><strong>Using colloid in first 24 hours (Parkland)</strong></td>
+          <td>Leaks into tissues during capillary leak phase — ineffective</td>
+          <td>Ringer's Lactate only for first 24h in Parkland protocol</td>
+        </tr>
+        <tr>
+          <td><strong>Not inserting a urinary catheter</strong></td>
+          <td>Cannot titrate fluid to urine output</td>
+          <td>Catheterise all burns ≥ 20% TBSA immediately</td>
+        </tr>
+        <tr>
+          <td><strong>Blind adherence to calculated rate</strong></td>
+          <td>Under- or over-resuscitation as patient's needs change</td>
+          <td>Titrate hourly based on urine output and clinical status</td>
+        </tr>
+        <tr>
+          <td><strong>Forgetting maintenance fluids in children</strong></td>
+          <td>Under-resuscitation in paediatric patients</td>
+          <td>Add Holliday-Segar maintenance to Parkland total in children</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── INHALATION ── -->
+  <h2>A Note on Inhalation Injury</h2>
+  <p>Inhalation injury — caused by breathing hot gases, steam, or toxic combustion products — significantly increases fluid requirements beyond what the Parkland formula predicts. Patients with confirmed or suspected inhalation injury may require <strong>30–50% more fluid</strong> than calculated.</p>
+  <p>Suspect inhalation injury if the patient was in an enclosed space, has singed nasal hairs or eyebrows, carbonaceous (sooty) sputum, a hoarse voice, stridor, or facial burns. These patients should be intubated early — airway oedema can develop rapidly and make late intubation extremely difficult or impossible.</p>
+
+  <!-- ── TAKEAWAYS ── -->
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Total fluid (mL) = <strong>4 × weight (kg) × % TBSA</strong> — using Ringer's Lactate only in first 24 hours</li>
+      <li>Give <strong>½ in first 8 hours</strong> (from time of burn), <strong>½ in next 16 hours</strong></li>
+      <li>Count only <strong>partial and full thickness burns</strong> in TBSA — exclude superficial (first degree)</li>
+      <li>Use <strong>Rule of Nines</strong> for adults; use <strong>Lund and Browder Chart</strong> for children</li>
+      <li>Target urine output: <strong>0.5 mL/kg/hr</strong> in adults, <strong>1 mL/kg/hr</strong> in children</li>
+      <li>Adjust rates <strong>hourly</strong> based on urine output — do not rigidly follow the calculated rate</li>
+      <li>Avoid <strong>fluid creep</strong> — over-resuscitation causes serious complications</li>
+      <li>Add maintenance fluids in children; increase volume targets in inhalation injury</li>
+    </ul>
+  </div>
+
+  <div class="callout blue">
+    <p>🔥 Calculate total fluid volume, 8-hour rate, and 16-hour infusion rate instantly using the <a href="https://rxmedcalc.com/medical-calculators/burn-calculator" target="_blank"><strong>RxMedCalc Parkland Formula Calculator</strong></a>.</p>
+  </div>
+
+  <!-- ── REFERENCES ── -->
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Baxter CR, Shires T. <em>Physiological response to crystalloid resuscitation of severe burns.</em> Ann N Y Acad Sci. 1968;150(3):874-894.</li>
+      <li>American Burn Association (ABA). <em>Advanced Burn Life Support (ABLS) Course Provider Manual.</em> 2018.</li>
+      <li>World Health Organization. <em>Burns — Fact Sheet.</em> WHO, 2018.</li>
+      <li>Greenhalgh DG. <em>Burn resuscitation: the results of the ISBI/ABA survey.</em> Burns. 2010;36(2):176-182.</li>
+      <li>Cancio LC. <em>Initial assessment and fluid resuscitation of burn patients.</em> Surg Clin North Am. 2014;94(4):741-754.</li>
+      <li>Lund CC, Browder NC. <em>The estimation of areas of burns.</em> Surg Gynecol Obstet. 1944;79:352-358.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is written for educational purposes and is based on internationally recognised burn care guidelines. It is not a substitute for professional medical advice or formal burn care training. Management of major burns requires specialist input. Always follow your institution's protocols and involve a burns specialist for severe injuries.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+
+</div><!-- /wrap -->
+</body>
+</html>
