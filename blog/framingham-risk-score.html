@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Framingham Risk Score: 10-Year Heart Attack Risk & Statin Guidance | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the Framingham Risk Score — how to calculate 10-year coronary heart disease risk, what the score means, statin therapy guidance, Framingham vs ASCVD, and why Indians need a 1.4x correction." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#8a1a2c;--brand-dark:#4a0d17;--brand-light:#faeaed;--accent:#1a5c96;--text:#1c1c1e;--muted:#5a5a6a;--border:#e5c4ca;--bg:#fdf5f6;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#4a0d17 0%,#8a1a2c 55%,#b82840 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--brand);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    /* risk meter */
+    .risk-meter{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-radius:10px;overflow:hidden;margin:1.4rem 0;}
+    .rm{padding:20px 16px;text-align:center;color:#fff;}
+    .rm.low{background:#1a6b3c;}.rm.mod{background:#8a6a00;}.rm.high{background:#8a1a2c;}
+    .rm .rm-label{font-family:'Lora',serif;font-size:1.1rem;font-weight:700;}
+    .rm .rm-pct{font-size:13px;margin-top:4px;opacity:.9;font-weight:600;}
+    .rm .rm-action{font-size:13px;margin-top:6px;opacity:.85;line-height:1.45;}
+    /* statin cards */
+    .statin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:1.2rem 0;}
+    .statin-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--brand);border-radius:8px;padding:14px 16px;}
+    .statin-card h4{font-size:14.5px;font-weight:600;color:var(--brand);margin-bottom:6px;}
+    .statin-card p{font-size:13.5px;color:var(--muted);margin:0;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.blue{border-color:#1a5c96;background:#e8f2fb;}
+    .callout p{margin:0;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.risk-meter{grid-template-columns:1fr;}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; Framingham Risk Score</header>
+<div class="hero">
+  <div class="tag">❤️ Cardiology &amp; Prevention</div>
+  <h1>Framingham Risk Score: Calculating Your 10-Year Heart Attack Risk</h1>
+  <p class="subtitle">How the Framingham Risk Score works, what each risk factor contributes, statin therapy thresholds, Framingham vs ASCVD, and why Indians need a 1.4× risk correction.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on Framingham 1998, ACC/AHA 2019 &amp; CSI Guidelines</p>
+</div>
+<div class="wrap">
+
+  <p>Heart disease is the leading cause of death in India and worldwide. In India, cardiovascular disease accounts for over <strong>28% of all deaths</strong> — and Indians develop heart disease at a younger age and at lower body weights than any other major ethnic group. The average age of first heart attack in India is <strong>53 years</strong> — nearly a decade earlier than in Western countries.</p>
+  <p>The challenge of cardiovascular prevention is identifying who is at high enough risk to benefit from medication — specifically statins — before a heart attack happens. The <strong>Framingham Risk Score</strong> is the most widely used tool for this purpose. It takes seven common clinical variables and calculates your probability of having a coronary heart disease event in the next 10 years.</p>
+  <p>This guide explains exactly how it works, what the numbers mean, when to start a statin, and the critical India-specific modifications that every South Asian patient and doctor should know.</p>
+
+  <h2>The Framingham Heart Study — Where It All Started</h2>
+  <p>The Framingham Risk Score is derived from the <strong>Framingham Heart Study</strong>, one of the most important and long-running epidemiological studies in medical history. Begun in 1948 in Framingham, Massachusetts, it enrolled over 5,000 residents and followed them for decades — along with their children and grandchildren — to identify the factors that predict heart disease.</p>
+  <p>The study established much of what we now consider basic cardiology fact: that high blood pressure, high cholesterol, smoking, diabetes, and obesity are major cardiovascular risk factors. The risk prediction equations published by Wilson et al. in 1998 used this data to create sex-specific formulas that calculate 10-year CHD risk from seven variables.</p>
+
+  <h2>What Variables Does the Framingham Score Use?</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Variable</th><th>How Measured</th><th>Why It Matters</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Age</strong></td><td>Years (validated 30–79)</td><td>Age is the single strongest predictor of CHD risk — risk roughly doubles each decade</td></tr>
+      <tr><td><strong>Sex</strong></td><td>Male / Female</td><td>Separate equations used — men have higher baseline CHD risk; women's risk rises sharply after menopause</td></tr>
+      <tr><td><strong>Total Cholesterol</strong></td><td>mg/dL</td><td>Higher total cholesterol increases atherosclerosis and plaque formation</td></tr>
+      <tr><td><strong>HDL Cholesterol</strong></td><td>mg/dL</td><td>"Good" cholesterol — higher HDL is protective; low HDL is an independent risk factor</td></tr>
+      <tr><td><strong>Systolic BP</strong></td><td>mmHg</td><td>Hypertension accelerates endothelial damage and atherosclerosis</td></tr>
+      <tr><td><strong>BP Treatment</strong></td><td>Yes / No</td><td>Treated hypertension carries different risk than untreated at the same BP level</td></tr>
+      <tr><td><strong>Smoking</strong></td><td>Current smoker Yes/No</td><td>Smoking doubles CHD risk — most powerful single modifiable risk factor</td></tr>
+      <tr><td><strong>Diabetes</strong></td><td>Yes / No</td><td>T2DM is considered a "CHD equivalent" — dramatically increases event risk</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Interpreting the 10-Year Risk Score</h2>
+
+  <div class="risk-meter">
+    <div class="rm low"><div class="rm-label">Low Risk</div><div class="rm-pct">&lt; 10%</div><div class="rm-action">Lifestyle counselling. Statin not routinely needed unless LDL ≥ 190 mg/dL.</div></div>
+    <div class="rm mod"><div class="rm-label">Intermediate</div><div class="rm-pct">10 – 19%</div><div class="rm-action">Consider statin. Shared decision with patient. Lifestyle modification.</div></div>
+    <div class="rm high"><div class="rm-label">High Risk</div><div class="rm-pct">≥ 20%</div><div class="rm-action">Statin therapy recommended. High-intensity preferred. Agressive lifestyle intervention.</div></div>
+  </div>
+
+  <div class="callout blue">
+    <p>❤️ Use the <a href="https://rxmedcalc.com/medical-calculators/framingham-risk" target="_blank"><strong>RxMedCalc Framingham Risk Calculator</strong></a> — sex-specific equations with statin guidance and 10-year CHD risk output.</p>
+  </div>
+
+  <h2>The Critical India Correction — Why South Asians Need a 1.4× Multiplier</h2>
+  <p>This is the most clinically important point for any Indian patient or doctor using the Framingham Risk Score. The Framingham equations were derived from a predominantly <strong>White American population</strong> in Massachusetts. South Asians were not included in meaningful numbers.</p>
+  <p>Multiple lines of evidence show that <strong>South Asians develop coronary artery disease at lower risk scores and at younger ages</strong> than the populations the Framingham equations were calibrated on:</p>
+  <ul>
+    <li>Indians have higher rates of small, dense LDL particles which are more atherogenic than large LDL at the same measured LDL level</li>
+    <li>Lipoprotein(a) — Lp(a) — is significantly elevated in South Asians, adding additional CHD risk not captured by the standard lipid panel</li>
+    <li>Visceral obesity and insulin resistance are more pronounced in South Asians at any given BMI</li>
+    <li>C-reactive protein (CRP) and other inflammatory markers are typically higher in South Asians</li>
+  </ul>
+  <p>Based on this evidence, the <strong>Cardiology Society of India (CSI)</strong> and multiple international guidelines recommend applying a <strong>1.4× to 1.5× correction factor</strong> to the Framingham score for South Asian patients. A Framingham score of 12% in an Indian patient should be treated as approximately 17–18% — pushing them into a category where statin therapy is more clearly indicated.</p>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>For Indian patients: multiply your Framingham score by 1.4.</strong> A score of 12% × 1.4 = 16.8% — intermediate-to-high risk, where a statin discussion is strongly warranted. Never use the raw score without this correction in South Asian patients.</p>
+  </div>
+
+  <h2>Framingham vs ASCVD Pooled Cohort Equations</h2>
+  <p>The <strong>ACC/AHA ASCVD Pooled Cohort Equations</strong> were introduced in 2013 as an alternative to Framingham. Both tools estimate cardiovascular risk, but they have important differences:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Feature</th><th>Framingham (1998)</th><th>ASCVD Pooled Cohort</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Endpoint predicted</strong></td><td>Coronary heart disease events (MI, coronary death, unstable angina)</td><td>Any atherosclerotic CV event (MI + stroke)</td></tr>
+      <tr><td><strong>Age range validated</strong></td><td>30–79 years</td><td>40–79 years</td></tr>
+      <tr><td><strong>High risk threshold</strong></td><td>≥ 20% for statin</td><td>≥ 7.5% for statin consideration</td></tr>
+      <tr><td><strong>Populations included</strong></td><td>White American</td><td>White and African American</td></tr>
+      <tr><td><strong>South Asian applicability</strong></td><td>Needs 1.4× correction</td><td>Also needs South Asian correction — tends to underestimate</td></tr>
+      <tr><td><strong>Use in India</strong></td><td>Widely used; familiar to most cardiologists</td><td>Growing use in tertiary centres</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Statin Therapy — Which Drug and What Dose?</h2>
+  <p>Once the decision to start a statin is made, intensity of therapy is guided by the level of risk:</p>
+
+  <div class="statin-grid">
+    <div class="statin-card"><h4>High-Intensity</h4><p>Atorvastatin 40–80 mg or Rosuvastatin 20–40 mg. Target LDL reduction &gt; 50%. For high-risk patients (≥ 20% or known CVD).</p></div>
+    <div class="statin-card"><h4>Moderate-Intensity</h4><p>Atorvastatin 10–20 mg or Rosuvastatin 5–10 mg. Target LDL reduction 30–50%. For intermediate risk (10–20%).</p></div>
+    <div class="statin-card"><h4>Low-Intensity</h4><p>Simvastatin 10–20 mg or Pravastatin 10–40 mg. LDL reduction &lt; 30%. Rarely sufficient for primary prevention.</p></div>
+  </div>
+
+  <h3>LDL Targets for Indian Patients</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Risk Category</th><th>LDL Target (mg/dL)</th><th>LDL Target (mmol/L)</th></tr></thead>
+    <tbody>
+      <tr><td>Low risk (&lt; 10%)</td><td>&lt; 116 mg/dL</td><td>&lt; 3.0 mmol/L</td></tr>
+      <tr><td>Moderate risk (10–19%)</td><td>&lt; 100 mg/dL</td><td>&lt; 2.6 mmol/L</td></tr>
+      <tr><td>High risk (≥ 20%)</td><td>&lt; 70 mg/dL</td><td>&lt; 1.8 mmol/L</td></tr>
+      <tr><td>Very high risk (known CVD, DM + risk factors)</td><td>&lt; 55 mg/dL</td><td>&lt; 1.4 mmol/L</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Lifestyle Modifications — Evidence-Based Impact</h2>
+  <p>Lifestyle changes can substantially reduce cardiovascular risk — in some cases as effectively as low-to-moderate intensity statin therapy:</p>
+  <ul>
+    <li><strong>Smoking cessation:</strong> Reduces CHD risk by <strong>50% within 1 year</strong> — the single most impactful intervention available. After 5 years, risk approaches that of a non-smoker.</li>
+    <li><strong>Diet — Mediterranean or DASH:</strong> Reduces LDL by 10–15%, lowers blood pressure, reduces systemic inflammation. In India: reduce refined carbohydrates (maida, white rice, sugar), increase pulses, vegetables, nuts, olive oil or mustard oil, fatty fish twice weekly.</li>
+    <li><strong>Physical activity:</strong> 150 minutes of moderate aerobic exercise per week reduces CHD risk by 30–35%. Even 30 minutes of brisk walking daily is protective.</li>
+    <li><strong>BP control to &lt; 130/80 mmHg:</strong> Each 10 mmHg reduction in systolic BP reduces major cardiovascular events by approximately 20%.</li>
+    <li><strong>Blood glucose control:</strong> HbA1c &lt; 7% in diabetics reduces microvascular complications; combined with BP and lipid control it significantly reduces macrovascular (CHD) events.</li>
+    <li><strong>Weight loss:</strong> Even 5–10% body weight reduction reduces LDL, triglycerides, and blood pressure meaningfully.</li>
+  </ul>
+
+  <h2>When Framingham Does Not Apply</h2>
+  <p>The Framingham Risk Score is a <em>primary prevention tool</em> for patients without established cardiovascular disease. It should <strong>not</strong> be used in:</p>
+  <ul>
+    <li>Patients with <strong>known coronary artery disease, prior MI, stroke, or peripheral arterial disease</strong> — these patients are already high-risk and statin therapy is indicated regardless of score</li>
+    <li>Patients with <strong>familial hypercholesterolaemia (FH)</strong> — LDL ≥ 190 mg/dL warrants high-intensity statin regardless of calculated risk</li>
+    <li>Patients aged <strong>&lt; 30 or &gt; 79 years</strong> — outside the validated age range</li>
+    <li>Patients with <strong>type 1 diabetes</strong> — who have a different risk profile than type 2</li>
+  </ul>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Framingham predicts <strong>10-year coronary heart disease risk</strong> from age, sex, cholesterol, HDL, BP, smoking, and diabetes</li>
+      <li>Risk categories: <strong>&lt;10% low</strong>, <strong>10–19% intermediate</strong>, <strong>≥20% high</strong> → statin recommended</li>
+      <li><strong>Indian patients: multiply score by 1.4–1.5</strong> — South Asians develop CHD at higher rates than Framingham equations predict</li>
+      <li><strong>High-intensity statins</strong> (atorvastatin 40–80 mg or rosuvastatin 20–40 mg) for high-risk patients</li>
+      <li>LDL targets: &lt; 70 mg/dL for high risk; &lt; 55 mg/dL for very high risk (known CVD)</li>
+      <li><strong>Smoking cessation reduces CHD risk by 50% in 1 year</strong> — the single most impactful intervention</li>
+      <li>Framingham is for <strong>primary prevention only</strong> — patients with existing CVD or FH are already high-risk regardless of score</li>
+    </ul>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Wilson PW et al. <em>Prediction of coronary heart disease using risk factor categories.</em> Circulation. 1998;97(18):1837-1847.</li>
+      <li>Goff DC et al. <em>2013 ACC/AHA Guideline on the Assessment of Cardiovascular Risk.</em> J Am Coll Cardiol. 2014;63(25 Pt B):2935-2959.</li>
+      <li>Cardiology Society of India. <em>CSI Consensus Statement on Dyslipidaemia Management.</em> Indian Heart J. 2020.</li>
+      <li>Enas EA et al. <em>Coronary artery disease and its risk factors in first generation immigrant Asian Indians to the United States of America.</em> Indian Heart J. 1996;48(4):343-353.</li>
+      <li>Mach F et al. <em>2019 ESC/EAS Guidelines for the management of dyslipidaemias.</em> Eur Heart J. 2020;41(1):111-188.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes based on Framingham 1998 equations and CSI guidelines. Cardiovascular risk assessment and statin therapy decisions must be made by a qualified physician with full clinical assessment of the individual patient.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
