@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="hypothyroidism-billewicz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypothyroidism – Billewicz Score Calculator | ICMR Guidelines | MedCalc India</title>
+  <meta name="description" content="Calculate Billewicz Score for hypothyroidism diagnosis. Based on ICMR Standard Treatment Workflow. Includes TSH interpretation, Levothyroxine dosing, and target TSH ranges for Indian clinical practice." />
+  <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/hypothyroidism" />
+  <meta property="og:title" content="Hypothyroidism – Billewicz Score Calculator | MedCalc India" />
+  <meta property="og:description" content="Calculate Billewicz Score for hypothyroidism diagnosis based on ICMR Standard Treatment Workflow." />
+  <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/hypothyroidism" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://thezerowhisper.github.io/medical-calculators/shared-nav.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Hypothyroidism – Billewicz Score Calculator",
+    "description": "Billewicz scoring tool for clinical diagnosis of hypothyroidism based on ICMR Standard Treatment Workflow (ICD-10 E03.9).",
+    "url": "https://thezerowhisper.github.io/medical-calculators/hypothyroidism",
+    "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Clinician" },
+    "about": { "@type": "MedicalCondition", "name": "Hypothyroidism", "code": { "@type": "MedicalCode", "code": "E03.9", "codingSystem": "ICD-10" } }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #1c2330;
+      --border: #30363d;
+      --accent: #2ea043;
+      --accent2: #1f6feb;
+      --accent3: #f78166;
+      --warn: #d29922;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --text-dim: #6e7681;
+      --radius: 10px;
+      --radius-lg: 16px;
+      --font: 'Outfit', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* HERO BANNER */
+    .hero {
+      background: linear-gradient(135deg, #0d1117 0%, #1a2332 50%, #0d1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 1.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 240px; height: 240px;
+      background: radial-gradient(circle, rgba(46,160,67,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(46,160,67,0.12);
+      border: 1px solid rgba(46,160,67,0.3);
+      color: var(--accent);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px; border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex; flex-wrap: wrap; gap: 1.2rem;
+      margin-top: 0.8rem;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 5px; }
+
+    /* LAYOUT */
+    .page { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    /* CARDS */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .card-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 1.2rem;
+    }
+    .card-icon {
+      width: 36px; height: 36px;
+      background: rgba(46,160,67,0.12);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .card-title {
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--text);
+    }
+    .card-subtitle { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* SECTION LABEL */
+    .section-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-dim);
+      margin-bottom: 1rem;
+    }
+
+    /* SYMPTOMS GRID */
+    .sx-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 520px) { .sx-grid { grid-template-columns: 1fr; } }
+
+    .sx-item {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.55rem 0.8rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+    .sx-item:hover { border-color: var(--accent); background: rgba(46,160,67,0.06); }
+    .sx-item.checked {
+      border-color: var(--accent);
+      background: rgba(46,160,67,0.12);
+    }
+    .sx-check {
+      width: 18px; height: 18px;
+      border-radius: 4px;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; color: transparent;
+      transition: all 0.15s ease;
+    }
+    .sx-item.checked .sx-check {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .sx-label { font-size: 0.875rem; color: var(--text); }
+    .sx-badge {
+      margin-left: auto;
+      font-size: 0.7rem; font-weight: 600;
+      font-family: var(--mono);
+      color: var(--text-dim);
+      background: var(--surface);
+      padding: 1px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* GENDER ROW */
+    .gender-row {
+      display: flex; gap: 0.5rem; margin-bottom: 1.2rem;
+    }
+    .gender-btn {
+      flex: 1;
+      padding: 0.6rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      font-family: var(--font);
+      font-size: 0.875rem; font-weight: 500;
+      cursor: pointer; transition: all 0.15s ease;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .gender-btn.active {
+      border-color: var(--accent2);
+      background: rgba(31,111,235,0.12);
+      color: var(--text);
+    }
+    .age-row {
+      display: flex; align-items: center; gap: 0.8rem;
+      margin-bottom: 1.2rem; flex-wrap: wrap;
+    }
+    .age-row label { font-size: 0.875rem; color: var(--text-muted); }
+    .age-row input {
+      width: 90px; padding: 0.45rem 0.7rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-family: var(--mono); font-size: 0.9rem;
+    }
+    .age-row input:focus { outline: none; border-color: var(--accent2); }
+
+    /* CALCULATE BTN */
+    .calc-btn {
+      width: 100%; padding: 0.9rem;
+      background: var(--accent);
+      border: none; border-radius: var(--radius);
+      color: #fff; font-family: var(--font);
+      font-size: 1rem; font-weight: 600;
+      cursor: pointer; letter-spacing: 0.01em;
+      transition: all 0.15s ease;
+      margin-top: 0.5rem;
+    }
+    .calc-btn:hover { background: #3fb950; transform: translateY(-1px); }
+    .calc-btn:active { transform: translateY(0); }
+
+    /* RESULT BOX */
+    .result-box {
+      display: none;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.6rem;
+      margin-top: 1.2rem;
+      animation: fadeUp 0.3s ease;
+    }
+    .result-box.show { display: block; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .score-display {
+      display: flex; align-items: baseline; gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .score-num {
+      font-family: var(--mono);
+      font-size: 3rem; font-weight: 700; line-height: 1;
+    }
+    .score-denom { font-size: 1.2rem; color: var(--text-muted); }
+    .score-bar-track {
+      height: 8px; border-radius: 4px;
+      background: var(--surface);
+      margin-bottom: 1rem; overflow: hidden;
+    }
+    .score-bar-fill {
+      height: 100%; border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+    .verdict {
+      font-size: 1.05rem; font-weight: 600;
+      padding: 0.6rem 1rem; border-radius: var(--radius);
+      display: inline-block; margin-bottom: 0.8rem;
+    }
+    .verdict.hypo  { background: rgba(247,129,102,0.15); color: var(--accent3); border: 1px solid rgba(247,129,102,0.3); }
+    .verdict.inter { background: rgba(210,153,34,0.12); color: var(--warn); border: 1px solid rgba(210,153,34,0.3); }
+    .verdict.euth  { background: rgba(46,160,67,0.12); color: var(--accent); border: 1px solid rgba(46,160,67,0.3); }
+    .result-note { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* TWO-COL GRID for info sections */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+
+    /* INFO PILLS */
+    .info-list { list-style: none; }
+    .info-list li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 0.875rem; color: var(--text-muted);
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(48,54,61,0.5);
+    }
+    .info-list li:last-child { border-bottom: none; }
+    .info-list li::before { content: '▸'; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+
+    /* DOSING TABLE */
+    .dose-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .dose-table th {
+      text-align: left; padding: 0.55rem 0.8rem;
+      background: rgba(46,160,67,0.08);
+      color: var(--accent); font-weight: 600;
+      font-size: 0.78rem; letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+    }
+    .dose-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid rgba(48,54,61,0.5);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+    .dose-table tr:last-child td { border-bottom: none; }
+    .dose-table td:first-child { color: var(--text); font-weight: 500; }
+
+    /* TSH TARGETS */
+    .tsh-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.7rem; }
+    .tsh-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 1rem;
+    }
+    .tsh-card .label { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 4px; }
+    .tsh-card .val { font-family: var(--mono); font-size: 1.05rem; color: var(--text); font-weight: 500; }
+
+    /* ALERT BOX */
+    .alert {
+      display: flex; gap: 10px;
+      background: rgba(210,153,34,0.08);
+      border: 1px solid rgba(210,153,34,0.3);
+      border-radius: var(--radius);
+      padding: 0.9rem 1rem;
+      font-size: 0.85rem; color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .alert-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* PRINT BTN */
+    .print-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-muted);
+      font-family: var(--font); font-size: 0.82rem;
+      cursor: pointer; transition: all 0.15s;
+      margin-top: 1rem;
+    }
+    .print-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* REF BOX */
+    .ref-box {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      font-size: 0.8rem; color: var(--text-dim);
+      margin-top: 2rem;
+    }
+    .ref-box strong { color: var(--text-muted); }
+
+    @media print {
+      .hero { background: #fff !important; color: #000 !important; }
+      .calc-btn, .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🧬 ICD-10 E03.9 · Endocrinology</div>
+    <h1>Hypothyroidism <span>Billewicz Score</span></h1>
+    <p style="color:var(--text-muted);font-size:0.92rem;margin-top:0.5rem;max-width:540px;">
+      Clinical scoring tool for hypothyroidism diagnosis with ICMR STW-guided Levothyroxine dosing and TSH targets for Indian clinical practice.
+    </p>
+    <div class="hero-meta">
+      <span>📋 ICMR STW Guidelines 2022</span>
+      <span>🏥 Primary · Congenital · Central</span>
+      <span>⚡ Billewicz et al., 1969</span>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- BILLEWICZ CALCULATOR -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">🩺</div>
+      <div>
+        <div class="card-title">Billewicz Scoring Tool</div>
+        <div class="card-subtitle">Select all present symptoms and signs — each scores +1 point</div>
+      </div>
+    </div>
+
+    <!-- PATIENT INFO -->
+    <div class="gender-row">
+      <button class="gender-btn active" id="btn-female" onclick="setGender('female')">♀ Female</button>
+      <button class="gender-btn" id="btn-male" onclick="setGender('male')">♂ Male</button>
+    </div>
+    <div class="age-row">
+      <label>Age:</label>
+      <input type="number" id="age-input" min="1" max="120" placeholder="yrs" value="" />
+      <span style="font-size:0.82rem;color:var(--text-dim);">Female &lt; 55 yrs earns +1 bonus point</span>
+    </div>
+
+    <div class="section-label">Symptoms</div>
+    <div class="sx-grid" id="symptom-grid"></div>
+
+    <div class="section-label" style="margin-top:1rem;">Physical Signs</div>
+    <div class="sx-grid" id="sign-grid"></div>
+
+    <button class="calc-btn" onclick="calculate()">Calculate Billewicz Score</button>
+
+    <!-- RESULT -->
+    <div class="result-box" id="result-box">
+      <div class="score-display">
+        <div class="score-num" id="score-num">0</div>
+        <div class="score-denom">/ 12<span id="bonus-label"></span></div>
+      </div>
+      <div class="score-bar-track">
+        <div class="score-bar-fill" id="score-bar" style="width:0%"></div>
+      </div>
+      <div class="verdict" id="verdict-label"></div>
+      <p class="result-note" id="result-note" style="margin-top:0.6rem;"></p>
+      <button class="print-btn" onclick="window.print()">🖨 Print Result</button>
+    </div>
+  </div>
+
+  <!-- WHEN TO SUSPECT -->
+  <div class="two-col">
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header">
+        <div class="card-icon">🔍</div>
+        <div><div class="card-title">Symptoms</div><div class="card-subtitle">Primary hypothyroidism</div></div>
+      </div>
+      <ul class="info-list">
+        <li>Fatigue, weight gain with poor appetite</li>
+        <li>Dry skin and cold intolerance</li>
+        <li>Hair loss, diffuse alopecia</li>
+        <li>Constipation</li>
+        <li>Hoarseness of voice</li>
+        <li>Dyspnea, muscle weakness &amp; cramps</li>
+        <li>Menorrhagia → oligomenorrhea / amenorrhea</li>
+        <li>Infertility</li>
+        <li>Difficulty concentrating, poor memory</li>
+        <li>Paraesthesia, impaired hearing</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header">
+        <div class="card-icon">👁</div>
+        <div><div class="card-title">Signs</div><div class="card-subtitle">Clinical examination</div></div>
+      </div>
+      <ul class="info-list">
+        <li>Dry, coarse skin; cool peripheries</li>
+        <li>Puffy face, hands, feet (myxoedema)</li>
+        <li>Goitre</li>
+        <li>Bradycardia</li>
+        <li>Peripheral oedema</li>
+        <li>Delayed ankle tendon reflex</li>
+        <li>Periorbital puffiness</li>
+        <li>Carpal tunnel syndrome</li>
+        <li>Serous cavity effusions</li>
+        <li>Slow movements</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- INVESTIGATIONS -->
+  <div class="card" style="margin-top:1.5rem;">
+    <div class="card-header">
+      <div class="card-icon">🧪</div>
+      <div><div class="card-title">Investigations &amp; Interpretation</div><div class="card-subtitle">Confirming clinical suspicion</div></div>
+    </div>
+    <table class="dose-table">
+      <thead>
+        <tr><th>Type</th><th>Tests to Order</th><th>Interpretation</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Primary Hypothyroidism</td>
+          <td>TSH · FT4 or Total T4 · TPO antibodies (if available)</td>
+          <td>
+            <b>Overt:</b> TSH ↑ + FT4 ↓<br>
+            <b>Subclinical:</b> TSH ↑ + normal FT4/T4
+          </td>
+        </tr>
+        <tr>
+          <td>Congenital</td>
+          <td>TSH · FT4 or T4 · USG neck · Nuclear imaging (after 72 hrs, do not delay treatment)</td>
+          <td>
+            Screening: TSH &gt; 30 mU/L; T4 &lt; 10th centile<br>
+            Confirmatory: TSH &gt; 9 mU/L; FT4 &lt; 0.6 ng/ml
+          </td>
+        </tr>
+        <tr>
+          <td>Central (Secondary)</td>
+          <td>FT4 or T4 · TSH · Other pituitary profile · Imaging of sella</td>
+          <td>TSH normal or low + FT4/T4 low</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- LEVOTHYROXINE DOSING -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">💊</div>
+      <div><div class="card-title">Levothyroxine Dosing — ICMR STW</div><div class="card-subtitle">Initiation and titration guidance</div></div>
+    </div>
+    <table class="dose-table">
+      <thead>
+        <tr><th>Type</th><th>Starting Dose</th><th>Special Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Primary Hypothyroidism</td>
+          <td>1.6 – 1.8 mcg/kg/day (single dose, fasting, no calories for 1 hr)</td>
+          <td>Elderly / CAD: start 12.5–25 mcg/day; increase 12.5–25 mcg every 3–4 weeks</td>
+        </tr>
+        <tr>
+          <td>Congenital Hypothyroidism</td>
+          <td>10 – 15 mcg/kg/day; single daily dose with breast milk (powdered)</td>
+          <td>Titrate on FT4 + TSH initially, then TSH alone</td>
+        </tr>
+        <tr>
+          <td>Central (Secondary)</td>
+          <td>1.3 mcg/kg/day</td>
+          <td>⚠ Must treat coexisting adrenal insufficiency with Hydrocortisone <em>first</em> — risk of adrenal crisis</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert" style="margin-top:1.2rem;">
+      <span class="alert-icon">⚠️</span>
+      <span>Consider treating <b>subclinical hypothyroidism</b> if: large goitre, positive TPO antibody, ASCVD, heart failure, dyslipidaemia, infertility, depression, refractory anaemia, or personal/family history of autoimmune disease.</span>
+    </div>
+  </div>
+
+  <!-- TSH TARGETS -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">🎯</div>
+      <div><div class="card-title">Target TSH Ranges</div><div class="card-subtitle">Primary hypothyroidism — age-adjusted</div></div>
+    </div>
+    <div class="tsh-grid">
+      <div class="tsh-card">
+        <div class="label">Young Adults</div>
+        <div class="val">1.0 – 2.5 mU/L</div>
+      </div>
+      <div class="tsh-card">
+        <div class="label">Middle-Aged</div>
+        <div class="val">1.5 – 3.0 mU/L</div>
+      </div>
+      <div class="tsh-card">
+        <div class="label">Elderly &lt; 60 y</div>
+        <div class="val">&gt; 4.5 mU/L</div>
+      </div>
+      <div class="tsh-card">
+        <div class="label">Elderly 60–70 y</div>
+        <div class="val">&gt; 6.0 mU/L</div>
+      </div>
+      <div class="tsh-card">
+        <div class="label">Elderly 70–80 y</div>
+        <div class="val">&gt; 7.0 – 8.0 mU/L</div>
+      </div>
+    </div>
+
+    <div style="margin-top:1.4rem;">
+      <div class="section-label">Congenital Hypothyroidism Targets</div>
+      <div class="tsh-grid">
+        <div class="tsh-card"><div class="label">Target T4</div><div class="val">10 – 16 mcg/dl</div></div>
+        <div class="tsh-card"><div class="label">Target FT4</div><div class="val">1.4 – 2.3 ng/dl</div></div>
+        <div class="tsh-card"><div class="label">Target TSH</div><div class="val">0.5 – 2 mU/L</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOLLOW-UP -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">📅</div>
+      <div><div class="card-title">Follow-up Schedule</div><div class="card-subtitle">Monitoring post-initiation</div></div>
+    </div>
+    <div class="two-col">
+      <div>
+        <p class="section-label">Primary / Central</p>
+        <ul class="info-list">
+          <li>TSH every 3–6 months initially</li>
+          <li>Annual follow-up once stable dose achieved</li>
+          <li>Central: titrate on FT4/T4 levels (not TSH)</li>
+        </ul>
+      </div>
+      <div>
+        <p class="section-label">Congenital Hypothyroidism</p>
+        <ul class="info-list">
+          <li>Initial: 2 weeks then 4 weeks</li>
+          <li>Every 1–2 months in first 6 months</li>
+          <li>Every 3–4 months from 6 months to 3 years</li>
+          <li>Every 6–12 months till growth is complete</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- REFERENCE -->
+  <div class="ref-box">
+    <strong>Source:</strong> ICMR Standard Treatment Workflow — Hypothyroidism (ICD-10: E03.9), Department of Health Research, MoHFW, Government of India, July 2022.<br>
+    <strong>Scoring Reference:</strong> Billewicz WZ, Chapman RS, Crooks J, et al. Statistical methods applied to the diagnosis of hypothyroidism. <em>Q J Med.</em> 1969;38:255–266.<br>
+    <span style="color:var(--text-dim);font-size:0.77rem;">This tool is for clinical decision support only. Individual patient management is at treating physician's discretion. Not a substitute for clinical judgment.</span>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+  // --- Data ---
+  const SYMPTOMS = [
+    "Hearing impairment",
+    "Diminished sweating",
+    "Constipation",
+    "Paraesthesia",
+    "Hoarseness",
+    "Weight increase",
+    "Dry skin"
+  ];
+  const SIGNS = [
+    "Slow movements",
+    "Periorbital puffiness",
+    "Delayed ankle reflex",
+    "Coarse skin",
+    "Cold skin"
+  ];
+
+  let gender = 'female';
+  let checked = new Set();
+
+  function setGender(g) {
+    gender = g;
+    document.getElementById('btn-female').classList.toggle('active', g === 'female');
+    document.getElementById('btn-male').classList.toggle('active', g === 'male');
+  }
+
+  function buildGrid(items, containerId, prefix) {
+    const container = document.getElementById(containerId);
+    items.forEach((label, i) => {
+      const id = prefix + i;
+      const div = document.createElement('div');
+      div.className = 'sx-item';
+      div.id = 'item-' + id;
+      div.innerHTML = `
+        <div class="sx-check" id="chk-${id}">✓</div>
+        <span class="sx-label">${label}</span>
+        <span class="sx-badge">+1</span>
+      `;
+      div.addEventListener('click', () => toggleItem(id, div));
+      container.appendChild(div);
+    });
+  }
+
+  function toggleItem(id, el) {
+    if (checked.has(id)) {
+      checked.delete(id);
+      el.classList.remove('checked');
+    } else {
+      checked.add(id);
+      el.classList.add('checked');
+    }
+  }
+
+  function calculate() {
+    let score = checked.size;
+    const age = parseInt(document.getElementById('age-input').value) || 99;
+    let bonus = 0;
+    let maxScore = 12;
+    let bonusLabel = '';
+
+    if (gender === 'female' && age < 55) {
+      bonus = 1;
+      bonusLabel = ' + 1 (F<55)';
+      maxScore = 13;
+    }
+
+    const total = score + bonus;
+
+    document.getElementById('score-num').textContent = total;
+    document.getElementById('bonus-label').textContent = bonusLabel;
+
+    const pct = Math.min(100, Math.round((total / 12) * 100));
+    const bar = document.getElementById('score-bar');
+    bar.style.width = pct + '%';
+
+    const vLabel = document.getElementById('verdict-label');
+    const vNote  = document.getElementById('result-note');
+
+    if (total >= 6) {
+      vLabel.className = 'verdict hypo';
+      vLabel.textContent = '🔴 Hypothyroid (Score ≥ 6)';
+      bar.style.background = 'linear-gradient(90deg, #f78166, #ff6b6b)';
+      vNote.textContent = 'Clinical picture is consistent with hypothyroidism. Order TSH + FT4/T4 to confirm. If TSH elevated with low FT4, initiate Levothyroxine as per ICMR dosing guidelines.';
+    } else if (total >= 3) {
+      vLabel.className = 'verdict inter';
+      vLabel.textContent = '🟡 Intermediate (Score 3–5)';
+      bar.style.background = 'linear-gradient(90deg, #d29922, #e3a008)';
+      vNote.textContent = 'Borderline clinical picture. Biochemical testing (TSH + FT4) is strongly recommended to rule in or out hypothyroidism. Consider TPO antibodies if subclinical hypothyroidism is suspected.';
+    } else {
+      vLabel.className = 'verdict euth';
+      vLabel.textContent = '🟢 Euthyroid (Score ≤ 2)';
+      bar.style.background = 'linear-gradient(90deg, #2ea043, #3fb950)';
+      vNote.textContent = 'Clinical score is low — hypothyroidism is unlikely on clinical grounds alone. Consider alternative diagnoses if symptoms persist. Biochemical testing may still be done if clinically indicated.';
+    }
+
+    document.getElementById('result-box').classList.add('show');
+    document.getElementById('result-box').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // Analytics
+    if (typeof trackCalc === 'function') trackCalc('hypothyroidism-billewicz', total);
+  }
+
+  // Init
+  buildGrid(SYMPTOMS, 'symptom-grid', 's');
+  buildGrid(SIGNS,    'sign-grid',    'g');
+</script>
+
+</body>
+</html>
