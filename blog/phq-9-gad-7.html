@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHQ-9 & GAD-7: Screening for Depression & Anxiety in Primary Care | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the PHQ-9 and GAD-7 screening tools — how to use them, what scores mean, management by severity, antidepressants, when to refer, and mental health resources in India." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#3a6b5c;--brand-dark:#1e3d33;--brand-light:#e8f5f1;--accent:#7a3a8a;--text:#1c1c1e;--muted:#5a5a6a;--border:#c4dfd8;--bg:#f4fbf8;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#1e3d33 0%,#3a6b5c 55%,#4d9080 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--brand);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--accent);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    /* severity bands */
+    .severity-band{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-radius:10px;overflow:hidden;margin:1.2rem 0;font-size:13px;}
+    .sb{padding:14px 8px;text-align:center;color:#fff;}
+    .sb.s0{background:#1a6b3c;}.sb.s1{background:#5a8a1a;}.sb.s2{background:#8a6a00;}.sb.s3{background:#b85000;}.sb.s4{background:#8a1515;}
+    .sb .sb-range{font-family:'Lora',serif;font-size:1rem;font-weight:700;}
+    .sb .sb-label{font-size:11px;margin-top:4px;opacity:.9;font-weight:600;}
+    /* crisis box */
+    .crisis-box{background:#1e3d33;color:#fff;border-radius:10px;padding:20px 24px;margin:1.6rem 0;}
+    .crisis-box h3{font-size:1rem;font-weight:700;margin-bottom:10px;color:#a8e6d4;}
+    .crisis-box p{margin:0;font-size:15px;line-height:1.7;}
+    .crisis-box a{color:#a8e6d4;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.purple{border-color:#7a3a8a;background:#f5eefb;}
+    .callout p{margin:0;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.severity-band{grid-template-columns:repeat(3,1fr);}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; PHQ-9 &amp; GAD-7</header>
+<div class="hero">
+  <div class="tag">🧠 Psychiatry &amp; Primary Care</div>
+  <h1>PHQ-9 &amp; GAD-7: Screening for Depression &amp; Anxiety in Primary Care</h1>
+  <p class="subtitle">How the PHQ-9 and GAD-7 work, what each score means, management by severity, antidepressants and therapy, the special case of PHQ-9 Item 9, and mental health resources in India.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on NICE CG90, WHO mhGAP &amp; DSM-5 Criteria</p>
+</div>
+<div class="wrap">
+
+  <div class="crisis-box">
+    <h3>🆘 If you or someone you know is in crisis</h3>
+    <p>iCall (India): <strong>9152987821</strong> &nbsp;·&nbsp; Vandrevala Foundation: <strong>1860-2662-345</strong> &nbsp;·&nbsp; NIMHANS: <strong>080-46110007</strong> &nbsp;·&nbsp; iCall also offers online counselling at <a href="https://icallhelpline.org" target="_blank">icallhelpline.org</a></p>
+  </div>
+
+  <p>Depression and anxiety are the two most common mental health conditions in the world — and also the two most under-diagnosed. The <strong>World Health Organization estimates that over 300 million people</strong> live with depression globally. In India, the National Mental Health Survey found that approximately <strong>1 in 7 Indians</strong> suffers from a mental health condition, with depression and anxiety disorders leading the list. Yet fewer than 20% ever receive any form of treatment.</p>
+  <p>One of the most significant barriers to treatment is identification. A busy GP or physician sees dozens of patients daily. A patient with depression rarely walks in and says "I am depressed" — they come in with fatigue, headaches, sleep problems, or vague bodily complaints. Without a systematic screening tool, the diagnosis is missed.</p>
+  <p>The <strong>PHQ-9</strong> and <strong>GAD-7</strong> are the solution. They are brief, validated, free questionnaires that can be completed by the patient in under 3 minutes — and they transform subjective distress into an objective, actionable score.</p>
+
+  <h2>What Is the PHQ-9?</h2>
+  <p>The <strong>Patient Health Questionnaire-9 (PHQ-9)</strong> was developed by Dr Kurt Kroenke and Dr Robert Spitzer in 2001. Its nine questions correspond directly to the nine diagnostic criteria for <strong>Major Depressive Disorder (MDD)</strong> in the DSM-5. Each question asks how often the patient has been bothered by a symptom over the past two weeks, scored from 0 (not at all) to 3 (nearly every day), giving a maximum total of <strong>27</strong>.</p>
+  <p>The PHQ-9 has a sensitivity of <strong>88%</strong> and specificity of <strong>88%</strong> for major depressive disorder at a cutoff of ≥10. It is recommended by NICE (CG90), the WHO mhGAP programme, and virtually all international primary care depression guidelines as the first-line screening and monitoring tool.</p>
+
+  <h3>The 9 PHQ-9 Questions</h3>
+  <p><em>Over the last 2 weeks, how often have you been bothered by the following?</em></p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>#</th><th>Symptom</th><th>DSM-5 Criterion</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Little interest or pleasure in doing things</td><td>Anhedonia</td></tr>
+      <tr><td>2</td><td>Feeling down, depressed, or hopeless</td><td>Depressed mood</td></tr>
+      <tr><td>3</td><td>Trouble falling or staying asleep, or sleeping too much</td><td>Sleep disturbance</td></tr>
+      <tr><td>4</td><td>Feeling tired or having little energy</td><td>Fatigue</td></tr>
+      <tr><td>5</td><td>Poor appetite or overeating</td><td>Appetite change</td></tr>
+      <tr><td>6</td><td>Feeling bad about yourself — or that you are a failure</td><td>Worthlessness/guilt</td></tr>
+      <tr><td>7</td><td>Trouble concentrating on things</td><td>Poor concentration</td></tr>
+      <tr><td>8</td><td>Moving or speaking so slowly others could notice — or being fidgety</td><td>Psychomotor change</td></tr>
+      <tr><td>9</td><td>Thoughts that you would be better off dead, or of hurting yourself</td><td>Suicidality</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>PHQ-9 Item 9 — Suicidality requires immediate attention.</strong> Any score &gt; 0 on item 9 mandates a structured suicide risk assessment regardless of the total score. Ask directly: Do they have a plan? Access to means? Intent? Protective factors? Never leave a patient who endorses item 9 without a safety plan or appropriate referral.</p>
+  </div>
+
+  <h2>PHQ-9 Score Interpretation &amp; Management</h2>
+
+  <div class="severity-band">
+    <div class="sb s0"><div class="sb-range">0–4</div><div class="sb-label">Minimal</div></div>
+    <div class="sb s1"><div class="sb-range">5–9</div><div class="sb-label">Mild</div></div>
+    <div class="sb s2"><div class="sb-range">10–14</div><div class="sb-label">Moderate</div></div>
+    <div class="sb s3"><div class="sb-range">15–19</div><div class="sb-label">Mod-Severe</div></div>
+    <div class="sb s4"><div class="sb-range">20–27</div><div class="sb-label">Severe</div></div>
+  </div>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Score</th><th>Severity</th><th>Management</th></tr></thead>
+    <tbody>
+      <tr><td><strong>0–4</strong></td><td>Minimal depression</td><td>No treatment needed. Psychoeducation. Routine follow-up.</td></tr>
+      <tr><td><strong>5–9</strong></td><td>Mild depression</td><td>Watchful waiting. Psychoeducation. Lifestyle advice. Reassess in 4 weeks.</td></tr>
+      <tr><td><strong>10–14</strong></td><td>Moderate depression</td><td>Treatment plan. Antidepressant <em>and/or</em> structured psychotherapy (CBT). Follow up in 2–4 weeks.</td></tr>
+      <tr><td><strong>15–19</strong></td><td>Moderately severe</td><td>Active treatment with antidepressant. Psychotherapy referral. Weekly monitoring initially.</td></tr>
+      <tr><td><strong>20–27</strong></td><td>Severe depression</td><td>Immediate pharmacotherapy. Urgent psychiatric referral. Assess suicide risk at every contact.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>What Is the GAD-7?</h2>
+  <p>The <strong>Generalised Anxiety Disorder-7 (GAD-7)</strong> was developed by the same team in 2006. Its seven questions screen for generalised anxiety disorder but also detect panic disorder, social anxiety disorder, and PTSD with reasonable accuracy. Each question is scored 0–3 over the past two weeks, giving a maximum total of <strong>21</strong>.</p>
+  <p>The GAD-7 has a sensitivity of <strong>89%</strong> and specificity of <strong>82%</strong> for generalised anxiety disorder at a cutoff of ≥10. It is the most widely used anxiety screening tool in primary care globally.</p>
+
+  <h3>The 7 GAD-7 Questions</h3>
+  <p><em>Over the last 2 weeks, how often have you been bothered by the following?</em></p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>#</th><th>Symptom</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Feeling nervous, anxious, or on edge</td></tr>
+      <tr><td>2</td><td>Not being able to stop or control worrying</td></tr>
+      <tr><td>3</td><td>Worrying too much about different things</td></tr>
+      <tr><td>4</td><td>Trouble relaxing</td></tr>
+      <tr><td>5</td><td>Being so restless it's hard to sit still</td></tr>
+      <tr><td>6</td><td>Becoming easily annoyed or irritable</td></tr>
+      <tr><td>7</td><td>Feeling afraid, as if something awful might happen</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>GAD-7 Score Interpretation &amp; Management</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Score</th><th>Severity</th><th>Management</th></tr></thead>
+    <tbody>
+      <tr><td><strong>0–4</strong></td><td>Minimal anxiety</td><td>No treatment needed. Reassurance and routine care.</td></tr>
+      <tr><td><strong>5–9</strong></td><td>Mild anxiety</td><td>Psychoeducation. Stress management, relaxation techniques. Monitor.</td></tr>
+      <tr><td><strong>10–14</strong></td><td>Moderate anxiety</td><td>Consider referral for CBT or pharmacotherapy (SSRI). Active monitoring.</td></tr>
+      <tr><td><strong>15–21</strong></td><td>Severe anxiety</td><td>Active treatment required. SSRI or SNRI. CBT referral. Psychiatric review if not responding.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout purple">
+    <p>🧠 Use the <a href="https://rxmedcalc.com/medical-calculators/phq9-gad7" target="_blank"><strong>RxMedCalc PHQ-9 &amp; GAD-7 Calculator</strong></a> — both tools in one place, with clinical interpretation and management guidance per NICE guidelines.</p>
+  </div>
+
+  <h2>Depression and Anxiety in India — The Burden</h2>
+  <p>India faces a profound mental health crisis that is frequently underdiscussed. The <strong>National Mental Health Survey 2016</strong> found:</p>
+  <ul>
+    <li>Approximately <strong>1 in 7 Indians</strong> (150 million people) suffers from a mental health condition requiring treatment</li>
+    <li><strong>Depressive disorders</strong> are the leading cause of mental health-related disability</li>
+    <li><strong>Anxiety disorders</strong> affect approximately 3.5% of the population — and are dramatically underdiagnosed in primary care</li>
+    <li>The <strong>treatment gap</strong> — the proportion of people with mental illness who receive no treatment — is over <strong>80%</strong></li>
+    <li>India has fewer than <strong>0.3 psychiatrists per 100,000 people</strong> — one of the lowest ratios in the world</li>
+  </ul>
+  <p>This makes primary care screening with the PHQ-9 and GAD-7 particularly critical in India. The GP, MBBS physician, or family doctor is often the <em>only</em> mental health contact a patient will ever have. Systematic screening identifies patients who would otherwise leave the clinic with a prescription for antacids instead of an antidepressant.</p>
+
+  <h2>Pharmacotherapy — Antidepressants in Primary Care</h2>
+  <p>For moderate to severe depression (PHQ-9 ≥ 10) and moderate to severe anxiety (GAD-7 ≥ 10), pharmacotherapy is indicated. <strong>SSRIs (Selective Serotonin Reuptake Inhibitors)</strong> are first-line for both conditions.</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Drug</th><th>Class</th><th>Starting Dose</th><th>Usual Dose</th><th>Key Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Escitalopram</strong></td><td>SSRI</td><td>5–10 mg OD</td><td>10–20 mg OD</td><td>Best-tolerated SSRI. First-line in India. Effective for both depression and anxiety.</td></tr>
+      <tr><td><strong>Sertraline</strong></td><td>SSRI</td><td>25–50 mg OD</td><td>50–200 mg OD</td><td>Excellent evidence base. Safe in pregnancy. First-line.</td></tr>
+      <tr><td><strong>Fluoxetine</strong></td><td>SSRI</td><td>10–20 mg OD</td><td>20–60 mg OD</td><td>Long half-life — easier to stop. More activating, can worsen anxiety initially.</td></tr>
+      <tr><td><strong>Duloxetine</strong></td><td>SNRI</td><td>30 mg OD</td><td>60–120 mg OD</td><td>Effective for both depression and anxiety. Also helpful for painful somatic symptoms.</td></tr>
+      <tr><td><strong>Mirtazapine</strong></td><td>NaSSA</td><td>15 mg nocte</td><td>15–45 mg nocte</td><td>Sedating — useful for insomnia. Less sexual side effects. Weight gain common.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Key Prescribing Principles</h3>
+  <ul>
+    <li><strong>Start low, go slow:</strong> Begin at half the usual dose for 1–2 weeks to minimise initial side effects (particularly nausea and anxiety activation with SSRIs)</li>
+    <li><strong>Allow 4–6 weeks</strong> for a therapeutic effect — patients often abandon treatment because they expect immediate improvement. Set expectations clearly.</li>
+    <li><strong>Continue for at least 6 months</strong> after remission to prevent relapse — stopping early is the most common cause of recurrence</li>
+    <li><strong>Never stop abruptly</strong> — taper gradually (over 4–8 weeks) to avoid discontinuation syndrome (dizziness, electric shock sensations, flu-like symptoms)</li>
+    <li>Reassess the PHQ-9 and GAD-7 at every follow-up visit to monitor treatment response objectively</li>
+  </ul>
+
+  <h2>Psychotherapy — The Non-Drug Pillar of Treatment</h2>
+  <p><strong>Cognitive Behavioural Therapy (CBT)</strong> has the strongest evidence base for both depression and anxiety — comparable to antidepressants for mild-to-moderate severity, and superior in preventing relapse when combined with medication. CBT is structured (typically 8–20 sessions), present-focused, and teaches patients to identify and change unhelpful thought patterns.</p>
+  <p>In India, access to trained CBT therapists has historically been a barrier. This is rapidly changing with the growth of <strong>digital mental health platforms</strong> (iCall, YourDOST, InnerHour, Wysa) that offer evidence-based psychological interventions remotely — making CBT accessible across urban and rural India.</p>
+  <p>Other evidence-based psychotherapies include: <strong>IPT (Interpersonal Therapy)</strong> for depression related to grief or relationship difficulties; <strong>mindfulness-based CBT (MBCT)</strong> for recurrent depression; and <strong>exposure therapy</strong> for anxiety disorders.</p>
+
+  <h2>Limitations of the PHQ-9 and GAD-7</h2>
+  <ul>
+    <li>They are <strong>screening tools, not diagnostic instruments.</strong> A PHQ-9 ≥ 10 does not diagnose major depression — it identifies patients warranting a full clinical assessment</li>
+    <li>Scores can be elevated by <strong>physical illness</strong> (fatigue and sleep problems from anaemia, hypothyroidism, or chronic pain can inflate PHQ-9 scores without true depression)</li>
+    <li>Not validated for <strong>bipolar disorder screening</strong> — always ask about manic episodes before starting antidepressants; SSRIs can trigger mania in undiagnosed bipolar patients</li>
+    <li>Cultural adaptation: some PHQ-9 items may be interpreted differently across cultures — the tool performs well in India but clinician interpretation remains essential</li>
+    <li>They do not assess <strong>psychosis, substance misuse, or personality disorders</strong>, which require additional screening</li>
+  </ul>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>PHQ-9 (9 questions, max 27) screens for <strong>depression</strong>; GAD-7 (7 questions, max 21) screens for <strong>anxiety</strong></li>
+      <li>PHQ-9 ≥ 10 = moderate depression → active treatment warranted. GAD-7 ≥ 10 = moderate anxiety → treatment recommended</li>
+      <li><strong>PHQ-9 Item 9 &gt; 0</strong> mandates immediate suicide risk assessment regardless of total score</li>
+      <li>India's mental health treatment gap exceeds <strong>80%</strong> — systematic primary care screening is essential</li>
+      <li><strong>SSRIs are first-line</strong> — escitalopram and sertraline are preferred. Start low, allow 4–6 weeks for effect</li>
+      <li>Continue antidepressants for <strong>at least 6 months after remission</strong> — never stop abruptly</li>
+      <li><strong>CBT is as effective as medication</strong> for mild-to-moderate depression and anxiety, and superior for relapse prevention</li>
+      <li>Rescreen with PHQ-9 / GAD-7 at every follow-up visit to <strong>objectively track treatment response</strong></li>
+    </ul>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Kroenke K, Spitzer RL, Williams JB. <em>The PHQ-9: validity of a brief depression severity measure.</em> J Gen Intern Med. 2001;16(9):606-613.</li>
+      <li>Spitzer RL et al. <em>A brief measure for assessing generalized anxiety disorder: the GAD-7.</em> Arch Intern Med. 2006;166(10):1092-1097.</li>
+      <li>NICE. <em>Depression in adults: recognition and management.</em> Clinical Guideline CG90, updated 2022.</li>
+      <li>WHO. <em>mhGAP Intervention Guide — Mental Health Gap Action Programme.</em> WHO, 2016.</li>
+      <li>National Mental Health Survey of India, 2015–16. <em>Prevalence, patterns and outcomes.</em> NIMHANS, Bengaluru.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes based on NICE and WHO guidelines. Depression and anxiety require assessment and management by a qualified clinician. If you or someone you know is experiencing mental health difficulties, please seek professional help.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
