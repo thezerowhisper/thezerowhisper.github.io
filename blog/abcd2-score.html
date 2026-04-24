@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABCD2 Score: TIA Stroke Risk & Urgent Management | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the ABCD2 score for TIA — how to calculate it, 2-day stroke risk by score, urgent investigation pathway, dual antiplatelet therapy, carotid imaging, and why TIA is a medical emergency." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#1a3a5c;--brand-dark:#0d1f33;--brand-light:#e6eefa;--accent:#c0392b;--text:#1c1c1e;--muted:#5a5a6a;--border:#c4cedf;--bg:#f4f7fc;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#0d1f33 0%,#1a3a5c 55%,#2655a0 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:700px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--brand);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--accent);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    /* ABCD2 score cards */
+    .abcd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:1.4rem 0;}
+    .abcd-card{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:8px;padding:16px;}
+    .abcd-card .letter{font-family:'Lora',serif;font-size:2rem;font-weight:700;color:var(--brand);line-height:1;}
+    .abcd-card .pts{font-size:12px;font-weight:600;color:var(--muted);margin:4px 0;}
+    .abcd-card p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.55;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    .badge{display:inline-block;border-radius:4px;font-size:12px;font-weight:600;padding:2px 8px;}
+    .badge.low{background:#d4edda;color:#155724;}.badge.mod{background:#fff3cd;color:#856404;}.badge.high{background:#f8d7da;color:#721c24;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.tip{border-color:#1e8c4a;background:#edf7f1;}
+    .callout p{margin:0;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; ABCD2 Score TIA</header>
+<div class="hero">
+  <div class="tag">🧠 Neurology &amp; Stroke</div>
+  <h1>ABCD2 Score: TIA Stroke Risk &amp; Urgent Management</h1>
+  <p class="subtitle">How to calculate the ABCD2 score, 2-day and 7-day stroke risk by score, the urgent TIA investigation pathway, dual antiplatelet therapy, carotid imaging, and why a TIA is always a medical emergency.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on NICE CG68, AHA/ASA TIA Guidelines &amp; Johnston et al.</p>
+</div>
+<div class="wrap">
+
+  <p>A transient ischaemic attack (TIA) — colloquially called a "mini-stroke" or "warning stroke" — is one of the most under-triaged emergencies in medicine. The word "transient" leads patients and sometimes clinicians to underestimate its gravity. The symptoms resolve. The patient feels fine. They go home and wait to see their GP next week.</p>
+  <p>This is dangerous. A TIA is the single strongest predictor of imminent stroke: without urgent treatment, approximately <strong>10–15% of TIA patients suffer a full stroke within 3 months</strong>, and the risk is highest in the first 48 hours. The ABCD2 score was developed to identify which TIA patients are at highest short-term stroke risk — and must be seen and treated within hours, not days.</p>
+
+  <h2>What Is a TIA?</h2>
+  <p>A <strong>transient ischaemic attack (TIA)</strong> is a brief episode of neurological dysfunction caused by focal ischaemia in the brain, spinal cord, or retina, <strong>without acute infarction</strong> on imaging. Clinically it is indistinguishable from stroke in the acute phase — the key difference is that symptoms resolve completely, typically within minutes to an hour.</p>
+  <p>Classic TIA symptoms include:</p>
+  <ul>
+    <li>Sudden unilateral weakness or numbness of face, arm, or leg</li>
+    <li>Sudden speech disturbance — slurred speech, difficulty finding words (dysphasia)</li>
+    <li>Sudden visual loss in one eye (<em>amaurosis fugax</em> — "curtain coming down")</li>
+    <li>Sudden double vision or loss of coordination</li>
+    <li>Sudden severe dizziness or vertigo with other neurological symptoms</li>
+  </ul>
+  <div class="callout warning">
+    <p>⚠️ <strong>TIA is a medical emergency — not a "mini-stroke" to be reviewed electively.</strong> The highest stroke risk is in the first 24–48 hours. Every TIA patient must be assessed and treated urgently — ideally within 24 hours of symptom onset. The ABCD2 score guides how urgent.</p>
+  </div>
+
+  <h2>The ABCD2 Score Components</h2>
+
+  <div class="abcd-grid">
+    <div class="abcd-card">
+      <div class="letter">A</div>
+      <div class="pts">0–1 points</div>
+      <p><strong>Age:</strong> &lt; 60 years = 0; ≥ 60 years = 1</p>
+    </div>
+    <div class="abcd-card">
+      <div class="letter">B</div>
+      <div class="pts">0–1 points</div>
+      <p><strong>Blood Pressure:</strong> SBP &lt; 140 AND DBP &lt; 90 = 0; SBP ≥ 140 OR DBP ≥ 90 = 1</p>
+    </div>
+    <div class="abcd-card">
+      <div class="letter">C</div>
+      <div class="pts">0–2 points</div>
+      <p><strong>Clinical features:</strong> Other = 0; Speech disturbance only = 1; Unilateral weakness = 2</p>
+    </div>
+    <div class="abcd-card">
+      <div class="letter">D</div>
+      <div class="pts">0–2 points</div>
+      <p><strong>Duration of symptoms:</strong> &lt; 10 min = 0; 10–59 min = 1; ≥ 60 min = 2</p>
+    </div>
+    <div class="abcd-card">
+      <div class="letter">D</div>
+      <div class="pts">0–1 points</div>
+      <p><strong>Diabetes:</strong> No = 0; Yes = 1</p>
+    </div>
+  </div>
+
+  <p><strong>Maximum score: 7 points</strong></p>
+
+  <h2>ABCD2 Score Interpretation — 2-Day Stroke Risk</h2>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>ABCD2 Score</th><th>Risk Category</th><th>2-Day Stroke Risk</th><th>7-Day Stroke Risk</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><strong>0–3</strong></td><td><span class="badge low">Low</span></td><td>~1%</td><td>~1.2%</td><td>Specialist review within 24 hours. Investigations same day.</td></tr>
+      <tr><td><strong>4–5</strong></td><td><span class="badge mod">Moderate</span></td><td>~4%</td><td>~5.9%</td><td>Urgent specialist review within 24 hours. Start aspirin immediately.</td></tr>
+      <tr><td><strong>6–7</strong></td><td><span class="badge high">High</span></td><td>~8%</td><td>~11.7%</td><td>Same-day emergency review. Hospital admission. Immediate investigation.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Important NICE guideline update:</strong> NICE (2019) no longer recommends using ABCD2 to decide who needs same-day vs 24-hour assessment — all suspected TIA patients should be seen by a specialist <strong>within 24 hours</strong> regardless of ABCD2 score. The score is still useful for risk communication and research, but should not delay or deprioritise low-scoring patients.</p>
+  </div>
+
+  <h2>Urgent TIA Investigation Pathway</h2>
+  <p>Every suspected TIA requires the following investigations urgently — ideally completed on the same day as presentation:</p>
+
+  <h3>Imaging</h3>
+  <ul>
+    <li><strong>MRI brain with DWI (diffusion-weighted imaging):</strong> Gold standard — detects acute infarction that would reclassify TIA as stroke, and identifies territory of ischaemia. Performed within 24 hours. If MRI unavailable, CT brain to exclude haemorrhage.</li>
+    <li><strong>Carotid Doppler ultrasound:</strong> Essential for all anterior circulation TIAs. Identifies ipsilateral carotid stenosis ≥ 50% — the most time-sensitive surgical emergency. A patient with 70–99% ipsilateral carotid stenosis benefits dramatically from carotid endarterectomy (CEA) performed within 2 weeks.</li>
+    <li><strong>CT or MR angiography:</strong> If carotid Doppler shows significant stenosis — confirms degree before surgical planning.</li>
+  </ul>
+
+  <h3>Blood Tests</h3>
+  <ul>
+    <li>FBC, ESR/CRP (polycythaemia, vasculitis)</li>
+    <li>Fasting glucose and HbA1c (undiagnosed diabetes)</li>
+    <li>Lipid profile (dyslipidaemia driving atherosclerosis)</li>
+    <li>Coagulation screen and thrombophilia screen in young patients (&lt; 50 years) without obvious risk factors</li>
+    <li>ECG — detect atrial fibrillation (the most important cardiac cause; requires anticoagulation, not antiplatelet therapy)</li>
+    <li>Echocardiogram — in younger patients or when cardioembolic cause suspected (intracardiac thrombus, PFO)</li>
+  </ul>
+
+  <h2>Immediate Medical Treatment After TIA</h2>
+
+  <h3>Antiplatelet Therapy — Dual Antiplatelet for 21 Days</h3>
+  <p>Following the POINT and CHANCE trials, <strong>dual antiplatelet therapy (DAPT)</strong> is now recommended for high-risk TIA (ABCD2 ≥ 4) and minor stroke for the first 21 days:</p>
+  <ul>
+    <li><strong>Aspirin 300 mg stat</strong> (loading dose) immediately, then 75 mg daily</li>
+    <li><strong>Clopidogrel 300 mg loading dose</strong> immediately, then 75 mg daily</li>
+    <li>After 21 days: switch to <strong>clopidogrel 75 mg monotherapy</strong> alone for long-term secondary prevention (CAPRIE trial — superior to aspirin alone)</li>
+  </ul>
+  <div class="callout warning">
+    <p>⚠️ <strong>If atrial fibrillation is identified</strong> as the TIA cause — do NOT use antiplatelet therapy. Anticoagulation (DOAC or warfarin) is required. Using antiplatelet therapy instead of anticoagulation in AF-related TIA provides inadequate stroke prevention.</p>
+  </div>
+
+  <h3>Blood Pressure and Statin</h3>
+  <ul>
+    <li><strong>Antihypertensive:</strong> Do not aggressively lower BP in first 24 hours post-TIA unless hypertensive emergency. After 24–48 hours, aim for BP &lt; 130/80 mmHg with ACE inhibitor + thiazide combination.</li>
+    <li><strong>High-intensity statin:</strong> Atorvastatin 80 mg or rosuvastatin 40 mg — start immediately. Reduces 5-year stroke recurrence by ~20%. LDL target &lt; 55 mg/dL in high-risk TIA.</li>
+    <li><strong>Lifestyle:</strong> Smoking cessation (halves stroke recurrence risk), Mediterranean diet, exercise, alcohol reduction.</li>
+  </ul>
+
+  <h3>Carotid Endarterectomy (CEA) — Time Critical</h3>
+  <p>For patients with ipsilateral carotid stenosis 70–99%, CEA is highly beneficial. The absolute risk reduction is greatest when surgery is performed within <strong>2 weeks of TIA</strong> — benefit decreases dramatically with delay. CEA within 2 weeks reduces 5-year stroke risk by ~16% absolute. This is one of the most time-sensitive surgical decisions in neurovascular medicine.</p>
+
+  <h2>Conditions That Mimic TIA</h2>
+  <p>Not every transient neurological episode is a TIA. Common mimics include:</p>
+  <ul>
+    <li><strong>Migraine with aura</strong> — visual or sensory symptoms that spread ("march") over minutes; headache usually follows; positive phenomena (e.g. zigzag lines) rather than negative (loss)</li>
+    <li><strong>Hypoglycaemia</strong> — always check blood glucose; focal neurology can occur with BGL &lt; 3 mmol/L</li>
+    <li><strong>Seizure with Todd's paresis</strong> — post-ictal weakness typically lasts minutes to hours; witnessed convulsive activity helps distinguish</li>
+    <li><strong>Syncope</strong> — loss of consciousness without focal neurology; not a TIA</li>
+    <li><strong>Peripheral vestibular disorder</strong> — isolated vertigo without other brainstem features rarely represents TIA</li>
+    <li><strong>Functional neurological disorder</strong> — especially in younger patients with atypical features</li>
+  </ul>
+
+  <div class="callout blue" style="border-color:var(--brand);background:var(--brand-light);">
+    <p>🧠 Use the <a href="https://rxmedcalc.com/medical-calculators/abcd2-score" target="_blank"><strong>RxMedCalc ABCD2 Score Calculator</strong></a> — automatic 2-day and 7-day stroke risk with management pathway per NICE guidelines.</p>
+  </div>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>ABCD2 = <strong>Age + BP + Clinical features + Duration + Diabetes</strong> — maximum 7 points</li>
+      <li>Score 0–3 = low (2-day risk ~1%); 4–5 = moderate (~4%); 6–7 = high (~8%)</li>
+      <li><strong>All TIA patients need specialist review within 24 hours</strong> — low ABCD2 does not mean low urgency by NICE 2019</li>
+      <li>Start <strong>dual antiplatelet (aspirin + clopidogrel) immediately</strong> for ABCD2 ≥ 4 and minor stroke — continue for 21 days</li>
+      <li><strong>AF detected?</strong> Switch to anticoagulation — not antiplatelet therapy</li>
+      <li><strong>Carotid stenosis 70–99%?</strong> CEA within 2 weeks — benefit falls dramatically with delay</li>
+      <li>Start <strong>high-intensity statin</strong> (atorvastatin 80 mg) immediately regardless of baseline cholesterol</li>
+      <li>MRI DWI + carotid Doppler are the two most critical investigations — arrange same day if possible</li>
+    </ul>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Johnston SC et al. <em>Validation and refinement of scores to predict very early stroke risk after transient ischaemic attack.</em> Lancet. 2007;369(9558):283-292.</li>
+      <li>NICE. <em>Stroke and transient ischaemic attack in over 16s: diagnosis and initial management.</em> Clinical Guideline NG128, 2019.</li>
+      <li>Johnston SC et al. <em>Clopidogrel and Aspirin in Acute Ischemic Stroke and High-Risk TIA (POINT trial).</em> N Engl J Med. 2018;379(3):215-225.</li>
+      <li>Wang Y et al. <em>Clopidogrel with Aspirin in Acute Minor Stroke or Transient Ischemic Attack (CHANCE trial).</em> N Engl J Med. 2013;369(1):11-19.</li>
+      <li>Rothwell PM et al. <em>Effect of urgent treatment of transient ischaemic attack and minor stroke on early recurrent stroke (EXPRESS study).</em> Lancet. 2007;370(9596):1432-1442.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes based on NICE and AHA/ASA guidelines. TIA management including antiplatelet choice, anticoagulation, and surgical referral must be directed by a qualified neurologist or stroke physician.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
