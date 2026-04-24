@@ -158,7 +158,27 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
   <h1>CURB-65 Calculator</h1>
   <p>Community-Acquired Pneumonia Severity &amp; Admission Guide</p>
 </div>
-
+<div style="background:#ebf8ff;border:1.5px solid #bee3f8;border-radius:14px;
+padding:16px 20px;margin-bottom:20px;display:flex;align-items:center;
+gap:14px;flex-wrap:wrap;">
+  <div style="font-size:1.6rem">📖</div>
+  <div style="flex:1;min-width:200px">
+    <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;
+    letter-spacing:.07em;color:#2b6cb0;margin-bottom:3px">Deep Dive Article</div>
+    <div style="font-size:.95rem;font-weight:700;color:#1a202c;margin-bottom:2px">
+      CURB-65 Score: Pneumonia Severity, Antibiotics & When to Admit
+    </div>
+    <div style="font-size:.8rem;color:#4a5568">
+      Full guide — mortality tables, CRB-65 for primary care, antibiotic selection
+      by severity, Klebsiella in Indian patients, and ICU criteria.
+    </div>
+  </div>
+  <a href="https://rxmedcalc.com/blog/curb65.html"
+     style="background:#2b6cb0;color:#fff;padding:9px 18px;border-radius:10px;
+     font-size:.85rem;font-weight:700;text-decoration:none;white-space:nowrap">
+     Read Article →
+  </a>
+</div>
 <div class="card">
   <h2>Select All That Apply (1 point each)</h2>
   <div id="list">
@@ -215,7 +235,64 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
     <span class="tag">Validated in CAP</span>
   </div>
 </div>
+<div class="content-section">
+  <h2>CURB-65 in the Indian Clinical Context</h2>
+  <p>Community-acquired pneumonia (CAP) is among the leading causes of hospitalisation and
+  mortality in India. The disease burden is compounded by several factors unique to the Indian
+  setting — high prevalence of <strong>Klebsiella pneumoniae</strong> (a gram-negative organism
+  not covered by standard beta-lactam monotherapy), <strong>drug-resistant Streptococcus
+  pneumoniae</strong>, rising rates of TB-associated lung disease, and large numbers of
+  immunocompromised patients on steroid therapy or with uncontrolled diabetes.</p>
 
+  <h3>Pathogens in Indian CAP — What's Different</h3>
+  <p>Unlike Western populations where <em>S. pneumoniae</em> dominates, Indian studies
+  (including data from PGIMER, AIIMS, and CMC Vellore) consistently show a higher proportion
+  of gram-negative organisms — particularly <em>Klebsiella pneumoniae</em>, <em>Acinetobacter</em>
+  spp., and <em>Pseudomonas aeruginosa</em> — especially in diabetic patients and those with
+  prior antibiotic exposure. This has important implications: <strong>standard amoxicillin
+  monotherapy is inadequate</strong> for moderate-to-severe Indian CAP; a combination of a
+  beta-lactam plus a respiratory fluoroquinolone (levofloxacin or moxifloxacin) or a macrolide
+  is preferred.</p>
+
+  <h3>TB vs. CAP — A Critical Distinction</h3>
+  <p>In India, pulmonary tuberculosis must always be considered in the differential for any
+  patient presenting with cough, fever, and infiltrates — particularly if symptoms have been
+  present for more than 2 weeks, if the patient has had prior TB or TB contact, or if there
+  is significant weight loss. <strong>CURB-65 does not distinguish TB from bacterial CAP.</strong>
+  A patient with smear-positive TB may score 0–1 and be sent home — only to deteriorate and
+  remain infectious. Always obtain sputum AFB smear and GeneXpert if TB is suspected.</p>
+
+  <h3>Empirical Antibiotic Therapy — India Guidance</h3>
+  <table class="ref-table" style="margin-top:10px">
+    <tr>
+      <th>CURB-65</th><th>Setting</th><th>Preferred Regimen (India)</th>
+    </tr>
+    <tr>
+      <td>0–1</td>
+      <td>Outpatient</td>
+      <td>Amoxicillin-clavulanate 625mg TDS <em>or</em> Azithromycin 500mg OD × 5 days</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Ward admission</td>
+      <td>IV Ampicillin-sulbactam + Azithromycin <em>or</em> Levofloxacin 750mg OD</td>
+    </tr>
+    <tr>
+      <td>3–4</td>
+      <td>Ward / HDU</td>
+      <td>IV Piperacillin-tazobactam + Levofloxacin; consider coverage for Klebsiella</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>ICU</td>
+      <td>Meropenem + Levofloxacin ± anti-MRSA (vancomycin) if risk factors present</td>
+    </tr>
+  </table>
+  <p style="font-size:.78rem;color:#718096;margin-top:8px">
+    Antibiotic choices should be guided by local antibiogram data and modified based on
+    culture results. These are empirical starting points only.
+  </p>
+</div>
 <!-- What is CURB-65 -->
 <div class="content-section">
   <h2>What is the CURB-65 Score?</h2>
@@ -254,7 +331,21 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
   <h3>Can CURB-65 be used for COVID-19 pneumonia?</h3>
   <p>CURB-65 was not validated for viral or COVID-19 pneumonia. It can provide a rough severity estimate, but dedicated scores such as the 4C Mortality Score or WHO severity classification are more appropriate for SARS-CoV-2 pneumonia assessment.</p>
 </div>
-
+<div style="background:#f7fafc;border:1px solid #e2e8f0;border-radius:12px;
+padding:16px 20px;margin-bottom:20px;display:flex;gap:14px;align-items:flex-start">
+  <div style="font-size:2rem">👨‍⚕️</div>
+  <div>
+    <div style="font-weight:700;font-size:.9rem;color:#1a202c">
+      Reviewed by Dr. Sharma, MBBS, AFIH
+    </div>
+    <div style="font-size:.8rem;color:#718096;line-height:1.6;margin-top:3px">
+      Medical Officer, Government AAC, Punjab, India.
+      Previously at Hero DMC Heart Institute and Fortis Hospital, Ludhiana.
+      This tool follows British Thoracic Society (BTS) 2009 CAP Guidelines
+      and IDSA/ATS 2007 Consensus Statement.
+    </div>
+  </div>
+</div>
 <div class="footer-cite">
   References: Lim WS, et al. (2003). Thorax, 58(5):377–382 | British Thoracic Society (BTS) CAP Guidelines | IDSA/ATS CAP Guidelines 2007. This tool is for educational support of clinical decision-making only.
 </div>
