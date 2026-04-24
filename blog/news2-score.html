@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEWS2 Score: Early Warning & Deterioration in Hospitalised Patients | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the NEWS2 score — how to calculate it from 7 physiological parameters, what each score threshold triggers, response escalation, and NEWS2 in sepsis and COVID-19." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#1a3a6b;--brand-dark:#0d1f3d;--brand-light:#e6eefa;--accent:#c0392b;--text:#1c1c1e;--muted:#5a5a6a;--border:#c4cedf;--bg:#f4f7fc;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#0d1f3d 0%,#1a3a6b 55%,#2655a0 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:700px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--brand);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--accent);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:14.5px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 12px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+    /* response bands */
+    .response-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:10px;overflow:hidden;margin:1.4rem 0;}
+    .rg{padding:18px 12px;text-align:center;color:#fff;}
+    .rg.r0{background:#1a6b3c;}.rg.r1{background:#8a6a00;}.rg.r2{background:#b85000;}.rg.r3{background:#8a1515;}
+    .rg .rg-score{font-family:'Lora',serif;font-size:1.4rem;font-weight:700;}
+    .rg .rg-label{font-size:11px;font-weight:700;letter-spacing:.05em;margin-top:4px;opacity:.9;}
+    .rg .rg-action{font-size:11.5px;margin-top:6px;opacity:.85;line-height:1.4;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.tip{border-color:#1e8c4a;background:#edf7f1;}
+    .callout p{margin:0;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.response-grid{grid-template-columns:repeat(2,1fr);}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; NEWS2 Score</header>
+<div class="hero">
+  <div class="tag">🏥 Early Warning &amp; Patient Safety</div>
+  <h1>NEWS2 Score: Detecting Deterioration in Hospitalised Patients</h1>
+  <p class="subtitle">How to calculate NEWS2 from 7 physiological parameters, what each threshold triggers, escalation protocols, NEWS2 in sepsis and COVID-19, and why it replaced the original NEWS score.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on Royal College of Physicians NEWS2 (2017) &amp; NICE Guidelines</p>
+</div>
+<div class="wrap">
+
+  <p>Every year, thousands of patients in hospitals deteriorate and die from conditions that were predictable and potentially preventable. Studies consistently show that the physiological warning signs of deterioration — rising heart rate, falling oxygen saturation, dropping blood pressure — are often present for hours before a cardiac arrest or ICU admission. The problem is not that the signs were absent; it is that they were not systematically collected, or not acted upon in time.</p>
+  <p>The <strong>National Early Warning Score 2 (NEWS2)</strong> is the solution developed by the Royal College of Physicians (UK) to solve exactly this problem. It standardises the collection of seven routine physiological observations into a single aggregate score that objectively quantifies how unwell a patient is — and mandates a specific, graded clinical response based on that number.</p>
+  <p>NEWS2 is now the standard early warning tool in NHS hospitals across the UK and is increasingly used in Indian tertiary care settings, NABH-accredited hospitals, and ICUs. Understanding it is essential for any ward clinician, nurse, or intensivist.</p>
+
+  <h2>The 7 Parameters of NEWS2</h2>
+  <p>NEWS2 scores seven physiological observations, each of which is routinely measured on any hospital ward. Each parameter is scored 0–3 based on how far it deviates from normal, with 3 indicating the most severe deviation.</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Parameter</th><th>Score 3</th><th>Score 2</th><th>Score 1</th><th>Score 0 (Normal)</th><th>Score 1</th><th>Score 2</th><th>Score 3</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Respiration Rate (breaths/min)</strong></td><td>≤ 8</td><td>—</td><td>9–11</td><td>12–20</td><td>—</td><td>21–24</td><td>≥ 25</td></tr>
+      <tr><td><strong>SpO₂ Scale 1 (% — no COPD)</strong></td><td>≤ 91</td><td>92–93</td><td>94–95</td><td>≥ 96</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td><strong>SpO₂ Scale 2 (% — hypercapnic COPD)</strong></td><td>≤ 83</td><td>84–85</td><td>86–87</td><td>88–92</td><td>93–94 on O₂</td><td>95–96 on O₂</td><td>≥ 97 on O₂</td></tr>
+      <tr><td><strong>Air or Oxygen</strong></td><td>—</td><td>On oxygen</td><td>—</td><td>Air</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td><strong>Systolic BP (mmHg)</strong></td><td>≤ 90</td><td>91–100</td><td>101–110</td><td>111–219</td><td>—</td><td>—</td><td>≥ 220</td></tr>
+      <tr><td><strong>Heart Rate (bpm)</strong></td><td>≤ 40</td><td>—</td><td>41–50</td><td>51–90</td><td>91–110</td><td>111–130</td><td>≥ 131</td></tr>
+      <tr><td><strong>Consciousness (AVPU)</strong></td><td>—</td><td>—</td><td>—</td><td>Alert</td><td>—</td><td>—</td><td>New confusion / V / P / U</td></tr>
+      <tr><td><strong>Temperature (°C)</strong></td><td>≤ 35.0</td><td>—</td><td>35.1–36.0</td><td>36.1–38.0</td><td>38.1–39.0</td><td>≥ 39.1</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>SpO₂ Scale 2 is for COPD patients with confirmed hypercapnic respiratory failure only.</strong> Using Scale 2 in non-COPD patients will underestimate deterioration. Always check whether the patient has a confirmed diagnosis of hypercapnic COPD before selecting Scale 2.</p>
+  </div>
+
+  <h2>NEWS2 Thresholds and Clinical Response</h2>
+
+  <div class="response-grid">
+    <div class="rg r0"><div class="rg-score">0–4</div><div class="rg-label">LOW</div><div class="rg-action">Minimum 12-hourly obs. Ward nurse assessment.</div></div>
+    <div class="rg r1"><div class="rg-score">5–6</div><div class="rg-label">MEDIUM</div><div class="rg-action">Increase obs frequency. Urgent review by ward doctor within 1 hour.</div></div>
+    <div class="rg r2"><div class="rg-score">3 in single param</div><div class="rg-label">MEDIUM</div><div class="rg-action">Any single score of 3 = urgent review regardless of aggregate total.</div></div>
+    <div class="rg r3"><div class="rg-score">≥ 7</div><div class="rg-label">HIGH</div><div class="rg-action">Emergency response. Continuous monitoring. Critical care team immediately.</div></div>
+  </div>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>NEWS2 Score</th><th>Clinical Risk</th><th>Monitoring Frequency</th><th>Response</th></tr></thead>
+    <tbody>
+      <tr><td><strong>0</strong></td><td>Low</td><td>Minimum every 12 hours</td><td>Continue routine nursing care</td></tr>
+      <tr><td><strong>1–4</strong></td><td>Low</td><td>Minimum every 4–6 hours</td><td>Ward nurse to inform responsible clinician</td></tr>
+      <tr><td><strong>3 in any single parameter</strong></td><td>Low-Medium</td><td>Minimum every hour</td><td>Urgent review by ward clinician</td></tr>
+      <tr><td><strong>5–6</strong></td><td>Medium</td><td>Minimum every hour</td><td>Urgent review by clinician with core competencies; consider HDU</td></tr>
+      <tr><td><strong>≥ 7</strong></td><td>High</td><td>Continuous monitoring</td><td>Emergency response: immediate assessment by critical care team</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Why NEWS2 Replaced the Original NEWS</h2>
+  <p>The original NEWS score (2012) had one significant flaw: it used a single SpO₂ scale for all patients. For patients with <strong>hypercapnic COPD</strong>, a target SpO₂ of ≥ 96% would score 0 — but a COPD patient achieving 96% SpO₂ is likely over-oxygenated, risking CO₂ retention and respiratory arrest. Their target SpO₂ is 88–92%, not 96%.</p>
+  <p>NEWS2 (2017) introduced the <strong>two-scale SpO₂ system</strong> to address this, alongside the addition of <strong>new confusion</strong> as a specific high-scoring flag (AVPU = V/P/U or new confusion scores 3). New confusion is a critical clinical sign — it may indicate sepsis, respiratory failure, neurological deterioration, or metabolic crisis — and its addition significantly improved NEWS2's ability to identify sepsis early.</p>
+
+  <h2>NEWS2 as a Sepsis Screening Tool</h2>
+  <p>The NHS Sepsis-6 pathway uses NEWS2 as the primary trigger for sepsis screening. A NEWS2 score ≥ 5 in a patient with a suspected infection should automatically trigger the <strong>sepsis screening bundle</strong>:</p>
+  <ol>
+    <li>Measure lactate</li>
+    <li>Take blood cultures (× 2 sets) before antibiotics</li>
+    <li>Give IV broad-spectrum antibiotics within 1 hour</li>
+    <li>Give IV fluid bolus if hypotensive or lactate ≥ 2 mmol/L</li>
+    <li>Urinary catheter and strict fluid balance monitoring</li>
+    <li>Reassess and escalate to senior/critical care if not improving</li>
+  </ol>
+  <p>The combination of NEWS2 ≥ 5 with clinical suspicion of infection has been shown to identify sepsis with higher sensitivity than SIRS criteria or qSOFA alone in ward-based patients.</p>
+
+  <h2>NEWS2 in COVID-19</h2>
+  <p>During the COVID-19 pandemic, NEWS2 was rapidly adopted as the primary triage and deterioration tool for COVID-19 inpatients. Key observations from COVID-19 practice:</p>
+  <ul>
+    <li><strong>Silent hypoxia:</strong> COVID-19 patients frequently present with SpO₂ &lt; 94% but minimal dyspnoea — a phenomenon called "happy hypoxia." The SpO₂ component of NEWS2 catches these patients even when they appear comfortable and deny breathlessness.</li>
+    <li><strong>NEWS2 ≥ 5 on admission</strong> was associated with significantly increased risk of ICU admission and death in COVID-19 patients across multiple large UK cohorts.</li>
+    <li>NICE and NHS England specifically recommended NEWS2 for all hospitalised COVID-19 patients, with SpO₂ monitoring as the primary parameter to watch.</li>
+  </ul>
+
+  <h2>Practical Implementation — Tips for Ward Use</h2>
+  <ul>
+    <li><strong>Use AVPU, not GCS</strong> for the consciousness component in routine ward observation. AVPU (Alert / Voice / Pain / Unresponsive) is simpler, faster, and equally sensitive for detecting new deterioration in this context.</li>
+    <li><strong>New confusion scores 3</strong> even if AVPU is still "Alert" — if the patient is newly confused or delirious, this counts as score 3 for the consciousness parameter.</li>
+    <li><strong>Document the trend,</strong> not just the absolute score. A score that rises from 2 to 5 over 4 hours is more alarming than a static 5.</li>
+    <li><strong>Escalate before reaching the threshold</strong> if clinical instinct says the patient looks worse — NEWS2 is a floor, not a ceiling for triggering concern.</li>
+    <li>In patients with chronic abnormalities (e.g. baseline heart rate 110 due to AF), document the baseline and score relative to it when possible.</li>
+  </ul>
+
+  <div class="callout">
+    <p>🏥 Use the <a href="https://rxmedcalc.com/medical-calculators/news2" target="_blank"><strong>RxMedCalc NEWS2 Calculator</strong></a> — with COPD Scale 2 toggle, automatic risk classification, and monitoring frequency guidance.</p>
+  </div>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>NEWS2 scores <strong>7 parameters</strong>: RR, SpO₂, supplemental O₂, systolic BP, heart rate, consciousness, temperature</li>
+      <li>Use <strong>SpO₂ Scale 2</strong> only for confirmed hypercapnic COPD patients — target SpO₂ 88–92%</li>
+      <li><strong>Any single parameter scoring 3</strong> = urgent review, regardless of aggregate total</li>
+      <li><strong>NEWS2 ≥ 7</strong> = high risk = immediate emergency/critical care response</li>
+      <li><strong>New confusion</strong> always scores 3 — a critical early sign of sepsis and neurological deterioration</li>
+      <li>NEWS2 ≥ 5 with suspected infection = <strong>trigger the sepsis bundle</strong> immediately</li>
+      <li>COVID-19: <strong>SpO₂ monitoring is the key parameter</strong> — silent hypoxia is common</li>
+      <li>Document <strong>trend over time</strong> — a rising NEWS2 is more important than any single reading</li>
+    </ul>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Royal College of Physicians. <em>National Early Warning Score (NEWS) 2: Standardising the assessment of acute-illness severity in the NHS.</em> RCP, London. 2017.</li>
+      <li>Smith GB et al. <em>The ability of the National Early Warning Score (NEWS) 2 to discriminate patients at risk of early cardiac arrest, unanticipated intensive care unit admission, and death.</em> Resuscitation. 2018;130:55-62.</li>
+      <li>NICE. <em>Acutely ill adults in hospital: recognising and responding to deterioration.</em> Clinical Guideline CG50. 2007 (updated).</li>
+      <li>Carr E et al. <em>Evaluation and improvement of the National Early Warning Score (NEWS2) for COVID-19.</em> BMJ. 2021.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes based on RCP NEWS2 guidelines. Clinical deterioration assessment must be made by qualified medical and nursing personnel using NEWS2 as one component of a comprehensive clinical assessment.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
