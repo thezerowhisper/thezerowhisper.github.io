@@ -542,6 +542,24 @@
     </div>
   </header>
 
+<div style="background:#eff6ff;border-bottom:2px solid #bfdbfe;
+padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+  <div style="font-size:1.4rem">📖</div>
+  <div style="flex:1;min-width:200px">
+    <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;
+    letter-spacing:.07em;color:#1a5fa8;margin-bottom:2px">Full Article Available</div>
+    <div style="font-size:.9rem;font-weight:700;color:#0f1e33">
+      eGFR & CKD: What Your Kidney Numbers Mean — Complete Guide
+    </div>
+  </div>
+  <a href="https://rxmedcalc.com/blog/egfr-ckd.html"
+     style="background:#1a5fa8;color:#fff;padding:8px 18px;border-radius:10px;
+     font-size:.85rem;font-weight:700;text-decoration:none;white-space:nowrap;
+     max-width:920px;margin:0 auto">
+     Read Article →
+  </a>
+</div>
+
   <main class="page" id="main-content">
 
     <!-- ══ CALCULATOR CARD ══ -->
@@ -685,6 +703,188 @@
         * CKD diagnosis requires eGFR &lt;60 <em>or</em> evidence of kidney damage (albuminuria, haematuria, imaging) for <strong>≥3 months</strong>.
       </p>
     </section>
+<section class="card" aria-labelledby="drug-dosing-heading">
+  <div class="card-title" id="drug-dosing-heading">Drug Dosing by eGFR — Quick Reference</div>
+  <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:16px">
+    Common drugs requiring dose adjustment in renal impairment. Use
+    <strong>Cockcroft-Gault CrCl</strong> for drug dosing, not CKD-EPI eGFR.
+    Always verify against current prescribing information.
+  </p>
+  <div style="overflow-x:auto">
+    <table class="ckd-table">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Normal Dose</th>
+          <th>CrCl 30–60</th>
+          <th>CrCl 10–30</th>
+          <th>CrCl &lt;10 / Dialysis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Metformin</strong></td>
+          <td>500–1000mg BD</td>
+          <td>Use with caution; max 1g/day</td>
+          <td>Stop — lactic acidosis risk</td>
+          <td>Contraindicated</td>
+        </tr>
+        <tr>
+          <td><strong>Metronidazole</strong></td>
+          <td>400mg TDS</td>
+          <td>No change</td>
+          <td>No change</td>
+          <td>Reduce dose; avoid prolonged use</td>
+        </tr>
+        <tr>
+          <td><strong>Amoxicillin</strong></td>
+          <td>500mg TDS</td>
+          <td>No change</td>
+          <td>500mg BD</td>
+          <td>500mg OD; supplement post-HD</td>
+        </tr>
+        <tr>
+          <td><strong>Cefixime</strong></td>
+          <td>400mg OD</td>
+          <td>260mg OD (suspension)</td>
+          <td>200mg OD</td>
+          <td>200mg OD; no HD supplement</td>
+        </tr>
+        <tr>
+          <td><strong>Ciprofloxacin</strong></td>
+          <td>500mg BD</td>
+          <td>No change</td>
+          <td>250–500mg BD</td>
+          <td>250–500mg OD after HD</td>
+        </tr>
+        <tr>
+          <td><strong>Atorvastatin</strong></td>
+          <td>10–80mg OD</td>
+          <td>No change</td>
+          <td>Caution; start low</td>
+          <td>Caution; no specific adjustment</td>
+        </tr>
+        <tr>
+          <td><strong>Digoxin</strong></td>
+          <td>0.125–0.25mg OD</td>
+          <td>Reduce 25–50%; monitor levels</td>
+          <td>Reduce 50–75%</td>
+          <td>0.0625mg OD; avoid if possible</td>
+        </tr>
+        <tr>
+          <td><strong>Warfarin</strong></td>
+          <td>Dose-adjusted by INR</td>
+          <td>No change; more careful monitoring</td>
+          <td>Increase bleeding risk; monitor closely</td>
+          <td>Use with extreme caution</td>
+        </tr>
+        <tr>
+          <td><strong>Enoxaparin (LMWH)</strong></td>
+          <td>1 mg/kg SC BD</td>
+          <td>No change</td>
+          <td>1 mg/kg SC OD (reduce frequency)</td>
+          <td>Unfractionated heparin preferred</td>
+        </tr>
+        <tr>
+          <td><strong>Tramadol</strong></td>
+          <td>50–100mg Q6–8H</td>
+          <td>Q8–12H</td>
+          <td>Max 200mg/day; Q12H</td>
+          <td>Avoid; metabolite accumulates</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:.77rem;color:var(--text-muted);margin-top:10px">
+    Sources: BNF, FDA labelling, Micromedex. Use Cockcroft-Gault CrCl for drug dosing.
+    Values are for guidance only — always verify with current prescribing information and
+    clinical pharmacist where available.
+  </p>
+</section>
+
+<section class="card" aria-labelledby="nephrotoxin-heading">
+  <div class="card-title" id="nephrotoxin-heading">⚠️ Nephrotoxins — Drugs to Avoid or Use Carefully in CKD</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div style="background:#fff5f5;border-radius:10px;padding:14px;
+    border-left:4px solid #fc8181">
+      <div style="font-weight:700;font-size:.85rem;color:#c53030;margin-bottom:8px">
+        🔴 Avoid in CKD G3b+
+      </div>
+      <ul style="list-style:none;font-size:.83rem;color:#742a2a;line-height:2">
+        <li>• NSAIDs (ibuprofen, diclofenac, naproxen)</li>
+        <li>• IV Contrast dye — hydrate well if essential</li>
+        <li>• Aminoglycosides (gentamicin, amikacin)</li>
+        <li>• Metformin (CrCl &lt;30)</li>
+        <li>• Gadolinium MRI contrast (G4–G5)</li>
+        <li>• Lithium — narrow therapeutic index</li>
+      </ul>
+    </div>
+    <div style="background:#fffaf0;border-radius:10px;padding:14px;
+    border-left:4px solid #f6ad55">
+      <div style="font-weight:700;font-size:.85rem;color:#c05621;margin-bottom:8px">
+        🟡 Use with Caution — Dose Adjust
+      </div>
+      <ul style="list-style:none;font-size:.83rem;color:#744210;line-height:2">
+        <li>• ACE inhibitors / ARBs — monitor K⁺ and creatinine</li>
+        <li>• Spironolactone — hyperkalemia risk</li>
+        <li>• Digoxin — narrow therapeutic index</li>
+        <li>• Trimethoprim — raises creatinine (tubular secretion block)</li>
+        <li>• Herbal medicines — aristolochic acid, Ayurvedic heavy metals</li>
+        <li>• Bisphosphonates — avoid if CrCl &lt;35</li>
+      </ul>
+    </div>
+  </div>
+  <div style="background:#f0fff4;border-radius:10px;padding:12px 14px;
+  margin-top:12px;font-size:.83rem;color:#276749;border-left:4px solid #48bb78">
+    <strong>✅ Generally safe in CKD:</strong> Paracetamol (preferred analgesic),
+    amlodipine, statins (most), azithromycin, metronidazole, most PPIs.
+    Always review the complete medication list at each visit.
+  </div>
+</section>
+
+<section class="card">
+  <div class="card-title">🏥 When to Refer to a Nephrologist</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.87rem">
+    <div style="display:flex;gap:8px;align-items:flex-start;padding:8px 0;
+    border-bottom:1px solid var(--border)">
+      <span style="color:#ef4444;flex-shrink:0;margin-top:2px">●</span>
+      <span>eGFR &lt; 30 mL/min/1.73m² (G4–G5)</span>
+    </div>
+    <div style="display:flex;gap:8px;align-items:flex-start;padding:8px 0;
+    border-bottom:1px solid var(--border)">
+      <span style="color:#ef4444;flex-shrink:0;margin-top:2px">●</span>
+      <span>Rapid decline: &gt;5 mL/min/1.73m²/year</span>
+    </div>
+    <div style="display:flex;gap:8px;align-items:flex-start;padding:8px 0;
+    border-bottom:1px solid var(--border)">
+      <span style="color:#f97316;flex-shrink:0;margin-top:2px">●</span>
+      <span>Proteinuria uACR &gt; 300 mg/g (A3)</span>
+    </div>
+    <div style="display:flex;gap:8px;align-items:flex-start;padding:8px 0;
+    border-bottom:1px solid var(--border)">
+      <span style="color:#f97316;flex-shrink:0;margin-top:2px">●</span>
+      <span>Uncontrolled hypertension despite 3+ drugs</span>
+    </div>
+    <div style="display:flex;gap:8px;align-items:flex-start;padding:8px 0;
+    border-bottom:1px solid var(--border)">
+      <span style="color:#f97316;flex-shrink:0;margin-top:2px">●</span>
+      <span>Unexplained haematuria with proteinuria</span>
+    </div>
+    <div style="display:flex;gap:8px;align-items:flex-start;padding:8px 0;
+    border-bottom:1px solid var(--border)">
+      <span style="color:#facc15;flex-shrink:0;margin-top:2px">●</span>
+      <span>Hyperkalaemia (&gt;6 mEq/L) or metabolic acidosis</span>
+    </div>
+    <div style="display:flex;gap:8px;align-items:flex-start;padding:8px 0">
+      <span style="color:#facc15;flex-shrink:0;margin-top:2px">●</span>
+      <span>CKD + anaemia not responding to iron therapy</span>
+    </div>
+    <div style="display:flex;gap:8px;align-items:flex-start;padding:8px 0">
+      <span style="color:#facc15;flex-shrink:0;margin-top:2px">●</span>
+      <span>Diabetic nephropathy with worsening proteinuria</span>
+    </div>
+  </div>
+</section>
 
     <!-- ══ FORMULAS ══ -->
     <section class="card" aria-labelledby="formula-heading">
