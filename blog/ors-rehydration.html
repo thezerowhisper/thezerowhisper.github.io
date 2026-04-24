@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORS & Diarrhoea: WHO Plan A, B & C, Zinc & Home Treatment Guide | RxMedCalc</title>
+  <meta name="description" content="A complete guide to ORS and diarrhoea management — how to prepare ORS, WHO Plan A/B/C rehydration, ORS dosing by weight, zinc supplementation, signs requiring hospital, and what not to give children with diarrhoea." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#0e6b7c;--brand-dark:#074550;--brand-light:#e6f5f8;--accent:#c0392b;--text:#1c1c1e;--muted:#5a5a6a;--border:#b8dde5;--bg:#f2fafc;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#074550 0%,#0e6b7c 55%,#179ab5 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:700px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:580px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--brand);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--accent);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    /* plan cards */
+    .plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:10px;overflow:hidden;margin:1.4rem 0;}
+    .plan{padding:20px 14px;color:#fff;text-align:center;}
+    .plan.a{background:#1a6b3c;}.plan.b{background:#8a6a00;}.plan.c{background:#8a1515;}
+    .plan .plan-title{font-family:'Lora',serif;font-size:1.3rem;font-weight:700;}
+    .plan .plan-sub{font-size:12px;font-weight:700;letter-spacing:.05em;margin-top:4px;opacity:.9;}
+    .plan .plan-desc{font-size:13px;margin-top:8px;opacity:.9;line-height:1.5;}
+    /* ORS prep steps */
+    .prep-steps{list-style:none;padding:0;margin:1.2rem 0;counter-reset:prep;}
+    .prep-steps li{counter-increment:prep;display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);align-items:flex-start;font-size:16px;}
+    .prep-steps li:last-child{border-bottom:none;}
+    .prep-steps li::before{content:counter(prep);background:var(--brand);color:#fff;border-radius:50%;min-width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;margin-top:2px;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    /* formula box */
+    .formula-box{background:var(--brand-dark);color:#e6f5f8;border-radius:10px;padding:22px 24px;margin:1.6rem 0;font-family:'Lora',serif;font-size:1.05rem;line-height:1.8;}
+    .formula-box .label{font-family:'DM Sans',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.65;margin-bottom:8px;}
+    /* do/don't grid */
+    .dodo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.4rem 0;}
+    .dodo-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 18px;}
+    .dodo-card.do{border-top:4px solid #1a6b3c;}
+    .dodo-card.dont{border-top:4px solid #c0392b;}
+    .dodo-card h4{font-size:15px;font-weight:700;margin-bottom:10px;}
+    .dodo-card.do h4{color:#1a6b3c;}
+    .dodo-card.dont h4{color:#c0392b;}
+    .dodo-card ul{font-size:14px;padding-left:16px;margin:0;}
+    .dodo-card li{margin-bottom:5px;line-height:1.55;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.tip{border-color:#1e8c4a;background:#edf7f1;}
+    .callout p{margin:0;}
+    /* red flag list */
+    .red-flags{list-style:none;padding:0;margin:1rem 0;}
+    .red-flags li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--border);font-size:15.5px;}
+    .red-flags li:last-child{border-bottom:none;}
+    .red-flags .icon{color:#c0392b;font-size:1.1rem;flex-shrink:0;margin-top:2px;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.plan-grid{grid-template-columns:1fr;}.dodo-grid{grid-template-columns:1fr;}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; ORS &amp; Diarrhoea Guide</header>
+<div class="hero">
+  <div class="tag">💧 Paediatrics &amp; Primary Care</div>
+  <h1>ORS &amp; Diarrhoea: WHO Plan A, B &amp; C, Zinc &amp; Home Treatment Guide</h1>
+  <p class="subtitle">How to correctly prepare ORS, calculate the right dose by weight and age, WHO Plan A/B/C rehydration, zinc supplementation, what not to give, and the red flags that mean go to hospital now.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on WHO IMCI, IAP 2024 &amp; Indian National Guidelines</p>
+</div>
+<div class="wrap">
+
+  <p>Diarrhoea is so common in India that it is often dismissed as a minor nuisance. But the numbers tell a different story: diarrhoeal diseases remain one of the top causes of death in children under five in India, responsible for approximately <strong>13% of under-5 mortality</strong>. Most of these deaths are not caused by the diarrhoea itself — they are caused by the <strong>dehydration</strong> it produces, and by the failure to replace lost fluids correctly and promptly.</p>
+  <p><strong>Oral Rehydration Solution (ORS)</strong> is one of the greatest life-saving discoveries in medical history. A simple solution of sugar, salt, and water — prepared in exactly the right proportions — can replace the fluids and electrolytes lost in diarrhoea and prevent the dehydration that kills. Since the WHO introduced ORS in the 1970s, it is estimated to have saved <strong>over 50 million lives</strong>.</p>
+  <p>This guide explains everything about ORS — how to prepare it, how much to give, when ORS alone is enough, and when a child needs IV fluids in a hospital.</p>
+
+  <h2>Why ORS Works — The Science of Glucose-Sodium Cotransport</h2>
+  <p>During diarrhoea, the gut loses the ability to absorb sodium and water through normal mechanisms. However, a specific transporter — the <strong>sodium-glucose cotransporter (SGLT1)</strong> — remains functional even in severe diarrhoeal illness. This transporter absorbs sodium and glucose together in a 1:1 ratio. When glucose is present in the gut alongside sodium, sodium absorption is dramatically enhanced, and water follows by osmosis.</p>
+  <p>This is why pure water does not effectively rehydrate a child with diarrhoea — there is no glucose to drive the cotransporter. And why sugary drinks like cola or fruit juice are counterproductive — they contain too much sugar and not enough sodium, worsening osmotic diarrhoea. ORS is precisely formulated to hit the optimal glucose-to-sodium ratio for maximum absorption.</p>
+
+  <h2>WHO/UNICEF Low-Osmolarity ORS — The Correct Formula</h2>
+
+  <div class="formula-box">
+    <div class="label">WHO/UNICEF Low-Osmolarity ORS (2003) — Per 1 Litre of Clean Water</div>
+    <strong>Sodium chloride (NaCl):</strong> 2.6 g → 75 mEq/L sodium<br>
+    <strong>Glucose, anhydrous:</strong> 13.5 g → 75 mmol/L glucose<br>
+    <strong>Potassium chloride (KCl):</strong> 1.5 g → 20 mEq/L potassium<br>
+    <strong>Trisodium citrate:</strong> 2.9 g → 10 mmol/L citrate<br>
+    <strong>Total osmolarity: 245 mOsm/L</strong><br><br>
+    <span style="font-size:.85rem;opacity:.75;">Standard commercial ORS sachets (Electral, Enerlyte, WHO-ORS) follow this formula. Available free at all government health facilities in India.</span>
+  </div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Always dissolve one ORS sachet in exactly 1 litre of water</strong> — not more, not less. Adding half a sachet to 500 mL or one sachet to 500 mL changes the electrolyte concentration and can be dangerous. Measure the water carefully.</p>
+  </div>
+
+  <h2>How to Prepare ORS Correctly — Step by Step</h2>
+
+  <ol class="prep-steps">
+    <li><strong>Use 1 litre of clean water.</strong> Boiled and cooled water is best. If boiling is not possible, use the cleanest water available — treated or filtered water. Do not use carbonated water or flavoured drinks.</li>
+    <li><strong>Open one ORS sachet</strong> (Electral or equivalent). Do not use two sachets for one litre — this over-concentrates the solution.</li>
+    <li><strong>Pour the entire sachet into the water</strong> and stir well until completely dissolved. The solution should be clear.</li>
+    <li><strong>Give in small, frequent sips.</strong> Do not give large volumes at once — this triggers vomiting. A teaspoon every 1–2 minutes in very young infants; small cups frequently in older children.</li>
+    <li><strong>Discard any unused ORS after 24 hours.</strong> Prepared ORS can become contaminated if stored. Prepare fresh batches daily.</li>
+  </ol>
+
+  <h3>Home-Made ORS — Emergency Use Only</h3>
+  <p>If commercial ORS is not immediately available:</p>
+  <p style="background:var(--brand-light);padding:14px 18px;border-radius:8px;font-weight:600;">1 litre clean water + 6 level teaspoons of sugar + ½ teaspoon of common salt</p>
+  <p>This is a stopgap only. Obtain proper WHO-ORS sachets as quickly as possible — home-made ORS has less precise electrolyte content.</p>
+
+  <h2>The WHO Treatment Plans — A, B, and C</h2>
+  <p>Every diarrhoea patient is classified into one of three WHO treatment plans based on their degree of dehydration (assessed using the WHO 4-sign method: general appearance, eyes, thirst/drinking, and skin pinch).</p>
+
+  <div class="plan-grid">
+    <div class="plan a"><div class="plan-title">Plan A</div><div class="plan-sub">No / Minimal Dehydration</div><div class="plan-desc">Home treatment with ORS. Continue normal feeding. Zinc 10–14 days.</div></div>
+    <div class="plan b"><div class="plan-title">Plan B</div><div class="plan-sub">Some Dehydration</div><div class="plan-desc">75 mL/kg ORS over 4 hours at a health facility. Reassess hourly.</div></div>
+    <div class="plan c"><div class="plan-title">Plan C</div><div class="plan-sub">Severe Dehydration</div><div class="plan-desc">IV Ringer's Lactate 100 mL/kg urgently. Hospital admission required.</div></div>
+  </div>
+
+  <div class="callout">
+    <p>💧 Use the <a href="https://rxmedcalc.com/medical-calculators/ors" target="_blank"><strong>RxMedCalc ORS Dose Calculator</strong></a> — enter weight and dehydration degree to get exact ORS volumes for Plan A and Plan B, plus zinc dosing by age.</p>
+  </div>
+
+  <h2>ORS Doses by Weight and Age — Plan A and Plan B</h2>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Age / Weight</th><th>Plan A: ORS per loose stool (ongoing losses)</th><th>Plan B: Total ORS over 4 hours</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Infants &lt; 6 months (&lt; 5 kg)</strong></td><td>50 mL per loose stool</td><td>200–400 mL total (75 mL/kg)</td></tr>
+      <tr><td><strong>6 months – 2 years (5–8 kg)</strong></td><td>50–100 mL per loose stool</td><td>400–600 mL total</td></tr>
+      <tr><td><strong>2–10 years (8–20 kg)</strong></td><td>100–200 mL per loose stool</td><td>600–1,200 mL total</td></tr>
+      <tr><td><strong>Children &gt; 10 years / Adults</strong></td><td>200–400 mL per loose stool</td><td>2,000–4,000 mL as tolerated</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout tip">
+    <p>✅ <strong>If the child vomits while taking ORS:</strong> Wait 5–10 minutes, then restart more slowly — 5 mL (1 teaspoon) every 1–2 minutes. Vomiting is not a reason to stop ORS; small amounts given frequently are usually retained.</p>
+  </div>
+
+  <h2>Plan B in Detail — Supervised Rehydration at a Health Facility</h2>
+  <p>For a child with some dehydration (sunken eyes, drinking eagerly, skin pinch returns slowly in 1–2 seconds), the WHO Plan B protocol:</p>
+  <ul>
+    <li><strong>Give 75 mL/kg of ORS over 4 hours</strong> at a health facility — by cup and spoon, not bottle</li>
+    <li>Reassess dehydration signs <strong>every 1–2 hours</strong> during treatment</li>
+    <li>If the child vomits repeatedly and cannot retain oral ORS → insert nasogastric tube and give ORS at 20 mL/kg/hour via NG</li>
+    <li>After 4 hours: reassess — if rehydrated, switch to Plan A; if still some dehydration, repeat Plan B; if worsened, move to Plan C</li>
+    <li>Continue breastfeeding throughout. Offer age-appropriate food once rehydrated.</li>
+  </ul>
+
+  <h2>Plan C — Severe Dehydration — Hospital Emergency</h2>
+  <p>Severe dehydration (child lethargic or unable to drink, very sunken eyes, skin pinch returns very slowly &gt;2 seconds) is a medical emergency requiring immediate IV access:</p>
+  <ul>
+    <li><strong>Fluid: Ringer's Lactate (Hartmann's Solution)</strong> — preferred over normal saline. Never use 5% dextrose alone.</li>
+    <li><strong>Children ≥ 12 months:</strong> 30 mL/kg over 30 minutes, then 70 mL/kg over 2.5 hours</li>
+    <li><strong>Infants &lt; 12 months:</strong> 30 mL/kg over 1 hour, then 70 mL/kg over 5 hours</li>
+    <li>Reassess every 15–30 minutes. Start ORS (5 mL/kg/hour) as soon as the child can drink.</li>
+    <li>Monitor blood glucose — hypoglycaemia is a risk, especially in malnourished infants.</li>
+  </ul>
+
+  <h2>Zinc Supplementation — Mandatory with ORS</h2>
+  <p>WHO and IAP guidelines recommend <strong>zinc with every ORS course</strong> — it is not optional:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Age Group</th><th>Zinc Dose</th><th>Duration</th><th>Formulation</th></tr></thead>
+    <tbody>
+      <tr><td>Infants &lt; 6 months</td><td>10 mg/day</td><td>10–14 days</td><td>Dispersible tablet or syrup (Zinconia, Zincovit)</td></tr>
+      <tr><td>Children ≥ 6 months</td><td>20 mg/day</td><td>10–14 days</td><td>Dispersible tablet or syrup</td></tr>
+      <tr><td>Adults</td><td>Not routinely recommended</td><td>—</td><td>Focus zinc supplementation on children under 5</td></tr>
+    </tbody>
+  </table></div>
+  <p>Zinc reduces diarrhoea duration by approximately 25%, decreases stool frequency, and — crucially — reduces the risk of another diarrhoeal episode for the next 3 months. The 10–14 day course must be <strong>completed even after diarrhoea has stopped</strong>.</p>
+
+  <h2>Do's and Don'ts During Diarrhoea</h2>
+
+  <div class="dodo-grid">
+    <div class="dodo-card do">
+      <h4>✅ DO These</h4>
+      <ul>
+        <li>Continue ORS after every loose stool</li>
+        <li>Continue breastfeeding — do not stop</li>
+        <li>Continue age-appropriate feeding — do not withhold food</li>
+        <li>Give zinc for 10–14 days</li>
+        <li>Wash hands thoroughly with soap before and after nappy changes</li>
+        <li>Use clean water to prepare ORS</li>
+        <li>Discard unused ORS after 24 hours</li>
+      </ul>
+    </div>
+    <div class="dodo-card dont">
+      <h4>❌ DON'T Do These</h4>
+      <ul>
+        <li>Do not give cola, fruit juice, or glucose water instead of ORS</li>
+        <li>Do not give loperamide (Imodium) to children — contraindicated, causes paralytic ileus</li>
+        <li>Do not give antibiotics for watery diarrhoea — useless for viral causes</li>
+        <li>Do not "starve" the child — withholding food prolongs diarrhoea</li>
+        <li>Do not add extra salt or sugar to prepared ORS</li>
+        <li>Do not give anti-vomiting drugs routinely — ORS given in small sips usually works</li>
+        <li>Do not give undiluted cow's milk during active diarrhoea in young infants</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Cola and sports drinks are NOT substitutes for ORS.</strong> Cola has ~700 mOsm/L (vs 245 mOsm/L for ORS), negligible sodium, and high sugar — it worsens osmotic diarrhoea. Sports drinks have variable electrolyte content not calibrated for diarrhoeal losses. Use only properly formulated WHO-ORS.</p>
+  </div>
+
+  <h2>When Antibiotics ARE Indicated for Diarrhoea</h2>
+  <p>Most acute diarrhoea in children and adults is viral — antibiotics are useless and promote resistance. Antibiotics are indicated only for:</p>
+  <ul>
+    <li><strong>Bloody diarrhoea (dysentery)</strong> — send stool culture; empirical azithromycin (10 mg/kg/day × 3 days in children) or ciprofloxacin in adults</li>
+    <li><strong>Suspected cholera</strong> — rice-water stools in an epidemic setting; doxycycline (single dose, adults) or azithromycin</li>
+    <li><strong>Proven Giardia or Entamoeba histolytica</strong> on stool microscopy — metronidazole 7–10 days</li>
+    <li><strong>Diarrhoea in a child &lt; 3 months with fever</strong> — high risk of bacteraemia; requires full sepsis evaluation</li>
+    <li><strong>Severely malnourished children</strong> with any diarrhoea — standard protocol includes empirical antibiotics</li>
+  </ul>
+
+  <h2>Red Flags — When to Go to Hospital Immediately</h2>
+
+  <ul class="red-flags">
+    <li><span class="icon">🔴</span> Child is lethargic, limp, or unconscious</li>
+    <li><span class="icon">🔴</span> Unable to drink or keep ORS down despite giving slowly by spoon</li>
+    <li><span class="icon">🔴</span> Profuse, very frequent watery stools — more than 10 per day</li>
+    <li><span class="icon">🔴</span> Bloody stools or mucus in stool</li>
+    <li><span class="icon">🔴</span> High fever (&gt; 39°C or &gt; 38.5°C in infant &lt; 3 months)</li>
+    <li><span class="icon">🔴</span> No urine passed for more than 6 hours</li>
+    <li><span class="icon">🔴</span> Sunken eyes, very dry mouth, skin pinch returns slowly</li>
+    <li><span class="icon">🔴</span> Any infant under 2 months with diarrhoea</li>
+    <li><span class="icon">🔴</span> Signs are not improving after 4 hours of correct ORS at home</li>
+    <li><span class="icon">🔴</span> Child appears to be getting worse, not better</li>
+  </ul>
+
+  <h2>Preventing Diarrhoea — The WASH Framework</h2>
+  <p>In India, most childhood diarrhoea is preventable through the <strong>WASH</strong> framework — Water, Sanitation, and Hygiene:</p>
+  <ul>
+    <li><strong>Water:</strong> Use treated, boiled, or filtered water for drinking and food preparation. Store water in clean covered containers.</li>
+    <li><strong>Sanitation:</strong> Use a toilet — open defecation is the primary source of faecal-oral pathogen transmission. The Swachh Bharat Mission has made significant progress but open defecation continues in many rural areas.</li>
+    <li><strong>Hygiene:</strong> Handwashing with soap is the single most effective intervention against diarrhoea transmission. Wash hands after using the toilet and before preparing food or feeding children.</li>
+    <li><strong>Breastfeeding:</strong> Exclusive breastfeeding for 6 months dramatically reduces diarrhoea incidence — breast milk contains IgA antibodies, lactoferrin, and oligosaccharides that protect the gut.</li>
+    <li><strong>Rotavirus vaccination:</strong> The most common cause of severe childhood diarrhoea is rotavirus — vaccination in the UIP schedule provides over 50% protection against severe rotavirus diarrhoea.</li>
+  </ul>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>ORS works via <strong>glucose-sodium cotransport (SGLT1)</strong> — not just fluid replacement. Composition matters critically.</li>
+      <li>Always dissolve <strong>one sachet in exactly 1 litre</strong> of clean water — incorrect dilution is dangerous</li>
+      <li><strong>Plan A</strong>: 50–200 mL ORS per loose stool at home; <strong>Plan B</strong>: 75 mL/kg over 4h at facility; <strong>Plan C</strong>: IV RL 100 mL/kg urgently</li>
+      <li><strong>Zinc 10 mg/day (&lt; 6 months) or 20 mg/day (≥ 6 months) for 10–14 days</strong> — reduces duration and recurrence</li>
+      <li><strong>Continue breastfeeding and feeding</strong> throughout — withholding food prolongs diarrhoea</li>
+      <li><strong>Loperamide is contraindicated in children</strong> — causes dangerous paralytic ileus</li>
+      <li><strong>Cola and juice are NOT ORS substitutes</strong> — they worsen osmotic diarrhoea</li>
+      <li>Antibiotics only for <strong>bloody diarrhoea, cholera, proven bacterial cause</strong> — not for watery diarrhoea</li>
+      <li>Go to hospital if: <strong>child cannot drink, is lethargic, has bloody stools, or is not improving after 4 hours</strong></li>
+    </ul>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>World Health Organization. <em>The treatment of diarrhoea: a manual for physicians and other senior health workers. 4th Revision.</em> WHO, 2005.</li>
+      <li>WHO/UNICEF. <em>Joint Statement — Clinical management of acute diarrhea.</em> 2004.</li>
+      <li>Indian Academy of Pediatrics. <em>IAP Guidelines on Management of Acute Diarrhea.</em> Indian Pediatrics. 2016.</li>
+      <li>Bhutta ZA et al. <em>Therapeutic effects of oral zinc in acute and persistent diarrhea in children in developing countries: pooled analysis of randomized controlled trials.</em> Am J Clin Nutr. 2000;72(6):1516-1522.</li>
+      <li>Guerrant RL et al. <em>Practice guidelines for the management of infectious diarrhea.</em> Clin Infect Dis. 2001;32(3):331-351.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes based on WHO IMCI and IAP 2024 guidelines. ORS and zinc are first-line treatment for mild-to-moderate diarrhoea. Severe dehydration requires immediate medical care — do not attempt home treatment alone if red flag signs are present.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
