@@ -129,23 +129,35 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body { overflow-x: hidden; }
+
     body {
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       background: #f0f4f8;
       min-height: 100vh;
-      padding: 20px;
+      padding: 0;
       color: #2d3748;
     }
 
-    .page-wrapper { max-width: 600px; margin: 0 auto; }
+    .page-wrapper { max-width: 600px; margin: 0 auto; padding: 0 0 20px 0; }
 
     .hero {
-      border-radius: 16px;
+      border-radius: 0;
       overflow: hidden;
       margin-bottom: 24px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
     .hero svg { display: block; width: 100%; height: auto; }
+
+    .page-content {
+      padding: 0 16px;
+    }
 
     .card {
       background: white;
@@ -444,14 +456,10 @@
 
     /* ── DESKTOP LAYOUT ── */
     @media (min-width: 900px) {
-      body { padding: 32px 40px; }
+      body { padding: 0; }
 
       .page-wrapper {
-        max-width: 1100px;
-        display: grid;
-        grid-template-columns: 480px 1fr;
-        gap: 32px;
-        align-items: start;
+        max-width: none;
       }
 
       .hero {
@@ -459,21 +467,31 @@
         grid-row: 1;
       }
 
+      .page-content {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 40px;
+        display: grid;
+        grid-template-columns: 480px 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+
       .card {
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 1;
       }
 
       .info-section {
         grid-column: 2;
-        grid-row: 2;
+        grid-row: 1;
         max-width: 520px;
         font-size: 0.9rem;
       }
 
       footer {
         grid-column: 1 / -1;
-        grid-row: 3;
+        grid-row: 2;
       }
     }
     .dose-xlink {
@@ -564,6 +582,7 @@
     </svg>
   </div>
 
+  <div class="page-content">
   <div class="card">
     <div class="first-aid-alert">
       🚨 <strong>Crucial First Aid:</strong> Before taking the vaccine, immediately wash the bite or scratch wound with soap and running water for <strong>at least 15 minutes</strong>, then apply povidone-iodine (Betadine). Do not bandage the wound immediately.
@@ -707,6 +726,8 @@
       </a>
     </p>
   </footer>
+
+  </div><!-- /.page-content -->
 
 </main>
 
