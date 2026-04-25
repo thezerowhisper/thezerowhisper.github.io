@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ovulation Calculator & Fertility Calendar | RxMedCalc</title>
+<meta name="description" content="Free ovulation calculator and fertility calendar. Track your most fertile days, predict ovulation dates, and plan your pregnancy with our clinically-informed tool.">
+<meta name="keywords" content="ovulation calculator, fertility calendar, when to get pregnant, ovulation dates, fertile window, pregnancy planning, menstrual cycle tracker">
+<meta property="og:title" content="Ovulation Calculator & Fertility Calendar | RxMedCalc">
+<meta property="og:description" content="Calculate your most fertile days and ovulation window. Science-backed pregnancy planning tool with in-depth medical guidance.">
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/ovulation-calendar">
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/ovulation-calendar">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rose: #D4537E;
+    --rose-light: #FBEAF0;
+    --rose-dark: #72243E;
+    --teal: #1D9E75;
+    --teal-light: #E1F5EE;
+    --teal-dark: #085041;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --amber-dark: #633806;
+    --purple: #7F77DD;
+    --purple-light: #EEEDFE;
+    --purple-dark: #3C3489;
+    --gray: #5F5E5A;
+    --gray-light: #F1EFE8;
+    --text: #1a1a1a;
+    --text-muted: #6b6b68;
+    --border: rgba(0,0,0,0.1);
+    --white: #ffffff;
+    --bg: #fdfcfa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #FBEAF0 0%, #E1F5EE 100%);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(212,83,126,0.06);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(29,158,117,0.06);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--rose-light);
+    color: var(--rose-dark);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(212,83,126,0.2);
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+  .hero h1 em { color: var(--rose); font-style: italic; }
+  .hero p {
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+  }
+  .trust-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .trust-row span { display: flex; align-items: center; gap: 5px; }
+  .trust-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); display: inline-block; }
+
+  /* ── LAYOUT ── */
+  .page { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  @media(max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+  }
+  .card-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card-title .icon {
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  /* ── FORM ── */
+  .form-group { margin-bottom: 1.25rem; }
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  input[type="date"], select, input[type="number"] {
+    width: 100%;
+    height: 44px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 0 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--white);
+    transition: border-color 0.2s;
+    appearance: none;
+  }
+  input:focus, select:focus { outline: none; border-color: var(--rose); }
+  .hint { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+  /* ── BUTTON ── */
+  .btn-primary {
+    width: 100%;
+    height: 50px;
+    background: var(--rose);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary:hover { background: var(--rose-dark); }
+  .btn-primary:active { transform: scale(0.98); }
+
+  /* ── RESULTS ── */
+  #results { display: none; }
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+  .result-chip {
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 1px solid transparent;
+  }
+  .result-chip .chip-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .result-chip .chip-value {
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    line-height: 1.3;
+  }
+  .chip-rose { background: var(--rose-light); border-color: rgba(212,83,126,0.2); }
+  .chip-rose .chip-label { color: var(--rose-dark); }
+  .chip-rose .chip-value { color: var(--rose-dark); }
+  .chip-teal { background: var(--teal-light); border-color: rgba(29,158,117,0.2); }
+  .chip-teal .chip-label { color: var(--teal-dark); }
+  .chip-teal .chip-value { color: var(--teal-dark); }
+  .chip-purple { background: var(--purple-light); border-color: rgba(127,119,221,0.2); }
+  .chip-purple .chip-label { color: var(--purple-dark); }
+  .chip-purple .chip-value { color: var(--purple-dark); }
+  .chip-amber { background: var(--amber-light); border-color: rgba(186,117,23,0.2); }
+  .chip-amber .chip-label { color: var(--amber-dark); }
+  .chip-amber .chip-value { color: var(--amber-dark); }
+
+  /* ── CALENDAR ── */
+  .cal-wrap { margin-top: 1.5rem; }
+  .cal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .cal-nav {
+    background: none; border: 1px solid var(--border); border-radius: 8px;
+    width: 32px; height: 32px; cursor: pointer; font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted); transition: all 0.15s;
+  }
+  .cal-nav:hover { border-color: var(--rose); color: var(--rose); }
+  .cal-month { font-family: 'DM Serif Display', serif; font-size: 1.1rem; }
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+  .cal-day-name {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 0;
+  }
+  .cal-day {
+    aspect-ratio: 1;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    border-radius: 8px;
+    cursor: default;
+    position: relative;
+    transition: all 0.15s;
+    font-weight: 400;
+  }
+  .cal-day.empty { background: none; }
+  .cal-day.today { border: 2px solid var(--rose); font-weight: 600; }
+  .cal-day.period { background: rgba(212,83,126,0.12); color: var(--rose-dark); font-weight: 500; }
+  .cal-day.fertile { background: rgba(29,158,117,0.12); color: var(--teal-dark); font-weight: 500; }
+  .cal-day.ovulation {
+    background: var(--rose);
+    color: white;
+    font-weight: 700;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(212,83,126,0.4);
+  }
+  .cal-day.implant { background: rgba(127,119,221,0.12); color: var(--purple-dark); font-weight: 500; }
+  .cal-day.test { background: rgba(186,117,23,0.12); color: var(--amber-dark); font-weight: 500; }
+
+  /* ── LEGEND ── */
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1rem; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+  /* ── PROBABILITY CHART ── */
+  .prob-bar-wrap { margin: 1rem 0; }
+  .prob-row {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+  }
+  .prob-label { font-size: 12px; width: 110px; flex-shrink: 0; color: var(--text-muted); }
+  .prob-track {
+    flex: 1; height: 8px; background: var(--gray-light);
+    border-radius: 4px; overflow: hidden;
+  }
+  .prob-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+  .prob-pct { font-size: 12px; font-weight: 600; width: 34px; text-align: right; }
+
+  /* ── SECTION HEADERS ── */
+  .section-head {
+    margin: 2.5rem 0 1.25rem;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-head h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+  }
+  .section-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* ── INFO BLOCKS ── */
+  .info-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .info-block h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+  .info-block p { color: var(--text-muted); font-size: 15px; margin-bottom: 0.75rem; }
+  .info-block ul { padding-left: 1.25rem; color: var(--text-muted); font-size: 15px; }
+  .info-block li { margin-bottom: 0.4rem; }
+  .callout {
+    display: flex; gap: 12px; padding: 14px 16px;
+    border-radius: 10px; margin: 1rem 0;
+    font-size: 14px;
+  }
+  .callout-icon { font-size: 18px; flex-shrink: 0; line-height: 1.4; }
+  .callout.info { background: var(--teal-light); color: var(--teal-dark); }
+  .callout.warn { background: var(--amber-light); color: var(--amber-dark); }
+  .callout.tip { background: var(--rose-light); color: var(--rose-dark); }
+
+  /* ── PHASE TIMELINE ── */
+  .phase-timeline { display: flex; gap: 0; border-radius: 12px; overflow: hidden; margin: 1.5rem 0; }
+  .phase-block {
+    flex: 1; padding: 14px 10px; text-align: center; font-size: 12px;
+    min-width: 0;
+  }
+  .phase-block strong { display: block; font-size: 13px; margin-bottom: 2px; }
+  .phase-block span { font-size: 11px; opacity: 0.8; }
+
+  /* ── TIPS GRID ── */
+  .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .tip-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.25rem;
+  }
+  .tip-card .tip-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; margin-bottom: 12px;
+  }
+  .tip-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .tip-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+  /* ── FAQ ── */
+  .faq-item { border-bottom: 1px solid var(--border); padding: 1.25rem 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-weight: 600; font-size: 15px; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    color: var(--text);
+  }
+  .faq-q span { font-size: 18px; color: var(--rose); transition: transform 0.2s; flex-shrink: 0; }
+  .faq-a { font-size: 14px; color: var(--text-muted); margin-top: 10px; display: none; line-height: 1.6; }
+  .faq-item.open .faq-q span { transform: rotate(45deg); }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    background: var(--gray-light);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 2rem 0;
+    border-left: 4px solid var(--gray);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  @media(max-width: 600px) {
+    .hero { padding: 2rem 1rem 1.5rem; }
+    .page { padding: 1.5rem 1rem; }
+    .card { padding: 1.25rem; }
+    .phase-timeline { flex-direction: column; }
+    .phase-block { border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="hero-badge">Medical Calculator · RxMedCalc</div>
+  <h1>Ovulation Calendar &<br><em>Fertility Planner</em></h1>
+  <p>Enter your cycle details to instantly calculate your fertile window, ovulation date, and best days to conceive — backed by clinical science.</p>
+  <div class="trust-row">
+    <span><span class="trust-dot"></span>Clinically informed</span>
+    <span><span class="trust-dot"></span>3-month forecast</span>
+    <span><span class="trust-dot"></span>Pregnancy test dates</span>
+    <span><span class="trust-dot"></span>Free & private</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- ══ CALCULATOR ══ -->
+  <div class="two-col" style="margin-bottom:2rem;">
+
+    <!-- INPUT CARD -->
+    <div class="card">
+      <div class="card-title">
+        <div class="icon" style="background:var(--rose-light);">🌸</div>
+        Your Cycle Details
+      </div>
+
+      <div class="form-group">
+        <label for="lmp">First Day of Last Period</label>
+        <input type="date" id="lmp">
+        <div class="hint">Enter the date your most recent period began</div>
+      </div>
+
+      <div class="form-group">
+        <label for="cycleLen">Average Cycle Length</label>
+        <select id="cycleLen">
+          <option value="21">21 days</option>
+          <option value="22">22 days</option>
+          <option value="23">23 days</option>
+          <option value="24">24 days</option>
+          <option value="25">25 days</option>
+          <option value="26">26 days</option>
+          <option value="27">27 days</option>
+          <option value="28" selected>28 days (average)</option>
+          <option value="29">29 days</option>
+          <option value="30">30 days</option>
+          <option value="31">31 days</option>
+          <option value="32">32 days</option>
+          <option value="33">33 days</option>
+          <option value="34">34 days</option>
+          <option value="35">35 days</option>
+          <option value="36">36 days</option>
+          <option value="37">37 days</option>
+          <option value="38">38 days</option>
+          <option value="39">39 days</option>
+          <option value="40">40 days</option>
+        </select>
+        <div class="hint">Count from Day 1 of period to Day 1 of next period</div>
+      </div>
+
+      <div class="form-group">
+        <label for="periodLen">Period Duration</label>
+        <select id="periodLen">
+          <option value="2">2 days</option>
+          <option value="3">3 days</option>
+          <option value="4">4 days</option>
+          <option value="5" selected>5 days (average)</option>
+          <option value="6">6 days</option>
+          <option value="7">7 days</option>
+          <option value="8">8 days</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="luteal">Luteal Phase Length</label>
+        <select id="luteal">
+          <option value="10">10 days (short)</option>
+          <option value="11">11 days</option>
+          <option value="12">12 days</option>
+          <option value="13">13 days</option>
+          <option value="14" selected>14 days (standard)</option>
+          <option value="15">15 days</option>
+          <option value="16">16 days (long)</option>
+        </select>
+        <div class="hint">The phase after ovulation until next period. Typically 12–16 days.</div>
+      </div>
+
+      <button class="btn-primary" onclick="calculate()">Calculate My Fertile Window →</button>
+    </div>
+
+    <!-- RESULTS CARD -->
+    <div class="card" id="results">
+      <div class="card-title">
+        <div class="icon" style="background:var(--teal-light);">✨</div>
+        Your Fertility Results
+      </div>
+
+      <div class="result-grid">
+        <div class="result-chip chip-rose">
+          <span class="chip-label">Ovulation Date</span>
+          <span class="chip-value" id="r-ovulation">—</span>
+        </div>
+        <div class="result-chip chip-teal">
+          <span class="chip-label">Fertile Window</span>
+          <span class="chip-value" id="r-fertile">—</span>
+        </div>
+        <div class="result-chip chip-purple">
+          <span class="chip-label">Best 2 Days</span>
+          <span class="chip-value" id="r-best">—</span>
+        </div>
+        <div class="result-chip chip-amber">
+          <span class="chip-label">Pregnancy Test</span>
+          <span class="chip-value" id="r-test">—</span>
+        </div>
+      </div>
+
+      <!-- Conception probability bars -->
+      <div style="margin-top:1rem;">
+        <div style="font-size:13px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;">Daily Conception Probability</div>
+        <div class="prob-bar-wrap" id="prob-bars"></div>
+      </div>
+
+      <!-- Due date estimate -->
+      <div id="due-date-block" style="margin-top:1rem; padding:14px; background:var(--rose-light); border-radius:12px; border:1px solid rgba(212,83,126,0.2);">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--rose-dark);margin-bottom:4px;">Estimated Due Date (if conceived)</div>
+        <div style="font-size:18px;font-weight:600;color:var(--rose-dark);" id="r-due">—</div>
+        <div style="font-size:12px;color:var(--rose);">Based on 40-week gestational period</div>
+      </div>
+    </div>
+
+    <!-- PLACEHOLDER when not yet calculated -->
+    <div class="card" id="placeholder" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;text-align:center;">
+      <div style="font-size:48px;opacity:0.15;">🌸</div>
+      <div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:6px;">Enter your cycle details</div>
+        <div style="font-size:14px;color:var(--text-muted);">Your personalized fertility calendar will appear here</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CALENDAR ══ -->
+  <div class="card" id="cal-card" style="display:none; margin-bottom:2rem;">
+    <div class="card-title">
+      <div class="icon" style="background:var(--purple-light);">📅</div>
+      3-Month Fertility Calendar
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;" id="three-months"></div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--rose);border-radius:50%;"></div>Ovulation day</div>
+      <div class="legend-item"><div class="legend-dot" style="background:rgba(29,158,117,0.2);border:1px solid rgba(29,158,117,0.3);"></div>Fertile window</div>
+      <div class="legend-item"><div class="legend-dot" style="background:rgba(212,83,126,0.15);border:1px solid rgba(212,83,126,0.2);"></div>Period days</div>
+      <div class="legend-item"><div class="legend-dot" style="background:rgba(127,119,221,0.15);border:1px solid rgba(127,119,221,0.2);"></div>Implantation window</div>
+      <div class="legend-item"><div class="legend-dot" style="background:rgba(186,117,23,0.15);border:1px solid rgba(186,117,23,0.2);"></div>Pregnancy test day</div>
+    </div>
+  </div>
+
+  <!-- ══ NEXT 3 CYCLES ══ -->
+  <div id="future-cycles" style="display:none; margin-bottom:2rem;">
+    <div class="section-head">
+      <h2>Next 3 Cycles at a Glance</h2>
+      <div class="section-line"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;" id="cycle-cards"></div>
+  </div>
+
+  <!-- ══ SEO CONTENT ══ -->
+
+  <div class="section-head">
+    <h2>Understanding Your Menstrual Cycle</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- Phase Timeline -->
+  <div class="phase-timeline" style="margin-bottom:2rem;">
+    <div class="phase-block" style="background:rgba(212,83,126,0.12); color:var(--rose-dark);">
+      <strong>Menstrual Phase</strong>
+      Days 1–5
+      <span>Uterine lining sheds</span>
+    </div>
+    <div class="phase-block" style="background:rgba(127,119,221,0.1); color:var(--purple-dark);">
+      <strong>Follicular Phase</strong>
+      Days 1–13
+      <span>Follicle matures</span>
+    </div>
+    <div class="phase-block" style="background:rgba(29,158,117,0.2); color:var(--teal-dark);">
+      <strong>Ovulation</strong>
+      Day ~14
+      <span>Egg is released</span>
+    </div>
+    <div class="phase-block" style="background:rgba(186,117,23,0.12); color:var(--amber-dark);">
+      <strong>Luteal Phase</strong>
+      Days 15–28
+      <span>Uterus prepares</span>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="info-block">
+      <h3>How Ovulation Works</h3>
+      <p>Ovulation is the process in which a mature egg (oocyte) is released from the dominant ovarian follicle into the fallopian tube, where it becomes available for fertilization. This event is triggered by a surge in Luteinizing Hormone (LH), typically occurring 24–36 hours after the LH surge peaks.</p>
+      <p>The egg remains viable for only <strong>12–24 hours</strong> after release. However, sperm can survive in the cervical mucus and fallopian tubes for up to <strong>5 days</strong>, meaning the fertile window extends beyond ovulation day itself.</p>
+      <div class="callout info">
+        <span class="callout-icon">💡</span>
+        <div>In a 28-day cycle, ovulation typically occurs on Day 14. For longer or shorter cycles, it shifts accordingly — always about 14 days before the next period.</div>
+      </div>
+    </div>
+    <div class="info-block">
+      <h3>The Fertile Window Explained</h3>
+      <p>The fertile window spans approximately <strong>6 days</strong>: the five days before ovulation and the day of ovulation itself. Research from the New England Journal of Medicine shows that:</p>
+      <ul>
+        <li>Intercourse on ovulation day yields ~33% conception chance</li>
+        <li>The day before ovulation: ~31% chance</li>
+        <li>Two days before: ~27% chance</li>
+        <li>Three days before: ~16% chance</li>
+        <li>Four–five days before: ~5–10% chance</li>
+      </ul>
+      <div class="callout tip">
+        <span class="callout-icon">🌸</span>
+        <div>The highest conception probability occurs in the 2 days before and including ovulation day. Aim for intercourse every 1–2 days during this period.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <h2>How to Get Pregnant: Clinically Proven Strategies</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="tips-grid" style="margin-bottom:2rem;">
+    <div class="tip-card">
+      <div class="tip-icon" style="background:var(--rose-light);">📊</div>
+      <h4>Track Your Basal Body Temperature</h4>
+      <p>Take your temperature every morning before getting out of bed with a BBT thermometer. A rise of 0.2–0.5°C signals ovulation has occurred. Track 2–3 cycles to identify your pattern.</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon" style="background:var(--teal-light);">🔬</div>
+      <h4>Use Ovulation Predictor Kits (OPKs)</h4>
+      <p>OPKs detect the LH surge in urine 24–48 hours before ovulation. Begin testing 3–4 days before your predicted ovulation day. Digital OPKs have ~97% accuracy.</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon" style="background:var(--purple-light);">💧</div>
+      <h4>Monitor Cervical Mucus</h4>
+      <p>As ovulation approaches, cervical mucus becomes clear, slippery, and "egg-white" in consistency. This is your most fertile sign — sperm can swim through it easily.</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon" style="background:var(--amber-light);">❤️</div>
+      <h4>Optimize Intercourse Frequency</h4>
+      <p>Every 1–2 days during the fertile window maximizes chances without depleting sperm quality. Daily intercourse is also fine for most couples with normal sperm counts.</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon" style="background:var(--teal-light);">🥗</div>
+      <h4>Start Prenatal Folic Acid</h4>
+      <p>Begin 400–800 mcg of folic acid at least 1 month before conception. Folic acid reduces neural tube defect risk by up to 70% when taken preconceptionally.</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon" style="background:var(--rose-light);">🧬</div>
+      <h4>Pre-Conception Health Check</h4>
+      <p>Schedule a preconception visit with your OB-GYN. Review medications, vaccinations (especially rubella & varicella), genetic carrier screening, and chronic condition management.</p>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <h2>Signs of Ovulation to Watch For</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="info-block" style="margin-bottom:1.5rem;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+      <div>
+        <h3 style="font-size:1rem;margin-bottom:8px;">Physical Signs</h3>
+        <ul>
+          <li>Egg-white cervical mucus</li>
+          <li>Mild pelvic cramps (Mittelschmerz)</li>
+          <li>Light spotting</li>
+          <li>BBT rise after ovulation</li>
+          <li>Breast tenderness</li>
+          <li>Increased libido</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;margin-bottom:8px;">Hormonal Signs (Tests)</h3>
+        <ul>
+          <li>Positive LH test (OPK surge)</li>
+          <li>Elevated estrogen levels</li>
+          <li>Progesterone rise post-ovulation</li>
+          <li>Transvaginal ultrasound follicle collapse</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;margin-bottom:8px;">Cervical Position</h3>
+        <ul>
+          <li>Cervix moves higher</li>
+          <li>Softer texture (like lips vs. nose)</li>
+          <li>More open os</li>
+          <li>Returns to firm, low, closed post-ovulation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <h2>Early Pregnancy: What Happens After Conception</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="info-block" style="margin-bottom:1.5rem;">
+    <h3>Day-by-Day After Ovulation</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:1rem;">
+      <div style="padding:12px;background:var(--rose-light);border-radius:10px;">
+        <div style="font-size:11px;font-weight:700;color:var(--rose-dark);text-transform:uppercase;margin-bottom:4px;">Day 0–1</div>
+        <div style="font-size:13px;color:var(--rose-dark);">Egg released; sperm fertilizes in fallopian tube</div>
+      </div>
+      <div style="padding:12px;background:var(--purple-light);border-radius:10px;">
+        <div style="font-size:11px;font-weight:700;color:var(--purple-dark);text-transform:uppercase;margin-bottom:4px;">Days 2–5</div>
+        <div style="font-size:13px;color:var(--purple-dark);">Zygote divides; travels toward uterus as blastocyst</div>
+      </div>
+      <div style="padding:12px;background:var(--teal-light);border-radius:10px;">
+        <div style="font-size:11px;font-weight:700;color:var(--teal-dark);text-transform:uppercase;margin-bottom:4px;">Days 6–10</div>
+        <div style="font-size:13px;color:var(--teal-dark);">Implantation in uterine lining; hCG begins rising</div>
+      </div>
+      <div style="padding:12px;background:var(--amber-light);border-radius:10px;">
+        <div style="font-size:11px;font-weight:700;color:var(--amber-dark);text-transform:uppercase;margin-bottom:4px;">Days 11–14</div>
+        <div style="font-size:13px;color:var(--amber-dark);">hCG detectable; pregnancy test turns positive</div>
+      </div>
+      <div style="padding:12px;background:var(--gray-light);border-radius:10px;">
+        <div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;margin-bottom:4px;">Days 14–16</div>
+        <div style="font-size:13px;color:var(--gray);">Missed period; most tests reliably positive</div>
+      </div>
+    </div>
+    <div class="callout warn" style="margin-top:1.25rem;">
+      <span class="callout-icon">⚠️</span>
+      <div>Implantation bleeding (light spotting) 6–12 days after ovulation is normal and can be mistaken for an early period. It typically lasts 1–3 days and is lighter than a period.</div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <h2>When to Take a Pregnancy Test</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="two-col" style="margin-bottom:2rem;">
+    <div class="info-block">
+      <h3>Timing Your Pregnancy Test</h3>
+      <p>Home pregnancy tests (HPTs) detect human chorionic gonadotropin (hCG) in urine. hCG doubles approximately every 48–72 hours in early pregnancy.</p>
+      <ul>
+        <li><strong>10–12 days post-ovulation:</strong> Early detection tests (sensitivity 10–20 mIU/mL) may turn positive</li>
+        <li><strong>14 days post-ovulation:</strong> Most standard tests (~25 mIU/mL) are reliable</li>
+        <li><strong>First morning urine</strong> has highest hCG concentration — always test in the morning</li>
+        <li><strong>If negative:</strong> Retest 2–3 days later if period hasn't arrived</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h3>Types of Pregnancy Tests</h3>
+      <ul>
+        <li><strong>Strip tests:</strong> Cost-effective, 20–25 mIU/mL sensitivity</li>
+        <li><strong>Midstream tests:</strong> Easy to use, same accuracy as strips</li>
+        <li><strong>Digital tests:</strong> Clear "Pregnant/Not Pregnant" result, reduce ambiguity</li>
+        <li><strong>Early response tests:</strong> Can detect as early as 6 days before missed period (sensitivity 6 mIU/mL)</li>
+        <li><strong>Blood (serum beta-hCG):</strong> Most accurate; detects pregnancy 6–8 days post-ovulation via doctor's office</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-head">
+    <h2>Frequently Asked Questions</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="info-block" style="margin-bottom:2rem;">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I get pregnant on my period? <span>+</span></div>
+      <div class="faq-a">It is unlikely but possible, especially with shorter cycles (21–24 days). Sperm can survive up to 5 days, so if you ovulate early in your cycle (around Day 7–10), intercourse during a longer period could coincide with your fertile window. For women with regular 28-day cycles, the risk is very low.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How long does it typically take to get pregnant? <span>+</span></div>
+      <div class="faq-a">According to ACOG, about 84% of couples conceive within 12 months of regular unprotected sex. About 92% conceive within 24 months. Fertility peaks in the mid-20s and gradually declines, more significantly after age 35. If you're under 35 and haven't conceived after 12 months, or over 35 after 6 months, consult a reproductive endocrinologist.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What if my cycles are irregular? <span>+</span></div>
+      <div class="faq-a">Irregular cycles make calendar-based prediction unreliable. Instead, rely on OPKs (ovulation predictor kits) to detect the LH surge directly, monitor cervical mucus changes, and consider tracking BBT. Irregular cycles can indicate anovulation (no ovulation), PCOS, thyroid disorders, or other conditions — discuss with your doctor if cycles vary by more than 7–9 days.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Does age affect ovulation and fertility? <span>+</span></div>
+      <div class="faq-a">Yes, significantly. Women are born with all their eggs (approximately 1–2 million). By puberty, ~300,000–400,000 remain. Egg quantity and quality decline with age, especially after 35. AMH (Anti-Müllerian Hormone) blood tests and antral follicle counts via ultrasound can assess ovarian reserve at any age. Men also experience reduced sperm quality after age 40–45.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I choose my baby's gender using an ovulation calendar? <span>+</span></div>
+      <div class="faq-a">The Shettles Method (1960) proposed that intercourse closer to ovulation favors male conceptions (Y-sperm are faster but shorter-lived) while earlier in the window favors females (X-sperm are slower but more durable). However, modern research has not consistently validated this theory. Scientific consensus is that sex of a baby is determined by chance and cannot be reliably controlled through timing alone.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is a luteal phase defect and does it affect fertility? <span>+</span></div>
+      <div class="faq-a">A luteal phase defect (LPD) occurs when the luteal phase (post-ovulation) is shorter than 10 days or progesterone levels are insufficient to support implantation. Symptoms include a short luteal phase, spotting before periods, and recurrent early miscarriages. It affects approximately 3–10% of women experiencing infertility. Treatment may include progesterone supplementation, clomiphene, or addressing the underlying cause.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How accurate is this ovulation calculator? <span>+</span></div>
+      <div class="faq-a">This calculator uses the standard "calendar method" based on your average cycle length and a 14-day luteal phase assumption. It is most accurate for women with regular cycles that vary by less than 2–3 days. For irregular cycles, the predicted fertile window may be off by several days. For maximum precision, combine this calculator with OPKs, BBT tracking, and cervical mucus monitoring. This tool is for informational purposes and not a substitute for medical advice.</div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Medical Disclaimer:</strong> This ovulation calculator is provided for informational and educational purposes only. Results are estimates based on average cycle statistics and should not replace advice from a qualified healthcare provider. Individual cycles vary significantly. If you have concerns about your fertility, irregular cycles, or have been trying to conceive without success, please consult a licensed physician or reproductive endocrinologist. RxMedCalc.com does not provide medical diagnoses or treatment recommendations.
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 RxMedCalc.com · Medical Calculators · <a href="https://rxmedcalc.com" style="color:var(--rose);text-decoration:none;">rxmedcalc.com/medical-calculators/ovulation-calendar</a></p>
+  <p style="margin-top:4px;">Reviewed by clinical pharmacists · Based on ACOG, WHO, and peer-reviewed fertility guidelines</p>
+</footer>
+
+<script>
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const DAYS_SHORT = ['Su','Mo','Tu','We','Th','Fr','Sa'];
+
+function addDays(d, n) {
+  const r = new Date(d); r.setDate(r.getDate() + n); return r;
+}
+function fmtDate(d) {
+  return d.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+}
+function fmtDateFull(d) {
+  return d.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
+}
+
+// Set default LMP to today
+(function() {
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2,'0');
+  const mm = String(today.getMonth()+1).padStart(2,'0');
+  document.getElementById('lmp').value = today.getFullYear()+'-'+mm+'-'+dd;
+})();
+
+function getCycleData(lmpDate, cycleLen, periodLen, luteal) {
+  const ovDay = cycleLen - luteal;
+  const ovulation = addDays(lmpDate, ovDay - 1);
+  const fertileStart = addDays(ovulation, -5);
+  const fertileEnd = addDays(ovulation, 1);
+  const bestStart = addDays(ovulation, -2);
+  const bestEnd = ovulation;
+  const implantStart = addDays(ovulation, 6);
+  const implantEnd = addDays(ovulation, 12);
+  const testDay = addDays(ovulation, 14);
+  const nextPeriod = addDays(lmpDate, cycleLen);
+  const periodEnd = addDays(lmpDate, periodLen - 1);
+  const dueDate = addDays(ovulation, 266); // 38 weeks from ovulation = 40 from LMP
+  return { ovulation, fertileStart, fertileEnd, bestStart, bestEnd, implantStart, implantEnd, testDay, nextPeriod, periodEnd, lmpDate, periodLen, cycleLen, luteal, dueDate };
+}
+
+function calculate() {
+  const lmpVal = document.getElementById('lmp').value;
+  if (!lmpVal) { alert('Please enter the first day of your last period.'); return; }
+  const lmpDate = new Date(lmpVal + 'T00:00:00');
+  const cycleLen = parseInt(document.getElementById('cycleLen').value);
+  const periodLen = parseInt(document.getElementById('periodLen').value);
+  const luteal = parseInt(document.getElementById('luteal').value);
+
+  const c = getCycleData(lmpDate, cycleLen, periodLen, luteal);
+
+  // Show results
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('placeholder').style.display = 'none';
+  document.getElementById('cal-card').style.display = 'block';
+  document.getElementById('future-cycles').style.display = 'block';
+
+  document.getElementById('r-ovulation').textContent = fmtDate(c.ovulation);
+  document.getElementById('r-fertile').textContent = fmtDate(c.fertileStart) + ' – ' + fmtDate(c.fertileEnd);
+  document.getElementById('r-best').textContent = fmtDate(c.bestStart) + ' – ' + fmtDate(c.bestEnd);
+  document.getElementById('r-test').textContent = 'After ' + fmtDate(c.testDay);
+  document.getElementById('r-due').textContent = fmtDateFull(c.dueDate);
+
+  renderProbBars(c);
+  renderThreeMonths(c);
+  renderFutureCycles(lmpDate, cycleLen, periodLen, luteal);
+}
+
+const PROBS = [
+  {label: 'Ovulation Day', pct: 33, color: '#D4537E'},
+  {label: '1 day before', pct: 31, color: '#E07090'},
+  {label: '2 days before', pct: 27, color: '#C06070'},
+  {label: '3 days before', pct: 16, color: '#994060'},
+  {label: '4 days before', pct: 10, color: '#7a3050'},
+  {label: '5 days before', pct: 5, color: '#5a2040'},
+];
+
+function renderProbBars(c) {
+  const container = document.getElementById('prob-bars');
+  container.innerHTML = PROBS.map(p => `
+    <div class="prob-row">
+      <div class="prob-label">${p.label}</div>
+      <div class="prob-track"><div class="prob-fill" style="width:${p.pct}%;background:${p.color};"></div></div>
+      <div class="prob-pct" style="color:${p.color};">${p.pct}%</div>
+    </div>`).join('');
+}
+
+function renderThreeMonths(c) {
+  const container = document.getElementById('three-months');
+  container.innerHTML = '';
+  // Generate 3 cycles starting from LMP month
+  const startDate = new Date(c.lmpDate);
+  const cycles = [];
+  let currentLMP = new Date(c.lmpDate);
+  for (let i = 0; i < 3; i++) {
+    cycles.push(getCycleData(new Date(currentLMP), c.cycleLen, c.periodLen, c.luteal));
+    currentLMP = addDays(currentLMP, c.cycleLen);
+  }
+
+  // Show months that contain these cycles
+  const monthsToShow = [];
+  const seen = new Set();
+  cycles.forEach(cycle => {
+    const m = new Date(cycle.fertileStart); m.setDate(1);
+    const key = m.getFullYear()+'-'+m.getMonth();
+    if (!seen.has(key)) { seen.add(key); monthsToShow.push(new Date(m)); }
+    const m2 = new Date(cycle.nextPeriod); m2.setDate(1);
+    const key2 = m2.getFullYear()+'-'+m2.getMonth();
+    if (!seen.has(key2)) { seen.add(key2); monthsToShow.push(new Date(m2)); }
+  });
+  monthsToShow.sort((a,b) => a-b);
+
+  // Build a set of special dates for quick lookup
+  const dateMap = {};
+  function setDate(d, type) {
+    const key = d.toISOString().slice(0,10);
+    if (!dateMap[key]) dateMap[key] = [];
+    dateMap[key].push(type);
+  }
+  cycles.forEach(cycle => {
+    // Period days
+    for (let d = new Date(cycle.lmpDate), end = new Date(cycle.periodEnd); d <= end; d.setDate(d.getDate()+1)) setDate(new Date(d), 'period');
+    // Fertile
+    for (let d = new Date(cycle.fertileStart); d <= cycle.fertileEnd; d.setDate(d.getDate()+1)) setDate(new Date(d), 'fertile');
+    // Ovulation
+    setDate(cycle.ovulation, 'ovulation');
+    // Implantation
+    for (let d = new Date(cycle.implantStart); d <= cycle.implantEnd; d.setDate(d.getDate()+1)) setDate(new Date(d), 'implant');
+    // Test
+    setDate(cycle.testDay, 'test');
+  });
+
+  const today = new Date(); today.setHours(0,0,0,0);
+
+  monthsToShow.slice(0,3).forEach(monthDate => {
+    const yr = monthDate.getFullYear();
+    const mo = monthDate.getMonth();
+    const firstDay = new Date(yr, mo, 1).getDay();
+    const daysInMonth = new Date(yr, mo+1, 0).getDate();
+
+    let html = `<div>
+      <div style="font-family:'DM Serif Display',serif;font-size:1rem;margin-bottom:10px;">${MONTHS[mo]} ${yr}</div>
+      <div class="cal-grid">
+        ${DAYS_SHORT.map(d => `<div class="cal-day-name">${d}</div>`).join('')}
+        ${Array(firstDay).fill('<div class="cal-day empty"></div>').join('')}`;
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const d = new Date(yr, mo, day);
+      d.setHours(0,0,0,0);
+      const key = d.toISOString().slice(0,10);
+      const types = dateMap[key] || [];
+      let cls = 'cal-day';
+      if (d.getTime() === today.getTime()) cls += ' today';
+      if (types.includes('ovulation')) cls += ' ovulation';
+      else if (types.includes('fertile')) cls += ' fertile';
+      else if (types.includes('period')) cls += ' period';
+      if (types.includes('implant') && !types.includes('fertile') && !types.includes('ovulation')) cls += ' implant';
+      if (types.includes('test')) cls += ' test';
+
+      let title = '';
+      if (types.includes('ovulation')) title = 'Ovulation day';
+      else if (types.includes('fertile')) title = 'Fertile window';
+      else if (types.includes('period')) title = 'Period';
+      if (types.includes('implant')) title += ' / Implantation window';
+      if (types.includes('test')) title = 'Pregnancy test day';
+
+      html += `<div class="${cls}" title="${title}">${day}</div>`;
+    }
+    html += `</div></div>`;
+    container.innerHTML += html;
+  });
+}
+
+function renderFutureCycles(lmpDate, cycleLen, periodLen, luteal) {
+  const container = document.getElementById('cycle-cards');
+  container.innerHTML = '';
+  let currentLMP = new Date(lmpDate);
+  const colors = [
+    {bg:'var(--rose-light)',border:'rgba(212,83,126,0.2)',text:'var(--rose-dark)',accent:'var(--rose)'},
+    {bg:'var(--teal-light)',border:'rgba(29,158,117,0.2)',text:'var(--teal-dark)',accent:'var(--teal)'},
+    {bg:'var(--purple-light)',border:'rgba(127,119,221,0.2)',text:'var(--purple-dark)',accent:'var(--purple)'},
+  ];
+  for (let i = 0; i < 3; i++) {
+    const c2 = getCycleData(new Date(currentLMP), cycleLen, periodLen, luteal);
+    const col = colors[i];
+    container.innerHTML += `
+      <div style="background:${col.bg};border:1px solid ${col.border};border-radius:14px;padding:1.25rem;">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:${col.text};margin-bottom:10px;">Cycle ${i+1}</div>
+        <table style="width:100%;font-size:13px;border-collapse:collapse;">
+          <tr><td style="color:${col.text};opacity:0.7;padding:4px 0;">Period starts</td><td style="text-align:right;font-weight:600;color:${col.text};">${fmtDate(c2.lmpDate)}</td></tr>
+          <tr><td style="color:${col.text};opacity:0.7;padding:4px 0;">Fertile window</td><td style="text-align:right;font-weight:600;color:${col.text};">${fmtDate(c2.fertileStart)} – ${fmtDate(c2.fertileEnd)}</td></tr>
+          <tr><td style="color:${col.text};opacity:0.7;padding:4px 0;">Ovulation day</td><td style="text-align:right;font-weight:700;color:${col.accent};">${fmtDate(c2.ovulation)}</td></tr>
+          <tr><td style="color:${col.text};opacity:0.7;padding:4px 0;">Best 2 days</td><td style="text-align:right;font-weight:600;color:${col.text};">${fmtDate(c2.bestStart)} – ${fmtDate(c2.bestEnd)}</td></tr>
+          <tr><td style="color:${col.text};opacity:0.7;padding:4px 0;">Pregnancy test</td><td style="text-align:right;font-weight:600;color:${col.text};">${fmtDate(c2.testDay)}+</td></tr>
+        </table>
+      </div>`;
+    currentLMP = addDays(currentLMP, cycleLen);
+  }
+}
+
+function toggleFaq(el) {
+  el.parentElement.classList.toggle('open');
+}
+</script>
+</body>
+</html>
