@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google-site-verification" content="nZgsChD0zRn_BmL5Yw4MLcuRGkkhdkSTp9WAJPmudyM" />
+    <link rel="stylesheet" href="/assets/shared.css"/>
+    <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+    <script src="/assets/umami-events.js"></script>
+
+    <title>Free Medical Calculators | Clinical Tools for Doctors India</title>
+    <meta name="description" content="50+ Free Medical Calculators: CURB-65, NEWS2, GCS, Rabies PEP, UIP Schedule, eGFR, HbA1c, and more. Built by a doctor for clinical use."/>
+
+    <style>
+        :root {
+            --ink: #0a0f1e;
+            --ink-soft: #2d3748;
+            --ink-muted: #64748b;
+            --paper: #f7f8fc;
+            --card: #ffffff;
+            --border: #e8ecf4;
+            --teal: #0d9488;
+            --teal-light: #ccfbf1;
+            --amber: #d97706;
+            --amber-light: #fef3c7;
+            --navy: #0f172a;
+            --navy-mid: #1e293b;
+            --red: #dc2626;
+            --red-light: #fee2e2;
+            --violet: #7c3aed;
+            --violet-light: #ede9fe;
+            --emerald: #059669;
+            --emerald-light: #d1fae5;
+            --blue: #2563eb;
+            --blue-light: #dbeafe;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+            padding: 52px 24px 48px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 10% 20%, rgba(13,148,136,0.18) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 80% at 90% 80%, rgba(37,99,235,0.12) 0%, transparent 60%);
+        }
+
+        .hero-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 100px;
+            padding: 5px 14px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+        }
+
+        .hero-eyebrow span { color: #5eead4; }
+
+        .hero-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1.15;
+            margin-bottom: 14px;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: #5eead4;
+        }
+
+        .hero-sub {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.55);
+            max-width: 480px;
+            margin-bottom: 28px;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-stat-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 3px;
+        }
+
+        .hero-divider {
+            width: 1px;
+            height: 32px;
+            background: rgba(255,255,255,0.12);
+            align-self: center;
+        }
+
+        /* ── SEARCH ── */
+        .search-wrap {
+            max-width: 680px;
+            margin: -24px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-box {
+            width: 100%;
+            background: var(--card);
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 20px 16px 52px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            color: var(--ink);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1), 0 2px 8px rgba(0,0,0,0.06);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .search-box:focus {
+            border-color: var(--teal);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1), 0 0 0 3px rgba(13,148,136,0.12);
+        }
+
+        .search-box::placeholder { color: var(--ink-muted); }
+
+        .search-icon {
+            position: absolute;
+            left: 36px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--ink-muted);
+            pointer-events: none;
+        }
+
+        /* ── MAIN CONTENT ── */
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        /* ── CATEGORY SECTION ── */
+        .category {
+            margin-bottom: 44px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .category-icon-wrap {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .cat-emergency .category-icon-wrap { background: var(--red-light); }
+        .cat-pediatrics .category-icon-wrap { background: var(--amber-light); }
+        .cat-medicine .category-icon-wrap { background: var(--blue-light); }
+        .cat-dosing .category-icon-wrap { background: var(--emerald-light); }
+        .cat-obg .category-icon-wrap { background: var(--violet-light); }
+
+        .category-title {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+        }
+
+        .category-count {
+            margin-left: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--ink-muted);
+            background: var(--border);
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+
+        /* ── TOOL GRID ── */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 12px;
+        }
+
+        .tool-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px 18px 16px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 60%, rgba(13,148,136,0.03));
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: rgba(13,148,136,0.3);
+        }
+
+        .tool-card:hover::after { opacity: 1; }
+
+        .tool-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .tool-info { flex: 1; min-width: 0; }
+
+        .tool-name {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 3px;
+            line-height: 1.3;
+        }
+
+        .tool-desc {
+            font-size: 0.75rem;
+            color: var(--ink-muted);
+            line-height: 1.4;
+        }
+
+        .tool-arrow {
+            flex-shrink: 0;
+            color: var(--border);
+            align-self: center;
+            font-size: 0.9rem;
+            transition: color 0.18s, transform 0.18s;
+        }
+
+        .tool-card:hover .tool-arrow {
+            color: var(--teal);
+            transform: translateX(2px);
+        }
+
+        /* ── HIGHLIGHT CARDS (featured tools) ── */
+        .tool-card.featured {
+            border-color: var(--teal);
+            background: linear-gradient(135deg, #ffffff 80%, #f0fdfa);
+        }
+
+        .tool-card.featured .tool-name { color: var(--teal); }
+
+        /* ── INFO STRIP ── */
+        .info-strip {
+            background: var(--navy);
+            border-radius: 20px;
+            padding: 28px 28px;
+            margin-top: 8px;
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .info-strip-text { flex: 1; min-width: 200px; }
+
+        .info-strip-text h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .info-strip-text p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.5;
+        }
+
+        .info-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.65);
+            font-weight: 500;
+        }
+
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #5eead4;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--ink-muted);
+            font-size: 0.78rem;
+        }
+
+        .footer a {
+            color: var(--teal);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover { text-decoration: underline; }
+
+        /* ── SEARCH FILTER ── */
+        .hidden { display: none !important; }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--ink-muted);
+            font-size: 0.9rem;
+            display: none;
+            grid-column: 1/-1;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 600px) {
+            .hero { padding: 40px 20px 44px; }
+            .hero-stats { gap: 16px; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .info-strip { flex-direction: column; gap: 20px; }
+            .search-wrap { margin-top: -20px; }
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-inner { animation: fadeUp 0.5s ease both; }
+        .search-wrap { animation: fadeUp 0.5s 0.1s ease both; }
+        .category { animation: fadeUp 0.5s 0.15s ease both; }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-inner">
+        <div class="hero-eyebrow">🩺 <span>RxMedCalc</span> · Built by a doctor · Free forever</div>
+        <h1 class="hero-title">Clinical tools for<br><em>point-of-care decisions</em></h1>
+        <p class="hero-sub">Validated against NCDC India, WHO, IAP, NICE & KDIGO. All calculations run locally — no data stored.</p>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-num">50+</span>
+                <span class="hero-stat-label">Calculators</span>
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">0</span>
+                <span class="hero-stat-label">Data stored</span>
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">₹0</span>
+                <span class="hero-stat-label">Cost</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+    <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" class="search-box" id="searchInput" placeholder="Search calculators — CURB-65, eGFR, Rabies…" autocomplete="off"/>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <!-- Emergency -->
+    <div class="category cat-emergency" data-cat>
+        <div class="category-header">
+            <div class="category-icon-wrap">🚨</div>
+            <span class="category-title">Emergency & Critical Care</span>
+            <span class="category-count">11</span>
+        </div>
+        <div class="tools-grid">
+            <a class="tool-card featured" href="/medical-calculators/curb65" data-tool>
+                <span class="tool-icon">🫁</span>
+                <div class="tool-info">
+                    <div class="tool-name">CURB-65 Score</div>
+                    <div class="tool-desc">Pneumonia severity & admission decision</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/news2" data-tool>
+                <span class="tool-icon">📉</span>
+                <div class="tool-info">
+                    <div class="tool-name">NEWS2 Score</div>
+                    <div class="tool-desc">Early warning for deterioration</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/gcs-calculator" data-tool>
+                <span class="tool-icon">🧠</span>
+                <div class="tool-info">
+                    <div class="tool-name">GCS Calculator</div>
+                    <div class="tool-desc">Glasgow Coma Scale — Adult & Paeds</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/burn-calculator" data-tool>
+                <span class="tool-icon">🔥</span>
+                <div class="tool-info">
+                    <div class="tool-name">Burn & Parkland</div>
+                    <div class="tool-desc">TBSA% and fluid resuscitation</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/wells-score" data-tool>
+                <span class="tool-icon">🩸</span>
+                <div class="tool-info">
+                    <div class="tool-name">Wells Score</div>
+                    <div class="tool-desc">DVT and PE pre-test probability</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/map-calculator" data-tool>
+                <span class="tool-icon">❤️</span>
+                <div class="tool-info">
+                    <div class="tool-name">MAP Calculator</div>
+                    <div class="tool-desc">Mean Arterial Pressure targets</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/qsofa-score" data-tool>
+                <span class="tool-icon">🏥</span>
+                <div class="tool-info">
+                    <div class="tool-name">qSOFA Score</div>
+                    <div class="tool-desc">Quick sepsis bedside assessment</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/shock-index" data-tool>
+                <span class="tool-icon">⚡</span>
+                <div class="tool-info">
+                    <div class="tool-name">Shock Index</div>
+                    <div class="tool-desc">HR/SBP for occult shock detection</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/perc-rule" data-tool>
+                <span class="tool-icon">✅</span>
+                <div class="tool-info">
+                    <div class="tool-name">PERC Rule</div>
+                    <div class="tool-desc">Pulmonary embolism rule-out</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/apache2-score" data-tool>
+                <span class="tool-icon">📊</span>
+                <div class="tool-info">
+                    <div class="tool-name">APACHE II</div>
+                    <div class="tool-desc">ICU mortality risk assessment</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/sofa-score" data-tool>
+                <span class="tool-icon">🫀</span>
+                <div class="tool-info">
+                    <div class="tool-name">SOFA Score</div>
+                    <div class="tool-desc">Sequential organ failure assessment</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Paediatrics -->
+    <div class="category cat-pediatrics" data-cat>
+        <div class="category-header">
+            <div class="category-icon-wrap">👶</div>
+            <span class="category-title">Paediatrics & Neonatology</span>
+            <span class="category-count">9</span>
+        </div>
+        <div class="tools-grid">
+            <a class="tool-card featured" href="/medical-calculators/uip-vaccine" data-tool>
+                <span class="tool-icon">💉</span>
+                <div class="tool-info">
+                    <div class="tool-name">UIP Vaccine Tracker</div>
+                    <div class="tool-desc">India immunisation schedule</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/neonatal-jaundice" data-tool>
+                <span class="tool-icon">🌟</span>
+                <div class="tool-info">
+                    <div class="tool-name">Neonatal Jaundice</div>
+                    <div class="tool-desc">Phototherapy — AAP 2022 / IAP</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/growth-chart" data-tool>
+                <span class="tool-icon">📈</span>
+                <div class="tool-info">
+                    <div class="tool-name">Child Growth Chart</div>
+                    <div class="tool-desc">WHO/IAP weight & height Z-scores</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/paracetamol" data-tool>
+                <span class="tool-icon">🌡️</span>
+                <div class="tool-info">
+                    <div class="tool-name">Paracetamol Dose</div>
+                    <div class="tool-desc">15 mg/kg syrup & tablet dosing</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/apgar-score" data-tool>
+                <span class="tool-icon">👶</span>
+                <div class="tool-info">
+                    <div class="tool-name">APGAR Score</div>
+                    <div class="tool-desc">Newborn assessment + NRP guide</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/ors" data-tool>
+                <span class="tool-icon">💧</span>
+                <div class="tool-info">
+                    <div class="tool-name">ORS Rehydration</div>
+                    <div class="tool-desc">WHO Plan A & B volumes</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/pediatric-asthma" data-tool>
+                <span class="tool-icon">💨</span>
+                <div class="tool-info">
+                    <div class="tool-name">Asthma Action Plan</div>
+                    <div class="tool-desc">Green / Yellow / Red zone guide</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/milestones" data-tool>
+                <span class="tool-icon">🎯</span>
+                <div class="tool-info">
+                    <div class="tool-name">Child Milestones</div>
+                    <div class="tool-desc">Developmental tracker 0–5 yrs</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/holliday-segar" data-tool>
+                <span class="tool-icon">🧪</span>
+                <div class="tool-info">
+                    <div class="tool-name">Maintenance IV Fluids</div>
+                    <div class="tool-desc">Holliday-Segar 4-2-1 rule</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Internal Medicine -->
+    <div class="category cat-medicine" data-cat>
+        <div class="category-header">
+            <div class="category-icon-wrap">🏥</div>
+            <span class="category-title">Internal Medicine & Renal</span>
+            <span class="category-count">9</span>
+        </div>
+        <div class="tools-grid">
+            <a class="tool-card featured" href="/medical-calculators/egfr-calculator" data-tool>
+                <span class="tool-icon">🫘</span>
+                <div class="tool-info">
+                    <div class="tool-name">eGFR (CKD-EPI 2021)</div>
+                    <div class="tool-desc">Race-free kidney function estimate</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/creatinine-clearance" data-tool>
+                <span class="tool-icon">🫘</span>
+                <div class="tool-info">
+                    <div class="tool-name">CrCl — Cockcroft-Gault</div>
+                    <div class="tool-desc">Drug dose adjustment</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/hba1c-converter" data-tool>
+                <span class="tool-icon">🩺</span>
+                <div class="tool-info">
+                    <div class="tool-name">HbA1c Converter</div>
+                    <div class="tool-desc">% ↔ mmol/mol + eAG</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/corrected-calcium" data-tool>
+                <span class="tool-icon">🔬</span>
+                <div class="tool-info">
+                    <div class="tool-name">Corrected Calcium</div>
+                    <div class="tool-desc">Payne formula for hypoalbuminaemia</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/anion-gap" data-tool>
+                <span class="tool-icon">⚗️</span>
+                <div class="tool-info">
+                    <div class="tool-name">Anion Gap</div>
+                    <div class="tool-desc">Albumin-corrected + Delta ratio</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/child-pugh" data-tool>
+                <span class="tool-icon">🫀</span>
+                <div class="tool-info">
+                    <div class="tool-name">Child-Pugh Score</div>
+                    <div class="tool-desc">Liver disease classification</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/meld-score" data-tool>
+                <span class="tool-icon">🧬</span>
+                <div class="tool-info">
+                    <div class="tool-name">MELD Score</div>
+                    <div class="tool-desc">End-stage liver disease scoring</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/sodium-correction" data-tool>
+                <span class="tool-icon">💧</span>
+                <div class="tool-info">
+                    <div class="tool-name">Sodium Correction</div>
+                    <div class="tool-desc">Hypo/hypernatraemia management</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/cha2ds2-vasc" data-tool>
+                <span class="tool-icon">🫀</span>
+                <div class="tool-info">
+                    <div class="tool-name">CHA₂DS₂-VASc</div>
+                    <div class="tool-desc">Stroke risk in atrial fibrillation</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Dosing -->
+    <div class="category cat-dosing" data-cat>
+        <div class="category-header">
+            <div class="category-icon-wrap">💊</div>
+            <span class="category-title">Vitamins & Drug Dosing</span>
+            <span class="category-count">5</span>
+        </div>
+        <div class="tools-grid">
+            <a class="tool-card featured" href="/medical-calculators/doses" data-tool>
+                <span class="tool-icon">💊</span>
+                <div class="tool-info">
+                    <div class="tool-name">Drug Dose Calculator</div>
+                    <div class="tool-desc">Weight-based clinical dosing</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/iv-drip-rate-calculator" data-tool>
+                <span class="tool-icon">💉</span>
+                <div class="tool-info">
+                    <div class="tool-name">IV Drip Rate</div>
+                    <div class="tool-desc">Drops/min & infusion times</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/steroid-equivalence" data-tool>
+                <span class="tool-icon">🔄</span>
+                <div class="tool-info">
+                    <div class="tool-name">Steroid Converter</div>
+                    <div class="tool-desc">Glucocorticoid equivalence</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/vitamin/b1-thiamine-calculator" data-tool>
+                <span class="tool-icon">🥬</span>
+                <div class="tool-info">
+                    <div class="tool-name">Vitamin B1 — Thiamine</div>
+                    <div class="tool-desc">Wernicke / neuropathy protocols</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/vitamin/ascorbic-acid-vit-c" data-tool>
+                <span class="tool-icon">🍋</span>
+                <div class="tool-info">
+                    <div class="tool-name">Vitamin C</div>
+                    <div class="tool-desc">Ascorbic acid dosing</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- OBG & Specialty -->
+    <div class="category cat-obg" data-cat>
+        <div class="category-header">
+            <div class="category-icon-wrap">🤰</div>
+            <span class="category-title">OBG & Specialty</span>
+            <span class="category-count">5</span>
+        </div>
+        <div class="tools-grid">
+            <a class="tool-card" href="/medical-calculators/due-date" data-tool>
+                <span class="tool-icon">🤰</span>
+                <div class="tool-info">
+                    <div class="tool-name">Due Date — EDD</div>
+                    <div class="tool-desc">LMP / IVF / USG pregnancy dates</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/obs-calc" data-tool>
+                <span class="tool-icon">🏥</span>
+                <div class="tool-info">
+                    <div class="tool-name">ObsCalc Suite</div>
+                    <div class="tool-desc">Bishop, APGAR, VBAC risk</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/spirometry" data-tool>
+                <span class="tool-icon">🫁</span>
+                <div class="tool-info">
+                    <div class="tool-name">Spirometry PFT</div>
+                    <div class="tool-desc">Jindal Indian reference equations</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/biomedical-waste" data-tool>
+                <span class="tool-icon">♻️</span>
+                <div class="tool-info">
+                    <div class="tool-name">BMW Guide India</div>
+                    <div class="tool-desc">Waste segregation — BMW Rules 2016</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+            <a class="tool-card" href="/medical-calculators/mentzer-index-calculator" data-tool>
+                <span class="tool-icon">🧬</span>
+                <div class="tool-info">
+                    <div class="tool-name">Mentzer Index</div>
+                    <div class="tool-desc">Thalassaemia vs iron deficiency</div>
+                </div>
+                <span class="tool-arrow">›</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- INFO STRIP -->
+    <div class="info-strip">
+        <div class="info-strip-text">
+            <h2>Built for Indian clinical practice</h2>
+            <p>All tools validated against NCDC, NHM, IAP, WHO, and NICE guidelines. No patient data is transmitted or stored — calculations run entirely in your browser.</p>
+        </div>
+        <div class="info-badges">
+            <div class="badge"><span class="badge-dot"></span>NCDC India</div>
+            <div class="badge"><span class="badge-dot"></span>WHO</div>
+            <div class="badge"><span class="badge-dot"></span>IAP</div>
+            <div class="badge"><span class="badge-dot"></span>NICE UK</div>
+            <div class="badge"><span class="badge-dot"></span>KDIGO 2021</div>
+            <div class="badge"><span class="badge-dot"></span>No data stored</div>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 RxMedCalc · Built by a doctor in India</p>
+    <div style="margin-top:10px">
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/contact">Contact</a>
+        <a href="/search">Search</a>
+    </div>
+</div>
+
+<script src="/assets/shared-nav.js"></script>
+
+<script>
+    // Search
+    const input = document.getElementById('searchInput');
+    const allCards = document.querySelectorAll('[data-tool]');
+    const allCats = document.querySelectorAll('[data-cat]');
+
+    input.addEventListener('input', () => {
+        const q = input.value.toLowerCase().trim();
+
+        if (!q) {
+            allCards.forEach(c => c.classList.remove('hidden'));
+            allCats.forEach(c => c.classList.remove('hidden'));
+            return;
+        }
+
+        allCats.forEach(cat => {
+            const cards = cat.querySelectorAll('[data-tool]');
+            let visible = 0;
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(q)) {
+                    card.classList.remove('hidden');
+                    visible++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+            cat.classList.toggle('hidden', visible === 0);
+        });
+    });
+</script>
+
+</body>
+</html>
