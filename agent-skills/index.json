@@ -1,0 +1,330 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "name": "RxMedCalc",
+  "description": "Free clinical decision-support calculator suite for doctors, nurses, and medical students. 45+ validated tools across emergency medicine, paediatrics, internal medicine, nephrology, cardiology, neurology, and vitamin/drug dosing. Indian guideline context (NCDC, NHM, IAP, FOGSI). All calculations run client-side — no patient data transmitted.",
+  "url": "https://rxmedcalc.com",
+  "skills": [
+    {
+      "name": "curb65",
+      "type": "calculator",
+      "description": "CURB-65 pneumonia severity score. Predicts 30-day mortality and guides hospital admission decisions. BTS/NICE guideline.",
+      "url": "https://rxmedcalc.com/medical-calculators/curb65",
+      "sha256": ""
+    },
+    {
+      "name": "news2",
+      "type": "calculator",
+      "description": "NEWS2 National Early Warning Score 2. Tracks clinical deterioration across all ward patients. RCP UK 2017 guideline.",
+      "url": "https://rxmedcalc.com/medical-calculators/news2",
+      "sha256": ""
+    },
+    {
+      "name": "gcs-calculator",
+      "type": "calculator",
+      "description": "Glasgow Coma Scale calculator for adult and paediatric patients. Eye, verbal, and motor response scoring.",
+      "url": "https://rxmedcalc.com/medical-calculators/gcs-calculator",
+      "sha256": ""
+    },
+    {
+      "name": "burn-calculator",
+      "type": "calculator",
+      "description": "Burn TBSA estimation and Parkland formula fluid resuscitation calculator. ABA guideline.",
+      "url": "https://rxmedcalc.com/medical-calculators/burn-calculator",
+      "sha256": ""
+    },
+    {
+      "name": "wells-score",
+      "type": "calculator",
+      "description": "Wells Score for DVT and Pulmonary Embolism pre-test probability estimation.",
+      "url": "https://rxmedcalc.com/medical-calculators/wells-score",
+      "sha256": ""
+    },
+    {
+      "name": "map-calculator",
+      "type": "calculator",
+      "description": "Mean Arterial Pressure calculator with SSC sepsis targets.",
+      "url": "https://rxmedcalc.com/medical-calculators/map-calculator",
+      "sha256": ""
+    },
+    {
+      "name": "qsofa-score",
+      "type": "calculator",
+      "description": "qSOFA quick Sepsis-related Organ Failure Assessment. Bedside sepsis screening tool. Sepsis-3 (2016) guideline.",
+      "url": "https://rxmedcalc.com/medical-calculators/qsofa-score",
+      "sha256": ""
+    },
+    {
+      "name": "shock-index",
+      "type": "calculator",
+      "description": "Shock Index calculator (HR/SBP ratio) for occult haemodynamic compromise detection.",
+      "url": "https://rxmedcalc.com/medical-calculators/shock-index",
+      "sha256": ""
+    },
+    {
+      "name": "apache2-score",
+      "type": "calculator",
+      "description": "APACHE II ICU severity of illness score with mortality prediction.",
+      "url": "https://rxmedcalc.com/medical-calculators/apache2-score",
+      "sha256": ""
+    },
+    {
+      "name": "perc-rule",
+      "type": "calculator",
+      "description": "PERC Rule for Pulmonary Embolism rule-out in low-risk patients.",
+      "url": "https://rxmedcalc.com/medical-calculators/perc-rule",
+      "sha256": ""
+    },
+    {
+      "name": "rass-score",
+      "type": "calculator",
+      "description": "Richmond Agitation-Sedation Scale for ICU sedation targeting. Includes PADIS 2018 target ranges and sedative drug guide.",
+      "url": "https://rxmedcalc.com/medical-calculators/rass-score",
+      "sha256": ""
+    },
+    {
+      "name": "sirs-criteria",
+      "type": "calculator",
+      "description": "SIRS Criteria calculator for Systemic Inflammatory Response Syndrome. ACCP/SCCM definition.",
+      "url": "https://rxmedcalc.com/medical-calculators/sirs-criteria",
+      "sha256": ""
+    },
+    {
+      "name": "grace-score",
+      "type": "calculator",
+      "description": "GRACE Score for ACS risk stratification. Predicts in-hospital and 6-month mortality after acute coronary syndrome. ESC 2020.",
+      "url": "https://rxmedcalc.com/medical-calculators/grace-score",
+      "sha256": ""
+    },
+    {
+      "name": "rabies-scheduler",
+      "type": "calculator",
+      "description": "Anti-Rabies Vaccine schedule calculator. Generates precise Day 0/3/7/14/28 dosing dates from exposure date. NCDC India/WHO protocol.",
+      "url": "https://rxmedcalc.com/medical-calculators/rabies-scheduler",
+      "sha256": ""
+    },
+    {
+      "name": "arv-dose-calculator",
+      "type": "calculator",
+      "description": "Anti-Rabies Vaccine (ARV) dose calculator for intradermal and intramuscular post-exposure protocols. NCDC India/WHO guideline. Note: ARV here means Anti-Rabies Vaccine, not antiretroviral.",
+      "url": "https://rxmedcalc.com/medical-calculators/arv-dose-calculator",
+      "sha256": ""
+    },
+    {
+      "name": "uip-vaccine",
+      "type": "calculator",
+      "description": "Universal Immunisation Programme vaccine tracker for India. NHM India schedule.",
+      "url": "https://rxmedcalc.com/medical-calculators/uip-vaccine",
+      "sha256": ""
+    },
+    {
+      "name": "neonatal-jaundice",
+      "type": "calculator",
+      "description": "Neonatal jaundice phototherapy and exchange transfusion threshold calculator. AAP 2022 and IAP guidelines.",
+      "url": "https://rxmedcalc.com/medical-calculators/neonatal-jaundice",
+      "sha256": ""
+    },
+    {
+      "name": "growth-chart",
+      "type": "calculator",
+      "description": "Child growth chart with WHO/IAP weight, height, and BMI Z-scores using LMS Box-Cox method.",
+      "url": "https://rxmedcalc.com/medical-calculators/growth-chart",
+      "sha256": ""
+    },
+    {
+      "name": "apgar-score",
+      "type": "calculator",
+      "description": "APGAR score calculator for newborn assessment at 1 and 5 minutes with NRP guidance. AAP/AHA.",
+      "url": "https://rxmedcalc.com/medical-calculators/apgar-score",
+      "sha256": ""
+    },
+    {
+      "name": "ors",
+      "type": "calculator",
+      "description": "ORS rehydration volume calculator. WHO Plan A and Plan B rehydration protocols.",
+      "url": "https://rxmedcalc.com/medical-calculators/ors",
+      "sha256": ""
+    },
+    {
+      "name": "pediatric-asthma",
+      "type": "calculator",
+      "description": "Paediatric asthma action plan with Green/Yellow/Red zone management. GINA and IAP guidelines.",
+      "url": "https://rxmedcalc.com/medical-calculators/pediatric-asthma",
+      "sha256": ""
+    },
+    {
+      "name": "milestones",
+      "type": "calculator",
+      "description": "Child developmental milestones tracker for ages 0–5 years with red flags. CDC and IAP guidelines.",
+      "url": "https://rxmedcalc.com/medical-calculators/milestones",
+      "sha256": ""
+    },
+    {
+      "name": "holliday-segar",
+      "type": "calculator",
+      "description": "Holliday-Segar maintenance fluid calculator using the 4-2-1 rule for paediatric patients.",
+      "url": "https://rxmedcalc.com/medical-calculators/holliday-segar",
+      "sha256": ""
+    },
+    {
+      "name": "pediatric-weight",
+      "type": "calculator",
+      "description": "Paediatric weight estimation calculator for emergency dosing. APLS and Nelson formulas.",
+      "url": "https://rxmedcalc.com/medical-calculators/pediatric-weight",
+      "sha256": ""
+    },
+    {
+      "name": "egfr-calculator",
+      "type": "calculator",
+      "description": "eGFR calculator using CKD-EPI 2021 race-free equation, Cockcroft-Gault, and MDRD. KDIGO 2021.",
+      "url": "https://rxmedcalc.com/medical-calculators/egfr-calculator",
+      "sha256": ""
+    },
+    {
+      "name": "creatinine-clearance",
+      "type": "calculator",
+      "description": "Creatinine clearance calculator using Cockcroft-Gault formula for drug dose adjustment.",
+      "url": "https://rxmedcalc.com/medical-calculators/creatinine-clearance",
+      "sha256": ""
+    },
+    {
+      "name": "hba1c-converter",
+      "type": "calculator",
+      "description": "HbA1c bidirectional unit converter — % to mmol/mol and estimated Average Glucose. IFCC and ADA.",
+      "url": "https://rxmedcalc.com/medical-calculators/hba1c-converter",
+      "sha256": ""
+    },
+    {
+      "name": "corrected-calcium",
+      "type": "calculator",
+      "description": "Corrected calcium calculator for hypoalbuminaemia using Payne formula. NICE guideline.",
+      "url": "https://rxmedcalc.com/medical-calculators/corrected-calcium",
+      "sha256": ""
+    },
+    {
+      "name": "anion-gap",
+      "type": "calculator",
+      "description": "Albumin-corrected anion gap and Delta ratio calculator for acid-base interpretation.",
+      "url": "https://rxmedcalc.com/medical-calculators/anion-gap",
+      "sha256": ""
+    },
+    {
+      "name": "meld-score",
+      "type": "calculator",
+      "description": "MELD score and Child-Pugh calculator for liver disease severity and UNOS transplant scoring.",
+      "url": "https://rxmedcalc.com/medical-calculators/meld-score",
+      "sha256": ""
+    },
+    {
+      "name": "sodium-correction",
+      "type": "calculator",
+      "description": "Sodium correction calculator — free water deficit and safe correction rate using Adrogue-Madias formula.",
+      "url": "https://rxmedcalc.com/medical-calculators/sodium-correction",
+      "sha256": ""
+    },
+    {
+      "name": "fena-calculator",
+      "type": "calculator",
+      "description": "Fractional Excretion of Sodium (FeNa) calculator for pre-renal vs intrinsic renal failure differentiation.",
+      "url": "https://rxmedcalc.com/medical-calculators/fena-calculator",
+      "sha256": ""
+    },
+    {
+      "name": "ktv-dialysis",
+      "type": "calculator",
+      "description": "Kt/V haemodialysis adequacy calculator. KDOQI guideline.",
+      "url": "https://rxmedcalc.com/medical-calculators/ktv-dialysis",
+      "sha256": ""
+    },
+    {
+      "name": "cha2ds2-vasc",
+      "type": "calculator",
+      "description": "CHA₂DS₂-VASc stroke risk score for atrial fibrillation. ESC 2020 and AHA guideline.",
+      "url": "https://rxmedcalc.com/medical-calculators/cha2ds2-vasc",
+      "sha256": ""
+    },
+    {
+      "name": "has-bled",
+      "type": "calculator",
+      "description": "HAS-BLED bleeding risk score for anticoagulation decisions in atrial fibrillation. ESC guideline.",
+      "url": "https://rxmedcalc.com/medical-calculators/has-bled",
+      "sha256": ""
+    },
+    {
+      "name": "ascvd-risk",
+      "type": "calculator",
+      "description": "ASCVD 10-year cardiovascular risk calculator using ACC/AHA Pooled Cohort Equations.",
+      "url": "https://rxmedcalc.com/medical-calculators/ascvd-risk",
+      "sha256": ""
+    },
+    {
+      "name": "nihss-calculator",
+      "type": "calculator",
+      "description": "NIH Stroke Scale (NIHSS) calculator for neurological deficit quantification in stroke. ASA/WSO.",
+      "url": "https://rxmedcalc.com/medical-calculators/nihss-calculator",
+      "sha256": ""
+    },
+    {
+      "name": "abcd2-score",
+      "type": "calculator",
+      "description": "ABCD2 score for short-term stroke risk prediction after TIA.",
+      "url": "https://rxmedcalc.com/medical-calculators/abcd2-score",
+      "sha256": ""
+    },
+    {
+      "name": "hunt-hess",
+      "type": "calculator",
+      "description": "Hunt and Hess grading scale for subarachnoid haemorrhage severity.",
+      "url": "https://rxmedcalc.com/medical-calculators/hunt-hess",
+      "sha256": ""
+    },
+    {
+      "name": "phq9-gad7",
+      "type": "calculator",
+      "description": "PHQ-9 depression and GAD-7 anxiety screening tools with severity interpretation.",
+      "url": "https://rxmedcalc.com/medical-calculators/phq9-gad7",
+      "sha256": ""
+    },
+    {
+      "name": "spirometry",
+      "type": "calculator",
+      "description": "Spirometry PFT calculator using Jindal 1994 Indian reference equations. FEV1, FVC, FEV1/FVC interpretation.",
+      "url": "https://rxmedcalc.com/medical-calculators/spirometry",
+      "sha256": ""
+    },
+    {
+      "name": "mentzer-index-calculator",
+      "type": "calculator",
+      "description": "Mentzer Index calculator for differentiating thalassaemia from iron deficiency anaemia using MCV and RBC count.",
+      "url": "https://rxmedcalc.com/medical-calculators/mentzer-index-calculator",
+      "sha256": ""
+    },
+    {
+      "name": "biomedical-waste",
+      "type": "reference",
+      "description": "Biomedical Waste Management guide for India — colour coding, segregation, and disposal per BMW Rules 2016 (MoEF&CC).",
+      "url": "https://rxmedcalc.com/medical-calculators/biomedical-waste",
+      "sha256": ""
+    },
+    {
+      "name": "doses",
+      "type": "calculator",
+      "description": "Drug dosing calculator — weight-based and age-based dosing for antibiotics, analgesics, emergency drugs, steroids, and GI medications used in Indian clinical practice.",
+      "url": "https://rxmedcalc.com/medical-calculators/doses",
+      "sha256": ""
+    },
+    {
+      "name": "vitamin-d-calculator",
+      "type": "calculator",
+      "description": "Vitamin D (cholecalciferol) dosing calculator. Loading dose (60,000 IU/week × 8 weeks), Stoss therapy (300k–600k IU), maintenance, and paediatric weight-based dosing.",
+      "url": "https://rxmedcalc.com/vitamin/vitamin-d-calculator",
+      "sha256": ""
+    },
+    {
+      "name": "b1-thiamine-calculator",
+      "type": "calculator",
+      "description": "Vitamin B1 thiamine dosing calculator. SIGN protocol for Wernicke encephalopathy (500 mg IV TDS). Includes benfotiamine dosing for neuropathy.",
+      "url": "https://rxmedcalc.com/vitamin/b1-thiamine-calculator",
+      "sha256": ""
+    }
+  ]
+}
