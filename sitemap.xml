@@ -109,6 +109,7 @@
 <url><loc>https://rxmedcalc.com/medical-calculators/map-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/child-pugh</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/psi-calculator</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators/Index</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/wells-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/uip-vaccine</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/qsofa-score</loc><priority>0.64</priority></url>
@@ -121,7 +122,6 @@
 <url><loc>https://rxmedcalc.com/medical-calculators/apgar-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/anion-gap</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/bisap-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/medical-calculators</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/paracetamol</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/abcd2-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/gcs-calculator</loc><priority>0.64</priority></url>
