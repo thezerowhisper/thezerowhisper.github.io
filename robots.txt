@@ -1,3 +1,14 @@
 User-agent: *
 Allow: /llms.txt
 Sitemap: https://rxmedcalc.com/sitemap.xml
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
