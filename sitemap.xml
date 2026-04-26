@@ -44,6 +44,7 @@
 <url><loc>https://rxmedcalc.com/drug-doses/azithromycin</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/clindamycin</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/levothyroxine</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/Index</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/vitamin/b9-folic-acid</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/vitamin/e-tocopherol-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/vitamin</loc><priority>0.64</priority></url>
@@ -121,7 +122,6 @@
 <url><loc>https://rxmedcalc.com/medical-calculators/apgar-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/anion-gap</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/bisap-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators/medical-calculators</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/paracetamol</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/abcd2-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/gcs-calculator</loc><priority>0.64</priority></url>
