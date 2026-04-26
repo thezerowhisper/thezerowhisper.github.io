@@ -1,6 +1,10 @@
-User-agent: *
-Allow: /llms.txt
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
 Sitemap: https://rxmedcalc.com/sitemap.xml
+
+User-agent: *
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
@@ -12,3 +16,12 @@ Allow: /
 
 User-agent: PerplexityBot
 Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
