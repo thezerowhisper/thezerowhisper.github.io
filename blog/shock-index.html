@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shock Index: Detecting Haemodynamic Instability at the Bedside | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the Shock Index — the formula, normal vs abnormal values, what it detects that BP alone misses, Shock Index in trauma, obstetric haemorrhage, sepsis, and the Reverse Shock Index." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#8a3a0a;--brand-dark:#4a1e05;--brand-light:#faf0e8;--accent:#1a5c96;--text:#1c1c1e;--muted:#5a5a6a;--border:#e0c4a8;--bg:#fdf8f3;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#4a1e05 0%,#8a3a0a 55%,#b85010 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:700px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--brand);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    .formula-box{background:var(--brand-dark);color:#faf0e8;border-radius:10px;padding:22px 24px;margin:1.6rem 0;font-family:'Lora',serif;font-size:1.1rem;line-height:1.8;}
+    .formula-box .label{font-family:'DM Sans',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.65;margin-bottom:8px;}
+    /* SI range bar */
+    .si-bar{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;border-radius:10px;overflow:hidden;margin:1.4rem 0;}
+    .si-block{padding:16px 10px;text-align:center;color:#fff;}
+    .si-block:nth-child(1){background:#1a6b3c;}.si-block:nth-child(2){background:#5a8a1a;}
+    .si-block:nth-child(3){background:#8a6a00;}.si-block:nth-child(4){background:#8a1515;}
+    .si-block .si-val{font-family:'Lora',serif;font-size:1.1rem;font-weight:700;}
+    .si-block .si-label{font-size:11.5px;margin-top:4px;opacity:.9;font-weight:600;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    .example{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:22px 24px;margin:1.6rem 0;}
+    .example .ex-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:10px;}
+    .example p{margin-bottom:.55rem;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.tip{border-color:#1e8c4a;background:#edf7f1;}
+    .callout p{margin:0;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.si-bar{grid-template-columns:repeat(2,1fr);}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; Shock Index</header>
+<div class="hero">
+  <div class="tag">🚨 Emergency &amp; Trauma</div>
+  <h1>Shock Index: Detecting Haemodynamic Instability at the Bedside</h1>
+  <p class="subtitle">The Shock Index formula, what it detects that blood pressure alone misses, clinical thresholds, use in trauma, obstetric haemorrhage and sepsis, the Modified Shock Index, and its limitations.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on Standard Emergency Medicine &amp; Trauma References</p>
+</div>
+<div class="wrap">
+
+  <p>Blood pressure alone is a poor early warning system for haemodynamic instability. A young, previously healthy patient can compensate for significant blood loss — losing 1,500 mL of blood (30% of total volume) — and still maintain a normal systolic BP of 110–120 mmHg. By the time the blood pressure finally falls, compensatory mechanisms have already been pushed to their limits and the patient is in decompensated shock.</p>
+  <p>The <strong>Shock Index (SI)</strong> is a simple, single-number bedside tool that captures haemodynamic stress more sensitively than blood pressure alone — by combining heart rate and systolic BP into a ratio that reflects the balance between cardiac output and circulatory demand. It can be calculated in seconds from measurements that are already being taken, and it identifies patients at risk of decompensation before their blood pressure drops.</p>
+
+  <h2>The Shock Index Formula</h2>
+
+  <div class="formula-box">
+    <div class="label">Shock Index</div>
+    <strong>Shock Index = Heart Rate (bpm) ÷ Systolic Blood Pressure (mmHg)</strong><br><br>
+    <span style="font-size:.88rem;opacity:.8;">Example: HR 110 bpm, SBP 100 mmHg → SI = 110 ÷ 100 = <strong>1.1</strong> → Abnormal</span>
+  </div>
+
+  <div class="si-bar">
+    <div class="si-block"><div class="si-val">&lt; 0.6</div><div class="si-label">Low / Normal</div></div>
+    <div class="si-block"><div class="si-val">0.6–0.9</div><div class="si-label">Normal</div></div>
+    <div class="si-block"><div class="si-val">1.0–1.4</div><div class="si-label">Elevated — At Risk</div></div>
+    <div class="si-block"><div class="si-val">≥ 1.5</div><div class="si-label">Severe Shock</div></div>
+  </div>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Shock Index</th><th>Interpretation</th><th>Estimated Blood Loss / Status</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><strong>&lt; 0.6</strong></td><td>Bradycardia relative to BP — low risk</td><td>No significant haemodynamic compromise</td><td>Routine assessment</td></tr>
+      <tr><td><strong>0.6–0.9</strong></td><td>Normal</td><td>Class I haemorrhage (&lt; 750 mL)</td><td>Monitor; address underlying cause</td></tr>
+      <tr><td><strong>1.0–1.4</strong></td><td>Mild shock — compensated</td><td>Class II haemorrhage (750–1,500 mL, 15–30%)</td><td>IV access, fluid resuscitation, urgent investigation</td></tr>
+      <tr><td><strong>≥ 1.5</strong></td><td>Severe shock — decompensating</td><td>Class III–IV haemorrhage (&gt; 1,500 mL, &gt;30%)</td><td>Immediate resuscitation, blood products, surgical haemostasis</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Why SI Outperforms SBP Alone</h2>
+  <p>Consider two patients with identical systolic BP of 100 mmHg:</p>
+
+  <div class="example">
+    <div class="ex-label">📋 Clinical Comparison</div>
+    <p><strong>Patient A:</strong> HR 70, SBP 100 → SI = <strong>0.7</strong> → Normal. This patient is bradycardic relative to their BP — possibly on beta-blockers, or simply fit and well. Low concern.</p>
+    <p><strong>Patient B:</strong> HR 130, SBP 100 → SI = <strong>1.3</strong> → Elevated. This patient has significant tachycardia compensating for reduced cardiac output. The normal-appearing SBP masks haemodynamic stress. High concern — resuscitate immediately.</p>
+    <p style="font-size:14.5px;color:var(--muted);margin-top:8px;"><em>Identical SBP. Completely different haemodynamic status. Shock Index distinguishes them instantly.</em></p>
+  </div>
+
+  <p>The physiological reason: as circulating volume falls, the heart rate rises (sympathetic compensation) before blood pressure falls. The rising HR/SBP ratio therefore detects the compensatory phase of shock before decompensation — giving a critical window for intervention.</p>
+
+  <h2>Shock Index in Trauma</h2>
+  <p>Shock Index is particularly well-validated in trauma settings. In major trauma:</p>
+  <ul>
+    <li><strong>SI ≥ 1.0 on arrival</strong> is associated with need for massive transfusion protocol (MTP) activation and predicts in-hospital mortality</li>
+    <li><strong>SI ≥ 1.4</strong> in penetrating trauma or blunt abdominal trauma is a strong indicator for urgent surgical intervention</li>
+    <li>SI is used in many trauma triage protocols as a simple field tool — paramedics and first responders can calculate it with a pulse oximeter and BP cuff</li>
+    <li>In the ATLS classification, SI ≥ 1.0 broadly correlates with Class II–III haemorrhage requiring active resuscitation</li>
+  </ul>
+
+  <h3>Modified Shock Index (MSI)</h3>
+  <p>The <strong>Modified Shock Index</strong> uses mean arterial pressure (MAP) instead of systolic BP in the denominator, which some studies suggest improves sensitivity:</p>
+  <p style="background:var(--brand-light);padding:14px 18px;border-radius:8px;font-family:'Lora',serif;font-size:1rem;"><strong>MSI = Heart Rate ÷ MAP</strong> (abnormal ≥ 1.3)</p>
+  <p>MSI is less widely used than standard SI but performs better in certain populations (elderly, hypertensive patients) where a high "normal" SBP may mask haemodynamic compromise.</p>
+
+  <h2>Shock Index in Obstetric Haemorrhage</h2>
+  <p>Postpartum haemorrhage (PPH) is one of the leading causes of maternal death in India — and it is notoriously underestimated by visual blood loss assessment and blood pressure monitoring. The physiological changes of pregnancy (higher baseline HR, expanded blood volume, lower vascular resistance) alter normal vital sign ranges.</p>
+  <p>Research has established specific Shock Index thresholds for obstetric patients:</p>
+  <ul>
+    <li><strong>SI &lt; 0.9:</strong> Normal in the obstetric context (pregnant women normally have slightly higher resting HR)</li>
+    <li><strong>SI 0.9–1.69:</strong> Moderate haemorrhage — increased concern, more aggressive monitoring</li>
+    <li><strong>SI ≥ 1.7:</strong> Severe obstetric haemorrhage — strongly predicts need for blood transfusion, ICU admission, and maternal morbidity</li>
+  </ul>
+  <p>The <strong>NASG (Non-Pneumatic Anti-Shock Garment)</strong> protocol used in many Indian obstetric emergencies incorporates Shock Index into activation criteria. A SI ≥ 1.0 in a postpartum patient with bleeding should trigger immediate escalation.</p>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Postpartum haemorrhage warning:</strong> An SI ≥ 1.0 in a postpartum woman warrants urgent reassessment and escalation even if the measured blood loss appears less than 500 mL. Visual estimation of blood loss is consistently unreliable — SI provides an objective measure of haemodynamic impact.</p>
+  </div>
+
+  <h2>Shock Index in Sepsis</h2>
+  <p>In sepsis, SI can identify patients with haemodynamic compromise who may not yet meet the traditional definition of "septic shock" (SBP &lt; 90 mmHg or vasopressor requirement). Specifically:</p>
+  <ul>
+    <li>SI ≥ 1.0 in an infected patient correlates with higher ICU admission rates and 30-day mortality even when SBP is still above 90 mmHg</li>
+    <li>A rising SI trend over the first hour of presentation (even while SBP remains above 90) identifies early haemodynamic deterioration</li>
+    <li>SI ≥ 0.9 combined with suspected infection has been proposed as a more sensitive early sepsis trigger than qSOFA alone</li>
+  </ul>
+
+  <h2>Shock Index in GI Bleeding</h2>
+  <p>SI has been validated in upper GI bleeding (UGIB) as a predictor of severity and need for early intervention:</p>
+  <ul>
+    <li><strong>SI ≥ 1.0 at presentation</strong> in UGIB predicts need for blood transfusion, endoscopic haemostasis, or surgery</li>
+    <li>SI is a component of some UGIB scoring systems as a surrogate for haemodynamic instability</li>
+    <li>A patient with haematemesis and SI ≥ 1.0 should be considered for urgent endoscopy within 24 hours rather than elective next-morning scope</li>
+  </ul>
+
+  <h2>Limitations of the Shock Index</h2>
+  <ul>
+    <li><strong>Medications:</strong> Beta-blockers blunt tachycardia — a patient on atenolol cannot mount a compensatory heart rate rise. SI will underestimate shock severity. Always consider drug history.</li>
+    <li><strong>Cardiac pacemakers:</strong> Fixed-rate pacing prevents rate response — SI unreliable.</li>
+    <li><strong>Baseline hypertension:</strong> A patient with chronic hypertension (baseline SBP 160) and current SBP 120 with HR 90 has an SI of 0.75 — appearing "normal," but has actually dropped 40 mmHg from their baseline.</li>
+    <li><strong>Pregnancy:</strong> Uses modified thresholds (SI ≥ 0.9 rather than 1.0) due to physiological changes of pregnancy.</li>
+    <li><strong>Neurogenic shock:</strong> Spinal cord injury causes bradycardia with hypotension — the opposite of the expected tachycardic response. SI will underestimate severity.</li>
+    <li>SI is a <strong>screening tool</strong>, not a comprehensive haemodynamic assessment. Always combine with lactate, capillary refill, urine output, and clinical examination.</li>
+  </ul>
+
+  <div class="callout blue" style="border-color:var(--accent);background:#e8f2fb;">
+    <p>🚨 Use the <a href="https://rxmedcalc.com/medical-calculators/shock-index" target="_blank"><strong>RxMedCalc Shock Index Calculator</strong></a> — instant SI and Modified SI calculation with haemorrhage class and resuscitation guidance.</p>
+  </div>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Shock Index = <strong>HR ÷ SBP</strong> — calculated in seconds from routine vital signs</li>
+      <li>Normal range: <strong>0.6–0.9</strong>. SI ≥ 1.0 = haemodynamically at-risk; ≥ 1.5 = severe shock</li>
+      <li>SI detects compensated shock <strong>before blood pressure falls</strong> — the critical advantage over SBP alone</li>
+      <li>In trauma: SI ≥ 1.0 predicts need for <strong>massive transfusion</strong> and surgical intervention</li>
+      <li>In obstetric haemorrhage: SI ≥ <strong>1.7</strong> predicts severe PPH and transfusion need (lower threshold than non-pregnant)</li>
+      <li>In GI bleeding: SI ≥ 1.0 predicts <strong>need for urgent endoscopy</strong> and haemostatic intervention</li>
+      <li>SI is unreliable in patients on <strong>beta-blockers, pacemakers</strong>, or with neurogenic shock</li>
+      <li>Always combine SI with <strong>lactate, capillary refill, and urine output</strong> — never use in isolation</li>
+    </ul>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Allgöwer M, Burri C. <em>Schockindex.</em> Dtsch Med Wochenschr. 1967;92(43):1947-1950.</li>
+      <li>Cannon CM et al. <em>The GENESIS Project (GENeralized Early Sepsis Intervention Strategies): a multicenter quality improvement collaborative.</em> J Intensive Care Med. 2013.</li>
+      <li>El-Menyar A et al. <em>Shock index as a predictor of massive transfusion and mortality in trauma patients.</em> J Trauma Acute Care Surg. 2018.</li>
+      <li>Nathan HL et al. <em>Shock index: An effective predictor of outcome in postpartum haemorrhage?</em> BJOG. 2015;122(2):268-275.</li>
+      <li>American College of Surgeons. <em>ATLS Advanced Trauma Life Support — 10th Edition.</em> 2018.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes. Shock Index is a screening tool to supplement — not replace — full clinical assessment by qualified medical personnel. Haemodynamic instability requires immediate expert evaluation and treatment.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
