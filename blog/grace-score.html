@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRACE Score: ACS Risk Stratification & Heart Attack Management | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the GRACE score for acute coronary syndrome — how to calculate in-hospital and 6-month mortality risk, NSTEMI vs STEMI management, invasive vs conservative strategy, and antiplatelet therapy." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#8a1a1a;--brand-dark:#4a0d0d;--brand-light:#faeaea;--accent:#1a5c96;--text:#1c1c1e;--muted:#5a5a6a;--border:#e5c4c4;--bg:#fdf5f5;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#4a0d0d 0%,#8a1a1a 55%,#b82828 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:700px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--brand);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    .risk-blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:10px;overflow:hidden;margin:1.4rem 0;}
+    .rb{padding:20px 14px;text-align:center;color:#fff;}
+    .rb.low{background:#1a6b3c;}.rb.mod{background:#8a6a00;}.rb.high{background:#8a1a1a;}
+    .rb .rb-score{font-family:'Lora',serif;font-size:1.4rem;font-weight:700;}
+    .rb .rb-label{font-size:12px;font-weight:700;letter-spacing:.05em;margin-top:4px;opacity:.9;}
+    .rb .rb-mort{font-size:13px;margin-top:6px;opacity:.88;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.tip{border-color:#1e8c4a;background:#edf7f1;}
+    .callout.blue{border-color:#1a5c96;background:#e8f2fb;}
+    .callout p{margin:0;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.risk-blocks{grid-template-columns:1fr;}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; GRACE Score</header>
+<div class="hero">
+  <div class="tag">❤️ Cardiology &amp; ACS</div>
+  <h1>GRACE Score: Acute Coronary Syndrome Risk Stratification &amp; Management</h1>
+  <p class="subtitle">How to calculate GRACE in-hospital and 6-month mortality risk, what each risk category means for management, invasive vs conservative strategy timing, antiplatelet therapy, and ACS in India.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on ESC 2023 ACS Guidelines &amp; GRACE Registry</p>
+</div>
+<div class="wrap">
+
+  <p>A patient arrives in your emergency department with chest pain. The ECG shows no ST elevation. Troponin is being sent. Is this person at low risk — muscle pain or oesophageal spasm — or are they in the middle of a heart attack that will kill them tonight? And if it is a heart attack, do they need the cath lab in the next 2 hours, 24 hours, or can they be stabilised medically?</p>
+  <p>The <strong>GRACE score</strong> (Global Registry of Acute Coronary Events) is the tool that answers these questions. Derived from over 100,000 patients across 14 countries, it uses eight clinical variables to precisely predict in-hospital and 6-month mortality in patients with acute coronary syndrome (ACS) — and directly drives the most consequential treatment decision in cardiology: when to take the patient to the catheterisation laboratory.</p>
+
+  <h2>Understanding Acute Coronary Syndrome</h2>
+  <p>Acute coronary syndrome is an umbrella term for three related conditions caused by reduced blood flow to the heart, usually from coronary artery plaque rupture and thrombus formation:</p>
+  <ul>
+    <li><strong>STEMI (ST-Elevation Myocardial Infarction):</strong> Complete coronary artery occlusion. ST elevation on ECG. Requires immediate reperfusion — primary PCI within 90 minutes (door-to-balloon) or thrombolysis within 30 minutes if PCI unavailable. GRACE score is less relevant here — all STEMI patients need immediate intervention.</li>
+    <li><strong>NSTEMI (Non-ST-Elevation MI):</strong> Partial occlusion. Troponin elevated without ST elevation. This is where GRACE score drives management — timing of angiography is risk-stratified.</li>
+    <li><strong>Unstable Angina (UA):</strong> Chest pain at rest or minimal exertion. Troponin normal. The boundary between UA and NSTEMI has blurred with high-sensitivity troponin assays.</li>
+  </ul>
+  <p>Together, NSTEMI and UA are referred to as <strong>NSTE-ACS</strong> — the primary domain of the GRACE score.</p>
+
+  <h2>The GRACE Score Variables</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Variable</th><th>What It Captures</th><th>Clinical Note</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Age</strong></td><td>Each decade significantly increases mortality</td><td>Strongest single predictor — age &gt; 75 carries very high risk</td></tr>
+      <tr><td><strong>Heart Rate</strong></td><td>Tachycardia reflects haemodynamic compromise</td><td>HR &gt; 100 bpm at presentation adds significant points</td></tr>
+      <tr><td><strong>Systolic BP</strong></td><td>Hypotension = cardiogenic shock risk</td><td>SBP &lt; 100 mmHg adds very high points; low BP = high risk</td></tr>
+      <tr><td><strong>Creatinine</strong></td><td>Renal impairment worsens ACS outcomes dramatically</td><td>Even mild elevation (1.2–1.5 mg/dL) adds significant risk</td></tr>
+      <tr><td><strong>Killip Class</strong></td><td>Degree of heart failure at presentation</td><td>Class I = no CHF; Class II = rales; Class III = pulmonary oedema; Class IV = cardiogenic shock</td></tr>
+      <tr><td><strong>Cardiac Arrest at Admission</strong></td><td>Resuscitated cardiac arrest = very high risk</td><td>Binary yes/no — adds large number of points if yes</td></tr>
+      <tr><td><strong>ST-Segment Deviation</strong></td><td>ECG changes reflecting ischaemia severity</td><td>ST depression or transient elevation in NSTE-ACS adds points</td></tr>
+      <tr><td><strong>Elevated Cardiac Biomarkers</strong></td><td>Positive troponin = myocardial necrosis confirmed</td><td>Positive troponin significantly increases GRACE score</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>GRACE Score Risk Categories — In-Hospital Mortality</h2>
+
+  <div class="risk-blocks">
+    <div class="rb low"><div class="rb-score">≤ 108</div><div class="rb-label">LOW RISK</div><div class="rb-mort">In-hospital mortality &lt; 1%<br>6-month mortality &lt; 3%</div></div>
+    <div class="rb mod"><div class="rb-score">109 – 140</div><div class="rb-label">INTERMEDIATE RISK</div><div class="rb-mort">In-hospital mortality 1–3%<br>6-month mortality 3–8%</div></div>
+    <div class="rb high"><div class="rb-score">&gt; 140</div><div class="rb-label">HIGH RISK</div><div class="rb-mort">In-hospital mortality &gt; 3%<br>6-month mortality &gt; 8%</div></div>
+  </div>
+
+  <div class="callout blue">
+    <p>❤️ Use the <a href="https://rxmedcalc.com/medical-calculators/grace-score" target="_blank"><strong>RxMedCalc GRACE Score Calculator</strong></a> — calculates in-hospital and 6-month mortality with automatic risk stratification and ESC 2023 invasive strategy timing guidance.</p>
+  </div>
+
+  <h2>From GRACE Score to Management — Invasive Strategy Timing</h2>
+  <p>The single most important application of the GRACE score in NSTE-ACS is determining <em>when</em> to perform coronary angiography (with a view to PCI or CABG):</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Condition / Risk</th><th>Strategy</th><th>Timing</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Very high risk</strong> — any of: haemodynamic instability, cardiogenic shock, refractory chest pain, acute heart failure, life-threatening arrhythmias, mechanical complications</td><td>Immediate invasive</td><td><strong>Within 2 hours</strong> — regardless of GRACE score</td></tr>
+      <tr><td><strong>High risk</strong> — GRACE &gt; 140, dynamic ECG changes, elevated troponin, or GRACE &lt; 140 but HEART score high</td><td>Early invasive</td><td><strong>Within 24 hours</strong></td></tr>
+      <tr><td><strong>Intermediate risk</strong> — GRACE 109–140, diabetes, renal impairment, reduced EF &lt; 40%, prior PCI/CABG, recurrent symptoms</td><td>Invasive within 72 hours</td><td><strong>24–72 hours</strong></td></tr>
+      <tr><td><strong>Low risk</strong> — GRACE ≤ 108, no high-risk features, non-obstructive CAD or normal angiogram possible</td><td>Conservative / selective invasive</td><td>Non-invasive testing first (stress echo, CT coronary angiography) before angiography decision</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Very high risk features override GRACE score.</strong> A patient with cardiogenic shock or refractory ischaemia goes to the cath lab immediately — regardless of what the GRACE score calculates. GRACE guides timing; it does not replace clinical urgency assessment.</p>
+  </div>
+
+  <h2>Killip Classification — The Heart Failure Component</h2>
+  <p>The Killip class is one of the variables in the GRACE score and also stands alone as an important bedside assessment of cardiac failure severity in ACS:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Killip Class</th><th>Clinical Features</th><th>In-Hospital Mortality (Historical)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Class I</strong></td><td>No evidence of heart failure — no rales, no S3</td><td>~6%</td></tr>
+      <tr><td><strong>Class II</strong></td><td>Mild-moderate heart failure — basal rales &lt; 50% of lung fields, S3 gallop, elevated JVP</td><td>~17%</td></tr>
+      <tr><td><strong>Class III</strong></td><td>Severe heart failure — pulmonary oedema, rales &gt; 50% of lung fields</td><td>~38%</td></tr>
+      <tr><td><strong>Class IV</strong></td><td>Cardiogenic shock — hypotension + end-organ hypoperfusion (cold extremities, oliguria, altered consciousness)</td><td>&gt; 60%</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Antithrombotic Therapy in NSTE-ACS</h2>
+
+  <h3>Dual Antiplatelet Therapy (DAPT)</h3>
+  <p>All NSTE-ACS patients without contraindication should receive <strong>aspirin + a P2Y12 inhibitor</strong> as soon as the diagnosis is established:</p>
+  <ul>
+    <li><strong>Aspirin:</strong> 300 mg loading dose (chewed for fastest absorption), then 75–100 mg daily indefinitely</li>
+    <li><strong>Ticagrelor (preferred):</strong> 180 mg loading, then 90 mg twice daily × 12 months. Faster onset, more reliable platelet inhibition than clopidogrel.</li>
+    <li><strong>Clopidogrel:</strong> 300–600 mg loading, then 75 mg daily × 12 months. Used when ticagrelor is unavailable, too expensive, or contraindicated. Widely used in India due to cost.</li>
+    <li><strong>Prasugrel:</strong> 60 mg loading, then 10 mg daily. More potent than clopidogrel. Avoid in patients &gt; 75 years, weight &lt; 60 kg, or history of TIA/stroke.</li>
+  </ul>
+
+  <h3>Anticoagulation</h3>
+  <p>All NSTE-ACS patients should also receive anticoagulation in addition to antiplatelet therapy:</p>
+  <ul>
+    <li><strong>Fondaparinux 2.5 mg SC daily</strong> — preferred for most NSTE-ACS patients not going immediately to angiography (lower bleeding risk than LMWH in OASIS-5 trial)</li>
+    <li><strong>Enoxaparin (LMWH) 1 mg/kg SC BD</strong> — alternative, widely used in India; dose-adjust for eGFR &lt; 30 mL/min</li>
+    <li><strong>Unfractionated heparin (UFH)</strong> — preferred when immediate PCI is planned (reversible with protamine, can be given intra-arterially)</li>
+  </ul>
+
+  <h2>High-Sensitivity Troponin — Changing ACS Diagnosis</h2>
+  <p>The introduction of <strong>high-sensitivity troponin (hs-Tn)</strong> assays has transformed NSTE-ACS diagnosis. The ESC 0/1-hour or 0/2-hour algorithm using hs-Tn allows rapid rule-in or rule-out of NSTEMI:</p>
+  <ul>
+    <li><strong>0h hs-Tn very low</strong> AND low clinical probability → rule out NSTEMI within 1 hour</li>
+    <li><strong>0h hs-Tn high</strong> OR significant rise at 1/2 hours → rule in NSTEMI → GRACE score for management</li>
+    <li><strong>Intermediate zone</strong> → 3-hour or serial testing + GRACE score</li>
+  </ul>
+  <p>In India, hs-Tn assays are increasingly available in tertiary and secondary care centres. Where conventional troponin is still used, 6-hourly serial testing remains the standard.</p>
+
+  <h2>ACS in India — Key Differences</h2>
+  <p>ACS in India has several important epidemiological and clinical features that differ from Western populations:</p>
+  <ul>
+    <li><strong>Younger age at presentation:</strong> Mean age of first MI in Indian men is approximately 53 years — nearly a decade earlier than in Western cohorts. A significant proportion of ACS patients are under 40.</li>
+    <li><strong>Higher risk despite lower BMI:</strong> Indians develop CAD at lower body weight due to visceral adiposity, insulin resistance, and high Lp(a) levels.</li>
+    <li><strong>Predominantly STEMI:</strong> STEMI is more common than NSTEMI in India — partly because many patients present late (after the troponin has peaked and ECG ST elevation has evolved), and partly due to differences in coronary plaque morphology.</li>
+    <li><strong>Thrombolysis remains common:</strong> Primary PCI is the gold standard but is only available at major cardiac centres. In India, a large proportion of STEMI patients still receive thrombolysis (streptokinase or tenecteplase) due to cath lab unavailability or delayed presentation.</li>
+    <li><strong>Diabetes prevalence:</strong> India has one of the world's highest T2DM burdens — diabetic patients have worse ACS outcomes, more multivessel disease, and less typical symptoms (more silent MI).</li>
+  </ul>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>GRACE uses <strong>8 variables</strong>: age, HR, SBP, creatinine, Killip class, cardiac arrest, ST deviation, troponin</li>
+      <li>GRACE ≤ 108 = low risk; 109–140 = intermediate; <strong>&gt; 140 = high risk</strong></li>
+      <li>High risk → angiography <strong>within 24 hours</strong>; very high risk features → <strong>within 2 hours</strong></li>
+      <li>All NSTE-ACS: <strong>aspirin + ticagrelor (or clopidogrel) + anticoagulation</strong> immediately</li>
+      <li><strong>Killip Class IV (cardiogenic shock)</strong> = immediate catheterisation regardless of score</li>
+      <li>hs-Tn 0/1-hour algorithm enables rapid rule-in or rule-out of NSTEMI</li>
+      <li>Indian ACS: <strong>younger, leaner, more diabetic, more STEMI</strong> than Western populations — GRACE still validated</li>
+      <li>GRACE is for NSTE-ACS — STEMI always requires <strong>immediate reperfusion</strong></li>
+    </ul>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Fox KA et al. <em>Prediction of risk of death and myocardial infarction in the six months after presentation with acute coronary syndrome: prospective multinational observational study (GRACE).</em> BMJ. 2006;333(7578):1091.</li>
+      <li>Collet JP et al. <em>2020 ESC Guidelines for the management of acute coronary syndromes in patients presenting without persistent ST-segment elevation.</em> Eur Heart J. 2021;42(14):1289-1367.</li>
+      <li>Reyes AT et al. <em>ESC 2023 Update on ACS guidelines.</em> Eur Heart J. 2023.</li>
+      <li>Pais P et al. <em>Risk factors for acute myocardial infarction in Indians — a case-control study.</em> Lancet. 1996;348(9024):358-363.</li>
+      <li>Cardiology Society of India. <em>CSI Consensus Guidelines on Management of ACS in India.</em> Indian Heart J. 2020.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes based on ESC 2023 and CSI guidelines. ACS management decisions — including timing of angiography and antiplatelet/anticoagulant choice — must be made by a qualified cardiologist with full clinical assessment.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
