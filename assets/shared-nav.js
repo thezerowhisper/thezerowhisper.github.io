@@ -13,15 +13,16 @@
     }
 
     /* ══ 2. INJECT ADSENSE LOADER ══════════════════════════════ */
-    (function injectAdSense() {
-        const PUBLISHER_ID = 'ca-pub-9687081664589626';
-        if (document.querySelector('script[src*="adsbygoogle"]')) return;
-        const s = document.createElement('script');
-        s.async = true;
-        s.crossOrigin = 'anonymous';
-        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + PUBLISHER_ID;
-        document.head.appendChild(s);
-    })();
+    // DISABLED — uncomment to re-enable AdSense
+    // (function injectAdSense() {
+    //     const PUBLISHER_ID = 'ca-pub-9687081664589626';
+    //     if (document.querySelector('script[src*="adsbygoogle"]')) return;
+    //     const s = document.createElement('script');
+    //     s.async = true;
+    //     s.crossOrigin = 'anonymous';
+    //     s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + PUBLISHER_ID;
+    //     document.head.appendChild(s);
+    // })();
 
     /* ══ 3. INJECT NAV + FOOTER CSS ═══════════════════════════ */
     (function injectNavCSS() {
