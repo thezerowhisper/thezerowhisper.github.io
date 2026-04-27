@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qSOFA Score: Rapid Sepsis Screening Outside the ICU | RxMedCalc</title>
+  <meta name="description" content="A complete guide to the qSOFA score — the 3 criteria, what score ≥ 2 means, how qSOFA relates to Sepsis-3 and SOFA, its accuracy vs SIRS, when to escalate, and using qSOFA in Indian clinical settings." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#3a1a5c;--brand-dark:#1e0d30;--brand-light:#f0ebfb;--accent:#c0392b;--teal:#0e7c74;--text:#1c1c1e;--muted:#5a5a6a;--border:#d5cae8;--bg:#f8f5fd;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#1e0d30 0%,#3a1a5c 55%,#5c2e8a 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:700px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--brand);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--accent);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    /* 3 criteria cards */
+    .qsofa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:1.4rem 0;}
+    .qsofa-card{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:8px;padding:18px 16px;text-align:center;}
+    .qsofa-card .letter{font-family:'Lora',serif;font-size:2rem;font-weight:700;color:var(--brand);line-height:1;}
+    .qsofa-card .pts{font-size:12px;font-weight:600;color:var(--muted);margin:4px 0 8px;}
+    .qsofa-card h4{font-size:14.5px;font-weight:600;margin-bottom:4px;}
+    .qsofa-card p{font-size:13px;color:var(--muted);margin:0;line-height:1.55;}
+    /* result blocks */
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:10px;overflow:hidden;margin:1.4rem 0;}
+    .result-block{padding:22px 20px;color:#fff;}
+    .result-block.low{background:#1a6b3c;}
+    .result-block.high{background:#3a1a5c;}
+    .result-block .rb-score{font-family:'Lora',serif;font-size:2rem;font-weight:700;}
+    .result-block .rb-label{font-size:12px;font-weight:700;letter-spacing:.05em;margin-top:4px;opacity:.9;}
+    .result-block .rb-action{font-size:14px;margin-top:10px;opacity:.9;line-height:1.6;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.tip{border-color:#0e7c74;background:#e6f6f5;}
+    .callout p{margin:0;}
+    /* sepsis chain */
+    .sepsis-chain{display:flex;align-items:center;gap:0;margin:1.4rem 0;flex-wrap:wrap;}
+    .chain-step{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 16px;flex:1;min-width:150px;text-align:center;}
+    .chain-step h4{font-size:13.5px;font-weight:700;color:var(--brand);margin-bottom:4px;}
+    .chain-step p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.5;}
+    .chain-arrow{font-size:1.4rem;color:var(--muted);padding:0 8px;flex-shrink:0;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.qsofa-grid{grid-template-columns:1fr;}.result-grid{grid-template-columns:1fr;}.sepsis-chain{flex-direction:column;}.chain-arrow{transform:rotate(90deg);}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; qSOFA Score</header>
+<div class="hero">
+  <div class="tag">🏥 Sepsis &amp; Critical Care</div>
+  <h1>qSOFA Score: Rapid Sepsis Screening Outside the ICU</h1>
+  <p class="subtitle">The 3 qSOFA criteria explained, what score ≥ 2 means, how it relates to full SOFA and Sepsis-3, its accuracy vs SIRS, when to escalate, and using qSOFA in Indian ward settings.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on Sepsis-3 Consensus (2016) &amp; ISCCM Guidelines</p>
+</div>
+<div class="wrap">
+
+  <p>Sepsis kills. It kills quickly. And it often starts — in an emergency department, on a general medical ward, in a rural clinic — without the full battery of laboratory tests that are needed to calculate the SOFA score. A patient with pneumonia, a urinary tract infection, or an infected wound can go from "unwell" to critically ill in hours, and the window for effective intervention is narrow.</p>
+  <p>The <strong>quick SOFA (qSOFA)</strong> was designed for exactly this situation. Three clinical observations — respiratory rate, blood pressure, and mental status — that can be assessed at the bedside in under 60 seconds, without any blood tests, without any laboratory equipment. A score of ≥ 2 in a patient with suspected infection is a call to action: assess urgently, check lactate, send cultures, and start antibiotics.</p>
+
+  <h2>The Three qSOFA Criteria</h2>
+  <p>Each criterion scores <strong>1 point</strong>. Maximum score: <strong>3</strong>.</p>
+
+  <div class="qsofa-grid">
+    <div class="qsofa-card">
+      <div class="letter">RR</div>
+      <div class="pts">1 point</div>
+      <h4>Respiratory Rate ≥ 22/min</h4>
+      <p>Tachypnoea at rest reflects respiratory compensation or pulmonary involvement in sepsis. Count for a full 60 seconds — do not estimate.</p>
+    </div>
+    <div class="qsofa-card">
+      <div class="letter">BP</div>
+      <div class="pts">1 point</div>
+      <h4>Systolic BP ≤ 100 mmHg</h4>
+      <p>Hypotension reflects haemodynamic compromise. Any single reading of SBP ≤ 100 scores — does not need to be sustained.</p>
+    </div>
+    <div class="qsofa-card">
+      <div class="letter">MS</div>
+      <div class="pts">1 point</div>
+      <h4>Altered Mental Status</h4>
+      <p>GCS &lt; 15 — any new confusion, disorientation, or reduced consciousness. This is the most specific criterion for sepsis-associated encephalopathy.</p>
+    </div>
+  </div>
+
+  <h2>Score Interpretation and Action</h2>
+
+  <div class="result-grid">
+    <div class="result-block low">
+      <div class="rb-score">0 – 1</div>
+      <div class="rb-label">LOW RISK</div>
+      <div class="rb-action">Sepsis less likely. Continue to monitor. Reassess if clinical condition changes. Treat the underlying infection if present.</div>
+    </div>
+    <div class="result-block high">
+      <div class="rb-score">≥ 2</div>
+      <div class="rb-label">HIGH RISK — ACT NOW</div>
+      <div class="rb-action">Suspected sepsis. Immediate senior review. Measure lactate. Blood cultures × 2. IV antibiotics within 1 hour. IV access and fluid assessment.</div>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>qSOFA &lt; 2 does NOT rule out sepsis.</strong> qSOFA has low sensitivity (~50–60%). A patient scoring 0–1 with clinical signs of severe infection still requires full assessment. Use qSOFA to escalate — not to reassure.</p>
+  </div>
+
+  <h2>Where qSOFA Fits in the Sepsis-3 Framework</h2>
+  <p>The Sepsis-3 consensus (Singer et al., JAMA 2016) introduced both qSOFA and the full SOFA score as tools for identifying sepsis. They serve different purposes and different clinical environments:</p>
+
+  <div class="sepsis-chain">
+    <div class="chain-step">
+      <h4>🏥 Outside ICU (ED/Ward)</h4>
+      <p>Use <strong>qSOFA</strong><br>No labs needed<br>60-second assessment</p>
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-step">
+      <h4>qSOFA ≥ 2</h4>
+      <p>Suspected sepsis<br>Escalate immediately<br>Get labs</p>
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-step">
+      <h4>🔬 With Labs Available</h4>
+      <p>Calculate full <strong>SOFA</strong><br>Acute rise ≥ 2 = sepsis confirmed</p>
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-step">
+      <h4>🏥 ICU Admission</h4>
+      <p>Serial SOFA every 24–48h<br>Track delta-SOFA for prognosis</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>🏥 Also see the companion article: <a href="/blog/sofa-score.html"><strong>SOFA Score: Organ Failure, Sepsis-3 &amp; ICU Mortality →</strong></a> — full 6-organ scoring for confirmed sepsis patients in ICU.</p>
+  </div>
+
+  <h2>qSOFA vs SIRS — Why the Change Was Made</h2>
+  <p>Before Sepsis-3, sepsis was identified using the <strong>SIRS (Systemic Inflammatory Response Syndrome)</strong> criteria — temperature &gt; 38°C or &lt; 36°C, HR &gt; 90, RR &gt; 20, WBC &lt; 4 or &gt; 12 × 10³/µL. Sepsis was defined as SIRS + suspected infection.</p>
+  <p>The problem: SIRS criteria are too sensitive and too non-specific. A patient post-exercise, a woman in early labour, a patient with a simple viral URTI — all can meet SIRS criteria. Over 90% of ICU patients at any given time meet SIRS, making it meaningless as a sepsis discriminator.</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Feature</th><th>SIRS</th><th>qSOFA</th><th>Full SOFA</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Criteria</strong></td><td>Temperature, HR, RR, WBC</td><td>RR, SBP, mental status</td><td>6 organ systems, lab results</td></tr>
+      <tr><td><strong>Labs needed?</strong></td><td>Yes (WBC)</td><td>No</td><td>Yes</td></tr>
+      <tr><td><strong>Setting</strong></td><td>Any</td><td>Outside ICU</td><td>ICU / with labs</td></tr>
+      <tr><td><strong>Sensitivity for sepsis</strong></td><td>Very high (~97%) — too non-specific</td><td>Moderate (~50–60%)</td><td>High (~70–74%)</td></tr>
+      <tr><td><strong>Specificity for sepsis</strong></td><td>Very low (~10–15%) — meaningless</td><td>High (~90%)</td><td>High (~85%)</td></tr>
+      <tr><td><strong>Current guideline status</strong></td><td>No longer recommended for sepsis definition</td><td>Screening tool (Sepsis-3)</td><td>Diagnostic criterion (Sepsis-3)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>The Hour-1 Sepsis Bundle — What to Do When qSOFA ≥ 2</h2>
+  <p>A qSOFA ≥ 2 in a patient with suspected infection should trigger the <strong>Hour-1 Sepsis Bundle</strong> (Surviving Sepsis Campaign 2018):</p>
+  <ol>
+    <li><strong>Measure serum lactate.</strong> If lactate &gt; 2 mmol/L, remeasure after resuscitation. Lactate &gt; 4 = tissue hypoperfusion, higher mortality.</li>
+    <li><strong>Blood cultures × 2</strong> before antibiotics. If delay is anticipated, do not withhold antibiotics for cultures in a deteriorating patient.</li>
+    <li><strong>IV broad-spectrum antibiotics within 1 hour</strong> of sepsis recognition. Time to antibiotics is the most important modifiable outcome predictor.</li>
+    <li><strong>30 mL/kg IV crystalloid</strong> if hypotensive (SBP &lt; 90 or MAP &lt; 65) or lactate ≥ 4 mmol/L. Reassess after each bolus.</li>
+    <li><strong>Vasopressors if hypotension persists</strong> — target MAP ≥ 65 mmHg. Norepinephrine is first-line.</li>
+  </ol>
+
+  <h2>qSOFA in Indian Clinical Settings</h2>
+  <p>qSOFA is particularly valuable in India's clinical context for several reasons:</p>
+  <ul>
+    <li><strong>Resource-limited settings:</strong> Many district hospitals, PHCs, and rural facilities do not have immediate access to full blood count, serum lactate, or ABG. qSOFA can identify high-risk patients with only a BP cuff, a watch, and a clinical assessment.</li>
+    <li><strong>Tropical infection burden:</strong> Sepsis from dengue, malaria, leptospira, scrub typhus, and enteric fever — common in Indian wards — can deteriorate rapidly. qSOFA ≥ 2 in a febrile patient with any of these suspected diagnoses should lower the threshold for ICU referral.</li>
+    <li><strong>Nurse-led triage:</strong> In many Indian hospitals, the first clinical contact is a nursing assessment. Training nurses to calculate qSOFA as part of triage vitals can significantly reduce time to physician review for high-risk patients.</li>
+    <li><strong>Emergency departments:</strong> Indian emergency departments are frequently overwhelmed. A simple 3-parameter qSOFA score calculated at triage helps prioritise which patients need immediate attention versus those who can safely wait.</li>
+  </ul>
+
+  <div class="callout tip">
+    <p>✅ <strong>Practical implementation tip:</strong> Print a qSOFA calculation chart at every nursing station and triage point. Any patient with suspected infection and qSOFA ≥ 2 should automatically generate a "sepsis alert" to the treating physician — regardless of whether the BP is "just" 100 mmHg or the RR is "only" 22.</p>
+  </div>
+
+  <h2>Limitations of qSOFA</h2>
+  <ul>
+    <li><strong>Low sensitivity (~50–60%):</strong> Half of sepsis patients with organ dysfunction may not score ≥ 2 on qSOFA. A low score must not be used to rule out sepsis — clinical judgement always takes precedence.</li>
+    <li><strong>Not validated for ICU patients:</strong> In the ICU, full SOFA is the appropriate tool. qSOFA was specifically validated for non-ICU settings.</li>
+    <li><strong>Mental status assessment is subjective:</strong> "New confusion" requires knowing the patient's baseline. In elderly patients with dementia, or after sedative medication, interpretation is difficult.</li>
+    <li><strong>Does not capture all organ dysfunction:</strong> Renal failure, hepatic dysfunction, and coagulopathy — major components of sepsis organ failure — are not captured by qSOFA.</li>
+    <li><strong>Not designed for children:</strong> Paediatric vital sign norms differ from adults. Use PEWS (Paediatric Early Warning Score) or validated paediatric sepsis tools for children.</li>
+  </ul>
+
+  <div class="callout blue" style="border-color:var(--brand);background:var(--brand-light);">
+    <p>🏥 Calculate qSOFA instantly at the bedside: <a href="https://rxmedcalc.com/medical-calculators/qsofa-score" target="_blank"><strong>RxMedCalc qSOFA Calculator →</strong></a> — with automatic escalation guidance and Hour-1 bundle checklist.</p>
+  </div>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>qSOFA uses <strong>3 criteria</strong>: RR ≥ 22, SBP ≤ 100, Altered mental status — all assessable in 60 seconds, no labs needed</li>
+      <li><strong>qSOFA ≥ 2</strong> in a patient with suspected infection = probable sepsis → escalate immediately</li>
+      <li><strong>qSOFA &lt; 2 does NOT rule out sepsis</strong> — sensitivity is only ~50–60%</li>
+      <li>qSOFA is for <strong>outside-ICU screening</strong>; full SOFA is for ICU diagnosis and prognostication</li>
+      <li>qSOFA ≥ 2 triggers the <strong>Hour-1 bundle</strong>: lactate + cultures + antibiotics + fluids ± vasopressors</li>
+      <li>qSOFA replaced SIRS criteria — SIRS was too non-specific (~10% specificity) to be meaningful</li>
+      <li>In India: particularly valuable for <strong>resource-limited settings, nurse-led triage, and tropical infections</strong></li>
+      <li>qSOFA is <strong>not validated for children</strong> — use paediatric-specific tools</li>
+    </ul>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Singer M et al. <em>The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3).</em> JAMA. 2016;315(8):801-810.</li>
+      <li>Seymour CW et al. <em>Assessment of clinical criteria for sepsis: for the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3).</em> JAMA. 2016;315(8):762-774.</li>
+      <li>Evans L et al. <em>Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021.</em> Intensive Care Med. 2021.</li>
+      <li>Raith EP et al. <em>Prognostic accuracy of the SOFA score, SIRS criteria, and qSOFA score for in-hospital mortality among adults with suspected infection admitted to the intensive care unit.</em> JAMA. 2017;317(3):290-300.</li>
+      <li>Indian Society of Critical Care Medicine (ISCCM). <em>ISCCM Guidelines on Sepsis Management.</em> 2020.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes based on Sepsis-3 consensus and ISCCM guidelines. qSOFA is a screening tool — sepsis diagnosis and management must involve qualified medical personnel with full clinical assessment and appropriate investigations.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
