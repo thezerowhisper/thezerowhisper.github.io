@@ -8,7 +8,7 @@
 <meta name="keywords" content="omeprazole dose calculator India, pantoprazole dose calculator India, omeprazole pediatric dose mg/kg, PPI dose child India, omez dose, pan 40 dose, pantocid dose, omeprazole GERD dose, pantoprazole peptic ulcer dose India">
 <link rel="canonical" href="https://rxmedcalc.com/drug-doses/omeprazole-pantoprazole">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Omeprazole & Pantoprazole Dose Calculator \u2014 RxMedCalc","description":"PPI dosage calculator for omeprazole and pantoprazole. Paediatric mg/kg and adult dosing for GERD, peptic ulcer, H. pylori, and stress ulcer prophylaxis. India brands BNF aligned.","url":"https://rxmedcalc.com/drug-doses/omeprazole-pantoprazole","audience":{"@type":"MedicalAudience","audienceType":"Clinician"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Omeprazole & Pantoprazole Dose Calculator — RxMedCalc","description":"PPI dosage calculator for omeprazole and pantoprazole. Paediatric mg/kg and adult dosing for GERD, peptic ulcer, H. pylori, and stress ulcer prophylaxis. India brands BNF aligned.","url":"https://rxmedcalc.com/drug-doses/omeprazole-pantoprazole","audience":{"@type":"MedicalAudience","audienceType":"Clinician"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Drug Doses","item":"https://rxmedcalc.com/drug-doses"},{"@type":"ListItem","position":3,"name":"Omeprazole / Pantoprazole","item":"https://rxmedcalc.com/drug-doses/omeprazole-pantoprazole"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the omeprazole dose for children by weight in India?","acceptedAnswer":{"@type":"Answer","text":"Omeprazole paediatric dose: 1–2 mg/kg/day once daily (max 40 mg/day). For children 1–2 years and 10–20 kg: 10 mg once daily. For children weighing over 20 kg: 20 mg once daily. For erosive oesophagitis: 1–3.3 mg/kg/day up to 40 mg. Always give 30–60 minutes before food. Available as Omez capsules 10mg and 20mg in India."}},{"@type":"Question","name":"What is the difference between omeprazole and pantoprazole?","acceptedAnswer":{"@type":"Answer","text":"Both are proton pump inhibitors (PPIs) with similar efficacy for acid suppression. Key differences: omeprazole has more cytochrome P450 (CYP2C19) interactions — interacts with clopidogrel, warfarin, phenytoin. Pantoprazole has fewer drug interactions and is preferred in patients on antiplatelet therapy. Pantoprazole IV is widely used for stress ulcer prophylaxis and upper GI bleeding in Indian hospitals. Omeprazole is more commonly available as a cheaper generic."}},{"@type":"Question","name":"When should PPIs be taken — before or after food?","acceptedAnswer":{"@type":"Answer","text":"PPIs must be taken 30–60 minutes before the first meal of the day (usually breakfast). This is because PPIs inhibit only actively secreting proton pumps — taking them with or after food reduces efficacy significantly. Compliance with pre-meal timing is one of the most common reasons for PPI treatment failure in Indian patients."}}]}</script>
 
@@ -168,19 +168,21 @@ a{color:#059669;text-decoration:none}a:hover{text-decoration:underline}
         <h2>PPI Dose Calculator</h2>
       </div>
       <div class="cb">
+
         <!-- Drug select -->
         <div class="f">
           <label class="lb">Select PPI</label>
           <div class="seg">
-            <button class="sb on" onclick="setDrug('omeprazole',this)">Omeprazole</button>
-            <button class="sb" onclick="setDrug('pantoprazole',this)">Pantoprazole</button>
-            <button class="sb" onclick="setDrug('lansoprazole',this)">Lansoprazole</button>
+            <button class="sb on" data-group="drug" onclick="setDrug('omeprazole',this)">Omeprazole</button>
+            <button class="sb" data-group="drug" onclick="setDrug('pantoprazole',this)">Pantoprazole</button>
+            <button class="sb" data-group="drug" onclick="setDrug('lansoprazole',this)">Lansoprazole</button>
           </div>
         </div>
+
         <!-- Patient type -->
         <div class="seg">
-          <button class="sb on" onclick="setMode('adult',this)">🧑 Adult</button>
-          <button class="sb" onclick="setMode('paeds',this)">👶 Child (mg/kg)</button>
+          <button class="sb on" data-group="mode" onclick="setMode('adult',this)">🧑 Adult</button>
+          <button class="sb" data-group="mode" onclick="setMode('paeds',this)">👶 Child (mg/kg)</button>
         </div>
 
         <div class="timing">
@@ -251,6 +253,7 @@ a{color:#059669;text-decoration:none}a:hover{text-decoration:underline}
         <div class="al aw" id="warn"><span>⚠️</span><span id="warn-t"></span></div>
         <div class="al ad" id="danger"><span>⛔</span><span id="danger-t"></span></div>
         <div class="al ai" id="info"><span>ℹ️</span><span id="info-t"></span></div>
+
       </div>
     </div>
 
@@ -349,58 +352,184 @@ a{color:#059669;text-decoration:none}a:hover{text-decoration:underline}
 </footer>
 
 <script>
-let mode='adult', drug='omeprazole';
-const D={
-  omeprazole:{
-    adult:{
-      gerd:{oral:{mg:20,f:'Once daily (OD)',d:'4–8 weeks, then lowest effective dose',v:'1 × 20mg cap'},ulcer_heal:{oral:{mg:40,f:'Once daily before breakfast',d:'4–8 weeks',v:'1 × 40mg or 2 × 20mg'},iv:{mg:40,f:'Once daily IV',d:'Until oral tolerated',v:'40mg IV vial'}},ulcer_maint:{oral:{mg:20,f:'Once daily before breakfast',d:'Ongoing — review annually',v:'1 × 20mg cap'}},hp_triple:{oral:{mg:20,f:'Twice daily (BD) with antibiotics',d:'14 days (7 days if 14 not tolerated)',v:'1 × 20mg cap BD'},note:'Must be given BD for H. pylori eradication.'},nsaid_prev:{oral:{mg:20,f:'Once daily',d:'Duration of NSAID use',v:'1 × 20mg cap'}},stress:{iv:{mg:40,f:'Once daily IV',d:'ICU stay',v:'40mg IV'}},gib:{iv:{mg:80,f:'80mg bolus then 8mg/hr × 72h',d:'72 hours post-endoscopy',v:'80mg bolus then infusion'},note:'Upper GI bleed: 80mg IV bolus over 15 min, then 8mg/hr for 72h. Specialist managed.'},zollinger:{oral:{mg:60,f:'Once daily — titrate up as needed',d:'Ongoing',v:'3 × 20mg or 1 × 40mg + 1 × 20mg'}}}},
-  pantoprazole:{
-    adult:{
-      gerd:{oral:{mg:40,f:'Once daily (OD)',d:'4–8 weeks',v:'1 × 40mg tab'},ulcer_heal:{oral:{mg:40,f:'Once daily',d:'4–8 weeks',v:'1 × 40mg tab'},iv:{mg:40,f:'Once daily IV',d:'Until oral tolerated',v:'40mg IV'}},ulcer_maint:{oral:{mg:20,f:'Once daily',d:'Ongoing',v:'½ × 40mg or 20mg tab'}},hp_triple:{oral:{mg:40,f:'Twice daily (BD) with antibiotics',d:'14 days',v:'1 × 40mg BD'},note:'Pantoprazole BD for H. pylori eradication.'},nsaid_prev:{oral:{mg:40,f:'Once daily',d:'Duration of NSAID use',v:'1 × 40mg tab'}},stress:{iv:{mg:40,f:'Once daily IV — preferred in ICU',d:'ICU stay',v:'40mg IV'}},gib:{iv:{mg:80,f:'80mg bolus then 8mg/hr × 72h',d:'72 hours',v:'80mg bolus + infusion'},note:'Standard post-endoscopy GI bleed protocol — pantoprazole preferred over omeprazole for IV.'},zollinger:{oral:{mg:80,f:'Twice daily — titrate',d:'Ongoing',v:'2 × 40mg BD'}}}},
-  lansoprazole:{
-    adult:{
-      gerd:{oral:{mg:30,f:'Once daily (OD)',d:'4–8 weeks',v:'1 × 30mg cap'},ulcer_heal:{oral:{mg:30,f:'Once daily',d:'4–8 weeks',v:'1 × 30mg cap'}},ulcer_maint:{oral:{mg:15,f:'Once daily',d:'Ongoing',v:'½ × 30mg'}},hp_triple:{oral:{mg:30,f:'Twice daily (BD)',d:'14 days',v:'1 × 30mg BD'},note:'Lansoprazole 30mg BD used in triple therapy.'},nsaid_prev:{oral:{mg:15,f:'Once daily',d:'Duration of NSAID use',v:'½ × 30mg or 15mg cap'}},stress:{oral:{mg:30,f:'Once daily',d:'As directed',v:'1 × 30mg'}},gib:{oral:{mg:30,f:'Twice daily',d:'As directed',v:'1 × 30mg BD'},note:'No IV lansoprazole available in India — use pantoprazole IV instead.'},zollinger:{oral:{mg:60,f:'Twice daily — titrate',d:'Ongoing',v:'2 × 30mg BD'}}}}
-};
-const pedMgKg={gerd:{lo:1,hi:1.5,maxMg:20},ulcer:{lo:1,hi:2,maxMg:40},hp:{lo:1,hi:1,maxMg:20},stress:{lo:0.5,hi:1,maxMg:40}};
+let mode = 'adult', drug = 'omeprazole';
 
-function setDrug(d,btn){drug=d;document.querySelectorAll('.sb').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('setDrug'))b.classList.remove('on')});btn.classList.add('on');hideAll();}
-function setMode(m,btn){mode=m;document.querySelectorAll('.sb').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('setMode'))b.classList.remove('on')});btn.classList.add('on');document.getElementById('adult-sec').style.display=m==='adult'?'block':'none';document.getElementById('paeds-sec').style.display=m==='paeds'?'block':'none';hideAll();}
-function hideAll(){['res','warn','danger','info'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('on')})}
-function show(id){document.getElementById(id).classList.add('on')}
-function set(id,v){document.getElementById(id).textContent=v}
-function tf(el){el.closest('.fi').classList.toggle('op')}
-
-function calc(){
+/* ── Segment button helpers ── */
+function setDrug(d, btn) {
+  drug = d;
+  document.querySelectorAll('[data-group="drug"]').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
   hideAll();
-  if(mode==='adult'){
-    const ind=document.getElementById('adult-ind').value;
-    const route=document.getElementById('adult-route').value;
-    const drugData=D[drug]?.adult?.[ind]?.[route];
-    if(!drugData){document.getElementById('warn-t').textContent='This route is not available for the selected drug/indication. Try oral, or switch to pantoprazole for IV options.';show('warn');return;}
-    set('r-dose',drugData.mg+' mg per dose');set('r-freq',drugData.f);
-    set('r-mg',drugData.mg+' mg');set('r-vol',drugData.v);
-    set('r-dur',drugData.d);set('r-timing','30–60 min before food');
+}
+
+function setMode(m, btn) {
+  mode = m;
+  document.querySelectorAll('[data-group="mode"]').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById('adult-sec').style.display = m === 'adult' ? 'block' : 'none';
+  document.getElementById('paeds-sec').style.display = m === 'paeds' ? 'block' : 'none';
+  hideAll();
+}
+
+function hideAll() {
+  ['res', 'warn', 'danger', 'info'].forEach(id => document.getElementById(id).classList.remove('on'));
+}
+function show(id) { document.getElementById(id).classList.add('on'); }
+function set(id, v) { document.getElementById(id).textContent = v; }
+function tf(el) { el.closest('.fi').classList.toggle('op'); }
+
+/* ── Adult dose data ── */
+const D = {
+  omeprazole: {
+    adult: {
+      gerd:       { oral: { mg:20, f:'Once daily (OD)', d:'4–8 weeks, then lowest effective dose', v:'1 × 20mg cap' } },
+      ulcer_heal: { oral: { mg:40, f:'Once daily before breakfast', d:'4–8 weeks', v:'1 × 40mg or 2 × 20mg' },
+                    iv:   { mg:40, f:'Once daily IV', d:'Until oral tolerated', v:'40mg IV vial' } },
+      ulcer_maint:{ oral: { mg:20, f:'Once daily before breakfast', d:'Ongoing — review annually', v:'1 × 20mg cap' } },
+      hp_triple:  { oral: { mg:20, f:'Twice daily (BD) with antibiotics', d:'14 days (7 days if not tolerated)', v:'1 × 20mg cap BD' },
+                    note:'Must be given BD for H. pylori eradication.' },
+      nsaid_prev: { oral: { mg:20, f:'Once daily', d:'Duration of NSAID use', v:'1 × 20mg cap' } },
+      stress:     { iv:   { mg:40, f:'Once daily IV', d:'ICU stay', v:'40mg IV' } },
+      gib:        { iv:   { mg:80, f:'80mg bolus then 8mg/hr × 72h', d:'72 hours post-endoscopy', v:'80mg bolus then infusion' },
+                    note:'Upper GI bleed: 80mg IV bolus over 15 min, then 8mg/hr for 72h. Specialist managed.' },
+      zollinger:  { oral: { mg:60, f:'Once daily — titrate up as needed', d:'Ongoing', v:'3 × 20mg or 1 × 40mg + 1 × 20mg' } }
+    }
+  },
+  pantoprazole: {
+    adult: {
+      gerd:       { oral: { mg:40, f:'Once daily (OD)', d:'4–8 weeks', v:'1 × 40mg tab' } },
+      ulcer_heal: { oral: { mg:40, f:'Once daily', d:'4–8 weeks', v:'1 × 40mg tab' },
+                    iv:   { mg:40, f:'Once daily IV', d:'Until oral tolerated', v:'40mg IV' } },
+      ulcer_maint:{ oral: { mg:20, f:'Once daily', d:'Ongoing — review annually', v:'½ × 40mg or 20mg tab' } },
+      hp_triple:  { oral: { mg:40, f:'Twice daily (BD) with antibiotics', d:'14 days', v:'1 × 40mg BD' },
+                    note:'Pantoprazole BD for H. pylori eradication.' },
+      nsaid_prev: { oral: { mg:40, f:'Once daily', d:'Duration of NSAID use', v:'1 × 40mg tab' } },
+      stress:     { iv:   { mg:40, f:'Once daily IV — preferred in ICU', d:'ICU stay', v:'40mg IV' } },
+      gib:        { iv:   { mg:80, f:'80mg bolus then 8mg/hr × 72h', d:'72 hours', v:'80mg bolus + infusion' },
+                    note:'Standard post-endoscopy GI bleed protocol — pantoprazole preferred for IV.' },
+      zollinger:  { oral: { mg:80, f:'Twice daily — titrate', d:'Ongoing', v:'2 × 40mg BD' } }
+    }
+  },
+  lansoprazole: {
+    adult: {
+      gerd:       { oral: { mg:30, f:'Once daily (OD)', d:'4–8 weeks', v:'1 × 30mg cap' } },
+      ulcer_heal: { oral: { mg:30, f:'Once daily', d:'4–8 weeks', v:'1 × 30mg cap' } },
+      ulcer_maint:{ oral: { mg:15, f:'Once daily', d:'Ongoing', v:'½ × 30mg or 15mg cap' } },
+      hp_triple:  { oral: { mg:30, f:'Twice daily (BD)', d:'14 days', v:'1 × 30mg BD' },
+                    note:'Lansoprazole 30mg BD used in triple therapy.' },
+      nsaid_prev: { oral: { mg:15, f:'Once daily', d:'Duration of NSAID use', v:'½ × 30mg or 15mg cap' } },
+      stress:     { oral: { mg:30, f:'Once daily', d:'As directed', v:'1 × 30mg' } },
+      gib:        { oral: { mg:30, f:'Twice daily', d:'As directed', v:'1 × 30mg BD' },
+                    note:'No IV lansoprazole available in India — use pantoprazole IV instead.' },
+      zollinger:  { oral: { mg:60, f:'Twice daily — titrate', d:'Ongoing', v:'2 × 30mg BD' } }
+    }
+  }
+};
+
+/* ── Paediatric mg/kg table (omeprazole-equivalent; same mg/kg for pantoprazole) ── */
+const pedMgKg = {
+  gerd:  { lo:1,   hi:1.5, maxMg:20, dur:'4–8 weeks',  freq:'Once daily before breakfast' },
+  ulcer: { lo:1,   hi:2,   maxMg:40, dur:'4–8 weeks',  freq:'Once daily before breakfast' },
+  hp:    { lo:1,   hi:1,   maxMg:20, dur:'14 days',     freq:'Twice daily (BD) with antibiotics' },
+  stress:{ lo:0.5, hi:1,   maxMg:40, dur:'ICU stay',    freq:'Once daily (or as directed)' }
+};
+
+/* ── Main calc ── */
+function calc() {
+  hideAll();
+
+  if (mode === 'adult') {
+    const ind      = document.getElementById('adult-ind').value;
+    const route    = document.getElementById('adult-route').value;
+    const indData  = D[drug]?.adult?.[ind];
+    const doseData = indData?.[route];
+
+    if (!doseData) {
+      document.getElementById('warn-t').textContent =
+        'This route is not available for the selected drug / indication. ' +
+        (route === 'iv' ? 'No IV form exists for this drug — try oral, or switch to pantoprazole for IV options.' :
+         'Please select a valid combination.');
+      show('warn');
+      return;
+    }
+
+    set('r-dose',   doseData.mg + ' mg per dose');
+    set('r-freq',   doseData.f);
+    set('r-mg',     doseData.mg + ' mg');
+    set('r-vol',    doseData.v);
+    set('r-dur',    doseData.d);
+    set('r-timing', route === 'iv' ? 'IV administration' : '30–60 min before food');
     show('res');
-    const note=D[drug]?.adult?.[ind]?.note;
-    if(note){document.getElementById('info-t').textContent=note;show('info');}
-    if(ind==='hp_triple'){document.getElementById('warn-t').textContent='H. pylori: PPI must be given BD (twice daily) alongside antibiotics. Once-daily PPI dosing is insufficient for eradication.';show('warn');}
+
+    if (indData.note) {
+      document.getElementById('info-t').textContent = indData.note;
+      show('info');
+    }
+    if (ind === 'hp_triple') {
+      document.getElementById('warn-t').textContent =
+        'H. pylori: PPI must be given BD (twice daily) alongside both antibiotics. Once-daily PPI dosing is insufficient for eradication.';
+      show('warn');
+    }
+
   } else {
-    const wt=parseFloat(document.getElementById('wt').value);
-    const age=parseFloat(document.getElementById('age').value)||null;
-    const ind=document.getElementById('ped-ind').value;
-    if(!wt||wt<3){alert('Please enter a valid weight.');return;}
-    if(age!==null&&age<1){document.getElementById('danger-t').textContent='PPIs are not recommended for infants under 1 year. Evidence does not support PPI use for infant reflux. Seek specialist paediatric gastroenterology input.';show('danger');return;}
-    const p=pedMgKg[ind];
-    const doseMg=Math.round(Math.min(wt*p.lo,p.maxMg)/2.5)*2.5;
-    const drugName=drug.charAt(0).toUpperCase()+drug.slice(1);
-    const freq=ind==='hp'?'Twice daily (BD) with antibiotics':'Once daily before breakfast';
-    const dur=ind==='gerd'?'4–8 weeks':ind==='hp'?'14 days':ind==='stress'?'ICU stay':'4–8 weeks';
-    const vol=drug==='lansoprazole'?'Lansoprazole 30mg ODT (½ tablet if <20mg)':doseMg<=20?drugName+' 20mg capsule':drugName+' 40mg capsule';
-    set('r-dose',doseMg+' mg per dose');set('r-freq',freq);
-    set('r-mg',doseMg+' mg');set('r-vol',vol);
-    set('r-dur',dur);set('r-timing','30–60 min before breakfast');
+    /* ── Paediatric ── */
+    const wt  = parseFloat(document.getElementById('wt').value);
+    const age = parseFloat(document.getElementById('age').value) || null;
+    const ind = document.getElementById('ped-ind').value;
+
+    if (!wt || wt < 3) {
+      alert('Please enter a valid weight (≥ 3 kg).');
+      return;
+    }
+    if (age !== null && age < 1) {
+      document.getElementById('danger-t').textContent =
+        'PPIs are not recommended for infants under 1 year. Evidence does not support PPI use for infant reflux (GERD). Seek paediatric gastroenterology input.';
+      show('danger');
+      return;
+    }
+
+    const p = pedMgKg[ind];
+    let doseMg = wt * p.lo;
+    doseMg = Math.min(doseMg, p.maxMg);
+    doseMg = Math.round(doseMg / 2.5) * 2.5;   // round to nearest 2.5 mg
+
+    /* Practical tablet/capsule suggestion */
+    let vol;
+    if (drug === 'lansoprazole') {
+      vol = 'Lansoprazole 30mg ODT — halve tablet if dose ≤15mg';
+    } else {
+      const brand = drug === 'omeprazole' ? 'Omez' : 'Pantocid';
+      vol = doseMg <= 10  ? brand + ' 10mg capsule' :
+            doseMg <= 20  ? brand + ' 20mg capsule' :
+                            brand + ' 40mg capsule';
+    }
+
+    set('r-dose',   doseMg + ' mg per dose');
+    set('r-freq',   p.freq);
+    set('r-mg',     doseMg + ' mg');
+    set('r-vol',    vol);
+    set('r-dur',    p.dur);
+    set('r-timing', '30–60 min before breakfast');
     show('res');
-    if(wt<10){document.getElementById('info-t').textContent='Child &lt;10 kg: capsule contents may be mixed with 1 tsp of water or apple juice (do not chew pellets). Lansoprazole ODT dissolves on the tongue — more practical for young children.';show('info');}
+
+    /* Supplementary info alerts */
+    if (wt < 10) {
+      document.getElementById('info-t').textContent =
+        'Child <10 kg: open capsule and mix pellets with 1 tsp of water or apple juice — do not crush or chew pellets. ' +
+        'Lansoprazole ODT dissolves on the tongue and is more practical for young children.';
+      show('info');
+    }
+    if (ind === 'hp') {
+      document.getElementById('warn-t').textContent =
+        'H. pylori paediatric triple therapy: PPI BD + amoxicillin + clarithromycin for 14 days. ' +
+        'Paediatric gastroenterologist input recommended before starting eradication in children.';
+      show('warn');
+    }
+    if (drug === 'lansoprazole' && ind === 'stress') {
+      document.getElementById('info-t').textContent =
+        'IV lansoprazole is not available in India. For PICU stress ulcer prophylaxis use IV pantoprazole 0.5–1 mg/kg OD (max 40mg).';
+      show('info');
+    }
   }
 }
 </script>
