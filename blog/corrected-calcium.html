@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corrected Calcium: Why Albumin Matters & How to Interpret Calcium | RxMedCalc</title>
+  <meta name="description" content="A complete guide to corrected calcium — why you must adjust for albumin, the correction formula, causes of hypercalcaemia and hypocalcaemia, clinical symptoms, and when to treat urgently." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#5a6b1a;--brand-dark:#2e3a0d;--brand-light:#f0f5e6;--accent:#c0392b;--blue:#1a5c96;--text:#1c1c1e;--muted:#5a5a6a;--border:#ccd8a0;--bg:#f7faf0;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#2e3a0d 0%,#5a6b1a 55%,#7a9020 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:700px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:560px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--brand);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+    .formula-box{background:var(--brand-dark);color:#f0f5e6;border-radius:10px;padding:22px 24px;margin:1.6rem 0;font-family:'Lora',serif;font-size:1.05rem;line-height:1.8;}
+    .formula-box .label{font-family:'DM Sans',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.65;margin-bottom:8px;}
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:15px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 14px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+    /* hypo/hyper compare */
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.4rem 0;}
+    .cmp-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:18px 20px;}
+    .cmp-card .cmp-title{font-weight:700;font-size:15px;margin-bottom:10px;}
+    .cmp-card.hypo .cmp-title{color:#1a4e8a;}
+    .cmp-card.hyper .cmp-title{color:#8a1515;}
+    .cmp-card ul{font-size:14px;padding-left:16px;margin:0;}
+    .cmp-card li{margin-bottom:5px;line-height:1.55;}
+    .example{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:22px 24px;margin:1.6rem 0;}
+    .example .ex-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:10px;}
+    .example p{margin-bottom:.55rem;}
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout.blue{border-color:#1a5c96;background:#e8f2fb;}
+    .callout p{margin:0;}
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+    @media(max-width:600px){.compare{grid-template-columns:1fr;}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+</head>
+<body>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; Corrected Calcium</header>
+<div class="hero">
+  <div class="tag">🧪 Electrolytes &amp; General Medicine</div>
+  <h1>Corrected Calcium: Why Albumin Matters &amp; How to Interpret Your Calcium Level</h1>
+  <p class="subtitle">Why you must always adjust serum calcium for albumin, the correction formula, causes and symptoms of hypercalcaemia and hypocalcaemia, and when abnormal calcium is a medical emergency.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on Standard Endocrinology &amp; Clinical Chemistry References</p>
+</div>
+<div class="wrap">
+
+  <p>Calcium is reported on every basic metabolic panel — but the number you see is frequently misleading. A patient with a calcium of 7.8 mg/dL might appear to have dangerous hypocalcaemia — or might have a perfectly normal calcium if their albumin is low. A patient with cancer and a calcium of 10.5 mg/dL might appear borderline — or might be in hypercalcaemic crisis if their albumin is high.</p>
+  <p>The reason for this confusion is that <strong>approximately 40–45% of calcium in blood is bound to albumin</strong> — and it is only the <em>free (ionised)</em> fraction that is biologically active. Standard lab calcium measures <em>total</em> calcium — bound plus free. Without knowing the albumin level, total calcium is an unreliable guide to actual calcium status.</p>
+  <p>The <strong>corrected calcium</strong> calculation adjusts for this, giving a more accurate estimate of the biologically active calcium level. It is one of the most important — and most commonly missed — adjustments in routine clinical practice.</p>
+
+  <h2>Why Calcium Binds to Albumin</h2>
+  <p>Calcium exists in three forms in plasma:</p>
+  <ul>
+    <li><strong>Ionised (free) calcium (~45%):</strong> The biologically active form. Regulates nerve conduction, muscle contraction, cardiac rhythm, hormone secretion, and blood clotting. This is the fraction that causes symptoms when abnormal.</li>
+    <li><strong>Protein-bound calcium (~45%):</strong> Primarily bound to albumin (and a small amount to globulins). Biologically inactive — cannot cross cell membranes or activate calcium receptors.</li>
+    <li><strong>Complexed calcium (~10%):</strong> Bound to phosphate, citrate, and bicarbonate. Also biologically inactive.</li>
+  </ul>
+  <p>Standard laboratory calcium measures the <strong>total</strong> of all three fractions. In a patient with normal albumin, total calcium is a reliable proxy for ionised calcium. In patients with <em>low albumin</em> (the vast majority of hospital inpatients), total calcium underestimates the true ionised calcium. The corrected calcium adjusts upward to compensate.</p>
+
+  <h2>The Corrected Calcium Formula</h2>
+
+  <div class="formula-box">
+    <div class="label">Albumin-Corrected Calcium Formula</div>
+    <strong>Corrected Calcium (mg/dL) = Measured Ca + 0.8 × (4.0 − Albumin g/dL)</strong><br><br>
+    Or if calcium in mmol/L and albumin in g/L:<br>
+    <strong>Corrected Ca (mmol/L) = Measured Ca + 0.02 × (40 − Albumin g/L)</strong><br><br>
+    <span style="font-size:.88rem;opacity:.75;">Normal albumin assumed = 4.0 g/dL (40 g/L). For every 1 g/dL fall in albumin below 4.0, add 0.8 mg/dL to the measured calcium.</span>
+  </div>
+
+  <div class="callout blue">
+    <p>🧪 Use the <a href="https://rxmedcalc.com/medical-calculators/corrected-calcium" target="_blank"><strong>RxMedCalc Corrected Calcium Calculator</strong></a> — enter measured calcium and albumin for instant corrected calcium with clinical interpretation.</p>
+  </div>
+
+  <h2>Worked Examples</h2>
+  <div class="example">
+    <div class="ex-label">📋 Two Patients — Same Measured Calcium, Different Reality</div>
+    <p><strong>Patient A:</strong> Measured Ca = 7.8 mg/dL, Albumin = 2.0 g/dL (cirrhosis)<br>
+    Corrected Ca = 7.8 + 0.8 × (4.0 − 2.0) = 7.8 + 1.6 = <strong>9.4 mg/dL → Normal</strong><br>
+    <em>This patient does NOT have hypocalcaemia — just low albumin.</em></p>
+    <p style="margin-top:12px;"><strong>Patient B:</strong> Measured Ca = 10.2 mg/dL, Albumin = 4.2 g/dL (myeloma)<br>
+    Corrected Ca = 10.2 + 0.8 × (4.0 − 4.2) = 10.2 − 0.16 = <strong>10.0 mg/dL → Upper Normal</strong><br>
+    <em>Borderline reading clarified. Monitor but not yet treatment threshold.</em></p>
+    <p style="margin-top:12px;"><strong>Patient C:</strong> Measured Ca = 11.5 mg/dL, Albumin = 2.5 g/dL (lung cancer)<br>
+    Corrected Ca = 11.5 + 0.8 × (4.0 − 2.5) = 11.5 + 1.2 = <strong>12.7 mg/dL → Significant Hypercalcaemia</strong><br>
+    <em>Without correction, the severity would have been underestimated.</em></p>
+  </div>
+
+  <h2>Normal Range and Thresholds</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Corrected Calcium (mg/dL)</th><th>Corrected Calcium (mmol/L)</th><th>Interpretation</th></tr></thead>
+    <tbody>
+      <tr><td>&lt; 7.0</td><td>&lt; 1.75</td><td>Severe hypocalcaemia — emergency treatment may be needed</td></tr>
+      <tr><td>7.0–8.4</td><td>1.75–2.10</td><td>Mild-moderate hypocalcaemia — investigate and treat cause</td></tr>
+      <tr><td><strong>8.5–10.2</strong></td><td><strong>2.12–2.55</strong></td><td><strong>Normal range</strong></td></tr>
+      <tr><td>10.3–11.9</td><td>2.57–2.97</td><td>Mild-moderate hypercalcaemia — investigate; usually asymptomatic</td></tr>
+      <tr><td>12.0–13.9</td><td>3.0–3.47</td><td>Moderate-severe hypercalcaemia — symptoms likely; treatment needed</td></tr>
+      <tr><td>≥ 14.0</td><td>≥ 3.5</td><td>Hypercalcaemic crisis — medical emergency</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Causes of Hypercalcaemia and Hypocalcaemia</h2>
+
+  <div class="compare">
+    <div class="cmp-card hyper">
+      <div class="cmp-title">⬆️ Hypercalcaemia — Common Causes</div>
+      <ul>
+        <li><strong>Primary hyperparathyroidism</strong> — most common cause in outpatients; PTH elevated, usually asymptomatic</li>
+        <li><strong>Malignancy</strong> — most common cause in hospital inpatients; PTH-related peptide (PTHrP) or bone metastases</li>
+        <li><strong>Sarcoidosis</strong> — granulomas produce 1,25-OH vitamin D</li>
+        <li><strong>Vitamin D toxicity</strong> — excess supplementation</li>
+        <li><strong>Thiazide diuretics</strong> — reduce renal calcium excretion</li>
+        <li><strong>Immobilisation</strong> — especially in Paget's disease or metastatic bone disease</li>
+        <li><strong>Milk-alkali syndrome</strong> — excess calcium carbonate ingestion</li>
+      </ul>
+    </div>
+    <div class="cmp-card hypo">
+      <div class="cmp-title">⬇️ Hypocalcaemia — Common Causes</div>
+      <ul>
+        <li><strong>Hypoparathyroidism</strong> — post-thyroid/parathyroid surgery (most common); autoimmune</li>
+        <li><strong>Vitamin D deficiency</strong> — extremely common in India; most common cause of mild hypocalcaemia</li>
+        <li><strong>Hypomagnesaemia</strong> — magnesium is required for PTH secretion and action</li>
+        <li><strong>Acute pancreatitis</strong> — calcium consumed by saponification of fat</li>
+        <li><strong>Chronic kidney disease</strong> — reduced 1α-hydroxylation of vitamin D</li>
+        <li><strong>Massive transfusion</strong> — citrate in stored blood chelates calcium</li>
+        <li><strong>Pseudohypoparathyroidism</strong> — PTH resistance</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Symptoms by Calcium Level</h2>
+  <h3>Hypocalcaemia Symptoms</h3>
+  <p>Hypocalcaemia increases neuronal excitability — causing characteristic neuromuscular signs:</p>
+  <ul>
+    <li><strong>Mild:</strong> Perioral numbness, tingling in fingers and toes, muscle cramps</li>
+    <li><strong>Moderate:</strong> Chvostek's sign (facial muscle twitch on tapping facial nerve), Trousseau's sign (carpal spasm when BP cuff inflated above systolic for 3 minutes)</li>
+    <li><strong>Severe:</strong> Tetany, laryngospasm, bronchospasm, seizures, prolonged QTc on ECG, cardiac arrhythmias</li>
+  </ul>
+  <div class="callout warning">
+    <p>⚠️ <strong>Symptomatic hypocalcaemia is a medical emergency.</strong> Seizures, laryngospasm, or bronchospasm from hypocalcaemia require IV calcium gluconate immediately — 10 mL of 10% calcium gluconate IV over 10 minutes, with cardiac monitoring.</p>
+  </div>
+
+  <h3>Hypercalcaemia Symptoms — "Stones, Bones, Groans, Thrones, Psychic Moans"</h3>
+  <ul>
+    <li><strong>Stones:</strong> Renal calculi, nephrocalcinosis</li>
+    <li><strong>Bones:</strong> Bone pain, pathological fractures (osteitis fibrosa cystica in severe hyperparathyroidism)</li>
+    <li><strong>Groans:</strong> Nausea, vomiting, constipation, anorexia, peptic ulcers</li>
+    <li><strong>Thrones:</strong> Polyuria and polydipsia (nephrogenic diabetes insipidus from calcium inhibiting ADH action)</li>
+    <li><strong>Psychic moans:</strong> Confusion, depression, lethargy, psychosis — especially at Ca &gt; 12 mg/dL</li>
+    <li><strong>Shortened QTc on ECG</strong> — opposite of hypocalcaemia</li>
+  </ul>
+
+  <h2>Managing Hypercalcaemic Crisis (Ca &gt; 14 mg/dL)</h2>
+  <ol>
+    <li><strong>IV Normal Saline — aggressive hydration first:</strong> 200–500 mL/hour until euvolaemia restored. Calcium is excreted by the kidney — restoring GFR with volume is the most immediately effective intervention. Aim for urine output 100–150 mL/hour.</li>
+    <li><strong>Bisphosphonate (Zoledronic acid 4 mg IV over 15 min):</strong> Inhibits osteoclast-mediated bone resorption. Effect takes 2–4 days to peak. First-line for hypercalcaemia of malignancy.</li>
+    <li><strong>Calcitonin 4 IU/kg IM/SC every 12 hours:</strong> Fastest-acting agent — reduces calcium within 4–6 hours. Tachyphylaxis limits use beyond 48 hours.</li>
+    <li><strong>Treat the underlying cause:</strong> Steroids for sarcoidosis/vitamin D toxicity (prednisolone 40 mg/day). Parathyroidectomy for primary hyperparathyroidism. Treat malignancy.</li>
+    <li><strong>Avoid thiazide diuretics and lithium</strong> — both raise calcium. Loop diuretics (furosemide) historically used but only after adequate fluid resuscitation.</li>
+  </ol>
+
+  <h2>When to Use Ionised Calcium Instead</h2>
+  <p>The albumin correction formula is an estimate — not perfect. In certain situations, directly measured <strong>ionised (free) calcium</strong> from an arterial blood gas or dedicated analyser is more reliable:</p>
+  <ul>
+    <li>Acid-base disturbances — acidosis increases ionised calcium; alkalosis decreases it (hydrogen ions compete with calcium for albumin binding)</li>
+    <li>Critical illness, post-cardiac surgery, massive transfusion</li>
+    <li>Suspected hypocalcaemia despite normal corrected calcium</li>
+    <li>Patients with abnormal globulins (myeloma, inflammatory states)</li>
+  </ul>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li><strong>Always correct calcium for albumin</strong> — total calcium alone is unreliable in most hospital patients</li>
+      <li>Formula: <strong>Corrected Ca = Measured Ca + 0.8 × (4.0 − Albumin g/dL)</strong></li>
+      <li>Normal corrected calcium: <strong>8.5–10.2 mg/dL</strong> (2.12–2.55 mmol/L)</li>
+      <li>Most common cause of hypercalcaemia in <strong>outpatients</strong>: primary hyperparathyroidism; in <strong>inpatients</strong>: malignancy</li>
+      <li>Most common cause of hypocalcaemia in India: <strong>vitamin D deficiency</strong></li>
+      <li><strong>Symptomatic hypocalcaemia</strong> (tetany, seizures, laryngospasm) = IV calcium gluconate immediately</li>
+      <li><strong>Hypercalcaemic crisis</strong> (Ca &gt; 14): IV saline first, then zoledronic acid + calcitonin</li>
+      <li>Use <strong>ionised calcium</strong> when acid-base disturbance, critical illness, or albumin correction seems unreliable</li>
+    </ul>
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Payne RB et al. <em>Interpretation of serum calcium in patients with abnormal serum proteins.</em> BMJ. 1973;4(5893):643-646.</li>
+      <li>Shane E, Irani D. <em>Hypercalcemia: pathogenesis, clinical manifestations, differential diagnosis, and management.</em> In: Favus MJ (ed), Primer on the Metabolic Bone Diseases and Disorders of Mineral Metabolism. 2006.</li>
+      <li>Bilezikian JP. <em>Management of acute hypercalcemia.</em> N Engl J Med. 1992;326(18):1196-1203.</li>
+      <li>Cooper MS, Gittoes NJ. <em>Diagnosis and management of hypocalcaemia.</em> BMJ. 2008;336(7656):1298-1302.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for educational purposes. Calcium abnormalities require clinical assessment, investigation of the underlying cause, and management by a qualified physician. Emergency treatment of severe hypocalcaemia or hypercalcaemic crisis must be directed by medical personnel with appropriate monitoring.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+</body>
+</html>
