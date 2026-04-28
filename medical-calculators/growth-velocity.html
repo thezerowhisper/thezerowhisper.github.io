@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="growth-velocity-calculator">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growth Velocity Calculator | Height & Weight Velocity | Paediatric | RxMedCalc</title>
+<meta name="description" content="Calculate growth velocity in children — height velocity and weight velocity per year. WHO and IAP reference ranges for paediatric growth assessment. Detect growth faltering early.">
+<meta name="keywords" content="growth velocity calculator, height velocity calculator, growth velocity calculation, how to calculate growth velocity, growth velocity in child, growth velocity percentile calculator, growth velocity NICU, fetal growth velocity calculator, growth velocity paediatric India">
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/growth-velocity">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Growth Velocity Calculator — RxMedCalc","description":"Paediatric growth velocity calculator for height and weight velocity per year. WHO and IAP reference ranges. India clinical context.","url":"https://rxmedcalc.com/medical-calculators/growth-velocity","audience":{"@type":"MedicalAudience","audienceType":"Clinician"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Medical Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"Growth Velocity Calculator","item":"https://rxmedcalc.com/medical-calculators/growth-velocity"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to calculate growth velocity?","acceptedAnswer":{"@type":"Answer","text":"Growth velocity = (Current measurement − Previous measurement) ÷ Time interval in years. For height velocity: (Height2 − Height1 in cm) ÷ (Interval in months ÷ 12). The minimum recommended interval is 3 months for meaningful height velocity calculation. Normal height velocity in mid-childhood (4–10 years) is 5–7 cm/year."}},{"@type":"Question","name":"How is growth velocity calculated in children?","acceptedAnswer":{"@type":"Answer","text":"Height velocity is calculated as the difference in height (cm) between two measurements divided by the time interval in years. The result is expressed as cm/year. An interval of at least 3–6 months is required for accuracy. Values below the 25th percentile for age warrant monitoring; below the 10th percentile or below 4 cm/year in mid-childhood warrants investigation for growth hormone deficiency or systemic disease."}},{"@type":"Question","name":"What is normal growth velocity for a 5-year-old?","acceptedAnswer":{"@type":"Answer","text":"Normal height velocity for a 5-year-old is approximately 5–7 cm/year (WHO reference). Values below 4 cm/year at this age should prompt investigation for growth disorders including growth hormone deficiency, hypothyroidism, coeliac disease, or chronic systemic illness."}}]}</script>
+
+<link rel="stylesheet" href="/assets/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:#f7f9fc;color:#1a2535;line-height:1.6;font-size:16px;min-width:0}
+a{color:#1d4ed8;text-decoration:none}a:hover{text-decoration:underline}
+:root{
+  --ac:#1e40af;--acm:#2563eb;--acl:#eff6ff;--acd:#1e3a8a;
+  --navy:#0d2b45;--t:#1a2535;--tm:#4a5568;--tmu:#8896a8;
+  --br:#e2e8f0;--bg:#f7f9fc;--w:#fff;
+  --al:#fffbeb;--rl:#fef2f2;
+  --r:12px;--rs:8px;--mono:'DM Mono',monospace;
+  --px:16px;--gap:12px;
+}
+@media(min-width:640px){:root{--px:24px;--gap:16px}}
+.topnav{background:var(--w);border-bottom:1px solid var(--br);padding:0 var(--px);height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+.nav-logo{font-weight:600;font-size:17px;color:var(--navy);text-decoration:none}.nav-logo em{color:#0e9f7e;font-style:normal}
+.back-link{font-size:13px;color:var(--tm);display:flex;align-items:center;gap:4px;white-space:nowrap;text-decoration:none}.back-link:hover{color:var(--acm)}
+.bc{background:var(--w);border-bottom:1px solid var(--br);padding:8px var(--px);font-size:12px;color:var(--tmu);display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.bc a{color:var(--navy);text-decoration:none}.bc a:hover{text-decoration:underline}
+.hero{background:linear-gradient(135deg,#0c1a4e 0%,#1e40af 55%,#3b82f6 100%);padding:32px var(--px) 28px;position:relative;overflow:hidden}
+.hero::after{content:'📏';position:absolute;right:-10px;bottom:-24px;font-size:120px;opacity:.07;pointer-events:none;line-height:1}
+.hi{max-width:820px;margin:0 auto;position:relative}
+.hbadge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:3px 11px;font-size:11px;color:rgba(255,255,255,.85);margin-bottom:10px}
+.hero h1{font-size:clamp(20px,4vw,30px);font-weight:600;color:#fff;margin-bottom:6px;letter-spacing:-.3px;line-height:1.25}
+.hero p{font-size:13px;color:rgba(255,255,255,.72);margin-bottom:14px;line-height:1.55}
+.hpills{display:flex;gap:6px;flex-wrap:wrap}
+.hp{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:3px 10px;font-size:11px;color:rgba(255,255,255,.85)}
+.pw{max-width:820px;margin:0 auto;padding:20px var(--px) 60px}
+.grid{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+@media(min-width:760px){.grid{grid-template-columns:1fr 280px;align-items:start}}
+.card{background:var(--w);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden}
+.ch{padding:13px 16px;border-bottom:1px solid var(--br);display:flex;align-items:center;gap:9px}
+.ch h2{font-size:14px;font-weight:600;color:var(--acd)}
+.cb{padding:16px}
+.seg{display:flex;background:var(--bg);border:1.5px solid var(--br);border-radius:var(--rs);padding:3px;gap:3px;margin-bottom:14px;flex-wrap:wrap}
+.sb{flex:1;min-width:70px;padding:8px 4px;border:none;background:transparent;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:var(--tm);cursor:pointer;transition:all .15s;text-align:center;min-height:44px}
+.sb.on{background:var(--w);color:var(--acd);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.f{margin-bottom:13px}
+.lb{display:block;font-size:12px;font-weight:500;color:var(--t);margin-bottom:5px}
+.lb small{color:var(--tmu);font-weight:400}
+.inp,.sel{width:100%;padding:10px 12px;border:1.5px solid var(--br);border-radius:var(--rs);font-family:'DM Sans',sans-serif;font-size:16px;color:var(--t);background:var(--w);outline:none;transition:border-color .15s}
+@media(min-width:480px){.inp,.sel{font-size:14px}}
+.inp:focus,.sel:focus{border-color:var(--acm)}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.r3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+@media(max-width:400px){.r2,.r3{grid-template-columns:1fr}}
+.btn{width:100%;padding:13px;background:var(--acm);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;border:none;border-radius:var(--rs);cursor:pointer;transition:background .15s,transform .1s;margin-top:6px;min-height:48px}
+.btn:hover{background:var(--acd)}.btn:active{transform:scale(.98)}
+.res{background:var(--acl);border:1.5px solid #93c5fd;border-radius:var(--rs);padding:16px;margin-top:14px;display:none}
+.res.on{display:block}
+.rl{font-size:11px;font-weight:600;color:var(--acd);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.rm{font-size:28px;font-weight:600;color:var(--acd);line-height:1.2;margin-bottom:3px}
+.rsub{font-size:13px;color:var(--acm);margin-bottom:10px}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+@media(max-width:340px){.rg{grid-template-columns:1fr}}
+.rc{background:var(--w);border-radius:7px;padding:9px 11px}
+.rc .xl{font-size:10px;color:var(--tmu);margin-bottom:2px}
+.rc .xv{font-size:13px;font-weight:600;color:var(--acd);font-family:var(--mono)}
+/* interpretation bar */
+.interp{background:var(--w);border-radius:7px;padding:10px 12px;margin-top:8px}
+.interp-label{font-size:10px;color:var(--tmu);margin-bottom:6px;font-weight:500;text-transform:uppercase;letter-spacing:.4px}
+.bar-track{height:10px;border-radius:5px;background:linear-gradient(to right,#ef4444 0%,#f97316 20%,#eab308 40%,#22c55e 60%,#22c55e 80%,#eab308 90%,#f97316 100%);position:relative;margin-bottom:4px}
+.bar-needle{position:absolute;top:-3px;width:4px;height:16px;background:var(--navy);border-radius:2px;transform:translateX(-50%);transition:left .4s}
+.bar-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--tmu)}
+.interp-text{font-size:13px;font-weight:600;margin-top:6px}
+.al{border-radius:var(--rs);padding:11px 13px;font-size:13px;line-height:1.6;margin-top:10px;display:none}
+.al.on{display:flex;gap:8px;align-items:flex-start}
+.aw{background:var(--al);border:1px solid #fcd34d;color:#78350f}
+.ad{background:var(--rl);border:1px solid #fca5a5;color:#7f1d1d}
+.ai{background:var(--acl);border:1px solid #93c5fd;color:var(--acd)}
+.sw{display:flex;flex-direction:column;gap:var(--gap)}
+.wg{background:var(--w);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden}
+.wh{padding:11px 14px;border-bottom:1px solid var(--br);font-size:12px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:6px}
+.wb{padding:12px 14px}
+.wr{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--br);font-size:12px}
+.wr:last-child{border-bottom:none}
+.wl{color:var(--tmu)}.wv{font-weight:500;color:var(--t);font-family:var(--mono);font-size:11px;text-align:right;max-width:160px}
+.ct{background:var(--w);border:1.5px solid var(--br);border-radius:var(--r);padding:24px 20px;margin-top:var(--gap)}
+@media(min-width:640px){.ct{padding:28px 28px}}
+.ct h2{font-size:19px;font-weight:600;color:var(--navy);margin-bottom:12px;letter-spacing:-.3px}
+.ct h3{font-size:15px;font-weight:600;color:var(--navy);margin:20px 0 7px}
+.ct p{font-size:14px;color:var(--tm);line-height:1.8;margin-bottom:11px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
+.tb{width:100%;border-collapse:collapse;font-size:13px;min-width:380px}
+.tb th{background:var(--bg);padding:9px 10px;text-align:left;font-weight:600;color:var(--navy);border-bottom:1.5px solid var(--br);white-space:nowrap}
+.tb td{padding:9px 10px;border-bottom:1px solid var(--br);color:var(--tm);vertical-align:top}
+.tb tr:last-child td{border-bottom:none}
+.fi{border-bottom:1px solid var(--br);padding:14px 0}
+.fi:last-child{border-bottom:none}
+.fq{font-size:14px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:2px 0}
+.fi-ico{flex-shrink:0;color:var(--acm);font-size:18px;line-height:1;transition:transform .2s}
+.fa{font-size:13px;color:var(--tm);line-height:1.75;padding-top:8px;display:none}
+.fi.op .fa{display:block}.fi.op .fi-ico{transform:rotate(45deg)}
+.disc{background:var(--al);border:1px solid #fcd34d;border-radius:var(--rs);padding:12px 14px;font-size:12px;color:#78350f;line-height:1.6;display:flex;gap:8px;margin-top:16px}
+.rg2{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px;margin-top:12px}
+.rc2{background:var(--bg);border:1.5px solid var(--br);border-radius:var(--rs);padding:11px 12px;display:block;transition:all .15s;text-decoration:none}
+.rc2:hover{border-color:var(--acm);background:var(--acl)}
+.rc2 .rn{font-size:13px;font-weight:600;color:var(--navy)}
+.rc2 .rd{font-size:11px;color:var(--tmu);margin-top:2px}
+.ft{background:var(--navy);color:rgba(255,255,255,.55);text-align:center;padding:20px var(--px);font-size:12px}
+.ft a{color:rgba(255,255,255,.75)}
+</style>
+</head>
+<body>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
+<nav class="topnav">
+  <a href="https://rxmedcalc.com" class="nav-logo">Rx<em>Med</em>Calc</a>
+  <a href="https://rxmedcalc.com/medical-calculators" class="back-link">← Calculators</a>
+</nav>
+<div class="bc">
+  <a href="https://rxmedcalc.com">Home</a><span>›</span>
+  <a href="https://rxmedcalc.com/medical-calculators">Medical Calculators</a><span>›</span>
+  <span>Growth Velocity Calculator</span>
+</div>
+
+<section class="hero">
+  <div class="hi">
+    <div class="hbadge">📏 Paediatrics · Growth Assessment</div>
+    <h1>Growth Velocity Calculator</h1>
+    <p>India · Height velocity & weight velocity · WHO reference ranges · Growth faltering detection · IAP aligned</p>
+    <div class="hpills">
+      <span class="hp">Height velocity cm/yr</span>
+      <span class="hp">Weight velocity kg/yr</span>
+      <span class="hp">WHO reference</span>
+      <span class="hp">Growth faltering</span>
+    </div>
+  </div>
+</section>
+
+<div class="pw">
+  <div class="grid">
+    <div class="card">
+      <div class="ch">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-3 3"/></svg>
+        <h2>Growth Velocity Calculator</h2>
+      </div>
+      <div class="cb">
+
+        <div class="seg">
+          <button class="sb on" data-group="measure" onclick="setMeasure('height',this)">📏 Height velocity</button>
+          <button class="sb" data-group="measure" onclick="setMeasure('weight',this)">⚖️ Weight velocity</button>
+          <button class="sb" data-group="measure" onclick="setMeasure('both',this)">Both</button>
+        </div>
+
+        <div class="r2">
+          <div class="f">
+            <label class="lb">Age at first measurement <small>(years)</small></label>
+            <input class="inp" id="age1" type="number" placeholder="e.g. 4.5" min="0" max="18" step="0.25" inputmode="decimal">
+          </div>
+          <div class="f">
+            <label class="lb">Age at second measurement <small>(years)</small></label>
+            <input class="inp" id="age2" type="number" placeholder="e.g. 5.0" min="0" max="18" step="0.25" inputmode="decimal">
+          </div>
+        </div>
+
+        <div id="height-inputs">
+          <div class="r2">
+            <div class="f">
+              <label class="lb">Height 1 <small>(cm)</small></label>
+              <input class="inp" id="ht1" type="number" placeholder="e.g. 100" min="40" max="220" step="0.1" inputmode="decimal">
+            </div>
+            <div class="f">
+              <label class="lb">Height 2 <small>(cm)</small></label>
+              <input class="inp" id="ht2" type="number" placeholder="e.g. 103" min="40" max="220" step="0.1" inputmode="decimal">
+            </div>
+          </div>
+        </div>
+
+        <div id="weight-inputs" style="display:none">
+          <div class="r2">
+            <div class="f">
+              <label class="lb">Weight 1 <small>(kg)</small></label>
+              <input class="inp" id="wt1" type="number" placeholder="e.g. 16" min="2" max="120" step="0.1" inputmode="decimal">
+            </div>
+            <div class="f">
+              <label class="lb">Weight 2 <small>(kg)</small></label>
+              <input class="inp" id="wt2" type="number" placeholder="e.g. 17.5" min="2" max="120" step="0.1" inputmode="decimal">
+            </div>
+          </div>
+        </div>
+
+        <div class="f">
+          <label class="lb">Sex</label>
+          <select class="sel" id="sex">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+        </div>
+
+        <button class="btn" onclick="calc()">Calculate Growth Velocity</button>
+
+        <div class="res" id="res">
+          <div class="rl">Growth Velocity</div>
+          <div class="rm" id="r-hv">—</div>
+          <div class="rsub" id="r-sub">—</div>
+          <div class="rg">
+            <div class="rc"><div class="xl">Interval</div><div class="xv" id="r-interval">—</div></div>
+            <div class="rc"><div class="xl">Age (mid-point)</div><div class="xv" id="r-age">—</div></div>
+            <div class="rc"><div class="xl">Weight velocity</div><div class="xv" id="r-wv">—</div></div>
+            <div class="rc"><div class="xl">Interpretation</div><div class="xv" id="r-interp">—</div></div>
+          </div>
+          <div class="interp" id="interp-bar-wrap" style="display:none">
+            <div class="interp-label">Height velocity relative to normal range</div>
+            <div class="bar-track"><div class="bar-needle" id="bar-needle"></div></div>
+            <div class="bar-labels"><span>Slow</span><span>Normal</span><span>Fast</span></div>
+            <div class="interp-text" id="interp-text"></div>
+          </div>
+        </div>
+        <div class="al aw" id="warn"><span>⚠️</span><span id="warn-t"></span></div>
+        <div class="al ad" id="danger"><span>⛔</span><span id="danger-t"></span></div>
+        <div class="al ai" id="info"><span>ℹ️</span><span id="info-t"></span></div>
+
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sw">
+      <div class="wg">
+        <div class="wh">📊 Normal height velocity</div>
+        <div class="wb">
+          <div class="wr"><span class="wl">0–1 year</span><span class="wv">~25 cm/year</span></div>
+          <div class="wr"><span class="wl">1–2 years</span><span class="wv">~12 cm/year</span></div>
+          <div class="wr"><span class="wl">2–3 years</span><span class="wv">~8–9 cm/year</span></div>
+          <div class="wr"><span class="wl">3–4 years</span><span class="wv">~7–8 cm/year</span></div>
+          <div class="wr"><span class="wl">4–10 years</span><span class="wv">5–7 cm/year</span></div>
+          <div class="wr"><span class="wl">Pubertal peak</span><span class="wv">8–12 cm/year</span></div>
+        </div>
+      </div>
+      <div class="wg">
+        <div class="wh">⚠️ When to investigate</div>
+        <div class="wb" style="font-size:12px;color:var(--tm);line-height:1.7">
+          <p>⚠️ Height velocity &lt;4 cm/year in mid-childhood (4–10 yrs)</p>
+          <p style="margin-top:6px">⚠️ Falling across 2 major centile lines</p>
+          <p style="margin-top:6px">⚠️ Height velocity below 25th percentile for age</p>
+          <p style="margin-top:6px">⚠️ Pubertal growth spurt absent by expected age</p>
+          <p style="margin-top:6px">⚠️ Discordant height &amp; weight velocity (suggests specific cause)</p>
+        </div>
+      </div>
+      <div class="wg">
+        <div class="wh">🔍 Causes of low velocity</div>
+        <div class="wb" style="font-size:12px;color:var(--tm);line-height:1.7">
+          <p>• Growth hormone deficiency</p>
+          <p style="margin-top:4px">• Hypothyroidism</p>
+          <p style="margin-top:4px">• Coeliac disease / malabsorption</p>
+          <p style="margin-top:4px">• Chronic renal disease</p>
+          <p style="margin-top:4px">• Nutritional deficiency (India: common)</p>
+          <p style="margin-top:4px">• Constitutional delay of growth</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ct">
+    <h2>Normal Height Velocity Reference — WHO (both sexes, cm/year)</h2>
+    <div class="tw">
+      <table class="tb">
+        <thead><tr><th>Age (years)</th><th>Boys median (cm/yr)</th><th>Girls median (cm/yr)</th><th>Alarm threshold</th></tr></thead>
+        <tbody>
+          <tr><td>0–1</td><td>~25</td><td>~24</td><td>&lt;18 cm/yr</td></tr>
+          <tr><td>1–2</td><td>~12</td><td>~11.5</td><td>&lt;8 cm/yr</td></tr>
+          <tr><td>2–3</td><td>~8.5</td><td>~8</td><td>&lt;6 cm/yr</td></tr>
+          <tr><td>3–4</td><td>~7.5</td><td>~7</td><td>&lt;5.5 cm/yr</td></tr>
+          <tr><td>4–6</td><td>~6.5</td><td>~6.5</td><td>&lt;4.5 cm/yr</td></tr>
+          <tr><td>6–10</td><td>~5.5–6</td><td>~5.5–6</td><td>&lt;4 cm/yr</td></tr>
+          <tr><td>Pubertal peak (boys ~13yr)</td><td>9–12</td><td>—</td><td>&lt;6 cm/yr</td></tr>
+          <tr><td>Pubertal peak (girls ~11yr)</td><td>—</td><td>8–10</td><td>&lt;5 cm/yr</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:24px">Growth Velocity — Clinical Guide for Indian Paediatricians</h2>
+
+    <h3>How to calculate growth velocity</h3>
+    <p>Growth velocity = (Current measurement − Previous measurement) ÷ Time interval in years. For height: express cm/year. For weight: express kg/year or g/day in infants. The minimum interval for reliable height velocity measurement is 3 months — shorter intervals introduce too much measurement error. An interval of 6 months gives a better estimate; 12 months is ideal for annual review. Always use the same instrument, same time of day (morning — height reduces by ~1–2 cm through the day), and the same observer if possible.</p>
+
+    <h3>Growth faltering in Indian children</h3>
+    <p>India has among the world's highest rates of childhood stunting and wasting (NFHS-5: 35.5% stunting, 19.3% wasting under 5 years). Growth velocity monitoring is essential to distinguish constitutional short stature (normal velocity on a low centile) from pathological growth failure (falling velocity). In resource-limited settings, weight velocity is often the first indicator tracked. A weight velocity below expected for age — or static weight for more than 3 months in a child under 5 — should trigger evaluation for nutritional, infective, or systemic causes.</p>
+
+    <h3>Minimum interval for accurate measurement</h3>
+    <p>Height measurement has inherent error of ±0.3–0.5 cm per measurement. Over a 3-month interval, a true velocity of 5 cm/year produces only 1.25 cm growth — within the measurement error range. A 6-month interval gives 2.5 cm, which is more reliably above measurement noise. For this reason, growth velocity should not be calculated from intervals shorter than 3 months except in infants (where velocity is rapid enough to be measurable monthly).</p>
+
+    <h2 style="margin-top:24px">Frequently Asked Questions</h2>
+    <div>
+      <div class="fi"><div class="fq" onclick="tf(this)">How to calculate growth velocity?<span class="fi-ico">+</span></div><div class="fa">Growth velocity = (Measurement 2 − Measurement 1) ÷ (Age 2 − Age 1 in years). Example: Height 100 cm at age 4.0 years and 105.5 cm at age 4.5 years → Velocity = 5.5 ÷ 0.5 = 11 cm/year. Annualise by multiplying the interval measurement by (12 ÷ interval in months).</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What height velocity is too slow for a 5-year-old?<span class="fi-ico">+</span></div><div class="fa">Normal height velocity at age 5 is approximately 6 cm/year. A velocity below 4 cm/year at this age should prompt investigation for growth hormone deficiency, hypothyroidism, coeliac disease, or chronic systemic illness. In India, nutritional causes should also be considered before pursuing endocrine workup.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What investigations should be done for low height velocity?<span class="fi-ico">+</span></div><div class="fa">Baseline investigations: bone age (X-ray left wrist), thyroid function tests (TSH, free T4), full blood count, ESR, coeliac antibodies (anti-tTG IgA), serum albumin, urine analysis, and renal function. If these are normal, refer to paediatric endocrinology for IGF-1, IGFBP-3, and growth hormone stimulation testing.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What is the growth velocity in NICU premature infants?<span class="fi-ico">+</span></div><div class="fa">Target growth velocity in preterm infants is 15–20 g/kg/day for weight, approximately matching intrauterine growth rates. For length, target ~1 cm/week in the first weeks. NICU growth monitoring uses corrected (post-conceptional) age rather than chronological age. Weight velocity below 10 g/kg/day suggests nutritional insufficiency in a preterm infant.</div></div>
+    </div>
+    <div class="disc"><span>⚠️</span><span>Decision-support tool for trained healthcare professionals. Growth velocity interpretation requires clinical context. A single low velocity reading should be confirmed before initiating investigation.</span></div>
+
+    <h2 style="margin-top:24px">Related Tools</h2>
+    <div class="rg2">
+      <a href="/medical-calculators/growth-chart" class="rc2"><div class="rn">Growth Chart</div><div class="rd">Percentile plotting</div></a>
+      <a href="/medical-calculators/bmi-calculator" class="rc2"><div class="rn">BMI Calculator</div><div class="rd">Paediatric &amp; adult</div></a>
+      <a href="/medical-calculators/developmental-milestones" class="rc2"><div class="rn">Dev Milestones</div><div class="rd">Milestone checklist</div></a>
+      <a href="/medical-calculators/neonatal-jaundice" class="rc2"><div class="rn">Neonatal Jaundice</div><div class="rd">Bilirubin threshold</div></a>
+      <a href="/medical-calculators/iron-deficit" class="rc2"><div class="rn">Iron Deficit</div><div class="rd">Anaemia · IV iron dose</div></a>
+    </div>
+  </div>
+</div>
+
+<footer class="ft">
+  <p>RxMedCalc · Free Clinical Tools for India · <a href="/medical-calculators">Medical Calculators</a> · <a href="/drug-doses">Drug Doses</a></p>
+</footer>
+
+<script>
+let measure = 'height';
+
+// WHO height velocity medians (cm/year) by mid-age, both sexes average
+// [midAge, median, alarm_threshold]
+const hvRef = [
+  [0.5, 24.5, 18], [1.5, 11.8, 8], [2.5, 8.3, 6],
+  [3.5, 7.2, 5.5], [5,   6.4, 4.5], [8, 5.8, 4],
+  [11,  6.0, 4], [13,  8.5, 5], [15, 5.0, 3], [17, 2.5, 1.5]
+];
+
+function getHvRef(age) {
+  for (let i = hvRef.length - 1; i >= 0; i--) {
+    if (age >= hvRef[i][0] - 0.75) return hvRef[i];
+  }
+  return hvRef[0];
+}
+
+function setMeasure(m, btn) {
+  measure = m;
+  document.querySelectorAll('[data-group="measure"]').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById('height-inputs').style.display = (m === 'weight') ? 'none' : 'block';
+  document.getElementById('weight-inputs').style.display = (m === 'height') ? 'none' : 'block';
+  hideAll();
+}
+
+function hideAll() {
+  ['res','warn','danger','info'].forEach(id => document.getElementById(id).classList.remove('on'));
+}
+function show(id) { document.getElementById(id).classList.add('on'); }
+function set(id, v) { document.getElementById(id).textContent = v; }
+function tf(el) { el.closest('.fi').classList.toggle('op'); }
+
+function calc() {
+  hideAll();
+  const age1 = parseFloat(document.getElementById('age1').value);
+  const age2 = parseFloat(document.getElementById('age2').value);
+
+  if (!age1 && age1 !== 0 || !age2) { alert('Please enter both ages.'); return; }
+  if (age2 <= age1) { alert('Second age must be greater than first age.'); return; }
+
+  const intervalYears = age2 - age1;
+  const intervalMonths = intervalYears * 12;
+  const midAge = (age1 + age2) / 2;
+
+  if (intervalMonths < 3) {
+    document.getElementById('warn-t').textContent =
+      'Interval is less than 3 months. Growth velocity calculated from such short intervals has high measurement error and low reliability. Use an interval of at least 3–6 months.';
+    show('warn');
+  }
+
+  let hvText = '—', wvText = '—', interpText = '', interpColor = '';
+  let showBar = false, needlePos = 50;
+
+  if (measure !== 'weight') {
+    const ht1 = parseFloat(document.getElementById('ht1').value);
+    const ht2 = parseFloat(document.getElementById('ht2').value);
+    if (!ht1 || !ht2) { alert('Please enter both height measurements.'); return; }
+    if (ht2 < ht1) {
+      document.getElementById('danger-t').textContent =
+        'Second height is less than first height. Height cannot decrease (measurement error or incorrect entry). Please check values.';
+      show('danger'); return;
+    }
+    const hv = ((ht2 - ht1) / intervalYears).toFixed(1);
+    hvText = hv + ' cm/year';
+
+    // Interpretation
+    const ref = getHvRef(midAge);
+    const median = ref[1], alarm = ref[2];
+    const hvNum = parseFloat(hv);
+    showBar = true;
+    // needle: 0%=alarm, 50%=median, 100%=median*1.5
+    const lo = alarm, hi = median * 1.5;
+    needlePos = Math.min(100, Math.max(0, ((hvNum - lo) / (hi - lo)) * 100));
+
+    if (hvNum < alarm) {
+      interpText = '⛔ Below alarm threshold — investigate promptly';
+      interpColor = '#7f1d1d';
+      document.getElementById('danger-t').textContent =
+        `Height velocity (${hv} cm/yr) is below the alarm threshold (${alarm} cm/yr) for age ${midAge.toFixed(1)} years. Investigate: bone age, TFT, coeliac screen, IGF-1. Refer paediatric endocrinology if no cause found.`;
+      show('danger');
+    } else if (hvNum < median * 0.75) {
+      interpText = '⚠️ Below 25th percentile — monitor closely';
+      interpColor = '#78350f';
+      document.getElementById('warn-t').textContent =
+        `Height velocity (${hv} cm/yr) is below the 25th percentile for age. Expected median: ${median} cm/yr. If this persists at next visit, initiate investigation.`;
+      show('warn');
+    } else if (hvNum <= median * 1.25) {
+      interpText = '✅ Normal height velocity for age';
+      interpColor = '#14532d';
+    } else {
+      interpText = '✅ Above average — reassuring';
+      interpColor = '#14532d';
+      document.getElementById('info-t').textContent =
+        `Height velocity (${hv} cm/yr) is above expected median (${median} cm/yr) for age. If unexpectedly high, consider precocious puberty — check pubertal staging.`;
+      show('info');
+    }
+  }
+
+  if (measure !== 'height') {
+    const wt1 = parseFloat(document.getElementById('wt1').value);
+    const wt2 = parseFloat(document.getElementById('wt2').value);
+    if (!wt1 || !wt2) { alert('Please enter both weight measurements.'); return; }
+    const wv = ((wt2 - wt1) / intervalYears).toFixed(2);
+    wvText = wv + ' kg/year';
+    if (parseFloat(wv) < 0) {
+      document.getElementById('warn-t').textContent =
+        'Weight has decreased over this interval. This is abnormal in a growing child — evaluate for acute illness, malnutrition, or malabsorption.';
+      show('warn');
+    }
+  }
+
+  set('r-hv',       measure === 'weight' ? wvText : hvText);
+  set('r-sub',      measure === 'weight' ? 'Weight velocity' :
+                    measure === 'both'   ? 'Height velocity' : 'Height velocity');
+  set('r-interval', intervalMonths.toFixed(1) + ' months');
+  set('r-age',      midAge.toFixed(1) + ' years');
+  set('r-wv',       wvText);
+  set('r-interp',   interpText || '—');
+  show('res');
+
+  if (showBar) {
+    document.getElementById('interp-bar-wrap').style.display = 'block';
+    document.getElementById('bar-needle').style.left = needlePos + '%';
+    document.getElementById('interp-text').textContent = interpText;
+    document.getElementById('interp-text').style.color = interpColor;
+  } else {
+    document.getElementById('interp-bar-wrap').style.display = 'none';
+  }
+
+  if (typeof umami !== 'undefined') umami.track('calc-growth-velocity');
+}
+</script>
+<script src="/assets/shared-nav.js"></script>
+</body>
+</html>

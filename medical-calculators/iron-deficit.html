@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="iron-deficit-calculator">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iron Deficit Calculator India | Ganzoni Equation | InFed | RxMedCalc</title>
+<meta name="description" content="Calculate iron deficit using the Ganzoni equation. Total iron dose for IV iron therapy, iron dextran and iron sucrose dosing. Pregnancy and CKD iron deficit calculator. India clinical use.">
+<meta name="keywords" content="iron deficit calculator, calculate iron deficit, iron deficit calculation, infed calculator, ganzoni equation, iron dextran calculator, iron sucrose dose, iron deficit pregnancy, iron deficit CKD, IV iron dose calculator India">
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/iron-deficit">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Iron Deficit Calculator — RxMedCalc","description":"Iron deficit calculator using the Ganzoni equation for total iron replacement dose. IV iron therapy dosing for anaemia, pregnancy, and CKD. India clinical context.","url":"https://rxmedcalc.com/medical-calculators/iron-deficit","audience":{"@type":"MedicalAudience","audienceType":"Clinician"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Medical Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"Iron Deficit Calculator","item":"https://rxmedcalc.com/medical-calculators/iron-deficit"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to calculate iron deficit?","acceptedAnswer":{"@type":"Answer","text":"Iron deficit is calculated using the Ganzoni equation: Total iron (mg) = Weight (kg) × (Target Hb − Actual Hb) × 2.4 + Iron stores (mg). Iron stores are typically 500 mg for adults >35 kg, 15 mg/kg for patients under 35 kg. This gives the total elemental iron required for IV replacement."}},{"@type":"Question","name":"How to calculate iron deficit in pregnancy?","acceptedAnswer":{"@type":"Answer","text":"In pregnancy, the Ganzoni equation is used with the target Hb adjusted by trimester: 11 g/dL in first and third trimester, 10.5 g/dL in second trimester (WHO). Iron stores are typically omitted or set to 0 in iron-deficient pregnant women. IV iron (iron sucrose or ferric carboxymaltose) is preferred in second and third trimester."}},{"@type":"Question","name":"How to calculate iron deficit in CKD?","acceptedAnswer":{"@type":"Answer","text":"In CKD patients on haemodialysis, target Hb is 10–11.5 g/dL (KDIGO). Iron deficit = Body weight × (Target Hb − Actual Hb) × 2.4 + 500 mg stores. IV iron (iron sucrose 100–200 mg per dialysis session) is preferred over oral iron in dialysis-dependent CKD due to poor oral absorption and GI intolerance."}}]}</script>
+
+<link rel="stylesheet" href="/assets/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:#f7f9fc;color:#1a2535;line-height:1.6;font-size:16px;min-width:0}
+a{color:#b45309;text-decoration:none}a:hover{text-decoration:underline}
+:root{
+  --ac:#92400e;--acm:#b45309;--acl:#fffbeb;--acd:#78350f;
+  --navy:#0d2b45;--t:#1a2535;--tm:#4a5568;--tmu:#8896a8;
+  --br:#e2e8f0;--bg:#f7f9fc;--w:#fff;
+  --al:#fffbeb;--rl:#fef2f2;
+  --r:12px;--rs:8px;--mono:'DM Mono',monospace;
+  --px:16px;--gap:12px;
+}
+@media(min-width:640px){:root{--px:24px;--gap:16px}}
+.topnav{background:var(--w);border-bottom:1px solid var(--br);padding:0 var(--px);height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+.nav-logo{font-weight:600;font-size:17px;color:var(--navy);text-decoration:none}.nav-logo em{color:#0e9f7e;font-style:normal}
+.back-link{font-size:13px;color:var(--tm);display:flex;align-items:center;gap:4px;white-space:nowrap;text-decoration:none}.back-link:hover{color:var(--acm)}
+.bc{background:var(--w);border-bottom:1px solid var(--br);padding:8px var(--px);font-size:12px;color:var(--tmu);display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.bc a{color:var(--navy);text-decoration:none}.bc a:hover{text-decoration:underline}
+.hero{background:linear-gradient(135deg,#431407 0%,#92400e 55%,#b45309 100%);padding:32px var(--px) 28px;position:relative;overflow:hidden}
+.hero::after{content:'🩸';position:absolute;right:-10px;bottom:-24px;font-size:120px;opacity:.07;pointer-events:none;line-height:1}
+.hi{max-width:820px;margin:0 auto;position:relative}
+.hbadge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:3px 11px;font-size:11px;color:rgba(255,255,255,.85);margin-bottom:10px}
+.hero h1{font-size:clamp(20px,4vw,30px);font-weight:600;color:#fff;margin-bottom:6px;letter-spacing:-.3px;line-height:1.25}
+.hero p{font-size:13px;color:rgba(255,255,255,.72);margin-bottom:14px;line-height:1.55}
+.hpills{display:flex;gap:6px;flex-wrap:wrap}
+.hp{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:3px 10px;font-size:11px;color:rgba(255,255,255,.85)}
+.pw{max-width:820px;margin:0 auto;padding:20px var(--px) 60px}
+.grid{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+@media(min-width:760px){.grid{grid-template-columns:1fr 280px;align-items:start}}
+.card{background:var(--w);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden}
+.ch{padding:13px 16px;border-bottom:1px solid var(--br);display:flex;align-items:center;gap:9px}
+.ch h2{font-size:14px;font-weight:600;color:var(--acd)}
+.cb{padding:16px}
+.seg{display:flex;background:var(--bg);border:1.5px solid var(--br);border-radius:var(--rs);padding:3px;gap:3px;margin-bottom:14px;flex-wrap:wrap}
+.sb{flex:1;min-width:70px;padding:8px 4px;border:none;background:transparent;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:var(--tm);cursor:pointer;transition:all .15s;text-align:center;min-height:44px}
+.sb.on{background:var(--w);color:var(--acd);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.f{margin-bottom:13px}
+.lb{display:block;font-size:12px;font-weight:500;color:var(--t);margin-bottom:5px}
+.lb small{color:var(--tmu);font-weight:400}
+.inp,.sel{width:100%;padding:10px 12px;border:1.5px solid var(--br);border-radius:var(--rs);font-family:'DM Sans',sans-serif;font-size:16px;color:var(--t);background:var(--w);outline:none;transition:border-color .15s}
+@media(min-width:480px){.inp,.sel{font-size:14px}}
+.inp:focus,.sel:focus{border-color:var(--acm)}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:360px){.r2{grid-template-columns:1fr}}
+.btn{width:100%;padding:13px;background:var(--acm);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;border:none;border-radius:var(--rs);cursor:pointer;transition:background .15s,transform .1s;margin-top:6px;min-height:48px}
+.btn:hover{background:var(--acd)}.btn:active{transform:scale(.98)}
+.res{background:var(--acl);border:1.5px solid #fbbf24;border-radius:var(--rs);padding:16px;margin-top:14px;display:none}
+.res.on{display:block}
+.rl{font-size:11px;font-weight:600;color:var(--acd);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.rm{font-size:28px;font-weight:600;color:var(--acd);line-height:1.2;margin-bottom:3px}
+.rsub{font-size:13px;color:var(--ac);margin-bottom:10px}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:340px){.rg{grid-template-columns:1fr}}
+.rc{background:var(--w);border-radius:7px;padding:9px 11px}
+.rc .xl{font-size:10px;color:var(--tmu);margin-bottom:2px}
+.rc .xv{font-size:13px;font-weight:600;color:var(--acd);font-family:var(--mono)}
+.al{border-radius:var(--rs);padding:11px 13px;font-size:13px;line-height:1.6;margin-top:10px;display:none}
+.al.on{display:flex;gap:8px;align-items:flex-start}
+.aw{background:var(--al);border:1px solid #fcd34d;color:#78350f}
+.ad{background:var(--rl);border:1px solid #fca5a5;color:#7f1d1d}
+.ai{background:var(--acl);border:1px solid #fcd34d;color:var(--acd)}
+.formula-box{background:#fef3c7;border:1.5px solid #fcd34d;border-radius:var(--rs);padding:14px;margin-bottom:14px}
+.formula-box strong{display:block;font-size:12px;font-weight:600;color:var(--acd);margin-bottom:6px}
+.formula-box code{font-family:var(--mono);font-size:12px;color:#92400e;background:rgba(255,255,255,.6);padding:6px 10px;border-radius:5px;display:block;line-height:1.7}
+.sw{display:flex;flex-direction:column;gap:var(--gap)}
+.wg{background:var(--w);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden}
+.wh{padding:11px 14px;border-bottom:1px solid var(--br);font-size:12px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:6px}
+.wb{padding:12px 14px}
+.wr{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--br);font-size:12px}
+.wr:last-child{border-bottom:none}
+.wl{color:var(--tmu)}.wv{font-weight:500;color:var(--t);font-family:var(--mono);font-size:11px;text-align:right;max-width:160px}
+.ct{background:var(--w);border:1.5px solid var(--br);border-radius:var(--r);padding:24px 20px;margin-top:var(--gap)}
+@media(min-width:640px){.ct{padding:28px 28px}}
+.ct h2{font-size:19px;font-weight:600;color:var(--navy);margin-bottom:12px;letter-spacing:-.3px}
+.ct h3{font-size:15px;font-weight:600;color:var(--navy);margin:20px 0 7px}
+.ct p{font-size:14px;color:var(--tm);line-height:1.8;margin-bottom:11px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
+.tb{width:100%;border-collapse:collapse;font-size:13px;min-width:380px}
+.tb th{background:var(--bg);padding:9px 10px;text-align:left;font-weight:600;color:var(--navy);border-bottom:1.5px solid var(--br);white-space:nowrap}
+.tb td{padding:9px 10px;border-bottom:1px solid var(--br);color:var(--tm);vertical-align:top}
+.tb tr:last-child td{border-bottom:none}
+.fi{border-bottom:1px solid var(--br);padding:14px 0}
+.fi:last-child{border-bottom:none}
+.fq{font-size:14px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:2px 0}
+.fi-ico{flex-shrink:0;color:var(--acm);font-size:18px;line-height:1;transition:transform .2s}
+.fa{font-size:13px;color:var(--tm);line-height:1.75;padding-top:8px;display:none}
+.fi.op .fa{display:block}.fi.op .fi-ico{transform:rotate(45deg)}
+.disc{background:var(--al);border:1px solid #fcd34d;border-radius:var(--rs);padding:12px 14px;font-size:12px;color:#78350f;line-height:1.6;display:flex;gap:8px;margin-top:16px}
+.rg2{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px;margin-top:12px}
+.rc2{background:var(--bg);border:1.5px solid var(--br);border-radius:var(--rs);padding:11px 12px;display:block;transition:all .15s;text-decoration:none}
+.rc2:hover{border-color:var(--acm);background:var(--acl)}
+.rc2 .rn{font-size:13px;font-weight:600;color:var(--navy)}
+.rc2 .rd{font-size:11px;color:var(--tmu);margin-top:2px}
+.ft{background:var(--navy);color:rgba(255,255,255,.55);text-align:center;padding:20px var(--px);font-size:12px}
+.ft a{color:rgba(255,255,255,.75)}
+</style>
+</head>
+<body>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
+<nav class="topnav">
+  <a href="https://rxmedcalc.com" class="nav-logo">Rx<em>Med</em>Calc</a>
+  <a href="https://rxmedcalc.com/medical-calculators" class="back-link">← Calculators</a>
+</nav>
+<div class="bc">
+  <a href="https://rxmedcalc.com">Home</a><span>›</span>
+  <a href="https://rxmedcalc.com/medical-calculators">Medical Calculators</a><span>›</span>
+  <span>Iron Deficit Calculator</span>
+</div>
+
+<section class="hero">
+  <div class="hi">
+    <div class="hbadge">🩸 Haematology · IV Iron Therapy</div>
+    <h1>Iron Deficit Calculator</h1>
+    <p>India · Ganzoni Equation · IV Iron Dose · Pregnancy · CKD · InFed · Iron Sucrose · Ferric Carboxymaltose</p>
+    <div class="hpills">
+      <span class="hp">Ganzoni equation</span>
+      <span class="hp">Pregnancy context</span>
+      <span class="hp">CKD / dialysis</span>
+      <span class="hp">IV iron dosing</span>
+    </div>
+  </div>
+</section>
+
+<div class="pw">
+  <div class="grid">
+    <div class="card">
+      <div class="ch">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#78350f" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <h2>Iron Deficit (Ganzoni Equation)</h2>
+      </div>
+      <div class="cb">
+
+        <div class="seg">
+          <button class="sb on" data-group="ctx" onclick="setCtx('general',this)">General</button>
+          <button class="sb" data-group="ctx" onclick="setCtx('pregnancy',this)">Pregnancy</button>
+          <button class="sb" data-group="ctx" onclick="setCtx('ckd',this)">CKD</button>
+        </div>
+
+        <div class="formula-box">
+          <strong>📐 Ganzoni Equation</strong>
+          <code>Total iron (mg) = Weight (kg) × (Target Hb − Actual Hb) × 2.4 + Iron stores (mg)</code>
+        </div>
+
+        <div class="r2">
+          <div class="f">
+            <label class="lb">Weight <small>(kg)</small></label>
+            <input class="inp" id="wt" type="number" placeholder="e.g. 60" min="10" max="200" step="0.5" inputmode="decimal">
+          </div>
+          <div class="f">
+            <label class="lb">Actual Hb <small>(g/dL)</small></label>
+            <input class="inp" id="hb-actual" type="number" placeholder="e.g. 7.5" min="3" max="18" step="0.1" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="f">
+          <label class="lb">Target Hb <small id="target-hint">(g/dL) — recommended: 12 g/dL for non-pregnant adults</small></label>
+          <input class="inp" id="hb-target" type="number" placeholder="e.g. 12" min="8" max="15" step="0.1" inputmode="decimal">
+        </div>
+
+        <div class="f" id="stores-row">
+          <label class="lb">Iron stores <small>(mg) — 500 mg if >35 kg; 15 mg/kg if ≤35 kg</small></label>
+          <input class="inp" id="stores" type="number" placeholder="500" min="0" max="1000" step="50" inputmode="decimal">
+        </div>
+
+        <!-- Pregnancy-specific -->
+        <div id="preg-sec" style="display:none">
+          <div class="f">
+            <label class="lb">Trimester</label>
+            <select class="sel" id="trimester">
+              <option value="1">1st trimester (target Hb: 11 g/dL)</option>
+              <option value="2">2nd trimester (target Hb: 10.5 g/dL)</option>
+              <option value="3">3rd trimester (target Hb: 11 g/dL)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- IV iron product -->
+        <div class="f">
+          <label class="lb">IV Iron product <small>(India)</small></label>
+          <select class="sel" id="iv-product">
+            <option value="sucrose">Iron sucrose (Venofer / Feronia) — 100mg/5mL</option>
+            <option value="fcm">Ferric carboxymaltose (Injectafer / Encicarb) — 500mg/10mL</option>
+            <option value="dextran">Iron dextran (Imferon / Dexorange inj) — 50mg/mL</option>
+          </select>
+        </div>
+
+        <button class="btn" onclick="calc()">Calculate Iron Deficit</button>
+
+        <div class="res" id="res">
+          <div class="rl">Total Iron Deficit</div>
+          <div class="rm" id="r-total">— mg</div>
+          <div class="rsub" id="r-sub">Total elemental iron required</div>
+          <div class="rg">
+            <div class="rc"><div class="xl">Iron deficit (body)</div><div class="xv" id="r-body">—</div></div>
+            <div class="rc"><div class="xl">Iron stores</div><div class="xv" id="r-stores">—</div></div>
+            <div class="rc"><div class="xl">IV doses needed</div><div class="xv" id="r-doses">—</div></div>
+            <div class="rc"><div class="xl">Product</div><div class="xv" id="r-product">—</div></div>
+          </div>
+        </div>
+        <div class="al aw" id="warn"><span>⚠️</span><span id="warn-t"></span></div>
+        <div class="al ad" id="danger"><span>⛔</span><span id="danger-t"></span></div>
+        <div class="al ai" id="info"><span>ℹ️</span><span id="info-t"></span></div>
+
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sw">
+      <div class="wg">
+        <div class="wh">🩸 IV Iron products — India</div>
+        <div class="wb">
+          <div class="wr"><span class="wl">Iron sucrose</span><span class="wv">100–200mg per session</span></div>
+          <div class="wr"><span class="wl">Ferric carboxymaltose</span><span class="wv">Up to 1000mg single dose</span></div>
+          <div class="wr"><span class="wl">Iron dextran</span><span class="wv">Total dose infusion</span></div>
+          <div class="wr"><span class="wl">Max single dose (sucrose)</span><span class="wv">200 mg</span></div>
+          <div class="wr"><span class="wl">Max single dose (FCM)</span><span class="wv">1000 mg</span></div>
+          <div class="wr"><span class="wl">Test dose needed</span><span class="wv">Iron dextran only</span></div>
+        </div>
+      </div>
+      <div class="wg">
+        <div class="wh">📊 Target Hb reference</div>
+        <div class="wb">
+          <div class="wr"><span class="wl">Adult female</span><span class="wv">12 g/dL</span></div>
+          <div class="wr"><span class="wl">Adult male</span><span class="wv">13 g/dL</span></div>
+          <div class="wr"><span class="wl">Pregnancy T1 & T3</span><span class="wv">11 g/dL (WHO)</span></div>
+          <div class="wr"><span class="wl">Pregnancy T2</span><span class="wv">10.5 g/dL (WHO)</span></div>
+          <div class="wr"><span class="wl">CKD (KDIGO)</span><span class="wv">10–11.5 g/dL</span></div>
+          <div class="wr"><span class="wl">Child 6m–5yr</span><span class="wv">11 g/dL</span></div>
+        </div>
+      </div>
+      <div class="wg">
+        <div class="wh">⚠️ Cautions</div>
+        <div class="wb" style="font-size:12px;color:var(--tm);line-height:1.7">
+          <p>⚠️ Anaphylaxis risk with IV iron — resuscitation facilities must be available</p>
+          <p style="margin-top:6px">⚠️ Iron dextran requires 25mg test dose before TDI</p>
+          <p style="margin-top:6px">⚠️ Avoid IV iron in active infection</p>
+          <p style="margin-top:6px">⚠️ FCM can cause hypophosphataemia — monitor phosphate</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ct">
+    <h2>IV Iron Dosing Reference — India</h2>
+    <div class="tw">
+      <table class="tb">
+        <thead><tr><th>Product</th><th>Dose per infusion</th><th>Max single dose</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Iron sucrose (Venofer)</td><td>100–200 mg in 100mL NS over 15–30 min</td><td>200 mg</td><td>Preferred in CKD/dialysis; safest profile</td></tr>
+          <tr><td>Ferric carboxymaltose (FCM)</td><td>500–1000 mg in 250mL NS over 15 min</td><td>1000 mg (20 mg/kg)</td><td>Can correct large deficits in 1–2 doses; preferred in pregnancy</td></tr>
+          <tr><td>Iron dextran (Imferon)</td><td>TDI — full deficit in one infusion</td><td>Total deficit (slow infusion)</td><td>Test dose 25mg required; anaphylaxis risk higher</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:24px">Iron Deficit Calculation — Clinical Guide</h2>
+
+    <h3>The Ganzoni equation — how it works</h3>
+    <p>The Ganzoni equation calculates the total elemental iron required to restore haemoglobin to target levels and replenish iron stores. The formula: <strong>Total iron (mg) = Body weight (kg) × (Target Hb − Actual Hb g/dL) × 2.4 + Iron stores (mg)</strong>. The factor 2.4 accounts for the iron content of haemoglobin (0.34% iron by weight) and blood volume (approximately 70 mL/kg). Iron stores are typically 500 mg for adults weighing more than 35 kg, and 15 mg/kg for those weighing 35 kg or less. In severely iron-deficient patients, stores may already be zero — reduce accordingly.</p>
+
+    <h3>Iron deficit in pregnancy — India context</h3>
+    <p>Iron deficiency anaemia affects over 50% of pregnant women in India (NFHS-5 data) — one of the highest rates globally. IV iron is increasingly preferred in the second and third trimester when oral iron has failed, is not tolerated, or when rapid correction is needed pre-delivery. Ferric carboxymaltose (FCM) — brands: Encicarb, Monofer — is now recommended in Indian obstetric practice for its single-dose high-dose convenience. The target Hb in pregnancy is 11 g/dL (WHO); the second trimester target is 10.5 g/dL due to physiological haemodilution. Iron stores are typically set to zero in severely deficient pregnant women.</p>
+
+    <h3>Iron deficit in CKD and dialysis</h3>
+    <p>Oral iron absorption is markedly reduced in CKD due to elevated hepcidin levels. IV iron sucrose is the standard of care in dialysis-dependent CKD patients — typically 100 mg per dialysis session for 10 sessions to replenish deficit, then maintenance doses of 100 mg every 1–2 weeks as guided by ferritin and TSAT. Target serum ferritin: 200–500 ng/mL; TSAT: 20–50% (KDIGO 2012). Avoid IV iron when ferritin >500 ng/mL or TSAT >50%.</p>
+
+    <h2 style="margin-top:24px">Frequently Asked Questions</h2>
+    <div>
+      <div class="fi"><div class="fq" onclick="tf(this)">How to calculate iron deficit using the Ganzoni equation?<span class="fi-ico">+</span></div><div class="fa">Iron deficit (mg) = Weight (kg) × (Target Hb − Actual Hb) × 2.4 + Iron stores. Example: 60 kg woman, actual Hb 7 g/dL, target 12 g/dL: 60 × (12−7) × 2.4 + 500 = 60 × 5 × 2.4 + 500 = 720 + 500 = 1220 mg total iron required.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">How many vials of iron sucrose are needed?<span class="fi-ico">+</span></div><div class="fa">Each iron sucrose vial (Venofer) contains 100 mg elemental iron in 5 mL. For a total deficit of 1000 mg: 10 vials are needed. Give 200 mg per session (2 vials diluted in 100 mL normal saline over 15–30 minutes), separated by at least 24 hours, totalling 5 sessions for 1000 mg.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Which IV iron is preferred in India — sucrose or ferric carboxymaltose?<span class="fi-ico">+</span></div><div class="fa">Iron sucrose is the most widely available and has the longest safety record — it is the first choice in CKD/dialysis and in patients who need incremental dosing. Ferric carboxymaltose (FCM) is preferred when a large deficit needs rapid correction in 1–2 infusions (e.g. pre-operative anaemia, pregnancy). FCM allows up to 1000 mg in a single 15-minute infusion. It is more expensive but increasingly available in Indian hospitals. Monitor phosphate levels with FCM — hypophosphataemia is a known side effect.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">When should oral iron be used instead of IV iron?<span class="fi-ico">+</span></div><div class="fa">Oral iron (ferrous sulphate 200mg TDS or ferrous ascorbate) is first-line for most iron-deficiency anaemia in India when the gut is functional and there is no urgency. IV iron is indicated when: oral iron is not tolerated or absorbed (IBD, post-gastric surgery), Hb needs rapid correction (pre-operative, third trimester, severe anaemia), or in CKD on dialysis. Oral iron takes 3–6 months to fully replenish stores — IV iron achieves this in days to weeks.</div></div>
+    </div>
+    <div class="disc"><span>⚠️</span><span>Decision-support tool for trained healthcare professionals only. IV iron carries risk of anaphylaxis — administer only where resuscitation facilities are available. Verify doses with clinical context.</span></div>
+
+    <h2 style="margin-top:24px">Related Tools</h2>
+    <div class="rg2">
+      <a href="/medical-calculators/egfr" class="rc2"><div class="rn">eGFR Calculator</div><div class="rd">CKD staging</div></a>
+      <a href="/medical-calculators/anion-gap" class="rc2"><div class="rn">Anion Gap</div><div class="rd">Metabolic acidosis</div></a>
+      <a href="/medical-calculators/corrected-calcium" class="rc2"><div class="rn">Corrected Calcium</div><div class="rd">Albumin adjustment</div></a>
+      <a href="/medical-calculators/neonatal-jaundice" class="rc2"><div class="rn">Neonatal Jaundice</div><div class="rd">Bilirubin &amp; phototherapy</div></a>
+      <a href="/medical-calculators/growth-chart" class="rc2"><div class="rn">Growth Chart</div><div class="rd">Paediatric percentiles</div></a>
+    </div>
+  </div>
+</div>
+
+<footer class="ft">
+  <p>RxMedCalc · Free Clinical Tools for India · <a href="/medical-calculators">Medical Calculators</a> · <a href="/drug-doses">Drug Doses</a></p>
+</footer>
+
+<script>
+let ctx = 'general';
+
+function setCtx(c, btn) {
+  ctx = c;
+  document.querySelectorAll('[data-group="ctx"]').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById('preg-sec').style.display = c === 'pregnancy' ? 'block' : 'none';
+
+  const targetHint = document.getElementById('target-hint');
+  const storesRow  = document.getElementById('stores-row');
+  const targetInp  = document.getElementById('hb-target');
+  const storesInp  = document.getElementById('stores');
+
+  if (c === 'pregnancy') {
+    applyTrimester();
+    storesInp.value = '0';
+    targetHint.textContent = '(g/dL) — auto-set by trimester (WHO)';
+  } else if (c === 'ckd') {
+    targetInp.value = '11';
+    storesInp.value = '500';
+    targetHint.textContent = '(g/dL) — KDIGO target: 10–11.5 g/dL';
+  } else {
+    targetInp.value = '';
+    storesInp.value = '';
+    targetHint.textContent = '(g/dL) — recommended: 12 g/dL female / 13 g/dL male';
+  }
+  hideAll();
+}
+
+function applyTrimester() {
+  const t = document.getElementById('trimester').value;
+  document.getElementById('hb-target').value = t === '2' ? '10.5' : '11';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('trimester').addEventListener('change', () => {
+    if (ctx === 'pregnancy') applyTrimester();
+  });
+});
+
+function hideAll() {
+  ['res','warn','danger','info'].forEach(id => document.getElementById(id).classList.remove('on'));
+}
+function show(id) { document.getElementById(id).classList.add('on'); }
+function set(id, v) { document.getElementById(id).textContent = v; }
+function tf(el) { el.closest('.fi').classList.toggle('op'); }
+
+const ivProducts = {
+  sucrose: { name:'Iron sucrose (Venofer)',   mgPerUnit:100,  maxPerDose:200,  unitLabel:'vial (100mg)' },
+  fcm:     { name:'Ferric carboxymaltose',    mgPerUnit:500,  maxPerDose:1000, unitLabel:'vial (500mg)' },
+  dextran: { name:'Iron dextran (Imferon)',   mgPerUnit:50,   maxPerDose:9999, unitLabel:'mL (50mg/mL)' }
+};
+
+function calc() {
+  hideAll();
+  const wt        = parseFloat(document.getElementById('wt').value);
+  const hbActual  = parseFloat(document.getElementById('hb-actual').value);
+  const hbTarget  = parseFloat(document.getElementById('hb-target').value);
+  const storesVal = parseFloat(document.getElementById('stores').value) || 0;
+  const product   = document.getElementById('iv-product').value;
+
+  if (!wt || !hbActual || !hbTarget) { alert('Please fill in all required fields.'); return; }
+  if (wt < 10 || wt > 200)  { alert('Weight must be between 10 and 200 kg.'); return; }
+  if (hbActual < 3 || hbActual > 18) { alert('Actual Hb must be between 3 and 18 g/dL.'); return; }
+  if (hbTarget <= hbActual) {
+    document.getElementById('danger-t').textContent =
+      'Target Hb must be higher than actual Hb. Please check your values.';
+    show('danger'); return;
+  }
+  if (hbActual > 10) {
+    document.getElementById('warn-t').textContent =
+      'Actual Hb is above 10 g/dL. IV iron is generally indicated only for Hb <10 g/dL or documented iron deficiency with symptoms. Review indication.';
+    show('warn');
+  }
+
+  // Auto iron stores: 500mg if >35kg, 15mg/kg if ≤35kg
+  let stores = storesVal;
+  if (document.getElementById('stores').value === '') {
+    stores = wt <= 35 ? wt * 15 : 500;
+  }
+
+  const bodyDeficit = wt * (hbTarget - hbActual) * 2.4;
+  const totalIron   = Math.round(bodyDeficit + stores);
+  const p = ivProducts[product];
+  const dosesNeeded = Math.ceil(totalIron / p.maxPerDose);
+  const unitsLabel  = product === 'dextran'
+    ? (totalIron / 50).toFixed(1) + ' mL total (TDI)'
+    : dosesNeeded + ' infusion' + (dosesNeeded > 1 ? 's' : '') + ' × ' + p.maxPerDose + 'mg';
+
+  set('r-total',   totalIron + ' mg');
+  set('r-sub',     'Total elemental iron required (Ganzoni)');
+  set('r-body',    Math.round(bodyDeficit) + ' mg');
+  set('r-stores',  stores + ' mg');
+  set('r-doses',   unitsLabel);
+  set('r-product', p.name);
+  show('res');
+
+  if (totalIron > 2000) {
+    document.getElementById('info-t').textContent =
+      'Large iron deficit (>2000 mg). Consider ferric carboxymaltose — allows up to 1000mg per infusion (2 infusions to correct fully). Verify with haematologist.';
+    show('info');
+  }
+  if (product === 'dextran') {
+    document.getElementById('info-t').textContent =
+      'Iron dextran: administer 25mg test dose over 15 minutes before TDI. Monitor for anaphylaxis for at least 60 minutes post-infusion.';
+    show('info');
+  }
+
+  if (typeof umami !== 'undefined') umami.track('calc-iron-deficit');
+}
+</script>
+<script src="/assets/shared-nav.js"></script>
+</body>
+</html>
