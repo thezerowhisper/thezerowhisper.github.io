@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conception Date Calculator: How to Find When You Conceived | RxMedCalc</title>
+  <meta name="description" content="Find out exactly when you conceived — from your due date, last period (LMP), IVF transfer date, or ultrasound. Understand how conception date is calculated, ovulation windows, IVF dating, and fetal development week by week." />
+  <meta name="keywords" content="conception date calculator, when did I conceive, how to calculate conception date, conception date from due date, IVF conception date, LMP conception date, ovulation and conception, pregnancy conception calculator India" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Conception Date Calculator: How to Find When You Conceived" />
+  <meta property="og:description" content="Calculate your conception date from due date, LMP, IVF transfer, or ultrasound. Understand ovulation windows, IVF dating, and fetal development week by week." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://rxmedcalc.com/blog/conception-date.html" />
+
+  <link rel="canonical" href="https://rxmedcalc.com/blog/conception-date.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{--brand:#8a3a6b;--brand-dark:#5a1f45;--brand-light:#faf0f6;--accent:#1a5c96;--teal:#0e7c74;--text:#1c1c1e;--muted:#5a5a6a;--border:#e8d5e2;--bg:#fdf8fb;--white:#fff;--max:740px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
+    header{background:var(--brand-dark);color:#fff;padding:14px 24px;font-size:15px;}
+    header a{color:#fff;text-decoration:none;font-weight:600;}
+    .hero{background:linear-gradient(135deg,#5a1f45 0%,#8a3a6b 55%,#b55490 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;line-height:1.25;max-width:700px;margin:0 auto 18px;}
+    .hero .subtitle{font-size:16px;opacity:.88;max-width:580px;margin:0 auto 28px;}
+    .hero .meta{font-size:13px;opacity:.7;font-style:italic;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 64px;}
+    h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--brand);margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--brand-light);}
+    h3{font-size:1.08rem;font-weight:600;color:var(--text);margin:1.8rem 0 .5rem;}
+    p{margin-bottom:1.1rem;}strong{font-weight:600;}em{font-style:italic;color:var(--muted);}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}a:hover{color:var(--brand);}
+    ul,ol{padding-left:22px;margin-bottom:1rem;}li{margin-bottom:.45rem;line-height:1.75;}
+
+    /* Method cards */
+    .method-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin:1.4rem 0;}
+    .method-card{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:8px;padding:16px 14px;text-align:center;}
+    .method-card .icon{font-size:1.6rem;margin-bottom:8px;}
+    .method-card h4{font-size:14px;font-weight:700;color:var(--brand);margin-bottom:4px;}
+    .method-card p{font-size:13px;color:var(--muted);margin:0;line-height:1.5;}
+
+    /* Formula boxes */
+    .formula-box{background:var(--brand-dark);color:#fdeef8;border-radius:10px;padding:22px 24px;margin:1.6rem 0;font-family:'Lora',serif;font-size:1.05rem;line-height:1.9;}
+    .formula-box .label{font-family:'DM Sans',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.65;margin-bottom:8px;}
+
+    /* Ovulation timeline */
+    .ovulation-bar{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-radius:10px;overflow:hidden;margin:1.4rem 0;font-size:13px;}
+    .ov-block{padding:14px 8px;text-align:center;color:#fff;}
+    .ov-block.low{background:#5a6b1a;}.ov-block.rising{background:#8a6a00;}.ov-block.peak{background:#8a1a3a;}.ov-block.possible{background:#1a5c6b;}.ov-block.none{background:#3a3a4a;}
+    .ov-block .ov-day{font-family:'Lora',serif;font-size:1rem;font-weight:700;}
+    .ov-block .ov-label{font-size:11px;margin-top:4px;opacity:.9;font-weight:600;}
+
+    /* Week table */
+    .table-wrap{overflow-x:auto;margin:1.4rem 0;}
+    table{width:100%;border-collapse:collapse;font-size:14.5px;}
+    thead tr{background:var(--brand);color:#fff;}
+    thead th{padding:10px 12px;text-align:left;font-weight:600;}
+    tbody tr:nth-child(even){background:var(--brand-light);}
+    tbody tr:nth-child(odd){background:var(--white);}
+    td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+
+    /* IVF table */
+    .ivf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:1.4rem 0;}
+    .ivf-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 18px;}
+    .ivf-card .ivf-type{font-weight:700;font-size:14.5px;color:var(--brand);margin-bottom:4px;}
+    .ivf-card .ivf-formula{font-family:'Lora',serif;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:6px;}
+    .ivf-card p{font-size:13px;color:var(--muted);margin:0;line-height:1.5;}
+
+    /* FAQ */
+    .faq{margin:1.4rem 0;}
+    .faq-item{background:var(--white);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+    .faq-item .faq-q{font-weight:600;font-size:15.5px;padding:16px 20px;color:var(--brand);}
+    .faq-item .faq-a{padding:0 20px 16px;font-size:15px;color:var(--muted);line-height:1.7;}
+
+    .callout{border-left:4px solid var(--brand);background:var(--brand-light);border-radius:0 8px 8px 0;padding:14px 18px;margin:1.6rem 0;font-size:15.5px;}
+    .callout.tip{border-color:var(--teal);background:#e6f6f5;}
+    .callout.warning{border-color:#c0392b;background:#fdf0ee;}
+    .callout p{margin:0;}
+
+    .takeaways{background:var(--brand);color:#fff;border-radius:12px;padding:26px 28px;margin:2.4rem 0;}
+    .takeaways h2{font-family:'Lora',serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);margin-top:0;padding-bottom:10px;margin-bottom:16px;font-size:1.25rem;}
+    .takeaways ul{padding-left:20px;}
+    .takeaways li{margin-bottom:8px;font-size:15.5px;line-height:1.6;}
+
+    .references{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:2rem;}
+    .references h2{font-size:1.1rem;margin-top:0;}
+    .references ol{padding-left:20px;font-size:14px;color:var(--muted);}
+    .references li{margin-bottom:6px;line-height:1.55;}
+
+    .disclaimer{margin-top:2.4rem;font-size:13px;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:16px;line-height:1.6;}
+
+    @media(max-width:600px){.ovulation-bar{grid-template-columns:repeat(3,1fr);}.hero{padding:36px 16px 32px;}.wrap{padding:32px 16px 48px;}}
+  </style>
+
+  <!-- Schema.org structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Conception Date Calculator: How to Find When You Conceived",
+    "description": "Find out when you conceived from your due date, last period, IVF transfer, or ultrasound. Understand ovulation windows, IVF dating, and week-by-week fetal development.",
+    "author": {"@type": "Person", "name": "RxMedCalc — MBBS, AFIH Certified Physician"},
+    "publisher": {"@type": "Organization", "name": "RxMedCalc"},
+    "medicalAudience": {"@type": "MedicalAudience", "audienceType": "Patient"},
+    "about": {"@type": "MedicalCondition", "name": "Pregnancy"},
+    "url": "https://rxmedcalc.com/blog/conception-date.html"
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; Conception Date
+</header>
+
+<div class="hero">
+  <div class="tag">🌸 Obstetrics &amp; Fertility</div>
+  <h1>Conception Date Calculator: How to Find Out When You Conceived</h1>
+  <p class="subtitle">Calculate your exact conception date from your due date, last menstrual period, IVF transfer date, or ultrasound — plus ovulation windows, IVF dating, and week-by-week fetal development.</p>
+  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on FOGSI, ACOG &amp; WHO Obstetric Dating Guidelines</p>
+</div>
+
+<div class="wrap">
+
+  <!-- INTRO -->
+  <p>One of the most common questions in early pregnancy — asked in doctor's offices, whispered in family groups, and typed into search engines millions of times every month — is simply: <strong>when did I conceive?</strong></p>
+  <p>It is a question that carries significant emotional weight. For couples who planned their pregnancy, it pins down a moment of hopeful possibility. For those surprised by a positive test, it helps establish a timeline. For women who have been through IVF, it can be calculated with remarkable precision. And for anyone preparing for their first antenatal scan, it forms the foundation of everything that follows — gestational age, due date, trimester milestones, and the entire schedule of scans and tests that make up antenatal care.</p>
+  <p>This guide explains exactly how conception date is calculated — from every starting point — and what the result means for your pregnancy.</p>
+
+  <!-- WHAT IS CONCEPTION -->
+  <h2>What Is the Conception Date — and Is It Different from the Due Date?</h2>
+  <p><strong>Conception</strong> is the moment a sperm successfully fertilises an egg, creating a zygote — the single cell from which every cell in a human body will ultimately develop. This event, called <em>fertilisation</em>, typically occurs in the fallopian tube within 12–24 hours of ovulation.</p>
+  <p>The <strong>conception date</strong> and the <strong>due date (EDD)</strong> are fundamentally different things — but they are mathematically linked. The EDD is calculated as 280 days (40 weeks) from the first day of the last menstrual period (LMP). But conception does not occur on the first day of the period — it occurs around 14 days later, at ovulation, in a standard 28-day cycle.</p>
+  <p>So the relationship is:</p>
+
+  <div class="formula-box">
+    <div class="label">Core Relationship</div>
+    <strong>EDD = LMP + 280 days (40 weeks)</strong><br>
+    <strong>Conception Date = LMP + ~14 days</strong><br>
+    <strong>Conception Date = EDD − 266 days (38 weeks)</strong><br><br>
+    <span style="font-size:.88rem;opacity:.75;">A pregnancy is conventionally counted as 40 weeks from LMP — but is only approximately 38 weeks from actual conception. Both ways of counting are used in different contexts.</span>
+  </div>
+
+  <p>This is why obstetricians measure gestational age from LMP (not conception) — most women know when their last period started, but very few know exactly when they ovulated or conceived.</p>
+
+  <!-- 4 METHODS -->
+  <h2>4 Ways to Calculate Your Conception Date</h2>
+  <p>There is no single "best" method — the right approach depends on what information you have available. The <a href="https://rxmedcalc.com/medical-calculators/conception-date-calculator" target="_blank"><strong>RxMedCalc Conception Date Calculator</strong></a> supports all four methods.</p>
+
+  <div class="method-grid">
+    <div class="method-card">
+      <div class="icon">📅</div>
+      <h4>From Due Date</h4>
+      <p>Fastest method. Reverse-calculate using EDD − 266 days. Works whether due date came from LMP or ultrasound.</p>
+    </div>
+    <div class="method-card">
+      <div class="icon">🗓️</div>
+      <h4>From LMP</h4>
+      <p>Most common. Add 14 days to LMP (adjusted for cycle length). Best for regular cycles.</p>
+    </div>
+    <div class="method-card">
+      <div class="icon">🧪</div>
+      <h4>IVF / FET</h4>
+      <p>Most precise. Fertilisation date known. Calculated from transfer date minus embryo age.</p>
+    </div>
+    <div class="method-card">
+      <div class="icon">🔊</div>
+      <h4>Ultrasound (CRL)</h4>
+      <p>Most accurate in early pregnancy. Crown-rump length at 7–13 weeks gives conception date within ±3 days.</p>
+    </div>
+  </div>
+
+  <!-- METHOD 1: DUE DATE -->
+  <h2>Method 1: Calculating Conception Date from Your Due Date</h2>
+  <p>If your doctor has already told you your estimated due date — whether based on LMP or confirmed by ultrasound — you can work backwards to find your approximate conception date.</p>
+
+  <div class="formula-box">
+    <div class="label">From Due Date (EDD)</div>
+    <strong>Conception Date = Due Date − 266 days</strong><br><br>
+    <span style="font-size:.88rem;opacity:.75;">Example: EDD = 15 January 2026 → Conception Date = 23 April 2025<br>(15 Jan − 266 days = ~23 April of the previous year)</span>
+  </div>
+
+  <p>This is the simplest and quickest calculation. It is particularly useful when you already have a confirmed ultrasound-based EDD, which is more accurate than one calculated purely from LMP.</p>
+
+  <!-- METHOD 2: LMP -->
+  <h2>Method 2: Calculating Conception Date from Your Last Menstrual Period (LMP)</h2>
+  <p>For a standard 28-day cycle, ovulation — and therefore the conception window — occurs around <strong>Day 14</strong> of the cycle, counting from Day 1 (the first day of the period). Conception is then:</p>
+
+  <div class="formula-box">
+    <div class="label">From LMP (Standard 28-day cycle)</div>
+    <strong>Conception Date ≈ LMP + 14 days</strong><br><br>
+    <span style="font-size:.88rem;opacity:.75;">For cycles longer than 28 days, add the extra days. For a 35-day cycle: LMP + 21 days.<br>
+    Formula: Conception Date = LMP + (Cycle Length − 14) days</span>
+  </div>
+
+  <h3>Adjusting for Cycle Length</h3>
+  <p>Not everyone has a 28-day cycle. In fact, among Indian women, cycle length can range widely from 21 to 45 days — and the ovulation window shifts accordingly. The key insight is that <strong>the luteal phase (post-ovulation) is almost always 14 days</strong> in a normal cycle. It is the follicular phase (pre-ovulation) that varies.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Cycle Length</th><th>Ovulation Day (approx.)</th><th>Days to Add to LMP</th></tr></thead>
+    <tbody>
+      <tr><td>21 days (short)</td><td>Day 7</td><td>+7 days</td></tr>
+      <tr><td>24 days</td><td>Day 10</td><td>+10 days</td></tr>
+      <tr><td>28 days (standard)</td><td>Day 14</td><td>+14 days</td></tr>
+      <tr><td>30 days</td><td>Day 16</td><td>+16 days</td></tr>
+      <tr><td>35 days</td><td>Day 21</td><td>+21 days</td></tr>
+      <tr><td>40 days (long / PCOS)</td><td>Day 26</td><td>+26 days</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout warning">
+    <p>⚠️ <strong>Irregular cycles and PCOS:</strong> Women with polycystic ovarian syndrome (PCOS) — which affects approximately 20% of Indian women — often have very irregular cycles with unpredictable ovulation timing. LMP-based conception date calculation is unreliable in this group. Ultrasound dating is significantly more accurate.</p>
+  </div>
+
+  <!-- OVULATION WINDOW -->
+  <h2>The Conception Window — When Can You Actually Get Pregnant?</h2>
+  <p>Many people believe that conception can only happen on the single day of ovulation. In reality, the <strong>fertile window spans 5–7 days</strong> around ovulation, because sperm can survive in the female reproductive tract for up to 5 days, while the egg survives for only 12–24 hours after ovulation.</p>
+
+  <div class="ovulation-bar">
+    <div class="ov-block none"><div class="ov-day">Days 1–9</div><div class="ov-label">Very Low Fertility</div></div>
+    <div class="ov-block rising"><div class="ov-day">Days 10–12</div><div class="ov-label">Rising Fertility (sperm viable)</div></div>
+    <div class="ov-block peak"><div class="ov-day">Days 13–15</div><div class="ov-label">🔴 Peak Fertility — Ovulation</div></div>
+    <div class="ov-block possible"><div class="ov-day">Day 16</div><div class="ov-label">Possible (egg 24h window)</div></div>
+    <div class="ov-block none"><div class="ov-day">Days 17+</div><div class="ov-label">Fertility Falls Rapidly</div></div>
+  </div>
+
+  <p><em>(Shown for a standard 28-day cycle. Shift all days forward or backward proportionally for longer or shorter cycles.)</em></p>
+  <p>This fertile window is the reason the conception date is always an <em>estimate</em> — if intercourse occurred on Day 10 but ovulation happened on Day 14, the sperm survived four days in the tract before fertilising the egg. The "conception date" in this scenario is technically Day 14, not Day 10.</p>
+
+  <!-- METHOD 3: IVF -->
+  <h2>Method 3: Conception Date from IVF or Frozen Embryo Transfer (FET)</h2>
+  <p>IVF is the one scenario where the conception date can be calculated with near-perfect precision — because fertilisation happened in a laboratory at a known time, and the exact age of the embryo at transfer is documented.</p>
+
+  <div class="ivf-grid">
+    <div class="ivf-card">
+      <div class="ivf-type">Day 2 Transfer</div>
+      <div class="ivf-formula">EDD = Transfer + 264 days</div>
+      <p>Conception Date = Transfer Date − 2 days (the day of egg retrieval and fertilisation)</p>
+    </div>
+    <div class="ivf-card">
+      <div class="ivf-type">Day 3 Transfer</div>
+      <div class="ivf-formula">EDD = Transfer + 263 days</div>
+      <p>Conception Date = Transfer Date − 3 days</p>
+    </div>
+    <div class="ivf-card">
+      <div class="ivf-type">Day 5 Blastocyst (most common)</div>
+      <div class="ivf-formula">EDD = Transfer + 261 days</div>
+      <p>Conception Date = Transfer Date − 5 days. Most FET cycles use Day 5 blastocysts.</p>
+    </div>
+    <div class="ivf-card">
+      <div class="ivf-type">Day 6 Extended Blastocyst</div>
+      <div class="ivf-formula">EDD = Transfer + 260 days</div>
+      <p>Conception Date = Transfer Date − 6 days. Used for embryos that took longer to develop.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <p>✅ <strong>Master formula for IVF:</strong> EDD = Transfer Date + (266 − Embryo Age in days). This is verified against ACOG and FOGSI IVF dating guidelines and is the standard used by IVF centres worldwide.</p>
+  </div>
+
+  <p>For frozen embryo transfer (FET) cycles, the same formula applies — the embryo's age at the time of freezing is factored into the calculation. Your IVF clinic should document the embryo's precise developmental stage in your records.</p>
+
+  <!-- METHOD 4: ULTRASOUND -->
+  <h2>Method 4: Conception Date from Ultrasound (Crown-Rump Length)</h2>
+  <p>An early ultrasound performed between <strong>7 and 13 weeks gestation</strong> measures the <strong>crown-rump length (CRL)</strong> — the length of the embryo/fetus from the top of the head to the base of the spine. CRL is the most accurate method of dating a pregnancy and can place the gestational age within ±3–5 days.</p>
+  <p>From the gestational age given by ultrasound, the conception date is calculated as:</p>
+
+  <div class="formula-box">
+    <div class="label">From Ultrasound CRL</div>
+    <strong>Conception Date = Date of Scan − Gestational Age (in days) + 14 days</strong><br><br>
+    <span style="font-size:.88rem;opacity:.75;">Example: Scan on 10 June, gestational age 9 weeks 0 days (63 days):<br>
+    Conception Date = 10 June − 63 days + 14 days = 10 June − 49 days = <strong>22 April</strong></span>
+  </div>
+
+  <p>The 14-day addition accounts for the fact that gestational age is counted from LMP (Day 0), while conception occurred approximately 14 days later. An ultrasound reporting 9 weeks means 9 weeks since LMP — so conception was approximately 7 weeks (9 − 2 weeks) before the scan.</p>
+
+  <div class="callout">
+    <p>🔊 <strong>When your dates change after a scan:</strong> If the ultrasound EDD differs from your LMP-based EDD by more than 7 days in the first trimester, the ultrasound date is used as the official EDD. This is standard FOGSI and ACOG practice.</p>
+  </div>
+
+  <!-- FETAL DEVELOPMENT -->
+  <h2>Week-by-Week Fetal Development After Conception</h2>
+  <p>From the moment of conception, development proceeds at a remarkable pace. Here are the key milestones referenced from the <strong>conception date</strong> (not LMP):</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Weeks from Conception</th><th>Gestational Age (from LMP)</th><th>Baby Size</th><th>Key Milestone</th></tr></thead>
+    <tbody>
+      <tr><td><strong>2 weeks</strong></td><td>4 weeks LMP</td><td>🌱 Poppy seed (~1 mm)</td><td>Implantation complete; hCG begins rising — pregnancy test may turn positive</td></tr>
+      <tr><td><strong>4 weeks</strong></td><td>6 weeks LMP</td><td>🫘 Lentil (~4 mm)</td><td>Heartbeat detectable on transvaginal ultrasound; neural tube closing</td></tr>
+      <tr><td><strong>6 weeks</strong></td><td>8 weeks LMP</td><td>🫘 Kidney bean (~1.6 cm)</td><td>All major organs forming; facial features beginning; limb buds present</td></tr>
+      <tr><td><strong>8 weeks</strong></td><td>10 weeks LMP</td><td>🍓 Strawberry (~3.1 cm)</td><td>Embryo officially becomes a fetus; external genitalia beginning to differentiate</td></tr>
+      <tr><td><strong>10 weeks</strong></td><td>12 weeks LMP</td><td>🍋 Lime (~5.4 cm, 14g)</td><td>NT scan week — nuchal translucency measurement for Down syndrome risk</td></tr>
+      <tr><td><strong>14 weeks</strong></td><td>16 weeks LMP</td><td>🥑 Avocado (~11.6 cm, 100g)</td><td>Gender may be visible; quickening (first movements felt) approaches</td></tr>
+      <tr><td><strong>18 weeks</strong></td><td>20 weeks LMP</td><td>🍌 Banana (~25.6 cm, 300g)</td><td>Anomaly / TIFFA scan — detailed anatomy assessment. Halfway point.</td></tr>
+      <tr><td><strong>22 weeks</strong></td><td>24 weeks LMP</td><td>🌽 Corn (~30 cm, 600g)</td><td>Viability threshold; GDM screening (75g OGTT) between 24–28 weeks</td></tr>
+      <tr><td><strong>26 weeks</strong></td><td>28 weeks LMP</td><td>🍆 Brinjal (~37.6 cm, 1 kg)</td><td>Third trimester begins; Anti-D for Rh-negative mothers</td></tr>
+      <tr><td><strong>30 weeks</strong></td><td>32 weeks LMP</td><td>🥦 Large squash (~42.4 cm, 1.7 kg)</td><td>Growth scan + colour Doppler; check fetal presentation</td></tr>
+      <tr><td><strong>38 weeks</strong></td><td>40 weeks LMP</td><td>🍉 Watermelon (~51 cm, 3.4 kg)</td><td>Full term — estimated due date reached</td></tr>
+    </tbody>
+  </table></div>
+
+  <!-- FAQ -->
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">Can I find my exact conception date?</div>
+      <div class="faq-a">For most natural pregnancies, conception date is an estimate — not an exact date. Since sperm can survive 3–5 days in the reproductive tract, the egg could have been fertilised several days after intercourse occurred. IVF pregnancies are the exception — because fertilisation happened in a laboratory at a documented time, the conception date is known precisely to within hours.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">My period is irregular — how do I calculate my conception date?</div>
+      <div class="faq-a">LMP-based calculation is unreliable for irregular cycles. The most accurate method is an early ultrasound (7–13 weeks) measuring crown-rump length (CRL). If you have an ultrasound report with a gestational age, use that as your starting point. Women with PCOS, thyroid disorders, or very short or long cycles should always rely on ultrasound dating.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is the conception date the same as the date of intercourse?</div>
+      <div class="faq-a">Not necessarily. Sperm can survive in the fallopian tube for up to 5 days. If you had intercourse on Monday and ovulated on Thursday, the egg was fertilised on Thursday — the conception date is Thursday, not Monday. This is why conception dates are estimates, not certainties, in naturally conceived pregnancies.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">My ultrasound date is different from my LMP date — which is correct?</div>
+      <div class="faq-a">If the difference is more than 7 days in the first trimester, the ultrasound date is used as the official due date. This is the standard followed by FOGSI and ACOG. Early ultrasound (7–13 weeks) using CRL is the most accurate dating method and takes precedence over LMP. After 20 weeks, ultrasound dating is less reliable and the first trimester date is usually kept.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How does IVF conception date work differently?</div>
+      <div class="faq-a">In IVF, the egg is retrieved and fertilised in a laboratory on a known date. The embryo is then cultured for 2–6 days before being transferred to the uterus. The conception date is the egg retrieval/fertilisation date — not the transfer date. For a Day 5 blastocyst transfer, the conception date is 5 days before the transfer date. Your IVF clinic will have documented the embryo's exact developmental stage.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Why does gestational age start from LMP, not from conception?</div>
+      <div class="faq-a">Historically, before modern obstetric dating, LMP was the only reliable date most women could recall. Ovulation and conception are invisible events — there was no way to know exactly when they occurred. The LMP-based convention, established by Franz Naegele in the 19th century, standardised dating around a known, observable date. It adds approximately 2 weeks to the "true" age of the pregnancy from conception, which is why a "40-week" pregnancy is actually only about 38 weeks from fertilisation.</div>
+    </div>
+  </div>
+
+  <!-- SIGNS -->
+  <h2>Early Signs of Pregnancy After Conception</h2>
+  <p>After fertilisation, the embryo travels down the fallopian tube and implants in the uterine wall approximately <strong>6–12 days after conception</strong>. At this point, the embryo begins producing human chorionic gonadotrophin (hCG) — the hormone detected by pregnancy tests. Symptoms, if they appear, typically begin around <strong>4–6 weeks gestational age</strong> (2–4 weeks after conception):</p>
+  <ul>
+    <li><strong>Missed period</strong> — the most reliable early sign</li>
+    <li><strong>Breast tenderness and swelling</strong> — often the first symptom, caused by rising progesterone</li>
+    <li><strong>Nausea (morning sickness)</strong> — usually begins around 6 weeks gestational age; peaks at 8–10 weeks</li>
+    <li><strong>Fatigue</strong> — progesterone causes marked tiredness in early pregnancy</li>
+    <li><strong>Implantation bleeding</strong> — light spotting 6–12 days after conception; often mistaken for a light period</li>
+    <li><strong>Frequent urination</strong> — increasing hCG and growing uterus put pressure on the bladder</li>
+    <li><strong>Heightened sense of smell</strong> — a characteristic early pregnancy symptom caused by oestrogen</li>
+  </ul>
+
+  <div class="callout tip">
+    <p>✅ <strong>When to take a pregnancy test:</strong> Home urine pregnancy tests detect hCG reliably from the first day of a missed period — approximately 14 days after conception. Testing earlier may give a false negative even if conception has occurred, because hCG levels are not yet high enough to detect. For the most accurate result, test with the first morning urine (most concentrated).</p>
+  </div>
+
+  <!-- INDIA SPECIFIC -->
+  <h2>Conception Timing in Indian Women — What's Different</h2>
+  <p>Several factors make conception timing calculations particularly important to individualise for Indian women:</p>
+  <ul>
+    <li><strong>PCOS prevalence:</strong> PCOS affects approximately 20% of Indian women and causes highly irregular cycles with unpredictable ovulation. LMP-based conception dating is often significantly inaccurate — early ultrasound dating is essential.</li>
+    <li><strong>Thyroid disease:</strong> India has very high rates of hypothyroidism (particularly in women) — thyroid dysfunction causes irregular cycles and may affect both ovulation timing and early pregnancy outcomes. Check TSH early in pregnancy.</li>
+    <li><strong>Nutritional anaemia:</strong> Iron deficiency and nutritional anaemia — extremely common in Indian women — can cause irregular cycles and affect the reliability of LMP-based dating.</li>
+    <li><strong>Rising IVF rates:</strong> India performs over 250,000 IVF cycles annually, making IVF conception date calculation increasingly relevant for a large proportion of pregnancies.</li>
+    <li><strong>Gestational diabetes (GDM):</strong> Indian women have 4× the global average risk of GDM — early and accurate pregnancy dating is critical for ensuring GDM screening (75g OGTT) is done at the correct gestational age (24–28 weeks).</li>
+  </ul>
+
+  <!-- CTA -->
+  <div class="callout" style="border-color:var(--brand);background:var(--brand-light);">
+    <p>🌸 <strong>Calculate your conception date now:</strong> Use the <a href="https://rxmedcalc.com/medical-calculators/conception-date-calculator" target="_blank"><strong>RxMedCalc Conception Date Calculator →</strong></a> — supports all 4 methods (due date, LMP, IVF, ultrasound) with week-by-week fetal development, Indian antenatal scan schedule, and results you can share via WhatsApp.</p>
+  </div>
+
+  <!-- TAKEAWAYS -->
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li><strong>Conception date ≈ Due date − 266 days</strong>, or LMP + 14 days (for a 28-day cycle)</li>
+      <li>For <strong>irregular cycles or PCOS</strong>, LMP-based calculation is unreliable — use early ultrasound (CRL at 7–13 weeks)</li>
+      <li>The <strong>fertile window spans 5–7 days</strong> — sperm survives up to 5 days; the egg lives 12–24 hours after ovulation</li>
+      <li><strong>IVF conception date</strong> = Transfer date minus embryo age. Day 5 blastocyst: EDD = Transfer + 261 days</li>
+      <li>Gestational age is always counted from <strong>LMP, not conception</strong> — this adds ~14 days to the count</li>
+      <li>If ultrasound EDD differs from LMP EDD by <strong>more than 7 days</strong>, the scan date takes precedence</li>
+      <li>In India: PCOS, thyroid disease, and anaemia make <strong>ultrasound dating especially important</strong> for accurate conception timing</li>
+      <li>Pregnancy tests become reliable <strong>14 days after conception</strong> — the day of a missed period</li>
+    </ul>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li>Federation of Obstetric and Gynaecological Societies of India (FOGSI). <em>FOGSI Good Clinical Practice Recommendations — Antenatal Care.</em> 2022.</li>
+      <li>American College of Obstetricians and Gynecologists (ACOG). <em>Methods for Estimating the Due Date. Committee Opinion No. 700.</em> Obstet Gynecol. 2017;129(5):e150-e154.</li>
+      <li>Naegele FC. <em>Erfahrungen und Abhandlungen aus dem Gebiet der Krankheiten des weiblichen Geschlechts.</em> 1812.</li>
+      <li>Wilcox AJ et al. <em>Timing of sexual intercourse in relation to ovulation — effects on the probability of conception, survival of the pregnancy, and sex of the baby.</em> N Engl J Med. 1995;333(23):1517-1521.</li>
+      <li>Diabetes in Pregnancy Study Group India (DIPSI). <em>Diagnosis and management of gestational diabetes mellitus — technical and operational guidelines.</em> 2018.</li>
+      <li>ICMR. <em>Recommended Dietary Allowances and Estimated Average Requirements for Indians.</em> 2020.</li>
+    </ol>
+  </div>
+
+  <p class="disclaimer">This article is for informational purposes based on FOGSI, ACOG, and WHO obstetric dating guidelines. Conception date is an estimate in naturally conceived pregnancies. Always confirm gestational age and due date with your registered obstetrician or gynaecologist through clinical assessment and ultrasound.<br><br>
+  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+
+</div><!-- /wrap -->
+</body>
+</html>
