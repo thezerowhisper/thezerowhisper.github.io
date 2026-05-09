@@ -44,6 +44,15 @@
     .tag-obstetrics{background:#faf0f6;color:#8a3a6b;}
     .tag-neonatal{background:#e8f7f4;color:#1a6b5c;}
     .tag-metabolic{background:#e8f5ee;color:#1a5a3a;}
+    .tag-neurology{background:#e6f1fa;color:#2c5f8a;}
+    .tag-haematology{background:#faeaea;color:#6b1a1a;}
+    .tag-criticalcare{background:#f0ebfb;color:#3a1a5c;}
+    .tag-acidbase{background:#e6f5f7;color:#0e5c6b;}
+    .tag-gastro{background:#fdf5e8;color:#8a5c1a;}
+    .tag-endocrine{background:#eaf5e8;color:#1a6b3a;}
+    .tag-paediatric{background:#e8f7f4;color:#1a6b5c;}
+    .tag-psychiatry{background:#f5e8fb;color:#6b1a8a;}
+    .tag-preventive{background:#e8f5f0;color:#1a6b5c;}
     .card h2{font-family:'Lora',serif;font-size:1.08rem;font-weight:700;line-height:1.35;margin-bottom:10px;}
     .card p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:0;}
     .card-bottom{margin-top:auto;padding:16px 22px 18px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);font-size:13px;}
@@ -53,6 +62,9 @@
     .bar-infectious{background:#7a1a1a;}.bar-renal{background:#5b3d8a;}.bar-cardiology{background:#1a4e8a;}
     .bar-respiratory{background:#1a6b3c;}.bar-emergency{background:#b83c14;}.bar-nephrology{background:#5b3d8a;}
     .bar-obstetrics{background:#8a3a6b;}.bar-neonatal{background:#1a6b5c;}.bar-metabolic{background:#1a5a3a;}
+    .bar-neurology{background:#2c5f8a;}.bar-haematology{background:#6b1a1a;}.bar-criticalcare{background:#3a1a5c;}
+    .bar-acidbase{background:#0e5c6b;}.bar-gastro{background:#8a5c1a;}.bar-endocrine{background:#1a6b3a;}
+    .bar-paediatric{background:#1a6b5c;}.bar-psychiatry{background:#6b1a8a;}.bar-preventive{background:#1a6b5c;}
     .card.featured{grid-column:1/-1;flex-direction:row;}
     .card.featured .card-top{flex:1;padding:28px;display:flex;flex-direction:column;justify-content:center;}
     .card.featured .card-bar{width:4px;height:auto;min-height:160px;}
@@ -95,7 +107,7 @@
   <h1>Medical Articles &amp; Clinical Guides</h1>
   <p>In-depth guides written by a practicing doctor — explaining the science behind every calculator, drug, and clinical decision tool on RxMedCalc.</p>
   <div class="stats">
-    <div class="stat"><div class="num">15</div><div class="lbl">Articles Published</div></div>
+    <div class="stat"><div class="num">33</div><div class="lbl">Articles Published</div></div>
     <div class="stat"><div class="num">62+</div><div class="lbl">Free Calculators</div></div>
     <div class="stat"><div class="num">100%</div><div class="lbl">Free &amp; No Login</div></div>
   </div>
@@ -111,15 +123,18 @@
   <a href="#emergency" class="filter-pill">Emergency</a>
   <a href="#obstetrics" class="filter-pill">Obstetrics</a>
   <a href="#metabolic" class="filter-pill">Metabolic</a>
+  <a href="#paediatric" class="filter-pill">Paediatric</a>
+  <a href="#criticalcare" class="filter-pill">Critical Care</a>
+  <a href="#preventive" class="filter-pill">Preventive</a>
 </div>
 
 <div class="wrap" id="all">
 
-  <div class="section-label">All Articles — 10 Guides</div>
+  <div class="section-label">All Articles — 33 Guides</div>
 
   <!-- FEATURED -->
   <div class="articles-grid" style="margin-bottom:0;">
-    <a href="/blog/rabies-pep.html" class="card featured" id="infectious">
+    <a href="/blog/rabies-pep" class="card featured" id="infectious">
       <div class="card-bar bar-infectious"></div>
       <div class="card-top">
         <span class="card-tag tag-infectious">🦠 Infectious Disease</span>
@@ -134,7 +149,7 @@
   <!-- OBSTETRICS -->
   <div id="obstetrics" class="cat-heading">🤰 Obstetrics &amp; Neonatology</div>
   <div class="articles-grid">
-    <a href="/blog/pregnancy-due-date.html" class="card">
+    <a href="/blog/pregnancy-due-date" class="card">
       <div class="card-bar bar-obstetrics"></div>
       <div class="card-top">
         <span class="card-tag tag-obstetrics">🤰 Obstetrics</span>
@@ -144,7 +159,17 @@
       </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~12 min</span></div>
     </a>
-    <a href="/blog/apgar-score.html" class="card">
+    <a href="/blog/conception-date" class="card">
+      <div class="card-bar bar-obstetrics"></div>
+      <div class="card-top">
+        <span class="card-tag tag-obstetrics">🤰 Obstetrics</span>
+        <h2>Conception Date Calculator: How to Find Out When You Conceived</h2>
+        <p>Working backwards from EDD or LMP, fertile window and ovulation timing, IVF vs natural conception dating, and what conception date means for gestational age accuracy.</p>
+        <div class="guidelines"><span class="gl">FOGSI</span><span class="gl">ACOG</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~9 min</span></div>
+    </a>
+    <a href="/blog/apgar-score" class="card">
       <div class="card-bar bar-neonatal"></div>
       <div class="card-top">
         <span class="card-tag tag-neonatal">👶 Neonatology</span>
@@ -154,12 +179,22 @@
       </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~11 min</span></div>
     </a>
+    <a href="/blog/neonatal-jaundice" class="card">
+      <div class="card-bar" style="background:#b87a00;"></div>
+      <div class="card-top">
+        <span class="card-tag tag-neonatal">👶 Neonatology</span>
+        <h2>Neonatal Jaundice: Causes, Phototherapy &amp; AAP 2022 Guidelines</h2>
+        <p>Physiological vs pathological jaundice, AAP 2022 updated phototherapy thresholds by age and gestational age, G6PD in India, kernicterus prevention, and warning signs for parents at home.</p>
+        <div class="guidelines"><span class="gl">AAP 2022</span><span class="gl">IAP</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~12 min</span></div>
+    </a>
   </div>
 
   <!-- RENAL -->
   <div id="renal" class="cat-heading">🫘 Renal &amp; Nephrology</div>
   <div class="articles-grid">
-    <a href="/blog/creatinine-clearance.html" class="card">
+    <a href="/blog/creatinine-clearance" class="card">
       <div class="card-bar bar-renal"></div>
       <div class="card-top">
         <span class="card-tag tag-renal">🫘 Renal Pharmacology</span>
@@ -169,7 +204,7 @@
       </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~13 min</span></div>
     </a>
-    <a href="/blog/egfr-ckd.html" class="card">
+    <a href="/blog/egfr-ckd" class="card">
       <div class="card-bar bar-nephrology"></div>
       <div class="card-top">
         <span class="card-tag tag-nephrology">🫘 Nephrology</span>
@@ -179,12 +214,22 @@
       </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~14 min</span></div>
     </a>
+    <a href="/blog/corrected-calcium" class="card">
+      <div class="card-bar bar-nephrology"></div>
+      <div class="card-top">
+        <span class="card-tag tag-nephrology">🫘 Nephrology</span>
+        <h2>Corrected Calcium: Why Albumin Changes Everything in Hypocalcaemia</h2>
+        <p>Albumin-corrected calcium formula, ionised vs total calcium, causes of hypocalcaemia and hypercalcaemia, calcium in CKD, and when to check PTH and vitamin D.</p>
+        <div class="guidelines"><span class="gl">KDIGO</span><span class="gl">Endocrine Society</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~11 min</span></div>
+    </a>
   </div>
 
   <!-- CARDIOLOGY -->
   <div id="cardiology" class="cat-heading">🫀 Cardiology</div>
   <div class="articles-grid">
-    <a href="/blog/cha2ds2-vasc.html" class="card">
+    <a href="/blog/cha2ds2-vasc" class="card">
       <div class="card-bar bar-cardiology"></div>
       <div class="card-top">
         <span class="card-tag tag-cardiology">🫀 Cardiology</span>
@@ -194,12 +239,42 @@
       </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~13 min</span></div>
     </a>
+    <a href="/blog/framingham-risk" class="card">
+      <div class="card-bar bar-cardiology"></div>
+      <div class="card-top">
+        <span class="card-tag tag-cardiology">🫀 Cardiology</span>
+        <h2>Framingham Risk Score: 10-Year Cardiovascular Risk in Primary Prevention</h2>
+        <p>How Framingham calculates 10-year ASCVD risk, statin thresholds, LDL targets by risk category, limitations in South Asians, and newer risk enhancers like CAC score and hs-CRP.</p>
+        <div class="guidelines"><span class="gl">ACC/AHA 2019</span><span class="gl">ESC 2021</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~13 min</span></div>
+    </a>
+    <a href="/blog/grace-score" class="card">
+      <div class="card-bar bar-cardiology"></div>
+      <div class="card-top">
+        <span class="card-tag tag-cardiology">🫀 Cardiology</span>
+        <h2>GRACE Score: Risk Stratification in Acute Coronary Syndrome</h2>
+        <p>GRACE 2.0 variables, in-hospital vs 6-month mortality, GRACE vs TIMI vs HEART score, early invasive vs conservative strategy, antiplatelet and anticoagulation decisions.</p>
+        <div class="guidelines"><span class="gl">ESC ACS 2023</span><span class="gl">ACC/AHA</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~13 min</span></div>
+    </a>
+    <a href="/blog/map-calculator" class="card">
+      <div class="card-bar bar-cardiology"></div>
+      <div class="card-top">
+        <span class="card-tag tag-cardiology">🫀 Cardiology</span>
+        <h2>Mean Arterial Pressure (MAP): What It Means &amp; Why It Matters</h2>
+        <p>MAP formula, normal range, MAP in septic shock (target ≥65 mmHg), vasopressor thresholds, MAP vs systolic BP in clinical decisions, and MAP in raised intracranial pressure.</p>
+        <div class="guidelines"><span class="gl">Surviving Sepsis 2021</span><span class="gl">ESC</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~10 min</span></div>
+    </a>
   </div>
 
   <!-- RESPIRATORY -->
   <div id="respiratory" class="cat-heading">🫁 Respiratory Medicine</div>
   <div class="articles-grid">
-    <a href="/blog/curb65.html" class="card">
+    <a href="/blog/curb65-score" class="card">
       <div class="card-bar bar-respiratory"></div>
       <div class="card-top">
         <span class="card-tag tag-respiratory">🫁 Respiratory Medicine</span>
@@ -209,12 +284,22 @@
       </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~14 min</span></div>
     </a>
+    <a href="/blog/news2-score" class="card">
+      <div class="card-bar bar-respiratory"></div>
+      <div class="card-top">
+        <span class="card-tag tag-respiratory">🫁 Respiratory Medicine</span>
+        <h2>NEWS2 Score: Early Warning System for Deteriorating Patients</h2>
+        <p>All 7 physiological parameters, score thresholds and escalation triggers, NEWS2 vs MEWS, use in COVID-19 and sepsis, and how nursing teams use it for triage on wards.</p>
+        <div class="guidelines"><span class="gl">RCP 2017</span><span class="gl">NICE</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~11 min</span></div>
+    </a>
   </div>
 
   <!-- EMERGENCY -->
   <div id="emergency" class="cat-heading">🔥 Emergency &amp; Trauma</div>
   <div class="articles-grid">
-    <a href="/blog/parkland-formula.html" class="card">
+    <a href="/blog/parkland-formula" class="card">
       <div class="card-bar bar-emergency"></div>
       <div class="card-top">
         <span class="card-tag tag-emergency">🔥 Emergency &amp; Trauma</span>
@@ -224,12 +309,32 @@
       </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~13 min</span></div>
     </a>
+    <a href="/blog/shock-index" class="card">
+      <div class="card-bar bar-emergency"></div>
+      <div class="card-top">
+        <span class="card-tag tag-emergency">🔥 Emergency &amp; Trauma</span>
+        <h2>Shock Index: A Rapid Bedside Tool for Haemodynamic Instability</h2>
+        <p>Shock index formula (HR÷SBP), normal vs abnormal values, use in trauma, PPH, ectopic pregnancy, and MI, modified shock index, and limitations in elderly and hypertensive patients.</p>
+        <div class="guidelines"><span class="gl">ATLS</span><span class="gl">WHO Trauma</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~10 min</span></div>
+    </a>
+    <a href="/blog/ors-rehydration" class="card">
+      <div class="card-bar bar-emergency"></div>
+      <div class="card-top">
+        <span class="card-tag tag-emergency">🔥 Emergency &amp; Trauma</span>
+        <h2>ORS &amp; Rehydration Therapy: WHO Protocol for Diarrhoea &amp; Dehydration</h2>
+        <p>WHO ORS composition, Plan A/B/C dehydration management, volumes by weight and age, home-made ORS preparation, rice ORS, Zinc supplementation, and when to escalate to IV fluids.</p>
+        <div class="guidelines"><span class="gl">WHO 2005</span><span class="gl">IAP</span><span class="gl">IAPGCON</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~11 min</span></div>
+    </a>
   </div>
 
   <!-- METABOLIC -->
-  <div id="metabolic" class="cat-heading">⚖️ Metabolic Health</div>
+  <div id="metabolic" class="cat-heading">⚖️ Metabolic &amp; Endocrine</div>
   <div class="articles-grid">
-    <a href="/blog/bmi-india.html" class="card">
+    <a href="/blog/bmi-india" class="card">
       <div class="card-bar bar-metabolic"></div>
       <div class="card-top">
         <span class="card-tag tag-metabolic">⚖️ Metabolic Health</span>
@@ -239,40 +344,170 @@
       </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~12 min</span></div>
     </a>
+    <a href="/blog/hba1c-converter" class="card">
+      <div class="card-bar bar-metabolic"></div>
+      <div class="card-top">
+        <span class="card-tag tag-metabolic">⚖️ Metabolic Health</span>
+        <h2>HbA1c: What Your 3-Month Blood Sugar Average Means</h2>
+        <p>DCCT % vs IFCC mmol/mol conversion, HbA1c targets by age and comorbidity, estimated average glucose (eAG), HbA1c unreliability in haemoglobinopathies and CKD, and fructosamine as alternative.</p>
+        <div class="guidelines"><span class="gl">ADA 2024</span><span class="gl">RSSDI</span><span class="gl">IDF</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~11 min</span></div>
+    </a>
+    <a href="/blog/steroid-equivalence" class="card">
+      <div class="card-bar" style="background:#1a6b3a;"></div>
+      <div class="card-top">
+        <span class="card-tag tag-endocrine">💊 Pharmacology</span>
+        <h2>Steroid Equivalence &amp; Conversion: Prednisolone, Dexamethasone &amp; Beyond</h2>
+        <p>Full equivalence table (prednisolone, dexamethasone, hydrocortisone, methylprednisolone, betamethasone), anti-inflammatory vs mineralocorticoid potency, tapering principles, and adrenal suppression risk.</p>
+        <div class="guidelines"><span class="gl">BNF</span><span class="gl">Endocrine Society</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~12 min</span></div>
+    </a>
   </div>
 
   <!-- NEUROLOGY & HAEMATOLOGY -->
   <div id="neurology" class="cat-heading">🧠 Neurology &amp; Haematology</div>
   <div class="articles-grid">
-    <a href="/blog/gcs-glasgow-coma-scale.html" class="card">
-      <div class="card-bar" style="background:#2c5f8a;"></div>
-      <div class="card-top"><span class="card-tag" style="background:#e6f1fa;color:#2c5f8a;">🧠 Neurology</span><h2>Glasgow Coma Scale (GCS): Complete Neurological Assessment Guide</h2><p>Scoring E/V/M in detail, GCS severity classification (mild/moderate/severe TBI), the intubated T-modifier, Adelaide paediatric scale, reversible causes of low GCS, and the "drop of 2" red flag rule.</p></div>
+    <a href="/blog/gcs-glasgow-coma-scale" class="card">
+      <div class="card-bar bar-neurology"></div>
+      <div class="card-top">
+        <span class="card-tag tag-neurology">🧠 Neurology</span>
+        <h2>Glasgow Coma Scale (GCS): Complete Neurological Assessment Guide</h2>
+        <p>Scoring E/V/M in detail, GCS severity classification (mild/moderate/severe TBI), the intubated T-modifier, Adelaide paediatric scale, reversible causes of low GCS, and the "drop of 2" red flag rule.</p>
+        <div class="guidelines"><span class="gl">BTF</span><span class="gl">NICE CG176</span></div>
+      </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~12 min</span></div>
     </a>
-    <a href="/blog/wells-score-dvt-pe.html" class="card">
-      <div class="card-bar" style="background:#6b1a1a;"></div>
-      <div class="card-top"><span class="card-tag" style="background:#faeaea;color:#6b1a1a;">🩸 Haematology</span><h2>Wells Score for DVT &amp; PE: Diagnosing Venous Blood Clots</h2><p>DVT and PE pre-test probability scoring, when to use D-Dimer vs direct imaging, age-adjusted D-Dimer, CTPA vs ultrasound pathways, DOAC treatment, and duration of anticoagulation.</p></div>
+    <a href="/blog/abcd2-score" class="card">
+      <div class="card-bar bar-neurology"></div>
+      <div class="card-top">
+        <span class="card-tag tag-neurology">🧠 Neurology</span>
+        <h2>ABCD² Score: Stroke Risk After TIA &amp; the 2-Day Window</h2>
+        <p>ABCD² scoring variables, 2-day and 7-day stroke risk by score, the critical 48-hour investigation window, dual antiplatelet therapy, carotid imaging urgency, and TIA mimics to exclude.</p>
+        <div class="guidelines"><span class="gl">ESO 2021</span><span class="gl">AHA/ASA 2021</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~11 min</span></div>
+    </a>
+    <a href="/blog/wells-score-dvt-pe" class="card">
+      <div class="card-bar bar-haematology"></div>
+      <div class="card-top">
+        <span class="card-tag tag-haematology">🩸 Haematology</span>
+        <h2>Wells Score for DVT &amp; PE: Diagnosing Venous Blood Clots</h2>
+        <p>DVT and PE pre-test probability scoring, when to use D-Dimer vs direct imaging, age-adjusted D-Dimer, CTPA vs ultrasound pathways, DOAC treatment, and duration of anticoagulation.</p>
+        <div class="guidelines"><span class="gl">ESC PE 2019</span><span class="gl">ACCP</span></div>
+      </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~13 min</span></div>
+    </a>
+    <a href="/blog/mentzer-index" class="card">
+      <div class="card-bar bar-haematology"></div>
+      <div class="card-top">
+        <span class="card-tag tag-haematology">🩸 Haematology</span>
+        <h2>Mentzer Index: Differentiating Iron Deficiency from Thalassaemia Trait</h2>
+        <p>Mentzer index formula (MCV÷RBC), IDA vs beta-thalassaemia trait cut-off, sensitivity and specificity, other discriminant indices (England-Fraser, Shine-Lal), and next steps when the index is borderline.</p>
+        <div class="guidelines"><span class="gl">ASH</span><span class="gl">ICMR Thalassaemia</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~10 min</span></div>
     </a>
   </div>
 
   <!-- CRITICAL CARE & ACID-BASE -->
   <div id="criticalcare" class="cat-heading">🏥 Critical Care &amp; Acid-Base</div>
   <div class="articles-grid">
-    <a href="/blog/sofa-score.html" class="card">
-      <div class="card-bar" style="background:#3a1a5c;"></div>
-      <div class="card-top"><span class="card-tag" style="background:#f0ebfb;color:#3a1a5c;">🏥 Critical Care</span><h2>SOFA Score: Organ Failure, Sepsis-3 &amp; ICU Mortality</h2><p>Full 6-organ SOFA scoring table, Sepsis-3 definition, ICU mortality by score, delta-SOFA trend analysis, qSOFA bedside screening, and the Hour-1 sepsis bundle.</p></div>
+    <a href="/blog/sofa-score" class="card">
+      <div class="card-bar bar-criticalcare"></div>
+      <div class="card-top">
+        <span class="card-tag tag-criticalcare">🏥 Critical Care</span>
+        <h2>SOFA Score: Organ Failure, Sepsis-3 &amp; ICU Mortality</h2>
+        <p>Full 6-organ SOFA scoring table, Sepsis-3 definition, ICU mortality by score, delta-SOFA trend analysis, qSOFA bedside screening, and the Hour-1 sepsis bundle.</p>
+        <div class="guidelines"><span class="gl">Sepsis-3</span><span class="gl">Surviving Sepsis 2021</span></div>
+      </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~13 min</span></div>
     </a>
-    <a href="/blog/anion-gap.html" class="card">
-      <div class="card-bar" style="background:#0e5c6b;"></div>
-      <div class="card-top"><span class="card-tag" style="background:#e6f5f7;color:#0e5c6b;">🧪 Acid-Base</span><h2>Anion Gap: MUDPILES, HARDUPS, Delta Ratio &amp; Mixed Disorders</h2><p>AG formula, albumin correction, HAGMA vs NAGMA causes, delta ratio for mixed disorders, Winter's formula for respiratory compensation, and step-by-step ABG interpretation.</p></div>
+    <a href="/blog/qsofa-score" class="card">
+      <div class="card-bar bar-criticalcare"></div>
+      <div class="card-top">
+        <span class="card-tag tag-criticalcare">🏥 Critical Care</span>
+        <h2>qSOFA Score: Rapid Sepsis Screening Outside the ICU</h2>
+        <p>Three-variable bedside qSOFA (RR, GCS, SBP), sensitivity vs specificity trade-offs, qSOFA vs SIRS vs NEWS2, when a score of ≥2 should change your management, and the Sepsis-3 flowchart.</p>
+        <div class="guidelines"><span class="gl">Sepsis-3</span><span class="gl">Surviving Sepsis 2021</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~10 min</span></div>
+    </a>
+    <a href="/blog/anion-gap" class="card">
+      <div class="card-bar bar-acidbase"></div>
+      <div class="card-top">
+        <span class="card-tag tag-acidbase">🧪 Acid-Base</span>
+        <h2>Anion Gap: MUDPILES, HARDUPS, Delta Ratio &amp; Mixed Disorders</h2>
+        <p>AG formula, albumin correction, HAGMA vs NAGMA causes, delta ratio for mixed disorders, Winter's formula for respiratory compensation, and step-by-step ABG interpretation.</p>
+        <div class="guidelines"><span class="gl">ATS/ERS ABG</span></div>
+      </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~13 min</span></div>
     </a>
-    <a href="/blog/neonatal-jaundice.html" class="card">
-      <div class="card-bar" style="background:#b87a00;"></div>
-      <div class="card-top"><span class="card-tag" style="background:#fdf8e8;color:#b87a00;">👶 Neonatology</span><h2>Neonatal Jaundice: Causes, Phototherapy &amp; AAP 2022 Guidelines</h2><p>Physiological vs pathological jaundice, AAP 2022 updated phototherapy thresholds by age and gestational age, G6PD in India, kernicterus prevention, and warning signs for parents at home.</p></div>
+    <a href="/blog/meld-score" class="card">
+      <div class="card-bar bar-gastro"></div>
+      <div class="card-top">
+        <span class="card-tag tag-gastro">🫁 Gastroenterology</span>
+        <h2>MELD Score: Liver Disease Severity &amp; Transplant Waitlist Priority</h2>
+        <p>MELD and MELD-Na formulas, 3-month mortality by score, MELD 3.0 with sex variable, transplant listing thresholds in India, TIPS candidacy, and what the score means for patients' families.</p>
+        <div class="guidelines"><span class="gl">AASLD 2022</span><span class="gl">EASL</span><span class="gl">ILTS</span></div>
+      </div>
       <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~12 min</span></div>
+    </a>
+  </div>
+
+  <!-- PAEDIATRIC -->
+  <div id="paediatric" class="cat-heading">👶 Paediatric Medicine</div>
+  <div class="articles-grid">
+    <a href="/blog/holliday-segar" class="card">
+      <div class="card-bar bar-paediatric"></div>
+      <div class="card-top">
+        <span class="card-tag tag-paediatric">👶 Paediatric Medicine</span>
+        <h2>Holliday-Segar Method: Paediatric Maintenance Fluid Calculation</h2>
+        <p>4-2-1 rule vs daily volume method, fluid choice (0.9% saline vs 0.45% saline, dextrose concentration), hyponatraemia risk in hospitalised children, and NICE guidance on isotonic fluids.</p>
+        <div class="guidelines"><span class="gl">NICE NG29</span><span class="gl">AAP</span><span class="gl">IAP</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~11 min</span></div>
+    </a>
+    <a href="/blog/pediatric-dehydration" class="card">
+      <div class="card-bar bar-paediatric"></div>
+      <div class="card-top">
+        <span class="card-tag tag-paediatric">👶 Paediatric Medicine</span>
+        <h2>Paediatric Dehydration: Assessment, Scoring &amp; WHO Rehydration Plans</h2>
+        <p>Clinical signs of mild/moderate/severe dehydration, WHO dehydration assessment scale, Plan A/B/C rehydration, when to use IV vs oral route, and red flags that need hospital admission.</p>
+        <div class="guidelines"><span class="gl">WHO IMCI</span><span class="gl">IAP</span><span class="gl">NICE</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~12 min</span></div>
+    </a>
+  </div>
+
+  <!-- PSYCHIATRY -->
+  <div id="psychiatry" class="cat-heading">🧠 Psychiatry &amp; Mental Health</div>
+  <div class="articles-grid">
+    <a href="/blog/phq9-gad7" class="card">
+      <div class="card-bar bar-psychiatry"></div>
+      <div class="card-top">
+        <span class="card-tag tag-psychiatry">🧠 Psychiatry</span>
+        <h2>PHQ-9 &amp; GAD-7: Screening for Depression &amp; Anxiety in Clinical Practice</h2>
+        <p>Complete PHQ-9 and GAD-7 scoring, severity cut-offs, treatment thresholds, sensitivity and specificity, use in primary care in India, and how to follow up scores over time.</p>
+        <div class="guidelines"><span class="gl">WHO mhGAP</span><span class="gl">NICE CG90</span><span class="gl">APA DSM-5</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~11 min</span></div>
+    </a>
+  </div>
+
+  <!-- PREVENTIVE MEDICINE -->
+  <div id="preventive" class="cat-heading">💉 Preventive Medicine</div>
+  <div class="articles-grid">
+    <a href="/blog/uip-vaccine-schedule" class="card">
+      <div class="card-bar bar-preventive"></div>
+      <div class="card-top">
+        <span class="card-tag tag-preventive">💉 Preventive Medicine</span>
+        <h2>India's Universal Immunisation Programme: Complete UIP Vaccine Schedule</h2>
+        <p>Full IAP 2023 recommended childhood schedule from birth to 15 years, government UIP vaccines vs IAP additional vaccines, cold chain requirements, missed dose catch-up, and state-level additions.</p>
+        <div class="guidelines"><span class="gl">IAP 2023</span><span class="gl">NHP India</span><span class="gl">WHO EPI</span></div>
+      </div>
+      <div class="card-bottom"><span class="read">Read Article →</span><span class="meta">~13 min</span></div>
     </a>
   </div>
 
@@ -295,8 +530,8 @@
   </p>
   <p style="margin-top:8px;font-size:12.5px;">Articles are for educational purposes only. Always consult a qualified physician for clinical decisions.</p>
 </footer>
-<script defer src="/assets/umami-events.js">
-</script> <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script defer src="/assets/umami-events.js"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 <script src="/assets/shared-nav.js"></script>
 </body>
 </html>
