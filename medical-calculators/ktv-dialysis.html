@@ -3,217 +3,858 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Kt/V Calculator | Dialysis Adequacy | Urea Reduction Ratio | RxMedCalc</title>
-<meta name="description" content="Free Kt/V and URR (urea reduction ratio) calculator for haemodialysis adequacy. Uses Daugirdas second-generation formula. KDOQI target Kt/V ≥1.4. Includes single-pool and double-pool Kt/V. Used by nephrologists and dialysis staff worldwide."/>
-<meta name="keywords" content="Kt/V calculator, dialysis adequacy, Kt/V haemodialysis, URR calculator, urea reduction ratio, Daugirdas formula Kt/V, KDOQI Kt/V, single pool Kt/V, dialysis dose calculator, haemodialysis adequacy"/>
+<title>Kt/V Calculator — Dialysis Adequacy &amp; URR | Daugirdas Formula | RxMedCalc</title>
+<meta name="description" content="Free Kt/V and URR (urea reduction ratio) calculator for haemodialysis adequacy. Uses Daugirdas second-generation formula. KDOQI target spKt/V ≥1.4 per session. Includes interpretation and prescription guidance."/>
+<meta name="keywords" content="Kt/V calculator, dialysis adequacy, URR calculator, urea reduction ratio, Daugirdas formula, KDOQI Kt/V, single pool Kt/V, haemodialysis adequacy, dialysis dose India"/>
 <meta name="robots" content="index, follow"/>
+<meta name="author" content="RxMedCalc Editorial Team"/>
 <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/ktv-dialysis"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Kt/V Calculator — Dialysis Adequacy &amp; URR | RxMedCalc"/>
+<meta property="og:description" content="Calculate spKt/V and URR for haemodialysis adequacy using the Daugirdas 2nd-gen formula. KDOQI target ≥1.4. Free, clinical-grade tool for nephrologists and dialysis staff."/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/ktv-dialysis"/>
+<meta property="og:site_name" content="RxMedCalc"/>
+<meta property="article:published_time" content="2024-11-01T00:00:00+05:30"/>
+<meta property="article:modified_time" content="2025-05-01T00:00:00+05:30"/>
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kt/V Calculator — Dialysis Adequacy | RxMedCalc"/>
+<meta name="twitter:description" content="Free Kt/V &amp; URR calculator using the Daugirdas 2nd-gen formula. KDOQI target ≥1.4."/>
+
+<!-- hreflang -->
+<link rel="alternate" hreflang="en-IN" href="https://rxmedcalc.com/medical-calculators/ktv-dialysis"/>
+<link rel="alternate" hreflang="x-default" href="https://rxmedcalc.com/medical-calculators/ktv-dialysis"/>
+
+<!-- JSON-LD Schema @graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rxmedcalc.com/#website",
+      "url": "https://rxmedcalc.com/",
+      "name": "RxMedCalc",
+      "description": "Free clinical medical calculators for Indian healthcare professionals",
+      "publisher": { "@id": "https://rxmedcalc.com/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://rxmedcalc.com/#organization",
+      "name": "RxMedCalc",
+      "url": "https://rxmedcalc.com/",
+      "logo": { "@type": "ImageObject", "url": "https://rxmedcalc.com/favicon.svg" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://rxmedcalc.com/medical-calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Kt/V Dialysis Adequacy Calculator", "item": "https://rxmedcalc.com/medical-calculators/ktv-dialysis" }
+      ]
+    },
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://rxmedcalc.com/medical-calculators/ktv-dialysis#webpage",
+      "url": "https://rxmedcalc.com/medical-calculators/ktv-dialysis",
+      "name": "Kt/V Calculator — Dialysis Adequacy & URR | RxMedCalc",
+      "description": "Calculate spKt/V and URR for haemodialysis adequacy using the Daugirdas second-generation formula. KDOQI target ≥1.4.",
+      "datePublished": "2024-11-01",
+      "dateModified": "2025-05-01",
+      "inLanguage": "en-IN",
+      "isPartOf": { "@id": "https://rxmedcalc.com/#website" },
+      "about": { "@type": "MedicalCondition", "name": "Chronic Kidney Disease" },
+      "audience": { "@type": "MedicalAudience", "audienceType": "Nephrologist, Physician, Dialysis Nurse" },
+      "reviewedBy": {
+        "@type": "Person",
+        "name": "Dr. Sharma",
+        "jobTitle": "Medical Officer, AFIH",
+        "affiliation": "Government Clinic"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://rxmedcalc.com/medical-calculators/ktv-dialysis#app",
+      "name": "Kt/V & URR Dialysis Adequacy Calculator",
+      "url": "https://rxmedcalc.com/medical-calculators/ktv-dialysis",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Daugirdas second-generation formula for Kt/V?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Daugirdas 2nd-generation spKt/V formula is: Kt/V = −ln(R − 0.008×t) + (4 − 3.5×R) × UF/V, where R = post-BUN / pre-BUN, t = session duration in hours, UF = ultrafiltration volume in litres, and V = post-dialysis body weight in kg used as a surrogate for volume of distribution." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the KDOQI target Kt/V for haemodialysis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "According to KDOQI 2015 guidelines, the minimum delivered spKt/V target is ≥1.4 per session for patients on thrice-weekly haemodialysis. An spKt/V of ≥1.2 is the absolute minimum acceptable. The URR equivalent target is ≥70%." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is URR and how is it calculated?",
+          "acceptedAnswer": { "@type": "Answer", "text": "URR (Urea Reduction Ratio) is a simpler measure of dialysis adequacy. URR (%) = (1 − post-BUN/pre-BUN) × 100. A URR of ≥70% is generally considered adequate dialysis, equivalent to an spKt/V of approximately 1.2–1.4." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you improve an inadequate Kt/V?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The most effective strategies are: (1) Extending session duration by 30–60 minutes, (2) Increasing blood flow rate (Qb) to 350–400 mL/min, (3) Increasing dialysate flow rate (Qd) to 700–800 mL/min, (4) Using a high-flux dialyser with larger surface area (1.8–2.1 m²), and (5) Evaluating vascular access for recirculation — access recirculation >10% significantly reduces effective clearance." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between spKt/V and eKt/V?",
+          "acceptedAnswer": { "@type": "Answer", "text": "spKt/V (single-pool) is calculated directly from pre- and post-BUN samples. eKt/V (equilibrated) corrects for urea rebound after dialysis and is more accurate for short or high-efficiency sessions. eKt/V ≈ spKt/V − 0.6/t (where t is session hours). The eKt/V KDOQI target is ≥1.2." }
+        },
+        {
+          "@type": "Question",
+          "name": "When should the post-dialysis BUN sample be collected?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The post-dialysis BUN sample must be collected within 30 seconds of ending dialysis using the slow-flow or stop-pump technique. Blood flow is reduced to 50–100 mL/min for 15 seconds before sampling from the arterial line. Incorrect sampling is the most common cause of falsely high spKt/V." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
 <link rel="stylesheet" href="/assets/shared.css"/>
 <script defer src="/assets/umami-events.js"></script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
 <style>
+/* =============================================
+   RESET & BASE
+   ============================================= */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
-.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#0a1e1e 60%,#0d1b2a 100%);padding:34px 0 0;position:relative;overflow:hidden}
-.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(16,185,129,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,0.05) 1px,transparent 1px);background-size:40px 40px}
-.header-inner{max-width:900px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
-.breadcrumb{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);margin-bottom:12px;flex-wrap:wrap}
-.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
-.page-eyebrow{display:inline-flex;align-items:center;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:700;color:#6ee7b7;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px}
-h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.5rem,5vw,2.3rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:8px}
+body{
+  font-family:'DM Sans',system-ui,-apple-system,sans-serif;
+  background:#f0f4f8;
+  color:#1a1a2e;
+  overflow-x:hidden;
+  -webkit-text-size-adjust:100%
+}
+
+/* =============================================
+   PAGE HEADER — fixed layout
+   ============================================= */
+.page-header{
+  background:linear-gradient(140deg,#0d1b2a 0%,#0a1e1e 55%,#082018 100%);
+  position:relative;
+  overflow:hidden;
+}
+
+/* subtle dot-grid */
+.page-header::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(circle, rgba(16,185,129,0.18) 1px, transparent 1px);
+  background-size:28px 28px;
+  pointer-events:none;
+}
+
+/* teal glow orb */
+.page-header::after{
+  content:'';
+  position:absolute;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(16,185,129,0.12) 0%,transparent 70%);
+  top:-100px;right:-80px;
+  pointer-events:none;
+}
+
+.header-inner{
+  max-width:900px;
+  margin:0 auto;
+  padding:28px 20px 26px;       /* unified padding — no separate bottom */
+  position:relative;
+  z-index:1;
+}
+
+/* ---- breadcrumb ---- */
+.breadcrumb{
+  display:flex;align-items:center;gap:6px;
+  font-size:0.7rem;color:rgba(255,255,255,0.4);
+  margin-bottom:14px;flex-wrap:wrap;
+}
+.breadcrumb a{color:rgba(255,255,255,0.55);text-decoration:none;transition:color .2s}
+.breadcrumb a:hover{color:#6ee7b7}
+.breadcrumb span{color:rgba(255,255,255,0.25)}
+
+/* ---- eyebrow pill ---- */
+.page-eyebrow{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(16,185,129,0.13);
+  border:1px solid rgba(16,185,129,0.28);
+  border-radius:20px;padding:4px 13px;
+  font-size:0.68rem;font-weight:700;
+  color:#6ee7b7;letter-spacing:0.06em;text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+/* ---- H1 — NO <br>, flows naturally ---- */
+h1{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:clamp(1.6rem,5.5vw,2.5rem);
+  font-weight:900;color:#fff;
+  line-height:1.1;
+  margin-bottom:10px;
+  max-width:580px;
+}
 h1 em{font-style:italic;color:#34d399}
-.page-sub{font-size:0.87rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:560px;margin-bottom:16px}
-.header-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:22px}
-.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:0.67rem;font-weight:600;color:rgba(255,255,255,0.7)}
+
+/* ---- subtext ---- */
+.page-sub{
+  font-size:0.86rem;
+  color:rgba(255,255,255,0.58);
+  line-height:1.72;
+  max-width:520px;
+  margin-bottom:18px;
+}
+
+/* ---- badges ---- */
+.header-badges{display:flex;gap:6px;flex-wrap:wrap}
+.hbadge{
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.13);
+  border-radius:20px;padding:3px 11px;
+  font-size:0.66rem;font-weight:600;
+  color:rgba(255,255,255,0.65);
+  white-space:nowrap;
+}
+
+/* ---- reviewer strip ---- */
+.reviewer-strip{
+  display:flex;align-items:center;gap:8px;
+  margin-top:18px;padding-top:16px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  font-size:0.71rem;color:rgba(255,255,255,0.45);
+}
+.reviewer-avatar{
+  width:30px;height:30px;border-radius:50%;
+  background:linear-gradient(135deg,#10b981,#059669);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.75rem;font-weight:700;color:#fff;flex-shrink:0;
+}
+.reviewer-info{line-height:1.4}
+.reviewer-name{font-weight:600;color:rgba(255,255,255,0.7);font-size:0.74rem}
+
+/* =============================================
+   MAIN CONTENT
+   ============================================= */
 .main{max-width:900px;margin:0 auto;padding:22px 20px 80px}
-.calc-card,.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:18px;padding:20px;margin-bottom:18px;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+
+/* ---- intro paragraph ---- */
+.intro-para{
+  background:#fff;
+  border:1.5px solid #e2e8f0;
+  border-left:4px solid #10b981;
+  border-radius:12px;padding:16px 18px;
+  font-size:0.86rem;color:#374151;
+  line-height:1.82;margin-bottom:18px;
+}
+.intro-para strong{color:#065f46}
+
+/* ---- cards ---- */
+.calc-card,.content-card{
+  background:#fff;
+  border:1.5px solid #e2e8f0;
+  border-radius:18px;padding:20px;
+  margin-bottom:18px;
+  box-shadow:0 2px 16px rgba(0,0,0,0.04);
+}
 @media(min-width:600px){.calc-card,.content-card{padding:26px}}
-.calc-title{font-family:'Fraunces',Georgia,serif;font-size:0.98rem;font-weight:700;color:#0d1b2a;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.calc-title::before{content:'';display:block;width:4px;height:16px;background:#10b981;border-radius:2px;flex-shrink:0}
-.input-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px}
+
+/* ---- calc title ---- */
+.calc-title{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:1rem;font-weight:700;
+  color:#0d1b2a;margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;
+}
+.calc-title::before{
+  content:'';display:block;
+  width:4px;height:18px;
+  background:linear-gradient(to bottom,#10b981,#059669);
+  border-radius:2px;flex-shrink:0;
+}
+
+/* ---- input grid ---- */
+.input-grid{
+  display:grid;grid-template-columns:1fr;
+  gap:10px;margin-bottom:14px;
+}
 @media(min-width:480px){.input-grid{grid-template-columns:1fr 1fr}}
-.field label{display:block;font-size:0.69rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
-.field input{width:100%;padding:11px 13px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:9px;font-family:inherit;font-size:16px;color:#0d1b2a;outline:none;transition:border-color 0.2s;-webkit-appearance:none;appearance:none}
-.field input:focus{border-color:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,0.1)}
+
+.field label{
+  display:block;font-size:0.68rem;font-weight:700;
+  color:#6b7280;text-transform:uppercase;
+  letter-spacing:0.05em;margin-bottom:4px;
+}
+.field input{
+  width:100%;padding:11px 13px;
+  background:#f9fafb;
+  border:1.5px solid #e5e7eb;border-radius:9px;
+  font-family:inherit;font-size:16px;color:#0d1b2a;
+  outline:none;transition:border-color .2s,box-shadow .2s;
+  -webkit-appearance:none;appearance:none;
+}
+.field input:focus{
+  border-color:#10b981;
+  box-shadow:0 0 0 3px rgba(16,185,129,0.12);
+}
 .field .hint{font-size:0.67rem;color:#9ca3af;margin-top:3px}
-.btn-calc{width:100%;padding:13px;border:none;border-radius:10px;color:#fff;font-family:inherit;font-size:0.95rem;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#10b981,#059669);box-shadow:0 4px 14px rgba(16,185,129,0.3);touch-action:manipulation}
+
+/* ---- button ---- */
+.btn-calc{
+  width:100%;padding:13px;border:none;border-radius:10px;
+  color:#fff;font-family:inherit;font-size:0.95rem;font-weight:700;
+  cursor:pointer;
+  background:linear-gradient(135deg,#10b981 0%,#059669 100%);
+  box-shadow:0 4px 16px rgba(16,185,129,0.3);
+  touch-action:manipulation;transition:transform .15s,box-shadow .15s;
+}
+.btn-calc:hover{box-shadow:0 6px 22px rgba(16,185,129,0.4)}
 .btn-calc:active{transform:scale(0.98)}
-.error-msg{color:#dc2626;font-size:0.77rem;margin-top:7px;display:none}.error-msg.show{display:block}
+
+/* ---- error ---- */
+.error-msg{color:#dc2626;font-size:0.77rem;margin-top:7px;display:none}
+.error-msg.show{display:block}
+
+/* ---- results ---- */
 .results{display:none;margin-top:16px}.results.show{display:block}
 .divider{height:1px;background:#f3f4f6;margin:14px 0}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+
+.result-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:10px;margin-bottom:12px;
+}
 @media(min-width:480px){.result-grid{grid-template-columns:repeat(3,1fr)}}
-.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-align:center}
-.rbox.hi{background:#f0fdf4;border-color:#bbf7d0}
-.rlabel{font-size:0.59rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px}
-.rval{font-size:1.15rem;font-weight:700;color:#0d1b2a;font-variant-numeric:tabular-nums}
+
+.rbox{
+  background:#f9fafb;border:1.5px solid #e5e7eb;
+  border-radius:12px;padding:14px 10px;text-align:center;
+  transition:border-color .2s;
+}
+.rbox.hi{background:#f0fdf4;border-color:#a7f3d0}
+.rlabel{
+  font-size:0.58rem;font-weight:700;color:#9ca3af;
+  text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;
+}
+.rval{
+  font-size:1.2rem;font-weight:700;color:#0d1b2a;
+  font-variant-numeric:tabular-nums;
+}
 .rbox.hi .rval{color:#059669}
-.runit{font-size:0.63rem;color:#9ca3af;margin-top:2px}
-.interp{border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:0.84rem;line-height:1.7;white-space:pre-line}
+.runit{font-size:0.62rem;color:#9ca3af;margin-top:2px}
+
+.interp{
+  border-radius:10px;padding:13px 15px;
+  margin-bottom:12px;font-size:0.84rem;
+  line-height:1.75;white-space:pre-line;
+}
+
+/* ---- action row ---- */
 .action-row{display:flex;gap:8px;margin-top:10px}
-.act-btn{flex:1;padding:10px 8px;border-radius:9px;font-family:inherit;font-size:0.78rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation}
-.act-btn:active{opacity:0.7}
-.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
-.reset-btn{width:100%;margin-top:7px;padding:8px;background:transparent;border:1.5px solid #e5e7eb;border-radius:9px;color:#9ca3af;font-family:inherit;font-size:0.78rem;cursor:pointer;touch-action:manipulation}
-.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:900;color:#0d1b2a;margin-bottom:12px}
-.content-card h3{font-size:0.9rem;font-weight:700;color:#10b981;margin:14px 0 6px}
-.content-card p{font-size:0.84rem;color:#4b5563;line-height:1.78;margin-bottom:8px}
-.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
-.content-card li{font-size:0.82rem;color:#4b5563;padding-left:13px;position:relative;line-height:1.55}
-.content-card li::before{content:'→';position:absolute;left:0;color:#10b981;font-size:0.76rem}
-.formula-box{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:9px;padding:12px;font-family:'Courier New',monospace;font-size:0.79rem;color:#065f46;margin:8px 0;line-height:1.9}
-.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.act-btn{
+  flex:1;padding:10px 8px;border-radius:9px;
+  font-family:inherit;font-size:0.78rem;font-weight:600;
+  cursor:pointer;border:none;touch-action:manipulation;
+  transition:opacity .15s;
+}
+.act-btn:active{opacity:.7}
+.wa-btn{background:#25d366;color:#fff}
+.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{
+  width:100%;margin-top:8px;padding:8px;
+  background:transparent;border:1.5px solid #e5e7eb;
+  border-radius:9px;color:#9ca3af;font-family:inherit;
+  font-size:0.78rem;cursor:pointer;touch-action:manipulation;
+  transition:border-color .2s,color .2s;
+}
+.reset-btn:hover{border-color:#d1d5db;color:#6b7280}
+
+/* ---- content cards ---- */
+.content-card h2{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:1.25rem;font-weight:900;
+  color:#0d1b2a;margin-bottom:14px;
+}
+.content-card h3{
+  font-size:0.88rem;font-weight:700;
+  color:#059669;margin:16px 0 6px;
+}
+.content-card p{
+  font-size:0.84rem;color:#4b5563;
+  line-height:1.8;margin-bottom:8px;
+}
+.content-card ul{
+  list-style:none;padding:0;
+  display:flex;flex-direction:column;
+  gap:5px;margin-bottom:8px;
+}
+.content-card li{
+  font-size:0.82rem;color:#4b5563;
+  padding-left:14px;position:relative;line-height:1.55;
+}
+.content-card li::before{
+  content:'→';position:absolute;left:0;
+  color:#10b981;font-size:0.74rem;top:1px;
+}
+
+/* ---- formula box ---- */
+.formula-box{
+  background:#f0fdf4;border:1.5px solid #bbf7d0;
+  border-radius:10px;padding:13px 15px;
+  font-family:'Courier New',monospace;
+  font-size:0.79rem;color:#065f46;
+  margin:8px 0;line-height:2;
+}
+
+/* ---- target table ---- */
+.target-table{
+  width:100%;border-collapse:collapse;
+  font-size:0.8rem;margin:10px 0;
+}
+.target-table th{
+  background:#f0fdf4;color:#065f46;
+  font-weight:700;padding:8px 10px;
+  text-align:left;border-bottom:2px solid #bbf7d0;
+  font-size:0.73rem;text-transform:uppercase;letter-spacing:0.04em;
+}
+.target-table td{
+  padding:8px 10px;border-bottom:1px solid #f3f4f6;
+  color:#374151;vertical-align:top;
+}
+.target-table tr:last-child td{border-bottom:none}
+.badge-adeq{background:#dcfce7;color:#166534;border-radius:4px;padding:1px 6px;font-size:0.7rem;font-weight:700}
+.badge-border{background:#fef9c3;color:#854d0e;border-radius:4px;padding:1px 6px;font-size:0.7rem;font-weight:700}
+.badge-inad{background:#fee2e2;color:#991b1b;border-radius:4px;padding:1px 6px;font-size:0.7rem;font-weight:700}
+
+/* ---- FAQ section ---- */
+.faq-section details{
+  border:1.5px solid #e2e8f0;border-radius:10px;
+  margin-bottom:8px;overflow:hidden;
+}
+.faq-section summary{
+  padding:12px 14px;cursor:pointer;
+  font-size:0.85rem;font-weight:600;color:#0d1b2a;
+  list-style:none;display:flex;justify-content:space-between;
+  align-items:center;user-select:none;
+  background:#fafafa;
+}
+.faq-section summary::-webkit-details-marker{display:none}
+.faq-section summary::after{
+  content:'+';font-size:1.1rem;color:#10b981;
+  flex-shrink:0;margin-left:8px;transition:transform .2s;
+}
+.faq-section details[open] summary::after{content:'−'}
+.faq-section details[open] summary{background:#f0fdf4;color:#065f46}
+.faq-answer{
+  padding:12px 14px;font-size:0.82rem;color:#4b5563;
+  line-height:1.78;border-top:1px solid #e2e8f0;
+  background:#fff;
+}
+
+/* ---- related grid ---- */
+.related-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:10px;
+}
 @media(min-width:600px){.related-grid{grid-template-columns:repeat(4,1fr)}}
-.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;touch-action:manipulation}
-.related-card:active{border-color:#10b981;background:#f0fdf4}
-.rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
-.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
+.related-card{
+  background:#f9fafb;border:1.5px solid #e5e7eb;
+  border-radius:10px;padding:12px;
+  text-decoration:none;color:inherit;
+  display:flex;align-items:center;gap:8px;
+  transition:border-color .2s,background .2s;
+}
+.related-card:hover,.related-card:active{
+  border-color:#10b981;background:#f0fdf4;
+}
+.rc-icon{font-size:1.2rem;flex-shrink:0}
+.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}
+.rc-desc{font-size:0.65rem;color:#9ca3af}
+
+/* ---- disclaimer ---- */
+.disclaimer{
+  background:#fffbeb;border:1.5px solid #fde68a;
+  border-radius:10px;padding:13px 15px;
+  font-size:0.73rem;color:#78350f;line-height:1.65;
+  margin-top:16px;
+}
 </style>
 </head>
 <body>
+
+<!-- ====================== PAGE HEADER ====================== -->
 <div class="page-header">
   <div class="header-inner">
-    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Kt/V Calculator</span></nav>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">›</span>
+      <a href="/medical-calculators/">Calculators</a>
+      <span aria-hidden="true">›</span>
+      <span>Kt/V Calculator</span>
+    </nav>
+
     <div class="page-eyebrow">🫘 Nephrology · Dialysis · CKD</div>
-    <h1>Kt/V Calculator<br><em>Dialysis Adequacy</em></h1>
-    <p class="page-sub">Calculate Kt/V and URR for haemodialysis adequacy using the Daugirdas second-generation formula. KDOQI target Kt/V ≥1.4 (spKt/V) per session.</p>
+
+    <!-- Clean H1 — no <br> tag -->
+    <h1>Kt/V Calculator — <em>Dialysis Adequacy</em> &amp; URR</h1>
+
+    <p class="page-sub">
+      Calculate <strong style="color:#6ee7b7">spKt/V</strong> and <strong style="color:#6ee7b7">URR</strong> for haemodialysis adequacy using the Daugirdas second-generation formula. KDOQI target spKt/V ≥1.4 per session. Includes prescription improvement guidance.
+    </p>
+
     <div class="header-badges">
-      <span class="hbadge">✓ Daugirdas Formula</span>
-      <span class="hbadge">✓ URR Calculator</span>
+      <span class="hbadge">✓ Daugirdas 2nd-Gen Formula</span>
+      <span class="hbadge">✓ URR Calculation</span>
       <span class="hbadge">✓ KDOQI Target ≥1.4</span>
       <span class="hbadge">✓ Adequacy Guidance</span>
+      <span class="hbadge">✓ Free &amp; No Login</span>
     </div>
+
+    <!-- E-E-A-T Reviewer Strip -->
+    <div class="reviewer-strip">
+      <div class="reviewer-avatar" aria-hidden="true">DS</div>
+      <div class="reviewer-info">
+        <div class="reviewer-name">Reviewed by Dr. Sharma, MBBS, AFIH</div>
+        <div>Medical Officer · Last reviewed May 2025</div>
+      </div>
+    </div>
+
   </div>
 </div>
+
+<!-- ====================== MAIN ====================== -->
 <main class="main">
+
+  <!-- Keyword-dense intro paragraph -->
+  <div class="intro-para">
+    The <strong>Kt/V dialysis adequacy calculator</strong> uses the <strong>Daugirdas second-generation formula</strong> to compute single-pool Kt/V (spKt/V) and the urea reduction ratio (URR) from pre- and post-dialysis blood urea nitrogen (BUN), session duration, ultrafiltration volume, and post-dialysis weight. Per <strong>KDOQI 2015 guidelines</strong>, a minimum delivered spKt/V of ≥1.4 per thrice-weekly session is the adequacy target. An spKt/V below 1.2 warrants urgent prescription review. URR ≥70% is the equivalent benchmarks when weight data are unavailable.
+  </div>
+
+  <!-- Calculator Card -->
   <div class="calc-card">
     <div class="calc-title">Kt/V &amp; URR Calculator</div>
     <div class="input-grid">
       <div class="field">
-        <label>Pre-dialysis BUN</label>
-        <input type="number" id="bun-pre" placeholder="e.g. 80" inputmode="decimal"/>
+        <label for="bun-pre">Pre-dialysis BUN</label>
+        <input type="number" id="bun-pre" placeholder="e.g. 80" inputmode="decimal" min="0"/>
         <div class="hint">mg/dL</div>
       </div>
       <div class="field">
-        <label>Post-dialysis BUN</label>
-        <input type="number" id="bun-post" placeholder="e.g. 25" inputmode="decimal"/>
-        <div class="hint">mg/dL</div>
+        <label for="bun-post">Post-dialysis BUN</label>
+        <input type="number" id="bun-post" placeholder="e.g. 25" inputmode="decimal" min="0"/>
+        <div class="hint">mg/dL — slow-flow sample within 30 sec</div>
       </div>
       <div class="field">
-        <label>Session Duration</label>
-        <input type="number" id="tdur" placeholder="e.g. 240" inputmode="decimal"/>
+        <label for="tdur">Session Duration</label>
+        <input type="number" id="tdur" placeholder="e.g. 240" inputmode="decimal" min="0"/>
         <div class="hint">minutes</div>
       </div>
       <div class="field">
-        <label>Ultrafiltration Volume</label>
-        <input type="number" id="uf" placeholder="e.g. 2.0" inputmode="decimal"/>
+        <label for="uf">Ultrafiltration Volume</label>
+        <input type="number" id="uf" placeholder="e.g. 2.0" inputmode="decimal" min="0" step="0.1"/>
         <div class="hint">litres removed during dialysis</div>
       </div>
       <div class="field">
-        <label>Post-dialysis Weight</label>
-        <input type="number" id="wt" placeholder="e.g. 70" inputmode="decimal"/>
-        <div class="hint">kg (dry weight)</div>
+        <label for="wt">Post-dialysis Weight</label>
+        <input type="number" id="wt" placeholder="e.g. 70" inputmode="decimal" min="0" step="0.1"/>
+        <div class="hint">kg (dry/target weight)</div>
       </div>
     </div>
-    <div class="error-msg" id="error-msg"></div>
+    <div class="error-msg" id="error-msg" role="alert"></div>
     <button class="btn-calc" onclick="calculate()">Calculate Kt/V →</button>
+
     <div class="results" id="results">
       <div class="divider"></div>
       <div class="result-grid">
-        <div class="rbox hi"><div class="rlabel">spKt/V</div><div class="rval" id="r-ktv">—</div><div class="runit">target ≥1.4</div></div>
-        <div class="rbox"><div class="rlabel">URR</div><div class="rval" id="r-urr">—</div><div class="runit">% (target ≥70%)</div></div>
-        <div class="rbox"><div class="rlabel">Adequacy</div><div class="rval" id="r-adeq" style="font-size:0.95rem">—</div><div class="runit">KDOQI</div></div>
+        <div class="rbox hi">
+          <div class="rlabel">spKt/V</div>
+          <div class="rval" id="r-ktv">—</div>
+          <div class="runit">target ≥1.4</div>
+        </div>
+        <div class="rbox">
+          <div class="rlabel">URR</div>
+          <div class="rval" id="r-urr">—</div>
+          <div class="runit">target ≥70%</div>
+        </div>
+        <div class="rbox">
+          <div class="rlabel">Adequacy</div>
+          <div class="rval" id="r-adeq" style="font-size:0.95rem">—</div>
+          <div class="runit">KDOQI 2015</div>
+        </div>
       </div>
-      <div class="interp" id="interp"></div>
+      <div class="interp" id="interp" role="status"></div>
       <div class="action-row">
-        <button class="act-btn wa-btn" onclick="shareWA()">📲 Share</button>
-        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 Share via WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy Result</button>
       </div>
-      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset Calculator</button>
     </div>
   </div>
 
+  <!-- Formula & Targets -->
   <div class="content-card">
-    <h2>Kt/V — Dialysis Adequacy Guide</h2>
+    <h2>Daugirdas Formula &amp; KDOQI Targets</h2>
+
     <div class="formula-box">
-      Daugirdas 2nd gen spKt/V:<br>
-      R = post-BUN / pre-BUN<br>
-      t = session duration (hours)<br>
-      UF rate = UF (L) / post-weight (kg)<br>
-      Kt/V = −ln(R − 0.008×t) + (4 − 3.5×R) × UF/post-weight<br><br>
+      spKt/V (Daugirdas 2nd-gen):<br>
+      R  = post-BUN ÷ pre-BUN<br>
+      t  = session duration (hours)<br>
+      V  = post-dialysis weight (kg) — surrogate for urea volume<br>
+      UF = fluid removed (litres)<br><br>
+      Kt/V = −ln(R − 0.008 × t) + (4 − 3.5 × R) × UF ÷ V<br><br>
       URR (%) = (1 − R) × 100
     </div>
-    <h3>KDOQI Adequacy Targets</h3>
+
+    <h3>KDOQI 2015 Adequacy Targets</h3>
+    <table class="target-table">
+      <thead>
+        <tr><th>Kt/V Range</th><th>URR</th><th>Interpretation</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>≥ 1.4</td><td>≥ 70%</td>
+          <td><span class="badge-adeq">Adequate</span></td>
+          <td>Maintain current prescription; review monthly</td>
+        </tr>
+        <tr>
+          <td>1.2 – 1.39</td><td>65–69%</td>
+          <td><span class="badge-border">Borderline</span></td>
+          <td>Extend session or increase Qb; recheck next session</td>
+        </tr>
+        <tr>
+          <td>&lt; 1.2</td><td>&lt; 65%</td>
+          <td><span class="badge-inad">Inadequate</span></td>
+          <td>Urgent prescription review; assess vascular access</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>How to Improve Inadequate Kt/V</h3>
     <ul>
-      <li><strong>spKt/V ≥1.4 per session:</strong> KDOQI 2015 minimum target for 3×/week HD. Target ≥1.2 is the minimum acceptable (older guidelines)</li>
-      <li><strong>URR ≥70%:</strong> Equivalent adequacy benchmark — simpler to calculate without weight data</li>
-      <li><strong>eKt/V (equilibrated):</strong> More accurate for short/high-efficiency dialysis — eKt/V target ≥1.2. eKt/V ≈ spKt/V − 0.6/t (hours)</li>
-    </ul>
-    <h3>How to Improve Inadequate Dialysis</h3>
-    <ul>
-      <li>Increase session duration (most effective — from 3.5h to 4h increases Kt/V ~10%)</li>
-      <li>Increase blood flow rate (Qb from 300 to 350 mL/min)</li>
-      <li>Increase dialysate flow rate (Qd from 500 to 800 mL/min)</li>
-      <li>Use high-flux dialyser with larger surface area (1.8–2.1 m²)</li>
-      <li>Improve vascular access — recirculation from poorly functioning AV fistula reduces effective clearance</li>
-      <li>Treat blood-side recirculation — access recirculation &gt;10% significantly reduces Kt/V</li>
+      <li><strong>Extend session duration</strong> — most effective; 30-min extension raises Kt/V ~10–15%</li>
+      <li><strong>Increase blood flow (Qb)</strong> — from 300 → 350–400 mL/min when access permits</li>
+      <li><strong>Increase dialysate flow (Qd)</strong> — from 500 → 700–800 mL/min on high-flux dialyser</li>
+      <li><strong>Use high-flux dialyser</strong> — 1.8–2.1 m² surface area for improved clearance</li>
+      <li><strong>Assess vascular access</strong> — duplex for recirculation; access recirculation &gt;10% markedly reduces effective Kt/V</li>
+      <li><strong>Verify sampling technique</strong> — post-BUN must be slow-flow within 30 seconds of session end</li>
+      <li><strong>Consider incremental HD</strong> — increase frequency to 4×/week for CKD patients with residual renal function</li>
     </ul>
   </div>
 
+  <!-- FAQ — crawlable for featured snippets -->
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-section">
+
+      <details>
+        <summary>What is the Daugirdas second-generation Kt/V formula?</summary>
+        <div class="faq-answer">
+          The Daugirdas 2nd-generation spKt/V formula is: <strong>Kt/V = −ln(R − 0.008×t) + (4 − 3.5×R) × UF/V</strong>, where R = post-BUN/pre-BUN, t = session hours, UF = ultrafiltrate in litres, and V = post-dialysis weight in kg (surrogate for volume of distribution of urea). It corrects for the effect of ultrafiltration and is the most widely validated formula for clinical use.
+        </div>
+      </details>
+
+      <details>
+        <summary>What is the KDOQI target Kt/V for haemodialysis?</summary>
+        <div class="faq-answer">
+          KDOQI 2015 guidelines recommend a minimum delivered spKt/V of <strong>≥1.4 per session</strong> for patients on three-times-weekly haemodialysis. An spKt/V of ≥1.2 is the absolute minimum acceptable. The corresponding URR target is ≥70%. For high-frequency or short-daily HD, the eKt/V (equilibrated) target ≥1.2 is used instead.
+        </div>
+      </details>
+
+      <details>
+        <summary>When should the post-dialysis BUN sample be collected?</summary>
+        <div class="faq-answer">
+          The post-dialysis BUN must be drawn using the <strong>slow-flow or stop-pump technique</strong> — blood flow is reduced to 50–100 mL/min for 15 seconds, then sampled from the arterial port within 30 seconds of session end. Failure to use the slow-flow technique causes falsely high BUN due to access recirculation, artificially inflating the apparent Kt/V.
+        </div>
+      </details>
+
+      <details>
+        <summary>What is the difference between spKt/V and eKt/V?</summary>
+        <div class="faq-answer">
+          <strong>spKt/V (single-pool)</strong> is calculated directly from BUN measurements taken immediately before and after dialysis. <strong>eKt/V (equilibrated)</strong> corrects for urea rebound that occurs in the 30–60 minutes after dialysis ends, and is more accurate for short or high-efficiency sessions. A practical approximation is: <em>eKt/V ≈ spKt/V − 0.6 ÷ t</em> (t in hours). eKt/V KDOQI target is ≥1.2.
+        </div>
+      </details>
+
+      <details>
+        <summary>Can URR replace Kt/V for dialysis adequacy monitoring?</summary>
+        <div class="faq-answer">
+          URR is simpler to calculate as it requires no weight data, making it useful for quick adequacy checks. However, URR does not account for convective clearance from ultrafiltration, so it underestimates adequacy in patients with large fluid gains. <strong>Kt/V is preferred for formal adequacy assessment</strong>. A URR of ≥70% roughly corresponds to an spKt/V of 1.2–1.4, depending on ultrafiltration volume.
+        </div>
+      </details>
+
+      <details>
+        <summary>Is this Kt/V calculator validated for Indian dialysis patients?</summary>
+        <div class="faq-answer">
+          The Daugirdas second-generation formula is validated across diverse populations and is used in KDOQI, ERA-EDTA, and Indian Society of Nephrology guidelines. Indian patients on haemodialysis often have lower body weight and smaller urea volumes, which may affect Kt/V; however, the formula itself requires no population-specific adjustment. The KDOQI spKt/V ≥1.4 target applies universally.
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
   <div class="content-card">
     <h2>Related Calculators</h2>
     <div class="related-grid">
-      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">CKD staging</div></div></a>
-      <a href="/medical-calculators/upcr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">UPCR</div><div class="rc-desc">Proteinuria assessment</div></div></a>
-      <a href="/medical-calculators/fena-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">FENa</div><div class="rc-desc">AKI classification</div></div></a>
-      <a href="/medical-calculators/corrected-calcium" class="related-card"><span class="rc-icon">🔬</span><div><div class="rc-title">Corrected Calcium</div><div class="rc-desc">CKD-MBD monitoring</div></div></a>
+      <a href="/medical-calculators/egfr-calculator" class="related-card">
+        <span class="rc-icon">🫘</span>
+        <div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">CKD staging</div></div>
+      </a>
+      <a href="/medical-calculators/upcr-calculator" class="related-card">
+        <span class="rc-icon">🫘</span>
+        <div><div class="rc-title">UPCR</div><div class="rc-desc">Proteinuria assessment</div></div>
+      </a>
+      <a href="/medical-calculators/fena-calculator" class="related-card">
+        <span class="rc-icon">🫘</span>
+        <div><div class="rc-title">FENa</div><div class="rc-desc">AKI classification</div></div>
+      </a>
+      <a href="/medical-calculators/corrected-calcium" class="related-card">
+        <span class="rc-icon">🔬</span>
+        <div><div class="rc-title">Corrected Calcium</div><div class="rc-desc">CKD-MBD monitoring</div></div>
+      </a>
     </div>
   </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Kt/V calculation requires accurate BUN sampling — post-dialysis sample within 30 seconds of stopping dialysis (slow-flow sample). Kt/V is one measure of dialysis adequacy; clinical status, dry weight achievement, and phosphate/potassium control are equally important. Consult nephrology for persistently inadequate dialysis.</div>
+
+  <div class="disclaimer">
+    <strong>⚠ Medical Disclaimer:</strong> Kt/V calculation requires accurate BUN sampling — post-dialysis sample within 30 seconds using the slow-flow technique. spKt/V is one measure of dialysis adequacy; clinical status, dry weight achievement, intradialytic hypotension, and phosphate/potassium control are equally important. Persistent inadequacy despite prescription optimisation warrants nephrology review and vascular access evaluation. This tool is for healthcare professionals only.
+  </div>
+
 </main>
 
 <script>
-let lastResult=null;
-function calculate(){
-  const bunPre=parseFloat(document.getElementById('bun-pre').value);
-  const bunPost=parseFloat(document.getElementById('bun-post').value);
-  const t=parseFloat(document.getElementById('tdur').value)/60;// convert to hours
-  const uf=parseFloat(document.getElementById('uf').value);
-  const wt=parseFloat(document.getElementById('wt').value);
-  const errEl=document.getElementById('error-msg');errEl.className='error-msg';
-  if(!bunPre||!bunPost||!t||!uf||!wt){errEl.textContent='Please enter all fields.';errEl.className='error-msg show';return}
-  if(bunPost>=bunPre){errEl.textContent='Post-dialysis BUN must be less than pre-dialysis BUN.';errEl.className='error-msg show';return}
-  const R=bunPost/bunPre;
-  const urr=Math.round((1-R)*1000)/10;
-  const ktv=Math.round((-Math.log(R-0.008*t)+(4-3.5*R)*(uf/wt))*100)/100;
-  document.getElementById('r-ktv').textContent=ktv;
-  document.getElementById('r-urr').textContent=urr+'%';
-  const adequate=ktv>=1.4;
-  document.getElementById('r-adeq').textContent=adequate?'Adequate':'Inadequate';
-  document.getElementById('r-adeq').style.color=adequate?'#059669':'#dc2626';
-  const interp=document.getElementById('interp');
-  let bg,bc,c,txt;
-  if(ktv>=1.4){bg='#f0fdf4';bc='#bbf7d0';c='#065f46';txt=`✅ spKt/V ${ktv} — Adequate dialysis (KDOQI target ≥1.4 met).\nURR ${urr}% (target ≥70% — ${urr>=70?'met ✓':'not met ✗'}).\n\nContinue current prescription. Review monthly. Ensure vascular access function is optimal. Monitor dry weight, blood pressure, and serum phosphate.`;}
-  else if(ktv>=1.2){bg='#fffbeb';bc='#fde68a';c='#78350f';txt=`⚠️ spKt/V ${ktv} — Borderline (≥1.2 minimum, below target ≥1.4).\n\nImprovement strategies:\n• Extend session by 30–60 minutes (most effective)\n• Increase blood flow to 350–400 mL/min\n• Use high-flux dialyser\n• Check vascular access for recirculation\n• Reassess next session.`;}
-  else{bg='#fef2f2';bc='#fecaca';c='#991b1b';txt=`🚨 spKt/V ${ktv} — Inadequate dialysis (below minimum ≥1.2).\n\nUrgent review required:\n• Verify blood sampling technique (immediate post-dialysis, slow-flow)\n• Assess vascular access — duplex for recirculation\n• Extend session duration significantly\n• Increase dialyser surface area\n• Increase Qb to 350–400 mL/min and Qd to 700–800 mL/min\n• Nephrology review for access intervention if needed.`;}
-  interp.textContent=txt;interp.style.cssText=`background:${bg};border:1.5px solid ${bc};color:${c};border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:0.84rem;line-height:1.7;white-space:pre-line`;
-  lastResult=`Kt/V: ${ktv} | URR: ${urr}% — ${adequate?'Adequate':'Inadequate'}\nPre-BUN: ${bunPre} | Post-BUN: ${bunPost} | Duration: ${Math.round(t*60)}min | UF: ${uf}L | Weight: ${wt}kg\nCalculated at rxmedcalc.com/medical-calculators/ktv-dialysis`;
-  document.getElementById('results').className='results show';
-  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
-  if(typeof umami!=='undefined')umami.track('ktv_calc',{ktv,urr,adequate});
+let lastResult = null;
+
+function calculate() {
+  const bunPre  = parseFloat(document.getElementById('bun-pre').value);
+  const bunPost = parseFloat(document.getElementById('bun-post').value);
+  const tMin    = parseFloat(document.getElementById('tdur').value);
+  const uf      = parseFloat(document.getElementById('uf').value);
+  const wt      = parseFloat(document.getElementById('wt').value);
+  const errEl   = document.getElementById('error-msg');
+  errEl.className = 'error-msg';
+
+  if (!bunPre || !bunPost || !tMin || !uf || !wt) {
+    errEl.textContent = 'Please enter all five values.';
+    errEl.className = 'error-msg show'; return;
+  }
+  if (bunPost >= bunPre) {
+    errEl.textContent = 'Post-dialysis BUN must be lower than pre-dialysis BUN.';
+    errEl.className = 'error-msg show'; return;
+  }
+  if (wt <= 0 || uf <= 0) {
+    errEl.textContent = 'Weight and ultrafiltration volume must be greater than zero.';
+    errEl.className = 'error-msg show'; return;
+  }
+
+  const t   = tMin / 60;                             // hours
+  const R   = bunPost / bunPre;
+  const urr = Math.round((1 - R) * 1000) / 10;
+  const ktv = Math.round(
+    (-Math.log(R - 0.008 * t) + (4 - 3.5 * R) * (uf / wt)) * 100
+  ) / 100;
+
+  document.getElementById('r-ktv').textContent = ktv;
+  document.getElementById('r-urr').textContent = urr + '%';
+
+  const adequate  = ktv >= 1.4;
+  const borderline = ktv >= 1.2 && ktv < 1.4;
+  const adeqEl = document.getElementById('r-adeq');
+  if (adequate) { adeqEl.textContent = 'Adequate';   adeqEl.style.color = '#059669'; }
+  else if (borderline) { adeqEl.textContent = 'Borderline'; adeqEl.style.color = '#d97706'; }
+  else { adeqEl.textContent = 'Inadequate'; adeqEl.style.color = '#dc2626'; }
+
+  const interp = document.getElementById('interp');
+  let bg, bc, c, txt;
+
+  if (ktv >= 1.4) {
+    bg='#f0fdf4'; bc='#bbf7d0'; c='#065f46';
+    txt = `✅  spKt/V ${ktv} — Adequate dialysis (KDOQI target ≥1.4 met).\n` +
+          `URR ${urr}% — target ≥70% ${urr >= 70 ? '✓ met' : '✗ not met'}.\n\n` +
+          `Continue current prescription. Review adequacy monthly. Ensure vascular access is functioning optimally. Monitor dry weight, blood pressure, and serum phosphate.`;
+  } else if (ktv >= 1.2) {
+    bg='#fffbeb'; bc='#fde68a'; c='#78350f';
+    txt = `⚠️  spKt/V ${ktv} — Borderline (≥1.2 minimum, below target ≥1.4).\n\n` +
+          `Improvement strategies:\n` +
+          `• Extend session by 30–60 minutes (most effective)\n` +
+          `• Increase blood flow to 350–400 mL/min\n` +
+          `• Use high-flux dialyser (1.8–2.1 m²)\n` +
+          `• Check vascular access for recirculation\n` +
+          `• Recheck adequacy next session.`;
+  } else {
+    bg='#fef2f2'; bc='#fecaca'; c='#991b1b';
+    txt = `🚨  spKt/V ${ktv} — Inadequate dialysis (below minimum ≥1.2).\n\n` +
+          `Urgent review required:\n` +
+          `• Verify BUN sampling technique (slow-flow, ≤30 sec post-session)\n` +
+          `• Assess vascular access — duplex for access recirculation\n` +
+          `• Extend session duration significantly\n` +
+          `• Increase Qb to 350–400 mL/min and Qd to 700–800 mL/min\n` +
+          `• Upgrade to high-flux dialyser\n` +
+          `• Nephrology review for access intervention if recirculation confirmed.`;
+  }
+
+  interp.textContent = txt;
+  interp.style.cssText =
+    `background:${bg};border:1.5px solid ${bc};color:${c};` +
+    `border-radius:10px;padding:13px 15px;margin-bottom:12px;` +
+    `font-size:0.84rem;line-height:1.75;white-space:pre-line`;
+
+  lastResult =
+    `Kt/V: ${ktv} | URR: ${urr}%` +
+    ` — ${adequate ? 'Adequate' : borderline ? 'Borderline' : 'Inadequate'}\n` +
+    `Pre-BUN: ${bunPre} mg/dL | Post-BUN: ${bunPost} mg/dL | Duration: ${tMin} min | UF: ${uf} L | Weight: ${wt} kg\n` +
+    `Calculated at rxmedcalc.com/medical-calculators/ktv-dialysis`;
+
+  document.getElementById('results').className = 'results show';
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  if (typeof umami !== 'undefined') umami.track('ktv_calc', { ktv, urr, adequate });
 }
-function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🫘 Kt/V Dialysis\n'+lastResult),'_blank')}
-function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
-function resetCalc(){['bun-pre','bun-post','tdur','uf','wt'].forEach(id=>document.getElementById(id).value='');document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
-document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
+
+function shareWA() {
+  if (!lastResult) return;
+  window.open('https://wa.me/?text=' + encodeURIComponent('🫘 Kt/V Dialysis Adequacy\n' + lastResult), '_blank');
+}
+
+function copyResult() {
+  if (!lastResult) return;
+  navigator.clipboard.writeText(lastResult).then(() => {
+    const b = document.querySelector('.copy-btn');
+    b.textContent = '✓ Copied!';
+    setTimeout(() => { b.textContent = '📋 Copy Result'; }, 2000);
+  });
+}
+
+function resetCalc() {
+  ['bun-pre','bun-post','tdur','uf','wt'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('results').className = 'results';
+  document.getElementById('error-msg').className = 'error-msg';
+  lastResult = null;
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.tagName === 'INPUT') calculate();
+});
 </script>
+
 <script src="/assets/shared-nav.js"></script>
 </body>
 </html>
