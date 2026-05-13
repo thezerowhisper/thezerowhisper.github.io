@@ -28,82 +28,105 @@
   <meta name="twitter:description" content="Calculate B12 doses across all forms and routes. For Indian doctors." />
 
   <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "name": "Vitamin B12 Dose Calculator",
-        "url": "https://rxmedcalc.com/vitamin/b12-cobalamin-calculator",
-        "description": "Calculate Vitamin B12 doses for methylcobalamin, cyanocobalamin, and hydroxocobalamin across oral, IM, IV, and intranasal routes for deficiency, neuropathy, and pernicious anaemia.",
-        "audience": {
-          "@type": "MedicalAudience",
-          "audienceType": "Clinicians"
-        },
-        "medicalSpecialty": ["GeneralPractice","InternalMedicine","Neurology"],
-        "about": {
-          "@type": "Drug",
-          "name": "Vitamin B12 (Cobalamin)",
-          "nonProprietaryName": "Cyanocobalamin; Methylcobalamin; Hydroxocobalamin; Adenosylcobalamin"
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Vitamin B12 Dose Calculator",
+      "url": "https://rxmedcalc.com/vitamin/b12-cobalamin-calculator",
+      "description": "Calculate Vitamin B12 doses for methylcobalamin, cyanocobalamin, and hydroxocobalamin across oral, IM, IV, and intranasal routes for deficiency, neuropathy, and pernicious anaemia.",
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Clinicians"
+      },
+      "medicalSpecialty": [
+        "GeneralPractice",
+        "InternalMedicine",
+        "Neurology"
+      ],
+      "about": {
+        "@type": "Drug",
+        "name": "Vitamin B12 (Cobalamin)",
+        "nonProprietaryName": "Cyanocobalamin; Methylcobalamin; Hydroxocobalamin; Adenosylcobalamin",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
         }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/vitamin/"},
-          {"@type":"ListItem","position":2,"name":"Vitamin","item":"https://rxmedcalc.com/vitamin/"},
-          {"@type":"ListItem","position":3,"name":"B12 Calculator","item":"https://rxmedcalc.com/vitamin/b12-cobalamin-calculator"}
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is the dose of methylcobalamin for B12 deficiency?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For B12 deficiency with neuropathy: Methylcobalamin 500 mcg IM or IV three times weekly for 4 weeks (loading), then 500 mcg orally three times daily (maintenance). Oral doses of 1000–1500 mcg/day are effective for food-cobalamin malabsorption without intrinsic factor deficiency."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the difference between methylcobalamin and cyanocobalamin?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Methylcobalamin is the active, bioavailable form that directly participates in neurological repair and methionine synthesis. Cyanocobalamin is a synthetic stable form that must be converted to active cobalamins in the body. Methylcobalamin is preferred for neuropathy; cyanocobalamin is preferred for replacement therapy due to stability and lower cost."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the dose of cyanocobalamin injection for pernicious anaemia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cyanocobalamin 1000 mcg IM daily for 7 days (loading), then weekly for 4 weeks, then monthly for life (maintenance) in pernicious anaemia. In India, hydroxocobalamin 1000 mcg IM is also widely used and is retained longer in the body."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can high-dose oral B12 replace injections?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. High-dose oral cyanocobalamin (1000–2000 mcg/day) can be as effective as IM injections for most causes of B12 deficiency because ~1% of oral B12 is absorbed passively without intrinsic factor. However, IM injections are preferred in severe deficiency, neurological involvement, or confirmed intrinsic factor deficiency."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the B12 dose for peripheral neuropathy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Methylcobalamin 500 mcg IM three times weekly for 4–8 weeks is recommended for B12 deficiency neuropathy. Oral methylcobalamin 1500 mcg/day (500 mcg three times daily) is used for maintenance and mild neuropathy. Some Indian neurologists use 1000 mcg IM weekly for 3 months in severe cases."
-            }
-          }
-        ]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rxmedcalc.com/vitamin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Vitamin",
+          "item": "https://rxmedcalc.com/vitamin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "B12 Calculator",
+          "item": "https://rxmedcalc.com/vitamin/b12-cobalamin-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the dose of methylcobalamin for B12 deficiency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For B12 deficiency with neuropathy: Methylcobalamin 500 mcg IM or IV three times weekly for 4 weeks (loading), then 500 mcg orally three times daily (maintenance). Oral doses of 1000\u20131500 mcg/day are effective for food-cobalamin malabsorption without intrinsic factor deficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between methylcobalamin and cyanocobalamin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Methylcobalamin is the active, bioavailable form that directly participates in neurological repair and methionine synthesis. Cyanocobalamin is a synthetic stable form that must be converted to active cobalamins in the body. Methylcobalamin is preferred for neuropathy; cyanocobalamin is preferred for replacement therapy due to stability and lower cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the dose of cyanocobalamin injection for pernicious anaemia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cyanocobalamin 1000 mcg IM daily for 7 days (loading), then weekly for 4 weeks, then monthly for life (maintenance) in pernicious anaemia. In India, hydroxocobalamin 1000 mcg IM is also widely used and is retained longer in the body."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can high-dose oral B12 replace injections?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. High-dose oral cyanocobalamin (1000\u20132000 mcg/day) can be as effective as IM injections for most causes of B12 deficiency because ~1% of oral B12 is absorbed passively without intrinsic factor. However, IM injections are preferred in severe deficiency, neurological involvement, or confirmed intrinsic factor deficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the B12 dose for peripheral neuropathy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Methylcobalamin 500 mcg IM three times weekly for 4\u20138 weeks is recommended for B12 deficiency neuropathy. Oral methylcobalamin 1500 mcg/day (500 mcg three times daily) is used for maintenance and mild neuropathy. Some Indian neurologists use 1000 mcg IM weekly for 3 months in severe cases."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

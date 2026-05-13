@@ -24,61 +24,107 @@
   <meta name="twitter:title" content="Vitamin B1 Thiamine Dose Calculator – Wernicke & Beriberi Protocol"/>
   <meta name="twitter:description" content="Instant SIGN/WHO-aligned thiamine dosing. Wernicke's, beriberi, neuropathy, alcohol detox. IV, IM, oral."/>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "name": "Vitamin B1 (Thiamine) Dose Calculator",
-        "url": "https://rxmedcalc.com/vitamin/b1-thiamine-calculator",
-        "description": "Calculate thiamine doses for Wernicke encephalopathy, beriberi, alcoholic neuropathy, and deficiency across IV, IM, and oral routes.",
-        "audience": { "@type": "MedicalAudience", "audienceType": "Clinicians" },
-        "medicalSpecialty": ["GeneralPractice","InternalMedicine","Neurology","EmergencyMedicine"],
-        "about": { "@type": "Drug", "name": "Thiamine (Vitamin B1)", "nonProprietaryName": "Thiamine Hydrochloride; Benfotiamine; Thiamine Pyrophosphate" },
-        "citation": "SIGN Guideline 74: The management of harmful drinking and alcohol dependence in Scotland"
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Vitamin B1 (Thiamine) Dose Calculator",
+      "url": "https://rxmedcalc.com/vitamin/b1-thiamine-calculator",
+      "description": "Calculate thiamine doses for Wernicke encephalopathy, beriberi, alcoholic neuropathy, and deficiency across IV, IM, and oral routes.",
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Clinicians"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Vitamins Hub", "item": "https://rxmedcalc.com/vitamin/" },
-          { "@type": "ListItem", "position": 3, "name": "Vitamin B1 Thiamine Calculator", "item": "https://rxmedcalc.com/vitamin/b1-thiamine-calculator" }
-        ]
+      "medicalSpecialty": [
+        "GeneralPractice",
+        "InternalMedicine",
+        "Neurology",
+        "EmergencyMedicine"
+      ],
+      "about": {
+        "@type": "Drug",
+        "name": "Thiamine (Vitamin B1)",
+        "nonProprietaryName": "Thiamine Hydrochloride; Benfotiamine; Thiamine Pyrophosphate",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is the thiamine dose for Wernicke encephalopathy?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Wernicke encephalopathy is a medical emergency. SIGN guidelines: thiamine 500 mg IV (in 100 mL NS over 30 minutes) three times daily for 2–3 days, then 250 mg IV/IM once daily for 5 days. Never give glucose before thiamine. After IV loading, switch to oral thiamine 100 mg three times daily for maintenance." }
-          },
-          {
-            "@type": "Question",
-            "name": "Can glucose be given before thiamine?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No — always give thiamine before or simultaneously with IV glucose/dextrose in thiamine-deficient or at-risk patients. Glucose without thiamine depletes residual stores and can precipitate or worsen Wernicke encephalopathy." }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the dose of benfotiamine for diabetic neuropathy?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Benfotiamine 300 mg twice daily for 4–6 weeks (loading), then 150 mg twice daily as maintenance." }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the thiamine dose for wet beriberi?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Wet beriberi (cardiac beriberi): thiamine 100 mg IV daily for 7–14 days with ECG and cardiac monitoring. Follow with oral thiamine 25–50 mg three times daily for 6 weeks." }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the thiamine dose for alcohol detoxification?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For inpatients undergoing alcohol detox: parenteral thiamine 200–500 mg IV or IM daily for 3–5 days, then oral 100 mg three times daily. SIGN recommends 500 mg IV three times daily for patients at high risk of Wernicke's." }
+      "citation": "SIGN Guideline 74: The management of harmful drinking and alcohol dependence in Scotland"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rxmedcalc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Vitamins Hub",
+          "item": "https://rxmedcalc.com/vitamin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Vitamin B1 Thiamine Calculator",
+          "item": "https://rxmedcalc.com/vitamin/b1-thiamine-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the thiamine dose for Wernicke encephalopathy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wernicke encephalopathy is a medical emergency. SIGN guidelines: thiamine 500 mg IV (in 100 mL NS over 30 minutes) three times daily for 2\u20133 days, then 250 mg IV/IM once daily for 5 days. Never give glucose before thiamine. After IV loading, switch to oral thiamine 100 mg three times daily for maintenance."
           }
-        ]
-      }
-    ]
-  }
-  </script>
+        },
+        {
+          "@type": "Question",
+          "name": "Can glucose be given before thiamine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No \u2014 always give thiamine before or simultaneously with IV glucose/dextrose in thiamine-deficient or at-risk patients. Glucose without thiamine depletes residual stores and can precipitate or worsen Wernicke encephalopathy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the dose of benfotiamine for diabetic neuropathy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Benfotiamine 300 mg twice daily for 4\u20136 weeks (loading), then 150 mg twice daily as maintenance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the thiamine dose for wet beriberi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wet beriberi (cardiac beriberi): thiamine 100 mg IV daily for 7\u201314 days with ECG and cardiac monitoring. Follow with oral thiamine 25\u201350 mg three times daily for 6 weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the thiamine dose for alcohol detoxification?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For inpatients undergoing alcohol detox: parenteral thiamine 200\u2013500 mg IV or IM daily for 3\u20135 days, then oral 100 mg three times daily. SIGN recommends 500 mg IV three times daily for patients at high risk of Wernicke's."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>

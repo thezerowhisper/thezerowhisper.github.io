@@ -25,61 +25,107 @@
   <meta name="twitter:description" content="Instant WHO-aligned Vitamin A dosing. Xerophthalmia, measles, prophylaxis, malabsorption. For doctors worldwide."/>
 
   <!-- ── SCHEMA.ORG ── -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"MedicalWebPage",
-        "name":"Vitamin A (Retinol) Dose Calculator",
-        "url":"https://rxmedcalc.com/vitamin/a-retinol-calculator",
-        "description":"Calculate Vitamin A (Retinol) doses for WHO Xerophthalmia protocol, Measles management, pediatric prophylaxis, and chronic fat malabsorption syndromes.",
-        "audience":{"@type":"MedicalAudience","audienceType":"Clinicians"},
-        "medicalSpecialty":["GeneralPractice","Pediatrics","Ophthalmology","InternalMedicine"],
-        "about":{"@type":"Drug","name":"Vitamin A (Retinol)","nonProprietaryName":"Retinol; Retinyl Palmitate; Beta-carotene"},
-        "citation":"WHO Guideline: Vitamin A supplementation in infants and children 6–59 months of age (2011)"
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Vitamin A (Retinol) Dose Calculator",
+      "url": "https://rxmedcalc.com/vitamin/a-retinol-calculator",
+      "description": "Calculate Vitamin A (Retinol) doses for WHO Xerophthalmia protocol, Measles management, pediatric prophylaxis, and chronic fat malabsorption syndromes.",
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Clinicians"
       },
-      {
-        "@type":"BreadcrumbList",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},
-          {"@type":"ListItem","position":2,"name":"Vitamins Hub","item":"https://rxmedcalc.com/vitamin/"},
-          {"@type":"ListItem","position":3,"name":"Vitamin A Calculator","item":"https://rxmedcalc.com/vitamin/a-retinol-calculator"}
-        ]
+      "medicalSpecialty": [
+        "GeneralPractice",
+        "Pediatrics",
+        "Ophthalmology",
+        "InternalMedicine"
+      ],
+      "about": {
+        "@type": "Drug",
+        "name": "Vitamin A (Retinol)",
+        "nonProprietaryName": "Retinol; Retinyl Palmitate; Beta-carotene",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
       },
-      {
-        "@type":"FAQPage",
-        "mainEntity":[
-          {
-            "@type":"Question",
-            "name":"What is the WHO vitamin A dose for xerophthalmia?",
-            "acceptedAnswer":{"@type":"Answer","text":"WHO three-dose schedule: Day 0 (immediate), Day 1, and Day 14. Dose by age: <6 months = 50,000 IU; 6–12 months = 100,000 IU; >12 months and adults = 200,000 IU. The three-dose protocol ensures both immediate serum saturation and hepatic store replenishment."}
-          },
-          {
-            "@type":"Question",
-            "name":"What is the vitamin A dose for measles in children?",
-            "acceptedAnswer":{"@type":"Answer","text":"WHO/AAP measles protocol: Two doses on Day 0 and Day 1. Dose: <6 months = 50,000 IU; 6–12 months = 100,000 IU; >12 months = 200,000 IU. If the child has clinical signs of vitamin A deficiency (xerophthalmia), add a third dose on Day 14."}
-          },
-          {
-            "@type":"Question",
-            "name":"Is vitamin A safe in pregnancy?",
-            "acceptedAnswer":{"@type":"Answer","text":"Vitamin A is teratogenic at high doses. In pregnancy, do not exceed 10,000 IU/day or 25,000 IU/week unless clinical xerophthalmia is confirmed. Excess retinol is associated with cranial neural crest defects. Beta-carotene (provitamin A) is safe in pregnancy as the body regulates its conversion. WHO recommends therapeutic high-dose vitamin A for pregnant women with active xerophthalmia only."}
-          },
-          {
-            "@type":"Question",
-            "name":"What is the vitamin A prophylaxis dose for children?",
-            "acceptedAnswer":{"@type":"Answer","text":"Routine WHO prophylaxis for children 6–59 months in vitamin A deficiency endemic regions: 6–12 months = 100,000 IU every 6 months; >12 months = 200,000 IU every 6 months. Not recommended for infants under 6 months routinely."}
-          },
-          {
-            "@type":"Question",
-            "name":"What are the symptoms of vitamin A toxicity (hypervitaminosis A)?",
-            "acceptedAnswer":{"@type":"Answer","text":"Acute toxicity (single large dose >200,000 IU in children): bulging fontanelle, raised ICP, vomiting, lethargy. Chronic toxicity (long-term >10× RDA): dry peeling skin, alopecia, hepatomegaly, bone pain (cortical hyperostosis), hypercalcaemia, raised intracranial pressure. Teratogenicity occurs at doses >10,000 IU/day in pregnancy."}
+      "citation": "WHO Guideline: Vitamin A supplementation in infants and children 6\u201359 months of age (2011)"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rxmedcalc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Vitamins Hub",
+          "item": "https://rxmedcalc.com/vitamin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Vitamin A Calculator",
+          "item": "https://rxmedcalc.com/vitamin/a-retinol-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the WHO vitamin A dose for xerophthalmia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WHO three-dose schedule: Day 0 (immediate), Day 1, and Day 14. Dose by age: <6 months = 50,000 IU; 6\u201312 months = 100,000 IU; >12 months and adults = 200,000 IU. The three-dose protocol ensures both immediate serum saturation and hepatic store replenishment."
           }
-        ]
-      }
-    ]
-  }
-  </script>
+        },
+        {
+          "@type": "Question",
+          "name": "What is the vitamin A dose for measles in children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WHO/AAP measles protocol: Two doses on Day 0 and Day 1. Dose: <6 months = 50,000 IU; 6\u201312 months = 100,000 IU; >12 months = 200,000 IU. If the child has clinical signs of vitamin A deficiency (xerophthalmia), add a third dose on Day 14."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is vitamin A safe in pregnancy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vitamin A is teratogenic at high doses. In pregnancy, do not exceed 10,000 IU/day or 25,000 IU/week unless clinical xerophthalmia is confirmed. Excess retinol is associated with cranial neural crest defects. Beta-carotene (provitamin A) is safe in pregnancy as the body regulates its conversion. WHO recommends therapeutic high-dose vitamin A for pregnant women with active xerophthalmia only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the vitamin A prophylaxis dose for children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Routine WHO prophylaxis for children 6\u201359 months in vitamin A deficiency endemic regions: 6\u201312 months = 100,000 IU every 6 months; >12 months = 200,000 IU every 6 months. Not recommended for infants under 6 months routinely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the symptoms of vitamin A toxicity (hypervitaminosis A)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acute toxicity (single large dose >200,000 IU in children): bulging fontanelle, raised ICP, vomiting, lethargy. Chronic toxicity (long-term >10\u00d7 RDA): dry peeling skin, alopecia, hepatomegaly, bone pain (cortical hyperostosis), hypercalcaemia, raised intracranial pressure. Teratogenicity occurs at doses >10,000 IU/day in pregnancy."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
 
   <!-- ── FONTS ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>

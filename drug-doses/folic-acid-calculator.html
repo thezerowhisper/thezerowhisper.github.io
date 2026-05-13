@@ -18,71 +18,98 @@
   <meta name="twitter:title" content="Folic Acid Dose Calculator – Pregnancy, Megaloblastic Anaemia, Methotrexate"/>
   <meta name="twitter:description" content="Evidence-based folic acid & folinic acid dosing for Indian doctors. All indications, all forms."/>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "name": "Folic Acid Dose Calculator",
-        "url": "https://rxmedcalc.com/medical-calculators/folic-acid-calculator",
-        "description": "Calculate folic acid and folinic acid (leucovorin) doses for pregnancy prophylaxis, megaloblastic anaemia, methotrexate rescue, haemolytic anaemia, and folate deficiency across oral, IM, and IV routes.",
-        "audience": { "@type": "MedicalAudience", "audienceType": "Clinicians" },
-        "medicalSpecialty": ["GeneralPractice", "InternalMedicine", "Obstetrics", "Haematology"],
-        "about": {
-          "@type": "Drug",
-          "name": "Folic Acid (Folate)",
-          "nonProprietaryName": "Folic Acid; Folinic Acid (Leucovorin); L-Methylfolate (5-MTHF)"
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Folic Acid Dose Calculator",
+      "url": "https://rxmedcalc.com/medical-calculators/folic-acid-calculator",
+      "description": "Calculate folic acid and folinic acid (leucovorin) doses for pregnancy prophylaxis, megaloblastic anaemia, methotrexate rescue, haemolytic anaemia, and folate deficiency across oral, IM, and IV routes.",
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Clinicians"
+      },
+      "medicalSpecialty": [
+        "GeneralPractice",
+        "InternalMedicine",
+        "Obstetrics",
+        "Haematology"
+      ],
+      "about": {
+        "@type": "Drug",
+        "name": "Folic Acid (Folate)",
+        "nonProprietaryName": "Folic Acid; Folinic Acid (Leucovorin); L-Methylfolate (5-MTHF)",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
         }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com/medical-calculators/" },
-          { "@type": "ListItem", "position": 2, "name": "Drug Doses", "item": "https://rxmedcalc.com/medical-calculators/drug-doses/" },
-          { "@type": "ListItem", "position": 3, "name": "Folic Acid Calculator", "item": "https://rxmedcalc.com/medical-calculators/folic-acid-calculator" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is the folic acid dose for pregnancy in India?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Standard dose for all women planning pregnancy or in early pregnancy: 400–500 mcg (0.4–0.5 mg) per day, started at least 1 month before conception and continued through the first trimester (12 weeks). High-risk women (previous NTD baby, on antiepileptics, pre-existing diabetes, obesity, coeliac disease, thalassaemia): 5 mg/day periconceptionally. India's FOGSI and NHM guidelines recommend 500 mcg daily for all pregnant women throughout pregnancy."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the dose of folic acid for megaloblastic anaemia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Folic acid 5 mg once daily orally for 4 months (or until full haematological recovery) for folate-deficiency megaloblastic anaemia. Always rule out or concurrently treat B12 deficiency before giving folic acid alone — folic acid can mask B12 deficiency anaemia while allowing neurological damage to progress."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is folinic acid (leucovorin) and when is it used instead of folic acid?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Folinic acid (leucovorin, calcium folinate) is the active, reduced form of folate that bypasses dihydrofolate reductase (DHFR). It is used: (1) as methotrexate rescue to prevent toxicity after high-dose MTX; (2) when folic acid is ineffective due to DHFR inhibition (by methotrexate, trimethoprim, pyrimethamine); (3) in folinic acid-responsive conditions (rare). Folinic acid is NOT interchangeable with folic acid for routine supplementation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why must B12 be checked before treating megaloblastic anaemia with folic acid?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Giving folic acid alone to a patient with B12 deficiency megaloblastic anaemia will correct the blood picture (haematological improvement) but ALLOW ONGOING NEUROLOGICAL DAMAGE from B12 deficiency to continue — this is called 'masking'. The subacute combined degeneration of the spinal cord can be irreversible. Always check serum B12 levels before starting folic acid for megaloblastic anaemia, or treat both simultaneously."
-            }
-          }
-        ]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rxmedcalc.com/medical-calculators/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Drug Doses",
+          "item": "https://rxmedcalc.com/medical-calculators/drug-doses/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Folic Acid Calculator",
+          "item": "https://rxmedcalc.com/medical-calculators/folic-acid-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the folic acid dose for pregnancy in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard dose for all women planning pregnancy or in early pregnancy: 400\u2013500 mcg (0.4\u20130.5 mg) per day, started at least 1 month before conception and continued through the first trimester (12 weeks). High-risk women (previous NTD baby, on antiepileptics, pre-existing diabetes, obesity, coeliac disease, thalassaemia): 5 mg/day periconceptionally. India's FOGSI and NHM guidelines recommend 500 mcg daily for all pregnant women throughout pregnancy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the dose of folic acid for megaloblastic anaemia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Folic acid 5 mg once daily orally for 4 months (or until full haematological recovery) for folate-deficiency megaloblastic anaemia. Always rule out or concurrently treat B12 deficiency before giving folic acid alone \u2014 folic acid can mask B12 deficiency anaemia while allowing neurological damage to progress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is folinic acid (leucovorin) and when is it used instead of folic acid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Folinic acid (leucovorin, calcium folinate) is the active, reduced form of folate that bypasses dihydrofolate reductase (DHFR). It is used: (1) as methotrexate rescue to prevent toxicity after high-dose MTX; (2) when folic acid is ineffective due to DHFR inhibition (by methotrexate, trimethoprim, pyrimethamine); (3) in folinic acid-responsive conditions (rare). Folinic acid is NOT interchangeable with folic acid for routine supplementation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why must B12 be checked before treating megaloblastic anaemia with folic acid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giving folic acid alone to a patient with B12 deficiency megaloblastic anaemia will correct the blood picture (haematological improvement) but ALLOW ONGOING NEUROLOGICAL DAMAGE from B12 deficiency to continue \u2014 this is called 'masking'. The subacute combined degeneration of the spinal cord can be irreversible. Always check serum B12 levels before starting folic acid for megaloblastic anaemia, or treat both simultaneously."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
