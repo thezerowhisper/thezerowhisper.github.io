@@ -1059,7 +1059,7 @@ function doSave(id){
   else{const s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";s.onload=go;s.onerror=()=>alert("Failed to load image library.");document.head.appendChild(s);}
 }
 
-function toggleAcc(id){document.getElementById("acc-"+id).classList.toggle("open");}
+function toggleAcc(id){const acc=document.getElementById("acc-"+id);acc.classList.toggle("open");if(acc.classList.contains("open")){const panels=acc.querySelectorAll(".calc-panel");const hasActive=Array.from(panels).some(p=>p.classList.contains("active"));if(!hasActive){const firstTab=acc.querySelector(".sub-tab");if(firstTab)firstTab.click();else if(panels[0])panels[0].classList.add("active");}}}
 
 function switchSub(group,sub,btn){
   const cat=group==="ga"?"ga":group==="fetal"?"fetal":group==="score"?"score":"screen";
