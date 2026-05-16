@@ -15,7 +15,7 @@
 <meta name="author" content="RxMedCalc"/>
 
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script src="/assets/umami-events.js"></script>
+<script data-cfasync="false" src="/assets/umami-events.js"></script>
 
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="en_IN"/>
@@ -270,9 +270,9 @@ body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d
 
 /* ── ACCORDION CATEGORY ── */
 .accordion{margin-bottom:16px;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.07)}
-.accordion-header{display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;user-select:none;transition:background 0.2s;border-radius:16px}
+.accordion-header{list-style:none;display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;user-select:none;transition:background 0.2s;border-radius:16px}
 .accordion-header:hover{filter:brightness(0.97)}
-.accordion.open .accordion-header{border-radius:16px 16px 0 0}
+.accordion[open] .accordion-header{border-radius:16px 16px 0 0}
 .acc-ga .accordion-header{background:#ebf8ff;border-bottom:2px solid #bee3f8}
 .acc-fetal .accordion-header{background:#f0fff4;border-bottom:2px solid #9ae6b4}
 .acc-score .accordion-header{background:#faf5ff;border-bottom:2px solid #d6bcfa}
@@ -298,8 +298,8 @@ body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .acc-screen .acc-count{background:#fbd38d;color:#c05621}
 
 /* ── ACCORDION BODY ── */
-.accordion-body{display:none;background:white}
-.accordion.open .accordion-body{display:block}
+.accordion-body{background:white}
+.accordion[open] .accordion-body{display:block}
 
 /* ── SUB-CALC SELECTOR ── */
 .sub-selector-wrap{padding:14px 22px;border-bottom:1px solid #f0f4f8;background:#fafafa}
@@ -448,6 +448,12 @@ footer a:hover{text-decoration:underline}
   .calc-panel{display:block!important}
   .result-box{display:block!important}
 }
+
+summary.accordion-header { list-style: none; cursor: pointer; }
+summary.accordion-header::-webkit-details-marker { display: none; }
+summary.accordion-header::marker { display: none; }
+details.accordion[open] .accordion-body { display: block; }
+details.accordion .accordion-body { display: none; }
 </style>
 </head>
 <body>
@@ -498,8 +504,8 @@ footer a:hover{text-decoration:underline}
 
   <!-- ════════════════════════════════════════════════════ CALCULATORS ═══ -->
 
-  <div class="accordion acc-ga" id="acc-ga">
-    <div class="accordion-header" onclick="toggleAcc('ga')">
+  <details class="accordion acc-ga" id="acc-ga" open>
+    <summary class="accordion-header">
       <div class="acc-icon">📅</div>
       <div class="acc-text">
         <div class="acc-title">Pregnancy Wheel — Gestational Age &amp; Due Date Calculator</div>
@@ -507,19 +513,19 @@ footer a:hover{text-decoration:underline}
       </div>
       <span class="acc-count">4 tools</span>
       <span class="acc-chevron">▾</span>
-    </div>
+    </summary>
     <div class="accordion-body">
       <div class="sub-selector-wrap">
         <div class="sub-selector-label">Select calculator</div>
         <div class="sub-tabs">
-          <button class="sub-tab" onclick="switchSub('ga','lmp',this)">GA by LMP (Pregnancy Wheel)</button>
+          <button class="sub-tab" onclick="switchSub('ga','lmp',this)" class="sub-tab active-ga">GA by LMP (Pregnancy Wheel)</button>
           <button class="sub-tab" onclick="switchSub('ga','scan',this)">GA by Scan</button>
           <button class="sub-tab" onclick="switchSub('ga','date',this)">GA on Given Date</button>
           <button class="sub-tab" onclick="switchSub('ga','reverse',this)">LMP from EDD</button>
         </div>
       </div>
 
-      <div class="calc-panel" id="sub-ga-lmp">
+      <div class="calc-panel active" id="sub-ga-lmp">
         <div class="panel-title">Pregnancy Wheel — GA &amp; Due Date Calculator by LMP (Naegele's Rule)</div>
         <div class="panel-desc">Calculate gestational age and estimated due date (EDD) from the last menstrual period (LMP). This is the digital equivalent of the physical OB wheel / obstetric wheel used by obstetricians. Adjusted for cycle length.</div>
         <div class="form-grid">
@@ -604,10 +610,10 @@ footer a:hover{text-decoration:underline}
         <div class="result-box" id="res-ga-reverse"></div>
       </div>
     </div>
-  </div>
+  </details>
 
-  <div class="accordion acc-fetal" id="acc-fetal">
-    <div class="accordion-header" onclick="toggleAcc('fetal')">
+  <details class="accordion acc-fetal" id="acc-fetal">
+    <summary class="accordion-header">
       <div class="acc-icon">👶</div>
       <div class="acc-text">
         <div class="acc-title">Fetal Assessment</div>
@@ -615,17 +621,17 @@ footer a:hover{text-decoration:underline}
       </div>
       <span class="acc-count">2 tools</span>
       <span class="acc-chevron">▾</span>
-    </div>
+    </summary>
     <div class="accordion-body">
       <div class="sub-selector-wrap">
         <div class="sub-selector-label">Select calculator</div>
         <div class="sub-tabs">
-          <button class="sub-tab" onclick="switchSub('fetal','efw',this)">EFW — Hadlock Formula</button>
+          <button class="sub-tab" onclick="switchSub('fetal','efw',this)" class="sub-tab active-fetal">EFW — Hadlock Formula</button>
           <button class="sub-tab" onclick="switchSub('fetal','apgar',this)">Apgar Score</button>
         </div>
       </div>
 
-      <div class="calc-panel" id="sub-fetal-efw">
+      <div class="calc-panel active" id="sub-fetal-efw">
         <div class="panel-title">Expected Fetal Weight (EFW) — Hadlock 1985 Formula</div>
         <div class="panel-desc">Calculate estimated fetal weight using Hadlock formula with biometric measurements. 4-parameter (BPD+HC+AC+FL) preferred; 3-parameter (BPD+AC+FL) if HC unavailable. Measurements in millimeters.</div>
         <div class="form-grid-3">
@@ -688,10 +694,10 @@ footer a:hover{text-decoration:underline}
         <div class="result-box" id="res-fetal-apgar"></div>
       </div>
     </div>
-  </div>
+  </details>
 
-  <div class="accordion acc-score" id="acc-score">
-    <div class="accordion-header" onclick="toggleAcc('score')">
+  <details class="accordion acc-score" id="acc-score">
+    <summary class="accordion-header">
       <div class="acc-icon">🏥</div>
       <div class="acc-text">
         <div class="acc-title">Obstetric Scoring &amp; Risk Assessment</div>
@@ -699,18 +705,18 @@ footer a:hover{text-decoration:underline}
       </div>
       <span class="acc-count">3 tools</span>
       <span class="acc-chevron">▾</span>
-    </div>
+    </summary>
     <div class="accordion-body">
       <div class="sub-selector-wrap">
         <div class="sub-selector-label">Select calculator</div>
         <div class="sub-tabs">
-          <button class="sub-tab" onclick="switchSub('score','bishop',this)">Bishop Score</button>
+          <button class="sub-tab" onclick="switchSub('score','bishop',this)" class="sub-tab active-score">Bishop Score</button>
           <button class="sub-tab" onclick="switchSub('score','vbac',this)">VBAC Eligibility</button>
           <button class="sub-tab" onclick="switchSub('score','pph',this)">PPH Risk</button>
         </div>
       </div>
 
-      <div class="calc-panel" id="sub-score-bishop">
+      <div class="calc-panel active" id="sub-score-bishop">
         <div class="panel-title">Bishop Score — Cervical Favorability Assessment for Induction of Labour</div>
         <div class="panel-desc">Score all 5 cervical parameters to assess favorability before labor induction. Score ≥9 favourable for oxytocin; &lt;6 requires cervical ripening.</div>
         <div class="score-group"><div class="score-group-label">Cervical Dilation (cm)</div>
@@ -830,10 +836,10 @@ footer a:hover{text-decoration:underline}
         <div class="result-box" id="res-score-pph"></div>
       </div>
     </div>
-  </div>
+  </details>
 
-  <div class="accordion acc-screen" id="acc-screen">
-    <div class="accordion-header" onclick="toggleAcc('screen')">
+  <details class="accordion acc-screen" id="acc-screen">
+    <summary class="accordion-header">
       <div class="acc-icon">🧪</div>
       <div class="acc-text">
         <div class="acc-title">Maternal Screening</div>
@@ -841,7 +847,7 @@ footer a:hover{text-decoration:underline}
       </div>
       <span class="acc-count">1 tool</span>
       <span class="acc-chevron">▾</span>
-    </div>
+    </summary>
     <div class="accordion-body">
       <div class="calc-panel active" id="sub-screen-gdm" style="display:block">
         <div class="panel-title">Gestational Diabetes Mellitus (GDM) Screening Schedule — DIPSI / FOGSI</div>
@@ -859,7 +865,7 @@ footer a:hover{text-decoration:underline}
         <div class="result-box" id="res-screen-gdm"></div>
       </div>
     </div>
-  </div>
+  </details>
 
   <!-- ════════════════════════════════════════════════════ SEO CONTENT ═══ -->
 
@@ -1002,7 +1008,9 @@ footer a:hover{text-decoration:underline}
 </main>
 
 <!-- ════════════════════════════════════════════════════ JS (unchanged) ═══ -->
-<script>
+<script data-cfasync="false">
+(function(){
+
 const M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const D=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const fmt=d=>`${d.getDate()} ${M[d.getMonth()]} ${d.getFullYear()} (${D[d.getDay()]})`;
@@ -1059,7 +1067,7 @@ function doSave(id){
   else{const s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";s.onload=go;s.onerror=()=>alert("Failed to load image library.");document.head.appendChild(s);}
 }
 
-function toggleAcc(id){const acc=document.getElementById("acc-"+id);acc.classList.toggle("open");if(acc.classList.contains("open")){const panels=acc.querySelectorAll(".calc-panel");const hasActive=Array.from(panels).some(p=>p.classList.contains("active"));if(!hasActive){const firstTab=acc.querySelector(".sub-tab");if(firstTab)firstTab.click();else if(panels[0])panels[0].classList.add("active");}}}
+function toggleAcc(id){/* replaced by <details> — no-op */}
 
 function switchSub(group,sub,btn){
   const cat=group==="ga"?"ga":group==="fetal"?"fetal":group==="score"?"score":"screen";
@@ -1317,7 +1325,35 @@ const ts=new Date().toISOString().split("T")[0];
 
 buildPph();
 buildGdm();
-</script>
 
+// Expose to global scope for onclick handlers
+window.doWa = doWa;
+window.doCopy = doCopy;
+window.fb = fb;
+window.doSave = doSave;
+window.toggleAcc = toggleAcc;
+window.switchSub = switchSub;
+window.setS = setS;
+window.calcGaLmp = calcGaLmp;
+window.calcGaScan = calcGaScan;
+window.calcGaDate = calcGaDate;
+window.calcReverse = calcReverse;
+window.calcEfw = calcEfw;
+window.calcApgar = calcApgar;
+window.clearScorer = clearScorer;
+window.calcBishop = calcBishop;
+window.calcVbac = calcVbac;
+window.buildPph = buildPph;
+window.tPph = tPph;
+window.calcPph = calcPph;
+window.clearPph = clearPph;
+window.buildGdm = buildGdm;
+window.tGdm = tGdm;
+window.calcGdm = calcGdm;
+window.clearGdm = clearGdm;
+
+})();
+</script>
+<script data-cfasync="false" src="/assets/shared-nav.js"></script>
 </body>
 </html>
