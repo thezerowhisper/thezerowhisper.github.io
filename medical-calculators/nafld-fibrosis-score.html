@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>NAFLD Fibrosis Score Calculator (NFS) — Liver Fibrosis Staging in MASLD</title>
+  <meta name="description" content="Free NAFLD Fibrosis Score (NFS) calculator. Uses Age, BMI, Diabetes, AST/ALT ratio, Platelets &amp; Albumin to detect advanced liver fibrosis (F3–F4) in NAFLD/MASLD. Validated by Angulo et al. 2007 — NPV 93%, PPV 90%." />
+  <meta name="keywords" content="NAFLD fibrosis score, NFS calculator, NAFLD score, non-alcoholic fatty liver disease fibrosis, MASLD fibrosis, liver fibrosis score, NAFLD staging, advanced fibrosis NAFLD, NFS interpretation, fatty liver fibrosis test India" />
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/nafld-fibrosis-score/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NAFLD Fibrosis Score (NFS) Calculator — Advanced Fibrosis Staging" />
+  <meta property="og:description" content="Non-invasive NAFLD Fibrosis Score using Age, BMI, Diabetes, AST/ALT ratio, Platelets & Albumin. NPV 93% · PPV 90%. Free, no login." />
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/nafld-fibrosis-score/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NAFLD Fibrosis Score Calculator — MASLD Staging" />
+  <meta name="twitter:description" content="Calculate NAFLD Fibrosis Score (NFS). Identifies advanced liver fibrosis in NAFLD/MASLD. Validated — AUROC 0.88. Free & no login." />
+
+  <!-- Schema.org @graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://rxmedcalc.com/medical-calculators/nafld-fibrosis-score/#webpage",
+        "url": "https://rxmedcalc.com/medical-calculators/nafld-fibrosis-score/",
+        "name": "NAFLD Fibrosis Score (NFS) Calculator — Liver Fibrosis Staging",
+        "description": "Free NAFLD Fibrosis Score calculator using Age, BMI, Diabetes status, AST, ALT, Platelet count and Albumin. Validated for detecting advanced fibrosis (F3–F4) in NAFLD/MASLD patients.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://rxmedcalc.com/#website" },
+        "breadcrumb": { "@id": "https://rxmedcalc.com/medical-calculators/nafld-fibrosis-score/#breadcrumb" },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Non-Alcoholic Fatty Liver Disease",
+          "alternateName": ["NAFLD", "MASLD", "Metabolic Dysfunction-Associated Steatotic Liver Disease", "Fatty Liver", "NASH"]
+        },
+        "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Clinician" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rxmedcalc.com/medical-calculators/nafld-fibrosis-score/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Medical Calculators", "item": "https://rxmedcalc.com/medical-calculators/" },
+          { "@type": "ListItem", "position": 3, "name": "NAFLD Fibrosis Score Calculator" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://rxmedcalc.com/#website",
+        "url": "https://rxmedcalc.com/",
+        "name": "RxMedCalc",
+        "description": "Free medical calculators for doctors worldwide",
+        "publisher": { "@id": "https://rxmedcalc.com/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://rxmedcalc.com/#organization",
+        "name": "RxMedCalc",
+        "url": "https://rxmedcalc.com/",
+        "logo": { "@type": "ImageObject", "url": "https://rxmedcalc.com/assets/logo.png" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rxmedcalc.com/medical-calculators/nafld-fibrosis-score/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the NAFLD Fibrosis Score (NFS)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The NAFLD Fibrosis Score (NFS) is a non-invasive clinical scoring system that estimates the likelihood of advanced hepatic fibrosis (F3–F4) in patients with Non-Alcoholic Fatty Liver Disease (NAFLD, now termed MASLD). It was developed by Angulo et al. in 2007 using six routinely available parameters: age, BMI, presence of impaired fasting glucose or diabetes, AST/ALT ratio, platelet count, and serum albumin." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the NAFLD Fibrosis Score formula?",
+            "acceptedAnswer": { "@type": "Answer", "text": "NFS = −1.675 + (0.037 × Age [years]) + (0.094 × BMI [kg/m²]) + (1.13 × IFG/Diabetes [1=yes, 0=no]) + (0.99 × AST/ALT ratio) − (0.013 × Platelet count [×10⁹/L]) − (0.66 × Albumin [g/dL]). The score ranges approximately from −3 to +2." }
+          },
+          {
+            "@type": "Question",
+            "name": "What do NFS score results mean?",
+            "acceptedAnswer": { "@type": "Answer", "text": "NFS below −1.455: Low risk — advanced fibrosis (F3–F4) is unlikely. NPV is 93%; biopsy can be deferred. NFS −1.455 to 0.675: Indeterminate — further testing (FibroScan, FIB-4, ELF test) is required. NFS above 0.675: High risk — advanced fibrosis is likely. PPV is 90%; hepatology referral and biopsy or elastography should be arranged." }
+          },
+          {
+            "@type": "Question",
+            "name": "How accurate is the NAFLD Fibrosis Score?",
+            "acceptedAnswer": { "@type": "Answer", "text": "In the original validation study (Angulo et al., Hepatology 2007), the NFS had an AUROC of 0.88 (95% CI 0.85–0.92) for detecting advanced fibrosis, a NPV of 93% at the low cutoff (−1.455), and a PPV of 90% at the high cutoff (0.675). It was validated in 733 patients across multiple centres." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between NFS and FIB-4 for NAFLD?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Both are validated non-invasive fibrosis scores. FIB-4 uses only 4 variables (Age, AST, ALT, Platelets) and is simpler. NFS uses 6 variables (Age, BMI, Diabetes, AST/ALT ratio, Platelets, Albumin) and has higher specificity, particularly at the high cutoff (PPV 90% vs FIB-4's ~65%). Current EASL 2024 and AASLD 2023 guidelines recommend FIB-4 first for screening, then NFS or elastography for those in the indeterminate FIB-4 range." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does IFG or diabetes mean in the NAFLD score?",
+            "acceptedAnswer": { "@type": "Answer", "text": "IFG stands for Impaired Fasting Glucose (fasting plasma glucose 100–125 mg/dL, or 5.6–6.9 mmol/L). For the NFS, IFG/Diabetes is scored as 1 (yes) if the patient has either impaired fasting glucose, pre-diabetes (HbA1c 5.7–6.4%), or established type 2 diabetes mellitus. If fasting glucose and HbA1c are normal and the patient has no history of diabetes, score 0 (no)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can NAFLD Fibrosis Score be used for MASLD (the new term)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease) is the updated nomenclature for NAFLD adopted in 2023 by the Delphi consensus. The biology, patient population, and fibrosis staging are identical, so the NFS applies fully to MASLD. The cutoffs and interpretation remain unchanged." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is serum albumin in g/dL or g/L in Indian lab reports?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Most Indian lab reports express albumin in g/dL. Normal serum albumin is 3.5–5.0 g/dL. Some international labs report in g/L (normal 35–50 g/L) — to convert from g/L to g/dL, divide by 10. This calculator uses g/dL. Enter values as reported if your lab uses g/dL; divide by 10 if your lab uses g/L." }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the limitations of the NAFLD Fibrosis Score?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The NFS is less reliable in: patients with other causes of elevated AST (haemolysis, myopathy, thyroid disease); those with thrombocytopenia unrelated to portal hypertension; patients with concurrent alcoholic liver disease; those with acute hepatitis; and patients under 18 or over 75 years. It should not be used without a confirmed or suspected diagnosis of NAFLD/MASLD (imaging or biopsy showing steatosis). Always exclude alcohol excess before applying the score." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the next step if NFS is indeterminate?",
+            "acceptedAnswer": { "@type": "Answer", "text": "For NFS in the indeterminate range (−1.455 to 0.675), current EASL 2024 guidelines recommend: (1) Vibration-Controlled Transient Elastography (FibroScan) — first choice if available; (2) MR Elastography — most accurate but expensive and limited availability; (3) ELF (Enhanced Liver Fibrosis) blood test; (4) Liver biopsy — for persistent clinical uncertainty. FIB-4 score can also be applied as a complementary tool." }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NAFLD Fibrosis Score Calculator",
+        "applicationCategory": "MedicalApplication",
+        "operatingSystem": "Any (Web Browser)",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+        "url": "https://rxmedcalc.com/medical-calculators/nafld-fibrosis-score/",
+        "description": "Free online NAFLD Fibrosis Score (NFS) calculator using Age, BMI, Diabetes, AST/ALT ratio, Platelet count, and Albumin."
+      }
+    ]
+  }
+  </script>
+
+  <!-- shared-nav.js injects header, footer, and AdSense — no manual loader needed -->
+  <script defer src="/assets/shared-nav.js"></script>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
+  <style>
+    :root {
+      --c-brand:      #1a6e3c;
+      --c-brand-lt:   #e8f5ee;
+      --c-brand-mid:  #2e8b57;
+      --c-warn:       #b45309;
+      --c-warn-lt:    #fef3c7;
+      --c-danger:     #b91c1c;
+      --c-danger-lt:  #fee2e2;
+      --c-indet:      #1d4ed8;
+      --c-indet-lt:   #eff6ff;
+      --c-text:       #1a1a2e;
+      --c-muted:      #6b7280;
+      --c-border:     #e5e7eb;
+      --c-surface:    #f9fafb;
+      --radius:       10px;
+      --shadow:       0 1px 4px rgba(0,0,0,.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', 'Outfit', system-ui, sans-serif;
+      color: var(--c-text);
+      background: #fff;
+      line-height: 1.65;
+    }
+
+    .page-wrap { max-width: 780px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: .8rem; color: var(--c-muted); padding: 1rem 0 0; }
+    .breadcrumb a { color: var(--c-brand); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 .3rem; }
+
+    /* Hero */
+    .hero { margin: 1.25rem 0 1.5rem; }
+    .hero-meta { font-size: .78rem; color: var(--c-muted); margin-bottom: .4rem; }
+    .hero-meta a { color: var(--c-brand); text-decoration: none; }
+    .hero h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700; line-height: 1.2;
+      color: var(--c-text); margin-bottom: .5rem;
+    }
+    .hero p { color: var(--c-muted); font-size: .97rem; max-width: 620px; }
+
+    /* Badges */
+    .badges { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1rem 0 1.5rem; }
+    .badge {
+      background: var(--c-brand-lt); color: var(--c-brand);
+      border: 1px solid #b7dfc8; border-radius: 20px;
+      font-size: .73rem; font-weight: 600; padding: .2rem .65rem;
+    }
+
+    /* Card */
+    .card {
+      background: #fff; border: 1px solid var(--c-border);
+      border-radius: var(--radius); padding: 1.5rem;
+      box-shadow: var(--shadow); margin-bottom: 1.5rem;
+    }
+    .card-title {
+      font-size: .78rem; font-weight: 700; letter-spacing: .07em;
+      text-transform: uppercase; color: var(--c-brand); margin-bottom: 1.1rem;
+    }
+
+    /* Section label */
+    .form-section-label {
+      font-size: .72rem; font-weight: 700; letter-spacing: .07em;
+      text-transform: uppercase; color: var(--c-muted);
+      margin: 1.2rem 0 .7rem; padding-bottom: .3rem;
+      border-bottom: 1px solid var(--c-border);
+    }
+    .form-section-label:first-of-type { margin-top: 0; }
+
+    /* Form */
+    .field { margin-bottom: 1.05rem; }
+    .field label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .3rem; color: var(--c-text); }
+    .field label .unit { font-weight: 400; color: var(--c-muted); font-size: .8rem; margin-left: .3rem; }
+    .field input[type="number"] {
+      width: 100%; padding: .58rem .85rem; font-size: 1rem;
+      border: 1.5px solid var(--c-border); border-radius: 7px;
+      background: var(--c-surface); color: var(--c-text);
+      transition: border-color .15s;
+      -moz-appearance: textfield;
+    }
+    .field input[type="number"]::-webkit-outer-spin-button,
+    .field input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .field input[type="number"]:focus { outline: none; border-color: var(--c-brand-mid); background: #fff; }
+    .field .hint { font-size: .74rem; color: var(--c-muted); margin-top: .2rem; }
+
+    /* Toggle row for IFG/Diabetes */
+    .toggle-row {
+      display: flex; gap: .5rem; margin-top: .3rem;
+    }
+    .toggle-btn {
+      flex: 1; padding: .55rem .5rem; font-size: .87rem; font-weight: 600;
+      border: 1.5px solid var(--c-border); border-radius: 7px;
+      background: var(--c-surface); color: var(--c-muted);
+      cursor: pointer; transition: all .15s; text-align: center;
+    }
+    .toggle-btn.active-no  { border-color: var(--c-brand); background: var(--c-brand-lt); color: var(--c-brand); }
+    .toggle-btn.active-yes { border-color: var(--c-danger); background: var(--c-danger-lt); color: var(--c-danger); }
+
+    /* BMI helper */
+    .bmi-helper {
+      background: var(--c-surface); border: 1px solid var(--c-border);
+      border-radius: 8px; padding: .75rem 1rem; margin-top: .4rem;
+    }
+    .bmi-helper-label { font-size: .72rem; color: var(--c-muted); font-weight: 600; margin-bottom: .5rem; }
+    .bmi-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+    @media (max-width: 420px) { .bmi-row { grid-template-columns: 1fr; } }
+    .bmi-row input { width: 100%; padding: .48rem .7rem; font-size: .9rem; border: 1.5px solid var(--c-border); border-radius: 6px; background: #fff; -moz-appearance: textfield; }
+    .bmi-row input::-webkit-outer-spin-button, .bmi-row input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .bmi-row input:focus { outline: none; border-color: var(--c-brand-mid); }
+    .bmi-display { margin-top: .45rem; font-size: .82rem; color: var(--c-muted); }
+    .bmi-display strong { color: var(--c-text); }
+
+    /* Grid */
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 480px) { .field-row { grid-template-columns: 1fr; } }
+
+    /* AST/ALT live ratio */
+    .ratio-display {
+      margin-top: .3rem; font-size: .8rem; color: var(--c-muted);
+      display: flex; align-items: center; gap: .35rem;
+    }
+    .ratio-val { font-weight: 700; color: var(--c-text); }
+
+    /* Calc button */
+    .btn-calc {
+      display: block; width: 100%; padding: .75rem;
+      background: var(--c-brand); color: #fff; font-size: 1rem;
+      font-weight: 700; border: none; border-radius: 8px;
+      cursor: pointer; letter-spacing: .02em;
+      transition: background .15s, transform .1s; margin-top: .6rem;
+    }
+    .btn-calc:hover { background: var(--c-brand-mid); }
+    .btn-calc:active { transform: scale(.98); }
+
+    /* Reset link */
+    .btn-reset {
+      display: block; width: 100%; padding: .45rem; text-align: center;
+      font-size: .8rem; color: var(--c-muted); background: none;
+      border: none; cursor: pointer; margin-top: .4rem;
+      text-decoration: underline;
+    }
+    .btn-reset:hover { color: var(--c-text); }
+
+    /* Result panel */
+    .result-panel { display: none; margin-top: 1.25rem; border-radius: var(--radius); overflow: hidden; border: 1.5px solid var(--c-border); }
+    .result-panel.visible { display: block; }
+
+    .result-header {
+      padding: 1.1rem 1.4rem; display: flex;
+      align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: .5rem;
+    }
+    .result-header.low     { background: var(--c-brand-lt);  border-bottom: 2px solid var(--c-brand); }
+    .result-header.indet   { background: var(--c-indet-lt);  border-bottom: 2px solid var(--c-indet); }
+    .result-header.high    { background: var(--c-danger-lt); border-bottom: 2px solid var(--c-danger); }
+
+    .result-label { font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--c-muted); margin-bottom: .1rem; }
+    .result-score { font-family: 'Fraunces', Georgia, serif; font-size: 2.6rem; font-weight: 700; line-height: 1; color: var(--c-text); }
+
+    .result-badge { font-size: .85rem; font-weight: 700; padding: .35rem .85rem; border-radius: 20px; }
+    .result-badge.low     { background: var(--c-brand);  color: #fff; }
+    .result-badge.indet   { background: var(--c-indet);  color: #fff; }
+    .result-badge.high    { background: var(--c-danger); color: #fff; }
+
+    .result-body { padding: 1rem 1.4rem 1.2rem; background: #fff; }
+    .result-body p { font-size: .9rem; color: var(--c-text); }
+
+    .result-details { display: grid; grid-template-columns: repeat(4, 1fr); gap: .55rem; margin-top: .9rem; }
+    @media (max-width: 500px) { .result-details { grid-template-columns: 1fr 1fr; } }
+    .detail-box { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: 7px; padding: .55rem .65rem; text-align: center; }
+    .detail-box .dv { font-size: .78rem; font-weight: 700; color: var(--c-text); }
+    .detail-box .dk { font-size: .68rem; color: var(--c-muted); margin-top: .05rem; }
+
+    /* Sections */
+    h2.sec {
+      font-family: 'Fraunces', Georgia, serif; font-size: 1.25rem;
+      font-weight: 700; color: var(--c-text); margin: 2rem 0 .75rem;
+      padding-bottom: .4rem; border-bottom: 2px solid var(--c-brand-lt);
+    }
+    h3.sub { font-size: .95rem; font-weight: 700; color: var(--c-text); margin: 1.1rem 0 .4rem; }
+
+    /* Prose */
+    .prose p { font-size: .92rem; color: #374151; margin-bottom: .75rem; line-height: 1.7; }
+    .prose ul, .prose ol { padding-left: 1.4rem; margin-bottom: .75rem; }
+    .prose li { font-size: .9rem; color: #374151; margin-bottom: .3rem; }
+    .prose strong { color: var(--c-text); }
+
+    /* Formula box */
+    .formula-box {
+      background: #0f172a; border-radius: 8px; padding: 1rem 1.25rem;
+      color: #94a3b8; font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: .82rem; line-height: 1.9; margin: .75rem 0; overflow-x: auto;
+    }
+    .formula-box .hl { color: #7dd3a8; font-weight: 700; }
+    .formula-box .pos { color: #86efac; }
+    .formula-box .neg { color: #fca5a5; }
+    .formula-box .comment { color: #475569; }
+
+    /* Info boxes */
+    .info-box { border-radius: 8px; padding: .9rem 1.1rem; margin: .75rem 0; font-size: .87rem; }
+    .info-box.green  { background: var(--c-brand-lt);  border-left: 4px solid var(--c-brand);  color: #14532d; }
+    .info-box.blue   { background: var(--c-indet-lt);  border-left: 4px solid var(--c-indet);  color: #1e3a8a; }
+    .info-box.orange { background: var(--c-warn-lt);   border-left: 4px solid #d97706;         color: #78350f; }
+    .info-box.red    { background: var(--c-danger-lt); border-left: 4px solid var(--c-danger); color: #7f1d1d; }
+    .info-box p { margin: 0; }
+    .info-box strong { display: block; margin-bottom: .2rem; }
+    .info-box ul { padding-left: 1.2rem; margin-top: .3rem; }
+    .info-box li { font-size: .85rem; margin-bottom: .25rem; }
+
+    /* Tables */
+    .data-table { width: 100%; border-collapse: collapse; font-size: .85rem; margin: .5rem 0; }
+    .data-table th { background: var(--c-surface); border: 1px solid var(--c-border); padding: .5rem .75rem; text-align: left; font-size: .75rem; font-weight: 700; color: var(--c-muted); text-transform: uppercase; letter-spacing: .05em; }
+    .data-table td { border: 1px solid var(--c-border); padding: .55rem .75rem; vertical-align: top; }
+    .data-table tr:nth-child(even) td { background: var(--c-surface); }
+    .data-table tr.low-row  td:first-child { border-left: 4px solid var(--c-brand); }
+    .data-table tr.indet-row td:first-child { border-left: 4px solid var(--c-indet); }
+    .data-table tr.high-row td:first-child { border-left: 4px solid var(--c-danger); }
+
+    /* Variable table */
+    .var-table { width: 100%; border-collapse: collapse; font-size: .84rem; margin: .5rem 0; }
+    .var-table th { background: #0f172a; color: #94a3b8; border: 1px solid #1e293b; padding: .45rem .75rem; text-align: left; font-size: .73rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+    .var-table td { border: 1px solid var(--c-border); padding: .5rem .75rem; vertical-align: top; }
+    .var-table tr:nth-child(even) td { background: var(--c-surface); }
+    .var-table .coeff.pos { color: #16a34a; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+    .var-table .coeff.neg { color: #dc2626; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+
+    /* Two-col */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: .75rem 0; }
+    @media (max-width: 540px) { .two-col { grid-template-columns: 1fr; } }
+
+    /* FAQ */
+    details.faq { border: 1px solid var(--c-border); border-radius: 8px; margin-bottom: .6rem; overflow: hidden; }
+    details.faq summary {
+      padding: .85rem 1rem; font-size: .9rem; font-weight: 600;
+      cursor: pointer; list-style: none; display: flex;
+      justify-content: space-between; align-items: center;
+      background: var(--c-surface); color: var(--c-text);
+    }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary::after { content: '+'; font-size: 1.2rem; color: var(--c-brand); flex-shrink: 0; margin-left: .5rem; }
+    details[open].faq summary::after { content: '−'; }
+    details.faq .faq-body { padding: .85rem 1rem 1rem; font-size: .88rem; color: #374151; line-height: 1.65; border-top: 1px solid var(--c-border); }
+    details.faq .faq-body p { margin-bottom: .4rem; }
+    details.faq .faq-body ul { padding-left: 1.2rem; }
+    details.faq .faq-body li { margin-bottom: .25rem; }
+
+    /* Related cards */
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .75rem; margin-top: .75rem; }
+    .related-card { display: block; padding: .85rem 1rem; border: 1px solid var(--c-border); border-radius: 8px; text-decoration: none; background: var(--c-surface); transition: border-color .15s, background .15s; }
+    .related-card:hover { border-color: var(--c-brand-mid); background: var(--c-brand-lt); }
+    .related-card .rc-name { font-size: .88rem; font-weight: 700; color: var(--c-text); }
+    .related-card .rc-desc { font-size: .76rem; color: var(--c-muted); margin-top: .15rem; }
+
+    /* Disclaimer */
+    .disclaimer { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: 8px; padding: .9rem 1.1rem; font-size: .8rem; color: var(--c-muted); margin-top: 2rem; line-height: 1.6; }
+    .disclaimer strong { color: var(--c-text); }
+
+    /* Footer */
+    .page-footer-meta { text-align: center; font-size: .75rem; color: var(--c-muted); margin-top: 1.5rem; padding-top: .75rem; border-top: 1px solid var(--c-border); }
+    .page-footer-meta a { color: var(--c-brand); text-decoration: none; }
+  </style>
+</head>
+<body>
+<!-- shared-nav.js injects site header here -->
+
+<div class="page-wrap">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://rxmedcalc.com/">Home</a>
+    <span>›</span>
+    <a href="https://rxmedcalc.com/medical-calculators/">Medical Calculators</a>
+    <span>›</span>
+    <a href="https://rxmedcalc.com/medical-calculators/#hepatology">Hepatology</a>
+    <span>›</span>
+    NAFLD Fibrosis Score
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <p class="hero-meta">By <a href="https://rxmedcalc.com/medical-calculators/#about">Dr. Diamond, MBBS, AFIH</a> &nbsp;·&nbsp; Hepatology / MASLD</p>
+    <h1>NAFLD Fibrosis Score Calculator</h1>
+    <p>Non-invasive detection of advanced liver fibrosis (F3–F4) in NAFLD/MASLD — using Age, BMI, Diabetes status, AST/ALT ratio, Platelets &amp; Albumin. Validated AUROC 0.88 · NPV 93% · PPV 90%.</p>
+  </div>
+
+  <div class="badges">
+    <span class="badge">NAFLD · MASLD · NASH</span>
+    <span class="badge">METAVIR F0–F4</span>
+    <span class="badge">NPV 93% · PPV 90%</span>
+    <span class="badge">AASLD 2023 · EASL 2024</span>
+    <span class="badge">Angulo et al. 2007</span>
+    <span class="badge">No Login · Free</span>
+  </div>
+
+  <!-- ═══════════ CALCULATOR CARD ═══════════ -->
+  <div class="card">
+    <div class="card-title">🧮 NAFLD Fibrosis Score (NFS)</div>
+
+    <!-- Clinical variables -->
+    <div class="form-section-label">Clinical Parameters</div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="age">Age <span class="unit">years</span></label>
+        <input type="number" id="age" min="18" max="110" step="1" placeholder="e.g. 52" inputmode="numeric" />
+      </div>
+      <div class="field">
+        <label>IFG / Diabetes</label>
+        <div class="toggle-row">
+          <button type="button" class="toggle-btn active-no" id="btn-no"  onclick="setDiab(0)">✓ No</button>
+          <button type="button" class="toggle-btn"           id="btn-yes" onclick="setDiab(1)">⚠ Yes</button>
+        </div>
+        <p class="hint">Impaired fasting glucose (100–125 mg/dL), pre-diabetes, or type 2 DM</p>
+      </div>
+    </div>
+
+    <!-- BMI helper -->
+    <div class="field">
+      <label for="bmi">BMI <span class="unit">kg/m²</span></label>
+      <input type="number" id="bmi" min="10" max="80" step="0.1" placeholder="e.g. 28.5" inputmode="decimal" oninput="syncBMI('direct')" />
+      <div class="bmi-helper">
+        <div class="bmi-helper-label">📐 Calculate BMI from Height &amp; Weight</div>
+        <div class="bmi-row">
+          <input type="number" id="ht" min="100" max="250" step="0.5" placeholder="Height (cm)" inputmode="decimal" oninput="syncBMI('hw')" />
+          <input type="number" id="wt" min="20" max="300" step="0.1" placeholder="Weight (kg)" inputmode="decimal" oninput="syncBMI('hw')" />
+        </div>
+        <div class="bmi-display" id="bmi-display">Enter height &amp; weight to auto-calculate BMI, or type BMI directly above.</div>
+      </div>
+    </div>
+
+    <!-- Lab values -->
+    <div class="form-section-label">Laboratory Values</div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="ast">AST <span class="unit">U/L</span></label>
+        <input type="number" id="ast" min="1" max="5000" step="0.1" placeholder="e.g. 55" inputmode="decimal" oninput="updateRatio()" />
+        <p class="hint">Normal: 10–40 U/L</p>
+      </div>
+      <div class="field">
+        <label for="alt">ALT <span class="unit">U/L</span></label>
+        <input type="number" id="alt" min="1" max="5000" step="0.1" placeholder="e.g. 38" inputmode="decimal" oninput="updateRatio()" />
+        <p class="hint">Normal: 7–56 U/L</p>
+      </div>
+    </div>
+
+    <div class="ratio-display" id="ratio-display" aria-live="polite">
+      AST/ALT ratio: <span class="ratio-val" id="ratio-val">—</span>
+    </div>
+
+    <div class="field-row" style="margin-top:.9rem;">
+      <div class="field">
+        <label for="plt">Platelet Count <span class="unit">×10⁹/L</span></label>
+        <input type="number" id="plt" min="1" max="1000" step="1" placeholder="e.g. 195" inputmode="numeric" />
+        <p class="hint">Normal: 150–400 ×10⁹/L</p>
+      </div>
+      <div class="field">
+        <label for="alb">Serum Albumin <span class="unit">g/dL</span></label>
+        <input type="number" id="alb" min="0.5" max="8" step="0.1" placeholder="e.g. 4.1" inputmode="decimal" />
+        <p class="hint">Normal: 3.5–5.0 g/dL · If lab shows g/L, divide by 10</p>
+      </div>
+    </div>
+
+    <button class="btn-calc" onclick="calcNFS()" aria-label="Calculate NAFLD Fibrosis Score">
+      Calculate NFS
+    </button>
+    <button class="btn-reset" onclick="resetForm()">Reset all fields</button>
+
+    <!-- Result -->
+    <div class="result-panel" id="result-panel" role="status" aria-live="polite">
+      <div class="result-header" id="result-header">
+        <div>
+          <div class="result-label">NFS Score</div>
+          <div class="result-score" id="result-score">—</div>
+        </div>
+        <span class="result-badge" id="result-badge">—</span>
+      </div>
+      <div class="result-body">
+        <p id="result-interp">—</p>
+        <div class="result-details">
+          <div class="detail-box">
+            <div class="dv" id="d-stage">—</div>
+            <div class="dk">Fibrosis Stage</div>
+          </div>
+          <div class="detail-box">
+            <div class="dv" id="d-npv">—</div>
+            <div class="dk">NPV / PPV</div>
+          </div>
+          <div class="detail-box">
+            <div class="dv" id="d-biopsy">—</div>
+            <div class="dk">Biopsy</div>
+          </div>
+          <div class="detail-box">
+            <div class="dv" id="d-ratio">—</div>
+            <div class="dk">AST/ALT Ratio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /card -->
+
+  <!-- ═══════════ INTERPRETATION TABLE ═══════════ -->
+  <h2 class="sec">NFS Score Interpretation</h2>
+  <div class="prose">
+    <p>Two cutoff points were validated by Angulo et al. (2007) in 733 NAFLD patients across multiple international centres, then independently replicated. The score distinguishes patients with F0–F2 (no/mild fibrosis) from those with F3–F4 (advanced fibrosis/cirrhosis) without requiring a liver biopsy.</p>
+  </div>
+
+  <table class="data-table" aria-label="NFS Score Interpretation Table">
+    <thead>
+      <tr>
+        <th>NFS Score</th>
+        <th>Category</th>
+        <th>Fibrosis Stage</th>
+        <th>NPV / PPV</th>
+        <th>Clinical Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="low-row">
+        <td><strong>&lt; −1.455</strong></td>
+        <td>🟢 Low Risk</td>
+        <td>F0–F2 (Absent / Mild)</td>
+        <td>NPV 93%</td>
+        <td>Advanced fibrosis unlikely. Manage metabolic risk factors. Repeat NFS / FIB-4 in 1–2 years.</td>
+      </tr>
+      <tr class="indet-row">
+        <td><strong>−1.455 to 0.675</strong></td>
+        <td>🔵 Indeterminate</td>
+        <td>F1–F3 (Variable)</td>
+        <td>—</td>
+        <td>Additional testing needed: FibroScan (LSM), MR Elastography, ELF test, or liver biopsy.</td>
+      </tr>
+      <tr class="high-row">
+        <td><strong>&gt; 0.675</strong></td>
+        <td>🔴 High Risk</td>
+        <td>F3–F4 (Advanced / Cirrhosis)</td>
+        <td>PPV 90%</td>
+        <td>High probability of advanced fibrosis. Hepatology referral. Confirm with elastography or biopsy. Consider HCC surveillance.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box orange" style="margin-top:.8rem;">
+    <p><strong>⚠️ Indeterminate Zone — Common in Clinical Practice</strong></p>
+    <p>Up to 25–35% of NAFLD patients fall in the indeterminate range. This is not a failure of the score — it correctly reflects uncertainty and triggers appropriate escalation. Do not reassure or dismiss patients in this zone without further evaluation.</p>
+  </div>
+
+  <!-- ═══════════ FORMULA ═══════════ -->
+  <h2 class="sec">Formula &amp; Variables</h2>
+
+  <div class="formula-box">
+    <span class="comment">// NAFLD Fibrosis Score (Angulo et al., Hepatology 2007)</span><br/>
+    <span class="hl">NFS</span> = −1.675<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp; <span class="pos">+ 0.037</span> × Age [years]<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp; <span class="pos">+ 0.094</span> × BMI [kg/m²]<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp; <span class="pos">+ 1.13&nbsp;</span> × IFG / Diabetes [1 = yes, 0 = no]<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp; <span class="pos">+ 0.99&nbsp;</span> × AST / ALT ratio<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp; <span class="neg">− 0.013</span> × Platelet count [×10⁹/L]<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp; <span class="neg">− 0.66&nbsp;</span> × Albumin [g/dL]<br/><br/>
+    <span class="comment">// Cutoffs: Low &lt;−1.455 · Indeterminate −1.455 to 0.675 · High &gt;0.675</span><br/>
+    <span class="comment">// AUROC = 0.88 (95% CI 0.85–0.92) for detecting F3–F4 fibrosis</span>
+  </div>
+
+  <table class="var-table" aria-label="NFS Variables and Coefficients">
+    <thead>
+      <tr><th>Variable</th><th>Coefficient</th><th>Unit</th><th>Clinical Rationale</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Constant</strong></td>
+        <td class="coeff neg">−1.675</td>
+        <td>—</td>
+        <td>Model intercept; sets the baseline score</td>
+      </tr>
+      <tr>
+        <td><strong>Age</strong></td>
+        <td class="coeff pos">+0.037</td>
+        <td>years</td>
+        <td>Fibrosis accumulates with age; older patients have higher background risk</td>
+      </tr>
+      <tr>
+        <td><strong>BMI</strong></td>
+        <td class="coeff pos">+0.094</td>
+        <td>kg/m²</td>
+        <td>Obesity drives MASLD progression; higher BMI correlates with worse fibrosis</td>
+      </tr>
+      <tr>
+        <td><strong>IFG / Diabetes</strong></td>
+        <td class="coeff pos">+1.13</td>
+        <td>1 or 0</td>
+        <td>Strongest individual predictor; insulin resistance accelerates hepatic fibrogenesis</td>
+      </tr>
+      <tr>
+        <td><strong>AST/ALT ratio</strong></td>
+        <td class="coeff pos">+0.99</td>
+        <td>ratio</td>
+        <td>Ratio &gt;1 suggests advanced fibrosis or cirrhosis; mitochondrial injury shifts to AST dominance</td>
+      </tr>
+      <tr>
+        <td><strong>Platelet count</strong></td>
+        <td class="coeff neg">−0.013</td>
+        <td>×10⁹/L</td>
+        <td>Low platelets reflect portal hypertension / splenomegaly — markers of advanced fibrosis</td>
+      </tr>
+      <tr>
+        <td><strong>Albumin</strong></td>
+        <td class="coeff neg">−0.66</td>
+        <td>g/dL</td>
+        <td>Low albumin indicates impaired hepatic synthetic function, consistent with advanced disease</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ═══════════ CLINICAL CONTENT ═══════════ -->
+  <h2 class="sec">What Is NAFLD / MASLD?</h2>
+  <div class="prose">
+    <p><strong>Non-Alcoholic Fatty Liver Disease (NAFLD)</strong> — renamed <strong>MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease)</strong> in the 2023 Delphi nomenclature consensus — is the most common chronic liver disease worldwide, affecting approximately 25% of the global adult population. In India, prevalence is estimated at 25–38% among urban adults and rising rapidly alongside the epidemic of obesity, type 2 diabetes, and metabolic syndrome.</p>
+    <p>MASLD encompasses a spectrum from simple steatosis (fat deposition without inflammation) through MASH (Metabolic dysfunction-Associated Steatohepatitis, formerly NASH) to advanced fibrosis and cirrhosis. The critical determinant of long-term prognosis is <strong>fibrosis stage</strong> — not the degree of steatosis or inflammation. Patients with F3–F4 fibrosis have significantly elevated risks of liver-related mortality, hepatocellular carcinoma (HCC), and need for liver transplantation.</p>
+    <p>Liver biopsy — the gold standard for fibrosis staging — is invasive, expensive, subject to sampling variability, and impractical for the millions of patients with MASLD. Non-invasive scoring systems like the <strong>NAFLD Fibrosis Score (NFS)</strong> and FIB-4 allow clinicians to stratify fibrosis risk using routine clinical and laboratory data, reserving biopsy or elastography for those in the indeterminate or high-risk zones.</p>
+
+    <h3 class="sub">The NFS in Indian Clinical Practice</h3>
+    <p>In India, MASLD is increasingly encountered in primary care, general medicine, and gastroenterology outpatient settings. FibroScan availability is largely limited to metro tertiary centres. The NFS can be calculated from parameters available in any standard CBC + LFT + metabolic panel — investigations already ordered in most patients with deranged liver function or metabolic syndrome. Applying the NFS at point-of-care enables rational triaging: low-risk patients can be managed with lifestyle counselling; indeterminate/high-risk patients can be prioritised for FibroScan or hepatology referral.</p>
+  </div>
+
+  <h2 class="sec">NFS vs FIB-4 — Which to Use First?</h2>
+  <div class="prose">
+    <p>Both NFS and FIB-4 are endorsed by EASL 2024 and AASLD 2023 MASLD guidelines. Current guidance recommends a <strong>sequential approach</strong>:</p>
+  </div>
+  <div class="info-box blue">
+    <strong>📋 EASL 2024 Recommended Pathway for MASLD</strong>
+    <ul>
+      <li><strong>Step 1:</strong> Calculate <strong>FIB-4</strong> (Age, AST, ALT, Platelets — simpler, 4 variables)</li>
+      <li><strong>Step 2:</strong> If FIB-4 indeterminate (1.30–2.67) → Calculate <strong>NFS</strong> or proceed to FibroScan</li>
+      <li><strong>Step 3:</strong> If NFS also indeterminate → FibroScan (LSM) or MR Elastography</li>
+      <li><strong>Step 4:</strong> Persistent uncertainty → Liver biopsy</li>
+    </ul>
+  </div>
+
+  <table class="data-table" style="margin-top:.75rem;" aria-label="Comparison of NFS and FIB-4">
+    <thead>
+      <tr><th>Feature</th><th>NFS</th><th>FIB-4</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Variables</strong></td><td>6 (Age, BMI, DM, AST, ALT, Platelets, Albumin)</td><td>4 (Age, AST, ALT, Platelets)</td></tr>
+      <tr><td><strong>Specificity (F3–F4)</strong></td><td>Higher (PPV 90%)</td><td>Moderate (PPV ~65%)</td></tr>
+      <tr><td><strong>Sensitivity</strong></td><td>Lower at high cutoff</td><td>Higher at low cutoff</td></tr>
+      <tr><td><strong>Best Disease</strong></td><td>NAFLD/MASLD (purpose-built)</td><td>HCV, HBV, NAFLD/MASLD</td></tr>
+      <tr><td><strong>Guideline Role</strong></td><td>Step 2 confirmatory test</td><td>Step 1 initial screening</td></tr>
+      <tr><td><strong>Limitations</strong></td><td>Needs BMI + Albumin + DM status</td><td>Less reliable age &lt;35 / &gt;65</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">When to Use NFS — and When Not To</h2>
+  <div class="two-col">
+    <div class="info-box green">
+      <strong>✅ Appropriate Indications</strong>
+      <ul>
+        <li>Known or suspected NAFLD/MASLD on imaging (fatty liver on USS)</li>
+        <li>Metabolic syndrome + deranged LFT — initial fibrosis screen</li>
+        <li>After FIB-4 is indeterminate — secondary assessment</li>
+        <li>Pre-referral triage to hepatology</li>
+        <li>Monitoring treatment response (weight loss, GLP-1 agonists, SGLT2i)</li>
+        <li>Deciding whether FibroScan or biopsy is needed</li>
+      </ul>
+    </div>
+    <div class="info-box red">
+      <strong>⛔ Do Not Use If</strong>
+      <ul>
+        <li>No NAFLD/MASLD diagnosis — exclude other liver disease first</li>
+        <li>Alcohol consumption &gt;21 units/week (men) or &gt;14 (women) — use ALD scores</li>
+        <li>Acute hepatitis — AST/ALT acutely elevated, not reflecting fibrosis</li>
+        <li>Haemolysis or myopathy (spuriously elevated AST)</li>
+        <li>Thrombocytopenia from non-hepatic cause (e.g. ITP)</li>
+        <li>Malnutrition causing low albumin independent of liver disease</li>
+        <li>Paediatric patients (&lt;18 years)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="sec">Clinical Workflow for MASLD in India</h2>
+  <div class="prose">
+    <ol>
+      <li style="margin-bottom:.5rem;"><strong>Identify MASLD:</strong> Ultrasound abdomen showing fatty liver + metabolic risk factors (obesity, DM, dyslipidaemia, hypertension) + exclusion of significant alcohol use and other liver diseases (viral hepatitis, autoimmune, Wilson's, etc.).</li>
+      <li style="margin-bottom:.5rem;"><strong>Routine labs:</strong> CBC (for platelet count), LFT (AST, ALT, Albumin, Bilirubin), fasting glucose or HbA1c, lipid profile. Measure weight and height for BMI. These are available at any NABL lab for ₹400–800.</li>
+      <li style="margin-bottom:.5rem;"><strong>Calculate FIB-4 first</strong> (4 variables, simpler):
+        <ul style="margin-top:.25rem;">
+          <li>FIB-4 &lt;1.30 → Low risk → Lifestyle management, repeat in 1–2 years</li>
+          <li>FIB-4 &gt;2.67 → High risk → Hepatology referral directly</li>
+        </ul>
+      </li>
+      <li style="margin-bottom:.5rem;"><strong>For FIB-4 indeterminate (1.30–2.67):</strong> Calculate this NFS for additional stratification:
+        <ul style="margin-top:.25rem;">
+          <li>NFS &lt;−1.455 → Reassurance; lifestyle modification; follow up</li>
+          <li>NFS &gt;0.675 → Hepatology referral + FibroScan if available</li>
+          <li>NFS indeterminate → FibroScan / MR Elastography / biopsy</li>
+        </ul>
+      </li>
+      <li style="margin-bottom:.5rem;"><strong>Confirmed advanced fibrosis (F3–F4):</strong> Six-monthly ultrasound + AFP for HCC surveillance. Optimise all metabolic risk factors. Consider pharmacotherapy: semaglutide (GLP-1RA), SGLT2 inhibitors, pioglitazone (with caution in HF). Screen for varices with upper GI endoscopy if cirrhosis.</li>
+    </ol>
+  </div>
+
+  <!-- ═══════════ FAQ ═══════════ -->
+  <h2 class="sec">Frequently Asked Questions</h2>
+
+  <details class="faq">
+    <summary>What is the NAFLD Fibrosis Score (NFS)?</summary>
+    <div class="faq-body">
+      <p>The NAFLD Fibrosis Score (NFS) is a non-invasive clinical scoring system that estimates the likelihood of advanced hepatic fibrosis (F3–F4) in patients with Non-Alcoholic Fatty Liver Disease (NAFLD, now termed MASLD). It was developed by Angulo et al. in 2007 using six routinely available parameters: age, BMI, presence of impaired fasting glucose or diabetes, AST/ALT ratio, platelet count, and serum albumin. It was validated in 733 patients across multiple international centres, achieving an AUROC of 0.88.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What is the NAFLD Fibrosis Score formula?</summary>
+    <div class="faq-body">
+      <p><strong>NFS = −1.675 + (0.037 × Age [years]) + (0.094 × BMI [kg/m²]) + (1.13 × IFG/Diabetes [1=yes, 0=no]) + (0.99 × AST/ALT ratio) − (0.013 × Platelet count [×10⁹/L]) − (0.66 × Albumin [g/dL])</strong></p>
+      <p>The score typically ranges from approximately −3 to +2. All six parameters are available from routine clinical assessment and standard blood tests.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What do NFS score results mean?</summary>
+    <div class="faq-body">
+      <p><strong>NFS &lt; −1.455 (Low Risk):</strong> Advanced fibrosis (F3–F4) is unlikely. Negative predictive value is 93%. Biopsy can be deferred; focus on metabolic risk factor management and annual monitoring.</p>
+      <p><strong>NFS −1.455 to 0.675 (Indeterminate):</strong> The score cannot reliably classify fibrosis in this range. Further investigation is required: FibroScan, MR Elastography, ELF test, or liver biopsy.</p>
+      <p><strong>NFS &gt; 0.675 (High Risk):</strong> Advanced fibrosis or cirrhosis is likely. Positive predictive value is 90%. Hepatology referral is recommended; confirm staging with elastography or biopsy; initiate HCC surveillance if cirrhosis confirmed.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>How accurate is the NAFLD Fibrosis Score?</summary>
+    <div class="faq-body">
+      <p>In the original validation study (Angulo et al., <em>Hepatology</em> 2007), the NFS achieved an AUROC of 0.88 (95% CI 0.85–0.92) for detecting advanced fibrosis (F3–F4). At the low cutoff (−1.455), the NPV was 93% — meaning that of patients below this threshold, 93% truly do not have advanced fibrosis. At the high cutoff (0.675), the PPV was 90% — meaning 9 in 10 patients above this threshold have confirmed advanced fibrosis. Subsequent external validations have broadly confirmed these figures, with some variation by population.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What is the difference between NFS and FIB-4 for NAFLD?</summary>
+    <div class="faq-body">
+      <p>Both are validated non-invasive fibrosis scores for NAFLD/MASLD. <strong>FIB-4</strong> uses only 4 variables (Age, AST, ALT, Platelets) and is simpler to calculate — it is recommended as the first-line screen. <strong>NFS</strong> uses 6 variables and has higher specificity at the high cutoff (PPV 90% vs FIB-4's ~65%), making it more valuable for confirming high-risk patients or clarifying indeterminate FIB-4 results. Current EASL 2024 and AASLD 2023 guidelines recommend using FIB-4 for initial screening, then NFS (or FibroScan) for those in the indeterminate FIB-4 zone (1.30–2.67).</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What does IFG or diabetes mean in the NAFLD score?</summary>
+    <div class="faq-body">
+      <p>IFG stands for Impaired Fasting Glucose — a fasting plasma glucose between 100–125 mg/dL (5.6–6.9 mmol/L). For the NFS, the IFG/Diabetes variable is scored as <strong>1 (yes)</strong> if the patient has any of the following:</p>
+      <ul>
+        <li>Impaired fasting glucose: fasting glucose 100–125 mg/dL</li>
+        <li>Pre-diabetes: HbA1c 5.7–6.4% (ADA) or 6.0–6.4% (IDF/WHO)</li>
+        <li>Established type 2 diabetes mellitus (on or off medication)</li>
+      </ul>
+      <p>Score <strong>0 (no)</strong> only if fasting glucose, HbA1c, and clinical history are all normal with no prior diagnosis. This is the most heavily weighted single variable in the formula (+1.13 coefficient), reflecting the central role of insulin resistance in MASLD fibrosis progression.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Can NAFLD Fibrosis Score be used for MASLD (the new term)?</summary>
+    <div class="faq-body">
+      <p>Yes. MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease) is the updated nomenclature for NAFLD adopted by the multinational Delphi consensus in 2023. The patient population, pathophysiology, and fibrosis staging criteria are identical to those for which the NFS was developed and validated. The cutoffs, formula, and interpretation remain fully applicable. The renaming was a nosological and stigma-reduction exercise — not a change in disease biology.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Is serum albumin in g/dL or g/L in Indian lab reports?</summary>
+    <div class="faq-body">
+      <p>Most Indian laboratory reports express serum albumin in <strong>g/dL</strong>. Normal serum albumin is 3.5–5.0 g/dL. Some internationally formatted lab reports (and some hospital information systems) use <strong>g/L</strong> — where normal is 35–50 g/L. To convert from g/L to g/dL, divide by 10 (e.g., 42 g/L = 4.2 g/dL). This calculator requires albumin in <strong>g/dL</strong>. If your lab reports in g/L, enter the value divided by 10.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What are the limitations of the NAFLD Fibrosis Score?</summary>
+    <div class="faq-body">
+      <p>The NFS has several important limitations:</p>
+      <ul>
+        <li><strong>Non-NAFLD causes of deranged LFT</strong> — must exclude viral hepatitis, alcohol, autoimmune hepatitis, Wilson's disease, haemochromatosis, etc. before applying.</li>
+        <li><strong>Elevated AST from non-hepatic sources</strong> — haemolysis, myopathy, hypothyroidism, cardiac disease, and strenuous exercise can inflate AST and the AST/ALT ratio.</li>
+        <li><strong>Thrombocytopenia from non-hepatic cause</strong> — immune thrombocytopenic purpura (ITP), medications, or haematological disorders can lower platelets without indicating portal hypertension.</li>
+        <li><strong>Malnutrition</strong> — hypoalbuminaemia from poor nutrition or protein-losing conditions will artificially lower the score, potentially masking high-risk patients.</li>
+        <li><strong>Alcohol</strong> — the NFS is not validated for alcoholic liver disease; concurrent alcohol use invalidates results.</li>
+        <li><strong>Age extremes</strong> — validated primarily in adults; less data in patients &lt;18 or &gt;75 years.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What is the next step if NFS is indeterminate?</summary>
+    <div class="faq-body">
+      <p>For NFS in the indeterminate range (−1.455 to 0.675), the recommended next steps per EASL 2024 are:</p>
+      <ul>
+        <li><strong>FibroScan (Vibration-Controlled Transient Elastography):</strong> First-line non-invasive test where available. LSM &lt;8 kPa → low risk; &gt;12–13 kPa → cirrhosis.</li>
+        <li><strong>MR Elastography:</strong> Most accurate non-invasive test, but expensive and limited to specialised centres.</li>
+        <li><strong>ELF (Enhanced Liver Fibrosis) Test:</strong> Blood-based biomarker panel; not widely available in India.</li>
+        <li><strong>Liver Biopsy:</strong> Reserved for cases where non-invasive tests are inconclusive, clinically high suspicion persists, or treatment decisions (e.g., eligibility for clinical trials) require histological confirmation.</li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- ═══════════ RELATED ═══════════ -->
+  <h2 class="sec">Related Calculators</h2>
+  <div class="related-grid">
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/fib-4-index/">
+      <div class="rc-name">📊 FIB-4 Index</div>
+      <div class="rc-desc">First-line fibrosis screen — HCV, HBV, NAFLD/MASLD</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/child-pugh/">
+      <div class="rc-name">🏥 Child-Pugh Score</div>
+      <div class="rc-desc">Cirrhosis staging — Class A/B/C, surgical risk</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/egfr-calculator/">
+      <div class="rc-name">🫘 eGFR Calculator</div>
+      <div class="rc-desc">CKD-EPI 2021 · Cockcroft-Gault · MDRD</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/bmi/">
+      <div class="rc-name">⚖️ BMI Calculator</div>
+      <div class="rc-desc">India-specific cutoffs · Metabolic risk</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/hba1c-converter/">
+      <div class="rc-name">🩸 HbA1c Converter</div>
+      <div class="rc-desc">% ↔ mmol/mol ↔ eAG — diabetes monitoring</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/">
+      <div class="rc-name">📋 All Calculators →</div>
+      <div class="rc-desc">62+ clinical tools — free, no login</div>
+    </a>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    <strong>⚠️ Clinical Disclaimer:</strong> The NAFLD Fibrosis Score (NFS) calculator is intended as a clinical decision-support tool for qualified healthcare professionals and medical students. It does not replace clinical judgment, full history and examination, imaging, or specialist evaluation. The NFS is a probabilistic screening tool — a low score does not exclude all fibrosis, and a high score requires histological or elastographic confirmation before major management decisions. Always exclude alcohol excess, viral hepatitis, and other liver diseases before applying. Not intended for patient self-diagnosis. Results in patients with concurrent conditions affecting AST, platelet count, or albumin should be interpreted with caution.
+  </div>
+
+  <div class="page-footer-meta">
+    Created by <strong>Dr. Diamond</strong>, MBBS, AFIH &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/medical-calculators/">Medical Calculators</a> &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/medical-calculators/#about">About</a> &nbsp;·&nbsp;
+    Reference: Angulo P et al. <em>Hepatology</em> 2007;45(4):846–54 · EASL MASLD Guidelines 2024 · AASLD 2023
+    <br/>
+    Keywords: NAFLD fibrosis score · NFS calculator · NAFLD NFS · MASLD fibrosis staging · fatty liver fibrosis test · non-invasive liver fibrosis India · NAFLD score formula
+  </div>
+
+</div><!-- /page-wrap -->
+
+<!-- shared-nav.js injects site footer here -->
+
+<script>
+  /* ════════════════════════════════════════
+     NAFLD Fibrosis Score Calculator Logic
+     NFS = −1.675 + 0.037×Age + 0.094×BMI
+           + 1.13×DM + 0.99×(AST/ALT)
+           − 0.013×Plt − 0.66×Alb
+  ════════════════════════════════════════ */
+
+  let diabVal = 0; // 0 = No, 1 = Yes
+
+  function setDiab(val) {
+    diabVal = val;
+    document.getElementById('btn-no').className  = val === 0 ? 'toggle-btn active-no'  : 'toggle-btn';
+    document.getElementById('btn-yes').className = val === 1 ? 'toggle-btn active-yes' : 'toggle-btn';
+  }
+
+  function syncBMI(source) {
+    if (source === 'hw') {
+      const ht = parseFloat(document.getElementById('ht').value);
+      const wt = parseFloat(document.getElementById('wt').value);
+      const disp = document.getElementById('bmi-display');
+      if (!isNaN(ht) && !isNaN(wt) && ht > 0 && wt > 0) {
+        const bmi = wt / ((ht / 100) ** 2);
+        document.getElementById('bmi').value = bmi.toFixed(1);
+        const cat = bmi < 18.5 ? 'Underweight' : bmi < 23 ? 'Normal (India)' : bmi < 27.5 ? 'Overweight (India)' : 'Obese (India)';
+        disp.innerHTML = `BMI = <strong>${bmi.toFixed(1)} kg/m²</strong> — ${cat}`;
+      } else {
+        disp.textContent = 'Enter both height and weight to auto-calculate BMI.';
+        document.getElementById('bmi').value = '';
+      }
+    }
+    // If direct BMI entry, clear height/weight only if they haven't been entered
+  }
+
+  function updateRatio() {
+    const ast = parseFloat(document.getElementById('ast').value);
+    const alt = parseFloat(document.getElementById('alt').value);
+    const el  = document.getElementById('ratio-val');
+    if (!isNaN(ast) && !isNaN(alt) && alt > 0) {
+      el.textContent = (ast / alt).toFixed(2);
+    } else {
+      el.textContent = '—';
+    }
+  }
+
+  function calcNFS() {
+    const age = parseFloat(document.getElementById('age').value);
+    const bmi = parseFloat(document.getElementById('bmi').value);
+    const ast = parseFloat(document.getElementById('ast').value);
+    const alt = parseFloat(document.getElementById('alt').value);
+    const plt = parseFloat(document.getElementById('plt').value);
+    const alb = parseFloat(document.getElementById('alb').value);
+    const dm  = diabVal;
+
+    // Validate
+    if ([age, bmi, ast, alt, plt, alb].some(isNaN)) {
+      alert('Please fill in all fields (Age, BMI, AST, ALT, Platelet count, and Albumin) before calculating.');
+      return;
+    }
+    if ([age, bmi, ast, alt, plt, alb].some(v => v <= 0)) {
+      alert('All values must be greater than zero. Please check your entries.');
+      return;
+    }
+    if (alt === 0) { alert('ALT cannot be zero.'); return; }
+
+    const ratio = ast / alt;
+    const nfs = -1.675 + (0.037 * age) + (0.094 * bmi) + (1.13 * dm) + (0.99 * ratio) - (0.013 * plt) - (0.66 * alb);
+    const rounded = nfs.toFixed(3);
+
+    let cat, badgeText, interpText, stage, npvPpv, biopsy;
+
+    if (nfs < -1.455) {
+      cat = 'low';
+      badgeText = '🟢 Low Risk';
+      stage = 'F0–F2';
+      npvPpv = 'NPV 93%';
+      biopsy = 'Defer';
+      interpText = `<strong>Low risk of advanced fibrosis (F0–F2).</strong> An NFS below −1.455 excludes advanced hepatic fibrosis with a negative predictive value of 93%. Liver biopsy can be deferred. Focus management on metabolic risk factor optimisation — weight reduction, glycaemic control, physical activity, and cardiovascular risk management. Repeat NFS or FIB-4 in 1–2 years or sooner if metabolic status worsens.`;
+    } else if (nfs <= 0.675) {
+      cat = 'indet';
+      badgeText = '🔵 Indeterminate';
+      stage = 'F1–F3';
+      npvPpv = 'Indeterminate';
+      biopsy = 'Consider';
+      interpText = `<strong>Indeterminate zone (−1.455 to 0.675).</strong> Fibrosis stage cannot be reliably estimated from NFS alone in this range. Proceed to complementary non-invasive testing: vibration-controlled transient elastography (FibroScan / LSM), MR Elastography, or the ELF (Enhanced Liver Fibrosis) blood test. If non-invasive tests remain inconclusive and clinical suspicion of advanced fibrosis is high, consider liver biopsy. Refer to hepatology.`;
+    } else {
+      cat = 'high';
+      badgeText = '🔴 High Risk';
+      stage = 'F3–F4';
+      npvPpv = 'PPV 90%';
+      biopsy = 'Recommended';
+      interpText = `<strong>High risk of advanced fibrosis or cirrhosis (F3–F4).</strong> An NFS above 0.675 predicts advanced hepatic fibrosis with a positive predictive value of 90%. Urgent hepatology referral is recommended. Confirm staging with FibroScan (LSM) or liver biopsy. If cirrhosis is confirmed or strongly suspected, initiate <strong>HCC surveillance</strong> (6-monthly abdominal ultrasound ± AFP) and screen for oesophageal varices with upper GI endoscopy.`;
+    }
+
+    // Update DOM
+    const panel  = document.getElementById('result-panel');
+    const header = document.getElementById('result-header');
+    const badge  = document.getElementById('result-badge');
+    header.className = 'result-header ' + cat;
+    badge.className  = 'result-badge '  + cat;
+    document.getElementById('result-score').textContent = rounded;
+    badge.textContent = badgeText;
+    document.getElementById('result-interp').innerHTML = interpText;
+    document.getElementById('d-stage').textContent  = stage;
+    document.getElementById('d-npv').textContent    = npvPpv;
+    document.getElementById('d-biopsy').textContent = biopsy;
+    document.getElementById('d-ratio').textContent  = ratio.toFixed(2);
+
+    panel.classList.add('visible');
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // Umami tracking
+    if (typeof umami !== 'undefined') {
+      umami.track('nfs-calculated', { score: rounded, category: cat, age, bmi, dm });
+    }
+  }
+
+  function resetForm() {
+    ['age','bmi','ast','alt','plt','alb','ht','wt'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+    setDiab(0);
+    document.getElementById('ratio-val').textContent = '—';
+    document.getElementById('bmi-display').innerHTML = 'Enter height &amp; weight to auto-calculate BMI, or type BMI directly above.';
+    document.getElementById('result-panel').classList.remove('visible');
+  }
+
+  // Enter key
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.field input[type="number"], .bmi-row input').forEach(function (inp) {
+      inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') calcNFS(); });
+    });
+  });
+</script>
+
+</body>
+</html>
