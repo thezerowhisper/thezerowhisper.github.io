@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FIB-4 Index Calculator — Liver Fibrosis Score (HCV, HBV, NAFLD/MASLD)</title>
+  <meta name="description" content="Free FIB-4 Index calculator for liver fibrosis staging. Non-invasive score using Age, AST, ALT, and platelet count. Validated for HCV, HBV, NAFLD/MASLD. Instant interpretation with F-stage and biopsy guidance." />
+  <meta name="keywords" content="FIB-4 calculator, FIB-4 index, liver fibrosis score, fibrosis 4 score, fib-4 liver, HCV fibrosis, HBV fibrosis, NAFLD fibrosis, MASLD staging, non-invasive liver test, liver biopsy avoidance, AST ALT platelet calculator" />
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/fib-4-index/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FIB-4 Index Calculator — Liver Fibrosis Staging" />
+  <meta property="og:description" content="Non-invasive FIB-4 score using Age, AST, ALT, and Platelet count. Validated for HCV, HBV, NAFLD/MASLD. Free, instant, no login." />
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/fib-4-index/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FIB-4 Index Calculator — Liver Fibrosis Staging" />
+  <meta name="twitter:description" content="Free FIB-4 calculator for HCV, HBV, NAFLD/MASLD fibrosis staging. Age × AST ÷ (Platelets × √ALT). Instant clinical interpretation." />
+
+  <!-- Schema.org @graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://rxmedcalc.com/medical-calculators/fib-4-index/#webpage",
+        "url": "https://rxmedcalc.com/medical-calculators/fib-4-index/",
+        "name": "FIB-4 Index Calculator — Liver Fibrosis Score",
+        "description": "Free online FIB-4 Index calculator for non-invasive liver fibrosis staging in HCV, HBV, and NAFLD/MASLD patients. Based on Age, AST, ALT, and Platelet count.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://rxmedcalc.com/#website" },
+        "breadcrumb": { "@id": "https://rxmedcalc.com/medical-calculators/fib-4-index/#breadcrumb" },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Liver Fibrosis",
+          "alternateName": ["Hepatic Fibrosis", "Liver Scarring", "Hepatic Cirrhosis"]
+        },
+        "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Clinician" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rxmedcalc.com/medical-calculators/fib-4-index/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Medical Calculators", "item": "https://rxmedcalc.com/medical-calculators/" },
+          { "@type": "ListItem", "position": 3, "name": "FIB-4 Index Calculator" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://rxmedcalc.com/#website",
+        "url": "https://rxmedcalc.com/",
+        "name": "RxMedCalc",
+        "description": "Free medical calculators for doctors worldwide",
+        "publisher": { "@id": "https://rxmedcalc.com/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://rxmedcalc.com/#organization",
+        "name": "RxMedCalc",
+        "url": "https://rxmedcalc.com/",
+        "logo": { "@type": "ImageObject", "url": "https://rxmedcalc.com/assets/logo.png" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rxmedcalc.com/medical-calculators/fib-4-index/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the FIB-4 Index?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The FIB-4 (Fibrosis-4) Index is a non-invasive scoring system that estimates the degree of liver fibrosis using four readily available blood test parameters: Age, AST (aspartate aminotransferase), ALT (alanine aminotransferase), and Platelet count. It was originally validated for HIV/HCV co-infected patients and is now widely used for HCV, HBV, and NAFLD/MASLD."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the FIB-4 formula?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "FIB-4 = (Age [years] × AST [U/L]) ÷ (Platelet count [10⁹/L] × √ALT [U/L]). All four parameters are from routine blood tests — no liver biopsy needed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do FIB-4 score results mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "FIB-4 < 1.30: Low risk of advanced fibrosis (Stage F0–F1); biopsy can often be deferred with NPV ~90%. FIB-4 1.30–2.67: Indeterminate zone; additional testing (FibroScan, NAFLD Fibrosis Score, liver biopsy) may be required. FIB-4 > 2.67: High risk of advanced fibrosis (Stage F3–F4); biopsy or further specialist evaluation is recommended. Use with caution in patients aged <35 or >65 years."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a normal FIB-4 score?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A FIB-4 score below 1.30 is considered low risk and suggests minimal liver fibrosis (F0–F1 on the METAVIR scale). This has a negative predictive value of approximately 90% for ruling out advanced fibrosis (F3–F4) in HCV patients."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can FIB-4 replace liver biopsy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "FIB-4 cannot fully replace liver biopsy but can significantly reduce the need for it. Patients with very low (<1.30) or very high (>2.67) scores can often be managed without biopsy. Those in the indeterminate zone (1.30–2.67) may still require biopsy or complementary non-invasive tests like transient elastography (FibroScan). Always combine with clinical context."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is FIB-4 valid for NAFLD and MASLD?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. FIB-4 is increasingly used for NAFLD (now called MASLD — Metabolic dysfunction-Associated Steatotic Liver Disease). The same cutoffs (1.30 and 2.67) apply. The EASL and AASLD guidelines endorse FIB-4 as an initial non-invasive test for fibrosis assessment in MASLD, before considering FibroScan or liver biopsy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is FIB-4 less accurate in patients under 35 or over 65?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Age is a direct component of the FIB-4 numerator. In younger patients (<35), even with significant fibrosis, the score may be falsely low. In older patients (>65), the score may be falsely elevated due to age-related platelet decline unrelated to fibrosis. Adjusted cutoffs are sometimes used: for patients >65 years, some guidelines suggest a low-risk cutoff of <2.0 instead of <1.30."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between FIB-4 and APRI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both are non-invasive fibrosis scores. APRI (AST-to-Platelet Ratio Index) uses only AST and Platelet count, while FIB-4 additionally incorporates Age and ALT. FIB-4 generally has better diagnostic accuracy, particularly for distinguishing advanced (F3–F4) from mild fibrosis, and is more widely recommended in current guidelines."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "FIB-4 Index Calculator",
+        "applicationCategory": "MedicalApplication",
+        "operatingSystem": "Any (Web Browser)",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+        "url": "https://rxmedcalc.com/medical-calculators/fib-4-index/",
+        "description": "Free online FIB-4 calculator for liver fibrosis staging using Age, AST, ALT, and platelet count."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Shared nav, header, footer, and AdSense injected by shared-nav.js -->
+  <script defer src="/assets/shared-nav.js"></script>
+
+  <!-- Umami analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+
+  <style>
+    /* ── Page-level tokens ── */
+    :root {
+      --c-brand:      #1a6e3c;
+      --c-brand-lt:   #e8f5ee;
+      --c-brand-mid:  #2e8b57;
+      --c-warn:       #b45309;
+      --c-warn-lt:    #fef3c7;
+      --c-danger:     #b91c1c;
+      --c-danger-lt:  #fee2e2;
+      --c-indet:      #1d4ed8;
+      --c-indet-lt:   #eff6ff;
+      --c-text:       #1a1a2e;
+      --c-muted:      #6b7280;
+      --c-border:     #e5e7eb;
+      --c-surface:    #f9fafb;
+      --radius:       10px;
+      --shadow:       0 1px 4px rgba(0,0,0,.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', 'Outfit', system-ui, sans-serif;
+      color: var(--c-text);
+      background: #fff;
+      line-height: 1.65;
+    }
+
+    /* ── Layout ── */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 1.25rem 3rem;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      font-size: .8rem;
+      color: var(--c-muted);
+      padding: 1rem 0 0;
+    }
+    .breadcrumb a { color: var(--c-brand); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 .3rem; }
+
+    /* ── Hero ── */
+    .hero {
+      margin: 1.25rem 0 1.5rem;
+    }
+    .hero-meta {
+      font-size: .78rem;
+      color: var(--c-muted);
+      margin-bottom: .4rem;
+    }
+    .hero-meta a { color: var(--c-brand); text-decoration: none; }
+    .hero h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--c-text);
+      margin-bottom: .5rem;
+    }
+    .hero p {
+      color: var(--c-muted);
+      font-size: .97rem;
+      max-width: 620px;
+    }
+
+    /* ── Badge strip ── */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .badge {
+      background: var(--c-brand-lt);
+      color: var(--c-brand);
+      border: 1px solid #b7dfc8;
+      border-radius: 20px;
+      font-size: .73rem;
+      font-weight: 600;
+      padding: .2rem .65rem;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #fff;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.5rem;
+    }
+    .card-title {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--c-brand);
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── Form ── */
+    .field { margin-bottom: 1.1rem; }
+    .field label {
+      display: block;
+      font-size: .85rem;
+      font-weight: 600;
+      margin-bottom: .3rem;
+      color: var(--c-text);
+    }
+    .field label .unit {
+      font-weight: 400;
+      color: var(--c-muted);
+      font-size: .8rem;
+      margin-left: .3rem;
+    }
+    .field input {
+      width: 100%;
+      padding: .58rem .85rem;
+      font-size: 1rem;
+      border: 1.5px solid var(--c-border);
+      border-radius: 7px;
+      background: var(--c-surface);
+      color: var(--c-text);
+      transition: border-color .15s;
+      -moz-appearance: textfield;
+    }
+    .field input::-webkit-outer-spin-button,
+    .field input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .field input:focus { outline: none; border-color: var(--c-brand-mid); background: #fff; }
+    .field .hint {
+      font-size: .74rem;
+      color: var(--c-muted);
+      margin-top: .2rem;
+    }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 480px) { .field-row { grid-template-columns: 1fr; } }
+
+    /* ── Age warning ── */
+    .age-warning {
+      display: none;
+      align-items: center;
+      gap: .45rem;
+      background: var(--c-warn-lt);
+      border: 1px solid #fcd34d;
+      border-radius: 7px;
+      padding: .5rem .8rem;
+      font-size: .8rem;
+      color: var(--c-warn);
+      margin-top: .35rem;
+    }
+    .age-warning.visible { display: flex; }
+
+    /* ── Calculate button ── */
+    .btn-calc {
+      display: block;
+      width: 100%;
+      padding: .75rem;
+      background: var(--c-brand);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: .02em;
+      transition: background .15s, transform .1s;
+      margin-top: .5rem;
+    }
+    .btn-calc:hover { background: var(--c-brand-mid); }
+    .btn-calc:active { transform: scale(.98); }
+
+    /* ── Result panel ── */
+    .result-panel {
+      display: none;
+      margin-top: 1.25rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1.5px solid var(--c-border);
+    }
+    .result-panel.visible { display: block; }
+
+    .result-header {
+      padding: 1.1rem 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .result-header.low     { background: var(--c-brand-lt);  border-bottom: 2px solid var(--c-brand); }
+    .result-header.indet   { background: var(--c-indet-lt);  border-bottom: 2px solid var(--c-indet); }
+    .result-header.high    { background: var(--c-danger-lt); border-bottom: 2px solid var(--c-danger); }
+    .result-header.default { background: var(--c-surface);   border-bottom: 2px solid var(--c-border); }
+
+    .result-score-wrap { }
+    .result-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--c-muted);
+      margin-bottom: .1rem;
+    }
+    .result-score {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--c-text);
+    }
+    .result-badge {
+      font-size: .85rem;
+      font-weight: 700;
+      padding: .35rem .85rem;
+      border-radius: 20px;
+    }
+    .result-badge.low     { background: var(--c-brand);  color: #fff; }
+    .result-badge.indet   { background: var(--c-indet);  color: #fff; }
+    .result-badge.high    { background: var(--c-danger); color: #fff; }
+
+    .result-body { padding: 1rem 1.4rem 1.2rem; background: #fff; }
+    .result-body p { font-size: .9rem; color: var(--c-text); }
+    .result-body strong { font-weight: 700; }
+
+    .result-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .6rem;
+      margin-top: .9rem;
+    }
+    @media (max-width: 440px) { .result-details { grid-template-columns: 1fr 1fr; } }
+    .detail-box {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: 7px;
+      padding: .55rem .7rem;
+      text-align: center;
+    }
+    .detail-box .dv { font-size: .78rem; font-weight: 700; color: var(--c-text); }
+    .detail-box .dk { font-size: .7rem; color: var(--c-muted); margin-top: .05rem; }
+
+    .age-note-result {
+      display: none;
+      margin-top: .9rem;
+      background: var(--c-warn-lt);
+      border: 1px solid #fcd34d;
+      border-radius: 7px;
+      padding: .55rem .85rem;
+      font-size: .8rem;
+      color: var(--c-warn);
+    }
+    .age-note-result.visible { display: block; }
+
+    /* ── Formula box ── */
+    .formula-box {
+      background: #0f172a;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: .85rem;
+      line-height: 1.8;
+      margin: .75rem 0;
+      overflow-x: auto;
+    }
+    .formula-box .hl { color: #7dd3a8; font-weight: 700; }
+    .formula-box .comment { color: #475569; }
+
+    /* ── Interpretation table ── */
+    .interp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+      margin: .5rem 0;
+    }
+    .interp-table th {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      padding: .5rem .75rem;
+      text-align: left;
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--c-muted);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .interp-table td {
+      border: 1px solid var(--c-border);
+      padding: .55rem .75rem;
+      vertical-align: top;
+    }
+    .interp-table tr.low-row td:first-child { border-left: 4px solid var(--c-brand); }
+    .interp-table tr.indet-row td:first-child { border-left: 4px solid var(--c-indet); }
+    .interp-table tr.high-row td:first-child { border-left: 4px solid var(--c-danger); }
+    .interp-table tr:nth-child(even) td { background: var(--c-surface); }
+
+    /* ── Section headers ── */
+    h2.sec {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--c-text);
+      margin: 2rem 0 .75rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--c-brand-lt);
+    }
+    h3.sub {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--c-text);
+      margin: 1.1rem 0 .4rem;
+    }
+
+    /* ── Body text ── */
+    .prose p { font-size: .92rem; color: #374151; margin-bottom: .75rem; line-height: 1.7; }
+    .prose ul { padding-left: 1.4rem; margin-bottom: .75rem; }
+    .prose li { font-size: .9rem; color: #374151; margin-bottom: .3rem; }
+    .prose strong { color: var(--c-text); }
+
+    /* ── Info boxes ── */
+    .info-box {
+      border-radius: 8px;
+      padding: .9rem 1.1rem;
+      margin: .75rem 0;
+      font-size: .87rem;
+    }
+    .info-box.green  { background: var(--c-brand-lt);  border-left: 4px solid var(--c-brand); color: #14532d; }
+    .info-box.blue   { background: var(--c-indet-lt);  border-left: 4px solid var(--c-indet); color: #1e3a8a; }
+    .info-box.orange { background: var(--c-warn-lt);   border-left: 4px solid #d97706;        color: #78350f; }
+    .info-box.red    { background: var(--c-danger-lt); border-left: 4px solid var(--c-danger); color: #7f1d1d; }
+    .info-box p { margin: 0; }
+    .info-box strong { display: block; margin-bottom: .2rem; }
+
+    /* ── Two-col comparison ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: .75rem 0; }
+    @media (max-width: 540px) { .two-col { grid-template-columns: 1fr; } }
+
+    /* ── FAQ ── */
+    details.faq {
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      margin-bottom: .6rem;
+      overflow: hidden;
+    }
+    details.faq summary {
+      padding: .85rem 1rem;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--c-surface);
+      color: var(--c-text);
+    }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--c-brand);
+      transition: transform .2s;
+      flex-shrink: 0;
+      margin-left: .5rem;
+    }
+    details[open].faq summary::after { content: '−'; }
+    details.faq .faq-body {
+      padding: .85rem 1rem 1rem;
+      font-size: .88rem;
+      color: #374151;
+      line-height: 1.65;
+      border-top: 1px solid var(--c-border);
+    }
+    details.faq .faq-body p { margin-bottom: .4rem; }
+
+    /* ── Related cards ── */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: .75rem;
+      margin-top: .75rem;
+    }
+    .related-card {
+      display: block;
+      padding: .85rem 1rem;
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      text-decoration: none;
+      background: var(--c-surface);
+      transition: border-color .15s, background .15s;
+    }
+    .related-card:hover { border-color: var(--c-brand-mid); background: var(--c-brand-lt); }
+    .related-card .rc-name { font-size: .88rem; font-weight: 700; color: var(--c-text); }
+    .related-card .rc-desc { font-size: .76rem; color: var(--c-muted); margin-top: .15rem; }
+
+    /* ── Disclaimer ── */
+    .disclaimer {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      padding: .9rem 1.1rem;
+      font-size: .8rem;
+      color: var(--c-muted);
+      margin-top: 2rem;
+      line-height: 1.6;
+    }
+    .disclaimer strong { color: var(--c-text); }
+
+    /* ── Footer meta ── */
+    .page-footer-meta {
+      text-align: center;
+      font-size: .75rem;
+      color: var(--c-muted);
+      margin-top: 1.5rem;
+      padding-top: .75rem;
+      border-top: 1px solid var(--c-border);
+    }
+    .page-footer-meta a { color: var(--c-brand); text-decoration: none; }
+  </style>
+</head>
+<body>
+<!-- shared-nav.js injects site header here -->
+
+<div class="page-wrap">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://rxmedcalc.com/">Home</a>
+    <span>›</span>
+    <a href="https://rxmedcalc.com/medical-calculators/">Medical Calculators</a>
+    <span>›</span>
+    <a href="https://rxmedcalc.com/medical-calculators/#hepatology">Hepatology</a>
+    <span>›</span>
+    FIB-4 Index
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <p class="hero-meta">By <a href="https://rxmedcalc.com/medical-calculators/#about">Dr. Diamond, MBBS, AFIH</a> &nbsp;·&nbsp; Hepatology</p>
+    <h1>FIB-4 Index Calculator</h1>
+    <p>Non-invasive liver fibrosis staging using Age, AST, ALT &amp; Platelet count — validated for HCV, HBV, and NAFLD/MASLD. Instant F-stage interpretation with biopsy guidance.</p>
+  </div>
+
+  <div class="badges">
+    <span class="badge">HCV · HBV · NAFLD/MASLD</span>
+    <span class="badge">METAVIR F0–F4 Staging</span>
+    <span class="badge">Biopsy Guidance</span>
+    <span class="badge">AASLD / EASL Endorsed</span>
+    <span class="badge">No Login · Free Forever</span>
+  </div>
+
+  <!-- ═══════════ CALCULATOR CARD ═══════════ -->
+  <div class="card">
+    <div class="card-title">📊 FIB-4 Calculator</div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="age">Age <span class="unit">years</span></label>
+        <input type="number" id="age" min="18" max="120" step="1" placeholder="e.g. 45"
+               aria-label="Patient age in years" inputmode="numeric" />
+        <div class="age-warning" id="age-warn">
+          ⚠️ Age &lt;35 or &gt;65 — interpret with caution; score may be unreliable.
+        </div>
+      </div>
+      <div class="field">
+        <label for="plt">Platelet Count <span class="unit">×10⁹/L</span></label>
+        <input type="number" id="plt" min="1" max="1000" step="1" placeholder="e.g. 150"
+               aria-label="Platelet count in 10⁹/L" inputmode="numeric" />
+        <p class="hint">Normal: 150–400 ×10⁹/L</p>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="ast">AST <span class="unit">U/L</span></label>
+        <input type="number" id="ast" min="1" max="5000" step="0.1" placeholder="e.g. 50"
+               aria-label="AST in U/L" inputmode="decimal" />
+        <p class="hint">Aspartate aminotransferase · Normal: 10–40 U/L</p>
+      </div>
+      <div class="field">
+        <label for="alt">ALT <span class="unit">U/L</span></label>
+        <input type="number" id="alt" min="1" max="5000" step="0.1" placeholder="e.g. 40"
+               aria-label="ALT in U/L" inputmode="decimal" />
+        <p class="hint">Alanine aminotransferase · Normal: 7–56 U/L</p>
+      </div>
+    </div>
+
+    <button class="btn-calc" onclick="calcFib4()" aria-label="Calculate FIB-4 Index">
+      Calculate FIB-4 Index
+    </button>
+
+    <!-- Result -->
+    <div class="result-panel" id="result-panel" role="status" aria-live="polite">
+      <div class="result-header" id="result-header">
+        <div class="result-score-wrap">
+          <div class="result-label">FIB-4 Score</div>
+          <div class="result-score" id="result-score">—</div>
+        </div>
+        <span class="result-badge" id="result-badge">—</span>
+      </div>
+      <div class="result-body">
+        <p id="result-interp">—</p>
+        <div class="result-details">
+          <div class="detail-box">
+            <div class="dv" id="d-fstage">—</div>
+            <div class="dk">Fibrosis Stage</div>
+          </div>
+          <div class="detail-box">
+            <div class="dv" id="d-npv">—</div>
+            <div class="dk">NPV / PPV</div>
+          </div>
+          <div class="detail-box">
+            <div class="dv" id="d-biopsy">—</div>
+            <div class="dk">Biopsy Need</div>
+          </div>
+        </div>
+        <div class="age-note-result" id="age-note-result">
+          ⚠️ <strong>Age caveat:</strong> This patient's age is outside the 35–65 year validated range. The FIB-4 may over- or underestimate fibrosis. Consider age-adjusted cutoffs or complementary testing (FibroScan, ELF test).
+        </div>
+      </div>
+    </div>
+  </div><!-- /card -->
+
+  <!-- ═══════════ INTERPRETATION TABLE ═══════════ -->
+  <h2 class="sec">FIB-4 Score Interpretation</h2>
+  <div class="prose">
+    <p>The following cutoffs apply to adults with known or suspected chronic liver disease (HCV, HBV, NAFLD/MASLD). Scores in the indeterminate range (1.30–2.67) require additional investigation.</p>
+  </div>
+
+  <table class="interp-table" aria-label="FIB-4 Score Interpretation Table">
+    <thead>
+      <tr>
+        <th>FIB-4 Score</th>
+        <th>Risk Category</th>
+        <th>Fibrosis Stage</th>
+        <th>NPV / PPV</th>
+        <th>Clinical Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="low-row">
+        <td><strong>&lt; 1.30</strong></td>
+        <td>🟢 Low Risk</td>
+        <td>F0–F1 (Mild)</td>
+        <td>NPV ~90%</td>
+        <td>Biopsy can be deferred. Monitor annually with LFTs + repeat FIB-4.</td>
+      </tr>
+      <tr class="indet-row">
+        <td><strong>1.30–2.67</strong></td>
+        <td>🔵 Indeterminate</td>
+        <td>F1–F3 (Variable)</td>
+        <td>—</td>
+        <td>Additional testing needed — FibroScan, NAFLD Fibrosis Score, APRI, or liver biopsy.</td>
+      </tr>
+      <tr class="high-row">
+        <td><strong>&gt; 2.67</strong></td>
+        <td>🔴 High Risk</td>
+        <td>F3–F4 (Advanced)</td>
+        <td>PPV ~65%</td>
+        <td>Refer to hepatologist. Consider biopsy to confirm cirrhosis; HCC surveillance if cirrhosis.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box orange" style="margin-top:.8rem;">
+    <p><strong>⚠️ Age Caveat (important in Indian practice)</strong></p>
+    <p>FIB-4 is less reliable in patients aged <strong>&lt;35 years</strong> (may underestimate fibrosis) and <strong>&gt;65 years</strong> (may overestimate due to age-related thrombocytopenia). For older patients, some authorities use a modified low-risk cutoff of <strong>&lt;2.0</strong> instead of &lt;1.30.</p>
+  </div>
+
+  <!-- ═══════════ FORMULA ═══════════ -->
+  <h2 class="sec">Formula &amp; Variables</h2>
+  <div class="formula-box">
+    <span class="comment">// FIB-4 Index (Sterling et al., 2006)</span><br/>
+    <span class="hl">FIB-4</span> = ( Age [yr] × AST [U/L] ) ÷ ( Platelets [10⁹/L] × √ALT [U/L] )<br/><br/>
+    <span class="comment">// Variables:</span><br/>
+    &nbsp;&nbsp;Age      → Patient age in <span class="hl">years</span><br/>
+    &nbsp;&nbsp;AST      → Aspartate aminotransferase (<span class="hl">U/L</span>)<br/>
+    &nbsp;&nbsp;ALT      → Alanine aminotransferase (<span class="hl">U/L</span>)<br/>
+    &nbsp;&nbsp;Platelets → Platelet count (<span class="hl">×10⁹/L</span>; i.e. thousands/µL)<br/><br/>
+    <span class="comment">// Cutoffs (validated): Low &lt;1.30 · Indeterminate 1.30–2.67 · High &gt;2.67</span>
+  </div>
+  <div class="prose">
+    <p>All four variables are available from a routine complete blood count (CBC) and liver function test (LFT) panel — no additional tests are required. Enter AST and ALT in <strong>U/L</strong> (not IU/L — they are equivalent). Platelet count must be in <strong>×10⁹/L</strong> (same as 10³/µL or thousands/µL as reported in most Indian lab reports).</p>
+  </div>
+
+  <!-- ═══════════ CLINICAL CONTENT ═══════════ -->
+  <h2 class="sec">What Is the FIB-4 Index?</h2>
+  <div class="prose">
+    <p>The <strong>FIB-4 (Fibrosis-4) Index</strong> is a validated, non-invasive scoring system that estimates the degree of liver fibrosis without the need for a liver biopsy. Originally developed in 2006 by Sterling et al. for HIV/HCV co-infected patients, it has since been validated extensively for:</p>
+    <ul>
+      <li>Chronic Hepatitis C (HCV)</li>
+      <li>Chronic Hepatitis B (HBV)</li>
+      <li>NAFLD / MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease)</li>
+      <li>Alcoholic liver disease</li>
+      <li>Post-treatment response monitoring in HCV after direct-acting antivirals (DAAs)</li>
+    </ul>
+    <p>FIB-4 combines four routinely available parameters — Age, AST, ALT, and Platelet count — into a single number that correlates with hepatic fibrosis stage on liver biopsy (METAVIR scale F0–F4). It is endorsed by the <strong>AASLD</strong> (American Association for Study of Liver Diseases), <strong>EASL</strong> (European Association for the Study of the Liver), and increasingly by Indian hepatology practice guidelines.</p>
+
+    <h3 class="sub">Why FIB-4 Matters in India</h3>
+    <p>India bears a significant burden of chronic liver disease, with HBV affecting an estimated 40 million and HCV affecting 6–12 million individuals. MASLD prevalence is rising with the epidemic of obesity and type 2 diabetes. Liver biopsy — the traditional gold standard for fibrosis staging — is invasive, costly, subject to sampling error, and impractical for population-level screening. FIB-4 provides an accessible, cost-effective first-line fibrosis assessment that can be calculated from a standard CBC and LFT — tests already ordered in most outpatient and inpatient encounters.</p>
+  </div>
+
+  <h2 class="sec">When to Use FIB-4</h2>
+  <div class="two-col">
+    <div class="info-box green">
+      <strong>✅ Appropriate Use</strong>
+      <ul style="padding-left:1.2rem; margin-top:.3rem; font-size:.85rem;">
+        <li>Initial fibrosis assessment in newly diagnosed HCV, HBV</li>
+        <li>Screening for advanced fibrosis in NAFLD/MASLD before FibroScan</li>
+        <li>Post-DAA SVR monitoring in HCV</li>
+        <li>Risk stratification in primary care before hepatology referral</li>
+        <li>Avoiding unnecessary liver biopsy in low-risk patients (&lt;1.30)</li>
+      </ul>
+    </div>
+    <div class="info-box red">
+      <strong>⛔ Limitations / Not Ideal</strong>
+      <ul style="padding-left:1.2rem; margin-top:.3rem; font-size:.85rem;">
+        <li>Age &lt;35 or &gt;65 years (unreliable; use with caution)</li>
+        <li>Acute hepatitis (AST/ALT spuriously high)</li>
+        <li>Immune thrombocytopenia or other causes of low platelets unrelated to portal hypertension</li>
+        <li>Haemolysis (falsely elevated AST)</li>
+        <li>Active myositis / strenuous exercise (elevated AST)</li>
+        <li>Not validated for autoimmune hepatitis, PBC, PSC</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="sec">FIB-4 in NAFLD / MASLD</h2>
+  <div class="prose">
+    <p>MASLD (formerly NAFLD) has emerged as the most common chronic liver disease globally, affecting ~25–38% of adults in India. Identifying patients with significant fibrosis (F≥2) is critical because advanced fibrosis — not steatosis or NASH activity — is the primary driver of liver-related mortality in MASLD.</p>
+    <p>The <strong>AASLD 2023</strong> and <strong>EASL 2024</strong> MASLD guidelines recommend using FIB-4 as the <em>initial</em> non-invasive test in all patients with suspected MASLD:</p>
+    <ul>
+      <li><strong>FIB-4 &lt;1.30:</strong> Reassure patient; manage metabolic risk factors; repeat FIB-4 in 1–2 years.</li>
+      <li><strong>FIB-4 1.30–2.67:</strong> Indeterminate — proceed to vibration-controlled transient elastography (FibroScan) or ELF (Enhanced Liver Fibrosis) test.</li>
+      <li><strong>FIB-4 &gt;2.67:</strong> High likelihood of advanced fibrosis — refer to hepatologist for further workup and HCC surveillance consideration.</li>
+    </ul>
+    <p>FIB-4 performs slightly less well in MASLD than in viral hepatitis (AUROCs of 0.76–0.82 for F≥3 detection), partly because metabolic inflammation causes AST/ALT elevation that may inflate the score independently of fibrosis. However, it remains the most practical initial gating tool.</p>
+  </div>
+
+  <h2 class="sec">FIB-4 vs Other Non-Invasive Tests</h2>
+  <table class="interp-table" aria-label="Comparison of non-invasive liver fibrosis tests">
+    <thead>
+      <tr>
+        <th>Test</th>
+        <th>Variables</th>
+        <th>Best Used For</th>
+        <th>Availability in India</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>FIB-4</strong></td>
+        <td>Age, AST, ALT, Platelets</td>
+        <td>HCV, HBV, NAFLD — initial screen</td>
+        <td>✅ Free (calculated from routine labs)</td>
+      </tr>
+      <tr>
+        <td><strong>APRI</strong></td>
+        <td>AST, Platelets</td>
+        <td>HCV — WHO-endorsed in low-resource settings</td>
+        <td>✅ Free (2 routine parameters)</td>
+      </tr>
+      <tr>
+        <td><strong>NAFLD Fibrosis Score</strong></td>
+        <td>Age, BMI, IFG, AST, ALT, Platelets, Albumin</td>
+        <td>NAFLD/MASLD — more variables, higher accuracy</td>
+        <td>✅ Free (calculated)</td>
+      </tr>
+      <tr>
+        <td><strong>FibroScan (LSM)</strong></td>
+        <td>Liver stiffness (kPa)</td>
+        <td>All chronic liver diseases — gold standard non-invasive</td>
+        <td>⚠️ Tertiary centres; ₹3,000–8,000</td>
+      </tr>
+      <tr>
+        <td><strong>ELF Test</strong></td>
+        <td>HA, PIIINP, TIMP-1</td>
+        <td>MASLD — regulatory approved</td>
+        <td>❌ Rarely available in India</td>
+      </tr>
+      <tr>
+        <td><strong>Liver Biopsy</strong></td>
+        <td>Histology</td>
+        <td>Gold standard — confirms stage</td>
+        <td>⚠️ Available; invasive; ₹5,000–20,000+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">Clinical Workflow: How to Use This Score</h2>
+  <div class="info-box blue" style="margin-bottom:1rem;">
+    <p><strong>📋 Suggested Approach for Primary Care (India)</strong></p>
+  </div>
+  <div class="prose">
+    <ol style="padding-left:1.4rem; margin-bottom:.75rem;">
+      <li style="margin-bottom:.4rem; font-size:.9rem; color:#374151;"><strong>Order baseline labs</strong> — CBC (for platelet count) + LFT (AST, ALT) if not already available. These are available in any NABL-accredited lab at ₹200–500.</li>
+      <li style="margin-bottom:.4rem; font-size:.9rem; color:#374151;"><strong>Enter values into this calculator</strong> and note the FIB-4 score.</li>
+      <li style="margin-bottom:.4rem; font-size:.9rem; color:#374151;"><strong>If FIB-4 &lt;1.30:</strong> Reassure patient; address underlying cause (antiviral therapy for HCV/HBV, metabolic management for MASLD); repeat FIB-4 in 12 months.</li>
+      <li style="margin-bottom:.4rem; font-size:.9rem; color:#374151;"><strong>If FIB-4 1.30–2.67:</strong> Refer for FibroScan (if available) or hepatology consultation. Consider NAFLD Fibrosis Score as complementary tool.</li>
+      <li style="margin-bottom:.4rem; font-size:.9rem; color:#374151;"><strong>If FIB-4 &gt;2.67:</strong> High priority hepatology referral. Discuss liver biopsy vs. elastography. Begin HCC surveillance (6-monthly USG abdomen ± AFP) if cirrhosis is confirmed or strongly suspected.</li>
+    </ol>
+    <p><strong>For HCV patients post-SVR:</strong> FIB-4 improves significantly after sustained virological response (SVR) with DAAs but may remain elevated if cirrhosis was already established. A FIB-4 &gt;2.0 at 12 weeks post-SVR warrants continued HCC surveillance regardless of symptom resolution.</p>
+  </div>
+
+  <!-- ═══════════ FAQ ═══════════ -->
+  <h2 class="sec">Frequently Asked Questions</h2>
+
+  <details class="faq">
+    <summary>What is the FIB-4 Index?</summary>
+    <div class="faq-body">
+      <p>The FIB-4 (Fibrosis-4) Index is a non-invasive scoring system that estimates the degree of liver fibrosis using four readily available blood test parameters: Age, AST (aspartate aminotransferase), ALT (alanine aminotransferase), and Platelet count. It was originally validated for HIV/HCV co-infected patients and is now widely used for HCV, HBV, and NAFLD/MASLD.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What is the FIB-4 formula?</summary>
+    <div class="faq-body">
+      <p><strong>FIB-4 = (Age [years] × AST [U/L]) ÷ (Platelet count [10⁹/L] × √ALT [U/L])</strong></p>
+      <p>All four parameters come from routine blood tests — no liver biopsy needed. Note that platelet count must be entered in ×10⁹/L (equivalent to thousands per µL or 10³/µL, as typically reported in Indian labs).</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What do the FIB-4 score results mean?</summary>
+    <div class="faq-body">
+      <p><strong>FIB-4 &lt; 1.30 (Low Risk):</strong> Advanced fibrosis is unlikely — corresponds to METAVIR F0–F1. The negative predictive value (NPV) is approximately 90% for ruling out F3–F4 fibrosis. Biopsy can usually be deferred.</p>
+      <p><strong>FIB-4 1.30–2.67 (Indeterminate):</strong> Results are inconclusive in this range. Additional testing such as FibroScan (transient elastography), the NAFLD Fibrosis Score, ELF test, or liver biopsy is recommended.</p>
+      <p><strong>FIB-4 &gt; 2.67 (High Risk):</strong> Advanced fibrosis (F3–F4) or cirrhosis is likely. The positive predictive value (PPV) is approximately 65%. Hepatology referral and further evaluation are recommended.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What is a normal FIB-4 score?</summary>
+    <div class="faq-body">
+      <p>A FIB-4 score below <strong>1.30</strong> is considered within the low-risk range, suggesting minimal or no significant liver fibrosis (METAVIR F0–F1). However, "normal" is context-dependent — in patients aged &gt;65 years, some guidelines suggest using &lt;2.0 as the low-risk threshold due to the tendency for the score to be elevated with advancing age even without significant fibrosis.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Can FIB-4 replace liver biopsy?</summary>
+    <div class="faq-body">
+      <p>FIB-4 cannot fully replace liver biopsy but can significantly reduce the need for it. Patients with clearly low (&lt;1.30) or clearly high (&gt;2.67) scores can often be managed without biopsy. Those in the indeterminate zone (1.30–2.67) may still need biopsy or complementary non-invasive tests like FibroScan. Always interpret in the context of clinical history, imaging, and other lab findings.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Is FIB-4 valid for NAFLD and MASLD?</summary>
+    <div class="faq-body">
+      <p>Yes. FIB-4 is increasingly used for NAFLD (now classified as MASLD — Metabolic dysfunction-Associated Steatotic Liver Disease). The same cutoffs (1.30 and 2.67) apply. The EASL 2024 and AASLD 2023 MASLD guidelines endorse FIB-4 as an initial non-invasive test for fibrosis assessment before considering FibroScan or liver biopsy.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Why is FIB-4 less accurate in patients under 35 or over 65?</summary>
+    <div class="faq-body">
+      <p>Age is a direct component of the FIB-4 numerator — it multiplies the score. In <strong>younger patients (&lt;35 years)</strong>, even with significant fibrosis, the low age value may produce a falsely low FIB-4. In <strong>older patients (&gt;65 years)</strong>, platelet counts tend to decline with age (age-related thrombocytopenia) independently of portal hypertension or fibrosis, which can falsely elevate the FIB-4 score. For patients &gt;65 years, some authorities use a modified low-risk cutoff of &lt;2.0 instead of &lt;1.30.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What is the difference between FIB-4 and APRI?</summary>
+    <div class="faq-body">
+      <p>Both are non-invasive fibrosis scores derived from routine labs. APRI (AST-to-Platelet Ratio Index) uses only AST and Platelet count (APRI = (AST/ULN of AST) × 100 / Platelets), while FIB-4 additionally incorporates Age and ALT. FIB-4 generally demonstrates better diagnostic accuracy, particularly for distinguishing advanced fibrosis (F3–F4) from mild fibrosis, and is more widely recommended in current AASLD and EASL guidelines. APRI remains relevant in resource-limited settings due to its simplicity (only 2 variables).</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What platelet unit should I use — lakh/µL or ×10⁹/L?</summary>
+    <div class="faq-body">
+      <p>This calculator requires platelet count in <strong>×10⁹/L</strong> (also written as 10³/µL or thousands/µL). Indian CBC reports commonly show platelets in <strong>lakh/µL</strong> or <strong>×10⁵/µL</strong> — for example, "2.5 lakh/µL." To convert: multiply by 100 to get ×10⁹/L (so 2.5 lakh = 250 ×10⁹/L). Or simply use the absolute count in thousands: 2,50,000/µL = 250 ×10⁹/L.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>How often should FIB-4 be repeated?</summary>
+    <div class="faq-body">
+      <p>In patients with stable low scores (&lt;1.30) without active liver disease, annual reassessment is reasonable. In patients on treatment (e.g., HCV DAAs, MASLD lifestyle modification), repeat FIB-4 at 12–24 weeks post-intervention and at 12 months can monitor treatment response. In those with high or indeterminate scores under active hepatology follow-up, the timing is guided by the specialist. Note that FIB-4 can improve significantly after successful HCV treatment (SVR) but may remain elevated if cirrhosis is already established.</p>
+    </div>
+  </details>
+
+  <!-- ═══════════ RELATED CALCULATORS ═══════════ -->
+  <h2 class="sec">Related Calculators</h2>
+  <div class="related-grid">
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/child-pugh/">
+      <div class="rc-name">🏥 Child-Pugh Score</div>
+      <div class="rc-desc">Cirrhosis severity — Class A/B/C, surgical risk, survival</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/egfr-calculator/">
+      <div class="rc-name">🫘 eGFR Calculator</div>
+      <div class="rc-desc">CKD-EPI 2021 · Cockcroft-Gault · MDRD + CKD staging</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/anion-gap/">
+      <div class="rc-name">🧪 Anion Gap</div>
+      <div class="rc-desc">Acid-base panel with delta-delta correction</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/corrected-calcium/">
+      <div class="rc-name">🩸 Corrected Calcium</div>
+      <div class="rc-desc">Albumin-adjusted serum calcium</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/bmi/">
+      <div class="rc-name">⚖️ BMI Calculator</div>
+      <div class="rc-desc">India-specific cutoffs · Metabolic risk</div>
+    </a>
+    <a class="related-card" href="https://rxmedcalc.com/medical-calculators/">
+      <div class="rc-name">📋 All Calculators →</div>
+      <div class="rc-desc">62+ clinical tools — free, no login</div>
+    </a>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    <strong>⚠️ Clinical Disclaimer:</strong> The FIB-4 Index calculator is intended as a clinical decision-support aid for qualified healthcare professionals and medical students. It does not replace clinical judgment, full history and examination, or specialist evaluation. FIB-4 is a screening tool — it should not be used as the sole basis for patient management decisions. Scores in the indeterminate range require further investigation. Always interpret results within the full clinical context. Not intended for patient self-diagnosis. Validated for adults (18–75 years); exercise caution outside this range.
+  </div>
+
+  <!-- Page footer meta -->
+  <div class="page-footer-meta">
+    Created by <strong>Dr. Diamond</strong>, MBBS, AFIH &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/medical-calculators/">Medical Calculators</a> &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/medical-calculators/#about">About</a> &nbsp;·&nbsp;
+    References: Sterling RK et al. <em>Hepatology</em> 2006; AASLD MASLD Guidelines 2023; EASL 2024
+    <br/>
+    Keywords: FIB-4 calculator · fibrosis 4 index · liver fibrosis score · HCV fibrosis · HBV staging · NAFLD MASLD fibrosis · non-invasive liver test India
+  </div>
+
+</div><!-- /page-wrap -->
+
+<!-- shared-nav.js injects site footer here -->
+
+<script>
+  /* ══════════════════════════════════════════
+     FIB-4 Index Calculator Logic
+     Formula: (Age × AST) / (Platelets × √ALT)
+  ══════════════════════════════════════════ */
+
+  // Age warning on input
+  document.getElementById('age').addEventListener('input', function () {
+    const a = parseFloat(this.value);
+    const w = document.getElementById('age-warn');
+    if (!isNaN(a) && (a < 35 || a > 65)) {
+      w.classList.add('visible');
+    } else {
+      w.classList.remove('visible');
+    }
+  });
+
+  function calcFib4() {
+    const age = parseFloat(document.getElementById('age').value);
+    const ast = parseFloat(document.getElementById('ast').value);
+    const alt = parseFloat(document.getElementById('alt').value);
+    const plt = parseFloat(document.getElementById('plt').value);
+
+    // Validate
+    if ([age, ast, alt, plt].some(isNaN) || age <= 0 || ast <= 0 || alt <= 0 || plt <= 0) {
+      alert('Please enter valid positive values for all four fields.');
+      return;
+    }
+
+    // Calculate
+    const score = (age * ast) / (plt * Math.sqrt(alt));
+    const rounded = score.toFixed(2);
+
+    // Determine category
+    let cat, badgeText, interpText, fstage, npvPpv, biopsyNeed;
+
+    if (score < 1.30) {
+      cat = 'low';
+      badgeText = '🟢 Low Risk';
+      fstage = 'F0–F1';
+      npvPpv = 'NPV ~90%';
+      biopsyNeed = 'Defer';
+      interpText = `<strong>Low risk of advanced fibrosis</strong> (F0–F1). A FIB-4 below 1.30 has a negative predictive value of approximately 90% for ruling out significant fibrosis. Liver biopsy can typically be deferred. Continue managing the underlying cause (antiviral therapy for HCV/HBV; metabolic risk reduction for MASLD) and repeat FIB-4 in 12 months.`;
+    } else if (score <= 2.67) {
+      cat = 'indet';
+      badgeText = '🔵 Indeterminate';
+      fstage = 'F1–F3';
+      npvPpv = 'Indeterminate';
+      biopsyNeed = 'Likely';
+      interpText = `<strong>Indeterminate zone (1.30–2.67)</strong> — fibrosis stage cannot be reliably estimated from FIB-4 alone. Proceed to complementary non-invasive testing: vibration-controlled transient elastography (FibroScan / LSM), NAFLD Fibrosis Score, ELF test, or APRI. Liver biopsy may be required if non-invasive tests remain inconclusive. Consider hepatology referral.`;
+    } else {
+      cat = 'high';
+      badgeText = '🔴 High Risk';
+      fstage = 'F3–F4';
+      npvPpv = 'PPV ~65%';
+      biopsyNeed = 'Recommended';
+      interpText = `<strong>High risk of advanced fibrosis or cirrhosis</strong> (F3–F4). A FIB-4 above 2.67 has a positive predictive value of approximately 65% for advanced fibrosis. Refer to a hepatologist. Discuss liver biopsy vs. elastography to confirm staging. If cirrhosis is confirmed or strongly suspected, initiate <strong>HCC surveillance</strong> (6-monthly abdominal ultrasound ± AFP).`;
+    }
+
+    // Render result
+    const panel = document.getElementById('result-panel');
+    const header = document.getElementById('result-header');
+    const scoreEl = document.getElementById('result-score');
+    const badge = document.getElementById('result-badge');
+    const interp = document.getElementById('result-interp');
+
+    // Remove previous classes
+    header.className = 'result-header ' + cat;
+    badge.className = 'result-badge ' + cat;
+
+    scoreEl.textContent = rounded;
+    badge.textContent = badgeText;
+    interp.innerHTML = interpText;
+    document.getElementById('d-fstage').textContent = fstage;
+    document.getElementById('d-npv').textContent = npvPpv;
+    document.getElementById('d-biopsy').textContent = biopsyNeed;
+
+    // Age caveat
+    const ageNote = document.getElementById('age-note-result');
+    if (age < 35 || age > 65) {
+      ageNote.classList.add('visible');
+    } else {
+      ageNote.classList.remove('visible');
+    }
+
+    panel.classList.add('visible');
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // Umami event
+    if (typeof umami !== 'undefined') {
+      umami.track('fib4-calculated', { score: rounded, category: cat, age: age });
+    }
+  }
+
+  // Allow Enter key to calculate
+  document.querySelectorAll('.field input').forEach(function (inp) {
+    inp.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') calcFib4();
+    });
+  });
+</script>
+
+</body>
+</html>
