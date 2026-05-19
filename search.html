@@ -4,14 +4,13 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Search Medical Calculators | RxMedCalc</title>
-<meta name="description" content="Search all 62 free medical calculators on RxMedCalc. Emergency, cardiology, nephrology, neurology, paediatrics, ICU, endocrinology and more."/>
+<meta name="description" content="Search all 80+ free medical calculators, drug dose references, vitamin guides and tools on RxMedCalc. Emergency, cardiology, nephrology, neurology, paediatrics, ICU, endocrinology and more."/>
 <link rel="canonical" href="/search"/>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
 <script defer src="/assets/umami-events.js"></script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
 <style>
@@ -25,7 +24,7 @@ body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2
 .search-box{position:relative;max-width:560px;margin:0 auto 18px}
 .search-input{width:100%;padding:14px 46px 14px 18px;background:#fff;border:none;border-radius:14px;font-family:inherit;font-size:16px;color:#0d1b2a;outline:none;box-shadow:0 4px 24px rgba(0,0,0,0.2)}
 .search-icon{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:1.1rem;pointer-events:none}
-.filter-chips{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:720px;margin:0 auto}
+.filter-chips{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:760px;margin:0 auto}
 .filter-chip{padding:5px 13px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;color:rgba(255,255,255,0.75);font-family:inherit;font-size:0.72rem;font-weight:600;cursor:pointer;transition:all 0.2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .filter-chip.active,.filter-chip:hover{background:#fff;color:#0d1b2a;border-color:#fff}
 .main{max-width:960px;margin:0 auto;padding:20px 16px 80px}
@@ -49,9 +48,9 @@ body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2
 <div class="search-header">
   <a href="/medical-calculators/" class="sh-back">← All Calculators</a>
   <div class="sh-title">Find a Calculator</div>
-  <div class="sh-sub">Search across 62 tools by name, condition, drug, or specialty</div>
+  <div class="sh-sub">Search across 80+ tools — calculators, drug doses, vitamins &amp; more</div>
   <div class="search-box">
-    <input type="text" class="search-input" id="search-input" placeholder="e.g. creatinine, stroke, QTc, TSH, RASS…" autocomplete="off" autofocus aria-label="Search calculators"/>
+    <input type="text" class="search-input" id="search-input" placeholder="e.g. creatinine, stroke, QTc, TSH, amoxicillin…" autocomplete="off" autofocus aria-label="Search calculators"/>
     <span class="search-icon">🔍</span>
   </div>
   <div class="filter-chips">
@@ -63,18 +62,21 @@ body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2
     <button class="filter-chip" onclick="setFilter('Neuro')">🧠 Neuro</button>
     <button class="filter-chip" onclick="setFilter('Paeds')">👶 Paeds</button>
     <button class="filter-chip" onclick="setFilter('Endocrine')">🦋 Endocrine</button>
-    <button class="filter-chip" onclick="setFilter('General')">🏥 General</button>
     <button class="filter-chip" onclick="setFilter('Obstetrics')">🤰 Obstetrics</button>
+    <button class="filter-chip" onclick="setFilter('Drug Doses')">💊 Drug Doses</button>
+    <button class="filter-chip" onclick="setFilter('Vitamins')">🧪 Vitamins</button>
+    <button class="filter-chip" onclick="setFilter('General')">🏥 General</button>
   </div>
 </div>
 <main class="main">
-  <div class="stats-bar"><div class="stats-count"><span id="count-num">62</span> calculators</div></div>
+  <div class="stats-bar"><div class="stats-count"><span id="count-num">0</span> tools</div></div>
   <div id="no-results" class="no-results" style="display:none"><div style="font-size:3rem;margin-bottom:12px">🔍</div><div style="font-size:0.9rem">No results for "<span id="no-q"></span>"</div></div>
   <div id="results-container" class="tools-grid"></div>
 </main>
 
 <script>
 const T=[
+  /* ── EMERGENCY ── */
   {i:'🫁',t:'CURB-65',d:'Pneumonia severity. 30-day mortality and admission decisions.',g:['pneumonia','CAP','antibiotic','BTS','admission'],c:'Emergency',u:'/medical-calculators/curb65',col:'#ef4444'},
   {i:'📉',t:'NEWS2 Score',d:'National Early Warning Score 2. SpO₂ Scale 1 & 2, ACVPU.',g:['deterioration','sepsis','ICU','SpO2','oxygen','EWS'],c:'Emergency',u:'/medical-calculators/news2',col:'#ef4444'},
   {i:'🧠',t:'GCS Calculator',d:'Glasgow Coma Scale. Adults and paediatric. TBI severity.',g:['consciousness','trauma','TBI','coma','neurological'],c:'Emergency',u:'/medical-calculators/gcs-calculator',col:'#ef4444'},
@@ -91,11 +93,17 @@ const T=[
   {i:'⚗️',t:'Serum Osmolality',d:'Calculated osmolality and osmol gap. Toxic alcohol screen.',g:['osmolality','osmol gap','alcohol','methanol','ethylene glycol'],c:'Emergency',u:'/medical-calculators/serum-osmolality',col:'#ef4444'},
   {i:'⚗️',t:'Albumin-Corrected AG',d:'Corrected anion gap for hypoalbuminaemia. Delta-delta ratio.',g:['anion gap','albumin','hypoalbuminaemia','delta delta','acidosis'],c:'Emergency',u:'/medical-calculators/albumin-corrected-ag',col:'#ef4444',n:1},
   {i:'⚗️',t:'Sodium Correction',d:'Corrected sodium for hyperglycaemia — Katz + Hillier. DKA/HHS.',g:['sodium','hyperglycaemia','DKA','HHS','Na correction'],c:'Emergency',u:'/medical-calculators/sodium-correction',col:'#ef4444',n:1},
+  {i:'🫁',t:'PERC Rule',d:'Pulmonary embolism rule-out criteria. Low pre-test probability.',g:['PERC','PE','pulmonary embolism','rule out','DVT','D-dimer'],c:'Emergency',u:'/medical-calculators/perc-rule',col:'#ef4444',n:1},
+  {i:'🧠',t:'ABCD² Score',d:'TIA risk stratification. 2-day stroke risk after TIA.',g:['ABCD2','TIA','stroke','transient ischaemic','risk','neurology'],c:'Emergency',u:'/medical-calculators/abcd2-score',col:'#ef4444',n:1},
+
+  /* ── ICU ── */
   {i:'🏥',t:'SOFA Score',d:'Sequential Organ Failure Assessment. Sepsis-3 organ failure.',g:['SOFA','sepsis','organ failure','ICU','mortality'],c:'ICU',u:'/medical-calculators/sofa-score',col:'#dc2626',n:1},
   {i:'⚡',t:'qSOFA Score',d:'Quick SOFA — bedside sepsis screening. Sepsis-3.',g:['qSOFA','sepsis','screening','bedside','ICU'],c:'ICU',u:'/medical-calculators/qsofa-score',col:'#dc2626',n:1},
   {i:'🔴',t:'SIRS Criteria',d:'SIRS criteria — Sepsis-2 vs Sepsis-3 comparison.',g:['SIRS','sepsis','infection','ICU','inflammation'],c:'ICU',u:'/medical-calculators/sirs-criteria',col:'#dc2626',n:1},
   {i:'🏥',t:'APACHE II',d:'ICU mortality prediction from 12 physiology variables.',g:['APACHE','ICU','mortality','prognosis','critical care'],c:'ICU',u:'/medical-calculators/apache2-score',col:'#dc2626',n:1},
   {i:'💤',t:'RASS Scale',d:'Richmond Agitation-Sedation Scale. ICU sedation targets.',g:['RASS','sedation','agitation','ICU','ventilator','propofol'],c:'ICU',u:'/medical-calculators/rass-score',col:'#dc2626',n:1},
+
+  /* ── CARDIAC ── */
   {i:'❤️',t:'CHA₂DS₂-VASc',d:'AF stroke risk. Annual stroke % and anticoagulation guidance.',g:['AF','stroke','anticoagulation','warfarin','DOAC','atrial fibrillation'],c:'Cardiac',u:'/medical-calculators/cha2ds2-vasc',col:'#e11d48'},
   {i:'🩸',t:'HAS-BLED',d:'Bleeding risk in AF anticoagulation. Modifiable factors. ESC 2020.',g:['HAS-BLED','bleeding','anticoagulation','AF','warfarin','DOAC'],c:'Cardiac',u:'/medical-calculators/has-bled',col:'#e11d48',n:1},
   {i:'📈',t:'QTc Calculator',d:'Corrected QT — Bazett, Fridericia, Framingham. TdP risk.',g:['QTc','QT','arrhythmia','prolonged QT','torsades','Bazett'],c:'Cardiac',u:'/medical-calculators/qtc-calculator',col:'#e11d48'},
@@ -103,45 +111,134 @@ const T=[
   {i:'❤️',t:'Framingham Risk',d:'Framingham 10-year CHD risk. Sex-specific equations.',g:['Framingham','CHD','coronary','risk','cholesterol','statin'],c:'Cardiac',u:'/medical-calculators/framingham-risk',col:'#e11d48',n:1},
   {i:'🏥',t:'GRACE Score',d:'ACS in-hospital and 6-month mortality. ESC 2020.',g:['GRACE','ACS','MI','NSTEMI','mortality','cardiac','troponin'],c:'Cardiac',u:'/medical-calculators/grace-score',col:'#e11d48',n:1},
   {i:'⚕️',t:'RCRI Calculator',d:'Revised Cardiac Risk Index. Pre-operative cardiac risk.',g:['RCRI','cardiac risk','surgery','perioperative','MACE'],c:'Cardiac',u:'/medical-calculators/rcri-calculator',col:'#e11d48',n:1},
+
+  /* ── NEURO ── */
   {i:'🧠',t:'NIHSS Calculator',d:'NIH Stroke Scale — 11 domains. tPA and thrombectomy guidance.',g:['NIHSS','stroke','tPA','thrombolysis','severity','ischaemic'],c:'Neuro',u:'/medical-calculators/nihss-calculator',col:'#3b82f6',n:1},
   {i:'🧠',t:'Hunt-Hess Scale',d:'SAH severity grading. 30-day mortality and surgery timing.',g:['Hunt-Hess','SAH','subarachnoid','haemorrhage','neurosurgery','aneurysm'],c:'Neuro',u:'/medical-calculators/hunt-hess',col:'#3b82f6',n:1},
-  {i:'🫁',t:'PSI / PORT Score',d:'Pneumonia severity index. Risk classes I–V. Antibiotic guide.',g:['PSI','PORT','pneumonia','CAP','severity','admission'],c:'Emergency',u:'/medical-calculators/psi-calculator',col:'#0891b2',n:1},
-  {i:'🫁',t:'Spirometry (Jindal)',d:'Spirometry interpretation — Indian Jindal reference equations.',g:['spirometry','FEV1','FVC','COPD','asthma','pulmonary function'],c:'General',u:'/medical-calculators/spirometry',col:'#0891b2'},
+
+  /* ── RENAL ── */
   {i:'🫘',t:'eGFR Calculator',d:'CKD-EPI 2021, MDRD, Cockcroft-Gault. CKD staging.',g:['eGFR','kidney','CKD','creatinine','renal function'],c:'Renal',u:'/medical-calculators/egfr-calculator',col:'#6366f1'},
   {i:'🫘',t:'Creatinine Clearance',d:'Cockcroft-Gault CrCl with drug dose adjustment table.',g:['creatinine clearance','CrCl','renal dosing','Cockcroft-Gault'],c:'Renal',u:'/medical-calculators/creatinine-clearance',col:'#6366f1'},
   {i:'🫘',t:'FENa Calculator',d:'Fractional excretion of sodium. Pre-renal vs intrinsic AKI.',g:['FENa','AKI','acute kidney injury','pre-renal','sodium'],c:'Renal',u:'/medical-calculators/fena-calculator',col:'#6366f1'},
   {i:'🫘',t:'UPCR Calculator',d:'Urine protein-creatinine ratio. KDIGO proteinuria classification.',g:['UPCR','proteinuria','protein creatinine','CKD','nephrotic'],c:'Renal',u:'/medical-calculators/upcr-calculator',col:'#6366f1',n:1},
   {i:'🫘',t:'Kt/V Dialysis',d:'Dialysis adequacy — Daugirdas formula. URR. KDOQI targets.',g:['KtV','dialysis','haemodialysis','URR','adequacy','BUN'],c:'Renal',u:'/medical-calculators/ktv-dialysis',col:'#6366f1',n:1},
   {i:'🔬',t:'Corrected Calcium',d:'Albumin-adjusted serum calcium. Hypercalcaemia workup.',g:['calcium','corrected calcium','albumin','hypercalcaemia','electrolytes'],c:'Renal',u:'/medical-calculators/corrected-calcium',col:'#6366f1'},
-  {i:'🫁',t:'Child-Pugh Score',d:'Hepatic reserve in cirrhosis. Class A/B/C.',g:['Child-Pugh','cirrhosis','liver','hepatic reserve','ascites'],c:'General',u:'/medical-calculators/child-pugh',col:'#f59e0b'},
-  {i:'🫁',t:'MELD Score',d:'MELD, MELD-Na, MELD 3.0. Liver transplant priority.',g:['MELD','liver','transplant','cirrhosis','INR','bilirubin'],c:'General',u:'/medical-calculators/meld-score',col:'#f59e0b',n:1},
-  {i:'🔥',t:'BISAP Score',d:'Pancreatitis severity — mortality and ICU criteria. Atlanta 2012.',g:['BISAP','pancreatitis','severity','Atlanta','ICU','mortality'],c:'General',u:'/medical-calculators/bisap-score',col:'#f97316',n:1},
+  {i:'🩸',t:'Iron Deficit Calculator',d:'Total iron deficit by Ganzoni formula. IV iron dose calculation.',g:['iron','iron deficit','anaemia','Ganzoni','IV iron','ferritin'],c:'Renal',u:'/medical-calculators/iron-deficit',col:'#6366f1',n:1},
+
+  /* ── ENDOCRINE ── */
   {i:'🩺',t:'HbA1c Converter',d:'% to mmol/mol (IFCC). Estimated average glucose.',g:['HbA1c','diabetes','glucose','IFCC','glycated haemoglobin'],c:'Endocrine',u:'/medical-calculators/hba1c-converter',col:'#10b981'},
   {i:'🦋',t:'TSH Interpreter',d:'Full TFT pattern — hypothyroidism, hyperthyroidism, subclinical disease.',g:['TSH','thyroid','hypothyroidism','hyperthyroidism','T4','T3','TFT'],c:'Endocrine',u:'/medical-calculators/tsh-interpreter',col:'#10b981',n:1},
-  {i:'⚖️',t:'BMI Calculator',d:'BMI with WHO and Indian (ICMR) obesity thresholds.',g:['BMI','obesity','weight','overweight','Indian'],c:'General',u:'/medical-calculators/bmi',col:'#8b5cf6'},
-  {i:'🔬',t:'Lab Unit Converter',d:'mg/dL ↔ mmol/L for 20+ analytes. Normal ranges included.',g:['lab','unit converter','mg/dL','mmol/L','glucose','cholesterol','creatinine'],c:'General',u:'/medical-calculators/lab-unit-converter',col:'#8b5cf6',n:1},
-  {i:'📊',t:'Mentzer Index',d:'RBC indices — iron deficiency vs thalassaemia differentiation.',g:['Mentzer','iron deficiency','thalassaemia','MCV','anaemia','RBC'],c:'General',u:'/medical-calculators/mentzer-index-calculator',col:'#8b5cf6'},
-  {i:'💊',t:'Drug Doses (Adult)',d:'Reference adult doses for common medicines — Indian formulary.',g:['drug dose','medicine','antibiotic','formulary','adult'],c:'General',u:'/medical-calculators/doses',col:'#8b5cf6'},
-  {i:'💉',t:'ARV Dose Calculator',d:'Anti-rabies vaccine — Essen IM and WHO 2018 ID. RIG dosing.',g:['rabies','ARV','anti-rabies','vaccine','wound','PEP'],c:'General',u:'/medical-calculators/arv-dose-calculator',col:'#8b5cf6'},
-  {i:'🧠',t:'PHQ-9 / GAD-7',d:'Depression and anxiety screening. Combined validated tools.',g:['PHQ-9','GAD-7','depression','anxiety','mental health','psychiatry'],c:'General',u:'/medical-calculators/phq9-gad7',col:'#8b5cf6'},
+  {i:'🦋',t:'Hypothyroidism Score',d:'Billewicz scoring system for clinical diagnosis of hypothyroidism.',g:['hypothyroidism','Billewicz','thyroid','clinical scoring','TSH','myxoedema'],c:'Endocrine',u:'/medical-calculators/hypothyroidism',col:'#10b981',n:1},
+
+  /* ── OBSTETRICS ── */
+  {i:'🤰',t:'Obstetric Calculator',d:'Gestational age, EDD, fundal height, Bishop score.',g:['obstetric','gestational age','EDD','fundal height','pregnancy'],c:'Obstetrics',u:'/medical-calculators/obs-calc',col:'#ec4899'},
+  {i:'📅',t:'Due Date Calculator',d:'EDD from LMP, IVF, or ultrasound. Indian prenatal scan schedule.',g:['due date','EDD','LMP','IVF','pregnancy','ultrasound'],c:'Obstetrics',u:'/medical-calculators/due-date',col:'#ec4899'},
+  {i:'🌸',t:'Conception Date',d:'Estimated conception date from LMP or EDD. Ovulation timing.',g:['conception','conception date','LMP','EDD','ovulation','pregnancy'],c:'Obstetrics',u:'/medical-calculators/conception-date-calculator',col:'#ec4899',n:1},
+  {i:'📆',t:'Ovulation Calendar',d:'Fertile window prediction from cycle length. LH surge timing.',g:['ovulation','fertile window','cycle','LH surge','fertility','menstrual'],c:'Obstetrics',u:'/medical-calculators/ovulation-calendar',col:'#ec4899',n:1},
+  {i:'🔬',t:'Beta hCG Doubling Time',d:'Serial hCG doubling time. Ectopic vs intrauterine pregnancy.',g:['hCG','beta hCG','doubling','ectopic','pregnancy','miscarriage'],c:'Obstetrics',u:'/medical-calculators/beta-hcg',col:'#ec4899',n:1},
+
+  /* ── PAEDS ── */
   {i:'👶',t:'Neonatal Jaundice',d:'Bilirubin threshold by hour of life. Phototherapy and exchange.',g:['jaundice','bilirubin','neonatal','phototherapy','newborn'],c:'Paeds',u:'/medical-calculators/neonatal-jaundice',col:'#f59e0b'},
   {i:'🌬️',t:'Paediatric Asthma',d:'Asthma severity scoring and emergency management. PRAM score.',g:['asthma','paediatric','severity','salbutamol','PRAM'],c:'Paeds',u:'/medical-calculators/pediatric-asthma',col:'#f59e0b'},
   {i:'💉',t:'UIP Vaccine Schedule',d:'Universal immunisation programme — Indian national schedule.',g:['vaccine','immunisation','UIP','India','schedule','BCG','DPT'],c:'Paeds',u:'/medical-calculators/uip-vaccine',col:'#f59e0b'},
   {i:'📊',t:'WHO/IAP Growth Chart',d:'WHO LMS growth chart with IAP 2015 BMI cutoffs. Z-scores.',g:['growth','growth chart','height','weight','IAP','WHO','z-score'],c:'Paeds',u:'/medical-calculators/growth-chart',col:'#f59e0b'},
+  {i:'📏',t:'Height Velocity',d:'Annual height velocity percentiles. Growth faltering detection.',g:['height velocity','growth velocity','growth faltering','child','IAP','stunting'],c:'Paeds',u:'/medical-calculators/height-velocity',col:'#f59e0b',n:1},
+  {i:'📈',t:'Growth Velocity',d:'Weight and head circumference velocity. Paediatric growth monitoring.',g:['growth velocity','weight velocity','head circumference','infant','WHO','growth'],c:'Paeds',u:'/medical-calculators/growth-velocity',col:'#f59e0b',n:1},
   {i:'🗓️',t:'Developmental Milestones',d:'Milestone checklist. IAP red flags and referral criteria.',g:['milestones','developmental','child','delay','IAP','DDST'],c:'Paeds',u:'/medical-calculators/milestones',col:'#f59e0b'},
   {i:'🌡️',t:'Paediatric Paracetamol',d:'Weight-based paracetamol and ibuprofen dosing for children.',g:['paracetamol','paediatric','dose','fever','ibuprofen','child'],c:'Paeds',u:'/medical-calculators/paracetamol',col:'#f59e0b'},
   {i:'💧',t:'ORS Calculator',d:'ORS volume for diarrhoea. WHO Plan A/B rehydration.',g:['ORS','diarrhoea','dehydration','rehydration','WHO','gastro'],c:'Paeds',u:'/medical-calculators/ors',col:'#f59e0b'},
   {i:'👶',t:'APGAR Score',d:'Neonatal APGAR at 1, 5, 10 min. NRP 2020 guidance.',g:['APGAR','newborn','neonatal','resuscitation','NRP'],c:'Paeds',u:'/medical-calculators/apgar-score',col:'#f59e0b'},
   {i:'⚖️',t:'Paediatric Weight',d:'Broselow, APLS, Nelson weight estimation. Emergency drug table.',g:['paediatric weight','Broselow','APLS','emergency','child','drug dose'],c:'Paeds',u:'/medical-calculators/pediatric-weight',col:'#f59e0b',n:1},
   {i:'💧',t:'Paediatric Dehydration',d:'WHO 4-sign dehydration assessment. Plan A / B / C + ORS volumes.',g:['dehydration','paediatric','ORS','WHO','Plan A','Plan B','Plan C'],c:'Paeds',u:'/medical-calculators/pediatric-dehydration',col:'#06b6d4',n:1},
-  {i:'🤰',t:'Obstetric Calculator',d:'Gestational age, EDD, fundal height, Bishop score.',g:['obstetric','gestational age','EDD','fundal height','pregnancy'],c:'Obstetrics',u:'/medical-calculators/obs-calc',col:'#ec4899'},
-  {i:'📅',t:'Due Date Calculator',d:'EDD from LMP, IVF, or ultrasound. Indian prenatal scan schedule.',g:['due date','EDD','LMP','IVF','pregnancy','ultrasound'],c:'Obstetrics',u:'/medical-calculators/due-date',col:'#ec4899'},
+
+  /* ── GENERAL ── */
+  {i:'⚖️',t:'BMI Calculator',d:'BMI with WHO and Indian (ICMR) obesity thresholds.',g:['BMI','obesity','weight','overweight','Indian'],c:'General',u:'/medical-calculators/bmi',col:'#8b5cf6'},
+  {i:'🔬',t:'Lab Unit Converter',d:'mg/dL ↔ mmol/L for 20+ analytes. Normal ranges included.',g:['lab','unit converter','mg/dL','mmol/L','glucose','cholesterol','creatinine'],c:'General',u:'/medical-calculators/lab-unit-converter',col:'#8b5cf6',n:1},
+  {i:'📊',t:'Mentzer Index',d:'RBC indices — iron deficiency vs thalassaemia differentiation.',g:['Mentzer','iron deficiency','thalassaemia','MCV','anaemia','RBC'],c:'General',u:'/medical-calculators/mentzer-index-calculator',col:'#8b5cf6'},
+  {i:'💊',t:'Drug Doses (Adult)',d:'Reference adult doses for common medicines — Indian formulary.',g:['drug dose','medicine','antibiotic','formulary','adult'],c:'General',u:'/medical-calculators/doses',col:'#8b5cf6'},
+  {i:'💉',t:'ARV Dose Calculator',d:'Anti-rabies vaccine — Essen IM and WHO 2018 ID. RIG dosing.',g:['rabies','ARV','anti-rabies','vaccine','wound','PEP'],c:'General',u:'/medical-calculators/arv-dose-calculator',col:'#8b5cf6'},
+  {i:'💉',t:'Anti-Rabies Serum Dose',d:'RIG / anti-rabies serum dose by body weight. WHO PEP guidelines.',g:['rabies','RIG','anti-rabies serum','immunoglobulin','PEP','wound','bite'],c:'General',u:'/medical-calculators/anti-rabies-serum-dose-calculator',col:'#8b5cf6',n:1},
+  {i:'🐶',t:'Rabies Scheduler',d:'Full rabies PEP schedule — Essen, Zagreb, ID regimens. Booster dates.',g:['rabies','PEP','schedule','vaccine','bite','essen','zagreb'],c:'General',u:'/rabies-scheduler',col:'#8b5cf6'},
+  {i:'🧠',t:'PHQ-9 / GAD-7',d:'Depression and anxiety screening. Combined validated tools.',g:['PHQ-9','GAD-7','depression','anxiety','mental health','psychiatry'],c:'General',u:'/medical-calculators/phq9-gad7',col:'#8b5cf6'},
   {i:'♻️',t:'Biomedical Waste',d:'BMW 2016 categorisation and disposal. Colour-coded bag guide.',g:['biomedical waste','BMW','disposal','colour','infection control'],c:'General',u:'/medical-calculators/biomedical-waste',col:'#22c55e'},
+  {i:'🩺',t:'STI/RTI Management',d:'Syndromic management of STI/RTI — NACO guidelines.',g:['STI','RTI','sexually transmitted','discharge','NACO','syndromic'],c:'General',u:'/medical-calculators/sti-rti-management',col:'#22c55e',n:1},
+  {i:'🫁',t:'Child-Pugh Score',d:'Hepatic reserve in cirrhosis. Class A/B/C.',g:['Child-Pugh','cirrhosis','liver','hepatic reserve','ascites'],c:'General',u:'/medical-calculators/child-pugh',col:'#f59e0b'},
+  {i:'🫁',t:'MELD Score',d:'MELD, MELD-Na, MELD 3.0. Liver transplant priority.',g:['MELD','liver','transplant','cirrhosis','INR','bilirubin'],c:'General',u:'/medical-calculators/meld-score',col:'#f59e0b',n:1},
+  {i:'🔥',t:'BISAP Score',d:'Pancreatitis severity — mortality and ICU criteria. Atlanta 2012.',g:['BISAP','pancreatitis','severity','Atlanta','ICU','mortality'],c:'General',u:'/medical-calculators/bisap-score',col:'#f97316',n:1},
+  {i:'🫀',t:'Steroid Equivalence',d:'Corticosteroid dose equivalence table. Potency and duration.',g:['steroid','corticosteroid','equivalence','prednisolone','dexamethasone','hydrocortisone'],c:'General',u:'/medical-calculators/steroid-equivalence',col:'#f97316',n:1},
+  {i:'🫀',t:'LDL Calculator',d:'Friedewald and Martin-Hopkins LDL equations from lipid panel.',g:['LDL','cholesterol','lipid','Friedewald','triglycerides','HDL'],c:'General',u:'/medical-calculators/ldl-calculator',col:'#f97316',n:1},
+  {i:'🫁',t:'PSI / PORT Score',d:'Pneumonia severity index. Risk classes I–V.',g:['PSI','PORT','pneumonia','CAP','severity','admission'],c:'Emergency',u:'/medical-calculators/psi-calculator',col:'#0891b2',n:1},
+  {i:'🫁',t:'Spirometry (Jindal)',d:'Spirometry interpretation — Indian Jindal reference equations.',g:['spirometry','FEV1','FVC','COPD','asthma','pulmonary function'],c:'General',u:'/medical-calculators/spirometry',col:'#0891b2'},
+  {i:'🔬',t:'NAFLD Fibrosis Score',d:'Non-alcoholic fatty liver disease fibrosis staging. NFS.',g:['NAFLD','NASH','fibrosis','NFS','liver','fatty liver'],c:'General',u:'/medical-calculators/nafld-fibrosis-score',col:'#f59e0b',n:1},
+  {i:'🔬',t:'FIB-4 Index',d:'Fibrosis-4 index for hepatic fibrosis. NAFLD and viral hepatitis.',g:['FIB-4','fibrosis','liver','hepatitis','NAFLD','cirrhosis'],c:'General',u:'/medical-calculators/fib-4-index',col:'#f59e0b',n:1},
+
+  /* ── DRUG DOSES ── */
+  {i:'💊',t:'Paracetamol Dose',d:'Adult and paediatric paracetamol dosing. IV/oral/rectal routes.',g:['paracetamol','acetaminophen','dose','fever','analgesic'],c:'Drug Doses',u:'/drug-doses/paracetamol',col:'#0ea5e9'},
+  {i:'💊',t:'Amoxicillin Dose',d:'Amoxicillin dosing — adult and paediatric. Renal adjustment.',g:['amoxicillin','antibiotic','penicillin','dose','infection'],c:'Drug Doses',u:'/drug-doses/amoxicillin',col:'#0ea5e9'},
+  {i:'💊',t:'Amoxicillin-Clavulanate',d:'Co-amoxiclav dosing. Augmentin adult and paediatric.',g:['amoxicillin clavulanate','augmentin','co-amoxiclav','antibiotic','dose'],c:'Drug Doses',u:'/drug-doses/amoxicillin-clavulanate',col:'#0ea5e9'},
+  {i:'💊',t:'Azithromycin Dose',d:'Azithromycin dosing for RTI, STI, typhoid. Paediatric mg/kg.',g:['azithromycin','Z-pack','antibiotic','dose','RTI','STI'],c:'Drug Doses',u:'/drug-doses/azithromycin',col:'#0ea5e9'},
+  {i:'💊',t:'Cefixime Dose',d:'Cefixime dosing — adult and paediatric. Typhoid, UTI, RTI.',g:['cefixime','cephalosporin','antibiotic','dose','typhoid','UTI'],c:'Drug Doses',u:'/drug-doses/cefixime',col:'#0ea5e9',n:1},
+  {i:'💊',t:'Ceftriaxone Dose',d:'Ceftriaxone IM/IV dosing. Meningitis, sepsis, typhoid.',g:['ceftriaxone','cephalosporin','antibiotic','IV','meningitis','sepsis'],c:'Drug Doses',u:'/drug-doses/ceftriaxone',col:'#0ea5e9'},
+  {i:'💊',t:'Ciprofloxacin Dose',d:'Ciprofloxacin adult dosing. UTI, enteric fever, GI infections.',g:['ciprofloxacin','fluoroquinolone','antibiotic','dose','UTI','typhoid'],c:'Drug Doses',u:'/drug-doses/ciprofloxacin',col:'#0ea5e9'},
+  {i:'💊',t:'Clindamycin Dose',d:'Clindamycin adult dosing. Anaerobic infections, skin, bone.',g:['clindamycin','antibiotic','anaerobic','dose','skin infection'],c:'Drug Doses',u:'/drug-doses/clindamycin',col:'#0ea5e9'},
+  {i:'💊',t:'Cotrimoxazole Dose',d:'Co-trimoxazole (TMP-SMX) dosing. PCP prophylaxis. PCP treatment.',g:['cotrimoxazole','trimethoprim','sulfamethoxazole','TMP-SMX','PCP','dose'],c:'Drug Doses',u:'/drug-doses/cotrimoxazole',col:'#0ea5e9'},
+  {i:'💊',t:'Doxycycline Dose',d:'Doxycycline dosing. Malaria prophylaxis, LRTI, STI, rickettsia.',g:['doxycycline','tetracycline','antibiotic','dose','malaria','STI'],c:'Drug Doses',u:'/drug-doses/doxycycline',col:'#0ea5e9'},
+  {i:'💊',t:'Metronidazole Dose',d:'Metronidazole IV/oral/topical. Anaerobic, H. pylori, amoebiasis.',g:['metronidazole','flagyl','antibiotic','anaerobic','dose','amoebiasis'],c:'Drug Doses',u:'/drug-doses/metronidazole',col:'#0ea5e9'},
+  {i:'💊',t:'Vancomycin Dose',d:'Vancomycin IV dosing with renal adjustment. AUC-guided dosing.',g:['vancomycin','glycopeptide','MRSA','antibiotic','dose','renal'],c:'Drug Doses',u:'/drug-doses/vancomycin',col:'#0ea5e9'},
+  {i:'💊',t:'Amikacin / Gentamicin',d:'Aminoglycoside dosing. Once-daily and extended-interval regimens.',g:['amikacin','gentamicin','aminoglycoside','dose','renal','ototoxicity'],c:'Drug Doses',u:'/drug-doses/amikacin-gentamicin',col:'#0ea5e9'},
+  {i:'💊',t:'Metformin Dose',d:'Metformin dosing for T2DM. Renal eGFR cutoffs. Titration.',g:['metformin','diabetes','T2DM','dose','biguanide','blood sugar'],c:'Drug Doses',u:'/drug-doses/metformin',col:'#0ea5e9'},
+  {i:'💊',t:'Glibenclamide Dose',d:'Glibenclamide (glyburide) dosing. Sulphonylurea in T2DM.',g:['glibenclamide','glyburide','sulphonylurea','diabetes','dose'],c:'Drug Doses',u:'/drug-doses/glibenclamide',col:'#0ea5e9'},
+  {i:'💊',t:'Insulin Dose',d:'Insulin types, onset, peak, duration. Sliding scale and basal-bolus.',g:['insulin','diabetes','dose','basal','bolus','sliding scale','T1DM','T2DM'],c:'Drug Doses',u:'/drug-doses/insulin',col:'#0ea5e9'},
+  {i:'💊',t:'Levothyroxine Dose',d:'Levothyroxine dosing for hypothyroidism. Starting dose by age/weight.',g:['levothyroxine','thyroxine','T4','hypothyroidism','dose','thyroid'],c:'Drug Doses',u:'/drug-doses/levothyroxine',col:'#0ea5e9'},
+  {i:'💊',t:'Amlodipine Dose',d:'Amlodipine dosing for hypertension and angina.',g:['amlodipine','calcium channel blocker','hypertension','dose','angina'],c:'Drug Doses',u:'/drug-doses/amlodipine',col:'#0ea5e9'},
+  {i:'💊',t:'Atenolol Dose',d:'Atenolol dosing for hypertension, angina, arrhythmia.',g:['atenolol','beta blocker','hypertension','dose','angina','arrhythmia'],c:'Drug Doses',u:'/drug-doses/atenolol',col:'#0ea5e9'},
+  {i:'💊',t:'Furosemide Dose',d:'Furosemide IV/oral dosing. Oedema, heart failure, hypertension.',g:['furosemide','frusemide','loop diuretic','dose','oedema','heart failure'],c:'Drug Doses',u:'/drug-doses/furosemide',col:'#0ea5e9'},
+  {i:'💊',t:'Spironolactone Dose',d:'Spironolactone dosing. Heart failure, ascites, hyperaldosteronism.',g:['spironolactone','potassium sparing','diuretic','dose','ascites','heart failure'],c:'Drug Doses',u:'/drug-doses/spironolactone',col:'#0ea5e9'},
+  {i:'💊',t:'Digoxin Dose',d:'Digoxin dosing with renal adjustment. Toxicity levels.',g:['digoxin','digitalis','heart failure','AF','dose','renal'],c:'Drug Doses',u:'/drug-doses/digoxin',col:'#0ea5e9'},
+  {i:'💊',t:'Enoxaparin Dose',d:'Enoxaparin dosing — DVT treatment, prophylaxis, ACS.',g:['enoxaparin','LMWH','heparin','DVT','dose','anticoagulation','ACS'],c:'Drug Doses',u:'/drug-doses/enoxaparin',col:'#0ea5e9'},
+  {i:'💊',t:'Omeprazole / Pantoprazole',d:'PPI dosing — GERD, PUD, H. pylori eradication.',g:['omeprazole','pantoprazole','PPI','proton pump','GERD','dose','ulcer'],c:'Drug Doses',u:'/drug-doses/omeprazole-pantoprazole',col:'#0ea5e9'},
+  {i:'💊',t:'Ondansetron Dose',d:'Ondansetron IV/oral dosing. Nausea, vomiting, post-op.',g:['ondansetron','5-HT3','antiemetic','nausea','dose','vomiting'],c:'Drug Doses',u:'/drug-doses/ondansetron',col:'#0ea5e9'},
+  {i:'💊',t:'Domperidone Dose',d:'Domperidone dosing for nausea and gastroparesis.',g:['domperidone','antiemetic','nausea','gastroparesis','dose'],c:'Drug Doses',u:'/drug-doses/domperidone',col:'#0ea5e9'},
+  {i:'💊',t:'Cetirizine Dose',d:'Cetirizine dosing for urticaria, allergic rhinitis. Adult/paediatric.',g:['cetirizine','antihistamine','allergy','dose','urticaria','rhinitis'],c:'Drug Doses',u:'/drug-doses/cetirizine',col:'#0ea5e9'},
+  {i:'💊',t:'Ibuprofen Dose',d:'Ibuprofen adult and paediatric dosing. Anti-inflammatory/analgesic.',g:['ibuprofen','NSAID','dose','fever','analgesic','anti-inflammatory'],c:'Drug Doses',u:'/drug-doses/ibuprofen',col:'#0ea5e9'},
+  {i:'💊',t:'Diclofenac Dose',d:'Diclofenac oral/IM/topical dosing. Pain, arthritis, renal colic.',g:['diclofenac','NSAID','dose','pain','arthritis','renal colic'],c:'Drug Doses',u:'/drug-doses/diclofenac',col:'#0ea5e9'},
+  {i:'💊',t:'Prednisolone Dose',d:'Prednisolone dosing. Asthma, croup, inflammatory conditions.',g:['prednisolone','steroid','corticosteroid','dose','asthma','inflammation'],c:'Drug Doses',u:'/drug-doses/prednisolone',col:'#0ea5e9'},
+  {i:'💊',t:'Dexamethasone Dose',d:'Dexamethasone dosing. Cerebral oedema, croup, anti-emetic.',g:['dexamethasone','steroid','dose','cerebral oedema','croup','COVID'],c:'Drug Doses',u:'/drug-doses/dexamethasone',col:'#0ea5e9'},
+  {i:'💊',t:'Salbutamol Dose',d:'Salbutamol inhaler/nebuliser dosing. Acute asthma, COPD.',g:['salbutamol','albuterol','bronchodilator','dose','asthma','COPD'],c:'Drug Doses',u:'/drug-doses/salbutamol',col:'#0ea5e9'},
+  {i:'💊',t:'Diazepam Dose',d:'Diazepam dosing for seizures, anxiety, alcohol withdrawal.',g:['diazepam','benzodiazepine','seizure','anxiety','dose','alcohol withdrawal'],c:'Drug Doses',u:'/drug-doses/diazepam',col:'#0ea5e9'},
+  {i:'💊',t:'Phenytoin Dose',d:'Phenytoin loading and maintenance dosing. Seizure management.',g:['phenytoin','anticonvulsant','seizure','epilepsy','dose','loading'],c:'Drug Doses',u:'/drug-doses/phenytoin',col:'#0ea5e9'},
+  {i:'💊',t:'Phenobarbitone Dose',d:'Phenobarbitone dosing for epilepsy and neonatal seizures.',g:['phenobarbitone','phenobarbital','epilepsy','seizure','neonatal','dose'],c:'Drug Doses',u:'/drug-doses/phenobarbitone',col:'#0ea5e9'},
+  {i:'💊',t:'Valproate Dose',d:'Sodium valproate dosing for epilepsy and bipolar disorder.',g:['valproate','valproic acid','epilepsy','bipolar','dose','anticonvulsant'],c:'Drug Doses',u:'/drug-doses/valproate',col:'#0ea5e9'},
+  {i:'💊',t:'Iron (Oral) Dose',d:'Ferrous sulfate/fumarate dosing. Iron deficiency anaemia.',g:['iron','ferrous sulfate','anaemia','iron deficiency','dose'],c:'Drug Doses',u:'/drug-doses/iron',col:'#0ea5e9'},
+  {i:'💊',t:'Folic Acid Dose',d:'Folic acid dosing — periconceptional, megaloblastic anaemia.',g:['folic acid','folate','pregnancy','anaemia','dose','neural tube'],c:'Drug Doses',u:'/drug-doses/folic-acid-calculator',col:'#0ea5e9'},
+  {i:'💊',t:'Zinc Dose',d:'Zinc supplementation dosing for diarrhoea and deficiency.',g:['zinc','supplementation','diarrhoea','dose','deficiency'],c:'Drug Doses',u:'/drug-doses/zinc',col:'#0ea5e9'},
+  {i:'💊',t:'Calcium + Vitamin D',d:'Calcium carbonate and cholecalciferol dosing. Osteoporosis.',g:['calcium','vitamin D','cholecalciferol','dose','osteoporosis','deficiency'],c:'Drug Doses',u:'/drug-doses/calcium-vitamind',col:'#0ea5e9'},
+  {i:'💊',t:'Famotidine Dose',d:'Famotidine (H2 blocker) dosing for GERD and peptic ulcer.',g:['famotidine','H2 blocker','GERD','ulcer','dose','antacid'],c:'Drug Doses',u:'/drug-doses/famotidine',col:'#0ea5e9'},
+  {i:'💊',t:'Dextromethorphan / PE',d:'Cough-cold combination (DXM + phenylephrine) dosing.',g:['dextromethorphan','phenylephrine','cough','cold','dose','antitussive'],c:'Drug Doses',u:'/drug-doses/dextromethorphan-phenylephrine',col:'#0ea5e9'},
+
+  /* ── VITAMINS ── */
+  {i:'🧪',t:'Vitamin A Calculator',d:'Retinol RDA, deficiency signs and therapeutic dosing.',g:['vitamin A','retinol','deficiency','dose','night blindness'],c:'Vitamins',u:'/vitamin/a-retinol-calculator',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin B1 (Thiamine)',d:'Thiamine RDA, Wernicke encephalopathy dosing. Deficiency signs.',g:['thiamine','vitamin B1','Wernicke','deficiency','dose','beriberi'],c:'Vitamins',u:'/vitamin/b1-thiamine-calculator',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin B2 (Riboflavin)',d:'Riboflavin RDA and deficiency management.',g:['riboflavin','vitamin B2','deficiency','dose','ariboflavinosis'],c:'Vitamins',u:'/vitamin/b2-riboflavin-calculator',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin B3 (Niacin)',d:'Niacin RDA, pellagra treatment, lipid-lowering doses.',g:['niacin','vitamin B3','pellagra','deficiency','dose','nicotinic acid'],c:'Vitamins',u:'/vitamin/b3-niacin-calculator',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin B6 (Pyridoxine)',d:'Pyridoxine RDA, INH prophylaxis dosing. Deficiency.',g:['pyridoxine','vitamin B6','INH','isoniazid','dose','deficiency'],c:'Vitamins',u:'/vitamin/b6-pyridoxine-calculator',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin B7 (Biotin)',d:'Biotin RDA and deficiency management.',g:['biotin','vitamin B7','deficiency','dose','hair','skin'],c:'Vitamins',u:'/vitamin/b7-biotin-calculator',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin B9 (Folic Acid)',d:'Folate RDA, pregnancy supplementation, megaloblastic anaemia.',g:['folic acid','folate','vitamin B9','pregnancy','dose','anaemia','neural tube'],c:'Vitamins',u:'/vitamin/b9-folic-acid',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin B12 (Cobalamin)',d:'Cobalamin RDA, IM/oral replacement for B12 deficiency.',g:['vitamin B12','cobalamin','deficiency','dose','anaemia','neuropathy'],c:'Vitamins',u:'/vitamin/b12-cobalamin-calculator',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin C Calculator',d:'Ascorbic acid RDA, scurvy treatment, therapeutic dosing.',g:['vitamin C','ascorbic acid','scurvy','deficiency','dose','antioxidant'],c:'Vitamins',u:'/vitamin/ascorbic-acid-vit-c',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin D3 Calculator',d:'Cholecalciferol dosing for deficiency, supplementation, and loading.',g:['vitamin D','cholecalciferol','D3','deficiency','dose','calcium','rickets'],c:'Vitamins',u:'/vitamin/d3-cholecalciferol',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin E Calculator',d:'Tocopherol RDA and therapeutic dosing. Deficiency signs.',g:['vitamin E','tocopherol','deficiency','dose','antioxidant','neuropathy'],c:'Vitamins',u:'/vitamin/e-tocopherol-calculator',col:'#f59e0b'},
+  {i:'🧪',t:'Vitamin K Calculator',d:'Phytomenadione dosing — neonatal prophylaxis, anticoagulant reversal.',g:['vitamin K','phytomenadione','neonatal','anticoagulant','warfarin reversal','dose'],c:'Vitamins',u:'/vitamin/k-calculator',col:'#f59e0b'},
 ];
+
 let activeFilter='all';
 function setFilter(f){
   activeFilter=f;
-  document.querySelectorAll('.filter-chip').forEach(c=>c.classList.toggle('active',f==='all'?c.textContent.trim()==='All':c.textContent.includes(f)));
+  document.querySelectorAll('.filter-chip').forEach(c=>{
+    const label=c.textContent.trim();
+    const isAll=label==='All';
+    c.classList.toggle('active', f==='all'?isAll:label.includes(f));
+  });
   render();
 }
 function render(){
@@ -155,8 +252,14 @@ function render(){
   document.getElementById('count-num').textContent=filtered.length;
   const nr=document.getElementById('no-results');
   const rc=document.getElementById('results-container');
-  if(!filtered.length){nr.style.display='block';document.getElementById('no-q').textContent=q;rc.innerHTML='';}
-  else{nr.style.display='none';rc.innerHTML=filtered.map(t=>`<a href="${t.u}" class="tool-card" style="--cc:${t.col}"><div class="tc-icon">${t.i}</div><div class="tc-cat">${t.c}</div><div class="tc-title">${t.t}</div><div class="tc-desc">${t.d}</div>${t.n?'<span class="tc-new">New</span>':''}</a>`).join('');}
+  if(!filtered.length){
+    nr.style.display='block';
+    document.getElementById('no-q').textContent=q;
+    rc.innerHTML='';
+  } else {
+    nr.style.display='none';
+    rc.innerHTML=filtered.map(t=>`<a href="${t.u}" class="tool-card" style="--cc:${t.col}"><div class="tc-icon">${t.i}</div><div class="tc-cat">${t.c}</div><div class="tc-title">${t.t}</div><div class="tc-desc">${t.d}</div>${t.n?'<span class="tc-new">New</span>':''}</a>`).join('');
+  }
 }
 document.getElementById('search-input').addEventListener('input',render);
 const urlQ=new URLSearchParams(location.search).get('q');
