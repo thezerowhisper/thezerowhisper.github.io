@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════════════════════════════════
+     SEO META — Primary Target Keywords:
+     gestational age calculator | how many weeks pregnant |
+     gestational age by LMP | pregnancy week calculator |
+     gestational age from ultrasound | weeks pregnant calculator
+     ═══════════════════════════════════════════════════════ -->
+<title>Gestational Age Calculator – Weeks Pregnant by LMP, Ultrasound & Due Date | RxMedCalc</title>
+<meta name="description" content="Free gestational age calculator. Find out exactly how many weeks pregnant you are using Last Menstrual Period (LMP), ultrasound date, or estimated due date. Instant results with trimester, milestone timeline, and due date.">
+<meta name="keywords" content="gestational age calculator, how many weeks pregnant, gestational age by LMP, pregnancy week calculator, gestational age from ultrasound, weeks pregnant calculator, due date calculator, pregnancy trimester calculator, fetal age calculator, gestational age formula">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rxmedcalc.com/gestational-age-calculator">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Gestational Age Calculator – RxMedCalc">
+<meta property="og:description" content="Calculate exactly how many weeks pregnant you are using LMP, ultrasound, or due date. Free, instant, medically referenced.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rxmedcalc.com/gestational-age-calculator">
+<meta property="og:site_name" content="RxMedCalc">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gestational Age Calculator – RxMedCalc">
+<meta name="twitter:description" content="How many weeks pregnant are you? Calculate gestational age by LMP, ultrasound, or due date. Free & instant.">
+
+<!-- Schema Markup: MedicalWebPage + FAQPage + BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Gestational Age Calculator",
+      "url": "https://rxmedcalc.com/gestational-age-calculator",
+      "description": "Calculate gestational age in weeks and days from LMP, ultrasound date, or estimated due date.",
+      "medicalAudience": [
+        {"@type": "MedicalAudience", "audienceType": "Patient"},
+        {"@type": "MedicalAudience", "audienceType": "Clinician"}
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "RxMedCalc",
+        "url": "https://rxmedcalc.com"
+      },
+      "specialty": {"@type": "MedicalSpecialty", "name": "Obstetrics and Gynecology"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Home","item": "https://rxmedcalc.com"},
+        {"@type": "ListItem","position": 2,"name": "Pregnancy","item": "https://rxmedcalc.com/pregnancy"},
+        {"@type": "ListItem","position": 3,"name": "Gestational Age Calculator","item": "https://rxmedcalc.com/gestational-age-calculator"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is gestational age?",
+          "acceptedAnswer": {"@type": "Answer","text": "Gestational age (GA) is the length of a pregnancy measured in weeks and days from the first day of the mother's last menstrual period (LMP), not from the date of conception. A full-term pregnancy is 40 weeks."}
+        },
+        {
+          "@type": "Question",
+          "name": "How is gestational age calculated from LMP?",
+          "acceptedAnswer": {"@type": "Answer","text": "Gestational age from LMP = (Current date − LMP date) in days, then converted to weeks and days. The estimated due date (EDD) = LMP + 280 days (40 weeks), following Naegele's Rule."}
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between gestational age and fetal age?",
+          "acceptedAnswer": {"@type": "Answer","text": "Gestational age is counted from the LMP and is about 2 weeks longer than fetal age (also called embryonic age), which is counted from the date of conception/fertilization."}
+        },
+        {
+          "@type": "Question",
+          "name": "When is gestational age calculated by ultrasound?",
+          "acceptedAnswer": {"@type": "Answer","text": "An ultrasound in the first trimester (6–13 weeks) using Crown-Rump Length (CRL) is the most accurate method for dating a pregnancy when LMP is uncertain or irregular cycles are present."}
+        },
+        {
+          "@type": "Question",
+          "name": "What are the trimesters of pregnancy by week?",
+          "acceptedAnswer": {"@type": "Answer","text": "First trimester: weeks 1–13. Second trimester: weeks 14–27. Third trimester: weeks 28–40+."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --primary: #1a6b5c;
+    --primary-light: #e8f5f1;
+    --primary-mid: #2e9b85;
+    --accent: #d45f1e;
+    --text-main: #1a1f1e;
+    --text-muted: #5a6360;
+    --text-light: #8a9390;
+    --border: #d4dedd;
+    --surface: #f7faf9;
+    --white: #ffffff;
+    --warn: #d45f1e;
+    --warn-bg: #fef3ec;
+    --radius: 12px;
+    --radius-sm: 6px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-main);
+    background: var(--white);
+  }
+
+  /* ── NAV ── */
+  .nav {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--primary); text-decoration: none; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; margin-left: auto; }
+  .breadcrumb a { color: var(--primary); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #0d4a3e 0%, #1a6b5c 60%, #2e9b85 100%);
+    color: white;
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.9);
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: white;
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.8);
+    max-width: 540px;
+    margin: 0 auto 28px;
+  }
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .hero-pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    font-size: 13px;
+    padding: 5px 14px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .wide-container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── CALCULATOR CARD ── */
+  .calc-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    margin: -28px auto 40px;
+    max-width: 720px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+  }
+
+  .calc-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .calc-tab {
+    flex: 1;
+    padding: 14px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.18s;
+    text-align: center;
+  }
+  .calc-tab.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+    background: var(--white);
+  }
+  .calc-tab:hover:not(.active) { color: var(--primary); background: rgba(26,107,92,0.04); }
+
+  .calc-body { padding: 28px; }
+
+  .calc-panel { display: none; }
+  .calc-panel.active { display: block; }
+
+  .form-group { margin-bottom: 20px; }
+  .form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 7px;
+  }
+  .form-input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-main);
+    background: var(--white);
+    transition: border-color 0.15s;
+    appearance: none;
+  }
+  .form-input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,107,92,0.1); }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
+
+  .calc-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    margin-top: 8px;
+  }
+  .calc-btn:hover { background: #155049; }
+  .calc-btn:active { transform: scale(0.99); }
+
+  /* ── RESULTS ── */
+  .result-box {
+    background: var(--primary-light);
+    border: 1px solid #b6ddd7;
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-top: 24px;
+    display: none;
+  }
+  .result-box.show { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+  .result-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+  .result-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 20px; }
+
+  .result-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  .stat-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+  }
+  .stat-label { font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px; }
+  .stat-value { font-size: 20px; font-weight: 600; color: var(--text-main); }
+  .stat-value.highlight { color: var(--primary); }
+
+  .trimester-bar {
+    margin-top: 20px;
+    position: relative;
+    height: 8px;
+    background: #c8e6e0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .trimester-fill { height: 100%; background: var(--primary); border-radius: 4px; transition: width 0.5s ease; }
+
+  .progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-light); margin-top: 5px; }
+
+  .milestone-row {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+  }
+  .milestone {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 12px;
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+  }
+  .milestone-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-mid);
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  .milestone-dot.past { background: var(--primary); }
+  .milestone-dot.future { background: var(--border); }
+
+  .disclaimer-box {
+    background: var(--warn-bg);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #7a3510;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+
+  /* ── CONTENT SECTIONS ── */
+  .section { padding: 52px 0; }
+  .section + .section { border-top: 1px solid var(--border); }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(22px, 3.5vw, 30px);
+    font-weight: 400;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    margin-top: 28px;
+  }
+  p { margin-bottom: 16px; color: var(--text-main); }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+
+  ul, ol { padding-left: 20px; margin-bottom: 16px; }
+  li { margin-bottom: 8px; color: var(--text-main); }
+
+  /* ── INFO CARDS ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .info-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  .info-card-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  .info-card h3 { margin-top: 0; font-size: 15px; }
+  .info-card p { font-size: 14px; color: var(--text-muted); margin-bottom: 0; }
+
+  /* ── FORMULA TABLE ── */
+  .formula-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  .formula-table th {
+    background: var(--primary);
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 500;
+  }
+  .formula-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .formula-table tr:nth-child(even) td { background: var(--surface); }
+  .formula-table tr:hover td { background: var(--primary-light); }
+  .formula-table th:first-child { border-radius: 8px 0 0 0; }
+  .formula-table th:last-child { border-radius: 0 8px 0 0; }
+
+  code {
+    font-family: 'Courier New', monospace;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 13px;
+    color: var(--primary);
+  }
+
+  /* ── TRIMESTER CARDS ── */
+  .trimester-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+  @media (max-width: 580px) { .trimester-grid { grid-template-columns: 1fr; } }
+
+  .trimester-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .trimester-header {
+    padding: 14px 18px;
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+  }
+  .t1-header { background: #2e7d5e; }
+  .t2-header { background: #1a6b5c; }
+  .t3-header { background: #0d4a3e; }
+  .trimester-body { padding: 16px 18px; font-size: 14px; background: var(--surface); }
+  .trimester-body ul { margin: 8px 0 0; padding-left: 16px; }
+  .trimester-body li { margin-bottom: 5px; color: var(--text-muted); }
+
+  /* ── FAQ ── */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    user-select: none;
+  }
+  .faq-toggle { font-size: 20px; color: var(--primary); flex-shrink: 0; transition: transform 0.2s; }
+  .faq-a { margin-top: 12px; color: var(--text-muted); font-size: 15px; display: none; }
+  .faq-item.open .faq-a { display: block; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+  /* ── RELATED TOOLS ── */
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .related-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    display: block;
+  }
+  .related-card:hover { border-color: var(--primary); box-shadow: 0 2px 8px rgba(26,107,92,0.08); }
+  .related-card-icon { font-size: 22px; margin-bottom: 8px; }
+  .related-card-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .related-card-desc { font-size: 13px; color: var(--text-muted); }
+
+  /* ── REFERENCES ── */
+  .ref-list { margin: 16px 0; }
+  .ref-item {
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .ref-num { color: var(--primary); font-weight: 600; flex-shrink: 0; }
+
+  /* ── FOOTER ── */
+  .page-footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 48px;
+  }
+  .page-footer a { color: var(--primary); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <a href="https://rxmedcalc.com" class="nav-logo">RxMedCalc</a>
+  <div class="breadcrumb">
+    <a href="https://rxmedcalc.com">Home</a>
+    <span>›</span>
+    <a href="https://rxmedcalc.com/pregnancy">Pregnancy</a>
+    <span>›</span>
+    <span>Gestational Age</span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="hero-tag">Free Pregnancy Tool</div>
+  <h1>Gestational Age Calculator</h1>
+  <p class="hero-sub">Find out exactly how many weeks pregnant you are — using your LMP, an ultrasound date, or your estimated due date.</p>
+  <div class="hero-pills">
+    <span class="hero-pill">✓ LMP Method</span>
+    <span class="hero-pill">✓ Ultrasound Dating</span>
+    <span class="hero-pill">✓ Due Date Method</span>
+    <span class="hero-pill">✓ Trimester + Milestones</span>
+  </div>
+</header>
+
+<!-- ── CALCULATOR ── -->
+<div class="container">
+  <div class="calc-card">
+    <div class="calc-tabs">
+      <button class="calc-tab active" onclick="switchTab('lmp', this)">By Last Period (LMP)</button>
+      <button class="calc-tab" onclick="switchTab('ultrasound', this)">By Ultrasound Date</button>
+      <button class="calc-tab" onclick="switchTab('edd', this)">By Due Date (EDD)</button>
+    </div>
+
+    <div class="calc-body">
+
+      <!-- LMP Panel -->
+      <div class="calc-panel active" id="panel-lmp">
+        <div class="form-group">
+          <label class="form-label" for="lmp-date">First day of your last menstrual period (LMP)</label>
+          <input type="date" id="lmp-date" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cycle-length">Average cycle length (days)</label>
+          <select id="cycle-length" class="form-input">
+            <option value="26">26 days</option>
+            <option value="27">27 days</option>
+            <option value="28" selected>28 days (average)</option>
+            <option value="29">29 days</option>
+            <option value="30">30 days</option>
+            <option value="31">31 days</option>
+            <option value="32">32 days</option>
+            <option value="33">33 days</option>
+            <option value="34">34 days</option>
+            <option value="35">35 days</option>
+          </select>
+        </div>
+        <button class="calc-btn" onclick="calculateLMP()">Calculate Gestational Age →</button>
+        <div class="result-box" id="result-lmp"></div>
+      </div>
+
+      <!-- Ultrasound Panel -->
+      <div class="calc-panel" id="panel-ultrasound">
+        <p style="font-size:14px; color: var(--text-muted); margin-bottom:20px;">Enter the gestational age your ultrasound reported and the scan date. We'll calculate today's gestational age.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="us-weeks">GA at ultrasound (weeks)</label>
+            <input type="number" id="us-weeks" class="form-input" min="4" max="42" placeholder="e.g. 10" value="">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="us-days">GA at ultrasound (days)</label>
+            <input type="number" id="us-days" class="form-input" min="0" max="6" placeholder="0–6" value="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="us-date">Date of ultrasound scan</label>
+          <input type="date" id="us-date" class="form-input">
+        </div>
+        <button class="calc-btn" onclick="calculateUS()">Calculate Current Gestational Age →</button>
+        <div class="result-box" id="result-us"></div>
+      </div>
+
+      <!-- EDD Panel -->
+      <div class="calc-panel" id="panel-edd">
+        <p style="font-size:14px; color: var(--text-muted); margin-bottom:20px;">Enter your estimated due date (EDD) as given by your doctor or scan report.</p>
+        <div class="form-group">
+          <label class="form-label" for="edd-date">Estimated Due Date (EDD)</label>
+          <input type="date" id="edd-date" class="form-input">
+        </div>
+        <button class="calc-btn" onclick="calculateEDD()">Calculate Gestational Age →</button>
+        <div class="result-box" id="result-edd"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<main>
+
+<!-- What Is Gestational Age -->
+<section class="section" id="what-is-gestational-age">
+  <div class="container">
+    <h2>What Is Gestational Age?</h2>
+    <p>Gestational age (GA) is the standard clinical measure of how far along a pregnancy has progressed. It is expressed in <strong>weeks and days</strong> — for example, "10 weeks and 3 days" or commonly written as "10+3." A full-term pregnancy spans <strong>40 weeks</strong> from the start of the last menstrual period.</p>
+    <p>Importantly, gestational age is <em>not</em> counted from the moment of conception. Because ovulation and fertilisation typically occur about two weeks after the last period begins, gestational age is approximately two weeks longer than the embryonic (fetal) age. This convention is used worldwide by obstetricians, midwives, and ultrasound technicians to keep a single consistent standard.</p>
+    <p>Accurate gestational dating is critical because it determines when key prenatal tests are scheduled, guides growth monitoring, informs decisions about induction of labour, and classifies deliveries as preterm (&lt;37 weeks), term (37–42 weeks), or post-term (&gt;42 weeks).</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-icon">📅</div>
+        <h3>From LMP</h3>
+        <p>The most common method. Count weeks from the first day of your last period. Assumes a 28-day cycle.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🔬</div>
+        <h3>From Ultrasound</h3>
+        <p>The most accurate method, especially in the first trimester. CRL measurement at 6–13 weeks.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🗓️</div>
+        <h3>From Due Date</h3>
+        <p>Work backwards from your EDD. Gestational age = 40 weeks minus time remaining until delivery.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🧬</div>
+        <h3>Fetal Age vs. GA</h3>
+        <p>Fetal (embryonic) age = gestational age minus 2 weeks. GA is always the clinical standard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How to Calculate -->
+<section class="section" id="how-to-calculate">
+  <div class="container">
+    <h2>How Is Gestational Age Calculated?</h2>
+    <p>There are three widely accepted methods for calculating gestational age. Each has specific indications and accuracy ranges:</p>
+
+    <table class="formula-table" role="table" aria-label="Gestational age calculation methods">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Formula</th>
+          <th>Accuracy</th>
+          <th>Best Used When</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Last Menstrual Period (LMP)</strong></td>
+          <td><code>GA = (Today − LMP) ÷ 7</code><br>EDD = LMP + 280 days</td>
+          <td>±2 weeks</td>
+          <td>Regular 28-day cycles, LMP known</td>
+        </tr>
+        <tr>
+          <td><strong>Ultrasound — Crown-Rump Length (CRL)</strong></td>
+          <td>CRL 1–84 mm → GA tables</td>
+          <td>±5–7 days (1st trimester)</td>
+          <td>6–13 weeks; irregular cycles</td>
+        </tr>
+        <tr>
+          <td><strong>Ultrasound — Biometry (BPD, FL, HC)</strong></td>
+          <td>Hadlock nomograms</td>
+          <td>±2–3 weeks (late 2nd/3rd trimester)</td>
+          <td>After 14 weeks if CRL missed</td>
+        </tr>
+        <tr>
+          <td><strong>Estimated Due Date (EDD)</strong></td>
+          <td><code>GA = 40 weeks − Days to EDD ÷ 7</code></td>
+          <td>Depends on EDD source</td>
+          <td>When EDD already established</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Naegele's Rule — The LMP Formula Explained</h3>
+    <p>The most widely used method is <strong>Naegele's Rule</strong>, developed in 1812 and still the global obstetric standard. It adds 280 days (40 weeks) to the first day of the LMP to estimate the due date:</p>
+    <p><code>EDD = LMP + 280 days</code> — or equivalently — <code>EDD = LMP + 9 months + 7 days</code></p>
+    <p>The rule assumes a 28-day menstrual cycle with ovulation on day 14. For cycles shorter or longer than 28 days, the EDD is adjusted by the difference: a 32-day cycle shifts the EDD four days later, while a 24-day cycle shifts it four days earlier. Our calculator applies this correction automatically.</p>
+
+    <h3>When Ultrasound Overrides LMP Dating</h3>
+    <p>ACOG (American College of Obstetricians and Gynecologists) recommends that ultrasound dating in the first trimester should replace LMP dating if the difference is more than 7 days (CRL &lt;9 weeks) or more than 10 days (CRL 9.0–13.9 weeks). First-trimester ultrasound remains the gold standard when LMP is unknown, uncertain, or when cycle length is irregular.</p>
+  </div>
+</section>
+
+<!-- Trimesters -->
+<section class="section" id="trimesters">
+  <div class="container">
+    <h2>Pregnancy Trimesters by Week</h2>
+    <p>Pregnancy is divided into three trimesters. Each marks a distinct phase of fetal development and dictates which prenatal screenings, scans, and tests are appropriate:</p>
+
+    <div class="trimester-grid">
+      <div class="trimester-card">
+        <div class="trimester-header t1-header">First Trimester — Weeks 1–13</div>
+        <div class="trimester-body">
+          <p style="font-size:13px;color:var(--text-muted)">Most critical period of organ formation.</p>
+          <ul>
+            <li>Week 6: Fetal heartbeat detectable</li>
+            <li>Week 8: All major organs forming</li>
+            <li>Week 10: Nuchal translucency scan</li>
+            <li>Week 11–13: NIPT / First-trimester screening</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trimester-card">
+        <div class="trimester-header t2-header">Second Trimester — Weeks 14–27</div>
+        <div class="trimester-body">
+          <p style="font-size:13px;color:var(--text-muted)">Growth and maturation phase.</p>
+          <ul>
+            <li>Week 16: Quadruple marker screen</li>
+            <li>Week 18–22: Anatomy ultrasound</li>
+            <li>Week 20: Fetal movements felt</li>
+            <li>Week 24: Viability threshold</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trimester-card">
+        <div class="trimester-header t3-header">Third Trimester — Weeks 28–40+</div>
+        <div class="trimester-body">
+          <p style="font-size:13px;color:var(--text-muted)">Rapid weight gain and preparation for birth.</p>
+          <ul>
+            <li>Week 28: GDM screen & Rh immunoglobulin</li>
+            <li>Week 32–34: Growth scan</li>
+            <li>Week 36: GBS screening</li>
+            <li>Week 40: Full-term delivery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3>Preterm, Term, and Post-Term Definitions</h3>
+    <p>The World Health Organization and ACOG classify gestational age at delivery as follows:</p>
+    <ul>
+      <li><strong>Extremely preterm:</strong> &lt;28 weeks</li>
+      <li><strong>Very preterm:</strong> 28 to &lt;32 weeks</li>
+      <li><strong>Moderate to late preterm:</strong> 32 to &lt;37 weeks</li>
+      <li><strong>Early term:</strong> 37+0 to 38+6 weeks</li>
+      <li><strong>Full term:</strong> 39+0 to 40+6 weeks</li>
+      <li><strong>Late term:</strong> 41+0 to 41+6 weeks</li>
+      <li><strong>Post-term:</strong> 42+0 weeks and beyond</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        What is the difference between gestational age and fetal age?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        Gestational age is counted from the first day of your last menstrual period (LMP), while fetal age (also called embryonic age or conceptional age) is counted from the date of fertilisation. Because ovulation typically occurs about 14 days into a 28-day cycle, fetal age is approximately 2 weeks less than gestational age. Clinicians always use gestational age because the exact date of conception is rarely known, whereas the LMP date is reliable.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        How accurate is gestational age calculated by LMP?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        LMP dating is accurate to within approximately ±2 weeks. It assumes a 28-day cycle with ovulation on day 14. The accuracy decreases for women with irregular cycles, cycles shorter than 21 or longer than 35 days, recent hormonal contraceptive use, or breastfeeding. In these cases, first-trimester ultrasound provides a significantly more accurate gestational age.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        Can gestational age change after an ultrasound?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        Yes. If the ultrasound dating differs from the LMP date by more than 7 days in the first trimester (before 9 weeks) or more than 10 days at 9–13 weeks, clinical guidelines (ACOG, NICE) recommend updating the estimated due date to the ultrasound-based date. After 20 weeks, the EDD should generally not be changed even if growth differs, as later ultrasounds are less accurate for dating and differences may reflect fetal growth variation rather than incorrect dating.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        How is gestational age measured in weeks vs. months?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        Healthcare providers always use weeks, not calendar months, to describe gestational age — because "month" is ambiguous (calendar months vary in length) and because pregnancy lasts 10 lunar months but only about 9 calendar months. If you want an approximate conversion: divide the gestational week by 4.33 (average weeks per calendar month). So 28 weeks ≈ 6.5 calendar months.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        What week is the anatomy scan done?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        The fetal anatomy scan (also called the anomaly scan or mid-pregnancy scan) is typically performed between 18 and 22 weeks of gestation. At this stage, all major fetal organs are sufficiently developed to be assessed. It checks brain, heart, spine, kidneys, limbs, placenta location, and amniotic fluid levels. Accurate gestational dating before this scan ensures the measurements are interpreted using the correct reference ranges.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        Is gestational age the same as weeks pregnant?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        Yes — "weeks pregnant" and "gestational age" mean the same thing in everyday and clinical language. When your doctor says you are "12 weeks pregnant," they mean your gestational age is 12 weeks (counting from the first day of your last period). The two terms are used interchangeably.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        What is corrected gestational age for premature babies?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        Corrected age (also called adjusted age) is used for preterm infants after birth. It accounts for the weeks the baby was born early: <strong>Corrected age = Chronological age − Weeks born early</strong>. For example, a 6-month-old baby born 10 weeks early has a corrected age of approximately 3.7 months. Paediatricians use this to set appropriate developmental milestones up to age 2–3 years.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Tools -->
+<section class="section" id="related-tools">
+  <div class="container">
+    <h2>Related Pregnancy Calculators</h2>
+    <p>Use these tools alongside the gestational age calculator for comprehensive pregnancy monitoring:</p>
+
+    <div class="related-grid">
+      <a href="https://rxmedcalc.com/due-date-calculator" class="related-card">
+        <div class="related-card-icon">📆</div>
+        <div class="related-card-title">Due Date Calculator</div>
+        <div class="related-card-desc">Calculate your EDD from LMP, conception, or IVF transfer date.</div>
+      </a>
+      <a href="https://rxmedcalc.com/pregnancy-weight-gain" class="related-card">
+        <div class="related-card-icon">⚖️</div>
+        <div class="related-card-title">Pregnancy Weight Gain</div>
+        <div class="related-card-desc">Track recommended weight gain by trimester and pre-pregnancy BMI.</div>
+      </a>
+      <a href="https://rxmedcalc.com/fetal-growth-calculator" class="related-card">
+        <div class="related-card-icon">📏</div>
+        <div class="related-card-title">Fetal Growth Calculator</div>
+        <div class="related-card-desc">Compare baby's estimated weight and length to WHO percentiles.</div>
+      </a>
+      <a href="https://rxmedcalc.com/ivf-due-date-calculator" class="related-card">
+        <div class="related-card-icon">🧪</div>
+        <div class="related-card-title">IVF Due Date Calculator</div>
+        <div class="related-card-desc">Calculate gestational age and EDD for Day-3 or Day-5 embryo transfers.</div>
+      </a>
+      <a href="https://rxmedcalc.com/ovulation-calculator" class="related-card">
+        <div class="related-card-icon">🌙</div>
+        <div class="related-card-title">Ovulation Calculator</div>
+        <div class="related-card-desc">Find your fertile window and predicted ovulation date by cycle length.</div>
+      </a>
+      <a href="https://rxmedcalc.com/pregnancy-bmi-calculator" class="related-card">
+        <div class="related-card-icon">📊</div>
+        <div class="related-card-title">Pregnancy BMI Calculator</div>
+        <div class="related-card-desc">Calculate pre-pregnancy BMI and get trimester-specific weight targets.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- References -->
+<section class="section" id="references">
+  <div class="container">
+    <h2>Medical References &amp; Sources</h2>
+    <p>This calculator and content are based on established obstetric guidelines and peer-reviewed literature:</p>
+
+    <div class="ref-list">
+      <div class="ref-item">
+        <span class="ref-num">1.</span>
+        <span>American College of Obstetricians and Gynecologists. <em>Committee Opinion No. 700: Methods for Estimating the Due Date.</em> Obstet Gynecol. 2017;129(5):e150–e154. Reaffirmed 2021.</span>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">2.</span>
+        <span>Salomon LJ, et al. ISUOG Practice Guidelines: performance of first-trimester fetal ultrasound scan. <em>Ultrasound Obstet Gynecol.</em> 2013;41:102–113.</span>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">3.</span>
+        <span>World Health Organization. <em>Preterm birth fact sheet.</em> WHO; 2023. Available at who.int/news-room/fact-sheets/detail/preterm-birth</span>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">4.</span>
+        <span>Hadlock FP, Deter RL, Harrist RB, Park SK. Estimating fetal age: computer-assisted analysis of multiple fetal growth parameters. <em>Radiology.</em> 1984;152(2):497–501.</span>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">5.</span>
+        <span>National Institute for Health and Care Excellence. <em>Antenatal care: NICE guideline NG201.</em> NICE; 2021. nice.org.uk/guidance/ng201</span>
+      </div>
+    </div>
+
+    <p style="margin-top:20px; font-size:13px; color:var(--text-muted);">Last medical review: May 2025 · Content reviewed by RxMedCalc Clinical Editorial Team.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer class="page-footer">
+  <p><strong>RxMedCalc</strong> · <a href="https://rxmedcalc.com/gestational-age-calculator">Gestational Age Calculator</a></p>
+  <p style="margin-top:8px;">This tool is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional for clinical decisions regarding your pregnancy.</p>
+  <p style="margin-top:8px;"><a href="https://rxmedcalc.com/privacy">Privacy Policy</a> · <a href="https://rxmedcalc.com/terms">Terms of Use</a> · <a href="https://rxmedcalc.com/contact">Contact</a></p>
+</footer>
+
+<!-- ══ JAVASCRIPT ══ -->
+<script>
+function switchTab(tab, btn) {
+  document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + tab).classList.add('active');
+}
+
+function getTrimester(weeks) {
+  if (weeks <= 13) return { num: 1, name: 'First Trimester', color: '#2e7d5e' };
+  if (weeks <= 27) return { num: 2, name: 'Second Trimester', color: '#1a6b5c' };
+  return { num: 3, name: 'Third Trimester', color: '#0d4a3e' };
+}
+
+function getProgressPct(weeks) {
+  return Math.min(100, Math.round((weeks / 40) * 100));
+}
+
+function addDays(date, days) {
+  const d = new Date(date);
+  d.setDate(d.getDate() + days);
+  return d;
+}
+
+function formatDate(date) {
+  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function getMilestones(weeksNow) {
+  const items = [
+    { week: 6,  label: 'Heartbeat detectable' },
+    { week: 10, label: 'Nuchal translucency scan' },
+    { week: 12, label: 'First trimester ends' },
+    { week: 16, label: 'Quadruple marker screen' },
+    { week: 20, label: 'Anatomy ultrasound' },
+    { week: 24, label: 'Viability threshold' },
+    { week: 28, label: 'Third trimester begins' },
+    { week: 36, label: 'GBS screening' },
+    { week: 37, label: 'Full-term reached' },
+    { week: 40, label: 'Estimated due date' }
+  ];
+  return items.map(m => ({
+    ...m,
+    status: weeksNow >= m.week ? 'past' : 'future'
+  }));
+}
+
+function buildResult(totalDays, eddDate) {
+  const weeks = Math.floor(totalDays / 7);
+  const days = totalDays % 7;
+  if (weeks < 0 || weeks > 45) return '<p style="color:#d45f1e; font-weight:500;">Please check the date entered — the result is outside the expected range.</p>';
+  const tri = getTrimester(weeks);
+  const pct = getProgressPct(weeks);
+  const milestones = getMilestones(weeks);
+  const eddStr = eddDate ? formatDate(eddDate) : '—';
+
+  const milestoneHTML = milestones.slice(0, 6).map(m => `
+    <div class="milestone">
+      <div class="milestone-dot ${m.status}"></div>
+      <div><strong>Wk ${m.week}</strong><br>${m.label}</div>
+    </div>`).join('');
+
+  return `
+    <div class="result-headline">${weeks} weeks, ${days} day${days !== 1 ? 's' : ''}</div>
+    <div class="result-sub">You are <strong>${weeks}+${days}</strong> weeks pregnant today</div>
+    <div class="result-stats">
+      <div class="stat-card">
+        <div class="stat-label">Trimester</div>
+        <div class="stat-value highlight">${tri.num} · ${tri.name}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Due Date (EDD)</div>
+        <div class="stat-value">${eddStr}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Progress</div>
+        <div class="stat-value">${pct}% complete</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Days Remaining</div>
+        <div class="stat-value">${Math.max(0, 280 - totalDays)} days</div>
+      </div>
+    </div>
+    <div class="trimester-bar">
+      <div class="trimester-fill" style="width: ${pct}%;"></div>
+    </div>
+    <div class="progress-label">
+      <span>Week 1</span><span>Week 13 (T1)</span><span>Week 27 (T2)</span><span>Week 40</span>
+    </div>
+    <div class="milestone-row">${milestoneHTML}</div>
+    <div class="disclaimer-box">
+      ⚠️ This calculator provides an estimate only. Gestational age determined by ultrasound may differ. Always confirm pregnancy dating with your healthcare provider.
+    </div>`;
+}
+
+function showResult(boxId, html) {
+  const box = document.getElementById(boxId);
+  box.innerHTML = html;
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function calculateLMP() {
+  const lmpVal = document.getElementById('lmp-date').value;
+  const cycle = parseInt(document.getElementById('cycle-length').value);
+  if (!lmpVal) { alert('Please enter your LMP date.'); return; }
+  const lmp = new Date(lmpVal);
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const cycleAdj = cycle - 28;
+  const totalDays = Math.floor((today - lmp) / 86400000);
+  const adjDays = totalDays;
+  const edd = addDays(lmp, 280 + cycleAdj);
+  showResult('result-lmp', buildResult(adjDays, edd));
+}
+
+function calculateUS() {
+  const weeksVal = document.getElementById('us-weeks').value;
+  const daysVal = document.getElementById('us-days').value || '0';
+  const scanVal = document.getElementById('us-date').value;
+  if (!weeksVal || !scanVal) { alert('Please fill in the ultrasound gestational age and scan date.'); return; }
+  const usWeeks = parseInt(weeksVal);
+  const usDays = parseInt(daysVal);
+  const scanDate = new Date(scanVal);
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const daysSinceScan = Math.floor((today - scanDate) / 86400000);
+  const gaAtScan = usWeeks * 7 + usDays;
+  const totalDays = gaAtScan + daysSinceScan;
+  const eddDaysFromScan = 280 - gaAtScan;
+  const edd = addDays(scanDate, eddDaysFromScan);
+  showResult('result-us', buildResult(totalDays, edd));
+}
+
+function calculateEDD() {
+  const eddVal = document.getElementById('edd-date').value;
+  if (!eddVal) { alert('Please enter your estimated due date.'); return; }
+  const edd = new Date(eddVal);
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const daysToEDD = Math.floor((edd - today) / 86400000);
+  const totalDays = 280 - daysToEDD;
+  showResult('result-edd', buildResult(totalDays, edd));
+}
+
+function toggleFAQ(el) {
+  el.parentElement.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
