@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fetal Growth Calculator – Baby Weight & Length Percentiles by Week | RxMedCalc</title>
+<meta name="description" content="Calculate estimated fetal weight and length by gestational week. Compare baby's growth to WHO and Hadlock percentiles. Includes fetal size comparison and growth milestones.">
+<meta name="keywords" content="fetal growth calculator, baby weight by week, fetal weight percentile, estimated fetal weight calculator, fetal size by week, baby length gestational age, fetal growth chart, EFW calculator, fetal biometry calculator, baby development by week">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rxmedcalc.com/fetal-growth-calculator">
+<meta property="og:title" content="Fetal Growth Calculator – Baby Weight & Size by Week | RxMedCalc">
+<meta property="og:description" content="How big is your baby this week? Compare estimated fetal weight and length to WHO growth percentiles. Free, instant, medically referenced.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rxmedcalc.com/fetal-growth-calculator">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Fetal Growth Calculator",
+      "url": "https://rxmedcalc.com/fetal-growth-calculator",
+      "description": "Calculate estimated fetal weight and length by gestational week and compare to WHO/Hadlock growth percentiles.",
+      "medicalAudience": [{"@type": "MedicalAudience","audienceType": "Patient"},{"@type": "MedicalAudience","audienceType": "Clinician"}],
+      "specialty": {"@type": "MedicalSpecialty","name": "Obstetrics and Gynecology"},
+      "publisher": {"@type": "Organization","name": "RxMedCalc","url": "https://rxmedcalc.com"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Home","item": "https://rxmedcalc.com"},
+        {"@type": "ListItem","position": 2,"name": "Pregnancy","item": "https://rxmedcalc.com/pregnancy"},
+        {"@type": "ListItem","position": 3,"name": "Fetal Growth Calculator","item": "https://rxmedcalc.com/fetal-growth-calculator"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "What is normal fetal weight at 20 weeks?","acceptedAnswer": {"@type": "Answer","text": "At 20 weeks, the average estimated fetal weight (EFW) is approximately 300 g (10.6 oz). The normal range (10th to 90th percentile) spans roughly 240–370 g."}},
+        {"@type": "Question","name": "What is considered a large-for-gestational-age baby?","acceptedAnswer": {"@type": "Answer","text": "A baby is considered large-for-gestational-age (LGA) when their estimated or actual weight is above the 90th percentile for their gestational age. This is associated with gestational diabetes and macrosomia."}},
+        {"@type": "Question","name": "What is small-for-gestational-age (SGA)?","acceptedAnswer": {"@type": "Answer","text": "Small-for-gestational-age (SGA) refers to a baby whose estimated or birth weight is below the 10th percentile for their gestational age. Severely SGA is defined as below the 3rd percentile and may indicate fetal growth restriction (FGR)."}},
+        {"@type": "Question","name": "How is estimated fetal weight calculated on ultrasound?","acceptedAnswer": {"@type": "Answer","text": "The most common formula is the Hadlock formula, which uses a combination of ultrasound measurements: biparietal diameter (BPD), head circumference (HC), abdominal circumference (AC), and femur length (FL). The Hadlock 4-parameter formula has a standard error of approximately ±15% of actual birth weight."}}
+      ]
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --primary:#c06020;--primary-light:#fdf2ea;--primary-mid:#d4783a;
+    --accent:#2e7d8b;--text-main:#1a1818;--text-muted:#5a5252;--text-light:#8a8080;
+    --border:#e8ddd8;--surface:#fdf9f7;--white:#ffffff;
+    --warn-bg:#fef3ec;--radius:12px;--radius-sm:6px;
+    --shadow:0 1px 3px rgba(0,0,0,0.08),0 4px 12px rgba(0,0,0,0.04);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;color:var(--text-main);background:var(--white)}
+  .nav{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:12px;background:var(--white);position:sticky;top:0;z-index:100}
+  .nav-logo{font-family:'DM Serif Display',serif;font-size:20px;color:var(--primary);text-decoration:none}
+  .breadcrumb{font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:6px;margin-left:auto}
+  .breadcrumb a{color:var(--primary);text-decoration:none}
+  .hero{background:linear-gradient(135deg,#7a3010 0%,#c06020 60%,#d4783a 100%);color:white;padding:56px 24px 48px;text-align:center}
+  .hero-tag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:20px;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;color:rgba(255,255,255,0.9)}
+  .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,46px);font-weight:400;line-height:1.2;margin-bottom:14px;color:white}
+  .hero-sub{font-size:17px;color:rgba(255,255,255,0.8);max-width:540px;margin:0 auto 28px}
+  .hero-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .hero-pill{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:20px;font-size:13px;padding:5px 14px;color:rgba(255,255,255,0.85)}
+  .container{max-width:860px;margin:0 auto;padding:0 24px}
+  .calc-card{background:var(--white);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);margin:-28px auto 40px;max-width:720px;overflow:hidden;position:relative;z-index:10}
+  .calc-header{background:var(--surface);border-bottom:1px solid var(--border);padding:20px 28px}
+  .calc-header h2{font-family:'DM Serif Display',serif;font-size:20px;font-weight:400;color:var(--text-main);margin:0}
+  .calc-body{padding:28px}
+  .form-group{margin-bottom:20px}
+  .form-label{display:block;font-size:14px;font-weight:500;color:var(--text-muted);margin-bottom:7px}
+  .form-input{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-main);background:var(--white);transition:border-color 0.15s;appearance:none}
+  .form-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(192,96,32,0.1)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.form-row{grid-template-columns:1fr}}
+  .calc-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--surface)}
+  .calc-tab{flex:1;padding:14px 10px;font-size:14px;font-weight:500;color:var(--text-muted);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.18s;text-align:center}
+  .calc-tab.active{color:var(--primary);border-bottom-color:var(--primary);background:var(--white)}
+  .calc-tab:hover:not(.active){color:var(--primary);background:rgba(192,96,32,0.04)}
+  .calc-panel{display:none;padding:28px}
+  .calc-panel.active{display:block}
+  .calc-btn{width:100%;padding:14px;background:var(--primary);color:white;border:none;border-radius:var(--radius-sm);font-size:16px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background 0.15s,transform 0.1s;margin-top:8px}
+  .calc-btn:hover{background:#9a4c18}
+  .calc-btn:active{transform:scale(0.99)}
+  .result-box{background:var(--primary-light);border:1px solid #e8c4a0;border-radius:var(--radius);padding:24px;margin-top:24px;display:none}
+  .result-box.show{display:block;animation:fadeIn 0.3s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .result-headline{font-family:'DM Serif Display',serif;font-size:28px;color:var(--primary);margin-bottom:4px}
+  .result-sub{font-size:15px;color:var(--text-muted);margin-bottom:20px}
+  .result-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px}
+  .stat-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px}
+  .stat-label{font-size:12px;color:var(--text-light);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px}
+  .stat-value{font-size:18px;font-weight:600;color:var(--text-main)}
+  .stat-value.highlight{color:var(--primary)}
+  .percentile-bar-container{margin:16px 0}
+  .pct-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text-light);margin-bottom:4px}
+  .pct-track{position:relative;height:12px;background:#e8c4a0;border-radius:6px;overflow:visible}
+  .pct-normal-zone{position:absolute;background:#d4e8d0;height:100%;border-radius:6px}
+  .pct-marker{position:absolute;width:3px;height:22px;top:-5px;background:var(--primary);border-radius:2px;transform:translateX(-50%)}
+  .pct-marker-label{position:absolute;font-size:12px;font-weight:600;color:var(--primary);top:-24px;transform:translateX(-50%);white-space:nowrap}
+  .fruit-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;display:flex;align-items:center;gap:16px;margin:16px 0}
+  .fruit-emoji{font-size:40px;flex-shrink:0}
+  .fruit-info h4{font-size:16px;font-weight:600;margin-bottom:3px}
+  .fruit-info p{font-size:14px;color:var(--text-muted);margin:0}
+  .percentile-badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:13px;font-weight:500;margin-bottom:12px}
+  .pct-sga{background:#fee2e2;color:#991b1b}
+  .pct-normal{background:#d1fae5;color:#065f46}
+  .pct-lga{background:#fef3c7;color:#92400e}
+  .disclaimer-box{background:#fef3ec;border-left:3px solid var(--primary);border-radius:4px;padding:12px 16px;font-size:13px;color:#7a3010;margin-top:20px;line-height:1.5}
+  .section{padding:52px 0}
+  .section+.section{border-top:1px solid var(--border)}
+  h2{font-family:'DM Serif Display',serif;font-size:clamp(22px,3.5vw,30px);font-weight:400;color:var(--text-main);margin-bottom:16px;line-height:1.3}
+  h3{font-size:18px;font-weight:600;color:var(--text-main);margin-bottom:10px;margin-top:28px}
+  p{margin-bottom:16px;color:var(--text-main)}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:600}
+  ul,ol{padding-left:20px;margin-bottom:16px}
+  li{margin-bottom:8px;color:var(--text-main)}
+  .growth-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+  .growth-table th{background:var(--primary);color:white;padding:10px 12px;text-align:right;font-weight:500}
+  .growth-table th:first-child{text-align:left;border-radius:8px 0 0 0}
+  .growth-table th:last-child{border-radius:0 8px 0 0}
+  .growth-table td{padding:9px 12px;border-bottom:1px solid var(--border);text-align:right}
+  .growth-table td:first-child{text-align:left;font-weight:500}
+  .growth-table tr:nth-child(even) td{background:var(--surface)}
+  .growth-table tr:hover td{background:var(--primary-light)}
+  .faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+  .faq-item:last-child{border-bottom:none}
+  .faq-q{font-weight:600;font-size:16px;color:var(--text-main);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;user-select:none}
+  .faq-toggle{font-size:20px;color:var(--primary);flex-shrink:0;transition:transform 0.2s}
+  .faq-a{margin-top:12px;color:var(--text-muted);font-size:15px;display:none}
+  .faq-item.open .faq-a{display:block}
+  .faq-item.open .faq-toggle{transform:rotate(45deg)}
+  .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:20px}
+  .related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;text-decoration:none;color:var(--text-main);transition:border-color 0.15s,box-shadow 0.15s;display:block}
+  .related-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(192,96,32,0.08)}
+  .related-card-icon{font-size:22px;margin-bottom:8px}
+  .related-card-title{font-weight:600;font-size:14px;margin-bottom:4px}
+  .related-card-desc{font-size:13px;color:var(--text-muted)}
+  .ref-list{margin:16px 0}
+  .ref-item{font-size:13px;color:var(--text-muted);padding:10px 0;border-bottom:1px solid var(--border);display:flex;gap:12px;align-items:flex-start}
+  .ref-num{color:var(--primary);font-weight:600;flex-shrink:0}
+  .page-footer{background:var(--surface);border-top:1px solid var(--border);padding:32px 24px;text-align:center;font-size:13px;color:var(--text-muted);margin-top:48px}
+  .page-footer a{color:var(--primary);text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="https://rxmedcalc.com" class="nav-logo">RxMedCalc</a>
+  <div class="breadcrumb">
+    <a href="https://rxmedcalc.com">Home</a><span>›</span>
+    <a href="https://rxmedcalc.com/pregnancy">Pregnancy</a><span>›</span>
+    <span>Fetal Growth Calculator</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-tag">Free Pregnancy Tool</div>
+  <h1>Fetal Growth Calculator</h1>
+  <p class="hero-sub">See your baby's estimated weight, length, and size comparison — and how they compare to WHO growth percentiles by gestational week.</p>
+  <div class="hero-pills">
+    <span class="hero-pill">✓ Weight &amp; Length by Week</span>
+    <span class="hero-pill">✓ WHO / Hadlock Percentiles</span>
+    <span class="hero-pill">✓ Fruit Size Comparison</span>
+    <span class="hero-pill">✓ SGA / LGA Detection</span>
+  </div>
+</header>
+
+<div class="container">
+  <div class="calc-card">
+    <div class="calc-tabs">
+      <button class="calc-tab active" onclick="switchTab('week', this)">By Gestational Week</button>
+      <button class="calc-tab" onclick="switchTab('biometry', this)">By Ultrasound Measurements</button>
+    </div>
+
+    <!-- Panel: By Week -->
+    <div class="calc-panel active" id="panel-week">
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:20px">Select your current gestational week to see average fetal size, growth range, and a fruit size comparison.</p>
+      <div class="form-group">
+        <label class="form-label" for="ga-week">Gestational week</label>
+        <select id="ga-week" class="form-input"></select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="ga-sex">Fetal sex (optional — affects percentile reference)</label>
+        <select id="ga-sex" class="form-input">
+          <option value="combined">Unknown / Combined</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="calculateByWeek()">Show Fetal Growth Data →</button>
+      <div class="result-box" id="result-week"></div>
+    </div>
+
+    <!-- Panel: Biometry -->
+    <div class="calc-panel" id="panel-biometry">
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:20px">Enter ultrasound biometry measurements to calculate Estimated Fetal Weight (EFW) using the Hadlock formula.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="bpd">BPD — Biparietal Diameter (mm)</label>
+          <input type="number" id="bpd" class="form-input" min="10" max="120" placeholder="e.g. 60">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="hc">HC — Head Circumference (mm)</label>
+          <input type="number" id="hc" class="form-input" min="50" max="400" placeholder="e.g. 220">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="ac">AC — Abdominal Circumference (mm)</label>
+          <input type="number" id="ac" class="form-input" min="50" max="450" placeholder="e.g. 195">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="fl">FL — Femur Length (mm)</label>
+          <input type="number" id="fl" class="form-input" min="5" max="90" placeholder="e.g. 44">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="bio-week">Gestational week at scan</label>
+        <input type="number" id="bio-week" class="form-input" min="14" max="42" placeholder="e.g. 28">
+      </div>
+      <button class="calc-btn" onclick="calculateBiometry()">Calculate EFW (Hadlock Formula) →</button>
+      <div class="result-box" id="result-biometry"></div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section class="section">
+  <div class="container">
+    <h2>Fetal Growth Chart by Week</h2>
+    <p>The table below shows median estimated fetal weight (EFW) and crown-rump / crown-heel length by gestational week, based on WHO Multicentre Growth Reference data and Hadlock nomograms. Note that individual variation is normal — what matters clinically is consistent growth along a percentile curve.</p>
+    <table class="growth-table" aria-label="Fetal growth by gestational week">
+      <thead>
+        <tr>
+          <th>Week</th><th>Avg Weight</th><th>10th %ile</th><th>90th %ile</th><th>Length (cm)</th><th>Size Comparison</th>
+        </tr>
+      </thead>
+      <tbody id="growth-table-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>How Is Fetal Growth Assessed?</h2>
+    <p>Fetal growth is assessed primarily through <strong>obstetric ultrasound</strong>. The key measurements taken are:</p>
+    <ul>
+      <li><strong>BPD (Biparietal Diameter):</strong> Width of the skull at the widest point. Most accurate for gestational dating before 20 weeks.</li>
+      <li><strong>HC (Head Circumference):</strong> Circumference of the fetal head. Reflects brain growth.</li>
+      <li><strong>AC (Abdominal Circumference):</strong> Circumference of the fetal abdomen at the level of the liver. The most sensitive indicator of fetal nutrition and growth restriction.</li>
+      <li><strong>FL (Femur Length):</strong> Length of the thigh bone. Reflects skeletal growth and long bone development.</li>
+      <li><strong>CRL (Crown-Rump Length):</strong> Used only in the first trimester (up to 14 weeks) to establish gestational age.</li>
+    </ul>
+
+    <h3>The Hadlock EFW Formula</h3>
+    <p>The Hadlock four-parameter formula is the most widely used globally for estimating fetal weight from ultrasound biometry:</p>
+    <p style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:12px 16px;font-family:monospace;font-size:13px">
+      log₁₀(EFW) = 1.3596 + 0.0064(HC) + 0.0424(AC) + 0.174(FL) + 0.00061(BPD × AC) − 0.00386(AC × FL)
+    </p>
+    <p>The result is in grams. The Hadlock formula has a systematic error (standard deviation) of approximately <strong>±7.5–15%</strong> of actual birth weight — meaning an EFW of 2,500 g could reflect a real weight of 2,125–2,875 g. This inherent imprecision is why growth trends over serial scans matter more than any single measurement.</p>
+
+    <h3>SGA, AGA, and LGA Explained</h3>
+    <p>Growth is classified by comparing EFW or birth weight to a reference population at the same gestational age:</p>
+    <ul>
+      <li><strong>SGA (Small-for-gestational-age):</strong> EFW &lt;10th percentile. Severe SGA is &lt;3rd percentile and may indicate fetal growth restriction (FGR).</li>
+      <li><strong>AGA (Appropriate-for-gestational-age):</strong> EFW 10th–90th percentile. Normal range.</li>
+      <li><strong>LGA (Large-for-gestational-age):</strong> EFW &gt;90th percentile. Associated with gestational diabetes, macrosomia, and birth complications.</li>
+    </ul>
+    <p>It is important to note that some SGA babies are constitutionally small (appropriate for their genetic potential) and are not at risk, while others have pathological growth restriction requiring monitoring. Your obstetrician interprets these findings alongside Doppler studies, amniotic fluid index (AFI), and clinical history.</p>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">How accurate is estimated fetal weight on ultrasound?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Ultrasound EFW has a margin of error of approximately ±15% of actual birth weight. This means if your baby's EFW is reported as 3,000 g, the actual weight could range from approximately 2,550 to 3,450 g. Accuracy tends to be better in the second trimester and worse in the third trimester. Serial measurements tracking growth velocity are more informative than a single isolated EFW.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">What does it mean if my baby is in the 30th percentile?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">A baby at the 30th percentile is within the normal range (10th–90th percentile) and is growing appropriately for gestational age. Percentile alone is less important than consistency — a baby who has been tracking at the 30th percentile throughout pregnancy is growing normally. Concern arises when there is a significant crossing of percentile lines (e.g., dropping from 50th to 10th), suggesting a deceleration in growth.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">What is the average baby weight at birth?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">The average birth weight for a full-term singleton (40 weeks) is approximately 3,300–3,500 g (7 lb 4 oz – 7 lb 11 oz). Normal birth weight ranges from 2,500 g (5 lb 8 oz) to 4,000 g (8 lb 13 oz). Babies weighing less than 2,500 g at birth are classified as low birth weight (LBW), regardless of gestational age.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Does fetal sex affect growth percentiles?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Yes. Male fetuses are on average slightly heavier than female fetuses from mid-pregnancy onwards — the difference is approximately 100–150 g at term. Sex-specific growth charts offer marginally more accurate percentile classification, particularly near the boundaries of SGA and LGA. However, combined (sex-neutral) charts are also widely used and clinically acceptable.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Related Pregnancy Calculators</h2>
+    <div class="related-grid">
+      <a href="https://rxmedcalc.com/gestational-age-calculator" class="related-card"><div class="related-card-icon">📅</div><div class="related-card-title">Gestational Age Calculator</div><div class="related-card-desc">Find out exactly how many weeks pregnant you are.</div></a>
+      <a href="https://rxmedcalc.com/pregnancy-weight-gain-calculator" class="related-card"><div class="related-card-icon">⚖️</div><div class="related-card-title">Pregnancy Weight Gain</div><div class="related-card-desc">Track recommended weight gain by BMI and trimester.</div></a>
+      <a href="https://rxmedcalc.com/pregnancy-bmi-calculator" class="related-card"><div class="related-card-icon">📊</div><div class="related-card-title">Pregnancy BMI Calculator</div><div class="related-card-desc">Calculate your pre-pregnancy BMI and weight category.</div></a>
+      <a href="https://rxmedcalc.com/due-date-calculator" class="related-card"><div class="related-card-icon">📆</div><div class="related-card-title">Due Date Calculator</div><div class="related-card-desc">Calculate your EDD from LMP or conception date.</div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>References</h2>
+    <div class="ref-list">
+      <div class="ref-item"><span class="ref-num">1.</span><span>Hadlock FP, et al. Estimation of fetal weight with the use of head, body, and femur measurements. <em>Am J Obstet Gynecol.</em> 1985;151(3):333–337.</span></div>
+      <div class="ref-item"><span class="ref-num">2.</span><span>WHO Multicentre Growth Reference Study Group. <em>WHO Child Growth Standards: Length/Height-for-age, Weight-for-age, Weight-for-length, BMI-for-age.</em> Geneva: WHO; 2006.</span></div>
+      <div class="ref-item"><span class="ref-num">3.</span><span>Papageorghiou AT, et al. International standards for fetal growth based on serial ultrasound measurements: the Fetal Growth Longitudinal Study of the INTERGROWTH-21st Project. <em>Lancet.</em> 2014;384(9946):869–879.</span></div>
+      <div class="ref-item"><span class="ref-num">4.</span><span>ISUOG Practice Guidelines: diagnosis of fetal abnormalities in the second trimester. <em>Ultrasound Obstet Gynecol.</em> 2016;48:817–818.</span></div>
+    </div>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:16px">Last medical review: May 2025 · RxMedCalc Clinical Editorial Team.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="page-footer">
+  <p><strong>RxMedCalc</strong> · <a href="https://rxmedcalc.com/fetal-growth-calculator">Fetal Growth Calculator</a></p>
+  <p style="margin-top:8px">For informational purposes only. Consult your obstetrician or sonographer for clinical interpretation of fetal growth measurements.</p>
+  <p style="margin-top:8px"><a href="https://rxmedcalc.com/privacy">Privacy</a> · <a href="https://rxmedcalc.com/terms">Terms</a> · <a href="https://rxmedcalc.com/contact">Contact</a></p>
+</footer>
+
+<script>
+// ── Fetal growth data table (Hadlock/Intergrowth-21 based medians) ──
+const FETAL_DATA = {
+  // week: [medianWeightG, p10, p90, lengthCm, fruit, fruitDesc]
+  8:  [1, null, null, 1.6, '🫐', 'Blueberry'],
+  9:  [2, null, null, 2.3, '🍒', 'Cherry'],
+  10: [4, null, null, 3.1, '🫒', 'Olive'],
+  11: [7, null, null, 4.1, '🍋', 'Lime'],
+  12: [14, null, null, 5.4, '🍋', 'Lemon'],
+  13: [23, null, null, 7.4, '🫛', 'Pea pod'],
+  14: [43, null, null, 8.7, '🍑', 'Peach'],
+  15: [70, null, null, 10.1, '🍎', 'Apple'],
+  16: [100, 80, 130, 11.6, '🥑', 'Avocado'],
+  17: [140, 110, 180, 13.0, '🍐', 'Pear'],
+  18: [190, 150, 240, 14.2, '🫑', 'Bell pepper'],
+  19: [240, 195, 300, 15.3, '🥭', 'Mango'],
+  20: [300, 240, 370, 16.4, '🍌', 'Banana'],
+  21: [360, 285, 445, 26.7, '🥕', 'Carrot'],
+  22: [430, 340, 530, 27.8, '🌽', 'Corn'],
+  23: [501, 395, 620, 28.9, '🍆', 'Eggplant'],
+  24: [600, 475, 745, 30.0, '🌽', 'Corn on cob'],
+  25: [660, 520, 820, 34.6, '🧅', 'Cauliflower'],
+  26: [760, 600, 950, 35.6, '🥬', 'Lettuce head'],
+  27: [875, 690, 1090, 36.6, '🥦', 'Broccoli'],
+  28: [1005, 790, 1250, 37.6, '🍍', 'Pineapple'],
+  29: [1153, 905, 1440, 38.6, '🥥', 'Coconut'],
+  30: [1319, 1035, 1648, 39.9, '🎃', 'Small pumpkin'],
+  31: [1502, 1178, 1880, 41.1, '🥥', 'Large coconut'],
+  32: [1702, 1333, 2130, 42.4, '🍈', 'Honeydew melon'],
+  33: [1918, 1501, 2404, 43.7, '🍈', 'Cantaloupe'],
+  34: [2146, 1676, 2690, 45.0, '🎃', 'Pumpkin'],
+  35: [2383, 1856, 2991, 46.2, '🥐', 'Honeydew'],
+  36: [2622, 2039, 3290, 47.4, '🫑', 'Swiss chard'],
+  37: [2859, 2219, 3578, 48.6, '🥬', 'Romaine'],
+  38: [3083, 2386, 3855, 49.8, '🥒', 'Leek'],
+  39: [3288, 2534, 4099, 50.7, '🎃', 'Small watermelon'],
+  40: [3462, 2660, 4320, 51.2, '🍉', 'Watermelon'],
+  41: [3597, 2751, 4491, 51.7, '🍉', 'Large watermelon'],
+  42: [3685, 2808, 4615, 52.0, '🎃', 'Giant pumpkin'],
+};
+
+function getPercentile(weight, week) {
+  const d = FETAL_DATA[week];
+  if (!d || d[1] == null) return null;
+  const p10 = d[1], p50 = d[0], p90 = d[2];
+  if (weight < p10) {
+    const pct = Math.max(1, Math.round((weight / p10) * 10));
+    return { pct, cls: 'pct-sga', label: 'Below 10th percentile (SGA range)' };
+  }
+  if (weight > p90) {
+    const pct = Math.min(99, Math.round(90 + ((weight - p90) / (p90 * 0.2)) * 9));
+    return { pct, cls: 'pct-lga', label: 'Above 90th percentile (LGA range)' };
+  }
+  const pct = Math.round(10 + ((weight - p10) / (p90 - p10)) * 80);
+  return { pct, cls: 'pct-normal', label: `${pct}th percentile (normal range)` };
+}
+
+function buildWeekResult(week, weightG, lengthCm, fruitEmoji, fruitDesc, percentileInfo) {
+  const weightLb = (weightG / 453.592).toFixed(2);
+  const weightOz = ((weightG / 453.592) * 16).toFixed(1);
+  const d = FETAL_DATA[week];
+  const p10disp = d[1] ? `${d[1]}g` : '—';
+  const p90disp = d[2] ? `${d[2]}g` : '—';
+  const pctBar = percentileInfo ? `
+    <div class="percentile-bar-container">
+      <div class="pct-labels"><span>3rd</span><span>10th</span><span>50th</span><span>90th</span><span>97th</span></div>
+      <div class="pct-track">
+        <div class="pct-normal-zone" style="left:10%;width:80%"></div>
+        <div class="pct-marker" style="left:${percentileInfo.pct}%">
+          <div class="pct-marker-label">${percentileInfo.pct}th</div>
+        </div>
+      </div>
+    </div>` : '';
+
+  return `
+    <div class="result-headline">Week ${week}: ${weightG >= 1000 ? (weightG/1000).toFixed(2) + ' kg' : weightG + ' g'}</div>
+    <div class="result-sub">${lengthCm} cm long · approximately ${weightLb} lb (${weightOz} oz)</div>
+    ${percentileInfo ? `<span class="percentile-badge ${percentileInfo.cls}">${percentileInfo.label}</span>` : ''}
+    <div class="result-stats">
+      <div class="stat-card"><div class="stat-label">Median Weight</div><div class="stat-value highlight">${weightG >= 1000 ? (weightG/1000).toFixed(2)+' kg' : weightG+' g'}</div></div>
+      <div class="stat-card"><div class="stat-label">Normal Range</div><div class="stat-value">${p10disp} – ${p90disp}</div></div>
+      <div class="stat-card"><div class="stat-label">Crown-Heel Length</div><div class="stat-value">${lengthCm} cm</div></div>
+      <div class="stat-card"><div class="stat-label">In Imperial</div><div class="stat-value">${weightLb} lb</div></div>
+    </div>
+    <div class="fruit-card">
+      <div class="fruit-emoji">${fruitEmoji}</div>
+      <div class="fruit-info">
+        <h4>Size of a ${fruitDesc}</h4>
+        <p>At week ${week}, your baby is about the size of a ${fruitDesc.toLowerCase()} — weighing around ${weightG >= 1000 ? (weightG/1000).toFixed(2)+' kg' : weightG+' g'} and measuring ${lengthCm} cm crown-to-heel.</p>
+      </div>
+    </div>
+    ${pctBar}
+    <div class="disclaimer-box">⚠️ These values are population medians. Individual variation is normal and expected. A single measurement below or above average is not a clinical diagnosis — consult your OB/GYN or midwife for interpretation.</div>`;
+}
+
+function switchTab(tab, btn) {
+  document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + tab).classList.add('active');
+}
+
+function calculateByWeek() {
+  const week = parseInt(document.getElementById('ga-week').value);
+  const d = FETAL_DATA[week];
+  if (!d) { alert('Data not available for this week.'); return; }
+  const box = document.getElementById('result-week');
+  box.innerHTML = buildWeekResult(week, d[0], d[3], d[4], d[5], null);
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function calculateBiometry() {
+  const bpd = parseFloat(document.getElementById('bpd').value);
+  const hc = parseFloat(document.getElementById('hc').value);
+  const ac = parseFloat(document.getElementById('ac').value);
+  const fl = parseFloat(document.getElementById('fl').value);
+  const week = parseInt(document.getElementById('bio-week').value);
+  if (!bpd || !hc || !ac || !fl || !week) { alert('Please fill in all four measurements and gestational week.'); return; }
+  // Hadlock 4-param formula
+  const log10efw = 1.3596 + 0.0064*(hc/10) + 0.0424*(ac/10) + 0.174*(fl/10) + 0.00061*(bpd/10)*(ac/10) - 0.00386*(ac/10)*(fl/10);
+  const efw = Math.round(Math.pow(10, log10efw));
+  const d = FETAL_DATA[week] || [null,null,null,null,'👶','Baby'];
+  const percentileInfo = d[1] ? getPercentile(efw, week) : null;
+  const fruit = d[4] || '👶'; const fruitDesc = d[5] || 'Baby';
+  const length = d[3] || '—';
+  const weightLb = (efw / 453.592).toFixed(2);
+  const weightOz = ((efw / 453.592) * 16).toFixed(1);
+  const p10disp = d[1] ? `${d[1]}g` : '—';
+  const p90disp = d[2] ? `${d[2]}g` : '—';
+  const pctBarHTML = percentileInfo ? `
+    <div class="percentile-bar-container">
+      <div class="pct-labels"><span>3rd</span><span>10th</span><span>50th</span><span>90th</span><span>97th</span></div>
+      <div class="pct-track">
+        <div class="pct-normal-zone" style="left:10%;width:80%"></div>
+        <div class="pct-marker" style="left:${Math.min(98,Math.max(2,percentileInfo.pct))}%">
+          <div class="pct-marker-label">${percentileInfo.pct}th</div>
+        </div>
+      </div>
+    </div>` : '';
+
+  const html = `
+    <div class="result-headline">EFW: ${efw >= 1000 ? (efw/1000).toFixed(2)+' kg' : efw+' g'}</div>
+    <div class="result-sub">Estimated Fetal Weight at week ${week} (Hadlock formula) · ${weightLb} lb (${weightOz} oz)</div>
+    ${percentileInfo ? `<span class="percentile-badge ${percentileInfo.cls}">${percentileInfo.label}</span>` : ''}
+    <div class="result-stats">
+      <div class="stat-card"><div class="stat-label">EFW (Hadlock)</div><div class="stat-value highlight">${efw >= 1000 ? (efw/1000).toFixed(2)+' kg' : efw+' g'}</div></div>
+      <div class="stat-card"><div class="stat-label">Normal Range Wk ${week}</div><div class="stat-value">${p10disp} – ${p90disp}</div></div>
+      <div class="stat-card"><div class="stat-label">In Imperial</div><div class="stat-value">${weightLb} lb</div></div>
+      <div class="stat-card"><div class="stat-label">Margin of Error (±15%)</div><div class="stat-value">${Math.round(efw*0.85)}–${Math.round(efw*1.15)} g</div></div>
+    </div>
+    ${pctBarHTML}
+    <div class="disclaimer-box">⚠️ The Hadlock formula carries an inherent error of ±7.5–15% of actual birth weight. EFW is a clinical estimate — always interpret with your healthcare provider in the context of serial scans and clinical assessment.</div>`;
+
+  const box = document.getElementById('result-biometry');
+  box.innerHTML = html;
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function toggleFAQ(el) { el.parentElement.classList.toggle('open'); }
+
+// Populate week select
+(function() {
+  const sel = document.getElementById('ga-week');
+  for (let w = 8; w <= 42; w++) {
+    const opt = document.createElement('option');
+    opt.value = w; opt.textContent = `Week ${w}`;
+    if (w === 20) opt.selected = true;
+    sel.appendChild(opt);
+  }
+})();
+
+// Populate growth table
+(function() {
+  const tbody = document.getElementById('growth-table-body');
+  const weeks = [8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,37,38,39,40];
+  weeks.forEach(w => {
+    const d = FETAL_DATA[w];
+    if (!d) return;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>Week ${w}</td>
+      <td>${d[0] >= 1000 ? (d[0]/1000).toFixed(2)+' kg' : d[0]+' g'}</td>
+      <td>${d[1] ? d[1]+'g' : '—'}</td>
+      <td>${d[2] ? d[2]+'g' : '—'}</td>
+      <td>${d[3]} cm</td>
+      <td>${d[4]} ${d[5]}</td>`;
+    tbody.appendChild(tr);
+  });
+})();
+</script>
+</body>
+</html>
