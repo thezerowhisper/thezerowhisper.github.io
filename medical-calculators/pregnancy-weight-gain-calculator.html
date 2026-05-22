@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregnancy Weight Gain Calculator – By Trimester & BMI | RxMedCalc</title>
+<meta name="description" content="Calculate recommended pregnancy weight gain by week and trimester based on your pre-pregnancy BMI. Follows IOM 2009 guidelines. Track healthy weight gain for singleton and twin pregnancies.">
+<meta name="keywords" content="pregnancy weight gain calculator, how much weight to gain during pregnancy, pregnancy weight gain by week, healthy weight gain pregnancy, IOM pregnancy weight guidelines, twin pregnancy weight gain, pregnancy BMI weight gain">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rxmedcalc.com/pregnancy-weight-gain-calculator">
+<meta property="og:title" content="Pregnancy Weight Gain Calculator – RxMedCalc">
+<meta property="og:description" content="How much weight should you gain during pregnancy? Get trimester-by-trimester targets based on your pre-pregnancy BMI. Free, instant, based on IOM guidelines.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rxmedcalc.com/pregnancy-weight-gain-calculator">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Pregnancy Weight Gain Calculator",
+      "url": "https://rxmedcalc.com/pregnancy-weight-gain-calculator",
+      "description": "Calculate recommended pregnancy weight gain by pre-pregnancy BMI and gestational week, following IOM 2009 guidelines.",
+      "medicalAudience": [{"@type": "MedicalAudience","audienceType": "Patient"}],
+      "specialty": {"@type": "MedicalSpecialty","name": "Obstetrics and Gynecology"},
+      "publisher": {"@type": "Organization","name": "RxMedCalc","url": "https://rxmedcalc.com"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Home","item": "https://rxmedcalc.com"},
+        {"@type": "ListItem","position": 2,"name": "Pregnancy","item": "https://rxmedcalc.com/pregnancy"},
+        {"@type": "ListItem","position": 3,"name": "Pregnancy Weight Gain Calculator","item": "https://rxmedcalc.com/pregnancy-weight-gain-calculator"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "How much weight should I gain during pregnancy?","acceptedAnswer": {"@type": "Answer","text": "According to IOM 2009 guidelines: underweight (BMI <18.5): 28–40 lb (12.5–18 kg); normal weight (BMI 18.5–24.9): 25–35 lb (11.5–16 kg); overweight (BMI 25–29.9): 15–25 lb (7–11.5 kg); obese (BMI ≥30): 11–20 lb (5–9 kg)."}},
+        {"@type": "Question","name": "How much weight should I gain per week during pregnancy?","acceptedAnswer": {"@type": "Answer","text": "In the first trimester, total gain of 1–4 lb (0.5–2 kg) is typical. From the second trimester onward, normal-weight women should gain approximately 1 lb (0.45 kg) per week. Overweight women should aim for about 0.6 lb/week and obese women about 0.5 lb/week."}},
+        {"@type": "Question","name": "What happens if I gain too much weight during pregnancy?","acceptedAnswer": {"@type": "Answer","text": "Excessive gestational weight gain increases the risk of gestational diabetes, preeclampsia, caesarean delivery, large-for-gestational-age babies, and difficulty losing weight after delivery. It also raises the child's long-term risk of obesity."}},
+        {"@type": "Question","name": "Can I diet during pregnancy?","acceptedAnswer": {"@type": "Answer","text": "Calorie restriction during pregnancy is not recommended. However, eating a balanced diet, avoiding excessive added sugars and ultra-processed foods, and gentle physical activity are safe and recommended for all BMI categories to support healthy weight gain."}}
+      ]
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --primary:#8b3a8b;--primary-light:#f5eaf5;--primary-mid:#b05bb0;
+    --accent:#d45f1e;--text-main:#1a1a2e;--text-muted:#5a5870;--text-light:#8a8898;
+    --border:#ddd8ee;--surface:#faf8fd;--white:#ffffff;
+    --warn:#d45f1e;--warn-bg:#fef3ec;--radius:12px;--radius-sm:6px;
+    --shadow:0 1px 3px rgba(0,0,0,0.08),0 4px 12px rgba(0,0,0,0.04);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;color:var(--text-main);background:var(--white)}
+  .nav{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:12px;background:var(--white);position:sticky;top:0;z-index:100}
+  .nav-logo{font-family:'DM Serif Display',serif;font-size:20px;color:var(--primary);text-decoration:none}
+  .breadcrumb{font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:6px;margin-left:auto}
+  .breadcrumb a{color:var(--primary);text-decoration:none}
+  .hero{background:linear-gradient(135deg,#5c1a6e 0%,#8b3a8b 60%,#b05bb0 100%);color:white;padding:56px 24px 48px;text-align:center}
+  .hero-tag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:20px;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:4px 14px;margin-bottom:20px;color:rgba(255,255,255,0.9)}
+  .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,46px);font-weight:400;line-height:1.2;margin-bottom:14px;color:white}
+  .hero-sub{font-size:17px;color:rgba(255,255,255,0.8);max-width:540px;margin:0 auto 28px}
+  .hero-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .hero-pill{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:20px;font-size:13px;padding:5px 14px;color:rgba(255,255,255,0.85)}
+  .container{max-width:860px;margin:0 auto;padding:0 24px}
+  .calc-card{background:var(--white);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);margin:-28px auto 40px;max-width:720px;overflow:hidden;position:relative;z-index:10}
+  .calc-header{background:var(--surface);border-bottom:1px solid var(--border);padding:20px 28px}
+  .calc-header h2{font-family:'DM Serif Display',serif;font-size:20px;font-weight:400;color:var(--text-main);margin:0}
+  .calc-body{padding:28px}
+  .form-group{margin-bottom:20px}
+  .form-label{display:block;font-size:14px;font-weight:500;color:var(--text-muted);margin-bottom:7px}
+  .form-input{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-main);background:var(--white);transition:border-color 0.15s;appearance:none}
+  .form-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(139,58,139,0.1)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.form-row{grid-template-columns:1fr}}
+  .unit-toggle{display:flex;gap:0;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;width:fit-content;margin-bottom:20px}
+  .unit-btn{padding:8px 18px;font-size:14px;font-family:'DM Sans',sans-serif;border:none;background:var(--white);cursor:pointer;color:var(--text-muted);transition:all 0.15s}
+  .unit-btn.active{background:var(--primary);color:white}
+  .calc-btn{width:100%;padding:14px;background:var(--primary);color:white;border:none;border-radius:var(--radius-sm);font-size:16px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background 0.15s,transform 0.1s;margin-top:8px}
+  .calc-btn:hover{background:#6d2a6d}
+  .calc-btn:active{transform:scale(0.99)}
+  .result-box{background:var(--primary-light);border:1px solid #d4b8d4;border-radius:var(--radius);padding:24px;margin-top:24px;display:none}
+  .result-box.show{display:block;animation:fadeIn 0.3s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .result-headline{font-family:'DM Serif Display',serif;font-size:28px;color:var(--primary);margin-bottom:4px}
+  .result-sub{font-size:15px;color:var(--text-muted);margin-bottom:20px}
+  .result-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+  .stat-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px}
+  .stat-label{font-size:12px;color:var(--text-light);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px}
+  .stat-value{font-size:18px;font-weight:600;color:var(--text-main)}
+  .stat-value.highlight{color:var(--primary)}
+  .progress-section{margin-top:20px}
+  .progress-label-row{display:flex;justify-content:space-between;font-size:13px;color:var(--text-muted);margin-bottom:6px}
+  .progress-bar-wrap{background:#d4b8d4;border-radius:4px;height:10px;overflow:hidden;position:relative}
+  .progress-fill{height:100%;background:var(--primary);border-radius:4px;transition:width 0.5s ease}
+  .progress-target{position:absolute;top:0;height:100%;width:2px;background:#fff;opacity:0.7}
+  .bmi-badge{display:inline-block;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:500;margin-bottom:12px}
+  .bmi-uw{background:#dbeafe;color:#1e40af}
+  .bmi-nw{background:#d1fae5;color:#065f46}
+  .bmi-ow{background:#fef3c7;color:#92400e}
+  .bmi-ob{background:#fee2e2;color:#991b1b}
+  .trimester-breakdown{margin-top:20px}
+  .tri-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px}
+  .tri-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-align:center}
+  .tri-card-label{font-size:12px;color:var(--text-light);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px}
+  .tri-card-value{font-size:17px;font-weight:600;color:var(--primary)}
+  .tri-card-sub{font-size:12px;color:var(--text-muted);margin-top:3px}
+  .status-ok{color:#065f46}
+  .status-warn{color:#92400e}
+  .status-over{color:#991b1b}
+  .disclaimer-box{background:var(--warn-bg);border-left:3px solid var(--accent);border-radius:4px;padding:12px 16px;font-size:13px;color:#7a3510;margin-top:20px;line-height:1.5}
+  .section{padding:52px 0}
+  .section+.section{border-top:1px solid var(--border)}
+  h2{font-family:'DM Serif Display',serif;font-size:clamp(22px,3.5vw,30px);font-weight:400;color:var(--text-main);margin-bottom:16px;line-height:1.3}
+  h3{font-size:18px;font-weight:600;color:var(--text-main);margin-bottom:10px;margin-top:28px}
+  p{margin-bottom:16px;color:var(--text-main)}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:600}
+  ul,ol{padding-left:20px;margin-bottom:16px}
+  li{margin-bottom:8px;color:var(--text-main)}
+  .iom-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+  .iom-table th{background:var(--primary);color:white;padding:12px 16px;text-align:left;font-weight:500}
+  .iom-table th:first-child{border-radius:8px 0 0 0}
+  .iom-table th:last-child{border-radius:0 8px 0 0}
+  .iom-table td{padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top}
+  .iom-table tr:nth-child(even) td{background:var(--surface)}
+  .iom-table tr:hover td{background:var(--primary-light)}
+  .faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+  .faq-item:last-child{border-bottom:none}
+  .faq-q{font-weight:600;font-size:16px;color:var(--text-main);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;user-select:none}
+  .faq-toggle{font-size:20px;color:var(--primary);flex-shrink:0;transition:transform 0.2s}
+  .faq-a{margin-top:12px;color:var(--text-muted);font-size:15px;display:none}
+  .faq-item.open .faq-a{display:block}
+  .faq-item.open .faq-toggle{transform:rotate(45deg)}
+  .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:20px}
+  .related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;text-decoration:none;color:var(--text-main);transition:border-color 0.15s,box-shadow 0.15s;display:block}
+  .related-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(139,58,139,0.08)}
+  .related-card-icon{font-size:22px;margin-bottom:8px}
+  .related-card-title{font-weight:600;font-size:14px;margin-bottom:4px}
+  .related-card-desc{font-size:13px;color:var(--text-muted)}
+  .ref-list{margin:16px 0}
+  .ref-item{font-size:13px;color:var(--text-muted);padding:10px 0;border-bottom:1px solid var(--border);display:flex;gap:12px;align-items:flex-start}
+  .ref-num{color:var(--primary);font-weight:600;flex-shrink:0}
+  .page-footer{background:var(--surface);border-top:1px solid var(--border);padding:32px 24px;text-align:center;font-size:13px;color:var(--text-muted);margin-top:48px}
+  .page-footer a{color:var(--primary);text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="https://rxmedcalc.com" class="nav-logo">RxMedCalc</a>
+  <div class="breadcrumb">
+    <a href="https://rxmedcalc.com">Home</a><span>›</span>
+    <a href="https://rxmedcalc.com/pregnancy">Pregnancy</a><span>›</span>
+    <span>Weight Gain Calculator</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-tag">Free Pregnancy Tool</div>
+  <h1>Pregnancy Weight Gain Calculator</h1>
+  <p class="hero-sub">Find your personalised weight gain targets by trimester — based on your pre-pregnancy BMI and IOM 2009 guidelines.</p>
+  <div class="hero-pills">
+    <span class="hero-pill">✓ IOM 2009 Guidelines</span>
+    <span class="hero-pill">✓ All BMI Categories</span>
+    <span class="hero-pill">✓ Singleton &amp; Twins</span>
+    <span class="hero-pill">✓ kg &amp; lb</span>
+  </div>
+</header>
+
+<div class="container">
+  <div class="calc-card">
+    <div class="calc-header">
+      <h2>Calculate Your Recommended Weight Gain</h2>
+    </div>
+    <div class="calc-body">
+
+      <div class="unit-toggle">
+        <button class="unit-btn active" id="btn-metric" onclick="setUnit('metric')">Metric (kg/cm)</button>
+        <button class="unit-btn" id="btn-imperial" onclick="setUnit('imperial')">Imperial (lb/in)</button>
+      </div>
+
+      <div id="metric-inputs">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="weight-kg">Pre-pregnancy weight (kg)</label>
+            <input type="number" id="weight-kg" class="form-input" min="30" max="250" placeholder="e.g. 62">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="height-cm">Height (cm)</label>
+            <input type="number" id="height-cm" class="form-input" min="100" max="220" placeholder="e.g. 162">
+          </div>
+        </div>
+      </div>
+
+      <div id="imperial-inputs" style="display:none">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="weight-lb">Pre-pregnancy weight (lb)</label>
+            <input type="number" id="weight-lb" class="form-input" min="80" max="500" placeholder="e.g. 137">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="height-in">Height (inches)</label>
+            <input type="number" id="height-in" class="form-input" min="48" max="84" placeholder="e.g. 64">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="current-week">Current gestational week</label>
+          <input type="number" id="current-week" class="form-input" min="1" max="42" placeholder="e.g. 24">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="pregnancy-type">Pregnancy type</label>
+          <select id="pregnancy-type" class="form-input">
+            <option value="singleton">Singleton (one baby)</option>
+            <option value="twins">Twins (two babies)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="current-weight-metric">Current weight <span id="curr-unit-label">(kg)</span></label>
+        <input type="number" id="current-weight" class="form-input" min="30" max="300" placeholder="Optional — to track current gain">
+      </div>
+
+      <button class="calc-btn" onclick="calculateWeightGain()">Calculate Weight Gain Targets →</button>
+      <div class="result-box" id="result-wg"></div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section class="section">
+  <div class="container">
+    <h2>How Much Weight Should You Gain During Pregnancy?</h2>
+    <p>Healthy gestational weight gain (GWG) depends primarily on your <strong>pre-pregnancy body mass index (BMI)</strong>. The Institute of Medicine (IOM) — now the National Academy of Medicine — published evidence-based guidelines in 2009 that remain the global clinical standard. These guidelines are endorsed by ACOG, WHO, and NICE.</p>
+    <p>The recommendations differ for singleton and twin pregnancies because twins place substantially higher nutritional and metabolic demands on the body. Women carrying twins require greater weight gain across all BMI categories to support optimal fetal growth.</p>
+
+    <table class="iom-table" aria-label="IOM 2009 pregnancy weight gain guidelines">
+      <thead>
+        <tr>
+          <th>Pre-pregnancy BMI</th>
+          <th>BMI Category</th>
+          <th>Singleton Gain</th>
+          <th>Twin Gain</th>
+          <th>Rate (2nd &amp; 3rd Tri)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>&lt;18.5</td><td>Underweight</td><td>28–40 lb (12.5–18 kg)</td><td>50–62 lb (23–28 kg)*</td><td>1.0–1.3 lb/wk (0.45–0.6 kg)</td></tr>
+        <tr><td>18.5–24.9</td><td>Normal weight</td><td>25–35 lb (11.5–16 kg)</td><td>37–54 lb (17–25 kg)</td><td>0.8–1.0 lb/wk (0.35–0.45 kg)</td></tr>
+        <tr><td>25.0–29.9</td><td>Overweight</td><td>15–25 lb (7–11.5 kg)</td><td>31–50 lb (14–23 kg)</td><td>0.5–0.7 lb/wk (0.23–0.32 kg)</td></tr>
+        <tr><td>≥30.0</td><td>Obese</td><td>11–20 lb (5–9 kg)</td><td>25–42 lb (11–19 kg)</td><td>0.4–0.6 lb/wk (0.18–0.27 kg)</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--text-muted)">*Limited data for underweight women with twin pregnancies. Consult your healthcare provider.</p>
+
+    <h3>First Trimester Weight Gain</h3>
+    <p>During the first trimester (weeks 1–13), total weight gain is modest regardless of BMI. Most guidelines suggest a total of <strong>1–4 lb (0.5–2 kg)</strong> over the entire first trimester. Weight gain accelerates in the second trimester as the placenta, amniotic fluid, and fetal tissues grow rapidly. Some women lose weight in the first trimester due to nausea and vomiting — this is generally not a concern if weight gain recovers in the second trimester.</p>
+
+    <h3>Where Does the Weight Go?</h3>
+    <p>The total weight gained during pregnancy is distributed across many components — not just the baby. For a woman gaining approximately 30 lb (13.6 kg):</p>
+    <ul>
+      <li><strong>Baby:</strong> ~7–8 lb (3.2–3.6 kg)</li>
+      <li><strong>Placenta:</strong> ~1.5 lb (0.7 kg)</li>
+      <li><strong>Amniotic fluid:</strong> ~2 lb (0.9 kg)</li>
+      <li><strong>Uterus growth:</strong> ~2 lb (0.9 kg)</li>
+      <li><strong>Breast tissue:</strong> ~2 lb (0.9 kg)</li>
+      <li><strong>Blood volume increase:</strong> ~4 lb (1.8 kg)</li>
+      <li><strong>Fluid and tissue:</strong> ~4 lb (1.8 kg)</li>
+      <li><strong>Maternal fat stores:</strong> ~7 lb (3.2 kg)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">What if I'm gaining more weight than recommended?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Gaining more than the recommended amount increases risks of gestational diabetes, preeclampsia, large-for-gestational-age babies, and caesarean delivery. Talk to your midwife or obstetrician — they may refer you to a dietitian. Avoid restrictive dieting; focus instead on nutrient-dense foods and moderate physical activity, as recommended by your provider.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">What if I'm not gaining enough weight during pregnancy?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Insufficient gestational weight gain is associated with small-for-gestational-age (SGA) babies, preterm birth, and low birth weight. If you're struggling to eat due to nausea or hyperemesis gravidarum, inform your healthcare provider. Treatment is available and it's important not to let severe nausea go unmanaged.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">How many extra calories do I need during pregnancy?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">No additional calories are needed in the first trimester. An extra ~340 calories/day in the second trimester and ~450 calories/day in the third trimester are sufficient for a normal-weight woman. Overweight and obese women may need fewer additional calories. Quality matters more than quantity — focus on protein, folate, iron, calcium, and omega-3 fatty acids.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Do the IOM guidelines apply worldwide?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">The IOM 2009 guidelines are widely used internationally, but some Asian countries (including India, Japan, and China) use lower BMI cutoffs for overweight and obesity (e.g., BMI ≥23 for overweight). Women of South Asian, East Asian, or Southeast Asian descent may have different metabolic risk profiles at lower BMIs — discuss this with your healthcare provider for personalised guidance.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Related Pregnancy Calculators</h2>
+    <div class="related-grid">
+      <a href="https://rxmedcalc.com/gestational-age-calculator" class="related-card"><div class="related-card-icon">📅</div><div class="related-card-title">Gestational Age Calculator</div><div class="related-card-desc">Find out exactly how many weeks pregnant you are.</div></a>
+      <a href="https://rxmedcalc.com/pregnancy-bmi-calculator" class="related-card"><div class="related-card-icon">📊</div><div class="related-card-title">Pregnancy BMI Calculator</div><div class="related-card-desc">Calculate your pre-pregnancy BMI and weight category.</div></a>
+      <a href="https://rxmedcalc.com/fetal-growth-calculator" class="related-card"><div class="related-card-icon">📏</div><div class="related-card-title">Fetal Growth Calculator</div><div class="related-card-desc">Compare baby's estimated weight and length to WHO percentiles.</div></a>
+      <a href="https://rxmedcalc.com/due-date-calculator" class="related-card"><div class="related-card-icon">📆</div><div class="related-card-title">Due Date Calculator</div><div class="related-card-desc">Calculate your EDD from LMP or conception date.</div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>References</h2>
+    <div class="ref-list">
+      <div class="ref-item"><span class="ref-num">1.</span><span>Institute of Medicine (IOM). <em>Weight Gain During Pregnancy: Reexamining the Guidelines.</em> Washington DC: National Academies Press; 2009.</span></div>
+      <div class="ref-item"><span class="ref-num">2.</span><span>ACOG Committee Opinion No. 548. Weight Gain During Pregnancy. <em>Obstet Gynecol.</em> 2013;121(1):210–212. Reaffirmed 2022.</span></div>
+      <div class="ref-item"><span class="ref-num">3.</span><span>Rasmussen KM, Yaktine AL, eds. <em>Weight Gain During Pregnancy.</em> National Academy of Medicine; 2009.</span></div>
+      <div class="ref-item"><span class="ref-num">4.</span><span>WHO. <em>Appropriate body-mass index for Asian populations and its implications for policy and intervention strategies.</em> Lancet. 2004;363:157–163.</span></div>
+    </div>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:16px">Last medical review: May 2025 · RxMedCalc Clinical Editorial Team.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="page-footer">
+  <p><strong>RxMedCalc</strong> · <a href="https://rxmedcalc.com/pregnancy-weight-gain-calculator">Pregnancy Weight Gain Calculator</a></p>
+  <p style="margin-top:8px">This tool is for informational purposes only. Always consult a qualified healthcare professional for personalised advice during pregnancy.</p>
+  <p style="margin-top:8px"><a href="https://rxmedcalc.com/privacy">Privacy</a> · <a href="https://rxmedcalc.com/terms">Terms</a> · <a href="https://rxmedcalc.com/contact">Contact</a></p>
+</footer>
+
+<script>
+let unit = 'metric';
+function setUnit(u) {
+  unit = u;
+  document.getElementById('metric-inputs').style.display = u === 'metric' ? '' : 'none';
+  document.getElementById('imperial-inputs').style.display = u === 'imperial' ? '' : 'none';
+  document.getElementById('btn-metric').classList.toggle('active', u === 'metric');
+  document.getElementById('btn-imperial').classList.toggle('active', u === 'imperial');
+  document.getElementById('curr-unit-label').textContent = u === 'metric' ? '(kg)' : '(lb)';
+}
+
+function getBMICategory(bmi) {
+  if (bmi < 18.5) return { label: 'Underweight', cls: 'bmi-uw', singleton: [12.5,18], twins: [23,28], rate: [0.45,0.6], rateLabel: '0.45–0.6 kg/wk' };
+  if (bmi < 25) return { label: 'Normal weight', cls: 'bmi-nw', singleton: [11.5,16], twins: [17,25], rate: [0.35,0.45], rateLabel: '0.35–0.45 kg/wk' };
+  if (bmi < 30) return { label: 'Overweight', cls: 'bmi-ow', singleton: [7,11.5], twins: [14,23], rate: [0.23,0.32], rateLabel: '0.23–0.32 kg/wk' };
+  return { label: 'Obese', cls: 'bmi-ob', singleton: [5,9], twins: [11,19], rate: [0.18,0.27], rateLabel: '0.18–0.27 kg/wk' };
+}
+
+function calcExpectedGain(week, bmiCat, type) {
+  const range = type === 'twins' ? bmiCat.twins : bmiCat.singleton;
+  const mid = (range[0] + range[1]) / 2;
+  // T1: 0.5–2 kg total; T2+T3: rate × weeks
+  if (week <= 13) {
+    const t1 = Math.min(2, (week / 13) * 2);
+    return [t1 * (range[0]/mid), t1 * (range[1]/mid)];
+  }
+  const t1Gain = 1.25;
+  const weeksAfterT1 = week - 13;
+  return [t1Gain + weeksAfterT1 * bmiCat.rate[0], t1Gain + weeksAfterT1 * bmiCat.rate[1]];
+}
+
+function calculateWeightGain() {
+  let weightKg, heightCm;
+  if (unit === 'metric') {
+    weightKg = parseFloat(document.getElementById('weight-kg').value);
+    heightCm = parseFloat(document.getElementById('height-cm').value);
+  } else {
+    const lb = parseFloat(document.getElementById('weight-lb').value);
+    const inch = parseFloat(document.getElementById('height-in').value);
+    weightKg = lb * 0.453592;
+    heightCm = inch * 2.54;
+  }
+  const week = parseInt(document.getElementById('current-week').value);
+  const type = document.getElementById('pregnancy-type').value;
+  const currentWt = parseFloat(document.getElementById('current-weight').value);
+
+  if (!weightKg || !heightCm || !week) { alert('Please fill in weight, height, and gestational week.'); return; }
+  const heightM = heightCm / 100;
+  const bmi = weightKg / (heightM * heightM);
+  const cat = getBMICategory(bmi);
+  const range = type === 'twins' ? cat.twins : cat.singleton;
+  const expected = calcExpectedGain(week, cat, type);
+  const pct = Math.min(100, Math.round(((expected[0]+expected[1])/2 / range[1]) * 100));
+
+  let currentGainHTML = '';
+  if (!isNaN(currentWt)) {
+    let currentGainKg = unit === 'metric' ? currentWt - weightKg : (currentWt - weightKg / 0.453592) * 0.453592;
+    const gainStatus = currentGainKg < expected[0] ? 'Below target' : currentGainKg > expected[1] ? 'Above target' : 'On track';
+    const gainCls = currentGainKg < expected[0] ? 'status-warn' : currentGainKg > expected[1] ? 'status-over' : 'status-ok';
+    const gainDisplay = unit === 'metric' ? currentGainKg.toFixed(1) + ' kg' : (currentGainKg / 0.453592).toFixed(1) + ' lb';
+    currentGainHTML = `<div class="stat-card"><div class="stat-label">Your Gain So Far</div><div class="stat-value">${gainDisplay}</div></div>
+    <div class="stat-card"><div class="stat-label">Status at Week ${week}</div><div class="stat-value ${gainCls}">${gainStatus}</div></div>`;
+  }
+
+  const convertDisplay = (kg) => unit === 'metric' ? kg.toFixed(1) + ' kg' : (kg/0.453592).toFixed(1) + ' lb';
+  const bmiRounded = bmi.toFixed(1);
+  const totalRangeDisplay = unit === 'metric' ? `${range[0]}–${range[1]} kg` : `${(range[0]/0.453592).toFixed(0)}–${(range[1]/0.453592).toFixed(0)} lb`;
+  const t1 = [0.5,2];
+  const t1Disp = unit === 'metric' ? `${t1[0]}–${t1[1]} kg` : `${(t1[0]/0.453592).toFixed(0)}–${(t1[1]/0.453592).toFixed(0)} lb`;
+  const t2wksLeft = Math.max(0, Math.min(14, week <= 13 ? 0 : week - 13));
+  const t2end = 27; const t3end = 40;
+  const t2gain = unit === 'metric' ? `~${(14 * (cat.rate[0]+cat.rate[1])/2).toFixed(1)} kg` : `~${(14 * (cat.rate[0]+cat.rate[1])/2/0.453592).toFixed(0)} lb`;
+  const t3gain = unit === 'metric' ? `~${(13 * (cat.rate[0]+cat.rate[1])/2).toFixed(1)} kg` : `~${(13 * (cat.rate[0]+cat.rate[1])/2/0.453592).toFixed(0)} lb`;
+
+  const html = `
+    <div class="result-headline">BMI ${bmiRounded} — ${cat.label}</div>
+    <div class="result-sub">Recommended total gain for <strong>${type}</strong> pregnancy: <strong>${totalRangeDisplay}</strong></div>
+    <span class="bmi-badge ${cat.cls}">${cat.label} (BMI ${bmiRounded})</span>
+    <div class="result-stats">
+      <div class="stat-card"><div class="stat-label">Total Recommended Gain</div><div class="stat-value highlight">${totalRangeDisplay}</div></div>
+      <div class="stat-card"><div class="stat-label">Expected Gain by Wk ${week}</div><div class="stat-value">${convertDisplay(expected[0])}–${convertDisplay(expected[1])}</div></div>
+      ${currentGainHTML}
+      <div class="stat-card"><div class="stat-label">Weekly Rate (T2/T3)</div><div class="stat-value">${cat.rateLabel}</div></div>
+    </div>
+    <div class="trimester-breakdown">
+      <p style="font-size:14px;font-weight:600;color:var(--text-muted);margin-bottom:8px;margin-top:16px">Breakdown by trimester</p>
+      <div class="tri-row">
+        <div class="tri-card"><div class="tri-card-label">1st Trimester</div><div class="tri-card-value">${t1Disp}</div><div class="tri-card-sub">Wks 1–13 total</div></div>
+        <div class="tri-card"><div class="tri-card-label">2nd Trimester</div><div class="tri-card-value">${t2gain}</div><div class="tri-card-sub">Wks 14–27 (~14 wks)</div></div>
+        <div class="tri-card"><div class="tri-card-label">3rd Trimester</div><div class="tri-card-value">${t3gain}</div><div class="tri-card-sub">Wks 28–40 (~13 wks)</div></div>
+      </div>
+    </div>
+    <div class="progress-section">
+      <div class="progress-label-row"><span>0</span><span>Target: ${totalRangeDisplay}</span></div>
+      <div class="progress-bar-wrap"><div class="progress-fill" style="width:${pct}%"></div></div>
+      <div style="font-size:12px;color:var(--text-light);margin-top:4px">Expected gain at week ${week} is ${pct}% of total target</div>
+    </div>
+    <div class="disclaimer-box">⚠️ These are population-level guidelines. Individual recommendations may differ based on health conditions, multiple pregnancies, or provider assessment. Consult your midwife or OB/GYN for personalised advice.</div>`;
+
+  const box = document.getElementById('result-wg');
+  box.innerHTML = html;
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function toggleFAQ(el) { el.parentElement.classList.toggle('open'); }
+</script>
+</body>
+</html>
