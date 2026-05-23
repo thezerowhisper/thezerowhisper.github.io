@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregnancy BMI Calculator – Pre-Pregnancy BMI & Weight Category | RxMedCalc</title>
+<meta name="description" content="Calculate your pre-pregnancy BMI instantly. Find your weight category, recommended weight gain range by trimester, and understand how BMI affects pregnancy outcomes. Free, medically referenced, kg & lb.">
+<meta name="keywords" content="pregnancy BMI calculator, pre-pregnancy BMI, BMI during pregnancy, BMI and pregnancy weight gain, overweight pregnancy calculator, obese pregnancy BMI, underweight pregnancy, BMI calculator pregnant women, Asian BMI pregnancy, healthy BMI for pregnancy">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rxmedcalc.com/pregnancy-bmi-calculator">
+<meta property="og:title" content="Pregnancy BMI Calculator – Pre-Pregnancy BMI & Weight Targets | RxMedCalc">
+<meta property="og:description" content="Calculate your pre-pregnancy BMI, weight category, and recommended gestational weight gain. Free, instant, based on IOM 2009 and WHO guidelines.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rxmedcalc.com/pregnancy-bmi-calculator">
+<meta property="og:site_name" content="RxMedCalc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pregnancy BMI Calculator – RxMedCalc">
+<meta name="twitter:description" content="Find your pre-pregnancy BMI and recommended weight gain during pregnancy. Free and instant.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Pregnancy BMI Calculator",
+      "url": "https://rxmedcalc.com/pregnancy-bmi-calculator",
+      "description": "Calculate pre-pregnancy BMI and recommended gestational weight gain by BMI category, following IOM 2009 and WHO guidelines.",
+      "medicalAudience": [
+        {"@type": "MedicalAudience", "audienceType": "Patient"},
+        {"@type": "MedicalAudience", "audienceType": "Clinician"}
+      ],
+      "specialty": {"@type": "MedicalSpecialty", "name": "Obstetrics and Gynecology"},
+      "publisher": {"@type": "Organization", "name": "RxMedCalc", "url": "https://rxmedcalc.com"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Home","item": "https://rxmedcalc.com"},
+        {"@type": "ListItem","position": 2,"name": "Pregnancy","item": "https://rxmedcalc.com/pregnancy"},
+        {"@type": "ListItem","position": 3,"name": "Pregnancy BMI Calculator","item": "https://rxmedcalc.com/pregnancy-bmi-calculator"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is BMI and how is it calculated?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Body Mass Index (BMI) is a numerical value calculated from a person's weight and height: BMI = weight (kg) ÷ height² (m²). It provides a simple, population-level classification of underweight, normal weight, overweight, and obesity. It does not directly measure body fat percentage."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to be overweight or obese during pregnancy?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Overweight and obese women can have healthy pregnancies, but they carry a higher risk of gestational diabetes, preeclampsia, caesarean delivery, and large-for-gestational-age babies. Careful monitoring, appropriate weight gain targets, and lifestyle management significantly reduce these risks."}
+        },
+        {
+          "@type": "Question",
+          "name": "What BMI is considered healthy before pregnancy?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A pre-pregnancy BMI of 18.5–24.9 is considered normal weight and is associated with the best maternal and fetal outcomes. BMI below 18.5 is underweight, 25–29.9 is overweight, and 30 or above is obese."}
+        },
+        {
+          "@type": "Question",
+          "name": "Does ethnicity affect BMI interpretation in pregnancy?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Women of South Asian, East Asian, and Southeast Asian descent have a higher risk of metabolic complications at lower BMI values. WHO and some national guidelines recommend lower thresholds for these populations: overweight at BMI ≥23 and obese at BMI ≥27.5, compared to the standard Western cutoffs of 25 and 30."}
+        },
+        {
+          "@type": "Question",
+          "name": "Should I try to lose weight before getting pregnant if I am obese?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Reaching a healthier BMI before conception is beneficial and reduces pregnancy risks. Even a modest 5–10% weight loss before pregnancy can significantly improve fertility and reduce risks of gestational diabetes and preeclampsia. Rapid crash dieting is not advised; sustainable lifestyle changes are preferred. Consult your doctor or a registered dietitian for personalised advice."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --teal: #0f7173;
+  --teal-light: #e6f4f4;
+  --teal-mid: #1a9496;
+  --teal-dark: #0a4f51;
+  --amber: #e07b39;
+  --text-main: #141f1f;
+  --text-muted: #4a5e5e;
+  --text-light: #7a8e8e;
+  --border: #d0e2e2;
+  --surface: #f5fafa;
+  --white: #ffffff;
+  --radius: 14px;
+  --radius-sm: 7px;
+  --shadow-card: 0 2px 6px rgba(15,113,115,0.07), 0 8px 24px rgba(15,113,115,0.05);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+
+  /* BMI category colours */
+  --uw: #3b82f6; --uw-bg: #eff6ff; --uw-border: #bfdbfe;
+  --nw: #16a34a; --nw-bg: #f0fdf4; --nw-border: #bbf7d0;
+  --ow: #d97706; --ow-bg: #fffbeb; --ow-border: #fde68a;
+  --ob1: #ea580c; --ob1-bg: #fff7ed; --ob1-border: #fed7aa;
+  --ob2: #dc2626; --ob2-bg: #fef2f2; --ob2-border: #fecaca;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.7; color: var(--text-main); background: var(--white); }
+
+/* ── NAV ── */
+.nav { border-bottom: 1px solid var(--border); padding: 14px 24px; display: flex; align-items: center; gap: 12px; background: var(--white); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+.nav-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--teal); text-decoration: none; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; margin-left: auto; flex-wrap: wrap; }
+.breadcrumb a { color: var(--teal); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #072f30 0%, #0f7173 55%, #1a9496 100%);
+  color: white;
+  padding: 60px 24px 52px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -40px;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+  pointer-events: none;
+}
+.hero-tag { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.13); border: 1px solid rgba(255,255,255,0.22); border-radius: 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 14px; margin-bottom: 22px; color: rgba(255,255,255,0.9); }
+.hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(30px, 5vw, 50px); font-weight: 400; line-height: 1.15; margin-bottom: 16px; color: white; }
+.hero-sub { font-size: 17px; color: rgba(255,255,255,0.78); max-width: 520px; margin: 0 auto 30px; }
+.hero-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.hero-pill { background: rgba(255,255,255,0.11); border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; font-size: 13px; padding: 5px 15px; color: rgba(255,255,255,0.85); }
+
+/* ── LAYOUT ── */
+.container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+/* ── CALCULATOR CARD ── */
+.calc-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
+  margin: -32px auto 48px;
+  max-width: 740px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+.calc-card-header {
+  background: linear-gradient(to right, var(--surface), var(--white));
+  border-bottom: 1px solid var(--border);
+  padding: 22px 30px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.calc-card-icon { font-size: 28px; }
+.calc-card-header h2 { font-family: 'DM Serif Display', serif; font-size: 21px; font-weight: 400; color: var(--text-main); margin: 0; }
+.calc-card-header p { font-size: 13px; color: var(--text-muted); margin: 2px 0 0; }
+
+.calc-body { padding: 30px; }
+
+/* Unit toggle */
+.unit-toggle { display: inline-flex; border: 1.5px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 26px; }
+.unit-btn { padding: 8px 20px; font-size: 14px; font-family: 'DM Sans', sans-serif; font-weight: 500; border: none; background: var(--white); cursor: pointer; color: var(--text-muted); transition: all 0.16s; }
+.unit-btn.active { background: var(--teal); color: white; }
+.unit-btn:hover:not(.active) { background: var(--teal-light); color: var(--teal); }
+
+/* Form */
+.form-section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 14px; margin-top: 6px; display: block; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 520px) { .form-grid { grid-template-columns: 1fr; } }
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; font-size: 14px; font-weight: 500; color: var(--text-muted); margin-bottom: 7px; }
+.form-hint { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+.form-input {
+  width: 100%; padding: 12px 15px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 15px; font-family: 'DM Sans', sans-serif;
+  color: var(--text-main); background: var(--white);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+}
+.form-input:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(15,113,115,0.1); }
+
+.input-with-suffix { position: relative; }
+.input-suffix { position: absolute; right: 13px; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--text-light); pointer-events: none; }
+
+.divider { border: none; border-top: 1px dashed var(--border); margin: 8px 0 24px; }
+
+.calc-btn {
+  width: 100%; padding: 15px;
+  background: var(--teal);
+  color: white; border: none;
+  border-radius: var(--radius-sm);
+  font-size: 16px; font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  letter-spacing: 0.01em;
+}
+.calc-btn:hover { background: var(--teal-dark); box-shadow: 0 4px 12px rgba(15,113,115,0.25); }
+.calc-btn:active { transform: scale(0.99); }
+
+/* ── RESULTS ── */
+.result-box {
+  background: var(--teal-light);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  margin-top: 26px;
+  display: none;
+}
+.result-box.show { display: block; animation: slideUp 0.3s ease; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* BMI Gauge */
+.bmi-gauge-wrap { margin-bottom: 24px; }
+.bmi-value-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+.bmi-number { font-family: 'DM Serif Display', serif; font-size: 52px; line-height: 1; color: var(--teal); }
+.bmi-unit { font-size: 18px; color: var(--text-muted); }
+.bmi-category-label { font-size: 15px; font-weight: 600; margin-bottom: 14px; }
+
+.bmi-scale { position: relative; height: 14px; border-radius: 7px; background: linear-gradient(to right, #3b82f6 0%, #3b82f6 15%, #16a34a 15%, #16a34a 45%, #d97706 45%, #d97706 65%, #ea580c 65%, #ea580c 82%, #dc2626 82%, #dc2626 100%); margin-bottom: 6px; }
+.bmi-pointer { position: absolute; top: -6px; width: 4px; height: 26px; background: white; border-radius: 2px; border: 2px solid var(--text-main); transform: translateX(-50%); transition: left 0.5s cubic-bezier(0.34,1.56,0.64,1); box-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+.bmi-scale-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-light); }
+
+/* Stat grid */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 20px 0; }
+.stat-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 15px 17px; }
+.stat-label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 5px; }
+.stat-value { font-size: 19px; font-weight: 700; color: var(--text-main); line-height: 1.2; }
+.stat-value.teal { color: var(--teal); }
+.stat-sub { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+/* Weight gain bar */
+.wg-section { margin-top: 20px; }
+.wg-title { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 12px; }
+.wg-bars { display: flex; flex-direction: column; gap: 8px; }
+.wg-bar-row { display: flex; align-items: center; gap: 10px; }
+.wg-bar-label { font-size: 13px; color: var(--text-muted); width: 90px; flex-shrink: 0; }
+.wg-bar-track { flex: 1; height: 8px; background: #d0e2e2; border-radius: 4px; overflow: visible; position: relative; }
+.wg-bar-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+.wg-bar-fill.singleton { background: var(--teal); }
+.wg-bar-fill.twins { background: var(--teal-mid); opacity: 0.7; }
+.wg-bar-value { font-size: 13px; font-weight: 600; color: var(--text-main); width: 100px; flex-shrink: 0; text-align: right; }
+
+/* Trimester breakdown */
+.trimester-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+@media (max-width: 500px) { .trimester-cards { grid-template-columns: 1fr; } }
+.tri-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+.tri-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); margin-bottom: 5px; }
+.tri-value { font-size: 16px; font-weight: 700; color: var(--teal); }
+.tri-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* Risk badges */
+.risk-section { margin-top: 20px; }
+.risk-title { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 10px; }
+.risk-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.risk-tag { padding: 5px 13px; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid; }
+.risk-low { background: #f0fdf4; color: #15803d; border-color: #86efac; }
+.risk-mod { background: #fffbeb; color: #b45309; border-color: #fcd34d; }
+.risk-high { background: #fef2f2; color: #b91c1c; border-color: #fca5a5; }
+
+/* Asian BMI note */
+.asian-note { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #0369a1; margin-top: 16px; line-height: 1.5; display: none; }
+.asian-note.show { display: block; }
+
+.disclaimer-box { background: #fff7ed; border-left: 3px solid var(--amber); border-radius: 4px; padding: 12px 16px; font-size: 13px; color: #7c3508; margin-top: 20px; line-height: 1.5; }
+
+/* ── CONTENT ── */
+.section { padding: 52px 0; }
+.section + .section { border-top: 1px solid var(--border); }
+
+h2 { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 3.5vw, 32px); font-weight: 400; color: var(--text-main); margin-bottom: 16px; line-height: 1.25; }
+h3 { font-size: 18px; font-weight: 600; color: var(--text-main); margin-bottom: 10px; margin-top: 30px; }
+p { margin-bottom: 16px; color: var(--text-main); }
+p:last-child { margin-bottom: 0; }
+strong { font-weight: 600; }
+ul, ol { padding-left: 20px; margin-bottom: 16px; }
+li { margin-bottom: 8px; color: var(--text-main); }
+
+/* BMI Category Cards */
+.bmi-cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 14px; margin: 24px 0; }
+.bmi-cat-card { border-radius: 12px; padding: 18px 20px; border: 1.5px solid; }
+.bmi-cat-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+.bmi-cat-card p { font-size: 13px; margin: 0; line-height: 1.5; }
+.bmi-cat-card .bmi-range { font-size: 20px; font-weight: 700; margin-bottom: 6px; font-family: 'DM Serif Display', serif; }
+.cat-uw { background: var(--uw-bg); border-color: var(--uw-border); color: var(--uw); }
+.cat-nw { background: var(--nw-bg); border-color: var(--nw-border); color: var(--nw); }
+.cat-ow { background: var(--ow-bg); border-color: var(--ow-border); color: var(--ow); }
+.cat-ob { background: var(--ob2-bg); border-color: var(--ob2-border); color: var(--ob2); }
+
+/* IOM table */
+.iom-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+.iom-table th { background: var(--teal); color: white; padding: 12px 14px; text-align: left; font-weight: 500; }
+.iom-table th:first-child { border-radius: 8px 0 0 0; }
+.iom-table th:last-child { border-radius: 0 8px 0 0; }
+.iom-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.iom-table tr:nth-child(even) td { background: var(--surface); }
+.iom-table tr:hover td { background: var(--teal-light); }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-weight: 600; font-size: 16px; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; user-select: none; line-height: 1.4; }
+.faq-toggle { font-size: 22px; color: var(--teal); flex-shrink: 0; transition: transform 0.2s; margin-top: -2px; }
+.faq-a { margin-top: 13px; color: var(--text-muted); font-size: 15px; display: none; line-height: 1.65; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+/* Related */
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 14px; margin-top: 22px; }
+.related-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 18px 20px; text-decoration: none; color: var(--text-main); transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; display: block; }
+.related-card:hover { border-color: var(--teal); box-shadow: 0 4px 12px rgba(15,113,115,0.1); transform: translateY(-2px); }
+.related-card-icon { font-size: 24px; margin-bottom: 9px; }
+.related-card-title { font-weight: 600; font-size: 14px; margin-bottom: 5px; color: var(--text-main); }
+.related-card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+/* Refs */
+.ref-list { margin: 16px 0; }
+.ref-item { font-size: 13px; color: var(--text-muted); padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; }
+.ref-num { color: var(--teal); font-weight: 700; flex-shrink: 0; }
+
+/* Footer */
+.page-footer { background: var(--surface); border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 48px; }
+.page-footer a { color: var(--teal); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <a href="https://rxmedcalc.com" class="nav-logo">RxMedCalc</a>
+  <div class="breadcrumb">
+    <a href="https://rxmedcalc.com">Home</a>
+    <span>›</span>
+    <a href="https://rxmedcalc.com/pregnancy">Pregnancy</a>
+    <span>›</span>
+    <span>Pregnancy BMI Calculator</span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="hero-tag">📊 Free Pregnancy Tool</div>
+  <h1>Pregnancy BMI Calculator</h1>
+  <p class="hero-sub">Calculate your pre-pregnancy BMI, weight category, and personalised gestational weight gain targets — based on IOM 2009 and WHO guidelines.</p>
+  <div class="hero-pills">
+    <span class="hero-pill">✓ Standard &amp; Asian BMI Cutoffs</span>
+    <span class="hero-pill">✓ IOM Weight Gain Targets</span>
+    <span class="hero-pill">✓ Singleton &amp; Twin Pregnancy</span>
+    <span class="hero-pill">✓ kg &amp; lb / cm &amp; inches</span>
+  </div>
+</header>
+
+<!-- ── CALCULATOR ── -->
+<div class="container">
+  <div class="calc-card">
+    <div class="calc-card-header">
+      <div class="calc-card-icon">📊</div>
+      <div>
+        <h2>Calculate Pre-Pregnancy BMI</h2>
+        <p>Enter your weight and height before pregnancy for accurate results</p>
+      </div>
+    </div>
+
+    <div class="calc-body">
+
+      <div class="unit-toggle">
+        <button class="unit-btn active" id="btn-metric" onclick="setUnit('metric')">Metric — kg / cm</button>
+        <button class="unit-btn" id="btn-imperial" onclick="setUnit('imperial')">Imperial — lb / in</button>
+      </div>
+
+      <!-- Metric inputs -->
+      <div id="metric-wrap">
+        <span class="form-section-label">Your measurements before pregnancy</span>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="wt-kg">Pre-pregnancy weight</label>
+            <div class="input-with-suffix">
+              <input type="number" id="wt-kg" class="form-input" min="30" max="250" step="0.1" placeholder="e.g. 62">
+              <span class="input-suffix">kg</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ht-cm">Height</label>
+            <div class="input-with-suffix">
+              <input type="number" id="ht-cm" class="form-input" min="100" max="220" step="0.5" placeholder="e.g. 162">
+              <span class="input-suffix">cm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imperial inputs -->
+      <div id="imperial-wrap" style="display:none">
+        <span class="form-section-label">Your measurements before pregnancy</span>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="wt-lb">Pre-pregnancy weight</label>
+            <div class="input-with-suffix">
+              <input type="number" id="wt-lb" class="form-input" min="60" max="550" step="0.5" placeholder="e.g. 137">
+              <span class="input-suffix">lb</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ht-ft">Height (feet)</label>
+            <div class="input-with-suffix">
+              <input type="number" id="ht-ft" class="form-input" min="3" max="7" step="1" placeholder="e.g. 5">
+              <span class="input-suffix">ft</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="ht-in">Height (inches, remainder)</label>
+          <div class="input-with-suffix">
+            <input type="number" id="ht-in" class="form-input" min="0" max="11" step="1" placeholder="e.g. 4">
+            <span class="input-suffix">in</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <span class="form-section-label">Additional details</span>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label" for="preg-type">Pregnancy type</label>
+          <select id="preg-type" class="form-input">
+            <option value="singleton">Singleton (one baby)</option>
+            <option value="twins">Twins (two babies)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="ethnicity">Ethnicity (for BMI cutoff)</label>
+          <select id="ethnicity" class="form-input">
+            <option value="standard">General / European</option>
+            <option value="asian">South / East / Southeast Asian</option>
+          </select>
+          <div class="form-hint">Asian populations have lower BMI thresholds for metabolic risk.</div>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculateBMI()">Calculate My Pregnancy BMI →</button>
+
+      <div class="result-box" id="result-bmi"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── CONTENT ── -->
+<main>
+
+<!-- What is BMI -->
+<section class="section" id="what-is-bmi">
+  <div class="container">
+    <h2>What Is BMI and Why Does It Matter in Pregnancy?</h2>
+    <p>Body Mass Index (BMI) is a simple numerical index calculated from your weight and height. It is used worldwide as a first-line tool to classify weight status and estimate metabolic health risk. In the context of pregnancy, <strong>pre-pregnancy BMI</strong> is used — not your current pregnancy weight — to set personalised gestational weight gain targets and identify potential complications.</p>
+    <p>Your BMI before conception establishes a baseline for your entire pregnancy care. Clinicians use it to determine the appropriate weight gain range (per IOM 2009 guidelines), to stratify risk for conditions like gestational diabetes mellitus (GDM), preeclampsia, and fetal growth abnormalities, and to guide nutritional counselling and monitoring frequency.</p>
+    <p>BMI has limitations — it does not distinguish fat from muscle, does not account for fat distribution, and has different risk thresholds across ethnic groups. However, it remains the most practical, validated, and widely used classification tool in routine obstetric care.</p>
+
+    <div class="bmi-cat-grid">
+      <div class="bmi-cat-card cat-uw">
+        <div class="bmi-range">&lt;18.5</div>
+        <h4>Underweight</h4>
+        <p>Associated with preterm birth, low birth weight, and iron-deficiency anaemia. Higher weight gain targets.</p>
+      </div>
+      <div class="bmi-cat-card cat-nw">
+        <div class="bmi-range">18.5–24.9</div>
+        <h4>Normal Weight</h4>
+        <p>Optimal pre-pregnancy category. Associated with best maternal and neonatal outcomes overall.</p>
+      </div>
+      <div class="bmi-cat-card cat-ow">
+        <div class="bmi-range">25.0–29.9</div>
+        <h4>Overweight</h4>
+        <p>Moderately elevated risk of GDM and preeclampsia. Lower weight gain targets than normal weight.</p>
+      </div>
+      <div class="bmi-cat-card cat-ob">
+        <div class="bmi-range">≥30.0</div>
+        <h4>Obese</h4>
+        <p>Higher risk of GDM, preeclampsia, large-for-GA, and caesarean. Minimum weight gain recommended.</p>
+      </div>
+    </div>
+
+    <h3>How BMI Is Calculated</h3>
+    <p>The BMI formula is universal:</p>
+    <p style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 18px;font-family:monospace;font-size:14px;color:var(--teal)">
+      BMI = Weight (kg) ÷ [Height (m)]²<br>
+      <span style="color:var(--text-muted)">e.g. 65 kg ÷ (1.62 m)² = 65 ÷ 2.6244 = <strong>24.8 kg/m²</strong></span>
+    </p>
+    <p>In imperial units: BMI = [Weight (lb) × 703] ÷ [Height (inches)]²</p>
+  </div>
+</section>
+
+<!-- Weight Gain by BMI -->
+<section class="section" id="weight-gain-by-bmi">
+  <div class="container">
+    <h2>Recommended Pregnancy Weight Gain by BMI — IOM 2009 Guidelines</h2>
+    <p>The Institute of Medicine's 2009 guidelines, endorsed by ACOG, RCOG, and WHO, remain the gold standard for gestational weight gain recommendations. The table below summarises these targets for both singleton and twin pregnancies:</p>
+
+    <table class="iom-table" aria-label="IOM 2009 gestational weight gain recommendations by BMI">
+      <thead>
+        <tr>
+          <th>BMI Category</th>
+          <th>BMI Range</th>
+          <th>Singleton Gain</th>
+          <th>Twins Gain</th>
+          <th>Weekly Rate (T2/T3)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Underweight</strong></td>
+          <td>&lt;18.5</td>
+          <td>12.5–18 kg (28–40 lb)</td>
+          <td>23–28 kg (50–62 lb)*</td>
+          <td>0.45–0.60 kg/wk</td>
+        </tr>
+        <tr>
+          <td><strong>Normal weight</strong></td>
+          <td>18.5–24.9</td>
+          <td>11.5–16 kg (25–35 lb)</td>
+          <td>17–25 kg (37–54 lb)</td>
+          <td>0.35–0.50 kg/wk</td>
+        </tr>
+        <tr>
+          <td><strong>Overweight</strong></td>
+          <td>25.0–29.9</td>
+          <td>7–11.5 kg (15–25 lb)</td>
+          <td>14–23 kg (31–50 lb)</td>
+          <td>0.23–0.33 kg/wk</td>
+        </tr>
+        <tr>
+          <td><strong>Obese (Class I–III)</strong></td>
+          <td>≥30.0</td>
+          <td>5–9 kg (11–20 lb)</td>
+          <td>11–19 kg (25–42 lb)</td>
+          <td>0.18–0.27 kg/wk</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--text-muted)">*Limited evidence for underweight women with twins. Individualised clinical guidance recommended.</p>
+
+    <h3>First Trimester — A Special Case</h3>
+    <p>Regardless of BMI category, <strong>total first-trimester gain of 0.5–2 kg (1–4 lb)</strong> is recommended for all singleton pregnancies. The accelerated, week-by-week rate targets apply primarily from the second trimester onward, when placental growth, blood volume expansion, and fetal organ development drive consistent weekly increases.</p>
+
+    <h3>Asian BMI Cutoffs — Why They Differ</h3>
+    <p>Standard WHO BMI cutoffs were developed primarily from European population data. Research has consistently shown that people of South Asian, East Asian, and Southeast Asian descent develop metabolic complications (insulin resistance, hypertension, dyslipidaemia) at lower BMI values. The WHO Expert Consultation (2004) therefore proposed lower action thresholds for Asian populations:</p>
+    <ul>
+      <li><strong>Overweight:</strong> BMI ≥23 (vs ≥25 for general population)</li>
+      <li><strong>Obese:</strong> BMI ≥27.5 (vs ≥30 for general population)</li>
+    </ul>
+    <p>This matters in pregnancy because South Asian women face disproportionately high rates of gestational diabetes even at relatively low BMI values. Using Asian-specific cutoffs allows earlier identification and intervention.</p>
+  </div>
+</section>
+
+<!-- BMI and Pregnancy Outcomes -->
+<section class="section" id="bmi-and-outcomes">
+  <div class="container">
+    <h2>How Pre-Pregnancy BMI Affects Pregnancy Outcomes</h2>
+
+    <h3>Underweight (BMI &lt;18.5)</h3>
+    <p>Underweight women enter pregnancy with reduced nutritional reserves. Key associations include preterm birth, low birth weight, iron-deficiency anaemia, and intrauterine growth restriction. Higher gestational weight gain targets (12.5–18 kg) are recommended to compensate. Women in this category benefit from early dietitian review.</p>
+
+    <h3>Normal Weight (BMI 18.5–24.9)</h3>
+    <p>Normal pre-pregnancy BMI is associated with the lowest rates of obstetric complications across all categories. This group has the most flexibility in dietary choices while maintaining recommended weight gain. Standard prenatal monitoring frequency applies.</p>
+
+    <h3>Overweight (BMI 25–29.9)</h3>
+    <p>Overweight women have a moderately elevated risk of gestational diabetes (approximately 1.5–2× higher), preeclampsia, and caesarean delivery compared to normal-weight women. Limiting total gestational weight gain (15–25 lb) and adhering to a balanced diet with regular moderate physical activity significantly reduces these risks.</p>
+
+    <h3>Obese (BMI ≥30)</h3>
+    <p>Obesity in pregnancy is associated with substantially higher risks across multiple domains:</p>
+    <ul>
+      <li><strong>Gestational diabetes mellitus (GDM):</strong> 3–8× higher risk depending on obesity class</li>
+      <li><strong>Preeclampsia:</strong> 2–4× higher risk</li>
+      <li><strong>Caesarean delivery:</strong> 2× higher risk</li>
+      <li><strong>Large-for-gestational-age (LGA) baby:</strong> Higher risk of macrosomia and shoulder dystocia</li>
+      <li><strong>Neural tube defects:</strong> Slightly higher risk due to folate metabolism differences (higher-dose folic acid may be recommended)</li>
+      <li><strong>Sleep apnoea:</strong> Worsened by pregnancy weight gain and uterine pressure on the diaphragm</li>
+    </ul>
+    <p>Despite these associations, most obese women deliver healthy babies with appropriate monitoring. Key interventions include early GDM screening (first trimester rather than standard 24–28 weeks), limiting total gestational weight gain, and careful monitoring of fetal growth and blood pressure.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Should I use my pre-pregnancy weight or my current weight to calculate BMI?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Always use your <strong>pre-pregnancy weight</strong> — the weight you were before conception. This is the value used by clinicians to classify your BMI category and set your gestational weight gain targets. Using your current pregnant weight would produce a meaningless figure, as the additional weight includes the baby, placenta, amniotic fluid, and expanded blood volume.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Can I exercise during pregnancy if I am overweight or obese?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Yes — moderate physical activity is safe and recommended for all BMI categories during uncomplicated pregnancy. ACOG recommends at least 150 minutes of moderate-intensity aerobic activity per week (e.g. brisk walking, swimming, stationary cycling). Exercise helps limit excessive gestational weight gain, reduces GDM risk, improves mood, and eases back pain. Always check with your provider before starting a new exercise programme.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Does a high pre-pregnancy BMI affect IVF or fertility treatments?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Yes. Obesity (BMI ≥30) is associated with lower IVF success rates, higher rates of cycle cancellation, and reduced response to ovarian stimulation. Many fertility clinics set a maximum BMI threshold (commonly BMI 35) for starting treatment. Even modest pre-conception weight loss of 5–10% of body weight can significantly improve fertility treatment outcomes and conception chances.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">What dose of folic acid should I take if I have a high BMI?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Standard pre-conception and first-trimester folic acid dosage is 400–800 µg/day for most women. However, women with a BMI ≥30 are at slightly increased risk of neural tube defects, and some guidelines (including NICE UK) recommend a higher dose of <strong>5 mg/day</strong> for obese women planning pregnancy. Speak with your doctor or midwife before adjusting your dose.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">How does BMI affect gestational diabetes screening?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Standard gestational diabetes screening (oral glucose tolerance test / OGTT) is typically offered at 24–28 weeks. Women with pre-pregnancy BMI ≥30 are at high enough risk to warrant earlier screening — typically at the booking/first antenatal visit (before 16 weeks) — in addition to the standard 24–28 week test. NICE, ACOG, and WHO all include high BMI as a major GDM risk factor triggering early screening.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">What is the ideal BMI to get pregnant?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">A BMI between 18.5 and 24.9 (normal weight) is associated with the best fertility outcomes and lowest rates of pregnancy complications. However, many women conceive and have healthy pregnancies outside this range. If you are planning pregnancy and your BMI is significantly below or above the normal range, a pre-conception consultation with your GP, obstetrician, or registered dietitian can help you optimise your weight safely before conception.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Tools -->
+<section class="section">
+  <div class="container">
+    <h2>Related Pregnancy Calculators</h2>
+    <p>Use these tools alongside your BMI result for comprehensive pregnancy planning:</p>
+    <div class="related-grid">
+      <a href="https://rxmedcalc.com/gestational-age-calculator" class="related-card">
+        <div class="related-card-icon">📅</div>
+        <div class="related-card-title">Gestational Age Calculator</div>
+        <div class="related-card-desc">How many weeks pregnant are you? Calculate from LMP, ultrasound, or due date.</div>
+      </a>
+      <a href="https://rxmedcalc.com/pregnancy-weight-gain-calculator" class="related-card">
+        <div class="related-card-icon">⚖️</div>
+        <div class="related-card-title">Pregnancy Weight Gain Calculator</div>
+        <div class="related-card-desc">Track trimester-by-trimester weight gain targets based on your BMI.</div>
+      </a>
+      <a href="https://rxmedcalc.com/fetal-growth-calculator" class="related-card">
+        <div class="related-card-icon">📏</div>
+        <div class="related-card-title">Fetal Growth Calculator</div>
+        <div class="related-card-desc">Compare your baby's estimated weight to WHO/Hadlock percentiles by week.</div>
+      </a>
+      <a href="https://rxmedcalc.com/due-date-calculator" class="related-card">
+        <div class="related-card-icon">📆</div>
+        <div class="related-card-title">Due Date Calculator</div>
+        <div class="related-card-desc">Calculate your estimated due date from LMP, conception, or IVF transfer.</div>
+      </a>
+      <a href="https://rxmedcalc.com/ivf-due-date-calculator" class="related-card">
+        <div class="related-card-icon">🧪</div>
+        <div class="related-card-title">IVF Due Date Calculator</div>
+        <div class="related-card-desc">Due date from Day-3 or Day-5 embryo transfer date.</div>
+      </a>
+      <a href="https://rxmedcalc.com/ovulation-calculator" class="related-card">
+        <div class="related-card-icon">🌙</div>
+        <div class="related-card-title">Ovulation Calculator</div>
+        <div class="related-card-desc">Find your fertile window and predicted ovulation date.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- References -->
+<section class="section">
+  <div class="container">
+    <h2>Medical References</h2>
+    <div class="ref-list">
+      <div class="ref-item"><span class="ref-num">1.</span><span>Institute of Medicine (IOM) and National Research Council. <em>Weight Gain During Pregnancy: Reexamining the Guidelines.</em> Washington DC: National Academies Press; 2009.</span></div>
+      <div class="ref-item"><span class="ref-num">2.</span><span>ACOG Practice Bulletin No. 230: Obesity in Pregnancy. <em>Obstet Gynecol.</em> 2021;137(6):e128–e144.</span></div>
+      <div class="ref-item"><span class="ref-num">3.</span><span>WHO Expert Consultation. Appropriate body-mass index for Asian populations and its implications for policy and intervention strategies. <em>Lancet.</em> 2004;363(9403):157–163.</span></div>
+      <div class="ref-item"><span class="ref-num">4.</span><span>NICE guideline NG201. <em>Antenatal care.</em> National Institute for Health and Care Excellence; 2021. Available at nice.org.uk/guidance/ng201</span></div>
+      <div class="ref-item"><span class="ref-num">5.</span><span>Bhattacharya S, Campbell DM, Liston WA, Bhattacharya S. Effect of body mass index on pregnancy outcomes in nulliparous women delivering singleton babies. <em>BMC Public Health.</em> 2007;7:168.</span></div>
+      <div class="ref-item"><span class="ref-num">6.</span><span>ACOG Committee Opinion No. 763: Ethical Considerations for the Care of Patients With Obesity. <em>Obstet Gynecol.</em> 2019;133(1):e90–e96.</span></div>
+    </div>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:18px">Last medical review: May 2025 · RxMedCalc Clinical Editorial Team.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="page-footer">
+  <p><strong>RxMedCalc</strong> · <a href="https://rxmedcalc.com/pregnancy-bmi-calculator">Pregnancy BMI Calculator</a></p>
+  <p style="margin-top:8px">This tool is for informational and educational purposes only. It does not constitute medical advice. Always consult a qualified healthcare professional for personalised guidance during pregnancy.</p>
+  <p style="margin-top:8px"><a href="https://rxmedcalc.com/privacy">Privacy Policy</a> · <a href="https://rxmedcalc.com/terms">Terms of Use</a> · <a href="https://rxmedcalc.com/contact">Contact</a></p>
+</footer>
+
+<!-- ══ JAVASCRIPT ══ -->
+<script>
+let currentUnit = 'metric';
+
+function setUnit(u) {
+  currentUnit = u;
+  document.getElementById('metric-wrap').style.display = u === 'metric' ? '' : 'none';
+  document.getElementById('imperial-wrap').style.display = u === 'imperial' ? '' : 'none';
+  document.getElementById('btn-metric').classList.toggle('active', u === 'metric');
+  document.getElementById('btn-imperial').classList.toggle('active', u === 'imperial');
+}
+
+function getWeightHeight() {
+  if (currentUnit === 'metric') {
+    const wt = parseFloat(document.getElementById('wt-kg').value);
+    const ht = parseFloat(document.getElementById('ht-cm').value);
+    return { weightKg: wt, heightCm: ht };
+  } else {
+    const lb = parseFloat(document.getElementById('wt-lb').value);
+    const ft = parseFloat(document.getElementById('ht-ft').value) || 0;
+    const inch = parseFloat(document.getElementById('ht-in').value) || 0;
+    const totalInches = ft * 12 + inch;
+    return { weightKg: lb * 0.453592, heightCm: totalInches * 2.54 };
+  }
+}
+
+function getBMIData(bmi, ethnicity) {
+  const asian = ethnicity === 'asian';
+  if (asian) {
+    if (bmi < 18.5) return { cat: 'Underweight', cls: 'cat-uw', color: '#3b82f6', wgS: [12.5,18], wgT: [23,28], rateLabel: '0.45–0.60 kg/wk', risks: ['low','low','low'], riskLabels: ['GDM risk: Standard','Preeclampsia: Standard','SGA risk: Elevated'] };
+    if (bmi < 23)   return { cat: 'Normal Weight', cls: 'cat-nw', color: '#16a34a', wgS: [11.5,16], wgT: [17,25], rateLabel: '0.35–0.50 kg/wk', risks: ['low','low','low'], riskLabels: ['GDM risk: Low','Preeclampsia: Low','LGA risk: Low'] };
+    if (bmi < 27.5) return { cat: 'Overweight (Asian threshold)', cls: 'cat-ow', color: '#d97706', wgS: [7,11.5], wgT: [14,23], rateLabel: '0.23–0.33 kg/wk', risks: ['mod','mod','low'], riskLabels: ['GDM risk: Moderate','Preeclampsia: Moderate','LGA risk: Low–Moderate'] };
+    return { cat: 'Obese (Asian threshold)', cls: 'cat-ob', color: '#dc2626', wgS: [5,9], wgT: [11,19], rateLabel: '0.18–0.27 kg/wk', risks: ['high','high','mod'], riskLabels: ['GDM risk: High','Preeclampsia: High','LGA/macrosomia risk: High'] };
+  } else {
+    if (bmi < 18.5) return { cat: 'Underweight', cls: 'cat-uw', color: '#3b82f6', wgS: [12.5,18], wgT: [23,28], rateLabel: '0.45–0.60 kg/wk', risks: ['low','low','mod'], riskLabels: ['GDM risk: Low','Preeclampsia: Low–Standard','SGA / Low birth weight: Elevated'] };
+    if (bmi < 25)   return { cat: 'Normal Weight', cls: 'cat-nw', color: '#16a34a', wgS: [11.5,16], wgT: [17,25], rateLabel: '0.35–0.50 kg/wk', risks: ['low','low','low'], riskLabels: ['GDM risk: Low','Preeclampsia: Low','LGA risk: Low'] };
+    if (bmi < 30)   return { cat: 'Overweight', cls: 'cat-ow', color: '#d97706', wgS: [7,11.5], wgT: [14,23], rateLabel: '0.23–0.33 kg/wk', risks: ['mod','mod','low'], riskLabels: ['GDM risk: Moderate (1.5–2×)','Preeclampsia: Moderate','LGA risk: Low–Moderate'] };
+    return { cat: 'Obese', cls: 'cat-ob', color: '#dc2626', wgS: [5,9], wgT: [11,19], rateLabel: '0.18–0.27 kg/wk', risks: ['high','high','high'], riskLabels: ['GDM risk: High (3–8×)','Preeclampsia: High (2–4×)','LGA / Macrosomia risk: High'] };
+  }
+}
+
+function bmiToGaugeLeft(bmi) {
+  // Scale: 0% = BMI 10, 100% = BMI 45
+  // Segments: <18.5 = 0–15%, 18.5–25 = 15–45%, 25–30 = 45–65%, 30–35 = 65–82%, >35 = 82–100%
+  if (bmi <= 10) return 0;
+  if (bmi >= 45) return 98;
+  const segments = [[10,18.5,0,15],[18.5,25,15,45],[25,30,45,65],[30,35,65,82],[35,45,82,100]];
+  for (const [lo, hi, plo, phi] of segments) {
+    if (bmi >= lo && bmi <= hi) {
+      return plo + ((bmi - lo) / (hi - lo)) * (phi - plo);
+    }
+  }
+  return 50;
+}
+
+function toDisplay(kg, unit) {
+  if (unit === 'metric') return kg.toFixed(1) + ' kg';
+  return (kg / 0.453592).toFixed(1) + ' lb';
+}
+
+function calculateBMI() {
+  const { weightKg, heightCm } = getWeightHeight();
+  if (!weightKg || !heightCm) { alert('Please enter both your weight and height.'); return; }
+  const heightM = heightCm / 100;
+  const bmi = weightKg / (heightM * heightM);
+  const ethnicity = document.getElementById('ethnicity').value;
+  const pregType = document.getElementById('preg-type').value;
+  const d = getBMIData(bmi, ethnicity);
+
+  const gaugeLeft = bmiToGaugeLeft(bmi);
+  const wgRange = pregType === 'twins' ? d.wgT : d.wgS;
+  const wgDisplay = `${toDisplay(wgRange[0], currentUnit)} – ${toDisplay(wgRange[1], currentUnit)}`;
+  const wgMaxKg = pregType === 'twins' ? 28 : 18;
+  const wgPct = Math.min(100, Math.round(((wgRange[0]+wgRange[1])/2 / wgMaxKg) * 100));
+
+  // Ideal weight range for height
+  const idealLo = 18.5 * heightM * heightM;
+  const idealHi = 24.9 * heightM * heightM;
+
+  // T1/T2/T3 targets
+  const t1 = { lo: 0.5, hi: 2 };
+  const avgRate = (parseFloat(d.rateLabel.split('–')[0]) + parseFloat(d.rateLabel.split('–')[1])) / 2;
+  const t2kg = (14 * avgRate).toFixed(1);
+  const t3kg = (13 * avgRate).toFixed(1);
+
+  const riskHtml = d.riskLabels.map((label, i) => {
+    const cls = `risk-${d.risks[i] === 'low' ? 'low' : d.risks[i] === 'mod' ? 'mod' : 'high'}`;
+    return `<span class="risk-tag ${cls}">${label}</span>`;
+  }).join('');
+
+  const asianNote = ethnicity === 'asian' ? `
+    <div class="asian-note show">
+      ℹ️ <strong>Asian BMI thresholds applied.</strong> The cutoffs used are: Overweight ≥23, Obese ≥27.5 — based on WHO 2004 recommendations for South/East/Southeast Asian populations. These differ from standard Western cutoffs (≥25, ≥30).
+    </div>` : '';
+
+  const html = `
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:6px">
+      <div style="font-family:'DM Serif Display',serif;font-size:54px;line-height:1;color:${d.color}">${bmi.toFixed(1)}</div>
+      <div style="font-size:17px;color:var(--text-muted)">kg/m²</div>
+    </div>
+    <div style="font-size:17px;font-weight:700;color:${d.color};margin-bottom:16px">${d.cat}</div>
+
+    <div class="bmi-scale">
+      <div class="bmi-pointer" style="left:${Math.min(98,Math.max(2,gaugeLeft))}%"></div>
+    </div>
+    <div class="bmi-scale-labels" style="margin-top:6px;margin-bottom:20px">
+      <span>Underweight<br>&lt;18.5</span>
+      <span>Normal<br>18.5–25</span>
+      <span>Overweight<br>25–30</span>
+      <span>Obese<br>≥30</span>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">Your BMI</div>
+        <div class="stat-value teal">${bmi.toFixed(1)}</div>
+        <div class="stat-sub">${d.cat}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Weight Gain</div>
+        <div class="stat-value">${wgDisplay}</div>
+        <div class="stat-sub">${pregType === 'twins' ? 'Twin pregnancy' : 'Singleton pregnancy'} · IOM 2009</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Normal BMI Weight</div>
+        <div class="stat-value">${toDisplay(idealLo, currentUnit)} – ${toDisplay(idealHi, currentUnit)}</div>
+        <div class="stat-sub">At your height (18.5–24.9)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Weekly Gain (T2/T3)</div>
+        <div class="stat-value">${d.rateLabel}</div>
+        <div class="stat-sub">2nd &amp; 3rd trimester rate</div>
+      </div>
+    </div>
+
+    <div class="wg-section">
+      <div class="wg-title">Weight gain targets by trimester</div>
+      <div class="trimester-cards">
+        <div class="tri-card">
+          <div class="tri-label">1st Trimester</div>
+          <div class="tri-value">${currentUnit === 'metric' ? '0.5–2 kg' : '1–4 lb'}</div>
+          <div class="tri-sub">Weeks 1–13 (total)</div>
+        </div>
+        <div class="tri-card">
+          <div class="tri-label">2nd Trimester</div>
+          <div class="tri-value">${toDisplay(parseFloat(t2kg), currentUnit)}</div>
+          <div class="tri-sub">Weeks 14–27 (~14 wks)</div>
+        </div>
+        <div class="tri-card">
+          <div class="tri-label">3rd Trimester</div>
+          <div class="tri-value">${toDisplay(parseFloat(t3kg), currentUnit)}</div>
+          <div class="tri-sub">Weeks 28–40 (~13 wks)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="risk-section">
+      <div class="risk-title">Associated pregnancy risk profile</div>
+      <div class="risk-tags">${riskHtml}</div>
+    </div>
+
+    ${asianNote}
+
+    <div class="disclaimer-box" style="margin-top:18px">
+      ⚠️ BMI is a population screening tool, not a diagnostic measure. Individual health, fitness level, and medical history significantly affect actual risk. Always discuss your results with your midwife, OB/GYN, or GP for personalised advice.
+    </div>`;
+
+  const box = document.getElementById('result-bmi');
+  box.innerHTML = html;
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function toggleFAQ(el) { el.parentElement.classList.toggle('open'); }
+</script>
+
+</body>
+</html>
