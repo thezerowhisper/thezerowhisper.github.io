@@ -1,0 +1,265 @@
+
+<div style="padding: 2rem 0; max-width: 900px; margin: 0 auto;">
+  <div style="margin-bottom: 2rem;">
+    <h1 style="font-size: 28px; font-weight: 500; margin: 0 0 8px; color: var(--color-text-primary);">Thyroid Management</h1>
+    <p style="margin: 0; color: var(--color-text-secondary); font-size: 14px;">Analyze your thyroid reports and get evidence-based dosage recommendations</p>
+  </div>
+
+  <form id="thyroidForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+    <div style="background: var(--color-background-secondary); padding: 1.5rem; border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary);">
+      <h2 style="font-size: 16px; font-weight: 500; margin: 0 0 1rem; color: var(--color-text-primary);">Thyroid function tests</h2>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--color-text-primary);">TSH (mIU/L)</label>
+          <input type="number" id="tsh" placeholder="e.g., 5.2" step="0.1" style="width: 100%;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--color-text-primary);">Free T4 (ng/dL)</label>
+          <input type="number" id="freeT4" placeholder="e.g., 0.8" step="0.1" style="width: 100%;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--color-text-primary);">Free T3 (pg/mL) - optional</label>
+          <input type="number" id="freeT3" placeholder="e.g., 2.5" step="0.1" style="width: 100%;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--color-text-primary);">Current L-thyroxine dose (mcg)</label>
+          <input type="number" id="currentDose" placeholder="e.g., 50" step="25" style="width: 100%;" />
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--color-background-secondary); padding: 1.5rem; border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary);">
+      <h2 style="font-size: 16px; font-weight: 500; margin: 0 0 1rem; color: var(--color-text-primary);">Patient details</h2>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--color-text-primary);">Age (years)</label>
+          <input type="number" id="age" placeholder="e.g., 45" style="width: 100%;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--color-text-primary);">Gender</label>
+          <select id="gender" style="width: 100%;">
+            <option value="">Select gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--color-text-primary);">Pregnancy status</label>
+          <select id="pregnancy" style="width: 100%;">
+            <option value="no">Not pregnant / N/A</option>
+            <option value="yes">Currently pregnant</option>
+            <option value="planning">Planning pregnancy</option>
+          </select>
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--color-text-primary);">Diagnosis type</label>
+          <select id="diagnosisType" style="width: 100%;">
+            <option value="">Select type</option>
+            <option value="hypothyroidism">Hypothyroidism</option>
+            <option value="hyperthyroidism">Hyperthyroidism</option>
+            <option value="initial">Initial evaluation</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 0;">
+        <label style="display: block; font-size: 13px; font-weight: 500; margin-bottom: 8px; color: var(--color-text-primary);">Symptoms</label>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;">
+            <input type="checkbox" value="fatigue" class="symptom" /> Fatigue/weakness
+          </label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;">
+            <input type="checkbox" value="weight" class="symptom" /> Weight changes
+          </label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;">
+            <input type="checkbox" value="temperature" class="symptom" /> Cold/heat intolerance
+          </label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;">
+            <input type="checkbox" value="heart" class="symptom" /> Heart palpitations
+          </label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;">
+            <input type="checkbox" value="mood" class="symptom" /> Mood changes
+          </label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;">
+            <input type="checkbox" value="hair" class="symptom" /> Hair loss/thinning
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" style="background: var(--color-background-info); color: var(--color-text-info); padding: 12px 24px; border: 0.5px solid var(--color-border-info); border-radius: var(--border-radius-md); font-size: 15px; font-weight: 500; cursor: pointer; width: 100%;">Analyze & Get Recommendations</button>
+  </form>
+
+  <div id="results" style="display: none; margin-top: 2rem;">
+
+    <div style="background: var(--color-background-secondary); padding: 1.5rem; border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); margin-bottom: 1.5rem;">
+      <h2 style="font-size: 16px; font-weight: 500; margin: 0 0 1rem; color: var(--color-text-primary);">Interpretation</h2>
+      <div id="interpretation" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div style="background: var(--color-background-primary); padding: 1rem; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary);">
+          <p style="margin: 0 0 8px; font-size: 13px; color: var(--color-text-secondary);">TSH Status</p>
+          <p id="tshStatus" style="margin: 0; font-size: 15px; font-weight: 500; color: var(--color-text-primary);">—</p>
+        </div>
+        <div style="background: var(--color-background-primary); padding: 1rem; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary);">
+          <p style="margin: 0 0 8px; font-size: 13px; color: var(--color-text-secondary);">Free T4 Status</p>
+          <p id="t4Status" style="margin: 0; font-size: 15px; font-weight: 500; color: var(--color-text-primary);">—</p>
+        </div>
+        <div style="background: var(--color-background-primary); padding: 1rem; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); grid-column: 1 / -1;">
+          <p style="margin: 0 0 8px; font-size: 13px; color: var(--color-text-secondary);">Diagnosis</p>
+          <p id="diagnosis" style="margin: 0; font-size: 16px; font-weight: 500; color: var(--color-text-primary);">—</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--color-background-secondary); padding: 1.5rem; border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); margin-bottom: 1.5rem;">
+      <h2 style="font-size: 16px; font-weight: 500; margin: 0 0 1rem; color: var(--color-text-primary);">Dosage recommendation</h2>
+      <div id="dosageRec" style="background: var(--color-background-primary); padding: 1.5rem; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary);">
+        <div style="margin-bottom: 1rem;">
+          <p style="margin: 0 0 4px; font-size: 13px; color: var(--color-text-secondary);">Recommended dose</p>
+          <p id="newDose" style="margin: 0; font-size: 24px; font-weight: 500; color: var(--color-text-info);">—</p>
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <p style="margin: 0 0 4px; font-size: 13px; color: var(--color-text-secondary);">Adjustment</p>
+          <p id="adjustment" style="margin: 0; font-size: 15px; font-weight: 500; color: var(--color-text-primary);">—</p>
+        </div>
+        <div style="border-top: 0.5px solid var(--color-border-tertiary); padding-top: 1rem; padding-bottom: 0;">
+          <p id="dosageNotes" style="margin: 0; font-size: 13px; color: var(--color-text-secondary); line-height: 1.6;">—</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--color-background-info); padding: 1.5rem; border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-info);">
+      <p style="margin: 0 0 8px; font-size: 13px; font-weight: 500; color: var(--color-text-info);">Important disclaimers</p>
+      <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: var(--color-text-info); line-height: 1.6;">
+        <li>This tool provides educational information based on ESI guidelines and is not a substitute for professional medical advice.</li>
+        <li>Always consult with your endocrinologist or physician before changing medication doses.</li>
+        <li>Individual responses to thyroxine vary; dosage adjustments may need 6-8 weeks to show effect in lab values.</li>
+        <li>Repeat TSH and Free T4 4-6 weeks after dose change.</li>
+        <li>Pregnancy, age, comorbidities, and drug interactions significantly affect dosage requirements.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById('thyroidForm');
+const resultsDiv = document.getElementById('results');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const tsh = parseFloat(document.getElementById('tsh').value);
+  const freeT4 = parseFloat(document.getElementById('freeT4').value);
+  const freeT3 = parseFloat(document.getElementById('freeT3').value) || null;
+  const currentDose = parseInt(document.getElementById('currentDose').value) || 0;
+  const age = parseInt(document.getElementById('age').value) || 0;
+  const gender = document.getElementById('gender').value;
+  const pregnancy = document.getElementById('pregnancy').value;
+  const diagnosisType = document.getElementById('diagnosisType').value;
+  const symptoms = Array.from(document.querySelectorAll('.symptom:checked')).map(el => el.value);
+
+  if (!tsh || !freeT4) {
+    alert('Please enter TSH and Free T4 values');
+    return;
+  }
+
+  // Normal ranges
+  const tshNormal = { min: 0.4, max: 4.0 };
+  const t4Normal = { min: 0.8, max: 1.8 };
+  const t3Normal = { min: 2.0, max: 4.2 };
+
+  // Determine TSH status
+  let tshStatus = '';
+  if (tsh < tshNormal.min) tshStatus = '↓ Low (suppressed)';
+  else if (tsh > tshNormal.max) tshStatus = '↑ High (elevated)';
+  else tshStatus = '→ Normal range';
+
+  // Determine Free T4 status
+  let t4Status = '';
+  if (freeT4 < t4Normal.min) t4Status = '↓ Low';
+  else if (freeT4 > t4Normal.max) t4Status = '↑ High';
+  else t4Status = '→ Normal range';
+
+  // Diagnose condition
+  let diagnosis = '';
+  if (tsh > tshNormal.max && freeT4 < t4Normal.min) {
+    diagnosis = 'Primary Hypothyroidism';
+  } else if (tsh < tshNormal.min && freeT4 > t4Normal.max) {
+    diagnosis = 'Primary Hyperthyroidism';
+  } else if (tsh < tshNormal.min && freeT4 < t4Normal.min) {
+    diagnosis = 'Secondary Hypothyroidism (pituitary/hypothalamic)';
+  } else if (tsh > tshNormal.max && freeT4 > t4Normal.max) {
+    diagnosis = 'TSH-secreting pituitary tumor (rare) - refer to endocrinologist';
+  } else if (tsh > tshNormal.max && freeT4 >= t4Normal.min && freeT4 <= t4Normal.max) {
+    diagnosis = 'Subclinical Hypothyroidism';
+  } else if (tsh < tshNormal.min && freeT4 >= t4Normal.min && freeT4 <= t4Normal.max) {
+    diagnosis = 'Subclinical Hyperthyroidism';
+  } else {
+    diagnosis = 'Thyroid function appears normal - discuss with physician';
+  }
+
+  // Calculate recommended dose
+  let newDose = currentDose || 50;
+  let adjustment = '';
+  let dosageNotes = '';
+
+  if (diagnosis.includes('Hypothyroidism')) {
+    if (tsh > 10) {
+      newDose = Math.round((currentDose || 50) + 50);
+      adjustment = `Increase by 50 mcg to ${newDose} mcg`;
+      dosageNotes = 'Significantly elevated TSH. Large dose increase recommended. Check for poor compliance or malabsorption.';
+    } else if (tsh > tshNormal.max) {
+      newDose = Math.round((currentDose || 50) + 25);
+      adjustment = `Increase by 25 mcg to ${newDose} mcg`;
+      dosageNotes = 'TSH above target range. Moderate dose increase. Recheck in 6-8 weeks.';
+    } else if (tsh < 0.5 && freeT4 > t4Normal.max) {
+      newDose = Math.max(25, Math.round((currentDose || 50) - 25));
+      adjustment = `Decrease by 25 mcg to ${newDose} mcg`;
+      dosageNotes = 'Risk of overtreatment and cardiac complications. Reduce dose to avoid suppressed TSH.';
+    } else {
+      adjustment = 'Continue current dose';
+      newDose = currentDose || 50;
+      dosageNotes = 'Thyroid function adequately controlled. Maintain current dose and recheck in 6-12 months.';
+    }
+
+    if (pregnancy === 'yes' || pregnancy === 'planning') {
+      const pregnancyBoost = Math.round(currentDose * 0.3);
+      newDose = Math.round(newDose + pregnancyBoost);
+      dosageNotes += ` Pregnancy increases thyroxine requirements by 25-50%. Increase to ${newDose} mcg and monitor TSH 4-6 weekly targeting TSH <2.5 mIU/L.`;
+    }
+  } else if (diagnosis.includes('Hyperthyroidism')) {
+    adjustment = 'Refer to endocrinologist for ATD therapy';
+    dosageNotes = 'Hyperthyroidism requires antithyroid drugs (PTU/MMI), not thyroxine. Urgent endocrinology consultation recommended.';
+    newDose = 'N/A';
+  } else if (diagnosis.includes('Subclinical')) {
+    if (tsh > tshNormal.max && age > 65) {
+      newDose = Math.round((currentDose || 50) + 25);
+      adjustment = `Consider increase to ${newDose} mcg`;
+      dosageNotes = 'Subclinical hypothyroidism in elderly increases CVD risk. Mild dose increase may be beneficial.';
+    } else if (tsh > tshNormal.max && symptoms.length > 0) {
+      newDose = Math.round((currentDose || 50) + 25);
+      adjustment = `Consider increase to ${newDose} mcg`;
+      dosageNotes = 'Symptomatic subclinical hypothyroidism. Trial of treatment may improve symptoms.';
+    } else {
+      adjustment = 'Monitor, may not require treatment';
+      dosageNotes = 'Asymptomatic subclinical hypothyroidism. Recheck TSH in 3-6 months. Treatment not always necessary.';
+    }
+  } else {
+    adjustment = 'Thyroid function normal';
+    dosageNotes = 'Normal thyroid function. If on thyroxine, verify indication. Discuss with physician regarding need for continuation.';
+  }
+
+  // Update UI
+  document.getElementById('tshStatus').textContent = `${Math.round(tsh * 10) / 10} mIU/L - ${tshStatus}`;
+  document.getElementById('t4Status').textContent = `${Math.round(freeT4 * 10) / 10} ng/dL - ${t4Status}`;
+  document.getElementById('diagnosis').textContent = diagnosis;
+  document.getElementById('newDose').textContent = typeof newDose === 'number' ? `${newDose} mcg daily` : newDose;
+  document.getElementById('adjustment').textContent = adjustment;
+  document.getElementById('dosageNotes').textContent = dosageNotes;
+
+  resultsDiv.style.display = 'block';
+  resultsDiv.scrollIntoView({ behavior: 'smooth' });
+});
+</script>
