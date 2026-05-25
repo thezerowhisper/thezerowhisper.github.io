@@ -1,70 +1,43 @@
-# 💉 Rabies Vaccination Schedule Calculator — India
+# Astro Starter Kit: Minimal
 
-A free, simple web tool for patients and healthcare providers to instantly calculate **rabies post-exposure prophylaxis (PEP) vaccination dates** following the Indian 4-dose Essen regimen.
+```sh
+npm create astro@latest -- --template minimal
+```
 
----
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🌐 Live Tool
+## 🚀 Project Structure
 
-👉 **[https://thezerowhisper.github.io/rabies-scheduler/](https://thezerowhisper.github.io/rabies-scheduler/)**
+Inside of your Astro project, you'll see the following folders and files:
 
----
-# medical-calculators
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-Live tool: https://thezerowhisper.github.io/
-## 📋 About
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-After a dog bite or animal scratch, patients in India need 4 doses of the anti-rabies vaccine on specific days. Missing or miscalculating dates is a common problem — this tool solves it instantly.
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Enter the date of your **first vaccination dose** and the tool automatically calculates all remaining dates as per the Indian Essen regimen.
+Any static assets, like images, can be placed in the `public/` directory.
 
----
+## 🧞 Commands
 
-## 🗓️ Vaccination Schedule (Indian Essen Regimen)
+All commands are run from the root of the project, from a terminal:
 
-| Dose   | Day  | Notes                              |
-|--------|------|------------------------------------|
-| Dose 1 | Day 0  | As soon as possible after exposure |
-| Dose 2 | Day 3  | 3 days after first dose            |
-| Dose 3 | Day 7  | 7 days after first dose            |
-| Dose 4 | Day 28 | 28 days after first dose           |
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-> ⚠️ Rabies Immunoglobulin (RIG) is required for **Category III exposures** and must be administered on Day 0 alongside the first vaccine dose.
+## 👀 Want to learn more?
 
----
-
-## ✨ Features
-
-- 📅 Instant date calculation for all 4 doses
-- 📲 Share schedule via **WhatsApp**
-- 📋 **Copy** schedule to clipboard
-- 🖨️ **Print** clean schedule
-- 💾 **Save as image** (PNG download)
-- 📱 Mobile friendly
-- ⚡ No app, no login, no install — works in any browser
-
----
-
-## 🛠️ Built With
-
-- Plain HTML, CSS, JavaScript
-- [html2canvas](https://html2canvas.hertzen.com/) for image export
-- Hosted on [GitHub Pages](https://pages.github.com/)
-
----
-
-## ⚕️ Medical Disclaimer
-
-This tool is for **informational purposes only** and follows the standard Indian PEP guidelines (Essen regimen) as recommended by the National Centre for Disease Control (NCDC) and WHO. Always consult your treating physician for clinical decisions.
-
----
-
-## 🐛 Found an Error?
-
-If you spot any clinical inaccuracies, scheduling errors, or missing edge cases, please [open an issue](../../issues) or submit a pull request. Community review is welcome and encouraged.
-
----
-
-## 📄 License
-
-This project is open source and free to use under the [MIT License](LICENSE).
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
