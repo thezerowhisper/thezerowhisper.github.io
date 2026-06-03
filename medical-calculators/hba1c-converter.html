@@ -22,7 +22,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,13 +75,28 @@
           {
             "@type":"Question","name":"How often should HbA1c be tested?",
             "acceptedAnswer":{"@type":"Answer","text":"In patients with well-controlled diabetes meeting targets, HbA1c should be tested every 6 months. In patients with poorly controlled diabetes or those whose treatment has been recently changed, every 3 months. For diagnosis and high-risk prediabetes screening, annually. Note that HbA1c reflects average glucose over 2–3 months, so testing more frequently than every 3 months is rarely useful."}
+          },
+          {
+            "@type":"Question","name":"What is the difference between DCCT % and IFCC mmol/mol?",
+            "acceptedAnswer":{"@type":"Answer","text":"Both measure glycated haemoglobin but use different reference standards. DCCT % (also called NGSP) is the traditional percentage format used in the USA, India, and most of Asia. IFCC mmol/mol is the newer SI-unit format adopted in the UK, Europe, and Australia. The two scales are not interchangeable by simple multiplication — the conversion formula is: mmol/mol = (% − 2.15) × 10.929. Indian laboratories report HbA1c in DCCT % under ADA and RSSDI guidelines."}
+          },
+          {
+            "@type":"Question","name":"What HbA1c is considered diabetic in India?",
+            "acceptedAnswer":{"@type":"Answer","text":"Per ADA 2024 and RSSDI guidelines, an HbA1c of ≥6.5% (48 mmol/mol) on two separate occasions confirms diabetes mellitus. Prediabetes is 5.7–6.4% (39–47 mmol/mol). Below 5.7% is considered normal."}
+          },
+          {
+            "@type":"Question","name":"What is the HbA1c treatment target for type 2 diabetes in India?",
+            "acceptedAnswer":{"@type":"Answer","text":"RSSDI and ADA recommend an HbA1c target of <7.0% (53 mmol/mol) for most adults with type 2 diabetes. Targets should be individualised: <6.5% for younger patients with short disease duration, no hypoglycaemia risk, and no cardiovascular disease; <8.0% for elderly patients, those with significant comorbidities, hypoglycaemia unawareness, or limited life expectancy."}
+          },
+          {
+            "@type":"Question","name":"When is HbA1c unreliable and what should be used instead?",
+            "acceptedAnswer":{"@type":"Answer","text":"HbA1c is unreliable in haemolytic anaemia, sickle cell disease (HbS), HbC disease, malaria, and recent blood transfusion (falsely low). It is falsely high in iron deficiency anaemia, vitamin B12 deficiency, and splenectomy. In CKD, both effects occur depending on severity. In these situations, fructosamine (reflects 2–3 week average) or glycated albumin is preferred. During pregnancy, use fasting and post-prandial glucose or CGMS instead."}
           }
         ]
       }
     ]
   }
   </script>
-
   <style>
     :root {
       --bg: #f0f4f8; --surface: #fff; --surface2: #f5f8fc; --border: #dce4ef;
@@ -94,12 +108,10 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
-
     .topbar { background: var(--primary-dark); color: #fff; padding: 10px 20px; font-size: .82rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
     .topbar a { color: #7dd3fc; text-decoration: none; } .topbar a:hover { color: #fff; }
     .breadcrumb { display: flex; gap: 6px; align-items: center; }
     .breadcrumb span { color: #64748b; }
-
     .hero { background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0e7490 100%); color: #fff; padding: 48px 20px 56px; text-align: center; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
     .hero-badge { display: inline-block; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 14px; }
@@ -107,26 +119,20 @@
     .hero p { font-size: clamp(.95rem,2vw,1.1rem); color: rgba(255,255,255,.82); max-width: 600px; margin: 0 auto 20px; }
     .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
     .hero-tags span { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); border-radius: 20px; padding: 3px 12px; font-size: .78rem; }
-
     .page { max-width: 880px; margin: 0 auto; padding: 32px 16px 64px; }
     .card { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); padding: 28px; margin-bottom: 24px; }
     .card-title { font-size: 1rem; font-weight: 700; color: var(--primary); letter-spacing: .03em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
     .card-title::before { content: ''; display: block; width: 4px; height: 18px; background: var(--primary-light); border-radius: 4px; }
-
-    /* INPUT MODE TABS */
     .mode-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
     .mtab { padding: 8px 20px; border-radius: 30px; border: 2px solid var(--border); background: var(--surface2); font-size: .88rem; font-weight: 600; cursor: pointer; transition: all .2s; color: var(--text-muted); font-family: 'Outfit', sans-serif; }
     .mtab:hover { border-color: var(--primary-light); color: var(--primary); }
     .mtab.active { background: var(--primary); border-color: var(--primary); color: #fff; }
-
     .input-group { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
     .field { display: flex; flex-direction: column; gap: 6px; }
     .field label { font-size: .84rem; font-weight: 600; color: var(--text-muted); }
     .field input { background: var(--surface2); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 1.1rem; font-family: 'JetBrains Mono', monospace; color: var(--text); outline: none; width: 180px; transition: border-color .18s, box-shadow .18s; }
     .field input:focus { border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(14,165,233,.12); }
     .field .unit-label { font-size: .8rem; font-weight: 700; color: var(--primary); background: #e0f2fe; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid #bae6fd; white-space: nowrap; }
-
-    /* RESULT GRID */
     .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
     @media(max-width:600px) { .result-grid { grid-template-columns: 1fr; } }
     .result-box { background: var(--surface2); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; transition: border-color .2s; }
@@ -134,8 +140,6 @@
     .result-box .rb-label { font-size: .72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 6px; }
     .result-box .rb-val { font-family: 'JetBrains Mono', monospace; font-size: 2rem; font-weight: 700; color: var(--primary-dark); line-height: 1; margin-bottom: 3px; }
     .result-box .rb-unit { font-size: .75rem; color: var(--text-light); }
-
-    /* TARGET BAND */
     .target-band { border-radius: var(--radius-sm); padding: 14px 18px; margin-top: 18px; display: flex; align-items: flex-start; gap: 12px; }
     .target-band .tb-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
     .target-band .tb-text { font-size: .88rem; line-height: 1.6; }
@@ -145,16 +149,12 @@
     .band-target { background: #fffbeb; border: 1.5px solid #fcd34d; color: #78350f; }
     .band-high { background: #fff7ed; border: 1.5px solid #fdba74; color: #7c2d12; }
     .band-very-high { background: #fef2f2; border: 1.5px solid #fca5a5; color: #7f1d1d; }
-
-    /* REFERENCE TABLE */
     .ref-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
     .ref-table th { background: var(--surface2); font-weight: 700; padding: 9px 12px; text-align: left; color: var(--text-muted); font-size: .76rem; text-transform: uppercase; letter-spacing: .05em; border-bottom: 2px solid var(--border); }
     .ref-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; }
     .ref-table td:first-child { font-family: 'Outfit', sans-serif; font-weight: 500; }
     .ref-table tr:last-child td { border-bottom: none; }
     .ref-table tr.highlight td { background: #f0f9ff; font-weight: 700; }
-
-    /* FAQ */
     .faq-item { border-bottom: 1px solid var(--border); }
     .faq-q { width: 100%; text-align: left; padding: 15px 4px; font-size: .93rem; font-weight: 600; background: none; border: none; cursor: pointer; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: 'Outfit', sans-serif; }
     .faq-q:hover { color: var(--primary); }
@@ -162,27 +162,27 @@
     .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--primary); color: #fff; border-color: var(--primary); }
     .faq-a { display: none; padding: 0 4px 15px; font-size: .88rem; color: var(--text-muted); line-height: 1.75; }
     .faq-item.open .faq-a { display: block; }
-
     .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
     .related-card { background: var(--surface2); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; text-decoration: none; color: var(--text); transition: all .18s; display: block; }
     .related-card:hover { border-color: var(--primary-light); background: #f0f9ff; transform: translateY(-2px); box-shadow: var(--shadow); }
     .related-card .rc-name { font-size: .88rem; font-weight: 700; margin-bottom: 2px; }
     .related-card .rc-desc { font-size: .76rem; color: var(--text-muted); }
-
     .disclaimer { background: #fff8ed; border: 1px solid #fde68a; border-radius: var(--radius-sm); padding: 14px 18px; font-size: .82rem; color: #92400e; line-height: 1.6; }
     .site-footer { text-align: center; font-size: .8rem; color: var(--text-light); padding: 24px 16px; border-top: 1px solid var(--border); margin-top: 32px; }
     .site-footer a { color: var(--primary); text-decoration: none; }
+    .info-section { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
     @media(max-width:640px) { .card { padding: 20px 16px; } }
   </style>
 </head>
 <body>
-
 <nav class="topbar">
   <div class="breadcrumb">
     <a href="/">Medical Calculators</a><span>›</span><span>Endocrinology</span><span>›</span><span>HbA1c Converter</span>
   </div>
 </nav>
-
 <header class="hero">
   <div class="hero-badge">Endocrinology Calculator</div>
   <h1>HbA1c Converter</h1>
@@ -192,17 +192,13 @@
     <span>Diabetes Targets</span><span>DCCT ↔ IFCC</span>
   </div>
 </header>
-
 <main class="page">
-
   <section class="card">
     <div class="card-title">Converter</div>
-
     <div class="mode-tabs">
       <button class="mtab active" data-mode="pct" onclick="setMode('pct')">Enter HbA1c %</button>
       <button class="mtab" data-mode="mmol" onclick="setMode('mmol')">Enter IFCC mmol/mol</button>
     </div>
-
     <div id="input-pct">
       <div class="input-group">
         <div class="field">
@@ -212,7 +208,6 @@
         <div class="unit-label">%</div>
       </div>
     </div>
-
     <div id="input-mmol" style="display:none">
       <div class="input-group">
         <div class="field">
@@ -222,7 +217,6 @@
         <div class="unit-label">mmol/mol</div>
       </div>
     </div>
-
     <div class="result-grid" id="resultGrid" style="display:none">
       <div class="result-box primary">
         <div class="rb-label">DCCT</div>
@@ -245,7 +239,6 @@
         <div class="rb-unit">mmol/L</div>
       </div>
     </div>
-
     <div id="targetBand" style="display:none; margin-top:16px;"></div>
   </section>
 
@@ -268,35 +261,27 @@
     <div id="faq-list"></div>
   </section>
 
-  <!-- Related -->
+  <!-- Related Calculators — single merged block -->
   <section class="card">
     <div class="card-title">Related Calculators</div>
     <div class="related-grid">
-      <a href="egfr-calculator" class="related-card"><div class="rc-name">eGFR Calculator</div><div class="rc-desc">CKD-EPI · CG · MDRD</div></a>
-      <a href="corrected-calcium" class="related-card"><div class="rc-name">Corrected Calcium</div><div class="rc-desc">Albumin-adjusted Ca²⁺</div></a>
-      <a href="anion-gap" class="related-card"><div class="rc-name">Anion Gap</div><div class="rc-desc">+ Delta ratio</div></a>
-      <a href="child-pugh" class="related-card"><div class="rc-name">Child-Pugh Score</div><div class="rc-desc">Cirrhosis staging</div></a>
-      <a href="/" class="related-card"><div class="rc-name">All Calculators →</div><div class="rc-desc">17+ clinical tools</div></a>
+      <a href="/medical-calculators/bmi" class="related-card"><div class="rc-name">BMI Calculator</div><div class="rc-desc">Metabolic risk</div></a>
+      <a href="/medical-calculators/egfr-calculator" class="related-card"><div class="rc-name">eGFR Calculator</div><div class="rc-desc">CKD-EPI · CG · MDRD</div></a>
+      <a href="/medical-calculators/corrected-calcium" class="related-card"><div class="rc-name">Corrected Calcium</div><div class="rc-desc">Albumin-adjusted Ca²⁺</div></a>
+      <a href="/medical-calculators/anion-gap" class="related-card"><div class="rc-name">Anion Gap</div><div class="rc-desc">+ Delta ratio</div></a>
+      <a href="/medical-calculators/child-pugh" class="related-card"><div class="rc-name">Child-Pugh Score</div><div class="rc-desc">Cirrhosis staging</div></a>
+      <a href="/medical-calculators/" class="related-card"><div class="rc-name">All Calculators →</div><div class="rc-desc">32+ clinical tools</div></a>
     </div>
   </section>
 
-    <section class="card">
-    <div class="card-title">Related Tools</div>
-    <div class="related-grid">
-      <a href="/medical-calculators/bmi" class="related-card" ><div class="rc-name">BMI Calculator</div><div class="rc-desc">Metabolic risk</div></a>
-      <a href="/medical-calculators/egfr-calculator" class="related-card" ><div class="rc-name">eGFR Calculator</div><div class="rc-desc">Diabetic nephropathy</div></a>
-      <a href="/medical-calculators/corrected-calcium" class="related-card" ><div class="rc-name">Corrected Calcium</div><div class="rc-desc">Metabolic panel</div></a>
-      <a href="/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">20+ clinical tools</div></a>
-    </div>
-  </section>
   <div class="disclaimer">⚠️ <strong>Disclaimer:</strong> HbA1c may be unreliable in haemoglobin variants, haemolytic anaemia, pregnancy, and recent transfusion. Individual treatment targets should be set by the treating clinician. Not for self-diagnosis.</div>
 
-<section class="info-section" id="about-hba1c">
-  <h2>About HbA1c — Interpretation &amp; Diabetes Targets</h2>
-  <p><strong>HbA1c (Glycated Haemoglobin)</strong> reflects average blood glucose over the preceding 2–3 months and is the gold standard for long-term glycaemic monitoring in diabetes. It is expressed as a percentage (NGSP/DCCT standard) or in mmol/mol (IFCC standard). The conversion formula is: <strong>mmol/mol = (% − 2.15) × 10.929</strong>. The estimated Average Glucose (eAG) can be derived as: <strong>eAG (mg/dL) = (28.7 × HbA1c%) − 46.7</strong>.</p>
-  <p>Diagnostic thresholds per <strong>ADA 2024</strong> and <strong>RSSDI India guidelines</strong>: HbA1c ≥6.5% (48 mmol/mol) = Diabetes. 5.7–6.4% (39–47 mmol/mol) = Prediabetes. Below 5.7% = Normal. Treatment targets in India: <strong>HbA1c &lt;7.0%</strong> for most adults with type 2 diabetes; &lt;6.5% for younger patients with short disease duration and no hypoglycaemia risk; &lt;8.0% for elderly patients, those with comorbidities, or limited life expectancy.</p>
-  <p>HbA1c has limitations in conditions that affect red cell turnover — it is falsely low in haemolytic anaemia, recent blood transfusion, and haemoglobinopathies (especially HbS and HbC common in Indian populations), and falsely elevated in iron-deficiency anaemia and chronic kidney disease. In these situations, fructosamine or glycated albumin may be preferred for glycaemic monitoring. HbA1c should be measured every 3 months when glycaemic targets are not met, and every 6 months once stable.</p>
-</section>
+  <section class="info-section" id="about-hba1c">
+    <h2>About HbA1c — Interpretation &amp; Diabetes Targets</h2>
+    <p><strong>HbA1c (Glycated Haemoglobin)</strong> reflects average blood glucose over the preceding 2–3 months and is the gold standard for long-term glycaemic monitoring in diabetes. It is expressed as a percentage (NGSP/DCCT standard) or in mmol/mol (IFCC standard). The conversion formula is: <strong>mmol/mol = (% − 2.15) × 10.929</strong>. The estimated Average Glucose (eAG) can be derived as: <strong>eAG (mg/dL) = (28.7 × HbA1c%) − 46.7</strong>.</p>
+    <p>Diagnostic thresholds per <strong>ADA 2024</strong> and <strong>RSSDI India guidelines</strong>: HbA1c ≥6.5% (48 mmol/mol) = Diabetes. 5.7–6.4% (39–47 mmol/mol) = Prediabetes. Below 5.7% = Normal. Treatment targets in India: <strong>HbA1c &lt;7.0%</strong> for most adults with type 2 diabetes; &lt;6.5% for younger patients with short disease duration and no hypoglycaemia risk; &lt;8.0% for elderly patients, those with comorbidities, or limited life expectancy.</p>
+    <p>HbA1c has limitations in conditions that affect red cell turnover — it is falsely low in haemolytic anaemia, recent blood transfusion, and haemoglobinopathies (especially HbS and HbC common in Indian populations), and falsely elevated in iron-deficiency anaemia and chronic kidney disease. In these situations, fructosamine or glycated albumin may be preferred for glycaemic monitoring. HbA1c should be measured every 3 months when glycaemic targets are not met, and every 6 months once stable.</p>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -306,7 +291,6 @@
 
 <script>
   let mode = 'pct';
-
   function setMode(m) {
     mode = m;
     document.querySelectorAll('.mtab').forEach(t => t.classList.toggle('active', t.dataset.mode === m));
@@ -315,11 +299,9 @@
     document.getElementById('resultGrid').style.display = 'none';
     document.getElementById('targetBand').style.display = 'none';
   }
-
   function pctToMmol(pct) { return (pct - 2.15) * 10.929; }
   function mmolToPct(mmol) { return (mmol / 10.929) + 2.15; }
-  function pctToEag(pct) { return (28.7 * pct) - 46.7; } // mg/dL
-
+  function pctToEag(pct) { return (28.7 * pct) - 46.7; }
   function getTargetBand(pct) {
     if (pct < 5.7) return { cls: 'band-normal', icon: '✅', title: 'Normal', text: 'HbA1c below the prediabetes threshold. No diabetes-related action required. Maintain healthy lifestyle.' };
     if (pct < 6.5) return { cls: 'band-prediabetes', icon: '⚠️', title: 'Prediabetes (5.7–6.4%)', text: 'ADA prediabetes range. Risk of progression to type 2 diabetes. Lifestyle intervention, weight loss, and annual monitoring recommended. WHO uses 6.0–6.4% as impaired fasting range.' };
@@ -327,7 +309,6 @@
     if (pct < 8.0) return { cls: 'band-high', icon: '🔶', title: 'Diabetes — Above Target (7–8%)', text: 'Above ADA target. Consider intensification of therapy — lifestyle, medication adjustment, or SMBG. A target of <8% may be acceptable for elderly or high-risk patients.' };
     return { cls: 'band-very-high', icon: '🔴', title: 'Poorly Controlled (≥8%)', text: 'Significant glycaemic burden. Risk of micro- and macrovascular complications. Urgent medication review and patient education. Consider specialist referral.' };
   }
-
   function renderResults(pct, mmol, eagMg, eagMmol) {
     document.getElementById('resultGrid').style.display = 'grid';
     document.getElementById('r-pct').textContent = pct.toFixed(1);
@@ -339,7 +320,6 @@
     tb.style.display = 'block';
     tb.innerHTML = `<div class="target-band ${band.cls}"><div class="tb-icon">${band.icon}</div><div class="tb-text"><div class="tb-title">${band.title}</div>${band.text}</div></div>`;
   }
-
   function calcFromPct() {
     const pct = parseFloat(document.getElementById('hba1c_pct').value);
     if (!pct || pct < 2) { document.getElementById('resultGrid').style.display = 'none'; return; }
@@ -347,7 +327,6 @@
     const eagMg = pctToEag(pct);
     renderResults(pct, mmol, eagMg, eagMg / 18.016);
   }
-
   function calcFromMmol() {
     const mmol = parseFloat(document.getElementById('hba1c_mmol').value);
     if (!mmol || mmol < 4) { document.getElementById('resultGrid').style.display = 'none'; return; }
@@ -356,11 +335,20 @@
     renderResults(pct, mmol, eagMg, eagMg / 18.016);
   }
 
-  // Reference table
+  // Reference table — full expanded dataset
   const refData = [
-    [5.0, 'Normal'], [5.7, 'Prediabetes threshold (ADA)'], [6.0, 'Prediabetes (WHO)'],
-    [6.5, 'Diabetes diagnosis threshold'], [7.0, 'ADA/IDF target'], [7.5, '—'],
-    [8.0, 'Lenient target (elderly/high-risk)'], [9.0, 'Poorly controlled'], [10.0, 'Very poorly controlled']
+    [5.0,  'Normal'],
+    [5.7,  'Prediabetes threshold (ADA)'],
+    [6.0,  'Prediabetes (WHO)'],
+    [6.4,  'Prediabetes upper limit'],
+    [6.5,  'Diabetes diagnosis threshold'],
+    [7.0,  'ADA/IDF target (most adults)'],
+    [7.5,  'Above target'],
+    [8.0,  'Lenient target (elderly/high-risk)'],
+    [8.5,  'Poor control'],
+    [9.0,  'Poor control'],
+    [10.0, 'Very poor control'],
+    [12.0, 'Dangerous — urgent review']
   ];
   const tbody = document.getElementById('refTableBody');
   refData.forEach(([pct, label]) => {
@@ -368,19 +356,24 @@
     const eagMg = pctToEag(pct);
     const eagMmol = eagMg / 18.016;
     const highlight = pct === 7.0 || pct === 6.5;
-    tbody.innerHTML += `<tr${highlight ? ' class="highlight"' : ''}><td>${pct.toFixed(1)}% ${label !== '—' ? `<small style="color:var(--text-muted);font-size:.75rem;display:block">${label}</small>` : ''}</td><td>${Math.round(mmol)}</td><td>${eagMg.toFixed(0)}</td><td>${eagMmol.toFixed(1)}</td></tr>`;
+    tbody.innerHTML += `<tr${highlight ? ' class="highlight"' : ''}><td>${pct.toFixed(1)}% <small style="color:var(--text-muted);font-size:.75rem;display:block">${label}</small></td><td>${Math.round(mmol)}</td><td>${eagMg.toFixed(0)}</td><td>${eagMmol.toFixed(1)}</td></tr>`;
   });
 
-  // FAQs
+  // FAQs — original 8 + 6 new clinical FAQs
   const faqs = [
     { q: "What is HbA1c and why is it measured?", a: "HbA1c (glycated haemoglobin) measures the percentage of haemoglobin with glucose attached. Because red blood cells live 90–120 days, HbA1c reflects average blood glucose over 2–3 months. It is the gold standard for monitoring glycaemic control in diabetes and is used to diagnose diabetes (≥6.5% / ≥48 mmol/mol) and prediabetes (5.7–6.4% / 39–47 mmol/mol)." },
     { q: "How do I convert HbA1c % to mmol/mol?", a: "Formula: mmol/mol = (HbA1c% − 2.15) × 10.929. Example: 7% → (7 − 2.15) × 10.929 = 53 mmol/mol. Reverse: HbA1c% = (mmol/mol ÷ 10.929) + 2.15." },
     { q: "What is eAG (estimated average glucose)?", a: "eAG is the estimated average blood glucose corresponding to an HbA1c, in mg/dL or mmol/L. Formula: eAG (mg/dL) = (28.7 × HbA1c%) − 46.7. Convert to mmol/L by dividing by 18.016. HbA1c 7% ≈ eAG 154 mg/dL ≈ 8.6 mmol/L." },
-    { q: "What is the target HbA1c for type 2 diabetes?", a: "For most adults with type 2 diabetes, ADA and IDF recommend <7% (<53 mmol/mol). A less stringent target of <8% (<64 mmol/mol) is appropriate for elderly patients or those with high hypoglycaemia risk. More stringent targets (<6.5%) may be used for newly diagnosed patients without cardiovascular disease." },
-    { q: "What HbA1c level diagnoses diabetes?", a: "WHO and ADA criteria: HbA1c ≥6.5% (≥48 mmol/mol) on two separate occasions (or once with symptoms). Prediabetes: 5.7–6.4% (ADA) or 6.0–6.4% (WHO). Normal: <5.7% (ADA) or <6.0% (WHO)." },
+    { q: "What is the target HbA1c for type 2 diabetes?", a: "For most adults with type 2 diabetes, ADA and IDF recommend &lt;7% (&lt;53 mmol/mol). A less stringent target of &lt;8% (&lt;64 mmol/mol) is appropriate for elderly patients or those with high hypoglycaemia risk. More stringent targets (&lt;6.5%) may be used for newly diagnosed patients without cardiovascular disease." },
+    { q: "What HbA1c level diagnoses diabetes?", a: "WHO and ADA criteria: HbA1c ≥6.5% (≥48 mmol/mol) on two separate occasions (or once with symptoms). Prediabetes: 5.7–6.4% (ADA) or 6.0–6.4% (WHO). Normal: &lt;5.7% (ADA) or &lt;6.0% (WHO)." },
     { q: "What conditions cause falsely high or low HbA1c?", a: "Falsely HIGH: iron deficiency anaemia, vitamin B12 deficiency, splenectomy, uraemia, alcoholism. Falsely LOW: haemolytic anaemia, haemoglobin variants (HbS, HbC, HbE — common in India and Africa), pregnancy, recent blood transfusion, erythropoietin therapy. In these conditions, fructosamine or CGM may be more reliable." },
     { q: "What is the difference between DCCT and IFCC units?", a: "DCCT (%) is the older unit used in the USA and India. IFCC (mmol/mol) is the internationally standardised unit adopted by Europe, Australia, and WHO. Most modern analysers report both. Conversion: IFCC = (DCCT% − 2.15) × 10.929." },
-    { q: "How often should HbA1c be tested?", a: "Well-controlled diabetes meeting targets: every 6 months. Poorly controlled or recently changed treatment: every 3 months. Testing more frequently than every 3 months adds little value as HbA1c reflects a 90-day average. High-risk prediabetes: annually." }
+    { q: "How often should HbA1c be tested?", a: "Well-controlled diabetes meeting targets: every 6 months. Poorly controlled or recently changed treatment: every 3 months. Testing more frequently than every 3 months adds little value as HbA1c reflects a 90-day average. High-risk prediabetes: annually." },
+    { q: "What HbA1c is considered diabetic in India?", a: "Per ADA 2024 and RSSDI guidelines, an HbA1c of ≥6.5% (48 mmol/mol) on two separate occasions confirms a diagnosis of diabetes mellitus. Prediabetes is defined as 5.7–6.4% (39–47 mmol/mol). Below 5.7% is considered normal. Note that HbA1c alone is not sufficient for diagnosis in conditions that affect red cell lifespan such as haemolytic anaemia or haemoglobin variants." },
+    { q: "What is the HbA1c treatment target for type 2 diabetes in India?", a: "RSSDI and ADA recommend an HbA1c target of &lt;7.0% (53 mmol/mol) for most adults with type 2 diabetes. Targets should be individualised: &lt;6.5% for younger patients with short disease duration, no hypoglycaemia risk, and no cardiovascular disease; &lt;8.0% for elderly patients, those with significant comorbidities, hypoglycaemia unawareness, or limited life expectancy. Tight control (&lt;6.5%) in high-risk patients with established CVD may increase mortality (ACCORD trial)." },
+    { q: "What is eAG and how is it calculated from HbA1c?", a: "eAG (Estimated Average Glucose) translates HbA1c into an average blood glucose that patients can relate to their home glucometer readings. The formula (Nathan et al., ADAG study 2008) is: eAG (mg/dL) = (28.7 × HbA1c%) − 46.7. For example, an HbA1c of 7.0% corresponds to an eAG of approximately 154 mg/dL (8.5 mmol/L). eAG is useful for patient counselling but is a population-based estimate — individual variation exists." },
+    { q: "When is HbA1c unreliable and what should be used instead?", a: "HbA1c reflects the average lifespan of red blood cells (~120 days). Conditions that shorten RBC lifespan give a falsely low HbA1c: haemolytic anaemia, sickle cell disease (HbS), HbC disease, malaria, and recent blood transfusion. Conditions that extend RBC lifespan give falsely high HbA1c: iron deficiency anaemia, vitamin B12 deficiency, and splenectomy. CKD causes both effects depending on severity. In these situations, fructosamine (reflects 2–3 week average) or glycated albumin is preferred. During pregnancy, HbA1c is also less reliable — use fasting/post-prandial glucose or CGMS instead." },
+    { q: "How often should HbA1c be tested in Indian clinical practice?", a: "ADA and RSSDI recommend testing every 3 months when glycaemic targets are not met or when therapy is being adjusted, and every 6 months once the patient is stable and at target. Point-of-care HbA1c testing is now widely available in Indian district hospitals and allows same-visit treatment decisions." }
   ];
   const fl = document.getElementById('faq-list');
   faqs.forEach((f, i) => {
