@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google-site-verification" content="nZgsChD0zRn_BmL5Yw4MLcuRGkkhdkSTp9WAJPmudyM" />
+    <link rel="stylesheet" href="/assets/shared.css"/>
+    <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/"/>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+    <script src="/assets/umami-events.js"></script>
+
+    <title>Free Medical Calculators | Clinical Tools for Doctors India</title>
+    <meta name="description" content="50+ Free Medical Calculators: CURB-65, NEWS2, GCS, Rabies PEP, UIP Schedule, eGFR, HbA1c, and more. Built by a doctor for clinical use."/>
+
+    <style>
+        :root {
+            --primary: #0f172a; --accent-blue: #3182ce; --accent-emerald: #10b981;
+            --text-primary: #1a202c; --text-secondary: #4a5568; --text-muted: #718096;
+            --bg-base: #f8fafc; --bg-card: #ffffff; --border-light: #e2e8f0;
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07); --transition: all 0.3s ease;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Geist', -apple-system, sans-serif;
+            background: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-top: 80px; /* FIXED: Prevents header overlap */
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .page-wrapper { max-width: 1100px; margin: 0 auto; }
+
+        .hero-section { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 24px; padding: 40px; margin-bottom: 32px; color: white; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .hero-badge { display: inline-block; background: rgba(255, 255, 255, 0.1); padding: 6px 16px; border-radius: 24px; font-size: 0.75rem; font-weight: 600; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.2); }
+        .hero-title { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+        .hero-sub { font-size: 0.95rem; color: #cbd5e1; max-width: 600px; margin: 0 auto; }
+
+        /* Search */
+        .search-container { max-width: 600px; margin: 0 auto 40px; position: relative; }
+        .search-input { width: 100%; padding: 16px 20px; border-radius: 15px; border: 1.5px solid var(--border-light); outline: none; box-shadow: var(--shadow-md); font-family: inherit; font-size: 1rem; }
+
+        /* Tools Grid */
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 40px; }
+        .cat-divider { grid-column: 1/-1; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 24px; padding-bottom: 8px; border-bottom: 2px solid var(--border-light); }
+
+        .tool-card { background: var(--bg-card); border-radius: 16px; padding: 20px; border: 1px solid var(--border-light); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: var(--transition); }
+        .tool-card:hover { border-color: var(--accent-blue); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .tool-card-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+        .tool-card-title { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--primary); }
+        .tool-card-desc { font-size: 0.8rem; color: var(--text-secondary); flex-grow: 1; }
+
+        /* Info & Footer */
+        .info-section { background: var(--bg-card); padding: 30px; border-radius: 20px; border: 1px solid var(--border-light); margin-bottom: 40px; }
+        .info-section h2 { font-size: 1.1rem; margin-bottom: 10px; color: var(--primary); }
+        .info-section p { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 15px; }
+
+        .footer-legal { text-align: center; padding: 40px 0; border-top: 1px solid var(--border-light); color: var(--text-muted); font-size: 0.8rem; }
+        .footer-legal a { color: var(--accent-blue); text-decoration: none; margin: 0 8px; }
+
+        @media(max-width: 600px) { .hero-title { font-size: 1.5rem; } .tools-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<main class="page-wrapper">
+
+    <div class="hero-section">
+        <div class="hero-badge">🩺 BUILT BY A DOCTOR · NO LOGIN · FREE</div>
+        <h1 class="hero-title">Medical Calculators Suite</h1>
+        <p class="hero-sub">Clinically accurate tools following NCDC, IAP, WHO, and NICE standards.</p>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search 50+ clinical tools..." onchange="location.href='/search?q='+this.value">
+    </div>
+
+    <div class="tools-grid">
+        <div class="cat-divider">🚨 Emergency & Critical Care</div>
+        <a class="tool-card" href="/medical-calculators/curb65"><span class="tool-card-icon">🫁</span><div class="tool-card-title">CURB-65 Score</div><div class="tool-card-desc">Pneumonia severity and mortality risk.</div></a>
+        <a class="tool-card" href="/medical-calculators/news2"><span class="tool-card-icon">📉</span><div class="tool-card-title">NEWS2 Score</div><div class="tool-card-desc">Early warning for clinical deterioration.</div></a>
+        <a class="tool-card" href="/medical-calculators/gcs-calculator"><span class="tool-card-icon">🧠</span><div class="tool-card-title">GCS Calculator</div><div class="tool-card-desc">Glasgow Coma Scale (Adult/Peds).</div></a>
+        <a class="tool-card" href="/medical-calculators/burn-calculator"><span class="tool-card-icon">🔥</span><div class="tool-card-title">Burn & Parkland</div><div class="tool-card-desc">TBSA % and fluid resuscitation.</div></a>
+        <a class="tool-card" href="/medical-calculators/wells-score"><span class="tool-card-icon">🩸</span><div class="tool-card-title">Wells Score</div><div class="tool-card-desc">DVT and Pulmonary Embolism risk.</div></a>
+        <a class="tool-card" href="/medical-calculators/map-calculator"><span class="tool-card-icon">❤️</span><div class="tool-card-title">MAP Calculator</div><div class="tool-card-desc">Mean Arterial Pressure targets.</div></a>
+        <a class="tool-card" href="/medical-calculators/qsofa-score"><span class="tool-card-icon">🏥</span><div class="tool-card-title">qSOFA Score</div><div class="tool-card-desc">Quick Sepsis assessment.</div></a>
+        <a class="tool-card" href="/medical-calculators/shock-index"><span class="tool-card-icon">⚡</span><div class="tool-card-title">Shock Index</div><div class="tool-card-desc">HR/SBP ratio for occult shock.</div></a>
+        <a class="tool-card" href="/medical-calculators/perc-rule"><span class="tool-card-icon">✅</span><div class="tool-card-title">PERC Rule</div><div class="tool-card-desc">Pulmonary Embolism rule-out.</div></a>
+        <a class="tool-card" href="/medical-calculators/apache2-score"><span class="tool-card-icon">📊</span><div class="tool-card-title">APACHE II</div><div class="tool-card-desc">ICU mortality risk assessment.</div></a>
+        <a class="tool-card" href="/medical-calculators/sofa-score"><span class="tool-card-icon">🫀</span><div class="tool-card-title">SOFA Score</div><div class="tool-card-desc">Sequential Organ Failure Assessment.</div></a>
+
+        <div class="cat-divider">👶 Pediatrics & Neonatology</div>
+        <a class="tool-card" href="/medical-calculators/uip-vaccine"><span class="tool-card-icon">🧒</span><div class="tool-card-title">UIP Vaccine Tracker</div><div class="tool-card-desc">Indian immunization schedule.</div></a>
+        <a class="tool-card" href="/medical-calculators/neonatal-jaundice"><span class="tool-card-icon">🌟</span><div class="tool-card-title">Neonatal Jaundice</div><div class="tool-card-desc">Phototherapy (AAP/IAP thresholds).</div></a>
+        <a class="tool-card" href="/medical-calculators/growth-chart"><span class="tool-card-icon">📈</span><div class="tool-card-title">Child Growth Chart</div><div class="tool-card-desc">WHO/IAP Weight & Height Z-scores.</div></a>
+        <a class="tool-card" href="/medical-calculators/paracetamol"><span class="tool-card-icon">🌡️</span><div class="tool-card-title">Paracetamol Dose</div><div class="tool-card-desc">15mg/kg syrup/tablet dosing.</div></a>
+        <a class="tool-card" href="/medical-calculators/apgar-score"><span class="tool-card-icon">👶</span><div class="tool-card-title">APGAR Score</div><div class="tool-card-desc">Newborn assessment + NRP guide.</div></a>
+        <a class="tool-card" href="/medical-calculators/ors"><span class="tool-card-icon">💧</span><div class="tool-card-title">ORS Rehydration</div><div class="tool-card-desc">WHO Plan A & B volumes.</div></a>
+        <a class="tool-card" href="/medical-calculators/pediatric-asthma"><span class="tool-card-icon">💨</span><div class="tool-card-title">Asthma Action Plan</div><div class="tool-card-desc">Green/Yellow/Red zone guide.</div></a>
+        <a class="tool-card" href="/medical-calculators/milestones"><span class="tool-card-icon">🎯</span><div class="tool-card-title">Child Milestones</div><div class="tool-card-desc">Developmental tracker (0-5 yrs).</div></a>
+        <a class="tool-card" href="/medical-calculators/holliday-segar"><span class="tool-card-icon">💧</span><div class="tool-card-title">Maintenance IV</div><div class="tool-card-desc">4-2-1 rule fluid calculation.</div></a>
+
+        <div class="cat-divider">🏥 Internal Medicine & Renal</div>
+        <a class="tool-card" href="/medical-calculators/egfr-calculator"><span class="tool-card-icon">🫘</span><div class="tool-card-title">eGFR (CKD-EPI)</div><div class="tool-card-desc">2021 Kidney function estimate.</div></a>
+        <a class="tool-card" href="/medical-calculators/creatinine-clearance"><span class="tool-card-icon">🫘</span><div class="tool-card-title">CrCl (Cockcroft)</div><div class="tool-card-desc">Dose adjustments & staging.</div></a>
+        <a class="tool-card" href="/medical-calculators/hba1c-converter"><span class="tool-card-icon">🩺</span><div class="tool-card-title">HbA1c Converter</div><div class="tool-card-desc">% ↔ mmol/mol + eAG.</div></a>
+        <a class="tool-card" href="/medical-calculators/corrected-calcium"><span class="tool-card-icon">🔬</span><div class="tool-card-title">Corrected Calcium</div><div class="tool-card-desc">Adjustment for low Albumin.</div></a>
+        <a class="tool-card" href="/medical-calculators/anion-gap"><span class="tool-card-icon">⚗️</span><div class="tool-card-title">Anion Gap</div><div class="tool-card-desc">Acidosis differentiation.</div></a>
+        <a class="tool-card" href="/medical-calculators/child-pugh"><span class="tool-card-icon">🫀</span><div class="tool-card-title">Child-Pugh Score</div><div class="tool-card-desc">Liver disease classification.</div></a>
+        <a class="tool-card" href="/medical-calculators/meld-score"><span class="tool-card-icon">🧬</span><div class="tool-card-title">MELD Score</div><div class="tool-card-desc">End-stage liver disease scoring.</div></a>
+        <a class="tool-card" href="/medical-calculators/sodium-correction"><span class="tool-card-icon">💧</span><div class="tool-card-title">Sodium Correction</div><div class="tool-card-desc">Hypo/Hypernatremia management.</div></a>
+        <a class="tool-card" href="/medical-calculators/cha2ds2-vasc"><span class="tool-card-icon">🫀</span><div class="tool-card-title">CHA₂DS₂-VASc</div><div class="tool-card-desc">Stroke risk in AFib.</div></a>
+
+        <div class="cat-divider">🧪 Vitamins & Dosing</div>
+        <a class="tool-card" href="/medical-calculators/doses"><span class="tool-card-icon">💊</span><div class="tool-card-title">Drug Dose Calc</div><div class="tool-card-desc">Weight-based clinical dosing.</div></a>
+        <a class="tool-card" href="/medical-calculators/iv-drip-rate-calculator"><span class="tool-card-icon">💉</span><div class="tool-card-title">IV Drip Rate</div><div class="tool-card-desc">Drops/min & infusion times.</div></a>
+        <a class="tool-card" href="/medical-calculators/steroid-equivalence"><span class="tool-card-icon">💊</span><div class="tool-card-title">Steroid Converter</div><div class="tool-card-desc">Equivalent glucocorticoid doses.</div></a>
+        <a class="tool-card" href="/vitamin/b1-thiamine-calculator"><span class="tool-card-icon">🥬</span><div class="tool-card-title">Vitamin B1</div><div class="tool-card-desc">Thiamine dosing calculator.</div></a>
+        <a class="tool-card" href="/vitamin/ascorbic-acid-vit-c"><span class="tool-card-icon">🍋</span><div class="tool-card-title">Vitamin C</div><div class="tool-card-desc">Ascorbic acid dosing.</div></a>
+
+        <div class="cat-divider">🤰 OBG & Specialty</div>
+        <a class="tool-card" href="/medical-calculators/due-date"><span class="tool-card-icon">🤰</span><div class="tool-card-title">Due Date (EDD)</div><div class="tool-card-desc">LMP/IVF/USG pregnancy dates.</div></a>
+        <a class="tool-card" href="/medical-calculators/obs-calc"><span class="tool-card-icon">🏥</span><div class="tool-card-title">ObsCalc Suite</div><div class="tool-card-desc">Bishop, Apgar, VBAC risk.</div></a>
+        <a class="tool-card" href="/medical-calculators/spirometry"><span class="tool-card-icon">🫁</span><div class="tool-card-title">Spirometry PFT</div><div class="tool-card-desc">Predicted values (Jindal Indian).</div></a>
+        <a class="tool-card" href="/medical-calculators/biomedical-waste"><span class="tool-card-icon">♻️</span><div class="tool-card-title">BMW Guide</div><div class="tool-card-desc">Waste segregation rules (India).</div></a>
+        <a class="tool-card" href="/medical-calculators/mentzer-index-calculator"><span class="tool-card-icon">🧬</span><div class="tool-card-title">Mentzer Index</div><div class="tool-card-desc">Thalassemia vs Iron deficiency.</div></a>
+    </div>
+
+    <div class="info-section">
+        <h2>Clinical Accuracy</h2>
+        <p>Built for healthcare professionals. All tools are validated against NCDC India, WHO, and NICE guidelines. No user data is stored; all calculations are local.</p>
+    </div>
+
+    <div class="footer-legal">
+        <p>© 2026 RxMedCalc · Built by a doctor in India</p>
+        <div style="margin-top:10px">
+            <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/contact">Contact</a> · <a href="/search">🔍 Search</a>
+        </div>
+    </div>
+
+</main>
+<script src="/assets/shared-nav.js"></script>
+</body>
+</html>

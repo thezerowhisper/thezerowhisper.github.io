@@ -1,0 +1,299 @@
+---
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Clinically accurate medical calculators." } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{title}</title>
+<meta name="description" content={description}/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap"/>
+
+<style is:global>
+/* Global Variables with New Color Scheme */
+:root {
+  /* Originally blue/dark blue, let's make it a nice elegant dark green/teal theme */
+  --primary:      #0f3531;      /* Dark teal/green */
+  --primary-mid:  #1e5b53;
+  --primary-light:#2a8276;
+
+  --accent:       #eab308;      /* Yellow accent */
+  --accent-amber: #eab308;
+  --accent-cyan:  #06b6d4;
+  --accent-blue:  #3b82f6;
+  --accent-red:   #ef4444;
+  --accent-green: #10b981;
+
+  --text:         #1a202c;
+  --text-dark:    #1a1a2e;
+  --text-muted:   #4a5568;
+  --text-light:   #718096;
+
+  --bg:           #f4f6f5;      /* Slightly warm light grey */
+  --bg-light:     #f4f6f5;
+  --bg-white:     #fff;
+
+  --surface:      #ffffff;
+  --surface2:     #f8faf9;
+  --border:       #e2e8f0;
+  --border-light: #e5e7eb;
+
+  --radius:       14px;
+  --radius-sm:    8px;
+  --shadow:       0 2px 16px rgba(0,0,0,.07);
+  --shadow-lg:    0 8px 32px rgba(0,0,0,.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── SITE HEADER ─────────────────────────────────────────── */
+.site-header {
+  background: var(--primary);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  gap: 20px;
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+  flex-shrink: 0;
+}
+.logo-icon { font-size: 1.5rem; }
+.logo-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.logo-tag {
+  background: rgba(234,179,8,0.2);
+  border: 1px solid rgba(234,179,8,0.4);
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.site-nav a {
+  color: rgba(255,255,255,.7);
+  text-decoration: none;
+  font-size: .85rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.site-nav a:hover { color: #fff; background: rgba(255,255,255,0.1); }
+.site-nav a.active { color: var(--accent); background: rgba(234,179,8,0.15); }
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media(max-width: 850px) {
+  .nav-toggle { display: flex; align-items: center; justify-content: center; }
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0; right: 0;
+    background: var(--primary);
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .site-nav.open { display: flex; }
+  .site-nav a { width: 100%; padding: 12px; font-size: 1rem; }
+}
+
+/* ── SITE FOOTER ─────────────────────────────────────────── */
+.site-footer {
+  background: var(--primary);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.6);
+  padding: 50px 24px 30px;
+  margin-top: 60px;
+  font-family: 'DM Sans', sans-serif;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-brand .brand-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.footer-brand p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+.footer-col h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 0.05em;
+}
+.footer-col a {
+  display: block;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 5px 0;
+  transition: 0.2s;
+}
+.footer-col a:hover { color: var(--accent); padding-left: 5px; }
+.footer-bottom {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+@media (max-width: 600px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">
+        <span class="logo-icon">🩺</span>
+        <span class="logo-name">RxMedCalc</span>
+        <span class="logo-tag">Free</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle-btn">☰</button>
+      <nav class="site-nav" id="site-nav-menu">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/medical-calculators/">Calculators</a>
+        <a href="/drug-doses/">Drug Doses</a>
+        <a href="/rabies-scheduler/">Rabies PEP</a>
+        <a href="/search">🔍 Search</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-name">🩺 RxMedCalc</div>
+        <p>Clinically accurate medical calculators for professionals and patients. Based on WHO, NICE, and IAP guidelines.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Emergencies</h4>
+        <a href="/medical-calculators/curb65">CURB-65</a>
+        <a href="/medical-calculators/news2">NEWS2</a>
+        <a href="/medical-calculators/gcs-calculator">GCS Score</a>
+        <a href="/medical-calculators/sofa-score">SOFA Score</a>
+      </div>
+      <div class="footer-col">
+        <h4>Vitamins</h4>
+        <a href="/vitamin/b1-thiamine-calculator">Vitamin B1</a>
+        <a href="/vitamin/b3-niacin-calculator">Vitamin B3</a>
+        <a href="/vitamin/ascorbic-acid-vit-c">Vitamin C</a>
+        <a href="/vitamin/d3-cholecalciferol">Vitamin D3</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/about">About Us</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 RxMedCalc · Built by a doctor in India</span>
+      <span>Free Tool · No Login Required</span>
+    </div>
+  </footer>
+
+  <script is:inline>
+    // Highlight active nav item
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.site-nav a');
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === '/') {
+        if (currentPath === '/' || currentPath === '/index') {
+          link.classList.add('active');
+        }
+      } else if (currentPath.startsWith(href)) {
+        link.classList.add('active');
+      }
+    });
+
+    // Mobile nav toggle
+    const toggleBtn = document.getElementById('nav-toggle-btn');
+    const navMenu = document.getElementById('site-nav-menu');
+    if(toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
