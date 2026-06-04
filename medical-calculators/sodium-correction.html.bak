@@ -75,15 +75,7 @@ h1 em{font-style:italic;color:#22d3ee}
 .related-card:active{border-color:#06b6d4;background:#ecfeff}
 .rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -156,15 +148,6 @@ h1 em{font-style:italic;color:#22d3ee}
     </ul>
     <h3>Which Formula to Use?</h3>
     <p>Use Hillier (2.4) for glucose &gt;400 mg/dL (22 mmol/L) — this is now preferred in most guidelines. Use Katz (1.6) for moderate hyperglycaemia (180–400 mg/dL). Both formulas are presented in the result — the Hillier corrected Na is often the clinically more relevant value in severe hyperglycaemia such as HHS.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the corrected sodium formula in hyperglycaemia?</div><div class="fa">Hyperglycaemia causes osmotic shift of water from cells into plasma, diluting sodium. Corrected Na = Measured Na + 2.4 × [(Glucose − 100) / 100] (glucose in mg/dL). Alternative (more accurate for severe hyperglycaemia): Corrected Na = Measured Na + 1.6 × [(Glucose − 100) / 100]. If corrected Na is high (>145 mEq/L) despite apparent hyponatraemia, the patient is actually hypernatraemic — true sodium deficit is masked by glucose dilution.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the correction rate for hyponatraemia?</div><div class="fa">Chronic hyponatraemia (>48 hours or unknown duration): correct sodium at maximum 10–12 mEq/L per 24 hours (or 8 mEq/L/24h if high risk of osmotic demyelination — alcoholism, malnutrition, hypokalaemia, liver disease). Correction faster than this risks osmotic demyelination syndrome (ODS) — a potentially fatal pontine and extrapontine demyelination causing paraplegia, dysarthria, and locked-in syndrome.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is osmotic demyelination syndrome?</div><div class="fa">ODS (formerly central pontine myelinolysis) occurs when chronic hyponatraemia is corrected too rapidly. Brain cells that have adapted to low sodium by losing osmolytes are suddenly exposed to rapid osmolality change, causing myelin sheath destruction. Onset 2–6 days after overcorrection. Symptoms: pseudobulbar palsy, spastic quadriplegia, dysarthria, dysphagia, altered consciousness. Prevention: strict rate limit of ≤10–12 mEq/L/24h, and re-lowering sodium with dextrose water + desmopressin if overcorrection occurs.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is acute symptomatic hyponatraemia treated?</div><div class="fa">Acute severe hyponatraemia (seizures, coma, severe symptoms): 3% hypertonic saline 100–150 mL IV over 20 minutes, repeat once or twice until symptoms resolve. Target: raise Na by 4–6 mEq/L rapidly to stop acute brain herniation, then switch to controlled correction (≤10 mEq/L/day). This is an emergency — do not apply chronic hyponatraemia correction limits in acute symptomatic cases.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the common causes of hyponatraemia in India?</div><div class="fa">Most common causes seen in Indian hospitals: SIADH (secondary to CNS infections — TB meningitis and bacterial meningitis are major causes in India, also pneumonia, post-neurosurgery), excessive hypotonic IV fluids (iatrogenic — especially in postoperative patients given large volumes of 5% dextrose), hypothyroidism, adrenal insufficiency (Addison's disease, post-steroid withdrawal), decompensated liver cirrhosis, and nephrotic syndrome.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is hypernatraemia managed?</div><div class="fa">Hypernatraemia (Na >145 mEq/L): identify and treat cause (inadequate water intake, diabetes insipidus, excessive sodium load). Free water deficit = 0.6 × weight × [(Na/140) − 1]. Replace deficit with oral water (preferred) or IV 5% dextrose or 0.45% saline. Correction rate: no faster than 10–12 mEq/L/day for chronic hypernatraemia (risk of cerebral oedema with rapid correction). Monitor Na every 4–6 hours during active correction.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -212,6 +195,5 @@ function resetCalc(){['na','gluc'].forEach(id=>document.getElementById(id).value
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
- <script> function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script>
- </body>
+</body>
 </html>

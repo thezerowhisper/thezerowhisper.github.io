@@ -84,15 +84,7 @@ h1 em{font-style:italic;color:#60a5fa}
 .related-card:active,.related-card:hover{border-color:#3b82f6;background:#eff6ff}
 .rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -180,15 +172,6 @@ All 8 PERC negative?
       <li><strong>D-dimer:</strong> Very sensitive (&gt;95%) but non-specific. Elevated in infection, pregnancy, post-op, malignancy, inflammation. Age-adjusted D-dimer: threshold = age × 10 µg/L (for age &gt;50)</li>
       <li><strong>CT Pulmonary Angiogram:</strong> Gold standard for PE confirmation. Risk of contrast nephropathy, radiation (5–10 mSv), gadolinium allergy. Reserve for positive D-dimer in appropriate pre-test probability</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the PERC rule?</div><div class="fa">The PERC (Pulmonary Embolism Rule-out Criteria) rule is used to exclude PE without further testing in very low-risk patients. All 8 criteria must be absent: age ≥50, HR ≥100, SpO2 <95% on room air, unilateral leg swelling, haemoptysis, recent surgery/trauma (within 4 weeks), prior PE/DVT, and oestrogen use. If ALL absent in a low pre-test probability patient: PE excluded without D-dimer or imaging.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When can PERC be applied?</div><div class="fa">PERC is valid ONLY when pre-test probability is low (<15% — 'PE unlikely' by clinical gestalt or Wells score ≤4). Do NOT apply PERC in intermediate or high pre-test probability patients. In low-probability patients who are PERC-negative, the post-test probability of PE is <2% — below the threshold that justifies further testing or anticoagulation risk.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the PERC-Wells algorithm?</div><div class="fa">Step 1: Calculate Wells score. If >4 (PE likely): go straight to CTPA. If ≤4 (PE unlikely): Step 2 — apply PERC. If PERC negative (all 8 absent): PE excluded, no further testing. If PERC positive (any criterion present): Step 3 — D-dimer (age-adjusted threshold if >50 years: age × 10 µg/L). If D-dimer negative: PE excluded. If positive: CTPA.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is age-adjusted D-dimer?</div><div class="fa">Standard D-dimer threshold is 500 µg/L for all adults. Age-adjusted threshold (for patients >50 years): Age × 10 µg/L. Example: 70-year-old — threshold = 700 µg/L. This reduces false-positive rates in elderly patients (D-dimer rises with age, inflammation, pregnancy, malignancy) without missing significant PEs. Validated in multiple studies; endorsed by ESC guidelines.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the most common PE symptoms?</div><div class="fa">Dyspnoea (most common, ~80%), pleuritic chest pain (~50%), cough (~40%), haemoptysis (~15%), pre-syncope/syncope (~10%). Massive PE: haemodynamic instability, hypotension, tachycardia, RV strain on ECG (S1Q3T3, new RBBB, sinus tachycardia). Many PEs are clinically silent — discovered incidentally on CT. 'Silent hypoxia' (SpO2 drop without dyspnoea) is characteristic of COVID-19-associated PE.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the treatment of sub-massive PE?</div><div class="fa">Sub-massive (intermediate-high risk) PE: haemodynamically stable but with RV dysfunction (RV:LV ratio >0.9 on CT or echo) AND elevated troponin. Treatment: anticoagulation (DOAC preferred — rivaroxaban or apixaban at treatment doses), close monitoring for haemodynamic deterioration. Systemic thrombolysis is not routinely indicated in stable patients but should be immediately available if clinical deterioration occurs. Consider catheter-directed thrombolysis in experienced centres.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -258,10 +241,6 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){sel.clear();document.querySelectorAll('.perc-item').forEach(el=>el.classList.remove('positive'));document.getElementById('perc-count').textContent='0 / 8';document.getElementById('perc-count').className='ps-count zero';document.getElementById('results').className='results';lastResult=null}
 </script>
-<script> src="/assets/shared-nav.js"></script>
-<script>  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
-
-  
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

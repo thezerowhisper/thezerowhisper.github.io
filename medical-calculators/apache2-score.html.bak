@@ -120,15 +120,7 @@ h1 em{font-style:italic;color:#f87171}
 .rc-title{font-size:0.82rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}
 .rc-desc{font-size:0.68rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:11px;padding:14px;font-size:0.75rem;color:#78350f;line-height:1.65;margin-top:20px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -230,15 +222,6 @@ h1 em{font-style:italic;color:#f87171}
       <li>Poorly calibrated for some diagnoses (burns, post-cardiac arrest, liver failure)</li>
       <li>APACHE IV and SOFA have largely replaced APACHE II in research; APACHE II remains widely used clinically</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is APACHE II used for?</div><div class="fa">APACHE II (Acute Physiology and Chronic Health Evaluation II) estimates ICU mortality risk using 12 acute physiological variables, age, and chronic health status. Scores range 0–71. It is used for ICU benchmarking, clinical research stratification, prognosis estimation, and family discussions — not for individual treatment-limitation decisions.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What APACHE II score predicts high mortality?</div><div class="fa">Score 0–9: <10% mortality. Score 10–19: 15–25%. Score 20–24: ~40%. Score 25–29: ~55%. Score 30–34: ~73%. ≥35: >85%. These are population estimates. Actual mortality depends on diagnosis, ICU interventions, and centre-level factors.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the 12 physiological variables in APACHE II?</div><div class="fa">Temperature (rectal), mean arterial pressure, heart rate, respiratory rate, oxygenation (A-a gradient or PaO2), arterial pH, serum sodium, serum potassium, creatinine, haematocrit, white cell count, and GCS. Each scored 0–4 based on deviation from normal using worst values in first 24 ICU hours.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What chronic conditions add APACHE II points?</div><div class="fa">5 points added for non-operative or emergency surgical patients with: liver cirrhosis with portal hypertension, NYHA Class IV heart failure, severe COPD/chronic hypoxia, chronic renal replacement therapy, or immunosuppression (chemotherapy, steroids, AIDS). 2 points for elective surgical patients with same conditions.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How does APACHE II compare to SOFA?</div><div class="fa">APACHE II is calculated once at ICU admission — it is a severity-at-admission score. SOFA is calculated daily to track organ failure trajectory. A rising SOFA predicts poor outcome better than a high initial APACHE II. Use APACHE II for admission severity; SOFA for daily monitoring and sepsis definition.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Is APACHE II validated in Indian ICUs?</div><div class="fa">APACHE II has been validated in multiple Indian ICU studies and performs reasonably well, though it tends to overestimate mortality in Indian populations compared to the original Western derivation cohort. Several Indian studies suggest calibrating with local mortality data. Despite this, it remains the most widely used ICU severity score in India.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -384,21 +367,6 @@ function resetCalc(){physScores={};chronicSel.clear();surgType='none';document.g
 setSurg('none');// default
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
-<script>
-function tf(el){
-  var fi = el.closest('.fi');
-  var was = fi.classList.contains('op');
-
-  document.querySelectorAll('.fi').forEach(function(e){
-    e.classList.remove('op');
-  });
-
-  if(!was){
-    fi.classList.add('op');
-  }
-}
-</script>
-<script src="/assets/shared-nav.js">
-</script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

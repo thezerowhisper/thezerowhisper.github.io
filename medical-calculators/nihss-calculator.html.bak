@@ -104,15 +104,7 @@ h1 em{font-style:italic;color:#60a5fa}
 .related-card:hover{border-color:#3b82f6;background:#eff6ff;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -184,15 +176,6 @@ h1 em{font-style:italic;color:#60a5fa}
     <p>Mechanical thrombectomy (MT) has transformed outcomes for large vessel occlusion (LVO) strokes. AHA/ASA 2018 extended MT window criteria: NIHSS ≥6, pre-stroke mRS ≤1, ASPECTS ≥6 on CT, confirmed LVO on CTA, treatment within 6 hours of onset (up to 24 hours in selected wake-up/late-window cases with favourable CT perfusion or DWI-FLAIR mismatch on MRI). NIHSS score does not independently exclude patients from MT consideration — LVO must be confirmed on vascular imaging.</p>
     <h3>NIHSS as a Serial Monitoring Tool</h3>
     <p>A reduction in NIHSS of ≥4 points from baseline is the standard definition of neurological improvement used in clinical trials (including NINDS trial). NIHSS should be performed: at baseline (admission), at 2 hours, 24 hours, 7 days, and at discharge. A worsening NIHSS of ≥4 points from baseline suggests haemorrhagic transformation, cerebral oedema, or re-occlusion — requiring urgent CT head and neurology review.</p>
-     <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What does the NIHSS measure?</div><div class="fa">The NIH Stroke Scale (NIHSS) quantifies neurological deficit severity in acute stroke using 11 items: level of consciousness (3 items), gaze, visual fields, facial palsy, motor arm (both), motor leg (both), limb ataxia, sensory, language/aphasia, dysarthria, and extinction/inattention. Score 0–42. Higher scores indicate more severe deficit.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is NIHSS severity classified?</div><div class="fa">NIHSS 0: no deficit. 1–4: minor stroke. 5–15: moderate stroke. 16–20: moderate-severe. 21–42: severe stroke. NIHSS >25 is associated with very poor outcome without reperfusion therapy. NIHSS >22 is a relative contraindication to IV thrombolysis in some guidelines due to high haemorrhagic transformation risk.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What NIHSS score qualifies for IV thrombolysis?</div><div class="fa">IV alteplase (tPA) for ischaemic stroke: onset within 4.5 hours, NIHSS ≥4 (some centres treat NIHSS 1–3 with disabling deficits), NIHSS ≤25 (relative contraindication if >25). Contraindications include haemorrhage on CT, recent surgery, anticoagulation with therapeutic INR, and prior stroke + DM combination. MRI-guided thrombolysis can extend window in wake-up strokes.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is mechanical thrombectomy and who is eligible?</div><div class="fa">Mechanical thrombectomy (MT) removes large vessel occlusion (LVO) using catheter-based devices. Indicated for: large anterior circulation LVO (ICA, M1, M2 MCA) within 6 hours of onset (or 24 hours in DAWN/DEFUSE-3 criteria with mismatch imaging), NIHSS ≥6, and salvageable brain tissue on CT/MRI perfusion. MT is the most effective stroke treatment — NNT ~2.5 for functional independence. Available in comprehensive stroke centres in Indian metros.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is NIHSS used for stroke prognosis?</div><div class="fa">NIHSS at 24 hours better predicts outcome than admission NIHSS. NIHSS improvement of ≥4 points at 24 hours ('early neurological improvement') predicts good 90-day outcome after thrombolysis. Discharge NIHSS 0–1 correlates with excellent functional recovery (mRS 0–1). NIHSS is also used to assess eligibility for rehabilitation services and to track recovery trajectory.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the difference between NIHSS and mRS?</div><div class="fa">NIHSS measures neurological deficit at a point in time — useful for acute assessment and treatment decisions. mRS (modified Rankin Scale) measures functional disability and independence — used for outcome assessment at 90 days. They measure different domains: NIHSS captures neurological findings; mRS captures functional impact on daily life. A patient can have a low NIHSS but high mRS if their deficit (e.g. isolated aphasia) severely impacts function.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -271,6 +254,5 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){scores=new Array(ITEMS.length).fill(null);document.querySelectorAll('.opt-btn').forEach(b=>b.classList.remove('sel'));document.querySelectorAll('.nihss-item').forEach(el=>el.classList.remove('has-score'));ITEMS.forEach((_,i)=>{document.getElementById('ns'+i).textContent='—'});document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')} </script>
 </body>
 </html>

@@ -106,15 +106,7 @@ h1 em{font-style:italic;color:#f472b6}
 .related-card:hover{border-color:#ec4899;background:#fdf2f8;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -340,18 +332,6 @@ function resetCalc(){['age-y','age-m','length'].forEach(id=>{const el=document.g
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 setMode('age');
 </script>
-<script src="/assets/shared-nav.js">
-  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
-
-  <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the APLS formula for paediatric weight estimation?</div><div class="fa">For children 1–10 years: Weight (kg) = 2 × (Age in years + 4). Example: 6-year-old = 2 × (6+4) = 20 kg. Alternative APLS formula: Weight = (Age + 4) × 2. For infants 3–12 months: Weight (kg) = (Age in months + 9) / 2. These are emergency estimates — actual weight should be measured when possible.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Why is accurate weight estimation important in children?</div><div class="fa">Paediatric drug doses, IV fluid rates, resuscitation drug doses (adrenaline 0.01 mg/kg), defibrillation energy (4 J/kg), endotracheal tube size (age/4 + 4 mm), and tidal volume settings on ventilator are all weight-based. An error of 20% in weight estimation can mean a 20% drug dose error — potentially fatal for high-alert drugs like adrenaline, potassium, or suxamethonium.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What other methods estimate paediatric weight?</div><div class="fa">Broselow tape: colour-coded tape based on child's height correlates to weight — most validated emergency weight estimation tool, includes pre-calculated drug doses by colour zone. PAWPER XL tape: improved accuracy in obese children. Parental estimation: parents usually accurate within 10%. Habitus-modified Broselow (PAWPER): adjusts for body habitus. WHO weight-for-age tables: gold standard for nutritional assessment but requires charts.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the normal weight gain pattern in infancy?</div><div class="fa">Birth weight doubles by 4–5 months and triples by 12 months. Expected weight gain: 0–3 months: ~25–30 g/day; 3–6 months: ~15–20 g/day; 6–12 months: ~10–15 g/day. A neonate loses 5–10% of birth weight in first week (physiological) and regains it by day 10–14. Failure to regain birth weight by day 14 requires investigation (breastfeeding assessment, infection, metabolic).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What weight indicates moderate acute malnutrition in Indian children?</div><div class="fa">Using WHO/IAP standards: Weight-for-height Z-score <-2 to -3 = moderate acute malnutrition (MAM). Weight-for-height Z-score <-3 = severe acute malnutrition (SAM). In India, MUAC (mid-upper arm circumference) is also used: MUAC <11.5 cm = SAM in children 6–59 months; 11.5–12.5 cm = MAM. SAM with complications (oedema, medical complications) requires inpatient NRC (Nutrition Rehabilitation Centre) admission.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is paediatric drug dosing different from adult dosing?</div><div class="fa">Children are not small adults — drug metabolism, distribution, and elimination differ significantly by age. Neonates have immature hepatic and renal function (lower clearance). Drug distribution differs (higher total body water in infants). Always calculate dose per kg and compare against maximum adult dose — never exceed it. Use paediatric formularies (IAP drug handbook, BNFc) rather than extrapolating adult doses. Double-check all paediatric calculations independently.</div></div>
-  </div>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

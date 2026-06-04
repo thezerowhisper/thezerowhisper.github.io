@@ -84,15 +84,7 @@ h1 em{font-style:italic;color:#34d399}
 .related-card:hover{border-color:#10b981;background:#f0fdf4;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -157,15 +149,6 @@ h1 em{font-style:italic;color:#34d399}
       <li><strong>Bilirubin:</strong> Divide mg/dL by 17.1 for µmol/L. Jaundice threshold: ~3 mg/dL = 51 µmol/L (clinically visible scleral icterus typically at &gt;2.5–3 mg/dL)</li>
       <li><strong>Uric acid:</strong> Divide mg/dL by 59.48 for mmol/L. Gout treatment target: &lt;6 mg/dL = &lt;357 µmol/L (some guidelines &lt;5 mg/dL = &lt;297 µmol/L for tophaceous gout)</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">Why are different units used for the same lab test?</div><div class="fa">Laboratory units vary by country and historical convention. The SI system (Système International) uses molar units (mmol/L, µmol/L) preferred in Europe, Australia, and Canada. Conventional units (mg/dL, g/dL, mEq/L) are used in the USA, India, and much of Asia. Both systems are valid — the conversion factor depends on the molecular weight of the substance being measured.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How do I convert mg/dL to mmol/L?</div><div class="fa">mmol/L = mg/dL ÷ (molecular weight / 10). For glucose: MW = 180, so 1 mmol/L = 18 mg/dL (glucose 126 mg/dL = 7.0 mmol/L). For creatinine: MW = 113, so 1 mg/dL = 88.4 µmol/L. For urea: MW = 60, so 1 mg/dL urea = 0.357 mmol/L (but BUN uses nitrogen MW = 28, so 1 mg/dL BUN = 0.714 mmol/L urea).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the difference between BUN and serum urea?</div><div class="fa">BUN (Blood Urea Nitrogen) measures only the nitrogen component of urea (MW 28), while serum urea measures the whole urea molecule (MW 60). BUN is used in the USA and India (mg/dL). Serum urea in mmol/L is used in UK/Europe. Conversion: Urea (mmol/L) = BUN (mg/dL) × 0.357; or BUN (mg/dL) = Urea (mmol/L) × 2.8. Normal BUN: 7–20 mg/dL; Normal serum urea: 2.5–7.1 mmol/L.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is HbA1c converted between % and mmol/mol?</div><div class="fa">DCCT % to IFCC mmol/mol: mmol/mol = (HbA1c% − 2.15) × 10.929. Example: HbA1c 7% = (7 − 2.15) × 10.929 = 53 mmol/mol. Reverse: HbA1c% = (mmol/mol ÷ 10.929) + 2.15. India uses DCCT % (ADA/RSSDI guidelines). UK/Europe use IFCC mmol/mol. Most modern lab analysers report both.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are common unit conversion errors in clinical practice?</div><div class="fa">Dangerous errors: confusing mg/dL and mmol/L for glucose (factor of 18 — misreading 18 mmol/L as 18 mg/dL would be life-threatening); confusing BUN and urea values (factor of 2.8); confusing µg/mL and µg/dL for drug levels (factor of 100); and confusing ng/mL and ng/dL for hormones (factor of 100). Always check units when receiving results from a different laboratory system.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How do I convert cholesterol and lipid units?</div><div class="fa">Total cholesterol, LDL, HDL: mg/dL × 0.0259 = mmol/L. Example: LDL 130 mg/dL = 3.37 mmol/L. Triglycerides: mg/dL × 0.0113 = mmol/L. Example: TG 150 mg/dL = 1.70 mmol/L. Indian labs report in mg/dL. UK/Europe use mmol/L. ATP III/AHA targets are in mg/dL; ESC/EAS targets are in mmol/L — always check which system the guideline uses.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -277,11 +260,6 @@ function convertB(){
   showResult(res,v,'b');
 }
 </script>
-<script src="/assets/shared-nav.js"> </script>
-<script>
-     function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
-
-  
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

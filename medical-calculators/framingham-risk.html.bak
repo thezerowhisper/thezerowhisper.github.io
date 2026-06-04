@@ -83,15 +83,7 @@ h1 em{font-style:italic;color:#f87171}
 .related-card:active{border-color:#ef4444;background:#fef2f2}
 .rc-icon{font-size:1.3rem;flex-shrink:0}.rc-title{font-size:0.8rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.67rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:11px;padding:12px;font-size:0.74rem;color:#78350f;line-height:1.6;margin-top:18px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -201,15 +193,6 @@ h1 em{font-style:italic;color:#f87171}
       <li>BP control to &lt;130/80 mmHg: each 10 mmHg SBP reduction reduces CHD risk by 25%</li>
       <li>Diabetes control: HbA1c &lt;7% — reduces microvascular risk; SGLT2 inhibitors reduce MACE in T2DM</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What does the Framingham Risk Score calculate?</div><div class="fa">The Framingham Risk Score estimates the 10-year risk of a first major cardiovascular event (myocardial infarction, coronary death, or angina) based on age, sex, total cholesterol, HDL cholesterol, systolic BP, BP treatment status, diabetes, and smoking. It was derived from the Framingham Heart Study cohort and is one of the oldest validated CVD risk tools.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is Framingham risk classified?</div><div class="fa">10-year CVD risk: Low: <10%. Intermediate: 10–20%. High: >20%. Patients with established CVD or diabetes are automatically high risk. High-risk patients benefit from statin therapy, BP control to <130/80 mmHg, and antiplatelet therapy (if established CVD). Intermediate-risk patients require individualised decisions.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Does Framingham risk apply to Indian patients?</div><div class="fa">The Framingham equations were derived from predominantly White American populations and overestimate risk in some ethnic groups while underestimating in South Asians. Indians develop CVD at younger ages and at lower risk factor levels. The INTERHEART study showed South Asians have higher population-attributable risk from abdominal obesity and diabetes. Use Framingham as a starting point but apply clinical judgment for Indian patients.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What modifies Framingham risk score?</div><div class="fa">Risk-enhancing factors that increase effective risk beyond calculated score: family history of premature ASCVD (men <55, women <65), high-sensitivity CRP ≥2 mg/L, lipoprotein(a) ≥50 mg/dL, ABI <0.9, metabolic syndrome, chronic inflammatory conditions (RA, psoriasis, HIV), and chronic kidney disease. These factors support earlier or more intensive statin therapy in intermediate-risk patients.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What lifestyle changes reduce cardiovascular risk?</div><div class="fa">Smoking cessation (most impactful — halves CV risk within 1 year), Mediterranean/DASH diet, aerobic exercise (150 min/week moderate intensity), weight loss (5–10% reduces multiple risk factors), optimal BP control (<130/80 mmHg), and glycaemic control in diabetes (HbA1c <7%). Combined, these reduce 10-year Framingham risk by 30–50%.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When should a statin be started based on Framingham risk?</div><div class="fa">High risk (>20%): high-intensity statin (atorvastatin 40-80 mg or rosuvastatin 20-40 mg). Intermediate risk (10-20%): moderate-to-high intensity statin recommended. Low-intermediate (7.5-10%): statin should be considered, especially with risk-enhancing factors. Low risk (<7.5%): lifestyle modification first; statin if LDL remains ≥160 mg/dL. Always combine with lifestyle intervention.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -291,7 +274,5 @@ function resetCalc(){['age','tc','hdl','sbp'].forEach(id=>document.getElementByI
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script> function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script>
-  
 </body>
 </html>

@@ -94,15 +94,7 @@ h1 em{font-style:italic;color:#60a5fa}
 .related-card:hover{border-color:#3b82f6;background:#eff6ff;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -211,15 +203,6 @@ h1 em{font-style:italic;color:#60a5fa}
 
     <h3>A-a Gradient on Supplemental Oxygen</h3>
     <p>On higher FiO₂, the normal A-a gradient increases — the formula assumes this is accounted for. On 100% FiO₂, the normal A-a gradient can be up to 100 mmHg in healthy adults. A useful rule: on 100% O₂, PaO₂ should be >500 mmHg. If PaO₂ &lt;300 mmHg on 100% O₂, there is significant intrapulmonary or intracardiac shunt.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the A-a gradient?</div><div class="fa">The alveolar-arterial (A-a) gradient is the difference between the partial pressure of oxygen in the alveoli (PAO2, calculated) and in arterial blood (PaO2, measured on ABG). A normal gradient means efficient oxygen transfer. An elevated gradient indicates a gas exchange problem — V/Q mismatch, diffusion defect, or right-to-left shunt.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the normal A-a gradient?</div><div class="fa">The normal A-a gradient is age-dependent: approximately Age/4 + 4 mmHg on room air. For a 40-year-old, normal is ~14 mmHg. On 100% O2, the normal upper limit rises to ~100 mmHg. Values significantly above these thresholds suggest impaired gas exchange.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What causes an elevated A-a gradient?</div><div class="fa">Common causes: V/Q mismatch (PE, pneumonia, COPD, asthma, pulmonary oedema), diffusion defect (interstitial lung disease, ARDS), right-to-left shunt (intracardiac defect, hepatopulmonary syndrome). A normal A-a gradient with hypoxia suggests hypoventilation — check PaCO2.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When should A-a gradient be used over P/F ratio?</div><div class="fa">A-a gradient is most reliable on room air (FiO2 0.21). At higher FiO2 levels the gradient naturally widens, reducing discriminatory value. In patients on supplemental oxygen, the P/F ratio (PaO2/FiO2) is preferred — it is independent of FiO2 and is the standard oxygenation index in ICU (normal >400, ARDS <300).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the PAO2 formula?</div><div class="fa">PAO2 = (FiO2 × [Patm − PH2O]) − (PaCO2 / RQ). At sea level on room air: PAO2 = (0.21 × 713) − (PaCO2 / 0.8). PH2O at 37°C = 47 mmHg, Patm = 760 mmHg, RQ = 0.8 assumed. The A-a gradient = PAO2 − PaO2 (from ABG).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Is A-a gradient useful for diagnosing PE?</div><div class="fa">A raised A-a gradient raises suspicion for PE but is non-specific — nearly 20% of proven PEs have a normal gradient. It should not be used in isolation. Use Wells score + D-dimer → CTPA pathway for PE diagnosis. A-a gradient is more useful to confirm that hypoxia has a pulmonary cause rather than hypoventilation alone.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -268,22 +251,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['pao2','paco2','age'].forEach(id=>{document.getElementById(id).value=''});setFiO2(0.21);document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
-  <script>
-function tf(el){
-  var fi = el.closest('.fi');
-  var was = fi.classList.contains('op');
-
-  document.querySelectorAll('.fi').forEach(function(e){
-    e.classList.remove('op');
-  });
-
-  if(!was){
-    fi.classList.add('op');
-  }
-}
-</script>
-<script src="/assets/shared-nav.js">
-</script>
-
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

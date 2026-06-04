@@ -163,7 +163,15 @@ footer a{color:#3182ce}
   .btn-row{display:none!important}
   .card{box-shadow:none;padding:10px}
 }
-</style>
+
+    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
+    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
+    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
+    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
+    .fi.op .fq::after{transform:rotate(45deg)}
+    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
+    .fi.op .fa{max-height:600px;padding-top:8px}
+  </style>
 </head>
 <body>
 <main class="page-wrapper">
@@ -746,6 +754,18 @@ function saveImage() {
 refreshDropdown();
 
 </script>
-<script src="/assets/shared-nav.js"></script>
+<script src="/assets/shared-nav.js">
+  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
+</script>
+
+  <div class="faq-sec">
+    <h2>Frequently Asked Questions</h2>
+      <div class="fi"><div class="fq" onclick="tf(this)">What is the NCDC India rabies PEP schedule?</div><div class="fa">NCDC India recommends the 4-dose Essen IM regimen: Day 0 (2 doses at two sites), Day 7, Day 21. Each dose is 1 vial of tissue culture vaccine (1 mL IM in deltoid for adults, anterolateral thigh for infants). This replaces the older 5-dose schedule. The Zagreb 2-1-1 regimen (Day 0 ×2, Day 7, Day 21) is also endorsed by NCDC and requires only 4 visits and 4 vials.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Who needs rabies immunoglobulin (RIG)?</div><div class="fa">RIG is indicated for all Category III exposures (deep bite penetrating skin, multiple bites, bites on face/head/neck/fingers/genitalia, licks on mucous membranes or broken skin) in unvaccinated or incompletely vaccinated individuals. Equine RIG (ERIG) 40 IU/kg or Human RIG (HRIG) 20 IU/kg — infiltrate maximum possible dose into and around wound, give remainder IM at distant site. Give on Day 0 with first vaccine dose.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What are the WHO exposure categories?</div><div class="fa">Category I: touching/feeding animals, licks on intact skin — no PEP needed, wash hands. Category II: nibbling of uncovered skin, minor scratches without bleeding — wound wash + vaccine only, no RIG. Category III: single or multiple transdermal bites/scratches, contamination of mucous membrane with saliva, licks on broken skin, exposure to bats — wound wash + vaccine + RIG. All Category II and III require immediate wound washing with soap and water for ≥15 minutes.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What if the rabies vaccine series is interrupted?</div><div class="fa">Do not restart the series. Resume from where it was interrupted. The immune response is maintained as long as the series is completed — the timing of interruption does not reset the schedule. Complete all remaining doses as per original schedule dates. If a dose is late, give it as soon as possible and continue on the original schedule.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">Is rabies vaccine safe in pregnancy?</div><div class="fa">Yes. Rabies PEP is not contraindicated in pregnancy. The risk of rabies (100% fatal) far outweighs any theoretical vaccine risk. Cell culture rabies vaccines (HDCV, PVRV, PCECV) are safe in pregnancy. Nerve tissue vaccines (Semple — being phased out in India) are avoided. RIG is also safe in pregnancy. Never withhold PEP from a pregnant woman with Category II or III exposure.</div></div>
+      <div class="fi"><div class="fq" onclick="tf(this)">What wounds have highest rabies transmission risk?</div><div class="fa">Highest risk: bites on face, head, neck, and hands (rich nerve supply — shorter incubation period), deep penetrating wounds (more virus inoculated), multiple wounds, wounds not washed immediately. Lower risk: scratches, superficial bites on limbs. Incubation period ranges from 5 days to several years (average 1–3 months) — determined by viral load inoculated, wound location, and host immune status. Immediate wound washing reduces transmission risk by >50%.</div></div>
+  </div>
 </body>
 </html>

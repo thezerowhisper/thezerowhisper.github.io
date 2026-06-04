@@ -79,15 +79,7 @@ h1 em{font-style:italic;color:#818cf8}
 .related-card:active{border-color:#6366f1;background:#eef2ff}
 .rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -172,15 +164,6 @@ h1 em{font-style:italic;color:#818cf8}
       <li><strong>ACR (albumin-creatinine ratio):</strong> Preferred for diabetic nephropathy and cardiovascular risk assessment — detects early microalbuminuria (&gt;30 mg/g). Normal &lt;30 mg/g, microalbuminuria 30–300 mg/g, macroalbuminuria &gt;300 mg/g</li>
       <li><strong>UPCR:</strong> Preferred for general proteinuria quantification, non-diabetic CKD, and monitoring known heavy proteinuria. Measures all urinary proteins including albumin, globulins, and tubular proteins</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the urine protein-to-creatinine ratio?</div><div class="fa">The urine protein-to-creatinine ratio (UPCR) estimates 24-hour urine protein excretion from a spot urine sample. UPCR (mg/mg) numerically approximates 24-hour proteinuria in g/day. UPCR <0.15 mg/mg is normal. UPCR 0.15–3.5 = significant proteinuria. UPCR >3.5 mg/mg = nephrotic-range proteinuria (equivalent to >3.5 g/day).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Why is UPCR preferred over 24-hour urine collection?</div><div class="fa">24-hour urine collection is inconvenient, often inaccurately collected, and delays diagnosis. UPCR from a spot (preferably first morning void) sample correlates closely with 24-hour proteinuria and is reproducible. It is recommended by KDIGO guidelines as the standard method for proteinuria quantification in CKD monitoring. The first morning void minimises the effect of postural proteinuria.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What does nephrotic-range proteinuria indicate?</div><div class="fa">UPCR >3.5 (or >3.5 g/day proteinuria) defines nephrotic syndrome when accompanied by: hypoalbuminaemia (<3.5 g/dL), oedema, and hyperlipidaemia/lipiduria. In adults, common causes include: membranous nephropathy (most common primary cause), minimal change disease (most common in children), focal segmental glomerulosclerosis (FSGS), diabetic nephropathy (most common secondary cause in India), amyloidosis, and lupus nephritis (class V).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is proteinuria monitored in CKD?</div><div class="fa">KDIGO 2024 CKD classification uses albuminuria category (A1/A2/A3) combined with GFR stage. UPCR or UACR (albumin-creatinine ratio) at each clinic visit. UACR <30 mg/g = A1 (normal). UACR 30–300 = A2 (moderately increased). UACR >300 = A3 (severely increased). Worsening albuminuria category indicates CKD progression. ACE inhibitor or ARB reduces proteinuria and slows CKD progression in A2/A3 patients.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What causes false results in UPCR?</div><div class="fa">False HIGH UPCR: contamination with blood (menstruation, haematuria), UTI (Tamm-Horsfall protein, pyuria), very concentrated urine. False LOW UPCR: very dilute urine (high fluid intake). Postural/orthostatic proteinuria (common in adolescents — UPCR elevated in upright position but normal in recumbent first morning void). Bence-Jones proteinuria (myeloma) is not detected by standard dipstick — requires urine protein electrophoresis (UPEP).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the treatment of proteinuria in CKD?</div><div class="fa">First-line: ACE inhibitor (ramipril, enalapril) or ARB (losartan, telmisartan) — reduce intraglomerular pressure and proteinuria by 30–50%, slow CKD progression. Target BP <130/80 mmHg. SGLT2 inhibitors (empagliflozin, dapagliflozin) provide additional renoprotection in CKD with proteinuria independent of diabetes. Finerenone (mineralocorticoid receptor antagonist) additionally reduces CKD progression in T2DM + CKD with UACR ≥30. Avoid NSAIDs, nephrotoxic drugs, and contrast in proteinuric CKD.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -227,7 +210,5 @@ function resetCalc(){['uprot','ucr'].forEach(id=>document.getElementById(id).val
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
 </body>
 </html>

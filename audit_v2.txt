@@ -1,0 +1,524 @@
+
+=================================================================
+  rxmedcalc.com Pre-AdSense Audit v2
+  Total: 141 | Critical: 37 | Warnings: 61 | Clean: 43
+=================================================================
+
+── CRITICAL ─────────────────────────────────────────────────
+
+  📄 medical-calculators/aa-gradient.html  (html:469w / full:713w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/albumin-corrected-ag.html  (html:403w / full:644w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/apache2-score.html  (html:469w / full:920w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/apgar-score.html  (html:243w / full:1500w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+     ⚠️  BORDERLINE: ~243 HTML words
+
+  📄 medical-calculators/bisap-score.html  (html:584w / full:1057w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/bsa-calculator.html  (html:504w / full:845w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/creatinine-clearance.html  (html:247w / full:1071w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+     ⚠️  BORDERLINE: ~247 HTML words
+
+  📄 medical-calculators/fena-calculator.html  (html:436w / full:875w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/framingham-risk.html  (html:438w / full:684w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/grace-score.html  (html:599w / full:951w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/hunt-hess.html  (html:592w / full:993w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/hypothyroidism.html  (html:538w / full:1996w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/index.html  (html:0w / full:1446w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/lab-unit-converter.html  (html:430w / full:804w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/ldl-calculator.html  (html:495w / full:884w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/nihss-calculator.html  (html:495w / full:1064w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/pediatric-dehydration.html  (html:471w / full:904w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/pediatric-weight.html  (html:813w / full:1325w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/perc-rule.html  (html:525w / full:945w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/qtc-calculator.html  (html:515w / full:955w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/rass-score.html  (html:615w / full:908w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/serum-osmolality.html  (html:418w / full:704w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/shock-index.html  (html:376w / full:589w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/sodium-correction.html  (html:414w / full:609w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/sofa-score.html  (html:369w / full:706w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/steroid-equivalence.html  (html:560w / full:965w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/upcr-calculator.html  (html:406w / full:608w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+
+  📄 drug-doses/amlodipine.html  (html:0w / full:1309w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/amoxicillin-clavulanate.html  (html:0w / full:1360w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/atenolol.html  (html:0w / full:1360w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/ciprofloxacin.html  (html:0w / full:1641w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/doxycycline.html  (html:0w / full:1332w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/furosemide.html  (html:0w / full:1797w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/spironolactone.html  (html:0w / full:1301w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/vancomycin.html  (html:0w / full:1590w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 vitamin/k-calculator.html  (html:703w / full:1049w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+
+  📄 rabies-scheduler/doses.html  (html:248w / full:1849w)
+     ❌ FAQ: none detected (JS array, static HTML, or schema)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~248 HTML words
+
+── WARNINGS ─────────────────────────────────────────────────
+
+  📄 medical-calculators/anion-gap.html  (html:421w)
+     ⚠️  PROSE: limited paragraph content
+     ⚠️  DUPLICATE Related section
+
+  📄 medical-calculators/anti-rabies-serum-dose-calculator.html  (html:0w)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/beta-hcg.html  (html:1824w)
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/cbc-report-interpreter.html  (html:0w)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/conception-date-calculator.html  (html:1745w)
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/egfr-calculator.html  (html:842w)
+     ⚠️  PROSE: limited paragraph content
+     ⚠️  DUPLICATE Related section
+
+  📄 medical-calculators/fetal-growth-calculator.html  (html:0w)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/gestational-age-calculator.html  (html:0w)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/growth-velocity.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/has-bled.html  (html:272w)
+     ⚠️  OG:URL missing
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  PROSE: limited paragraph content
+     ⚠️  BORDERLINE: ~272 HTML words
+
+  📄 medical-calculators/height-velocity.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 2 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/holliday-segar.html  (html:523w)
+     ⚠️  FAQ: only 2 detected (aim ≥6)
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/iron-deficit.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/iv-drip-rate-calculator.html  (html:0w)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/ktv-dialysis.html  (html:860w)
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/meld-score.html  (html:599w)
+     ⚠️  FAQ: only 2 detected (aim ≥6)
+     ⚠️  PROSE: limited paragraph content
+
+  📄 medical-calculators/mentzer-index-calculator.html  (html:0w)
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/ovulation-calendar.html  (html:0w)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/pregnancy-bmi-calculator.html  (html:0w)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/pregnancy-weight-gain-calculator.html  (html:0w)
+     ⚠️  PROSE: limited paragraph content
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 medical-calculators/tsh-interpreter.html  (html:798w)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+
+  📄 medical-calculators/uip-vaccine.html  (html:2242w)
+     ⚠️  PROSE: limited paragraph content
+
+  📄 drug-doses/amikacin-gentamicin.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/amoxicillin.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/azithromycin.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/calcium-vitamind.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/cefixime.html  (html:1355w)
+     ⚠️  PROSE: limited paragraph content
+
+  📄 drug-doses/ceftriaxone.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/cetirizine.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/clindamycin.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/cotrimoxazole.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/dexamethasone.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/dextromethorphan-phenylephrine.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/diazepam.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/diclofenac.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/digoxin.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/domperidone.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/enoxaparin.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/famotidine.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/glibenclamide.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 2 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/ibuprofen.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/index.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/insulin.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/iron.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/levothyroxine.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/metformin.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/metronidazole.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/omeprazole-pantoprazole.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/ondansetron.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/paracetamol.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/phenobarbitone.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/phenytoin.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/prednisolone.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/salbutamol.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/valproate.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 drug-doses/zinc.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 2 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 vitamin/b7-biotin-calculator.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 vitamin/b9-folic-acid.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 vitamin/d3-cholecalciferol.html  (html:694w)
+     ⚠️  OG:URL missing
+     ⚠️  FAQ: only 3 detected (aim ≥6)
+     ⚠️  SCHEMA: no FAQPage JSON-LD
+
+  📄 vitamin/index.html  (html:0w)
+     ⚠️  OG:URL missing
+     ⚠️  BORDERLINE: ~0 HTML words
+
+  📄 rabies-scheduler/index.html  (html:0w)
+     ⚠️  BORDERLINE: ~0 HTML words
+
+── CLEAN (43) ──────────────────────────────────────────────
+  ✅ medical-calculators/abcd2-score.html  (862w)
+  ✅ medical-calculators/arv-dose-calculator.html  (759w)
+  ✅ medical-calculators/ascvd-risk.html  (1188w)
+  ✅ medical-calculators/biomedical-waste.html  (1486w)
+  ✅ medical-calculators/bmi.html  (519w)
+  ✅ medical-calculators/burn-calculator.html  (921w)
+  ✅ medical-calculators/cha2ds2-vasc.html  (736w)
+  ✅ medical-calculators/child-pugh.html  (362w)
+  ✅ medical-calculators/corrected-calcium.html  (528w)
+  ✅ medical-calculators/curb65.html  (1097w)
+  ✅ medical-calculators/doses.html  (765w)
+  ✅ medical-calculators/due-date.html  (3467w)
+  ✅ medical-calculators/fib-4-index.html  (2052w)
+  ✅ medical-calculators/gcs-calculator.html  (859w)
+  ✅ medical-calculators/growth-chart.html  (1207w)
+  ✅ medical-calculators/hba1c-converter.html  (382w)
+  ✅ medical-calculators/ibw-calculator.html  (1271w)
+  ✅ medical-calculators/map-calculator.html  (1296w)
+  ✅ medical-calculators/milestones.html  (964w)
+  ✅ medical-calculators/nafld-fibrosis-score.html  (2362w)
+  ✅ medical-calculators/neonatal-jaundice.html  (913w)
+  ✅ medical-calculators/news2.html  (797w)
+  ✅ medical-calculators/obs-calc.html  (2122w)
+  ✅ medical-calculators/ors.html  (1383w)
+  ✅ medical-calculators/paracetamol.html  (598w)
+  ✅ medical-calculators/pediatric-asthma.html  (1306w)
+  ✅ medical-calculators/phq9-gad7.html  (862w)
+  ✅ medical-calculators/psi-calculator.html  (749w)
+  ✅ medical-calculators/qsofa-score.html  (1272w)
+  ✅ medical-calculators/rcri-calculator.html  (951w)
+  ✅ medical-calculators/sirs-criteria.html  (1204w)
+  ✅ medical-calculators/spirometry.html  (1129w)
+  ✅ medical-calculators/sti-rti-management.html  (843w)
+  ✅ medical-calculators/wells-score.html  (803w)
+  ✅ drug-doses/folic-acid-calculator.html  (1325w)
+  ✅ vitamin/a-retinol-calculator.html  (2096w)
+  ✅ vitamin/ascorbic-acid-vit-c.html  (2763w)
+  ✅ vitamin/b1-thiamine-calculator.html  (1912w)
+  ✅ vitamin/b12-cobalamin-calculator.html  (923w)
+  ✅ vitamin/b2-riboflavin-calculator.html  (796w)
+  ✅ vitamin/b3-niacin-calculator.html  (851w)
+  ✅ vitamin/b6-pyridoxine-calculator.html  (868w)
+  ✅ vitamin/e-tocopherol-calculator.html  (3057w)
+
+=================================================================
+  ❌ 37 files with critical issues
+=================================================================
+

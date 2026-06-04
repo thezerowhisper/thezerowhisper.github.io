@@ -88,15 +88,7 @@ h1 em{font-style:italic;color:#38bdf8}
 .related-card:hover{border-color:#0ea5e9;background:#f0f9ff;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -192,15 +184,6 @@ h1 em{font-style:italic;color:#38bdf8}
       <li>Toxic alcohol ingestion</li>
       <li>Mannitol infusion</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is serum osmolality and how is it calculated?</div><div class="fa">Serum osmolality estimates the concentration of all osmotically active particles in plasma. Calculated formula: Osmolality (mOsm/kg) = 2 × Na + Glucose (mg/dL)/18 + BUN (mg/dL)/2.8. In SI units: 2 × Na + Glucose (mmol/L) + Urea (mmol/L). Normal range: 275–295 mOsm/kg. Measured osmolality by freezing-point depression is the gold standard.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the osmol gap and what causes it?</div><div class="fa">Osmol gap = Measured osmolality − Calculated osmolality. Normal osmol gap: <10 mOsm/kg. An elevated osmol gap (>10–15) indicates unmeasured osmoles in plasma — caused by: toxic alcohols (methanol, ethylene glycol, isopropanol — most important causes), severe lactic acidosis, ketoacidosis (acetone), mannitol infusion, or propylene glycol toxicity. A high osmol gap in a comatose patient should immediately raise suspicion for toxic alcohol ingestion.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What causes hyperosmolaemia?</div><div class="fa">Hyperosmolaemia (>295 mOsm/kg): hypernatraemia (sodium is the main determinant), severe hyperglycaemia (diabetic hyperosmolar state — serum osmolality can exceed 320–340 mOsm/kg), uraemia (BUN contributes but is an ineffective osmole — crosses cell membranes freely), toxic alcohol ingestion (effective osmoles — cause cellular dehydration). Hyperosmolar hyperglycaemic state (HHS): osmolality >320, glucose >600 mg/dL, no significant ketosis.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is effective vs ineffective osmolality?</div><div class="fa">Effective osmolality (tonicity) = 2 × Na + Glucose/18. It excludes BUN because urea freely crosses cell membranes and does not cause osmotic water shifts between compartments. Tonicity determines cellular hydration status and is clinically more relevant than total osmolality. Normal tonicity: 275–290 mOsm/kg. Hypertonicity causes cellular dehydration (brain shrinkage, cerebral haemorrhage risk).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is hyperosmolar hyperglycaemic state managed?</div><div class="fa">HHS management: IV fluid resuscitation (0.9% saline initially — typically 1–2L in first hour, then 0.45% saline if Na corrected or normal), low-dose insulin infusion (only after adequate hydration — insulin without fluids worsens hypotension), potassium replacement (severe hypokalaemia risk as glucose normalises), VTE prophylaxis (high thrombosis risk), treat precipitant (infection most common). Target: gradual glucose reduction ~50–70 mg/dL/hour, osmolality reduction <3 mOsm/kg/hour.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is SIADH and how does serum osmolality help diagnose it?</div><div class="fa">SIADH (Syndrome of Inappropriate ADH secretion) causes euvolaemic hyponatraemia with: serum osmolality <275 mOsm/kg, urine osmolality >100 mOsm/kg (inappropriately concentrated), urine sodium >20–40 mEq/L (sodium-wasting despite hyponatraemia), normal renal, adrenal, and thyroid function. Causes: CNS disease, pulmonary disease, malignancy (ectopic ADH), drugs (SSRIs, carbamazepine, cyclophosphamide, NSAIDs). Treatment: fluid restriction ±salt tablets; tolvaptan for severe/refractory cases.</div></div>
-  </div>
   </div>
   <div class="content-card">
     <h2>Related Calculators</h2>
@@ -254,6 +237,5 @@ function resetCalc(){['na','bun','glucose','measured','etoh'].forEach(id=>{docum
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script> 
 </body>
 </html>

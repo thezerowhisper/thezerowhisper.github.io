@@ -91,15 +91,7 @@ h1 em{font-style:italic;color:#f87171}
 .related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -181,15 +173,6 @@ h1 em{font-style:italic;color:#f87171}
     </ul>
     <h3>Why Shock Index Can Be More Sensitive Than BP Alone</h3>
     <p>A young, healthy patient can maintain systolic BP in the normal range while developing significant hypovolaemia through compensatory tachycardia. A patient with HR 110 and SBP 110 has a normal blood pressure but a shock index of 1.0 — suggesting significant circulatory stress. SI captures the haemodynamic relationship that isolated BP or HR values miss.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the shock index?</div><div class="fa">Shock Index (SI) = Heart Rate / Systolic Blood Pressure. Normal SI: 0.5–0.7. SI >1.0 indicates haemodynamic compromise — the heart rate exceeds systolic BP, reflecting compensated or overt shock. SI >1.4 correlates with severe haemorrhage and massive transfusion requirement. It is a simple bedside tool requiring only pulse oximetry and BP measurement.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is shock index used in trauma?</div><div class="fa">In trauma: SI >1.0 predicts the need for blood transfusion. SI >1.4–1.5: high likelihood of massive transfusion protocol (MTP) activation (≥10 units pRBCs in 24 hours). In obstetric haemorrhage: SI >0.9 predicts severe postpartum haemorrhage. In UGIB: SI >1.0 is a red flag for major bleed requiring urgent endoscopy. SI is particularly useful when exact blood loss is unknown.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the types of shock?</div><div class="fa">Hypovolaemic (most common): haemorrhage, burns, dehydration — high SI, cold peripheries, collapsed veins. Distributive (septic, anaphylactic, neurogenic): SI >1 early (vasodilation), warm peripheries in early sepsis. Cardiogenic: SI >1, cold peripheries, raised JVP, pulmonary oedema, S3 gallop. Obstructive (PE, tamponade, tension pneumothorax): SI >1, specific clinical signs. Each type requires different immediate management.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the initial steps in managing shock?</div><div class="fa">ABCDE approach: Airway — ensure patent. Breathing — high-flow O2 (15L via non-rebreather mask). Circulation — large-bore IV access ×2, blood cultures, urgent bloods (FBC, coag, crossmatch, lactate, ABG), IV fluid bolus 250–500 mL crystalloid and reassess (avoid fluid overload in cardiogenic shock). Disability — GCS, glucose. Exposure — identify source. Activate massive transfusion protocol if haemorrhagic shock with SI >1.4.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When does shock index fail?</div><div class="fa">Shock index is less reliable in: elderly patients (chronotropic incompetence — cannot mount appropriate tachycardia; beta-blockers blunt HR response), patients on vasopressors (BP maintained artificially), and neurogenic shock (paradoxical bradycardia with hypotension — SI may be normal or low despite severe haemodynamic compromise). Always interpret SI alongside clinical assessment, lactate, and urine output.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the modified shock index?</div><div class="fa">Modified Shock Index (MSI) = HR / Mean Arterial Pressure. Normal MSI: 0.7–1.1. MSI >1.4 predicts in-hospital mortality in sepsis and trauma better than SI alone. MSI incorporates diastolic BP which SI ignores, making it more sensitive for early shock detection. However, both SI and MSI are screening tools — neither replaces comprehensive haemodynamic assessment.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -246,6 +229,5 @@ function resetCalc(){['hr','sbp','dbp'].forEach(id=>{document.getElementById(id)
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script>
 </body>
 </html>

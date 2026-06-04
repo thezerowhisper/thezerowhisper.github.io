@@ -93,15 +93,7 @@ h1 em{font-style:italic;color:#22d3ee}
 .related-card:active{border-color:#06b6d4;background:#ecfeff}
 .rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -186,15 +178,6 @@ h1 em{font-style:italic;color:#22d3ee}
       <li>Abdominal distension — possible ileus or obstruction</li>
       <li>Worsening dehydration despite Plan B</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is dehydration severity classified in children?</div><div class="fa">Mild (<5% body weight loss): no clinical signs, alert, normal pulse/BP/capillary refill, eyes normal, moist mucous membranes. Moderate (5–10%): restless/irritable, tachycardia, reduced skin turgor, sunken eyes/fontanelle, dry mucous membranes, capillary refill 2–3 seconds. Severe (>10%): lethargic/unconscious, absent pulses, cold peripheries, capillary refill >3 seconds, deeply sunken eyes — shock, immediate IV resuscitation required.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the WHO ORS plan for rehydration?</div><div class="fa">Plan A (no/mild dehydration): 10 mL/kg ORS after each loose stool at home. Plan B (some dehydration 5–10%): 75 mL/kg ORS over 4 hours in ORT corner, reassess. Plan C (severe dehydration): IV Ringer's Lactate 100 mL/kg — for infants: 30 mL/kg in 1 hour then 70 mL/kg in 5 hours; for older children: 30 mL/kg in 30 min then 70 mL/kg in 2.5 hours. Switch to ORS when able to drink.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What IV fluid is used for paediatric rehydration?</div><div class="fa">Ringer's Lactate (Hartmann's solution) is preferred over 0.9% normal saline for large-volume resuscitation in children — reduces hyperchloraemic acidosis risk. 0.9% saline with 5% dextrose is the standard maintenance fluid (not hypotonic solutions which cause hyponatraemia). Avoid dextrose-containing fluids for resuscitation boluses. Add KCl 20 mmol/L to maintenance once the child is urinating.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is oral rehydration therapy given?</div><div class="fa">Give ORS in small, frequent sips using a spoon or cup — not a bottle. If the child vomits, wait 10 minutes then resume at slower rate (5 mL every 1–2 minutes). Continue breastfeeding throughout. Start age-appropriate foods after 4 hours of ORS in Plan B. Zinc supplementation 10–20 mg/day for 10–14 days alongside ORS reduces duration and recurrence of diarrhoea.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the signs of hypernatraemic dehydration?</div><div class="fa">Hypernatraemic dehydration (Na >150 mEq/L) occurs with water loss > sodium loss — typically in breastfed neonates with poor intake, or diarrhoea with high sodium ORS. Signs: doughy/thick skin turgor (paradoxically less obvious dehydration signs), irritability, high-pitched cry, fever, seizures (risk with rapid correction). Correct slowly — rehydrate over 48 hours targeting Na fall of <10–12 mEq/L/day to prevent cerebral oedema.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When should a child with diarrhoea be admitted?</div><div class="fa">Admit if: severe dehydration or shock, unable to tolerate oral fluids/ORS despite attempts, persistent vomiting (>3 times/hour), bloody diarrhoea with systemic illness (HUS risk), altered consciousness, age <3 months with any dehydration, hypoglycaemia (BGL <54 mg/dL), and social circumstances preventing safe home management. All severe dehydration requires IV access and hospital admission.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -275,7 +258,5 @@ function resetCalc(){Object.keys(signScores).forEach(k=>delete signScores[k]);do
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
 </body>
 </html>

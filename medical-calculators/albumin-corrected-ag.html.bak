@@ -75,15 +75,7 @@ h1 em{font-style:italic;color:#c084fc}
 .related-card:active{border-color:#a855f7;background:#faf5ff}
 .rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -179,19 +171,10 @@ h1 em{font-style:italic;color:#c084fc}
       <li>Addison's disease / hypoaldosteronism</li>
       <li>Carbonic anhydrase inhibitors (acetazolamide)</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">Why is albumin correction needed for the anion gap?</div><div class="fa">Albumin is a major unmeasured anion. Hypoalbuminaemia (common in liver disease, nephrotic syndrome, malnutrition, critical illness) falsely lowers the anion gap. Without correction, a significant high-AG acidosis may be missed. Corrected AG = Measured AG + 2.5 × (4.0 − Albumin g/dL).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the normal anion gap?</div><div class="fa">Normal anion gap = 8–12 mEq/L (using Na − Cl − HCO3). When albumin-corrected, the reference range is the same. Each 1 g/dL fall in albumin below 4.0 g/dL lowers the AG by ~2.5 mEq/L — so a patient with albumin 2.0 g/dL and AG of 10 actually has a corrected AG of 15, indicating a high-AG acidosis.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the causes of high anion gap metabolic acidosis?</div><div class="fa">Mnemonic MUDPILES: Methanol, Uraemia, Diabetic ketoacidosis, Propylene glycol/Paracetamol toxicity, Isoniazid/Iron, Lactic acidosis (sepsis, shock, metformin), Ethylene glycol, Salicylates. In Indian emergency practice, most common are DKA, lactic acidosis (sepsis), and uraemia.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the delta ratio?</div><div class="fa">Delta ratio = (AG − 12) / (24 − HCO3). Detects mixed disorders: <0.4 = normal AG acidosis co-exists, 0.4–0.8 = combined high AG + normal AG acidosis, 1–2 = pure high AG acidosis, >2 = concurrent metabolic alkalosis. Always calculate when AG is elevated.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is normal anion gap acidosis?</div><div class="fa">NAGMA (hyperchloraemic acidosis) causes: diarrhoea (most common in India — HCO3 loss), renal tubular acidosis, early CKD, ureteral diversion, excessive normal saline infusion. Urine anion gap (Na + K − Cl) differentiates renal (positive UAG) from GI (negative UAG) causes.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How does albumin affect the delta ratio calculation?</div><div class="fa">In hypoalbuminaemic patients, both the measured AG and the corrected AG differ. Use the albumin-corrected AG in the delta ratio numerator: Delta ratio = (Corrected AG − 12) / (24 − HCO3). Using the uncorrected AG in hypoalbuminaemic patients underestimates the severity of the high-AG acidosis.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
-    <h2>Related Calculators</h2> 
+    <h2>Related Calculators</h2>
     <div class="related-grid">
       <a href="/medical-calculators/anion-gap" class="related-card"><span class="rc-icon">⚗️</span><div><div class="rc-title">Anion Gap</div><div class="rc-desc">Basic AG calculator</div></div></a>
       <a href="/medical-calculators/serum-osmolality" class="related-card"><span class="rc-icon">⚗️</span><div><div class="rc-title">Serum Osmolality</div><div class="rc-desc">Osmol gap / toxic alcohols</div></div></a>
@@ -199,9 +182,9 @@ h1 em{font-style:italic;color:#c084fc}
       <a href="/medical-calculators/corrected-calcium" class="related-card"><span class="rc-icon">🔬</span><div><div class="rc-title">Corrected Ca</div><div class="rc-desc">Albumin correction</div></div></a>
     </div>
   </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Acid-base interpretation requires ABG correlation, clinical context, and electrolyte confirmation. The anion gap formula varies by laboratory (some include K⁺). Delta-delta ratio is a guide — use alongside clinical assessment and ABG. Albumin correction is especially important in ICU, liver disease, and malnutrition.
-  </div>
-  </main>
+  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Acid-base interpretation requires ABG correlation, clinical context, and electrolyte confirmation. The anion gap formula varies by laboratory (some include K⁺). Delta-delta ratio is a guide — use alongside clinical assessment and ABG. Albumin correction is especially important in ICU, liver disease, and malnutrition.</div>
+</main>
+
 <script>
 let lastResult=null;
 function calculate(){
@@ -234,20 +217,6 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){['na','cl','hco3','alb'].forEach(id=>document.getElementById(id).value='');document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
-<script src="/assets/shared-nav.js"> </script>
-  <script>
-function tf(el){
-  var fi = el.closest('.fi');
-  var was = fi.classList.contains('op');
-
-  document.querySelectorAll('.fi').forEach(function(e){
-    e.classList.remove('op');
-  });
-
-  if(!was){
-    fi.classList.add('op');
-  }
-}
-</script>
+<script src="/assets/shared-nav.js"></script>
 </body>
 </html>

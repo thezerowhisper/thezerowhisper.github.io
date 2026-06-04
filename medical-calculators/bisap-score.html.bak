@@ -97,15 +97,7 @@ h1 em{font-style:italic;color:#fb923c}
 .related-card:hover{border-color:#f97316;background:#fff7ed;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -190,15 +182,6 @@ h1 em{font-style:italic;color:#fb923c}
       <li><strong>S</strong>teroids, <strong>M</strong>umps/infection, <strong>A</strong>utoimmune (IgG4 pancreatitis)</li>
       <li><strong>S</strong>corpion sting (relevant in India — Mesobuthus tamulus), <strong>H</strong>ypertriglyceridaemia (&gt;1000 mg/dL), <strong>E</strong>RCP (post-ERCP pancreatitis ~3%), <strong>D</strong>rugs (azathioprine, didanosine, valproate)</li>
     </ul>
-     <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What does BISAP stand for?</div><div class="fa">BISAP: BUN >25 mg/dL, Impaired mental status (GCS <15), SIRS criteria present (≥2 of: temp <36 or >38°C, HR >90, RR >20 or PaCO2 <32, WBC <4000 or >12000), Age >60 years, Pleural effusion on imaging. Each criterion = 1 point, total 0–5, calculated in first 24 hours.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What BISAP score indicates severe pancreatitis?</div><div class="fa">Score 0: <1% mortality. Score 1: ~1-2%. Score 2: ~3-5%. Score 3: ~5-10%. Score 4: ~15-20%. Score 5: >20%. BISAP ≥3 indicates severe acute pancreatitis requiring ICU-level monitoring, aggressive IV fluid resuscitation, and specialist input.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is acute pancreatitis managed?</div><div class="fa">Early aggressive IV fluid resuscitation (Lactated Ringer's preferred — reduces SIRS vs normal saline), adequate analgesia (IV morphine or tramadol), NPO initially then early enteral nutrition via NGT at 24-48 hours (reduces infected necrosis), monitoring for organ dysfunction. Antibiotics only if infected necrosis confirmed.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When is CT scan needed in pancreatitis?</div><div class="fa">CT abdomen with contrast (CECT) is indicated if: diagnosis is uncertain, or at 72-96 hours if patient is not improving — to assess necrosis extent (Balthazar grade/CT Severity Index). CT is not routinely needed in mild pancreatitis with clear clinical improvement. MRCP is preferred for biliary anatomy assessment.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the difference between BISAP and Ranson criteria?</div><div class="fa">Ranson criteria uses 11 parameters — 5 at admission and 6 at 48 hours — requiring a full 2-day wait before complete calculation. BISAP uses 5 parameters all available within 24 hours. Both have similar predictive accuracy (AUC ~0.82). BISAP is preferred for early risk stratification.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When is ERCP indicated in acute pancreatitis?</div><div class="fa">ERCP is indicated only when: cholangitis is present (urgent within 24 hours), or persistent biliary obstruction without cholangitis (within 72 hours). ERCP is NOT indicated in mild gallstone pancreatitis without biliary obstruction. Early cholecystectomy (same admission in mild cases) prevents recurrence and replaces prophylactic ERCP.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -264,7 +247,5 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){sel.clear();CRITERIA.forEach((_,i)=>document.getElementById('cr'+i).classList.remove('sel'));document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
 </body>
 </html>

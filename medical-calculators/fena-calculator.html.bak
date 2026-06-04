@@ -110,15 +110,7 @@ h1 em{font-style:italic;color:#818cf8}
 .related-card:hover{border-color:#6366f1;background:#eef2ff;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -241,15 +233,6 @@ h1 em{font-style:italic;color:#818cf8}
       <li><strong>Intrinsic renal (FENa &gt;2%):</strong> Identify specific cause — ATN (most common), glomerulonephritis, interstitial nephritis, vasculitis. Nephrology referral. Avoid nephrotoxins. Optimise haemodynamics</li>
       <li><strong>Postrenal (obstruction):</strong> FENa may be &gt;2% or &lt;1% early. Urinary ultrasound mandatory. Catheterise if urethral obstruction. Nephrostomy if ureteric obstruction</li>
     </ul>
-     <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is FENa and what does it measure?</div><div class="fa">Fractional Excretion of Sodium (FENa) measures what percentage of filtered sodium is excreted in the urine. Formula: FENa (%) = (Urine Na × Plasma Cr) / (Plasma Na × Urine Cr) × 100. It differentiates prerenal AKI (kidney conserving sodium) from intrinsic renal AKI (kidney unable to conserve sodium).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is FENa interpreted?</div><div class="fa">FENa <1%: prerenal AKI — kidneys are functioning normally but underperfused; respond to volume resuscitation. FENa >2%: intrinsic renal AKI (ATN) — tubular damage prevents sodium reabsorption. FENa 1–2%: indeterminate — consider clinical context. In oliguric patients on diuretics, use FEUrea instead (FEUrea <35% = prerenal).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When is FENa unreliable?</div><div class="fa">FENa is unreliable in: patients on diuretics (artificially raises FENa even in prerenal states — use FEUrea instead), contrast nephropathy (can show low FENa despite ATN), myoglobinuria/haemoglobinuria, acute glomerulonephritis, and early urinary obstruction. Always interpret FENa alongside clinical context, urine microscopy, and response to fluids.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is FEUrea and when is it used?</div><div class="fa">FEUrea = (Urine Urea × Plasma Cr) / (Plasma Urea × Urine Cr) × 100. FEUrea <35%: prerenal. FEUrea >50%: intrinsic renal (ATN). FEUrea is preferred over FENa in patients on diuretics because diuretics do not significantly affect urea reabsorption. It requires urine and plasma urea levels alongside creatinine.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the treatment of prerenal AKI?</div><div class="fa">Prerenal AKI: IV fluid resuscitation (crystalloid — Ringer's Lactate preferred over normal saline for large volumes), identify and treat the underlying cause (bleeding, sepsis, dehydration, cardiac failure, hepatorenal syndrome). Response to fluids (rising urine output, falling creatinine) confirms prerenal aetiology. Avoid nephrotoxins (NSAIDs, aminoglycosides, contrast) during AKI.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What urine findings suggest ATN vs prerenal AKI?</div><div class="fa">Prerenal AKI: urine osmolality >500 mOsm/kg, urine Na <20 mEq/L, FENa <1%, urine specific gravity >1.020, urine microscopy — normal or hyaline casts only. ATN (intrinsic): urine osmolality <350 mOsm/kg, urine Na >40 mEq/L, FENa >2%, urine specific gravity ~1.010, urine microscopy — muddy brown granular casts (pathognomonic of ATN).</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -312,6 +295,5 @@ function resetCalc(){['s-na','s-cr','u-na','u-cr','s-bun','u-bun'].forEach(id=>{
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-  <script>function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script>
 </body>
 </html>

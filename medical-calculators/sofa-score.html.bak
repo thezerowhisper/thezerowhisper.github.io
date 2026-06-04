@@ -107,15 +107,7 @@ h1 em{font-style:italic;color:#f87171}
 .related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -191,15 +183,6 @@ h1 em{font-style:italic;color:#f87171}
     <p>The Sepsis-3 consensus (2016) defines sepsis as life-threatening organ dysfunction caused by a dysregulated host response to infection. Operationally: suspected infection + acute SOFA score increase of ≥2 points from baseline. SOFA ≥2 at ICU admission = ~10% in-hospital mortality. Delta-SOFA (change from admission to 48 hours) is a key prognostic indicator — worsening SOFA predicts higher mortality than absolute score alone.</p>
     <h3>Delta-SOFA — Clinical Significance</h3>
     <p>Serial SOFA scoring every 24–48 hours is more informative than a single score. A delta-SOFA of ≥2 within 48 hours predicts significantly increased mortality. Improving SOFA predicts better outcomes than absolute values. Use SOFA trend to guide escalation decisions, family discussions, and palliative care planning in the ICU.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What does each SOFA component measure?</div><div class="fa">Respiratory: PaO2/FiO2 ratio (P/F ratio). Coagulation: platelet count. Liver: serum bilirubin. Cardiovascular: MAP and vasopressor dose (dopamine, dobutamine, adrenaline, noradrenaline). Neurological: Glasgow Coma Scale. Renal: serum creatinine or urine output. Each component scored 0–4 (0=normal, 4=most abnormal). Total score 0–24.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How does SOFA define sepsis?</div><div class="fa">Sepsis-3 (Singer et al., JAMA 2016): Sepsis = life-threatening organ dysfunction caused by dysregulated host response to infection, identified by acute SOFA increase ≥2 from baseline. Septic shock = sepsis + vasopressor requirement to maintain MAP ≥65 mmHg AND lactate >2 mmol/L despite adequate fluids. The 'severe sepsis' category has been retired.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the mortality prediction of SOFA?</div><div class="fa">Initial SOFA: 0–6 (~<10% ICU mortality), 7–9 (~15–20%), 10–12 (~40%), 13–14 (~50%), 15–24 (>80%). Change in SOFA over 48 hours is more predictive than initial score — rising SOFA despite treatment indicates treatment failure; falling SOFA indicates clinical response. A SOFA score increase of ≥2 from baseline in a ward patient with suspected infection has ~10% hospital mortality.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is the cardiovascular SOFA scored?</div><div class="fa">Cardiovascular SOFA: 0 = MAP ≥70 mmHg. 1 = MAP <70 mmHg. 2 = Dopamine ≤5 mcg/kg/min or any dobutamine. 3 = Dopamine 5–15 mcg/kg/min or adrenaline/noradrenaline ≤0.1 mcg/kg/min. 4 = Dopamine >15 mcg/kg/min or adrenaline/noradrenaline >0.1 mcg/kg/min. Higher vasopressor requirements indicate more severe cardiovascular failure.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When is SOFA used vs APACHE II?</div><div class="fa">APACHE II: calculated once at ICU admission — admission severity score for benchmarking and prognosis at admission. SOFA: calculated daily — trajectory score for monitoring organ failure progression. Use APACHE II for 'how sick is this patient at admission?' Use SOFA for 'is this patient getting better or worse day by day?' Both are complementary. SOFA is also embedded in the Sepsis-3 definition.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the 1-hour sepsis bundle?</div><div class="fa">Surviving Sepsis Campaign 1-hour bundle: measure lactate (repeat if >2 mmol/L), obtain blood cultures before antibiotics (≥2 sets), administer broad-spectrum IV antibiotics, give 30 mL/kg IV crystalloid if hypotensive or lactate ≥4 mmol/L, start vasopressors (noradrenaline first-line) if MAP <65 despite initial fluids. Bundle compliance reduces sepsis mortality by ~25%.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -277,7 +260,5 @@ function resetCalc(){scores=new Array(6).fill(0);buildOrgans();document.getEleme
 buildOrgans();
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script> function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
 </body>
 </html>

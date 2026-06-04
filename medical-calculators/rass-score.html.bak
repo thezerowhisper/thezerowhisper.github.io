@@ -104,15 +104,7 @@ h1 em{font-style:italic;color:#818cf8}
 .rc-title{font-size:0.82rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}
 .rc-desc{font-size:0.68rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:11px;padding:14px;font-size:0.75rem;color:#78350f;line-height:1.65;margin-top:20px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -189,15 +181,6 @@ h1 em{font-style:italic;color:#818cf8}
 
     <h3>Delirium Monitoring — CAM-ICU</h3>
     <p>All ICU patients should be assessed for delirium daily using the Confusion Assessment Method for ICU (CAM-ICU). CAM-ICU requires RASS ≥−3 to perform — patients at RASS −4 or −5 cannot be assessed. PADIS 2018 recommends: non-pharmacological prevention first (reorientation, sleep hygiene, early mobilisation, minimise sedation, treat pain, avoid benzodiazepines). Haloperidol and quetiapine are used for symptom management in hyperactive delirium but do not reduce duration.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the RASS scale?</div><div class="fa">The Richmond Agitation-Sedation Scale (RASS) assesses level of sedation and agitation in ICU patients. Scores: +4 Combative (violent), +3 Very agitated (pulls lines), +2 Agitated (purposeless movement), +1 Restless (anxious, not aggressive), 0 Alert and calm, -1 Drowsy (eyes open briefly to voice), -2 Light sedation (eyes open <10 sec to voice), -3 Moderate sedation (movement to voice, no eye contact), -4 Deep sedation (movement to physical stimulus only), -5 Unarousable.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the target RASS in mechanically ventilated patients?</div><div class="fa">SCCM/PADIS guidelines recommend targeting RASS 0 to -2 (light sedation) for most mechanically ventilated ICU patients. Light sedation is associated with shorter duration of mechanical ventilation, shorter ICU stay, and better cognitive outcomes compared to deep sedation (RASS -3 to -5). Deep sedation should be avoided unless specifically indicated (status epilepticus, severe ARDS on paralysis, elevated ICP).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is RASS used for delirium assessment?</div><div class="fa">RASS is the prerequisite for delirium assessment using CAM-ICU (Confusion Assessment Method for ICU). CAM-ICU can only be performed when RASS is ≥-3. If RASS is -4 or -5 (unarousable/deeply sedated), delirium cannot be assessed — document as 'unable to assess' and aim to reduce sedation. Delirium assessment should be performed every 8-12 hours in all ICU patients.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What sedation agents are used in ICU?</div><div class="fa">Preferred agents (SCCM/PADIS guidelines): propofol (short-acting, easy to titrate, allows rapid awakening, lipid-based — monitor triglycerides) or dexmedetomidine (alpha-2 agonist, preserves arousability, reduces delirium, no respiratory depression — preferred for light sedation). Midazolam (benzodiazepine) is associated with more delirium and longer ICU stay — avoid for routine sedation. Ketamine useful as adjunct analgesic-sedative, especially in bronchospasm.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the ABCDEF bundle in ICU?</div><div class="fa">The ICU Liberation ABCDEF bundle: A — Assess, prevent, manage pain. B — Spontaneous Breathing Trial (daily SAT + SBT). C — Choice of analgesia/sedation (opioid-sparing, light sedation target). D — Delirium assessment and management (CAM-ICU, treat causes). E — Early mobility and Exercise. F — Family engagement and empowerment. Bundle implementation reduces ICU mortality, duration of mechanical ventilation, and delirium prevalence.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What causes agitation in ICU patients?</div><div class="fa">Common causes of agitation (RASS +1 to +4): pain (most common — assess with CPOT or NRS), delirium (hyperactive type), ventilator dysynchrony, urinary retention, constipation, anxiety, drug withdrawal (alcohol, benzodiazepines, opioids), hypoxia, hypercapnia, hypoglycaemia, and ICU psychosis. Always identify and treat the underlying cause before escalating sedation — adding more sedation to an agitated patient without addressing the cause worsens outcomes.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -257,7 +240,5 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
 </body>
 </html>

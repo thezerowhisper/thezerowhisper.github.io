@@ -108,15 +108,7 @@ h1 em{font-style:italic;color:#34d399}
 .related-card:hover{border-color:#10b981;background:#f0fdf4;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -208,15 +200,6 @@ h1 em{font-style:italic;color:#34d399}
     <h3>BSA Capping in Chemotherapy</h3>
     <p>In obese patients, using actual BSA for chemotherapy dosing can lead to severe toxicity. Common capping strategies: cap BSA at 2.0 m² (most common), use IBW-based BSA instead of actual weight, or cap dose at standard adult dose. Always check the specific protocol — some regimens (e.g. carboplatin AUC-based dosing) use Calvert formula rather than BSA.</p>
     <p>Conversely, underdosing based on capped BSA in obese patients may compromise chemotherapy efficacy. ASCO guidelines recommend using actual body weight (and hence actual BSA) for most chemotherapy regimens in obese patients with performance status.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is body surface area used for?</div><div class="fa">BSA is used to calculate chemotherapy doses (most chemo drugs are dosed per m²), check cardiac index (CI = CO/BSA, normal 2.5–4.0 L/min/m²), calculate renal function (GFR is indexed to 1.73 m² BSA), and dose other drugs with narrow therapeutic windows where weight alone is insufficient.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Which BSA formula is most accurate?</div><div class="fa">No single formula is universally superior. Mosteller (√[height×weight/3600]) is simplest and widely used. DuBois formula (Weight^0.425 × Height^0.725 × 0.007184) is the historical reference standard. Boyd formula is most accurate in children and extremes of weight. For clinical use, Mosteller is recommended for its simplicity with comparable accuracy to DuBois.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Is BSA-based chemotherapy dosing accurate?</div><div class="fa">BSA-based dosing reduces inter-patient variability in drug exposure compared to flat dosing, but does not eliminate it. Actual drug clearance is influenced by organ function (renal, hepatic), body composition, genetics (pharmacogenomics), and drug interactions. Many oncology centres now use therapeutic drug monitoring (TDM) for drugs like carboplatin (AUC-based Calvert formula) rather than BSA alone.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is cardiac index and how does BSA relate to it?</div><div class="fa">Cardiac index (CI) = Cardiac output (L/min) / BSA (m²). Indexing to BSA accounts for body size differences. Normal CI: 2.5–4.0 L/min/m². CI <2.0 L/min/m² indicates cardiogenic shock. CI is measured by thermodilution (pulmonary artery catheter), echocardiography, or pulse contour analysis. BSA calculation is therefore essential for haemodynamic monitoring in ICU.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is BSA different from BMI?</div><div class="fa">BMI = weight/height² — measures weight relative to height as a proxy for body fat. BSA = calculated surface area of the body — used for drug dosing and physiological indexing. BSA accounts for both height and weight differently than BMI and does not assess adiposity. A tall, muscular patient may have high BSA but normal BMI; an obese patient may have elevated BMI and BSA.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the normal BSA for Indian adults?</div><div class="fa">Average BSA for Indian adults: approximately 1.6–1.7 m² for women and 1.7–1.9 m² for men, somewhat lower than the Western reference of 1.73 m² used for GFR indexing. This difference is clinically significant for chemotherapy dosing — Indian oncology guidelines recommend using calculated BSA rather than a fixed value, with capping at 2.0 m² for obese patients in some protocols.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -269,8 +252,5 @@ function resetCalc(){['height','weight','co'].forEach(id=>{document.getElementBy
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-  <script>
-      function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
 </body>
 </html>

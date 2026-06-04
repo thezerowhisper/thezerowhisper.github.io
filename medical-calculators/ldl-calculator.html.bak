@@ -97,15 +97,7 @@ h1 em{font-style:italic;color:#34d399}
 .related-card:active,.related-card:hover{border-color:#10b981;background:#f0fdf4}
 .rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -206,15 +198,6 @@ h1 em{font-style:italic;color:#34d399}
       <li><strong>Ezetimibe 10 mg OD (add-on):</strong> Reduces LDL by additional 15–25%. IMPROVE-IT trial: adds 6% relative CVD risk reduction on top of statin. First-line add-on if statin alone insufficient</li>
       <li><strong>PCSK9 inhibitors (evolocumab/alirocumab):</strong> Reduce LDL by 50–60% on top of statin. Expensive in India. Reserved for FH, very high-risk patients not at goal on statin + ezetimibe</li>
     </ul>
-     <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the Friedewald formula for LDL?</div><div class="fa">LDL cholesterol (mg/dL) = Total Cholesterol − HDL − (Triglycerides / 5). This is valid only when fasting triglycerides are <400 mg/dL. In SI units: LDL (mmol/L) = Total Cholesterol − HDL − (Triglycerides / 2.2). The formula underestimates LDL at high triglyceride levels — use direct LDL measurement if TG >400 mg/dL.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the LDL target for cardiovascular risk reduction?</div><div class="fa">ACC/AHA and ESC guidelines: Very high risk (established CVD, DM with organ damage): LDL <55 mg/dL (<1.4 mmol/L). High risk (DM without organ damage, 10-year risk >10%): LDL <70 mg/dL (<1.8 mmol/L). Moderate risk: LDL <100 mg/dL (<2.6 mmol/L). Low risk: LDL <116 mg/dL (<3.0 mmol/L). More aggressive targets are recommended after recent ACS.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Which statin achieves the most LDL reduction?</div><div class="fa">High-intensity statins: atorvastatin 40–80 mg (reduces LDL ~50%) or rosuvastatin 20–40 mg (reduces LDL ~55%). Moderate-intensity: atorvastatin 10–20 mg, rosuvastatin 5–10 mg, simvastatin 20–40 mg (reduces LDL ~30–50%). Each doubling of statin dose reduces LDL by an additional ~6% ('rule of 6'). If LDL target not achieved: add ezetimibe (further ~20% reduction) before escalating to PCSK9 inhibitors.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When is the Friedewald formula inaccurate?</div><div class="fa">Inaccurate when: TG >400 mg/dL (severely hypertriglyceridaemic), TG <150 mg/dL (underestimates LDL), in type III hyperlipidaemia (dysbetalipoproteinaemia), in non-fasting samples. In these situations, use direct LDL measurement by laboratory or the Sampson-NIH equation which is more accurate at extremes of TG and LDL values.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is non-HDL cholesterol and when is it useful?</div><div class="fa">Non-HDL cholesterol = Total Cholesterol − HDL. It includes all atherogenic lipoproteins (LDL, VLDL, IDL, Lp(a)) and is a better predictor of CVD risk than LDL alone, particularly in patients with hypertriglyceridaemia or diabetes. Non-HDL targets are typically 30 mg/dL higher than LDL targets. Non-HDL cholesterol does not require fasting and can be calculated from a random sample — useful in population screening.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Are statins safe long-term?</div><div class="fa">Statins are among the most studied drugs in medicine. Proven safe for long-term use in the vast majority. Main adverse effects: myalgia (5–10%, often non-specific), myositis with elevated CK (rare, <0.1%), rhabdomyolysis (very rare, 1–3 per 100,000). Slight increase in diabetes risk (~10% relative increase). No credible evidence for cognitive impairment or cancer risk. Routine monitoring: LFTs only if symptomatic; CK only if myalgia. Benefits far outweigh risks in patients with CVD risk.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -298,10 +281,5 @@ function resetCalc(){['tc','hdl','tg'].forEach(id=>document.getElementById(id).v
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>
-  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
-
- 
 </body>
 </html>

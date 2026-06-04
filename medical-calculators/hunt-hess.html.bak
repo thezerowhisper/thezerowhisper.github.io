@@ -94,15 +94,7 @@ h1 em{font-style:italic;color:#a78bfa}
 .related-card:hover{border-color:#8b5cf6;background:#faf5ff;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -174,15 +166,6 @@ h1 em{font-style:italic;color:#a78bfa}
     </ul>
     <h3>Hydrocephalus in SAH</h3>
     <p>Acute obstructive hydrocephalus occurs in 15–20% of SAH patients due to blood blocking CSF drainage pathways at the arachnoid granulations. It typically presents within 24–72 hours. Management: emergency external ventricular drain (EVD) if symptomatic (decreased LOC, upward gaze palsy). Chronic communicating hydrocephalus may develop weeks later, requiring ventriculoperitoneal shunting.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the Hunt-Hess scale?</div><div class="fa">The Hunt-Hess scale grades clinical severity of subarachnoid haemorrhage (SAH) at presentation: Grade 1 — asymptomatic or mild headache/neck stiffness. Grade 2 — moderate to severe headache, nuchal rigidity, no neurological deficit except CN palsy. Grade 3 — drowsiness, confusion, mild focal deficit. Grade 4 — stupor, moderate-severe hemiparesis. Grade 5 — deep coma, decerebrate posturing, moribund.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How does Hunt-Hess grade predict outcome?</div><div class="fa">Grade 1-2: good surgical candidates, 70-80% good outcome. Grade 3: moderate risk, 50-60% good outcome. Grade 4: high risk, 20-30% good outcome. Grade 5: very high risk, <10% good outcome, high surgical mortality. Grade guides timing of aneurysm securing — Grade 1-3 patients benefit from early intervention (within 24-72 hours); Grade 4-5 may require delayed intervention after clinical stabilisation.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the classic presentation of SAH?</div><div class="fa">'Thunderclap headache' — sudden onset severe headache described as the worst headache of patient's life, reaching maximum intensity within seconds. Associated features: neck stiffness (meningism from blood in CSF), photophobia, nausea/vomiting, brief loss of consciousness at onset, focal neurological deficits (CN III palsy = posterior communicating artery aneurysm). Sentinel headache (warning bleed) may precede major SAH by days.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What investigations are done for SAH?</div><div class="fa">CT head non-contrast (sensitivity >98% within 6 hours of ictus — hyperdense blood in basal cisterns). If CT negative but SAH suspected: lumbar puncture after 6 hours (xanthochromia on spectrophotometry, or >2000 RBCs in tube 4). CT angiography (CTA) for aneurysm identification — sensitivity >95%. Digital subtraction angiography (DSA) if CTA negative with high clinical suspicion.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the main complications of SAH?</div><div class="fa">Rebleeding (highest risk first 24 hours — prevented by early aneurysm securing), cerebral vasospasm (days 3-14 — prevented by nimodipine 60 mg PO every 4 hours), hydrocephalus (acute — treated with EVD; chronic — VP shunt), hyponatraemia (cerebral salt wasting or SIADH), seizures, and cardiac complications (neurogenic stunned myocardium, ECG changes including QTc prolongation).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is aneurysmal SAH treated?</div><div class="fa">Aneurysm securing: endovascular coiling (preferred if technically feasible — ISAT trial) or surgical clipping. Supportive care: nimodipine 60 mg PO/NG 4-hourly for 21 days (reduces vasospasm), maintain euvolaemia (avoid hypovolaemia — worsens vasospasm), euglycaemia, normothermia, treat hydrocephalus. Blood pressure management: pre-securing maintain SBP <160 mmHg to reduce rebleed risk.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -241,7 +224,5 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){selGrade=null;GRADES.forEach((_,i)=>document.getElementById('gc'+i).classList.remove('sel'));document.getElementById('results').className='results';lastResult=null}
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script>
-  
 </body>
 </html>

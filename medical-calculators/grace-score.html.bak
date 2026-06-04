@@ -111,15 +111,7 @@ h1 em{font-style:italic;color:#f87171}
 .grace-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
 
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 
@@ -251,15 +243,6 @@ h1 em{font-style:italic;color:#f87171}
 
     <h3>GRACE Score Limitations</h3>
     <p>The GRACE score was derived primarily in Western populations and may underestimate risk in South Asian populations. It requires serum creatinine, which may delay initial risk stratification in resource-limited settings. Despite limitations, GRACE remains the most widely validated and used ACS risk score globally and is specifically endorsed by the ESC 2020 NSTEMI guidelines.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the GRACE score used for?</div><div class="fa">The GRACE (Global Registry of Acute Coronary Events) score predicts in-hospital and 6-month mortality in patients with acute coronary syndrome (ACS — both NSTEMI and STEMI). It uses 8 variables: age, heart rate, systolic BP, creatinine, Killip class, cardiac arrest at admission, ST deviation, and elevated cardiac markers. Scores range 0–372.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How does GRACE score guide ACS management?</div><div class="fa">GRACE in-hospital mortality: Low (<108): <1%. Intermediate (108–140): 1–3%. High (>140): >3%. For NSTEMI: high GRACE score (>140) indicates benefit from early invasive strategy (coronary angiography within 24 hours). Low GRACE score allows selective invasive approach. STEMI patients proceed to primary PCI regardless of GRACE score.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is Killip classification in ACS?</div><div class="fa">Killip class assesses heart failure severity in ACS: Class I — no heart failure signs. Class II — mild HF (S3 gallop, basal crepitations <50% of lung fields, raised JVP). Class III — pulmonary oedema. Class IV — cardiogenic shock (SBP <90 with hypoperfusion). Higher Killip class significantly increases GRACE score and 30-day mortality.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the initial management of NSTEMI?</div><div class="fa">Dual antiplatelet therapy: aspirin 300 mg loading + ticagrelor 180 mg (preferred) or clopidogrel 300-600 mg. Anticoagulation: fondaparinux 2.5 mg SC OD (preferred if no PCI planned), or enoxaparin, or UFH if PCI planned within 24 hours. High-intensity statin (atorvastatin 80 mg). Beta-blocker if no contraindication. ACE inhibitor/ARB. Timing of angiography guided by GRACE score and clinical risk.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What biomarkers are elevated in ACS?</div><div class="fa">High-sensitivity troponin I or T (hsTnI/hsTnT): most sensitive and specific — rises within 1-3 hours of myocardial injury, peaks at 12-24 hours. Serial troponins at 0h and 3h (ESC 0/3h algorithm) or 0h and 1h (0/1h algorithm) allow rapid rule-in/rule-out. CK-MB: less sensitive than troponin, useful for re-infarction detection. BNP/NT-proBNP: elevated with LV dysfunction — prognostic value.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the difference between GRACE and TIMI score?</div><div class="fa">GRACE score (8 variables, continuous) is more accurate than TIMI for predicting mortality in NSTEMI — AUC ~0.84 vs ~0.65. TIMI (7 variables, simpler) was designed for risk of ischaemic events (death, MI, revascularisation) rather than mortality. ESC and most international guidelines recommend GRACE for NSTEMI risk stratification. TIMI is still used in some centres for its simplicity.</div></div>
-  </div>
   </section>
 
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> The GRACE score is a validated prognostic tool for ACS risk stratification, not a diagnostic tool. Clinical decisions must integrate complete clinical assessment and serial troponins.</div>
@@ -345,7 +328,5 @@ function copyResult(){ if(!lastResult)return; navigator.clipboard.writeText(last
 function resetCalc(){ location.reload(); }
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script>
-  
 </body>
 </html>

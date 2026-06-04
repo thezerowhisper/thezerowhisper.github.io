@@ -47,14 +47,6 @@
     .toc-link:hover{color:var(--crimson);text-decoration:underline}
 
     .alert-panel{background:#0d2b45;color:white;padding:30px;border-radius:20px;margin:40px 0}
-  
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
   </style>
 </head>
 <body>
@@ -165,15 +157,6 @@
 
         <h3>Conclusion</h3>
         <p>Vitamin K is a small molecule with a massive clinical footprint. From the delivery room to the emergency department, its role in preventing and stopping hemorrhage is unparalleled. This RxMedCalc tool provides clinicians with the evidence-based dosing required to navigate complex INR reversals and neonatal care with confidence and precision.</p>
-        <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What does vitamin K do in the body?</div><div class="fa">Vitamin K is a fat-soluble vitamin essential for the carboxylation of glutamate residues in clotting factors II, VII, IX, and X (pro-coagulant) and proteins C and S (anticoagulant), as well as osteocalcin (bone) and matrix Gla protein (vascular calcification prevention). It exists as K1 (phylloquinone — dietary, green vegetables) and K2 (menaquinone — gut bacteria, fermented foods, more important for bone/vascular health).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the signs of vitamin K deficiency?</div><div class="fa">Bleeding manifestations: easy bruising, prolonged bleeding from cuts, GI bleeding, haematuria, and intracranial haemorrhage (especially in neonates). Lab findings: prolonged PT/INR (factors II, VII, IX, X dependent on K), normal APTT (unless severe), normal platelet count and bleeding time. PIVKA-II (protein induced by vitamin K absence) is a sensitive marker of subclinical deficiency.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Who is at risk of vitamin K deficiency?</div><div class="fa">Neonates (low placental transfer, sterile gut — all newborns receive prophylactic vitamin K at birth per NRP/NHM protocol: 1 mg IM at birth). Fat malabsorption syndromes (cholestatic liver disease, cystic fibrosis, coeliac disease, Crohn's). Prolonged antibiotic use (kills gut bacteria producing K2). Warfarin therapy (intentional K antagonism). Exclusively breastfed infants (breast milk low in K1). Elderly with poor diet.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the neonatal vitamin K dose?</div><div class="fa">Standard dose per NHM India and WHO: 1 mg phytomenadione (vitamin K1) IM at birth for all neonates ≥32 weeks. Preterm <32 weeks: 0.5 mg IM. Oral K is available (Konakion MM Paediatric 2 mg) but requires 3 doses (at birth, 1 week, 4–6 weeks) — less reliable than single IM dose. IM vitamin K prevents haemorrhagic disease of the newborn (HDN) with near 100% efficacy.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is vitamin K given to reverse warfarin?</div><div class="fa">Warfarin reversal: Non-bleeding, INR >5: withhold warfarin 1–2 doses, recheck INR. Non-bleeding, INR >8: oral vitamin K 1–5 mg. Bleeding with elevated INR: IV vitamin K 5–10 mg slow infusion (over 20–60 min — anaphylaxis risk with rapid infusion) + urgent 4-factor PCC (prothrombin complex concentrate) for immediate reversal. INR normalises with vitamin K in 4–6 hours (IV) or 12–24 hours (oral). For surgery: aim INR <1.5.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the interaction between vitamin K and warfarin?</div><div class="fa">Warfarin works by inhibiting vitamin K epoxide reductase (VKOR), preventing recycling of vitamin K and depleting active vitamin K. Foods high in vitamin K1 (green leafy vegetables: spinach, kale, broccoli, methi/fenugreek — commonly eaten in India) reduce warfarin efficacy. Patients on warfarin should maintain consistent (not zero) daily vitamin K intake rather than avoiding it completely. Sudden dietary changes (more or less green vegetables) destabilise INR.</div></div>
-  </div>
     </article>
 </div>
 
@@ -226,6 +209,5 @@ function calcK(){
 </script>
 
 <script src="/assets/shared-nav.js"></script>
-<script>function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script>
 </body>
 </html>

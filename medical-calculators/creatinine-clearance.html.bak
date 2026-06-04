@@ -84,15 +84,7 @@
   .related-card:hover { border-color: var(--primary-light); background: #eff6ff; transform: translateY(-2px); box-shadow: var(--shadow); }
   .related-card .rc-name { font-size: .88rem; font-weight: 700; margin-bottom: 2px; }
   .related-card .rc-desc { font-size: .76rem; color: var(--text-muted); }
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 
@@ -175,16 +167,6 @@
 
     <h3>Weight Considerations</h3>
     <p>In significantly obese patients (BMI > 30), using Actual Body Weight in the Cockcroft-Gault equation will overestimate kidney function. It is standard practice to use <strong>Ideal Body Weight (IBW)</strong> or an Adjusted Body Weight in obese patients. You can calculate IBW using our <a href="/medical-calculators/ibw-calculator">IBW Calculator</a>.</p>
-    
-  <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the Cockcroft-Gault formula?</div><div class="fa">CrCl (mL/min) = [(140 − Age) × Weight (kg)] / [72 × Serum Creatinine (mg/dL)], multiplied by 0.85 for females. It uses actual body weight for normal-weight patients, ideal body weight for obese patients (ABW >30% above IBW), and adjusted body weight for mildly obese patients. It estimates creatinine clearance, not GFR.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When is CrCl preferred over eGFR?</div><div class="fa">Creatinine clearance by Cockcroft-Gault is preferred for drug dosing — especially in elderly, obese, or underweight patients — because it is not indexed to body surface area and directly estimates drug clearance. eGFR (CKD-EPI) is preferred for CKD staging and diagnosis. Most drug SmPCs (package inserts) specify dose adjustments based on CrCl, not eGFR.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What drugs need dose reduction with low CrCl?</div><div class="fa">Key drugs requiring CrCl-based dose reduction: metformin (stop if CrCl <30, caution 30–45), enoxaparin (reduce dose if CrCl <30, switch to UFH), direct oral anticoagulants (apixaban, rivaroxaban — check individual SmPC), gabapentin/pregabalin, allopurinol, digoxin, aminoglycosides, most beta-lactam antibiotics, and acyclovir.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How does muscle mass affect creatinine clearance?</div><div class="fa">Serum creatinine is a product of muscle metabolism. Patients with low muscle mass (elderly, malnourished, amputees, cirrhosis) have low serum creatinine that overestimates kidney function — Cockcroft-Gault will give a falsely high CrCl. In these patients, cystatin C-based eGFR or 24-hour urine creatinine collection gives more accurate results.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the difference between CrCl and GFR?</div><div class="fa">GFR measures pure glomerular filtration. CrCl overestimates GFR by 10–15% because creatinine is also secreted by renal tubules (not just filtered). In normal kidneys this difference is small. In CKD, tubular secretion contributes more proportionally, so CrCl overestimates GFR more significantly. eGFR equations (CKD-EPI) correct for this mathematically.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is CrCl calculated in obese patients?</div><div class="fa">In obesity (BMI >30), use ideal body weight (IBW) for CrCl calculation, not actual body weight — using ABW in obese patients overestimates CrCl. Exception: some guidelines use adjusted body weight (AdjBW = IBW + 0.4 × [ABW − IBW]) for aminoglycoside dosing in obesity. For enoxaparin in morbid obesity (BMI >40), use actual body weight and monitor with anti-Xa levels.</div></div>
-  </div>
   </section>
 
   <section class="card">
@@ -239,9 +221,5 @@
 </script>
 
 <script src="/assets/shared-nav.js"></script>
-<script>
-  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
-
 </body>
 </html>

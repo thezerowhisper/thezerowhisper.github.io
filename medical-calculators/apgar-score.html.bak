@@ -121,15 +121,7 @@
   .related-card:hover { border-color: var(--primary-light); background: #eff6ff; transform: translateY(-2px); box-shadow: var(--shadow); }
   .related-card .rc-name { font-size: .88rem; font-weight: 700; margin-bottom: 2px; }
   .related-card .rc-desc { font-size: .76rem; color: var(--text-muted); }
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 
@@ -215,15 +207,6 @@
     <p>All newborns: Warm, dry, stimulate, position airway. Assess: <strong>Is the baby term? Breathing/crying? Good muscle tone?</strong> If yes — routine care. If no — begin resuscitation.</p>
     <p><strong>Positive Pressure Ventilation (PPV):</strong> Indicated if gasping, apneic, or HR &lt;100 bpm. Rate: 40–60 breaths/min. Start at 21% O₂ for term babies.</p>
     <p><strong>Chest Compressions:</strong> Indicated if HR &lt;60 bpm despite 30 seconds of effective PPV. Ratio: 3:1 (90 compressions + 30 ventilations per minute).</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What does each Apgar component assess?</div><div class="fa">Appearance (skin colour): 0=blue/pale all over, 1=blue extremities body pink, 2=completely pink. Pulse: 0=absent, 1=<100, 2=≥100 bpm. Grimace (reflex): 0=none, 1=grimace, 2=cry/cough/sneeze. Activity (tone): 0=limp, 1=some flexion, 2=active motion. Respiration: 0=absent, 1=weak/irregular, 2=strong cry.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What Apgar score requires immediate resuscitation?</div><div class="fa">Score 7–10: normal, routine care. Score 4–6: moderate depression — stimulation, supplemental O2, consider PPV. Score 0–3: severely depressed — immediate resuscitation: warmth, airway, PPV, if HR <60 despite PPV then chest compressions (3:1 ratio), then IV/IO adrenaline 0.01 mg/kg if HR still <60.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When exactly is Apgar score assessed?</div><div class="fa">At 1 minute and 5 minutes after birth. The 1-minute score guides immediate resuscitation. The 5-minute score reflects response to resuscitation and predicts outcome better. If 5-minute score <7, repeat at 10, 15, and 20 minutes until ≥7 on two consecutive assessments.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Does low Apgar predict long-term outcome?</div><div class="fa">A low 1-minute score alone does not reliably predict long-term outcome — many resuscitate well and develop normally. A persistently low 5-minute score (<3) is associated with higher risk of cerebral palsy and neurodevelopmental delay but is not diagnostic. Apgar is a resuscitation guide, not a neurological prognosis tool.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the Apgar score in preterm infants?</div><div class="fa">Standard Apgar is less reliable in preterm infants where low tone, colour, and respiratory effort are expected physiologically. The Expanded Apgar score includes gestational age context. NRP now emphasises HR, respiratory effort, and tone as primary resuscitation triggers rather than Apgar total score alone.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What causes a low Apgar score?</div><div class="fa">Intrapartum asphyxia (most common), prematurity, maternal sedation (opioids, magnesium toxicity), congenital anomalies (diaphragmatic hernia, CHD), infection (chorioamnionitis, early-onset sepsis), and neuromuscular conditions. In India, prolonged obstructed labour and home deliveries without skilled attendance are important preventable causes.</div></div>
-  </div>
   </section>
 
   <section class="card">
@@ -328,10 +311,5 @@ buildGrid();
 updateTotal();
 </script>
 <script src="/assets/shared-nav.js"></script>
-
-<script>  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
-
-  
 </body>
 </html>

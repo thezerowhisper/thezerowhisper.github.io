@@ -112,15 +112,7 @@ h1 em{font-style:italic;color:#c084fc}
 .related-card:hover{border-color:#a855f7;background:#faf5ff;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -267,15 +259,6 @@ h1 em{font-style:italic;color:#c084fc}
       <li>Heart failure, left ventricular hypertrophy</li>
       <li>Combining multiple QT-prolonging drugs</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is QTc and why is it important?</div><div class="fa">QTc (corrected QT interval) adjusts the measured QT interval for heart rate, since QT naturally shortens at faster rates. A prolonged QTc indicates delayed ventricular repolarisation, which increases the risk of Torsades de Pointes (TdP) — a potentially fatal polymorphic ventricular tachycardia that can degenerate into ventricular fibrillation.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is a normal QTc interval?</div><div class="fa">Normal QTc: <440 ms in men, <450 ms in women. Borderline prolonged: 440–470 ms (men), 450–480 ms (women). Prolonged: >470 ms (men), >480 ms (women). Critical/high TdP risk: >500 ms in either sex. The female sex has an inherently longer QTc and higher TdP risk than males at equivalent QTc values.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Which drugs commonly prolong QTc?</div><div class="fa">Common culprits in Indian clinical practice: antipsychotics (haloperidol, quetiapine, risperidone), antiemetics (metoclopramide, ondansetron, domperidone), antibiotics (azithromycin, ciprofloxacin, levofloxacin, clarithromycin), antifungals (fluconazole), antiarrhythmics (amiodarone, sotalol), antimalarials (chloroquine, hydroxychloroquine), antidepressants (TCAs). Check CredibleMeds (AZsert.com) for complete up-to-date list.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What electrolyte abnormalities prolong QTc?</div><div class="fa">Hypokalaemia (most important — potassium stabilises cardiac membrane; low K prolongs repolarisation), hypomagnesaemia (often co-exists with hypokalaemia), and hypocalcaemia all prolong QTc. Always correct electrolytes before administering QT-prolonging drugs. Target K >4.0 mEq/L and Mg >0.8 mmol/L in patients at risk of TdP (known long QT, receiving QT-prolonging drugs).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is Torsades de Pointes and how is it treated?</div><div class="fa">TdP is a polymorphic VT with characteristic twisting of QRS complexes around the isoelectric line, occurring in the setting of prolonged QTc. It may self-terminate or degenerate to VF. Treatment: IV magnesium sulphate 2 g bolus (first-line regardless of Mg level), temporary cardiac pacing or isoproterenol to increase heart rate (shortens QT), withdraw offending drug, correct electrolytes, defibrillation if degenerates to VF. Avoid class IA/IC antiarrhythmics.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What formulas are used to calculate QTc?</div><div class="fa">Bazett formula: QTc = QT / √RR (most widely used, tends to overcorrect at fast rates). Fridericia formula: QTc = QT / RR^0.333 (more accurate at extremes of HR). Hodges formula: QTc = QT + 1.75 × (HR − 60). Bazett is standard on ECG machines but overestimates QTc at HR >100. Fridericia is preferred in tachycardia. Measure QT in lead II or V5 from Q wave onset to T wave end.</div></div>
-  </div>
   </div>
 
   <div class="content-card">
@@ -343,9 +326,5 @@ function resetCalc(){['qt','hr'].forEach(id=>{document.getElementById(id).value=
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-<script>  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
-
-  
 </body>
 </html>

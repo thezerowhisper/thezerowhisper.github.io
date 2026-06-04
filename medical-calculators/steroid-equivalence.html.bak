@@ -83,15 +83,7 @@ h1 em{font-style:italic;color:#fb923c}
 .related-card:active,.related-card:hover{border-color:#f97316;background:#fff7ed}
 .rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
 .disclaimer{background:#fef2f2;border:1.5px solid #fecaca;border-radius:10px;padding:12px;font-size:0.73rem;color:#991b1b;line-height:1.6;margin-top:16px}
-
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
-  </style>
+</style>
 </head>
 <body>
 <div class="page-header">
@@ -177,15 +169,6 @@ h1 em{font-style:italic;color:#fb923c}
       <li>Physiological dose: prednisolone 5 mg/day = approximately 20 mg hydrocortisone/day. Do NOT stop abruptly at this dose — continue until morning cortisol/short Synacthen test confirms HPA recovery</li>
       <li>Sick day rules: patients on long-term steroids should double or triple their dose during acute illness, surgery, or trauma to prevent Addisonian crisis</li>
       <li>Stress doses (surgery/critical illness): IV hydrocortisone 200 mg/day continuous infusion, or 50 mg QID, for major surgery. Can switch to oral as soon as patient tolerating</li>
-      <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is steroid equivalence?</div><div class="fa">Steroid equivalence refers to the anti-inflammatory potency of different corticosteroids relative to hydrocortisone (reference = 1). Equivalent anti-inflammatory doses: hydrocortisone 20 mg = prednisolone 5 mg = methylprednisolone 4 mg = dexamethasone 0.75 mg = betamethasone 0.6 mg. Note: mineralocorticoid potency is separate — dexamethasone has negligible mineralocorticoid activity while hydrocortisone has significant fludrocortisone-like effects.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the difference between prednisolone and dexamethasone?</div><div class="fa">Prednisolone: moderate potency (4–5x hydrocortisone), significant mineralocorticoid activity, half-life 12–36 hours, once or twice daily dosing, first-line for most chronic inflammatory conditions. Dexamethasone: high potency (25–30x hydrocortisone), negligible mineralocorticoid activity, half-life 36–72 hours, once daily dosing, preferred for: brain oedema, COVID-19 (RECOVERY trial), antenatal lung maturation, croup, antiemesis (chemotherapy), and acute spinal cord compression.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How should long-term steroids be tapered?</div><div class="fa">Prolonged steroid use (>3 weeks at >5 mg prednisolone/day) suppresses the HPA axis — abrupt withdrawal can cause adrenal crisis (hypotension, hyponatraemia, hypoglycaemia, death). Taper by 10–20% every 1–2 weeks until physiological dose (prednisolone 5–7.5 mg/day), then slower taper. Physiological steroid dose is approximately prednisolone 5 mg/day (equivalent to cortisol production of 15–20 mg/day). Check morning cortisol before stopping completely.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the side effects of long-term steroid use?</div><div class="fa">Metabolic: hyperglycaemia (steroid-induced DM), hyperlipidaemia, weight gain, moon face, buffalo hump, central obesity. Musculoskeletal: osteoporosis (DEXA scan + bisphosphonate prophylaxis if >3 months use), myopathy (proximal weakness — characteristic). Cardiovascular: hypertension, fluid retention. GI: peptic ulcer disease (especially with NSAIDs — PPI prophylaxis). Ophthalmic: posterior subcapsular cataracts, raised IOP/glaucoma. Endocrine: HPA suppression, growth retardation in children. Infection: increased susceptibility, reactivation of TB/strongyloides.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When are steroids used in critical care?</div><div class="fa">Evidence-based ICU indications: septic shock refractory to vasopressors (hydrocortisone 200 mg/day IV — APROCCHSS trial), ARDS (dexamethasone 20 mg/day × 5 days then 10 mg × 5 days — DEXA-ARDS trial), COVID-19 requiring O2/ventilation (dexamethasone 6 mg/day × 10 days — RECOVERY trial), meningitis (dexamethasone 0.15 mg/kg QID × 4 days — reduces hearing loss in pneumococcal meningitis), anaphylaxis (hydrocortisone 200 mg IV), and acute spinal cord injury (controversial).</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What steroid is used for antenatal lung maturation?</div><div class="fa">Betamethasone 12 mg IM × 2 doses 24 hours apart (or dexamethasone 6 mg IM × 4 doses 12 hours apart) given to the mother at 24–34 weeks gestation when preterm delivery is anticipated within 7 days. Reduces neonatal RDS, IVH, necrotising enterocolitis, and neonatal mortality by 30–50%. A single course is recommended — repeated courses (>2) are associated with reduced fetal growth and neurodevelopmental risk.</div></div>
-  </div>
     </ul>
   </div>
 
@@ -250,6 +233,5 @@ function resetCalc(){document.getElementById('from-dose').value='';document.getE
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
 </script>
 <script src="/assets/shared-nav.js"></script>
-  <script>function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script>
 </body>
 </html>

@@ -362,14 +362,6 @@
       .hero { background: #fff !important; color: #000 !important; }
       .calc-btn, .print-btn { display: none; }
     }
-  
-    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
-    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
-    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
-    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
-    .fi.op .fq::after{transform:rotate(45deg)}
-    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
-    .fi.op .fa{max-height:600px;padding-top:8px}
   </style>
 </head>
 <body>
@@ -611,16 +603,6 @@
         </ul>
       </div>
     </div>
-     <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the symptoms of hypothyroidism?</div><div class="fa">Classic symptoms: fatigue and lethargy (most common), weight gain, cold intolerance, constipation, dry skin and hair, hair loss, bradycardia, myalgia, depression, cognitive slowing ('brain fog'), menstrual irregularity (heavy periods), and facial puffiness (periorbital oedema). In severe hypothyroidism: myxoedema — non-pitting oedema, hoarse voice, carpal tunnel syndrome, pleural/pericardial effusions, and ultimately myxoedema coma.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the most common cause of hypothyroidism in India?</div><div class="fa">Hashimoto thyroiditis (autoimmune thyroiditis) is the most common cause in iodine-sufficient urban India, characterised by elevated anti-TPO and anti-thyroglobulin antibodies and lymphocytic infiltration of the thyroid. Iodine deficiency remains a significant cause in remote and hilly regions (Himalayan belt, northeast India) where iodised salt use is suboptimal. Iatrogenic causes: post-thyroidectomy and post-radioiodine ablation for hyperthyroidism.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the starting dose of levothyroxine?</div><div class="fa">Standard dose: 1.6 mcg/kg/day actual body weight in young healthy adults. Elderly (>65 years) or ischaemic heart disease: start low at 12.5–25 mcg/day, uptitrate by 12.5–25 mcg every 6–8 weeks. Severe hypothyroidism or myxoedema coma: IV levothyroxine 200–500 mcg stat (hospital setting) + exclude adrenal insufficiency before giving T4. Recheck TSH after 6–8 weeks of any dose change.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What TSH level confirms hypothyroidism?</div><div class="fa">Overt hypothyroidism: TSH >10 mIU/L with low free T4 — always treat. Subclinical hypothyroidism: TSH 4–10 mIU/L with normal free T4. Treat subclinical if: TSH >10, symptoms present, positive anti-TPO antibodies, pregnant or planning pregnancy, or age <65 with cardiovascular risk factors. Do not routinely treat asymptomatic TSH 4–10 in elderly >65 — TRUST trial showed no benefit.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is levothyroxine taken correctly?</div><div class="fa">Take on an empty stomach 30–60 minutes before breakfast (or at bedtime, consistently). Calcium supplements, iron tablets, PPIs, and antacids reduce levothyroxine absorption — take 4 hours apart. Drug interactions increasing T4 requirement: rifampicin, phenytoin, carbamazepine. Consistency in timing and brand matters — avoid switching brands without TSH monitoring. Recheck TSH 6–8 weeks after any dose change; annually when stable.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is myxoedema coma?</div><div class="fa">Myxoedema coma is a life-threatening complication of severe untreated hypothyroidism: hypothermia, bradycardia, hypotension, hypoventilation, altered consciousness, and hyponatraemia. Precipitants: cold exposure, infection, sedatives, surgery. Management: IV levothyroxine 200–500 mcg stat (penetrates blood-brain barrier faster) ± IV T3, IV hydrocortisone (adrenal insufficiency may co-exist), rewarming, supportive ICU care. Mortality 20–50% even with treatment.</div></div>
-  </div>
-</body>
   </div>
 
   <!-- REFERENCE -->
@@ -739,10 +721,7 @@
   // Init
   buildGrid(SYMPTOMS, 'symptom-grid', 's');
   buildGrid(SIGNS,    'sign-grid',    'g');
-
-  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
 </script>
-  <script src="/assets/shared-nav.js"></script>
 
- 
+</body>
 </html>
