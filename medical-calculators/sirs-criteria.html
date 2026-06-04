@@ -7,7 +7,7 @@
 <meta name="description" content="Free SIRS criteria calculator. Identify systemic inflammatory response syndrome and screen for sepsis. Includes Sepsis-2 vs Sepsis-3 comparison, organ dysfunction assessment, septic shock criteria, and IDSA/SSC management guidance. Used by emergency physicians and intensivists worldwide."/>
 <meta name="keywords" content="SIRS criteria calculator, SIRS sepsis, systemic inflammatory response syndrome, SIRS criteria, sepsis SIRS, SIRS score, sepsis criteria calculator, sepsis 2 criteria, SIRS temperature heart rate, sepsis screening tool, sepsis diagnosis criteria"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/sirs-criteria"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/sirs-criteria"/>
 <meta property="og:title" content="SIRS Criteria Calculator | Sepsis Screening | RxMedCalc"/>
 <meta property="og:description" content="Calculate SIRS criteria for sepsis screening. Sepsis-2 vs Sepsis-3 comparison. Organ dysfunction and septic shock assessment. Free clinical tool."/>
 <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/sirs-criteria"/>
@@ -137,7 +137,12 @@ h1 em{font-style:italic;color:#f87171}
 .related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 <div class="page-header">
@@ -308,15 +313,23 @@ h1 em{font-style:italic;color:#f87171}
     </div>
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> SIRS criteria are a clinical screening tool with limited specificity. Sepsis diagnosis requires clinical judgement integrating examination, investigations, and clinical context. Never withhold appropriate antibiotic therapy pending complete workup in a patient with suspected septic shock. Follow your institution's sepsis protocol and local antimicrobial guidelines.</div>
+
+  <section class="info-section" id="about-sirs-criteria">
+    <h2>About SIRS Criteria and Sepsis Definitions</h2>
+    <p>The Systemic Inflammatory Response Syndrome (SIRS) criteria were introduced by Bone et al. at the 1991 ACCP/SCCM Consensus Conference as a framework for identifying patients with a generalised inflammatory response, whether infectious or non-infectious. SIRS represented the first standardised definition of sepsis and enabled clinical research and trial enrolment for nearly two decades.</p>
+    <p>However, the limitations of SIRS became increasingly apparent: its high sensitivity (~97%) came at the cost of very poor specificity — SIRS criteria are met by the majority of ICU patients regardless of infection, and by many ward patients post-surgery, with pancreatitis, burns, or autoimmune disease. The 2016 Sepsis-3 consensus replaced SIRS with organ dysfunction (acute SOFA score increase >=2) as the defining criterion for sepsis, better identifying the subset of infected patients with life-threatening organ failure and high mortality.</p>
+    <p>Despite its replacement in formal definitions, SIRS retains practical value in resource-limited settings. In district hospitals and primary care centres without rapid SOFA component testing, SIRS criteria plus clinical suspicion of infection remain a reasonable trigger for blood cultures, empirical antibiotics, and patient escalation. SIRS is also still embedded in scoring systems (BISAP for pancreatitis) and paediatric sepsis definitions. The clinical priority remains early recognition of sick patients — any scoring system is a tool, not a substitute for clinical judgment.</p>
+  </section>
 </main>
 <script>
 let sirsSelected=new Set();let lastResult=null;
-const faqs=[
-  ["What are the 4 SIRS criteria?","Temperature >38.3°C or <36°C, Heart rate >90 bpm, Respiratory rate >20 or PaCO₂ <32 mmHg, WBC >12,000 or <4,000/µL or >10% bands. SIRS = ≥2 criteria."],
-  ["What is the difference between SIRS and sepsis?","Sepsis-2: SIRS + suspected infection. Sepsis-3 (2016): life-threatening organ dysfunction from dysregulated host response to infection (SOFA ≥2). SIRS is no longer part of Sepsis-3 definition but remains useful for bedside screening."],
-  ["Does SIRS always mean sepsis?","No. SIRS has many non-infectious causes: pancreatitis, trauma, burns, surgery, MI, PE, autoimmune disease, malignancy. SIRS indicates systemic inflammation — infection is one possible cause."],
-  ["What is septic shock under Sepsis-3?","Sepsis + vasopressors needed to maintain MAP ≥65 mmHg + lactate >2 mmol/L despite adequate fluid resuscitation. Hospital mortality >40%."],
-  ["When should antibiotics be given in sepsis?","Within 1 hour of sepsis recognition. Within 1 hour for septic shock — each hour of delay increases mortality by ~7%. Do not delay antibiotics to wait for cultures."]
+const faqs = [
+  ['What are the SIRS criteria?', 'SIRS (Systemic Inflammatory Response Syndrome) is defined by 2 or more of: Temperature >38C or <36C, Heart rate >90 bpm, Respiratory rate >20/min or PaCO2 <32 mmHg, WBC >12,000 or <4,000 cells/mm3 or >10% bands. SIRS was the original framework for sepsis diagnosis (Sepsis-1/2 definitions, 1991-2001) but has been largely replaced by Sepsis-3 (SOFA-based) criteria.'],
+  ['Why were SIRS criteria replaced by Sepsis-3?', 'SIRS criteria are highly sensitive (~97%) but poorly specific — SIRS is triggered by non-infectious causes including trauma, pancreatitis, burns, surgery, and autoimmune disease. This low specificity meant many non-septic patients were labelled as septic. Sepsis-3 (2016) replaced SIRS with organ dysfunction (SOFA score increase >=2) as the defining feature of sepsis, better identifying patients with life-threatening infection.'],
+  ['Can SIRS criteria still be useful?', 'SIRS criteria retain clinical utility in several contexts: as a simple bedside trigger for infection suspicion in primary care and district hospital settings where SOFA calculation is impractical, in paediatric sepsis (pSOFA and paediatric SIRS criteria are used for children), and as part of scoring systems for pancreatitis (BISAP uses SIRS as one component). SIRS >=2 in the context of suspected infection should still prompt blood cultures and antibiotic consideration.'],
+  ['What is the difference between SIRS, sepsis, severe sepsis, and septic shock?', 'Old Sepsis-2 definitions: SIRS = 2+ criteria. Sepsis = SIRS + suspected infection. Severe sepsis = Sepsis + organ dysfunction. Septic shock = Severe sepsis + refractory hypotension. Sepsis-3 definitions (current): Sepsis = infection + organ dysfunction (SOFA >=2). Septic shock = Sepsis + vasopressor requirement to maintain MAP >=65 AND lactate >2 mmol/L. The term \'severe sepsis\' has been retired.'],
+  ['What is the NEWS2 score and how does it relate to SIRS?', 'NEWS2 (National Early Warning Score 2) is a standardised deterioration scoring system used in hospitalised patients. Unlike SIRS, NEWS2 does not require laboratory values — it uses 7 bedside parameters (RR, SpO2, O2 supplementation, SBP, HR, consciousness, temperature). NEWS2 >=5 or any single parameter scoring 3 triggers urgent clinical review. NEWS2 and qSOFA are complementary to SIRS in identifying deteriorating patients in different clinical settings.'],
+  ['What blood tests are done when sepsis is suspected?', 'Immediate investigations in suspected sepsis: Blood cultures x2 (before antibiotics if possible, do not delay antibiotics >45 min), FBC (leucocytosis/leucopaenia, thrombocytopaenia), CRP and procalcitonin (elevated in bacterial infection, PCT >0.5 ng/mL suggests bacterial sepsis), serum lactate (>2 mmol/L indicates tissue hypoperfusion), creatinine, bilirubin, LFTs (SOFA parameters), blood glucose, coagulation screen (DIC if severely deranged), and ABG if respiratory compromise.']
 ];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}

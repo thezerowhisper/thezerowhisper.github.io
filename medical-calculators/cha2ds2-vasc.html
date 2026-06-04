@@ -7,7 +7,7 @@
 <meta name="description" content="Free CHA₂DS₂-VASc score calculator for stroke risk assessment in atrial fibrillation. Calculate annual stroke risk percentage, anticoagulation recommendations per ESC 2020 guidelines, and HAS-BLED bleeding risk cross-reference. Used by cardiologists and general physicians worldwide."/>
 <meta name="keywords" content="CHA2DS2-VASc calculator, CHA2DS2VASc score, atrial fibrillation stroke risk, AF anticoagulation, CHA2DS2-VASc anticoagulation, stroke risk AF calculator, warfarin DOAC atrial fibrillation, ESC guidelines AF, CHA2DS2VASc 2, CHA2DS2VASc score meaning"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/cha2ds2-vasc"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/cha2ds2-vasc"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="CHA₂DS₂-VASc Score Calculator | Stroke Risk in AF | RxMedCalc"/>
 <meta property="og:description" content="Calculate stroke risk in atrial fibrillation. ESC 2020 anticoagulation recommendations. Annual stroke risk percentage. Free for doctors worldwide."/>
@@ -132,7 +132,12 @@ h1 em{font-style:italic;color:#f87171}
 .related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 <div class="page-header">
@@ -248,6 +253,13 @@ h1 em{font-style:italic;color:#f87171}
     </div>
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> CHA₂DS₂-VASc is a clinical decision-support tool. Anticoagulation decisions require full clinical assessment including bleeding risk (HAS-BLED), renal function, patient preferences, and current medication review. Always follow local guidelines and consult a cardiologist for complex cases.</div>
+
+  <section class="info-section" id="about-cha2ds2-vasc">
+    <h2>About the CHA2DS2-VASc Score</h2>
+    <p>Atrial fibrillation (AF) is the most common sustained cardiac arrhythmia and the leading cause of cardioembolic stroke worldwide. In India, AF prevalence is approximately 0.5-1% of the adult population and is rising with the ageing demographic. The CHA2DS2-VASc score, developed by Lip et al. in 2010, provides a simple framework for estimating annual stroke risk and guiding anticoagulation decisions in non-valvular AF.</p>
+    <p>The score refined the earlier CHADS2 system by adding vascular disease, age 65-74, and female sex as additional risk modifiers, improving identification of truly low-risk patients who can safely avoid anticoagulation. A CHA2DS2-VASc score of 0 in men (1 in women) identifies a very low-risk group (~0.5% annual stroke risk) for whom the bleeding risk of anticoagulation likely outweighs benefit.</p>
+    <p>In Indian practice, anticoagulant choice is influenced by cost and access. DOACs (direct oral anticoagulants) — apixaban, rivaroxaban, dabigatran — are now the preferred agents over warfarin per ESC, AHA, and Cardiological Society of India guidelines. However, cost remains a barrier and warfarin remains widely used. For patients on warfarin, achieving a time in therapeutic range (TTR) >70% is essential — if TTR cannot be maintained, switch to a DOAC if feasible.</p>
+  </section>
 </main>
 
 <script>
@@ -264,12 +276,13 @@ const CRITERIA=[
 const STROKE_RISK=[0,1.3,2.2,3.2,4.0,6.7,9.8,9.6,6.7,15.2];
 let selected=new Set();
 let lastResult=null;
-const faqs=[
-  ["What is a CHA2DS2-VASc score of 2?","Score of 2 = ~2.2% annual stroke risk. ESC 2020 recommends oral anticoagulation (DOAC preferred) for men ≥2 and women ≥3."],
-  ["What score requires anticoagulation in AF?","Men ≥2 and women ≥3: OAC recommended. Men 1 / women 2: OAC should be considered. Men 0 / women 1: no anticoagulation needed."],
-  ["Does female sex add a point?","Yes, 1 point. But female sex alone (score 1 in a woman with no other factors) does NOT warrant anticoagulation per ESC 2020. The female sex point is only meaningful when ≥1 other risk factor is present."],
-  ["Which DOAC is preferred in AF?","Apixaban has the lowest bleeding risk and is preferred in elderly and CKD. All DOACs are preferred over warfarin in non-valvular AF. Warfarin is still used in valvular AF (mitral stenosis, mechanical valves)."],
-  ["What is the difference between CHADS2 and CHA2DS2-VASc?","CHADS₂ (max 6) was the original score. CHA₂DS₂-VASc (max 9) added age 65–74, vascular disease, and female sex, giving better discrimination for low-risk patients (score 0–1). CHA₂DS₂-VASc is now the standard."]
+const faqs = [
+  ['What is the CHA2DS2-VASc score?', 'CHA2DS2-VASc estimates annual stroke risk in patients with non-valvular atrial fibrillation (AF). Parameters: Congestive heart failure (1), Hypertension (1), Age >=75 (2), Diabetes mellitus (1), Stroke/TIA history (2), Vascular disease (1), Age 65-74 (1), Sex category female (1). Score 0-9. Guides anticoagulation decisions.'],
+  ['When should anticoagulation be started in AF?', 'ESC 2020 and AHA/ACC guidelines: Men with score >=2, women with score >=3: anticoagulate (OAC strongly recommended). Men with score 1, women with score 2: anticoagulation should be considered (weigh bleeding risk). Men with score 0, women with score 1: anticoagulation not recommended. Female sex alone (score 1 in women, 0 in men) does not independently increase stroke risk and should not trigger anticoagulation.'],
+  ['Which anticoagulant is preferred in AF?', 'DOACs (apixaban, rivaroxaban, dabigatran, edoxaban) are preferred over warfarin for non-valvular AF. They have similar or superior efficacy with significantly lower intracranial haemorrhage rates. Warfarin remains indicated for: AF with moderate-severe mitral stenosis, mechanical heart valve prosthesis, and severe renal failure (eGFR <15). Apixaban has the most favourable safety profile including in elderly and CKD patients.'],
+  ['What annual stroke risk corresponds to each CHA2DS2-VASc score?', 'Score 0: ~0% annual stroke risk. Score 1: ~1.3%. Score 2: ~2.2%. Score 3: ~3.2%. Score 4: ~4.0%. Score 5: ~6.7%. Score 6: ~9.8%. Score 7: ~9.6%. Score 8: ~12.5%. Score 9: ~15.2%. These are population estimates from the original Swedish cohort. Individual risk may vary based on comorbidities and AF burden.'],
+  ['What is the difference between CHA2DS2 and CHA2DS2-VASc?', 'The original CHADS2 score (2001) used 5 parameters with a maximum score of 6. CHA2DS2-VASc (2010) refined it by adding vascular disease, age 65-74, and female sex, improving identification of truly low-risk patients (score 0 in men). CHA2DS2-VASc has replaced CHADS2 in all major guidelines because it better identifies patients who can safely avoid anticoagulation.'],
+  ['How does AF cause stroke?', 'AF causes disorganised atrial electrical activity leading to stasis of blood in the left atrial appendage (LAA). This promotes thrombus formation in the LAA. Thrombus fragments embolise to the cerebral circulation causing cardioembolic stroke — typically larger territory infarcts with worse functional outcomes than atherosclerotic stroke. Anticoagulation prevents LAA thrombus formation and reduces stroke risk by ~64% compared to no therapy.']
 ];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}

@@ -7,7 +7,7 @@
 <meta name="description" content="Free HAS-BLED score calculator for bleeding risk assessment in patients with atrial fibrillation on anticoagulation. Calculate annual major bleeding risk and identify modifiable bleeding risk factors."/>
 <meta name="keywords" content="HAS-BLED calculator, HAS-BLED score, bleeding risk anticoagulation, AF bleeding risk, HAS-BLED interpretation"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/has-bled"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/has-bled"/>
 
 <!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
 <script defer src="/assets/umami-events.js"></script>
@@ -279,7 +279,14 @@ function calculate(){
   setTimeout(() => document.getElementById('results').scrollIntoView({behavior:'smooth', block:'nearest'}), 50);
 }
 
-const faqs=[["What is high HAS-BLED?", "A score of 3 or more is considered high bleeding risk."], ["Should OAC be stopped?", "No. HAS-BLED should be used to correct modifiable factors."]];
+const faqs = [
+  ['What is the HAS-BLED score?', 'HAS-BLED estimates 1-year major bleeding risk in AF patients on anticoagulation. Parameters: Hypertension (SBP >160 mmHg), Abnormal renal function (dialysis, transplant, or creatinine >200 mcmol/L), Abnormal liver function (cirrhosis or bilirubin >2x + AST/ALT >3x normal), Stroke history, Bleeding history or predisposition, Labile INR (TTR <60%), Elderly (age >65), Drugs (antiplatelets/NSAIDs) or alcohol (1 point each). Maximum 9 points.'],
+  ['What does a high HAS-BLED score mean?', 'Score 0-2: Low bleeding risk (<2% per year). Score >=3: High bleeding risk (>3-4% per year). A high HAS-BLED score should NOT automatically mean withholding anticoagulation — in most AF patients, stroke prevention benefit outweighs bleeding risk. Instead, use it to identify and correct modifiable bleeding risk factors: control hypertension, stop unnecessary antiplatelets/NSAIDs, address alcohol use, optimise INR control.'],
+  ['How does HAS-BLED compare to CHA2DS2-VASc?', 'CHA2DS2-VASc estimates stroke risk (when to start anticoagulation). HAS-BLED estimates bleeding risk (how to manage it safely). Both should be used together. High CHA2DS2-VASc + high HAS-BLED usually still favours anticoagulation, but with DOAC preference over warfarin, more frequent monitoring, and aggressive modifiable risk factor management.'],
+  ['Which anticoagulant has the lowest bleeding risk in AF?', 'Among DOACs, apixaban 5 mg BD has the most favourable bleeding profile — lower major bleeding than warfarin AND lower bleeding than rivaroxaban in head-to-head analyses. Dabigatran 110 mg BD (lower dose) also shows lower bleeding than warfarin with non-inferior stroke prevention. Warfarin has the highest intracranial haemorrhage rate. In elderly patients or those with high HAS-BLED, apixaban is generally preferred.'],
+  ['What is labile INR and how is it managed?', 'Labile INR (HAS-BLED L parameter) is defined as time in therapeutic range (TTR) <60% on warfarin. It indicates unpredictable anticoagulation — increasing both stroke risk (supratherapeutic INR) and bleeding risk (subtherapeutic INR). Management: reinforce adherence and consistent vitamin K intake, identify interacting drugs, check for occult GI pathology. If TTR remains <65% despite optimisation, switch to a DOAC.'],
+  ['What are reversible HAS-BLED risk factors?', 'Modifiable HAS-BLED factors: H — control hypertension (target <130/80 mmHg). A — correct renal/liver abnormalities where possible. L — improve INR control or switch to DOAC. D — stop antiplatelet drugs if not indicated (dual therapy with OAC significantly increases GI bleeding risk), avoid NSAIDs, address alcohol excess. Correcting these factors can meaningfully reduce bleeding risk without stopping anticoagulation.']
+];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`
   <div class="faq-item">
     <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">${f[0]}</div>

@@ -7,7 +7,7 @@
 <meta name="description" content="Free MAP calculator. Calculate mean arterial pressure from systolic and diastolic blood pressure instantly. Includes normal MAP range, clinical interpretation, and shock thresholds. Used by doctors and nurses worldwide."/>
 <meta name="keywords" content="mean arterial pressure calculator, MAP calculator, MAP normal range, MAP formula, MAP blood pressure, mean arterial pressure normal, MAP shock, MAP formula DBP SBP, MAP clinical significance, perfusion pressure calculator"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/map-calculator"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/map-calculator"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Mean Arterial Pressure (MAP) Calculator — Normal Range & Clinical Interpretation"/>
 <meta property="og:description" content="Calculate MAP from SBP and DBP instantly. Includes normal range, shock thresholds, and clinical interpretation. Free tool for doctors and nurses."/>
@@ -302,7 +302,12 @@ h1 em{font-style:italic;color:#f87171}
 
 /* Disclaimer */
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 
@@ -519,6 +524,13 @@ h1 em{font-style:italic;color:#f87171}
     <strong>⚠ Medical Disclaimer:</strong> This MAP calculator is a clinical decision-support tool for qualified healthcare professionals. Results must be interpreted in the full clinical context of the patient. MAP targets vary by clinical scenario, comorbidities, and institutional protocols. Always verify with your clinical guidelines and senior colleagues for critical care decisions.
   </div>
 
+
+  <section class="info-section" id="about-map-calculator">
+    <h2>About the MAP Calculator</h2>
+    <p>Mean arterial pressure (MAP) is a fundamental haemodynamic parameter representing the average blood pressure throughout the cardiac cycle, weighted to account for the longer duration of diastole (~2/3 of the cycle). Unlike systolic BP, MAP correlates directly with organ perfusion pressure and tissue oxygen delivery, making it the key target in haemodynamic resuscitation and critical care management.</p>
+    <p>The clinical significance of MAP lies in its role in maintaining perfusion to vital organs. Each organ system has a lower limit of MAP below which autoregulation fails and perfusion becomes pressure-dependent: the brain requires MAP >=60 mmHg (or higher in TBI — >=70-80 mmHg to maintain cerebral perfusion pressure), the kidneys require MAP >=65-70 mmHg for adequate glomerular filtration, and the coronary circulation depends on adequate diastolic pressure for myocardial perfusion.</p>
+    <p>In septic shock, the Surviving Sepsis Campaign targets MAP >=65 mmHg with noradrenaline as first-line vasopressor. However, a higher MAP target (80-85 mmHg) may benefit patients with pre-existing hypertension or chronic kidney disease, as shown in the SEPSISPAM trial — where the higher target reduced the need for renal replacement therapy in hypertensive patients. MAP monitoring should be continuous via arterial line in any patient requiring vasopressors.</p>
+  </section>
 </main>
 
 
@@ -526,14 +538,12 @@ h1 em{font-style:italic;color:#f87171}
 let lastResult = null;
 
 const faqs = [
-  ["What is the normal MAP range?","A normal mean arterial pressure is between 70 and 100 mmHg. A MAP of at least 65 mmHg is the minimum needed to perfuse vital organs in critically ill patients. Below 60 mmHg indicates inadequate organ perfusion requiring urgent intervention."],
-  ["What is the formula for mean arterial pressure?","MAP = DBP + 1/3 × (SBP − DBP), equivalently MAP = (SBP + 2×DBP) ÷ 3. This accounts for the heart spending approximately twice as long in diastole as in systole at normal heart rates. For 120/80 mmHg: MAP = 80 + 1/3×40 = 93.3 mmHg."],
-  ["What MAP indicates shock?","A MAP below 65 mmHg is the threshold for haemodynamic shock. This is the resuscitation target in septic shock per SSC 2021 guidelines. Below 50 mmHg is a critical emergency requiring immediate vasopressor support."],
-  ["Why is MAP more important than systolic BP in ICU?","MAP represents the average pressure driving blood through the circulation throughout the entire cardiac cycle. Most organ autoregulation mechanisms respond to MAP, not systolic pressure. MAP determines coronary and cerebral perfusion pressure."],
-  ["What is the MAP target in septic shock?","SSC 2021 recommends MAP ≥65 mmHg in septic shock. Some guidelines suggest 70–75 mmHg in patients with pre-existing hypertension or CKD. Higher targets (80–85 mmHg) showed no mortality benefit in the SEPSISPAM trial."],
-  ["What is a dangerously high MAP?","MAP above 110 mmHg indicates hypertension. Above 150 mmHg is a hypertensive emergency. In aortic dissection or hypertensive encephalopathy, MAP must be reduced rapidly under controlled conditions."],
-  ["How does MAP relate to cerebral perfusion pressure?","CPP = MAP − ICP. Normal CPP is 60–80 mmHg. In traumatic brain injury, maintaining MAP ≥80 mmHg is targeted to ensure adequate CPP ≥60 mmHg when ICP is elevated. Brain Trauma Foundation recommends CPP targets of 60–70 mmHg in severe TBI."],
-  ["Can MAP be calculated from an automatic BP machine?","Most modern NIBP monitors display MAP directly using the oscillometric method, which is slightly different from but clinically equivalent to the arithmetic formula. You can also calculate it manually using MAP = DBP + 1/3 × Pulse Pressure."]
+  ['What is mean arterial pressure (MAP)?', 'MAP (Mean Arterial Pressure) is the average arterial blood pressure throughout one cardiac cycle, weighted for the longer duration of diastole. Formula: MAP = DBP + 1/3 x (SBP - DBP), or equivalently MAP = (SBP + 2xDBP) / 3. It more accurately represents organ perfusion pressure than systolic BP alone. Normal MAP is 70-100 mmHg.'],
+  ['Why is MAP important in critical care?', 'MAP is the key target in haemodynamic resuscitation because it directly determines organ perfusion pressure. MAP = Cardiac Output x Systemic Vascular Resistance. In septic shock, MAP target is >=65 mmHg (Surviving Sepsis Campaign). In traumatic brain injury, MAP target is >=80-90 mmHg to maintain cerebral perfusion pressure (CPP = MAP - ICP). In cardiogenic shock, maintaining MAP >=65 prevents multiorgan failure.'],
+  ['What MAP indicates hypotension?', 'MAP <65 mmHg is the critical threshold for defining haemodynamically significant hypotension in most guidelines. MAP <65 impairs perfusion to kidneys (AKI risk), gut (ischaemia, bacterial translocation), brain (reduced CPP), and coronary arteries. A MAP of 50-60 mmHg for more than 30 minutes is associated with AKI, MI, and 30-day mortality even in non-ICU patients. MAP should be measured invasively (arterial line) in unstable patients.'],
+  ['What is the difference between MAP and pulse pressure?', 'MAP represents average perfusion pressure. Pulse pressure (PP) = SBP - DBP, normally 40 mmHg. Pulse pressure reflects stroke volume and arterial compliance. Wide PP (>60 mmHg): aortic regurgitation, hyperthyroidism, arteriovenous fistula, severe anaemia, patent ductus arteriosus. Narrow PP (<25 mmHg or <25% of SBP): indicates low stroke volume — cardiac tamponade, severe aortic stenosis, cardiogenic shock, hypovolaemia.'],
+  ['What vasopressors are used to raise MAP?', 'First-line: noradrenaline (norepinephrine) — alpha-1 adrenergic vasoconstriction raises SVR and MAP with minimal tachycardia; dose 0.01-3 mcg/kg/min IV infusion. Second-line: vasopressin 0.03-0.04 units/min (spares noradrenaline dose, no dose titration). Third-line: adrenaline (epinephrine) for refractory shock or anaphylaxis. Dopamine is no longer first-line (higher arrhythmia risk than noradrenaline per SOAP II trial).'],
+  ['How is MAP monitored in clinical practice?', 'Non-invasive: oscillometric BP cuff gives MAP directly (displayed on modern monitors). Less accurate in arrhythmias, peripheral vasoconstriction, and morbid obesity. Invasive: radial arterial line (preferred) gives continuous beat-to-beat MAP waveform — gold standard in ICU and major surgery. Arterial waveform analysis also gives dynamic parameters (pulse pressure variation, stroke volume variation) to guide fluid responsiveness assessment.']
 ];
 
 // Build FAQ

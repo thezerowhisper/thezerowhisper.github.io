@@ -7,7 +7,7 @@
 <meta name="description" content="Free ABCD2 score calculator for TIA stroke risk stratification. Calculate 2-day and 7-day stroke risk after transient ischaemic attack. Identifies high-risk TIA patients needing urgent investigation. AHA/ASA 2021 guidelines."/>
 <meta name="keywords" content="ABCD2 score, TIA stroke risk, ABCD2 calculator, transient ischaemic attack, TIA risk stratification, stroke after TIA, ABCD2 interpretation, TIA emergency management, crescendo TIA, TIA high risk"/>
 <meta name="robots" content="index, follow"/>
-<link rel="canonical" href="/medical-calculators/abcd2-score"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/abcd2-score"/>
 <meta property="og:title" content="ABCD2 Score | TIA Stroke Risk Calculator | RxMedCalc"/>
 <meta property="og:description" content="Calculate ABCD2 score for TIA. 2-day and 7-day stroke risk. Urgent investigation criteria. AHA/ASA 2021."/>
 <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/abcd2-score"/>
@@ -109,7 +109,12 @@ h1 em{font-style:italic;color:#a78bfa}
 .related-card:active,.related-card:hover{border-color:#8b5cf6;background:#faf5ff}
 .rc-icon{font-size:1.2rem;flex-shrink:0}.rc-title{font-size:0.79rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}.rc-desc{font-size:0.66rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:10px;padding:12px;font-size:0.73rem;color:#78350f;line-height:1.6;margin-top:16px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 <div class="page-header">
@@ -258,15 +263,24 @@ h1 em{font-style:italic;color:#a78bfa}
     </div>
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> ABCD2 score is a risk stratification tool — it does not replace urgent clinical assessment. All TIA patients require urgent specialist evaluation, neuroimaging, and vascular imaging regardless of score. Never use ABCD2 alone to justify discharge from the emergency department. If in doubt, admit.</div>
+
+  <section class="info-section" id="about-abcd2-score">
+    <h2>About the ABCD2 Score — TIA Risk Stratification</h2>
+    <p>The ABCD2 score was developed to help clinicians stratify the short-term stroke risk after a transient ischaemic attack (TIA) and prioritise urgent investigation and treatment. TIA is a medical emergency — the risk of stroke is highest in the first 48 hours, with approximately 10-15% of TIA patients suffering a stroke within 3 months if untreated. Early secondary prevention can reduce this risk by up to 80%.</p>
+    <p>Despite its widespread use, the ABCD2 score has significant limitations and is no longer the primary triage tool in many high-income country guidelines. It does not capture high-risk TIA features such as atrial fibrillation, significant carotid stenosis, or DWI-positive MRI lesions — all of which independently predict high early stroke risk regardless of ABCD2 score. Current NICE (2019) and ESO guidelines recommend urgent specialist TIA clinic assessment within 24 hours for all TIA patients.</p>
+    <p>In the Indian context, TIA management is complicated by limited access to MRI and specialist neurology services at secondary care level. ABCD2 remains useful for triage in resource-limited settings — patients with score >=4 should be prioritised for urgent referral. All TIA patients, regardless of ABCD2 score, should receive immediate aspirin 300 mg, statin therapy, and blood pressure control pending specialist review.</p>
+  </section>
 </main>
 
 <script>
 const scores={A:null,B:null,C:null,D:null,DM:null};let lastResult=null;
-const faqs=[
-  ['What ABCD2 score is high risk?','ABCD2 ≥4 is considered high risk requiring same-day specialist review. Score 6–7 is very high risk (~8% 2-day stroke risk) and usually warrants admission. However, all TIA patients need urgent assessment regardless of score.'],
-  ['Should I admit all TIA patients?','AHA/ASA 2021 recommends considering admission for all high-risk TIA (ABCD2 ≥4, crescendo TIA, cardioembolic source, known carotid stenosis, or no access to rapid outpatient TIA clinic). Low-risk patients (ABCD2 0–3) can be seen in a specialist TIA clinic within 24 hours if reliably available.'],
-  ['What is the difference between TIA and stroke?','TIA = transient neurological deficit fully resolving within 24 hours (usually <60 minutes) without brain infarction on MRI. Minor ischaemic stroke = DWI-positive infarct on MRI regardless of clinical resolution. About 50% of clinical TIAs show acute infarct on DWI — these are better classified as minor strokes.'],
-  ['What dual antiplatelet therapy is recommended after TIA?','DAPT (aspirin + clopidogrel) for 21 days immediately after TIA, based on POINT and CHANCE trials — reduces early stroke by 25% vs aspirin alone. Loading doses: aspirin 300 mg + clopidogrel 300 mg immediately. Then aspirin 75 mg + clopidogrel 75 mg daily. After 21 days: aspirin 75 mg monotherapy long-term.'],
+const faqs = [
+  ['What is the ABCD2 score used for?', 'The ABCD2 score estimates the short-term risk of stroke after a transient ischaemic attack (TIA). It uses five parameters: Age, Blood pressure, Clinical features, Duration of symptoms, and Diabetes. It helps triage TIA patients — those with high scores (>=4) need urgent investigation and should be seen within 24 hours.'],
+  ['What is a high vs low ABCD2 score?', 'Score 0-3: Low risk (~1% 2-day stroke risk). Score 4-5: Moderate risk (~4% 2-day stroke risk). Score 6-7: High risk (~8% 2-day stroke risk). NICE guidelines recommend specialist assessment within 24 hours for all TIA patients, but high ABCD2 scores (>=4) indicate those most urgently needing investigation.'],
+  ['What investigations are done after TIA?', 'After TIA: urgent brain imaging (MRI DWI preferred, or CT), carotid doppler/CTA if anterior circulation symptoms, ECG and 24-hour Holter for AF, echocardiography if cardioembolic source suspected, FBC, coagulation, glucose, lipids. Antiplatelet therapy (aspirin 300 mg stat, then dual antiplatelet with clopidogrel) should be started immediately unless haemorrhage excluded.'],
+  ['Is the ABCD2 score still recommended?', 'The ABCD2 score has fallen out of favour in many guidelines because it does not reliably identify high-risk TIA features such as AF, carotid stenosis, or DWI-positive MRI lesions. Current NICE 2019 and ESO guidelines recommend urgent specialist assessment for all TIA within 24 hours rather than ABCD2-based stratification alone. The score remains useful in resource-limited settings.'],
+  ['What is the difference between TIA and stroke?', 'A TIA produces stroke-like symptoms that resolve completely within 24 hours (classically within 1 hour). A stroke has persistent neurological deficits. TIA is a medical emergency — ~10-15% of patients have a stroke within 3 months, with the highest risk in the first 48 hours. All TIA patients require the same urgent workup as stroke.'],
+  ['What medications are started after TIA?', 'Antiplatelet therapy: aspirin 300 mg immediately, then dual antiplatelet (aspirin + clopidogrel) for 21 days per POINT/CHANCE trial evidence, then clopidogrel alone long-term. If AF found: anticoagulation (DOAC preferred). If carotid stenosis >=50%: urgent endarterectomy within 2 weeks. Statin therapy and BP control are also initiated.']
 ];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}

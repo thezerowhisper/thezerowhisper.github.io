@@ -7,7 +7,7 @@
 <meta name="description" content="Free PSI (Pneumonia Severity Index) / PORT score calculator for community-acquired pneumonia. Predict 30-day mortality, guide outpatient vs inpatient vs ICU admission decisions. Includes antibiotic recommendations per ATS/IDSA 2019 guidelines. Used by emergency physicians and pulmonologists worldwide."/>
 <meta name="keywords" content="PSI calculator, pneumonia severity index, PORT score calculator, community acquired pneumonia, CAP severity, PSI risk class, pneumonia admission criteria, PSI vs CURB-65, pneumonia mortality, CAP treatment guidelines"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/psi-calculator"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/psi-calculator"/>
 <meta property="og:title" content="PSI Calculator | Pneumonia Severity Index | PORT Score | RxMedCalc"/>
 <meta property="og:description" content="Calculate PSI/PORT score for CAP severity. 30-day mortality, admission decisions, antibiotic guidance. Free for emergency physicians worldwide."/>
 <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/psi-calculator"/>
@@ -137,7 +137,12 @@ h1 em{font-style:italic;color:#60a5fa}
 .rc-title{font-size:0.82rem;font-weight:700;color:#0d1b2a;margin-bottom:1px}
 .rc-desc{font-size:0.68rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:11px;padding:14px;font-size:0.75rem;color:#78350f;line-height:1.65;margin-top:20px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 <div class="page-header">
@@ -358,15 +363,24 @@ h1 em{font-style:italic;color:#60a5fa}
     </div>
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> PSI is a severity prediction tool — not a substitute for clinical judgement. Patients with social factors, inability to maintain oral intake, or clinical instability may require admission regardless of low PSI score. Always apply clinical context alongside the score.</div>
+
+  <section class="info-section" id="about-psi-calculator">
+    <h2>About the PSI/PORT Score for Pneumonia</h2>
+    <p>The Pneumonia Severity Index (PSI), also known as the PORT (Patient Outcomes Research Team) score, was developed by Fine et al. (NEJM 1997) from a study of nearly 15,000 patients with community-acquired pneumonia. It remains the most extensively validated CAP severity score and is particularly powerful for identifying low-risk patients safe for outpatient treatment — its primary clinical utility.</p>
+    <p>PSI class I patients (age <50, no comorbidities, normal vitals) have a 30-day mortality of <0.1% and do not require hospital admission in the absence of social or practical barriers. PSI classes II-III carry low-moderate mortality (0.6-2.8%) and can often be managed with short hospital stays or outpatient treatment with close follow-up. Classes IV-V have high mortality (8.2-29.2%) and require hospitalisation with consideration of ICU admission.</p>
+    <p>In Indian practice, CAP management is complicated by high rates of antibiotic resistance (ESBL-producing Enterobacteriaceae, multidrug-resistant Klebsiella and Acinetobacter in hospital-acquired pneumonia), atypical pathogen burden (Mycoplasma, Chlamydia, Legionella — particularly in outbreaks), and tropical co-infections (melioidosis in northeast India, scrub typhus). PSI should always be used alongside microbiological results and local resistance patterns rather than as a standalone treatment guide.</p>
+  </section>
 </main>
 
 <script>
 const pts={};let lastResult=null;
-const faqs=[
-  ["What is a high PSI score?","PSI Class IV (score 91–130): 8.2% mortality — admit. Class V (>130): 29.2% mortality — consider ICU. Classes I–III (≤90) are low risk and can be managed outpatient in most cases."],
-  ["PSI vs CURB-65 — which is better?","Both are validated. PSI has more variables and is better at identifying low-risk patients for outpatient management. CURB-65 is simpler and faster at the bedside. IDSA/ATS 2019 endorses either."],
-  ["Can I discharge a Class III patient?","Class III (score 71–90, mortality 2.8%) — short inpatient observation then outpatient is acceptable if social situation is adequate, patient can take oral medications, and reliable follow-up is arranged. Clinical judgement overrides the score."],
-  ["What antibiotics for severe CAP?","Class V (ICU-level): IV beta-lactam (ceftriaxone or piperacillin-tazobactam) + IV azithromycin or fluoroquinolone. Add vancomycin/linezolid if MRSA risk. Add antipseudomonal agent if Pseudomonas risk factors."]
+const faqs = [
+  ['What is the PSI/PORT score?', 'The PSI (Pneumonia Severity Index), also called the PORT score, stratifies death risk from community-acquired pneumonia (CAP) in adults. It uses demographic factors, comorbidities, physical exam findings, and lab/X-ray results. Risk classes: I (age <50, no comorbidities, normal vitals) = very low risk; II (score <=70) = low; III (71-90) = moderate; IV (91-130) = high; V (>130) = very high risk.'],
+  ['How does PSI compare to CURB-65?', 'PSI is more accurate (20 variables) especially for identifying low-risk outpatient CAP. CURB-65 is faster (5 variables) and better for identifying high-risk patients needing ICU. PSI overestimates risk in elderly (age contributes heavily). CURB-65 may underestimate risk in young patients with severe physiological derangement. Use both together with clinical judgment — CURB-65 >=3 or PSI class IV-V should prompt ICU review.'],
+  ['What are PSI Class I criteria?', 'PSI Class I (outpatient eligible): age <50 years AND none of: neoplastic disease, liver disease, CHF, CVD, renal disease AND no altered mental status AND pulse <125/min AND RR <30/min AND SBP >=90 mmHg AND temperature 35-39.9C. Class I patients have <0.1% 30-day mortality and can be treated as outpatients if social circumstances are adequate.'],
+  ['What antibiotics are used for CAP by PSI class?', 'PSI Class I-II (outpatient): oral amoxicillin 500 mg TDS x 5 days +/- azithromycin 500 mg OD x 3 days for atypical cover. PSI Class III (consider admission): oral/IV co-amoxiclav + macrolide. PSI Class IV-V (hospital): IV co-amoxiclav or ceftriaxone + IV azithromycin. Severe/ICU CAP: IV piperacillin-tazobactam + macrolide. Always adjust per local antibiogram — India has high rates of resistant Gram-negatives.'],
+  ['What PSI lab values score highest?', 'Highest-scoring PSI lab parameters (20 points each): BUN >=30 mg/dL, sodium <130 mEq/L. Other lab parameters (10 points each): glucose >=250 mg/dL, haematocrit <30%, PaO2 <60 mmHg or SpO2 <90%, pleural effusion on CXR. These add to base score from age, sex, comorbidities, and vital signs to give total PSI class.'],
+  ['How is PSI used for discharge decisions?', 'PSI class II-III patients improving on treatment (afebrile 24 hours, RR <24/min, SpO2 >=90% on room air, tolerating oral intake, normal orientation) can switch to oral antibiotics and discharge within 24-48 hours of admission. CXR lags clinical recovery by weeks — a worsening CXR in a clinically improving patient should not delay discharge. Follow-up CXR at 6-8 weeks recommended only if symptoms persist or malignancy risk (age >50, smoker).']
 ];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}

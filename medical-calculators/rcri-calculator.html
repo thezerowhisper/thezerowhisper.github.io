@@ -7,7 +7,7 @@
 <meta name="description" content="Free RCRI (Revised Cardiac Risk Index) calculator for perioperative cardiac risk assessment before non-cardiac surgery. Calculate risk of major adverse cardiac events (MACE), includes ACC/AHA 2014 preoperative guidelines, statin and beta-blocker recommendations, and cardiac workup decision guide. Used by anaesthesiologists and surgeons worldwide."/>
 <meta name="keywords" content="RCRI calculator, revised cardiac risk index, perioperative cardiac risk, preoperative cardiac assessment, RCRI score, Lee index, cardiac risk surgery, MACE perioperative, preoperative evaluation calculator, non-cardiac surgery cardiac risk"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/rcri-calculator"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/rcri-calculator"/>
 <meta property="og:title" content="RCRI Calculator | Perioperative Cardiac Risk | Non-Cardiac Surgery | RxMedCalc"/>
 <meta property="og:description" content="Calculate perioperative cardiac risk before non-cardiac surgery using the Revised Cardiac Risk Index. ACC/AHA guidelines, MACE prediction. Free clinical tool."/>
 <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/rcri-calculator"/>
@@ -115,7 +115,12 @@ h1 em{font-style:italic;color:#f87171}
 .related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 <div class="page-header">
@@ -214,6 +219,13 @@ h1 em{font-style:italic;color:#f87171}
     </div>
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> The RCRI is a validated screening tool but does not replace comprehensive preoperative clinical assessment by a qualified anaesthesiologist and surgeon. Cardiac risk estimation must consider surgical urgency, type of surgery, local anaesthetic options, and individual patient factors. Always follow ACC/AHA or ESC preoperative guidelines and multidisciplinary team decision-making for high-risk patients.</div>
+
+  <section class="info-section" id="about-rcri-calculator">
+    <h2>About the RCRI — Preoperative Cardiac Risk</h2>
+    <p>The Revised Cardiac Risk Index (RCRI), developed by Lee et al. and published in Circulation (1999), is the most widely validated and used preoperative cardiac risk assessment tool for patients undergoing non-cardiac surgery. It identified six independent predictors of major perioperative cardiac events from a derivation cohort of 2893 patients and validation in 1422 patients undergoing elective non-cardiac surgery.</p>
+    <p>The RCRI guides the stepwise approach to preoperative cardiac assessment recommended by ESC/ESA (2022) and ACC/AHA (2014/2022) guidelines: estimate surgical risk (procedure type), assess functional capacity (METs), calculate RCRI, then decide whether further cardiac testing would change management. The key principle is that preoperative cardiac testing is only warranted if the result would alter the decision to proceed or the anaesthetic/surgical approach — testing for reassurance alone is not recommended.</p>
+    <p>In Indian practice, the RCRI is particularly relevant given the high burden of undiagnosed ischaemic heart disease, diabetes, and hypertension in the surgical population. Many patients presenting for elective surgery in India have not had cardiac risk factor assessment and may have silent ischaemic heart disease. An RCRI >=2 in an Indian patient should prompt careful history and ECG review, and RCRI >=3 should trigger cardiology input before major elective surgery.</p>
+  </section>
 </main>
 <script>
 const CRITERIA=[
@@ -227,12 +239,13 @@ const CRITERIA=[
 let sel=new Set();let lastResult=null;
 const MACE=['0.4%','0.9%','6.6%','≥11%'];
 const MACE_REV=['~3.9%','~6.0%','~10.1%','~15%'];
-const faqs=[
-  ["What is a high RCRI score?","RCRI ≥3 is high risk — MACE rate ~11–15%. RCRI 0: ~0.4%. RCRI 1: ~0.9%. RCRI 2: ~6.6%. High-risk patients may need cardiology review, stress testing, and optimisation before elective surgery."],
-  ["What are the 6 RCRI criteria?","High-risk surgery, ischaemic heart disease, congestive heart failure, cerebrovascular disease, insulin-dependent diabetes, preoperative creatinine >2.0 mg/dL. Each = 1 point."],
-  ["Should I delay surgery for a high RCRI?","Not automatically. ACC/AHA 2014: emergency surgery proceeds regardless. For elective surgery with RCRI ≥3, consider cardiology review and whether non-invasive testing would change management. Surgery should not be delayed if testing won't change management."],
-  ["When are perioperative beta-blockers indicated?","Continue in patients already taking them. Consider initiating if RCRI ≥3, but start 2–7 days before surgery — never start on the day of surgery. Target HR 60–80 bpm."],
-  ["Is RCRI used for all surgeries?","RCRI is for non-cardiac surgery risk stratification. For cardiac surgery, specific risk scores (EuroSCORE II, STS score) are used. Low-risk surgeries (endoscopy, cataract, superficial) generally do not require RCRI assessment."]
+const faqs = [
+  ['What is the RCRI score?', 'The Revised Cardiac Risk Index (RCRI), developed by Lee et al. (1999), predicts the risk of major adverse cardiac events (MACE — cardiac death, MI, cardiac arrest, complete heart block, pulmonary oedema) after non-cardiac surgery. Six predictors, each 1 point: high-risk surgery, ischaemic heart disease, congestive heart failure, cerebrovascular disease, insulin-dependent diabetes, creatinine >2.0 mg/dL.'],
+  ['How does RCRI guide preoperative cardiac assessment?', 'RCRI 0: very low risk (~0.4% MACE) — proceed to surgery. RCRI 1: low risk (~1%) — proceed. RCRI 2: moderate risk (~2.4%) — consider further evaluation if it will change management. RCRI >=3: high risk (>5.4%) — cardiology review, consider further cardiac testing (stress echo, myocardial perfusion), optimise medical therapy before surgery.'],
+  ['When is preoperative cardiac testing indicated?', 'Functional capacity is the key determinant: if patient can perform >=4 METs activity (climb one flight of stairs, walk on level ground at 4 mph) without symptoms, proceed to surgery without further testing. If functional capacity <4 METs or unknown AND surgery is high-risk AND test result would change management: consider pharmacological stress testing (dobutamine stress echo or nuclear perfusion). Routine ECG/echo/troponin is NOT recommended for low-risk surgery.'],
+  ['What cardiac medications should be continued perioperatively?', 'Continue: beta-blockers (do NOT stop abruptly — rebound ischaemia risk; if not on beta-blocker pre-op, do not start acutely within 24 hours), statins (continue — pleiotropic cardioprotective effects), aspirin (continue for high-risk cardiac patients; stop for low-risk elective surgery). Hold: ACE inhibitors/ARBs on day of surgery (hypotension risk with anaesthesia). Resume all cardiac medications as soon as patient is eating post-operatively.'],
+  ['What is high-risk surgery for cardiac purposes?', 'High cardiac risk surgery (>1% MACE risk): aortic and major vascular surgery (open AAA repair, aorto-bifemoral bypass), peripheral arterial surgery, thoracic surgery, abdominal surgery (especially emergency), orthopaedic surgery (hip/knee replacement), head and neck cancer surgery, prolonged surgery with major fluid shifts. Low risk (<1% MACE): endoscopy, breast surgery, cataract, superficial procedures, and most ambulatory surgery.'],
+  ['What is the role of troponin monitoring perioperatively?', 'Myocardial Injury after Non-cardiac Surgery (MINS) — troponin elevation within 30 days of surgery — occurs in ~8% of patients >=45 years and is associated with 30-day mortality of 10%. ESC 2022 guidelines recommend preoperative troponin measurement in high-risk patients and post-operative monitoring at 24 and 48 hours after major surgery. MINS is managed with aspirin, statin, and ACE inhibitor. Dabigatran reduced MINS events in the MANAGE trial.']
 ];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}

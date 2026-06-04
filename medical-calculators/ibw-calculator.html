@@ -7,7 +7,7 @@
 <meta name="description" content="Free ideal body weight calculator using Devine, Robinson, Miller and Hamwi formulas. Includes adjusted body weight (AdjBW) for obese patients, drug dosing guide, and ventilator tidal volume calculation. Used by doctors and pharmacists worldwide."/>
 <meta name="keywords" content="ideal body weight calculator, IBW calculator, Devine formula, adjusted body weight calculator, AdjBW, IBW formula, ideal weight for height, tidal volume IBW, drug dosing body weight, IBW obesity, Robinson formula IBW, Hamwi formula"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/ibw-calculator"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/ibw-calculator"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Ideal Body Weight (IBW) Calculator — Devine, Robinson, Hamwi Formulas"/>
 <meta property="og:description" content="Calculate IBW and adjusted body weight using 4 validated formulas. Includes ventilator tidal volume and drug dosing guide. Free for doctors worldwide."/>
@@ -259,7 +259,12 @@ h1 em{font-style:italic;color:#34d399}
 .rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}
 .rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 
@@ -495,6 +500,13 @@ h1 em{font-style:italic;color:#34d399}
     <strong>⚠ Medical Disclaimer:</strong> IBW and AdjBW are pharmacokinetic tools for drug dosing calculations. They do not define a healthy weight or body composition goal. Drug dosing must be confirmed against current prescribing guidelines, local protocols, and therapeutic drug monitoring where applicable. Always consult a clinical pharmacist for complex dosing decisions in critically ill or obese patients.
   </div>
 
+
+  <section class="info-section" id="about-ibw-calculator">
+    <h2>About the IBW Calculator</h2>
+    <p>Ideal body weight (IBW) is a calculated weight estimate used in clinical pharmacology and critical care to guide drug dosing and physiological parameter calculation in patients whose actual body weight significantly differs from what their height-sex profile would predict. Unlike BMI, which assesses health risk, IBW is a practical clinical tool for dosing calculations.</p>
+    <p>The most important clinical application of IBW is in mechanical ventilation: the ARDSNet lung-protective ventilation protocol mandates tidal volume of 6 mL/kg of IBW (predicted body weight), not actual weight. In an obese patient (ABW 120 kg, IBW 70 kg), using actual weight would deliver tidal volumes of 720 mL — far exceeding safe limits and causing ventilator-induced lung injury. This distinction is literally life-saving in ARDS management.</p>
+    <p>For drug dosing in obese patients, the choice between IBW, adjusted body weight (AdjBW), and actual body weight depends on the drug's volume of distribution and lipophilicity. Hydrophilic drugs (aminoglycosides, beta-lactam antibiotics) distribute primarily in lean tissue — use IBW or AdjBW. Lipophilic drugs (loading doses of amiodarone, some benzodiazepines) partially distribute into fat — use actual body weight for loading doses. When in doubt, consult clinical pharmacist and monitor drug levels.</p>
+  </section>
 </main>
 
 
@@ -505,15 +517,13 @@ let calcResults=null;
 let activeFormula='devine';
 let lastResult=null;
 
-const faqs=[
-  ["What is the Devine formula for ideal body weight?","The Devine formula (1974): Male IBW = 50 kg + 2.3 kg × (height in inches − 60). Female IBW = 45.5 kg + 2.3 kg × (height in inches − 60). Originally derived for pharmacokinetic drug dosing. Remains the most widely used formula in clinical practice, especially for mechanical ventilation tidal volume."],
-  ["When should adjusted body weight be used instead of IBW?","AdjBW is used when actual weight exceeds IBW by more than 20–30% (obesity). AdjBW = IBW + 0.4 × (Actual weight − IBW). Used for aminoglycoside dosing, LMWH dosing, and some chemotherapy regimens in obese patients."],
-  ["How is IBW used in mechanical ventilation?","Tidal volume should be set at 6 mL/kg IBW in ARDS (ARDSNet protocol, NEJM 2000). Lung size correlates with height (IBW), not body weight. Using actual weight in obese patients causes dangerous lung overdistension (volutrauma)."],
-  ["Which IBW formula is most accurate?","No single formula is definitively most accurate. Devine is most widely used clinically (drug dosing, ventilation). Robinson gives slightly lower values, considered more appropriate for women. Hamwi is used in dietetics. For drug dosing, Devine is the standard reference in most pharmacokinetic studies."],
-  ["What drugs use IBW for dosing?","Tidal volume — IBW (Devine). Aminoglycosides (gentamicin, amikacin) — AdjBW in obesity. Vancomycin — actual body weight. Phenytoin — AdjBW for loading. Digoxin — IBW or lean body mass. LMWH (enoxaparin) — actual weight (with monitoring in extreme obesity)."],
-  ["Is IBW the same as healthy weight?","No. IBW formulas were designed for drug dosing, not to define healthy weight. They give a single number, not a range, and don't account for body composition, ethnicity, age, or fitness. BMI with Asian cutoffs and waist circumference are better tools for healthy weight assessment."],
-  ["How do you calculate IBW in cm?","Male IBW (kg) = 50 + 0.906 × (height cm − 152.4). Female IBW (kg) = 45.5 + 0.906 × (height cm − 152.4). This is the cm-converted Devine formula. Or simply divide cm by 2.54 to get inches, then apply the standard formula."],
-  ["What is the IBW formula for children?","Devine and other IBW formulas are validated for adults only (height >152 cm). For children, use WHO or IAP growth charts (weight-for-height percentiles). For emergency weight estimation: Weight (kg) = 2 × (age in years + 4) for ages 1–10, or use the Broselow tape."]
+const faqs = [
+  ['What is ideal body weight (IBW)?', 'Ideal body weight (IBW) is a weight estimate used in clinical practice to calculate drug doses, ventilator tidal volumes, and nutritional requirements — based on height and sex rather than actual weight. The Devine formula (1974) is most widely used: IBW (men) = 50 + 2.3 x (height in inches - 60); IBW (women) = 45.5 + 2.3 x (height in inches - 60). It was originally derived for drug dosing, not as a health target.'],
+  ['What is the difference between IBW, ABW, and LBW?', 'IBW (Ideal Body Weight): height-based estimate. ABW (Actual Body Weight): what the patient weighs now. LBW (Lean Body Weight): total body weight minus fat mass. For drug dosing: use IBW for most drugs in obese patients (aminoglycosides, vancomycin initial estimate, ventilator tidal volumes). Use ABW for some drugs with high lipophilicity (e.g. loading doses of amiodarone, heparin). Use Adjusted Body Weight (AdjBW = IBW + 0.4 x (ABW - IBW)) for aminoglycosides in obese patients.'],
+  ['When is IBW used for ventilator settings?', 'Mechanical ventilator tidal volume is always set based on IBW (predicted body weight), not actual weight. Lung-protective ventilation: tidal volume 6 mL/kg IBW (ARDSNET protocol). Using actual weight in an obese patient would deliver excessive tidal volumes causing ventilator-induced lung injury (VILI). Plateau pressure target <30 cmH2O. IBW-based ventilation is the single most important intervention reducing ARDS mortality.'],
+  ['What is adjusted body weight and when is it used?', 'Adjusted body weight (AdjBW) = IBW + 0.4 x (ABW - IBW). It is used when ABW exceeds IBW by >30% (i.e. obese patients). The 0.4 correction factor accounts for the partial distribution of drugs into adipose tissue. Used for: aminoglycoside dosing in obesity, some chemotherapy agents, heparin dosing. For enoxaparin in morbid obesity (BMI >40), use actual weight with anti-Xa monitoring rather than IBW.'],
+  ['What are the Devine formula limitations?', 'The Devine formula was derived from a small dataset of non-obese adults and has no scientific basis for the specific constants used. It underestimates IBW for shorter individuals and is unreliable below 5 feet (60 inches). Alternative formulas include Hamwi (men: 106 lb for 5 ft + 6 lb per inch above; women: 100 lb + 5 lb per inch), Robinson, and Miller. For clinical drug dosing, consistency within an institution matters more than which formula is used.'],
+  ['How is IBW used in nutritional assessment?', 'In nutritional support, IBW is used to calculate caloric and protein targets in obese patients — using actual body weight would lead to overfeeding. Standard targets: 25-30 kcal/kg IBW/day total energy; 1.2-2.0 g/kg IBW/day protein (higher end for critically ill, burns, trauma). In underweight patients (ABW < IBW), use actual body weight. In morbid obesity, use adjusted body weight (IBW + 25% of excess weight).']
 ];
 
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`

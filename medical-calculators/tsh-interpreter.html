@@ -7,7 +7,7 @@
 <meta name="description" content="Free TSH and thyroid function test interpreter. Enter TSH, Free T4, and Free T3 values to get a complete interpretation — overt hypothyroidism, subclinical hypothyroidism, hyperthyroidism, and sick euthyroid syndrome. Includes ATA treatment guidelines, levothyroxine dosing, and thyroid cancer context."/>
 <meta name="keywords" content="TSH interpreter, thyroid function test, TSH normal range, TSH high low, TSH T4 T3 interpretation, hypothyroidism calculator, hyperthyroidism TSH, subclinical hypothyroidism, levothyroxine dose, TSH reference range, thyroid test results explained"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/tsh-interpreter"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/tsh-interpreter"/>
 <meta property="og:title" content="TSH Interpreter | Thyroid Function Test | RxMedCalc"/>
 <meta property="og:description" content="Interpret TSH, Free T4, and Free T3 thyroid function tests. Hypothyroidism, hyperthyroidism, subclinical disease. Treatment guidance. Free clinical tool."/>
 <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/tsh-interpreter"/>
@@ -94,7 +94,12 @@ h1 em{font-style:italic;color:#34d399}
 .related-card:hover{border-color:#10b981;background:#f0fdf4;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 <div class="page-header">
@@ -221,15 +226,23 @@ h1 em{font-style:italic;color:#34d399}
     </div>
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> TSH and thyroid function interpretation requires clinical correlation with symptoms, history, medication use, and repeat testing where appropriate. Reference ranges vary by laboratory and assay. Pregnancy, acute illness, medications (amiodarone, biotin, heparin), and assay interference can significantly affect results. Always interpret TFTs in the clinical context. Endocrinology referral for complex or uncertain cases.</div>
+
+  <section class="info-section" id="about-tsh-interpreter">
+    <h2>About the TSH Interpreter</h2>
+    <p>Thyroid disorders are among the most common endocrine conditions in India, with hypothyroidism (particularly Hashimoto thyroiditis) affecting an estimated 10-12% of the adult population. TSH (thyroid stimulating hormone) is the pituitary hormone that regulates thyroid function and is the single most sensitive test for thyroid dysfunction — it rises before T4 falls (in early hypothyroidism) and falls before T4 rises (in early hyperthyroidism), making it the ideal screening and monitoring test.</p>
+    <p>TSH interpretation requires clinical context. TSH can be transiently suppressed in acute illness (non-thyroidal illness syndrome / sick euthyroid syndrome) without true hyperthyroidism. TSH can be falsely elevated in the recovery phase of illness, by certain drugs (lithium, amiodarone, metoclopramide), and by assay interference from heterophile antibodies. A mildly abnormal TSH in a hospitalised acutely ill patient should be repeated after recovery before committing to thyroid diagnosis.</p>
+    <p>Amiodarone deserves special mention: it contains 37% iodine by weight and causes complex thyroid effects. It inhibits T4-to-T3 conversion, causing elevated T4 and TSH in early use (euthyroid state). Amiodarone-induced hypothyroidism (AIH) requires levothyroxine treatment. Amiodarone-induced thyrotoxicosis (AIT) is more complex — Type 1 (excess iodine, pre-existing thyroid disease) and Type 2 (destructive thyroiditis) require different treatment (carbimazole vs prednisolone respectively).</p>
+  </section>
 </main>
 <script>
 let lastResult=null;
-const faqs=[
-  ["What is a normal TSH level?","Normal TSH range is 0.4–4.0 mIU/L for most adults. In pregnancy, the target is <2.5 mIU/L in the first trimester. In the elderly, TSH up to 6–7 mIU/L may be acceptable without treatment."],
-  ["What does a high TSH mean?","High TSH (>4.0 mIU/L) indicates hypothyroidism — the pituitary is secreting more TSH to stimulate an underperforming thyroid. If Free T4 is also low: overt hypothyroidism (treat). If Free T4 is normal: subclinical hypothyroidism (consider treatment if TSH >10, symptomatic, or pregnant)."],
-  ["What does a low TSH mean?","Low TSH (<0.4 mIU/L) indicates hyperthyroidism or exogenous thyroid hormone suppression. If Free T4/T3 are elevated: overt hyperthyroidism (Graves, toxic nodule). If Free T4/T3 normal: subclinical hyperthyroidism (monitor, treat if AF risk, osteoporosis, age >65, or symptomatic)."],
-  ["When should subclinical hypothyroidism be treated?","ATA 2014: Treat if TSH >10 mIU/L (even if FT4 normal), or if TSH 4–10 with symptoms, pregnancy, high cardiovascular risk, age <70, or presence of anti-TPO antibodies. Observe with 6-monthly TFT if TSH 4–10 and asymptomatic."],
-  ["What is sick euthyroid syndrome?","Non-thyroidal illness syndrome — seen in acute illness, ICU admission, surgery. TSH may be low/normal/high, FT4 low-normal, FT3 markedly low (due to impaired T4→T3 conversion). DO NOT treat with levothyroxine in this setting — replace the illness, not the TSH. TFTs normalise on recovery."]
+const faqs = [
+  ['How do I interpret TSH levels?', 'TSH (Thyroid Stimulating Hormone) is the best single test for thyroid function. Normal range: 0.4-4.0 mIU/L (lab-specific ranges may vary slightly). TSH <0.4: hyperthyroidism (low TSH, high T4/T3). TSH 4.0-10.0 with normal T4: subclinical hypothyroidism. TSH >10 or raised TSH with low T4: overt hypothyroidism. In pregnancy: TSH targets are lower — first trimester <2.5 mIU/L, second/third <3.0 mIU/L.'],
+  ['What is subclinical hypothyroidism and does it need treatment?', 'Subclinical hypothyroidism: TSH 4.0-10.0 mIU/L with normal free T4. Treat if: TSH >10 mIU/L (ATA/ETA guidelines), symptoms of hypothyroidism present, positive anti-TPO antibodies (higher progression risk), pregnancy or planning pregnancy, or age <65 with cardiovascular risk factors. Do not routinely treat asymptomatic subclinical hypothyroidism with TSH 4-10 in elderly patients >65 — TRUST trial showed no benefit and potential harm.'],
+  ['What causes elevated TSH?', 'Most common: primary hypothyroidism (Hashimoto thyroiditis — autoimmune, most common cause in India; post-radioiodine/surgery; iodine deficiency in remote areas). Less common: central hypothyroidism has LOW TSH with low T4 (pituitary/hypothalamic disease). Drugs causing elevated TSH: lithium, amiodarone, interferon-alpha, tyrosine kinase inhibitors. Transient TSH elevation: non-thyroidal illness recovery, assay interference (heterophile antibodies).'],
+  ['What causes suppressed TSH?', 'TSH <0.1 mIU/L: Graves disease (autoimmune, most common cause of hyperthyroidism in India), toxic multinodular goitre, toxic adenoma, subacute (de Quervain) thyroiditis (painful, post-viral), postpartum thyroiditis. Drugs: excess levothyroxine, high-dose glucocorticoids, dopamine infusion. TSH 0.1-0.4 (mild suppression): subclinical hyperthyroidism — monitor, treat if symptomatic, AF, osteoporosis risk, or age >65.'],
+  ['What is the starting dose of levothyroxine for hypothyroidism?', 'Standard starting dose: 1.6 mcg/kg/day actual body weight in young, healthy adults. In elderly patients (>65) or those with ischaemic heart disease: start low at 12.5-25 mcg/day and titrate up by 12.5-25 mcg every 6-8 weeks. In severe hypothyroidism or myxoedema coma: initiate in hospital with IV levothyroxine 200-500 mcg stat + hydrocortisone (exclude concurrent adrenal insufficiency before giving T4). Recheck TSH after 6-8 weeks of any dose change.'],
+  ['How is hypothyroidism monitored on treatment?', 'Recheck TSH 6-8 weeks after starting or changing levothyroxine dose. Once stable, check TSH annually. Target TSH: 0.5-2.5 mIU/L for most patients. In elderly: TSH 1-4 mIU/L (slightly higher target reduces over-treatment risks). In pregnancy: TSH <2.5 mIU/L in first trimester (increase levothyroxine dose by 25-30% immediately on confirming pregnancy). Take levothyroxine on an empty stomach 30-60 minutes before breakfast — calcium, iron, and PPIs reduce absorption.']
 ];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}

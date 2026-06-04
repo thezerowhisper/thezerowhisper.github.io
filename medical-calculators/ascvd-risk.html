@@ -7,7 +7,7 @@
 <meta name="description" content="Free ASCVD 10-year cardiovascular risk calculator using the AHA/ACC 2013 Pooled Cohort Equations. Calculate risk for atherosclerotic cardiovascular disease including heart attack and stroke. Includes statin therapy recommendations, lifestyle advice, and risk reduction strategies. Used by cardiologists and general physicians worldwide."/>
 <meta name="keywords" content="ASCVD risk calculator, 10 year cardiovascular risk, ACC AHA risk calculator, pooled cohort equations, statin therapy calculator, cardiovascular risk score, heart attack risk calculator, stroke risk calculator, ASCVD prevention, cholesterol cardiovascular risk"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/ascvd-risk"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/ascvd-risk"/>
 <meta property="og:title" content="ASCVD 10-Year Risk Calculator | AHA/ACC 2013 | RxMedCalc"/>
 <meta property="og:description" content="Calculate 10-year ASCVD risk using pooled cohort equations. Statin therapy recommendations. Free for cardiologists and GPs worldwide."/>
 <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/ascvd-risk"/>
@@ -129,7 +129,12 @@ h1 em{font-style:italic;color:#f87171}
 .related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 <div class="page-header">
@@ -298,16 +303,24 @@ h1 em{font-style:italic;color:#f87171}
     </div>
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> The ASCVD risk calculator is for primary prevention risk estimation only. It is not validated for patients with existing cardiovascular disease, extreme LDL values, or most non-White/non-African-American populations. Statin therapy decisions require comprehensive clinical assessment, patient preferences, and shared decision-making. Always refer to current AHA/ACC and local guidelines.</div>
+
+  <section class="info-section" id="about-ascvd-risk">
+    <h2>About the ASCVD Risk Calculator</h2>
+    <p>The ACC/AHA Pooled Cohort Equations estimate the 10-year risk of a first major atherosclerotic cardiovascular event — non-fatal myocardial infarction, coronary heart disease death, or fatal/non-fatal stroke — in patients aged 40-79 without pre-existing cardiovascular disease. The calculator integrates traditional risk factors (age, sex, cholesterol, blood pressure, diabetes, smoking) to guide primary prevention decisions, particularly statin initiation.</p>
+    <p>An important caveat for Indian clinicians: the Pooled Cohort Equations were derived from US cohorts and are known to overestimate cardiovascular risk in contemporary populations while potentially underestimating risk in South Asians. Indians develop cardiovascular disease at younger ages and lower BMI and LDL levels than Western populations, partly due to higher visceral adiposity and insulin resistance. A 10-year ASCVD risk of 5-7% in an Indian patient may warrant more aggressive intervention than the same score in a Western patient.</p>
+    <p>Beyond the calculated score, risk-enhancing factors substantially modify treatment decisions: family history of premature ASCVD (first-degree relative, men <55, women <65), LDL >=160 mg/dL, metabolic syndrome, chronic kidney disease, inflammatory conditions (RA, psoriasis, HIV), high-sensitivity CRP >=2 mg/L, and ABI <0.9. Coronary calcium scoring (CAC) is the most powerful risk reclassifier in borderline-risk patients and is increasingly available in Indian cities.</p>
+  </section>
 </main>
 
 <script>
 let lastResult=null;
-const faqs=[
-  ["What is a high ASCVD risk?","10-year ASCVD risk ≥10% is high. Categories: Low <5%, Borderline 5–7.4%, Intermediate 7.5–19.9%, High ≥20%. Statin recommended for ≥7.5%."],
-  ["Who should get a statin?","AHA/ACC 2019: (1) Clinical ASCVD — always, (2) LDL ≥190 mg/dL, (3) Diabetes age 40–75, (4) 10-year risk ≥7.5%. High-intensity statin for high-risk patients."],
-  ["Does ASCVD calculator apply to South Asians?","PCE was validated only for White and African American populations. For South Asians, some experts recommend multiplying the result by 1.5 to account for higher intrinsic ASCVD risk. Use clinical judgement and risk-enhancing factors."],
-  ["What is the LDL target on statin?","High-risk (≥20%): LDL <70 mg/dL or ≥50% reduction. Intermediate risk: LDL <100 mg/dL. If not achieved with statin, add ezetimibe. If still not at goal, consider PCSK9 inhibitor."],
-  ["Can lifestyle changes replace statins?","In low and borderline risk, yes — lifestyle modification is first-line and can reduce LDL by 15–25%. In intermediate/high risk, statin therapy provides benefit independent of and additive to lifestyle changes. Both should be pursued simultaneously."]
+const faqs = [
+  ['What is the ASCVD risk score?', 'The ASCVD (Atherosclerotic Cardiovascular Disease) Pooled Cohort Equations estimate the 10-year risk of a first atherosclerotic cardiovascular event (non-fatal MI, coronary heart disease death, or fatal or non-fatal stroke) in patients aged 40-79 without pre-existing ASCVD. It uses age, sex, race, total cholesterol, HDL, systolic BP, BP treatment status, diabetes, and smoking.'],
+  ['How is ASCVD risk classified?', '10-year ASCVD risk: Low risk: <5%. Borderline risk: 5-7.4%. Intermediate risk: 7.5-19.9%. High risk: >=20%. Patients with established ASCVD, LDL >=190 mg/dL, or diabetes aged 40-75 are automatically classified as high risk regardless of calculated score. These thresholds guide statin therapy decisions per ACC/AHA 2019 guidelines.'],
+  ['When should a statin be started based on ASCVD risk?', 'ACC/AHA 2019 guidelines: High-intensity statin for established ASCVD or 10-year risk >=20%. Moderate-to-high intensity statin for 10-year risk 7.5-19.9% (intermediate risk). For borderline risk (5-7.4%), risk-enhancing factors (family history, high CRP, ABI <0.9, coronary calcium score) help guide statin initiation. Lifestyle modification is always the foundation.'],
+  ['What are the limitations of the ASCVD Pooled Cohort Equations?', 'The Pooled Cohort Equations were derived from US cohorts (1960s-1980s) and may overestimate risk in contemporary populations and underestimate in South Asians. They do not include family history, obesity, CRP, or coronary calcium score. For Indian patients, the equations should be interpreted with caution — South Asians develop ASCVD at younger ages and at lower LDL levels than Western populations.'],
+  ['What lifestyle changes reduce ASCVD risk?', 'Proven lifestyle interventions: smoking cessation (most impactful single intervention — halves cardiovascular risk within 1 year), Mediterranean or DASH diet, aerobic exercise (150 min/week moderate intensity), weight loss (5-10% body weight reduces multiple risk factors), BP control (<130/80 mmHg target), and optimal glycaemic control in diabetes. These reduce 10-year ASCVD risk by 30-50% before any medication.'],
+  ['What is the role of coronary calcium scoring in ASCVD risk?', 'Coronary artery calcium (CAC) scoring by CT is the most powerful reclassifier of ASCVD risk in intermediate-risk patients (10-year risk 7.5-19.9%). CAC = 0: very low risk, can defer statin. CAC 1-99: moderate risk, statin favoured. CAC >=100 or >=75th percentile: statin strongly recommended. CAC scoring is particularly useful when patient or clinician is uncertain about starting a statin in intermediate-risk patients.']
 ];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}

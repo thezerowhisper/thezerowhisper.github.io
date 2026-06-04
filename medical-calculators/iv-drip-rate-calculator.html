@@ -11,7 +11,7 @@
 <meta name="keywords" content="IV drip rate calculator, drops per minute calculator, IV flow rate calculator, infusion rate calculator, gtts per minute, mL per hour calculator, drip factor calculator, IV fluid calculator, nursing drip rate, intravenous infusion calculator, macro drip micro drip, IV rate formula, fluid infusion calculator India">
 <meta name="author" content="Medical Calculators">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<link rel="canonical" href="/medical-calculators/iv-drip-rate-calculator">
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator">
 
 <!-- ═══ OPEN GRAPH ═══ -->
 <meta property="og:type" content="website">
@@ -489,7 +489,12 @@ footer a:hover{text-decoration:underline}
 .divider{height:1px;background:var(--border);margin:28px 0}
 .error-msg{color:var(--red);font-size:.8rem;margin-top:8px;display:none}
 .error-msg.show{display:block}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 
@@ -773,6 +778,13 @@ footer a:hover{text-decoration:underline}
     <strong style="color:var(--amber)">⚠ Medical Disclaimer:</strong> This IV drip rate calculator is intended as a clinical decision support tool for qualified healthcare professionals. Results must be verified against the prescriber's order, your institution's protocols, and your clinical judgement. The authors accept no liability for errors in clinical practice arising from use of this tool. Always verify critical infusion rates with a senior clinician.
   </div>
 
+
+  <section class="info-section" id="about-iv-drip-rate-calculator">
+    <h2>About the IV Drip Rate Calculator</h2>
+    <p>Accurate IV fluid and drug infusion rate calculation is a fundamental clinical skill that directly impacts patient safety. Errors in drip rate calculation are among the most common medication errors in hospital practice, particularly in settings without infusion pumps. The basic drip rate formula — (Volume x Drop factor) / Time in minutes — must be applied correctly using the specific drop factor of the IV administration set being used.</p>
+    <p>In Indian government hospitals, the standard adult IV set has a drop factor of 15 drops/mL (macro-drip). Paediatric burette sets use 60 drops/mL (micro-drip), enabling precise small-volume infusions. Blood transfusion sets also use 15 drops/mL with an integral filter. Always verify the drop factor from the packaging of the specific set — different manufacturers may vary, and using the wrong drop factor leads to systematic over- or under-infusion.</p>
+    <p>High-alert medications — including concentrated potassium chloride, insulin, heparin, vasopressors, and chemotherapy — should never be administered via gravity drip without an infusion pump. KCl must never be given as an IV push or rapid infusion (cardiac arrest risk). Concentrated KCl ampoules should not be stored on general wards. These principles are embedded in WHO and NABH patient safety standards and should be implemented at all levels of care.</p>
+  </section>
 </main>
 
 <!-- ═══ FOOTER ═══ -->
@@ -993,14 +1005,12 @@ function copyResult(){
 
 // ── FAQ ACCORDION ──
 const faqs = [
-  ['What is the formula for IV drip rate?', 'IV drip rate (drops/min) = [Volume (mL) × Drip factor (gtts/mL)] ÷ Time (minutes). For example, 500 mL over 4 hours with a 15 gtts/mL set = (500 × 15) ÷ 240 = 31 drops/min.'],
-  ['What is the drip factor for a macro drip set?', 'Macro drip sets come in three standard drip factors: 10 gtts/mL, 15 gtts/mL, and 20 gtts/mL. The most common in India is 15 gtts/mL. Micro drip sets deliver 60 gtts/mL and are used for paediatric patients or precise small volumes.'],
-  ['How do you calculate mL per hour for IV infusion?', 'mL/hour = Total volume (mL) ÷ Total time (hours). For example, 1000 mL over 8 hours = 125 mL/hour.'],
-  ['What is the difference between macro drip and micro drip?', 'Macro drip sets deliver 10, 15, or 20 drops per mL and are used for adults. Micro drip sets deliver 60 drops per mL and are used for paediatric patients, critical care, or small precise volumes.'],
-  ['How many drops per minute for 1 litre in 8 hours?', 'Using 15 gtts/mL set: (1000 × 15) ÷ 480 ≈ 31 drops/min. Using 20 gtts/mL set: (1000 × 20) ÷ 480 ≈ 42 drops/min.'],
-  ['What is gtts/min in IV therapy?', '"gtts/min" stands for guttae per minute — drops per minute. The drip factor of the IV set (10, 15, 20, or 60 gtts/mL) determines how many drops equal one millilitre.'],
-  ['What is a normal IV drip rate for adults?', 'A typical adult maintenance rate is 100–125 mL/hour (roughly 25–42 drops/min with 15 gtts/mL). Resuscitation rates can be 500–1000 mL over 15–30 minutes. The correct rate depends on the clinical indication, patient weight, fluid type, and physician order.'],
-  ['Can nurses use this IV drip rate calculator?', 'Yes. This calculator is designed for nurses, doctors, paramedics, and medical students. Always verify results against the prescriber\'s order and your institution\'s protocols.'],
+  ['How is IV drip rate calculated?', 'Drip rate (drops/min) = (Volume in mL x Drop factor) / Time in minutes. Drop factor depends on the IV set: macro-drip sets = 15 drops/mL (standard adult) or 20 drops/mL; micro-drip sets = 60 drops/mL (paediatric, or for precise small-volume infusions). Example: 500 mL over 4 hours with 15 drops/mL set = (500 x 15) / 240 = 31 drops/min.'],
+  ['What is the difference between drops/min and mL/hr?', 'mL/hr is used for infusion pumps and is independent of drop factor. Drops/min is used for gravity drip sets without a pump. Conversion: mL/hr = (drops/min x 60) / drop factor. Example: 31 drops/min with 15 drops/mL set = (31 x 60) / 15 = 124 mL/hr. Always use an infusion pump for critical medications (vasopressors, insulin, heparin, chemotherapy) — gravity drips are unreliable for precise dosing.'],
+  ['Which IV set drop factor is used in India?', 'Standard government hospital IV sets in India: adult macro-drip = 15 drops/mL (BPL, Romsons, and most Indian manufacturers). Paediatric micro-drip sets = 60 drops/mL. Blood transfusion sets = 15 drops/mL with integral filter. Burette sets (100 mL chamber) = 60 drops/mL — used in paediatrics for precise volume control. Always confirm the drop factor printed on the IV set packaging before calculating.'],
+  ['What is the maximum safe infusion rate for common IV fluids?', '0.9% Normal Saline / Ringer\'s Lactate: typically 500-1000 mL/hr in resuscitation (no maximum in shock). KCl: never give as IV bolus — maximum concentration 40 mEq/L peripheral, 60-80 mEq/L central; maximum rate 20 mEq/hr (10 mEq/hr via peripheral with cardiac monitoring). Dextrose 50%: dilute before infusion, maximum 0.5 g/kg/hr. Vancomycin: maximum 10 mg/min (too fast causes Red Man Syndrome).'],
+  ['How do you calculate paediatric IV fluid rates?', 'Use the Holliday-Segar 4-2-1 rule for maintenance: 4 mL/kg/hr for first 10 kg + 2 mL/kg/hr for next 10 kg + 1 mL/kg/hr for each kg above 20 kg. Use a burette (60 drops/mL) or infusion pump for all paediatric infusions. For resuscitation boluses: 10-20 mL/kg of 0.9% saline over 15-30 min, reassess after each bolus. Avoid dextrose-containing fluids for resuscitation boluses.'],
+  ['What are common IV fluid administration errors?', 'Common errors: wrong drop factor used in calculation, forgetting to account for infusion set dead space (typically 15-20 mL), free-flow events with gravity sets (always use anti-free-flow clamps), KCl mix-up (concentrated KCl must never be on ward shelves — dilute before use), wrong patient (always check wristband + fluid label), and extravasation of vesicant drugs. Use double-check protocols for all high-alert medications (insulin, heparin, KCl, concentrated electrolytes).']
 ];
 
 const faqContainer = document.getElementById('faq-container');

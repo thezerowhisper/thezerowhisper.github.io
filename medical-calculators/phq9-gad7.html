@@ -7,7 +7,7 @@
 <meta name="description" content="Free PHQ-9 depression screening and GAD-7 anxiety screening calculator. Score interpretation, severity classification, and management guidance. Validated tools used in primary care, psychiatry, and general practice worldwide. Free for doctors and healthcare professionals."/>
 <meta name="keywords" content="PHQ-9 calculator, GAD-7 calculator, PHQ-9 score interpretation, GAD-7 score, depression screening tool, anxiety screening tool, PHQ-9 depression severity, GAD-7 anxiety severity, Patient Health Questionnaire, Generalized Anxiety Disorder scale, mental health screening"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/phq9-gad7"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/phq9-gad7"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="PHQ-9 & GAD-7 Calculator | Depression & Anxiety Screening | RxMedCalc"/>
 <meta property="og:description" content="Calculate PHQ-9 depression score and GAD-7 anxiety score with clinical interpretation. Free validated screening tool for doctors worldwide."/>
@@ -140,7 +140,12 @@ h1 em{font-style:italic;color:#a78bfa}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
 .crisis-box{background:#fef2f2;border:2px solid #fecaca;border-radius:12px;padding:16px;margin-bottom:20px;font-size:0.85rem;color:#991b1b;line-height:1.6}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 <div class="page-header">
@@ -270,6 +275,13 @@ h1 em{font-style:italic;color:#a78bfa}
     </div>
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> PHQ-9 and GAD-7 are screening tools, not diagnostic instruments. A positive screen requires a full clinical assessment. These tools do not replace clinical judgement, a detailed psychiatric history, or risk assessment. Always follow your local mental health pathway and NICE guidelines. If suicidal ideation is present, follow your institution's safe-messaging and crisis protocol immediately.</div>
+
+  <section class="info-section" id="about-phq9-gad7">
+    <h2>About PHQ-9 and GAD-7</h2>
+    <p>Depression and anxiety are the most prevalent mental health disorders worldwide and carry significant morbidity, mortality (through suicide and cardiovascular disease), and socioeconomic burden. In India, the National Mental Health Survey 2016 estimated that 1 in 7 Indians suffered from a mental disorder, with depression and anxiety accounting for the majority. Despite this burden, treatment gap remains enormous — estimated at 70-92% for mental disorders in India.</p>
+    <p>The PHQ-9 and GAD-7 were developed by Spitzer, Kroenke, and colleagues and directly operationalise DSM diagnostic criteria for major depression and generalised anxiety disorder respectively. They are freely available, require no training beyond basic clinical skills, and have been validated in multiple Indian languages. Both tools serve dual purposes: screening (identifying cases in the population) and severity monitoring (tracking treatment response over time).</p>
+    <p>An important clinical caveat: PHQ-9 and GAD-7 are screening tools — not diagnostic instruments. A high score prompts further clinical assessment; it does not automatically confirm diagnosis. Comorbid medical conditions (hypothyroidism, anaemia, chronic pain, sleep disorders) can elevate PHQ-9 scores independently of true depression. PHQ-9 item 9 (passive suicidal ideation) requires careful direct clinical assessment — any score above 0 on this item warrants a structured suicide risk assessment and documentation.</p>
+  </section>
 </main>
 
 <script>
@@ -297,12 +309,13 @@ const opts=[{n:0,d:"Not at all"},{n:1,d:"Several days"},{n:2,d:"More than half"}
 let phq9Scores=new Array(9).fill(null);
 let gad7Scores=new Array(7).fill(null);
 let lastResults={phq9:null,gad7:null};
-const faqs=[
-  ["What is a normal PHQ-9 score?","0–4 = minimal. 5–9 = mild. 10–14 = moderate. 15–19 = moderately severe. 20–27 = severe depression. Score ≥10 has 88% sensitivity and specificity for major depressive disorder."],
-  ["What is the PHQ-9 cutoff for depression?","≥10 is the validated cutoff for MDD in primary care. ≥15 indicates moderately severe depression warranting pharmacological treatment."],
-  ["What does GAD-7 score of 10 mean?","Moderate anxiety. GAD-7 ≥10 is the validated cutoff for GAD with 89% sensitivity, 82% specificity. Warrants further evaluation and clinical intervention."],
-  ["How often should PHQ-9 be repeated?","Reassess 2–4 weeks after starting treatment. Then every 4–6 weeks for first 3 months. Remission = PHQ-9 <5. ≥50% reduction from baseline = treatment response."],
-  ["Can PHQ-9 and GAD-7 be used together?","Yes — frequently administered together in primary care. Takes 5–7 minutes combined. Depression and anxiety co-occur in 40–60% of cases."]
+const faqs = [
+  ['What is the PHQ-9?', 'The PHQ-9 (Patient Health Questionnaire-9) is a validated 9-item screening and severity tool for depression based on DSM-5 criteria. Each item scores 0-3 (not at all to nearly every day). Total 0-27. Thresholds: 0-4 minimal, 5-9 mild, 10-14 moderate, 15-19 moderately severe, >=20 severe depression. Sensitivity ~88%, specificity ~85% for major depression. Validated in Hindi, Punjabi, and other Indian languages.'],
+  ['What is the GAD-7?', 'The GAD-7 (Generalised Anxiety Disorder 7-item scale) screens for and measures severity of anxiety. Scores 0-21. Thresholds: 0-4 minimal, 5-9 mild, 10-14 moderate, >=15 severe GAD. Both PHQ-9 and GAD-7 are recommended by WHO mhGAP guidelines and NIMHANS for use at primary care level in India. They are freely available and require no training beyond basic clinical skills.'],
+  ['When should antidepressants be started?', 'Antidepressants are indicated for moderate-severe depression (PHQ-9 >=10) with functional impairment, or when psychotherapy alone is insufficient. SSRIs are first-line: sertraline 50 mg OD, escitalopram 10 mg OD, or fluoxetine 20 mg OD. Full effect takes 4-6 weeks. If no response after 6-8 weeks at adequate dose, consider switching or augmenting. Minimum duration: 6-12 months after first episode, longer after recurrence or severe/psychotic features.'],
+  ['How should PHQ-9 item 9 (suicidal ideation) be handled?', 'PHQ-9 item 9 asks about thoughts of being better off dead or self-harm. Any score >=1 requires direct clinical assessment of suicidal ideation, intent, and plan. Refer to mental health services if active suicidal ideation with plan. Provide crisis resources: iCall 9152987821, Vandrevala Foundation 1860-2662-345, NIMHANS helpline 080-46110007. Document all safety assessments and management plans clearly.'],
+  ['Are PHQ-9 and GAD-7 validated for Indian populations?', 'Yes. Both tools have been extensively validated in Indian populations across multiple studies in Hindi, Punjabi, Tamil, Telugu, Bengali, and Marathi. They are used in NMHP (National Mental Health Programme), recommended in Indian Primary Care Mental Health guidelines, and endorsed by NIMHANS and WHO South-East Asia Regional Office. Sensitivity and specificity are comparable to validation in Western populations.'],
+  ['What is the difference between PHQ-2 and PHQ-9?', 'PHQ-2 is a 2-item ultra-brief screen asking only about low mood and anhedonia (core depression features). PHQ-2 score >=3 is a positive screen requiring full PHQ-9 assessment. PHQ-2 is used for rapid population screening in antenatal clinics, diabetic clinics, and GP visits. PHQ-9 is used when depression is clinically suspected or PHQ-2 is positive. Using PHQ-2 first reduces assessment burden in busy primary care settings.']
 ];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open');}

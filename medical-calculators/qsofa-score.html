@@ -7,7 +7,7 @@
 <meta name="description" content="Free qSOFA (quick SOFA) calculator for bedside sepsis screening outside the ICU. Calculate qSOFA score from altered mentation, respiratory rate, and systolic BP. Includes Sepsis-3 criteria, mortality prediction, and SSC Hour-1 Bundle guidance. Used by emergency physicians and hospitalists worldwide."/>
 <meta name="keywords" content="qSOFA calculator, quick SOFA score, qSOFA sepsis, qSOFA criteria, bedside sepsis screening, qSOFA score 2, qSOFA altered mentation, qSOFA respiratory rate, Sepsis-3 screening, qSOFA mortality, sepsis outside ICU"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="/medical-calculators/qsofa-score"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/qsofa-score"/>
 <meta property="og:title" content="qSOFA Score Calculator | Bedside Sepsis Screening | RxMedCalc"/>
 <meta property="og:description" content="Calculate qSOFA score for bedside sepsis screening. Sepsis-3 criteria, mortality prediction. Free for emergency physicians worldwide."/>
 <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/qsofa-score"/>
@@ -117,7 +117,12 @@ h1 em{font-style:italic;color:#f87171}
 .related-card:hover{border-color:#ef4444;background:#fef2f2;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-</style>
+
+    .info-section { background: var(--surface, #fff); border-radius: var(--radius, 14px); border: 1px solid var(--border, #dce4ef); box-shadow: var(--shadow, 0 2px 16px rgba(15,30,51,.09)); padding: 28px; margin-bottom: 24px; }
+    .info-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--primary-dark, #0c4a6e); margin-bottom: 14px; }
+    .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
+    .info-section p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 <div class="page-header">
@@ -267,15 +272,23 @@ h1 em{font-style:italic;color:#f87171}
     </div>
   </div>
   <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> qSOFA is a screening tool with limited sensitivity. A negative qSOFA does not exclude sepsis. Clinical judgement must always override the score. Any patient with suspected sepsis should be assessed with blood cultures, lactate, and full SOFA evaluation regardless of qSOFA result. Follow your institution's sepsis protocol.</div>
+
+  <section class="info-section" id="about-qsofa-score">
+    <h2>About the qSOFA Score</h2>
+    <p>The qSOFA (quick SOFA) score was introduced as part of the Sepsis-3 definitions (Singer et al., JAMA 2016) as a simple bedside tool to identify adult patients outside the ICU who may have sepsis and are at risk of prolonged ICU admission or in-hospital death. Its three parameters — altered mentation, respiratory rate >=22/min, and systolic BP <=100 mmHg — require no laboratory tests and can be assessed in under 60 seconds.</p>
+    <p>qSOFA's clinical role is as a risk stratifier, not a diagnostic tool. A qSOFA score >=2 in a patient with suspected infection should prompt urgent blood cultures, serum lactate measurement, full SOFA assessment, early antibiotic administration, and consideration of ICU transfer. However, a qSOFA score <2 does not exclude sepsis — clinical suspicion of serious infection should trigger appropriate workup regardless of the score, particularly in immunocompromised patients who may not mount the expected physiological response.</p>
+    <p>In the Indian clinical context, qSOFA is particularly valuable at the point of triage in emergency departments and general medical wards where full SOFA calculation may not be immediately feasible. Combined with serum lactate (>2 mmol/L independently predicts poor outcomes) and clinical assessment, qSOFA provides a practical framework for early sepsis identification. The Sepsis-1 bundle — cultures, antibiotics, fluids, vasopressors — should not be delayed pending score calculation.</p>
+  </section>
 </main>
 <script>
 let sel=new Set();let lastResult=null;
-const faqs=[
-  ["What is a positive qSOFA score?","qSOFA ≥2 out of 3 is positive — high risk of poor outcomes. The 3 criteria are: altered mentation (GCS <15), RR ≥22/min, SBP ≤100 mmHg."],
-  ["What is qSOFA used for?","Bedside sepsis screening outside ICU. Identifies patients with suspected infection at risk of prolonged ICU stay or death. Triggers full SOFA assessment and Hour-1 Bundle."],
-  ["Can qSOFA miss sepsis?","Yes — qSOFA has ~60% sensitivity. A negative qSOFA does not exclude sepsis. Always use clinical judgement alongside the score."],
-  ["How is qSOFA different from SIRS?","SIRS uses 4 criteria (temp, HR, RR, WBC) and is more sensitive but less specific. qSOFA uses 3 criteria (mentation, RR, SBP), needs no labs, and better predicts mortality in suspected infection outside the ICU."],
-  ["What happens if qSOFA is positive?","Urgent: blood cultures ×2, lactate, blood gas, FBC, renal/liver function, CRP, CXR. Start broad-spectrum antibiotics within 1 hour. Assess SOFA score. Consider ICU referral if organ dysfunction confirmed."]
+const faqs = [
+  ['What is the qSOFA score?', 'qSOFA (quick Sequential Organ Failure Assessment) is a bedside sepsis screening tool using 3 parameters: Respiratory rate >=22/min (1 point), Altered mentation/GCS <15 (1 point), Systolic BP <=100 mmHg (1 point). Score 0-3. A score >=2 outside the ICU suggests possible sepsis and warrants urgent evaluation including blood cultures, lactate, and full SOFA assessment.'],
+  ['How sensitive is qSOFA for sepsis?', 'qSOFA has specificity ~83% but sensitivity only ~60-70% for sepsis — meaning ~30-40% of sepsis cases will have a qSOFA score <2. A negative qSOFA does NOT exclude sepsis. Clinical suspicion of infection with any organ dysfunction should trigger sepsis workup regardless of qSOFA score. qSOFA performs better as a prognostic tool (predicting poor outcomes) than as a screening tool in suspected infection.'],
+  ['What is the difference between qSOFA and SIRS criteria for sepsis?', 'Old definition (Sepsis-2, 2001): sepsis = infection + >=2 SIRS criteria (temperature, HR, RR, WBC). New definition (Sepsis-3, 2016): sepsis = infection + organ dysfunction (SOFA increase >=2). qSOFA is a bedside proxy for organ dysfunction outside the ICU. SIRS criteria are sensitive but non-specific (also triggered by non-infectious causes: trauma, pancreatitis, burns). Sepsis-3/qSOFA identifies sicker patients with higher mortality than Sepsis-2/SIRS.'],
+  ['What is septic shock and how does it differ from sepsis?', 'Sepsis-3 definition of septic shock: sepsis + vasopressor requirement to maintain MAP >=65 mmHg AND lactate >2 mmol/L despite adequate fluid resuscitation. Septic shock carries >40% hospital mortality vs ~10% for sepsis without shock. Key distinction: lactate >4 mmol/L indicates severe tissue hypoperfusion requiring immediate aggressive resuscitation regardless of blood pressure.'],
+  ['What is the 1-hour sepsis bundle?', 'Surviving Sepsis Campaign 1-hour bundle: (1) Measure lactate — repeat if initial lactate >2 mmol/L. (2) Obtain blood cultures before antibiotics (at least 2 sets, don\'t delay antibiotics >45 min for culture). (3) Administer broad-spectrum IV antibiotics. (4) Give IV crystalloid 30 mL/kg if hypotensive or lactate >=4 mmol/L. (5) Start vasopressors (noradrenaline) if MAP <65 despite fluids. Reassess fluid responsiveness with dynamic measures to avoid fluid overload.'],
+  ['What are common causes of sepsis in Indian hospitals?', 'Most common sources of sepsis in India: urinary tract infection (Gram-negative: E.coli, Klebsiella — high ESBL rates in community), pneumonia (S. pneumoniae, Klebsiella, Acinetobacter in HAP), abdominal/biliary sepsis, skin and soft tissue infections, central line-associated bloodstream infections (CLABSI), and dengue with secondary bacterial infection. Tropical infections causing sepsis: malaria (P. falciparum), scrub typhus, leptospirosis — consider in febrile patients from endemic areas.']
 ];
 document.getElementById('faq-container').innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})" tabindex="0">${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join('');
 function toggleFaq(i){const item=document.getElementById('faq-'+i);const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));if(!o)item.classList.add('open')}
