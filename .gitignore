@@ -1,0 +1,5 @@
+*.py
+*.sh
+*.bak
+*.bak2
+*_result.txt
