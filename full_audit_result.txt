@@ -3,8 +3,7 @@
   rxmedcalc.com — Full Googlebot Audit (155 pages)
 ======================================================================
 
-  ❌ / (445w)
-     ❌ Canonical relative: /
+  ✅ / (445w)
   ✅ /about (352w)
   ✅ /privacy (387w)
   ⚠️  /contact (278w)
@@ -167,19 +166,16 @@
      ⚠️  No canonical tag
   ⚠️  /blog/cha2ds2-vasc (1923w)
      ⚠️  No canonical tag
-  ❌ /blog/conception-date (2956w)
-     ❌ Canonical relative: /blog/conception-date
+  ✅ /blog/conception-date (2956w)
 
 ======================================================================
   FULL AUDIT SUMMARY
   Checked:   155
-  ✅ Clean:  145
+  ✅ Clean:  147
   ⚠️  Warn:   7
-  ❌ Issues: 3
+  ❌ Issues: 1
   🔴 404:    0
 ======================================================================
 
   CRITICAL (must fix):
-    /: ❌ Canonical relative: /
     /search: ❌ THIN: 55 words visible to Google
-    /blog/conception-date: ❌ Canonical relative: /blog/conception-date
