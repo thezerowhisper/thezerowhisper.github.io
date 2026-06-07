@@ -1,146 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact | RxMedCalc</title>
-<meta name="description" content="Contact RxMedCalc — report bugs, suggest new calculators, or ask about clinical accuracy. Built by an Indian doctor."/>
-<meta name="robots" content="index, follow"/>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script src="assets/umami-events.js"></script>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<link rel="canonical" href="https://rxmedcalc.com/contact"/>
-<meta property="og:title" content="Contact | RxMedCalc"/>
-<meta property="og:url" content="https://rxmedcalc.com/contact"/>
-<meta property="og:type" content="website"/>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ContactPage",
-  "name":"Contact RxMedCalc",
-  "url":"https://rxmedcalc.com/contact",
-  "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},
-    {"@type":"ListItem","position":2,"name":"Contact","item":"https://rxmedcalc.com/contact"}
-  ]}
-}
-</script>
-<style>
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 28px;
-}
-@media(max-width: 580px) { .contact-grid { grid-template-columns: 1fr; } }
-.contact-tile {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-  text-align: center;
-  box-shadow: var(--shadow);
-}
-.contact-tile .tile-icon { font-size: 2rem; margin-bottom: 10px; }
-.contact-tile h3 { font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
-.contact-tile p { font-size: .85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
-.contact-tile a {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: .85rem;
-  padding: 9px 20px;
-  border-radius: 20px;
-  transition: background .18s;
-}
-.contact-tile a:hover { background: var(--primary-mid); }
-.faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
-.faq-item:last-child { border-bottom: none; }
-.faq-q { font-weight: 700; color: var(--text); margin-bottom: 6px; font-size: .95rem; }
-.faq-a { color: var(--text-muted); font-size: .88rem; line-height: 1.7; }
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | RxMedCalc — Report Bugs, Suggest Calculators, Clinical Feedback</title>
+  <meta name="description" content="Contact RxMedCalc — report bugs, suggest new calculators, or ask about clinical accuracy. Built by an Indian doctor. Email: info@rxmedcalc.com"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://rxmedcalc.com/contact"/>
+  <meta property="og:title" content="Contact | RxMedCalc"/>
+  <meta property="og:description" content="Bug report, calculator suggestion, or clinical feedback — get in touch with the RxMedCalc team."/>
+  <meta property="og:url" content="https://rxmedcalc.com/contact"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <script src="assets/umami-events.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact RxMedCalc",
+    "url": "https://rxmedcalc.com/contact",
+    "description": "Contact RxMedCalc to report bugs, suggest calculators, or give clinical feedback.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},
+        {"@type":"ListItem","position":2,"name":"Contact","item":"https://rxmedcalc.com/contact"}
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --rose:#C8315A; --rose-light:#FBEAF0; --rose-dark:#7B1A35; --rose-mid:#ED93B1;
+      --teal:#0F7B6C; --teal-light:#E0F5F1;
+      --amber:#B86E00; --amber-light:#FFF3DC;
+      --blue:#185FA5; --blue-light:#E6F1FB;
+      --red:#A32D2D; --red-light:#FCEBEB;
+      --gray-100:#F7F5F2; --gray-200:#EEE9E4; --gray-400:#B0A89E;
+      --gray-600:#7A7269; --gray-800:#3A3430; --gray-900:#1E1A17;
+      --text:#2A2420; --text-muted:#6B6259;
+      --border:rgba(42,36,32,0.1);
+      --shadow-sm:0 1px 4px rgba(0,0,0,0.06);
+      --shadow-md:0 4px 20px rgba(0,0,0,0.08);
+      --shadow-lg:0 8px 40px rgba(0,0,0,0.12);
+      --radius-sm:6px; --radius-md:10px; --radius-lg:16px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.75;color:var(--text);background:#FFFCFA;}
+
+    /* ── NAV ── */
+    .site-nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);}
+    .nav-logo{font-family:'Lora',serif;font-size:20px;font-weight:600;color:var(--gray-900);text-decoration:none;letter-spacing:-0.02em;}
+    .nav-logo span{color:var(--rose);}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{font-size:14px;color:var(--text-muted);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover{color:var(--rose);}
+    .nav-cta{background:var(--rose);color:#fff;font-size:13px;font-weight:500;padding:7px 16px;border-radius:20px;text-decoration:none;transition:background .2s;}
+    .nav-cta:hover{background:var(--rose-dark);}
+    @media(max-width:640px){.nav-links{display:none;}}
+
+    /* ── HERO ── */
+    .hero{background:linear-gradient(135deg,#F5F0FF 0%,#F0F5FF 50%,#F0FFF8 100%);border-bottom:1px solid var(--border);padding:3.5rem 1.5rem 2.5rem;text-align:center;}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(15,123,108,0.1);color:var(--teal);font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1rem;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(24px,3.5vw,38px);font-weight:600;color:var(--gray-900);margin-bottom:0.75rem;letter-spacing:-0.02em;}
+    .hero h1 em{color:var(--rose);font-style:normal;}
+    .hero-desc{font-size:16px;color:var(--text-muted);max-width:520px;margin:0 auto 1.75rem;line-height:1.7;}
+    .hero-email-pills{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
+    .email-pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);border-radius:30px;padding:8px 16px;font-size:13.5px;color:var(--text-muted);box-shadow:var(--shadow-sm);text-decoration:none;transition:border-color .2s,box-shadow .2s;}
+    .email-pill:hover{border-color:var(--rose);box-shadow:0 2px 12px rgba(200,49,90,0.12);color:var(--rose);}
+    .email-pill .ep-icon{font-size:15px;}
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb{font-size:13px;color:var(--text-muted);margin-bottom:1.75rem;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+    .breadcrumb a{color:var(--rose);text-decoration:none;}
+    .breadcrumb a:hover{text-decoration:underline;}
+
+    /* ── LAYOUT ── */
+    .page-body{max-width:1040px;margin:0 auto;padding:2.5rem 1.5rem 4rem;}
+
+    /* ── CONTACT TYPE CARDS ── */
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:2.5rem;}
+    .contact-type-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.4rem 1.5rem;box-shadow:var(--shadow-sm);transition:box-shadow .25s,transform .25s,border-color .25s;text-decoration:none;display:block;}
+    .contact-type-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:rgba(200,49,90,0.2);}
+    .ctc-icon{font-size:28px;margin-bottom:0.6rem;}
+    .ctc-title{font-size:15px;font-weight:500;color:var(--text);margin-bottom:4px;}
+    .ctc-desc{font-size:13px;color:var(--text-muted);line-height:1.55;margin-bottom:0.9rem;}
+    .ctc-link{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:500;color:var(--rose);text-decoration:none;}
+    .ctc-link:hover{text-decoration:underline;}
+
+    /* ── TWO COL GRID ── */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;}
+    @media(max-width:700px){.two-col{grid-template-columns:1fr;}}
+
+    /* ── SECTION HEADING ── */
+    .section-heading{font-family:'Lora',serif;font-size:20px;font-weight:600;color:var(--gray-900);margin-bottom:1.25rem;display:flex;align-items:center;gap:10px;}
+    .section-heading .sh-num{width:28px;height:28px;border-radius:50%;background:var(--rose);color:#fff;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+    /* ── FORM CARD ── */
+    .form-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;box-shadow:var(--shadow-sm);}
+    .form-card h2{font-family:'Lora',serif;font-size:18px;font-weight:600;color:var(--gray-900);margin-bottom:0.4rem;}
+    .form-card .form-subtitle{font-size:14px;color:var(--text-muted);margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border);}
+
+    /* ── FORM ELEMENTS ── */
+    .form-group{margin-bottom:1.1rem;}
+    .form-label{display:block;font-size:13.5px;font-weight:500;color:var(--text);margin-bottom:5px;}
+    .form-label .required{color:var(--rose);margin-left:2px;}
+    .form-input,.form-select,.form-textarea{width:100%;padding:10px 14px;font-size:14.5px;font-family:'DM Sans',sans-serif;color:var(--text);background:#FFFCFA;border:1px solid var(--gray-200);border-radius:var(--radius-md);outline:none;transition:border-color .2s,box-shadow .2s;line-height:1.5;}
+    .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--rose);box-shadow:0 0 0 3px rgba(200,49,90,0.08);}
+    .form-input::placeholder,.form-textarea::placeholder{color:var(--gray-400);}
+    .form-select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B0A89E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;}
+    .form-textarea{resize:vertical;min-height:120px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    @media(max-width:480px){.form-row{grid-template-columns:1fr;}}
+
+    /* ── SUBMIT BUTTON ── */
+    .btn-submit{width:100%;padding:13px;background:linear-gradient(135deg,var(--rose),var(--rose-dark));color:#fff;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;border:none;border-radius:var(--radius-md);cursor:pointer;transition:opacity .2s,transform .2s,box-shadow .2s;box-shadow:0 3px 12px rgba(200,49,90,0.25);display:flex;align-items:center;justify-content:center;gap:8px;margin-top:0.5rem;}
+    .btn-submit:hover{opacity:0.92;transform:translateY(-1px);box-shadow:0 6px 20px rgba(200,49,90,0.3);}
+    .btn-submit:active{transform:translateY(0);}
+    .btn-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+
+    /* ── FORM SUCCESS / ERROR STATES ── */
+    .form-notice{border-radius:var(--radius-md);padding:0.9rem 1.1rem;font-size:14px;line-height:1.65;display:none;gap:8px;align-items:flex-start;margin-top:0.75rem;}
+    .form-notice.visible{display:flex;}
+    .notice-success{background:var(--teal-light);border-left:3px solid var(--teal);color:#074D42;}
+    .notice-error{background:var(--red-light);border-left:3px solid var(--red);color:#791F1F;}
+
+    /* ── CONTACT INFO SIDEBAR ── */
+    .info-stack{display:flex;flex-direction:column;gap:14px;}
+    .info-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.4rem 1.5rem;box-shadow:var(--shadow-sm);}
+    .info-card h3{font-size:14px;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.9rem;display:flex;align-items:center;gap:7px;}
+    .info-item{display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.04);}
+    .info-item:last-child{border-bottom:none;padding-bottom:0;}
+    .info-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+    .ic-rose{background:var(--rose-light);}
+    .ic-blue{background:var(--blue-light);}
+    .ic-teal{background:var(--teal-light);}
+    .ic-amber{background:var(--amber-light);}
+    .info-text-label{font-size:12px;color:var(--gray-400);margin-bottom:1px;}
+    .info-text-val{font-size:14px;color:var(--text);font-weight:500;}
+    .info-text-val a{color:var(--rose);text-decoration:none;}
+    .info-text-val a:hover{text-decoration:underline;}
+
+    /* ── RESPONSE TIME BADGE ── */
+    .response-badge{display:inline-flex;align-items:center;gap:6px;background:var(--teal-light);color:var(--teal);border-radius:20px;font-size:12px;font-weight:500;padding:5px 12px;margin-top:0.75rem;}
+    .response-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+
+    /* ── GITHUB ACTIONS ── */
+    .github-card{background:var(--gray-900);border-radius:var(--radius-lg);padding:1.5rem;margin-top:14px;}
+    .github-card h3{font-size:14px;font-weight:500;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.75rem;}
+    .github-item{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .github-item:last-child{border-bottom:none;}
+    .github-item-icon{font-size:16px;flex-shrink:0;}
+    .github-item-text{flex:1;}
+    .github-item-title{font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.85);}
+    .github-item-desc{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.4;}
+    .github-item-link{font-size:12px;font-weight:500;color:var(--rose-mid);text-decoration:none;white-space:nowrap;}
+    .github-item-link:hover{text-decoration:underline;}
+
+    /* ── FAQ SECTION ── */
+    .faq-section{margin-top:2.5rem;}
+    details{border-top:1px solid var(--border);}
+    details:last-child{border-bottom:1px solid var(--border);}
+    summary{padding:1rem 0.25rem;font-size:15px;font-weight:500;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+    summary::-webkit-details-marker{display:none;}
+    summary::after{content:'+';font-size:20px;font-weight:300;color:var(--rose);flex-shrink:0;}
+    details[open] summary::after{content:'−';}
+    summary:hover{color:var(--rose);}
+    .faq-answer{padding:0 0.25rem 1.25rem;font-size:15px;color:var(--text-muted);line-height:1.8;}
+    .faq-answer a{color:var(--rose);text-decoration:none;}
+    .faq-answer a:hover{text-decoration:underline;}
+
+    /* ── FOOTER ── */
+    .site-footer{background:var(--gray-900);color:rgba(255,255,255,0.6);padding:2rem 1.5rem;text-align:center;font-size:13px;line-height:1.8;margin-top:0;}
+    .site-footer a{color:rgba(255,255,255,0.8);}
+    .footer-logo{font-family:'Lora',serif;font-size:18px;font-weight:600;color:#fff;display:block;margin-bottom:0.5rem;}
+    .footer-logo span{color:var(--rose-mid);}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .hero h1{animation:fadeUp .5s ease both;}
+    .hero-desc{animation:fadeUp .5s .1s ease both;}
+    .hero-email-pills{animation:fadeUp .5s .2s ease both;}
+  </style>
 </head>
 <body>
 
-<!-- Header injected by /assets/shared-nav.js -->
+<!-- ── NAV ── -->
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="nav-logo" href="https://rxmedcalc.com"><span>Rx</span>MedCalc</a>
+  <ul class="nav-links">
+    <li><a href="https://rxmedcalc.com/medical-calculators/">Calculators</a></li>
+    <li><a href="https://rxmedcalc.com/about">About</a></li>
+    <li><a href="https://rxmedcalc.com/privacy">Privacy</a></li>
+    <li><a href="https://rxmedcalc.com/disclaimer">Disclaimer</a></li>
+  </ul>
+  <a class="nav-cta" href="https://rxmedcalc.com/medical-calculators/">All Calculators →</a>
+</nav>
 
-<section class="page-hero">
-  <div class="hero-badge">Get in Touch</div>
-  <h1>Contact Us</h1>
-  <p>Bug report, calculator suggestion, or clinical feedback — we'd love to hear from you.</p>
-</section>
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="hero-badge">💬 Get in Touch</div>
+  <h1>Contact <em>RxMedCalc</em></h1>
+  <p class="hero-desc">Bug report, calculator suggestion, or clinical feedback — we'd love to hear from you. We typically respond within 48 hours.</p>
+  <div class="hero-email-pills">
+    <a class="email-pill" href="mailto:info@rxmedcalc.com">
+      <span class="ep-icon">📧</span> info@rxmedcalc.com
+    </a>
+    <a class="email-pill" href="mailto:rxmedcalc@gmail.com">
+      <span class="ep-icon">📬</span> rxmedcalc@gmail.com
+    </a>
+  </div>
+</header>
 
-<div class="content-wrap">
+<!-- ── BODY ── -->
+<div class="page-body">
 
-  <div class="breadcrumb">
-    <a href="/">Home</a><span>›</span>Contact
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://rxmedcalc.com/">Home</a><span>›</span><span>Contact</span>
+  </nav>
+
+  <!-- QUICK ACTION CARDS -->
+  <div class="contact-grid" role="list">
+    <div class="contact-type-card" role="listitem">
+      <div class="ctc-icon">🐛</div>
+      <div class="ctc-title">Report a Bug</div>
+      <div class="ctc-desc">Found an incorrect calculation or broken feature? Report it on GitHub so we can fix it quickly.</div>
+      <a class="ctc-link" href="https://github.com/thezerowhisper/thezerowhisper.github.io/issues/new?title=Bug+Report&labels=bug" target="_blank" rel="noopener">Open GitHub Issue →</a>
+    </div>
+    <div class="contact-type-card" role="listitem">
+      <div class="ctc-icon">💡</div>
+      <div class="ctc-title">Suggest a Calculator</div>
+      <div class="ctc-desc">Need a tool that isn't here yet? Submit a feature request with the guideline reference.</div>
+      <a class="ctc-link" href="https://github.com/thezerowhisper/thezerowhisper.github.io/issues/new?title=Feature+Request&labels=enhancement" target="_blank" rel="noopener">Request a Feature →</a>
+    </div>
+    <div class="contact-type-card" role="listitem">
+      <div class="ctc-icon">⚕️</div>
+      <div class="ctc-title">Clinical Feedback</div>
+      <div class="ctc-desc">Disagree with a clinical value or guideline? We take accuracy seriously — let us know.</div>
+      <a class="ctc-link" href="https://github.com/thezerowhisper/thezerowhisper.github.io/issues/new?title=Clinical+Feedback&labels=accuracy" target="_blank" rel="noopener">Submit Feedback →</a>
+    </div>
+    <div class="contact-type-card" role="listitem">
+      <div class="ctc-icon">🤝</div>
+      <div class="ctc-title">Collaborate</div>
+      <div class="ctc-desc">Developer or clinician wanting to contribute a tool or improve an existing one?</div>
+      <a class="ctc-link" href="https://github.com/thezerowhisper/thezerowhisper.github.io" target="_blank" rel="noopener">View on GitHub →</a>
+    </div>
   </div>
 
-  <!-- AdSense -->
-  <ins class="adsbygoogle"
-       style="display:block;margin-bottom:24px;border-radius:10px;overflow:hidden;"
-       data-ad-client="ca-pub-9687081664589626"
-       data-ad-slot="AUTO"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <!-- FORM + SIDEBAR -->
+  <div class="two-col">
 
-  <div class="contact-grid">
-    <div class="contact-tile">
-      <div class="tile-icon">🐛</div>
-      <h3>Report a Bug</h3>
-      <p>Found an incorrect calculation or broken feature? Report it on GitHub so we can fix it quickly.</p>
-      <a href=https://github.com/thezerowhisper/thezerowhisper.github.io/issues/new?title=Bug+Report&labels=bug" target="_blank" rel="noopener">Open GitHub Issue</a>
+    <!-- FORM -->
+    <div>
+      <h2 class="section-heading"><span class="sh-num">✉</span>Send us a Message</h2>
+
+      <div class="form-card">
+        <h2>Write to us directly</h2>
+        <p class="form-subtitle">Your message will be sent to <strong>rxmedcalc@gmail.com</strong>. We reply within 48 hours on working days.</p>
+
+        <!--
+          FORMSPREE SETUP INSTRUCTIONS (one-time, free):
+          1. Go to https://formspree.io and sign up with rxmedcalc@gmail.com
+          2. Create a new form → copy the unique endpoint ID (looks like: xpwzabcd)
+          3. Replace YOUR_FORMSPREE_ID below with that ID
+          The free tier allows 50 submissions/month. No backend or server needed.
+        -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+
+          <!-- Hidden fields for Formspree -->
+          <input type="hidden" name="_subject" value="RxMedCalc Contact Form Submission"/>
+          <input type="hidden" name="_replyto" id="replyToField" value=""/>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name <span class="required">*</span></label>
+              <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Dr. Rahul" required autocomplete="given-name"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name</label>
+              <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Sharma" autocomplete="family-name"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Your Email <span class="required">*</span></label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="you@hospital.com" required autocomplete="email"/>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="profession">Profession</label>
+            <select class="form-select form-input" id="profession" name="profession">
+              <option value="" disabled selected>Select your role (optional)</option>
+              <option value="Doctor / Physician">Doctor / Physician</option>
+              <option value="Nurse / Nursing Staff">Nurse / Nursing Staff</option>
+              <option value="Pharmacist">Pharmacist</option>
+              <option value="Medical Student">Medical Student</option>
+              <option value="Allied Health Professional">Allied Health Professional</option>
+              <option value="Developer">Developer</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject <span class="required">*</span></label>
+            <select class="form-select form-input" id="subject" name="subject" required>
+              <option value="" disabled selected>What is this about?</option>
+              <option value="Bug Report">🐛 Bug Report — broken calculator or wrong result</option>
+              <option value="Feature Request">💡 Feature Request — suggest a new calculator</option>
+              <option value="Clinical Accuracy">⚕️ Clinical Accuracy — guideline discrepancy</option>
+              <option value="Collaboration">🤝 Collaboration — contribute a tool</option>
+              <option value="General Inquiry">💬 General Inquiry</option>
+              <option value="Other">📌 Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message <span class="required">*</span></label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Describe your bug, suggestion, or question in detail. For bug reports, include the calculator name and the inputs you used. For feature requests, please mention the guideline or reference you want the tool built on." required></textarea>
+          </div>
+
+          <div class="form-group" style="display:flex;align-items:flex-start;gap:10px;margin-bottom:0.5rem;">
+            <input type="checkbox" id="consent" name="consent" style="margin-top:3px;accent-color:var(--rose);width:15px;height:15px;flex-shrink:0;" required/>
+            <label for="consent" style="font-size:13px;color:var(--text-muted);line-height:1.6;cursor:pointer;">
+              I understand this form sends my message to RxMedCalc and agree to the <a href="/privacy" style="color:var(--rose);">Privacy Policy</a>. No medical data will be shared.
+            </label>
+          </div>
+
+          <button class="btn-submit" type="submit" id="submitBtn">
+            <span id="btnText">Send Message</span>
+            <span id="btnIcon">📨</span>
+          </button>
+
+          <div class="form-notice notice-success" id="successMsg" role="alert">
+            <span style="font-size:18px;flex-shrink:0;">✅</span>
+            <div><strong>Message sent!</strong> Thank you for reaching out. We'll reply to your email within 48 hours on working days.</div>
+          </div>
+          <div class="form-notice notice-error" id="errorMsg" role="alert">
+            <span style="font-size:18px;flex-shrink:0;">❌</span>
+            <div><strong>Sending failed.</strong> Please try again, or email us directly at <a href="mailto:rxmedcalc@gmail.com" style="color:var(--red);">rxmedcalc@gmail.com</a>.</div>
+          </div>
+
+        </form>
+      </div>
     </div>
-    <div class="contact-tile">
-      <div class="tile-icon">💡</div>
-      <h3>Suggest a Calculator</h3>
-      <p>Need a tool that isn't here yet? Submit a feature request on GitHub with the guideline reference.</p>
-      <a href="https://github.com/thezerowhisper/thezerowhisper.github.io/issues/new?title=Feature+Request&labels=enhancement" target="_blank" rel="noopener">Request a Feature</a>
-    </div>
-    <div class="contact-tile">
-      <div class="tile-icon">⚕️</div>
-      <h3>Clinical Feedback</h3>
-      <p>Disagree with a clinical value or guideline reference? We take accuracy very seriously — please let us know.</p>
-      <a href="https://github.com/thezerowhisper/thezerowhisper.github.io/issues/new?title=Clinical+Feedback&labels=accuracy" target="_blank" rel="noopener">Submit Feedback</a>
-    </div>
-    <div class="contact-tile">
-      <div class="tile-icon">🤝</div>
-      <h3>Collaborate</h3>
-      <p>Are you a developer or clinician who wants to contribute a new tool or improve an existing one?</p>
-      <a href="https://github.com/thezerowhisper/thezerowhisper.github.io " target="_blank" rel="noopener">View on GitHub</a>
+
+    <!-- SIDEBAR -->
+    <div>
+      <h2 class="section-heading" style="margin-top:0;"><span class="sh-num">📍</span>Contact Details</h2>
+
+      <div class="info-stack">
+
+        <div class="info-card">
+          <h3>📬 Email Addresses</h3>
+          <div class="info-item">
+            <div class="info-icon ic-rose">📧</div>
+            <div>
+              <div class="info-text-label">Primary</div>
+              <div class="info-text-val"><a href="mailto:info@rxmedcalc.com">info@rxmedcalc.com</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon ic-blue">📬</div>
+            <div>
+              <div class="info-text-label">Alternate / Forms</div>
+              <div class="info-text-val"><a href="mailto:rxmedcalc@gmail.com">rxmedcalc@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="response-badge">
+            <span class="response-dot"></span>
+            Typically replies within 48 hours
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>🌐 Useful Links</h3>
+          <div class="info-item">
+            <div class="info-icon ic-teal">🧮</div>
+            <div>
+              <div class="info-text-label">Main product</div>
+              <div class="info-text-val"><a href="https://rxmedcalc.com/medical-calculators/">All Calculators</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon ic-amber">⚕️</div>
+            <div>
+              <div class="info-text-label">Legal</div>
+              <div class="info-text-val"><a href="https://rxmedcalc.com/disclaimer">Medical Disclaimer</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon ic-rose">🔒</div>
+            <div>
+              <div class="info-text-label">Data &amp; privacy</div>
+              <div class="info-text-val"><a href="https://rxmedcalc.com/privacy">Privacy Policy</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon ic-blue">ℹ️</div>
+            <div>
+              <div class="info-text-label">Who built this</div>
+              <div class="info-text-val"><a href="https://rxmedcalc.com/about">About RxMedCalc</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub quick actions -->
+        <div class="github-card">
+          <h3>⚡ Quick GitHub Actions</h3>
+          <div class="github-item">
+            <span class="github-item-icon">🐛</span>
+            <div class="github-item-text">
+              <div class="github-item-title">Bug Report</div>
+              <div class="github-item-desc">Wrong calculation or broken feature</div>
+            </div>
+            <a class="github-item-link" href="https://github.com/thezerowhisper/thezerowhisper.github.io/issues/new?title=Bug+Report&labels=bug" target="_blank" rel="noopener">Open →</a>
+          </div>
+          <div class="github-item">
+            <span class="github-item-icon">💡</span>
+            <div class="github-item-text">
+              <div class="github-item-title">Feature Request</div>
+              <div class="github-item-desc">Suggest a new calculator</div>
+            </div>
+            <a class="github-item-link" href="https://github.com/thezerowhisper/thezerowhisper.github.io/issues/new?title=Feature+Request&labels=enhancement" target="_blank" rel="noopener">Open →</a>
+          </div>
+          <div class="github-item">
+            <span class="github-item-icon">⚕️</span>
+            <div class="github-item-text">
+              <div class="github-item-title">Clinical Feedback</div>
+              <div class="github-item-desc">Guideline or value discrepancy</div>
+            </div>
+            <a class="github-item-link" href="https://github.com/thezerowhisper/thezerowhisper.github.io/issues/new?title=Clinical+Feedback&labels=accuracy" target="_blank" rel="noopener">Open →</a>
+          </div>
+          <div class="github-item">
+            <span class="github-item-icon">🤝</span>
+            <div class="github-item-text">
+              <div class="github-item-title">Collaborate</div>
+              <div class="github-item-desc">Contribute a tool or fix</div>
+            </div>
+            <a class="github-item-link" href="https://github.com/thezerowhisper/thezerowhisper.github.io" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
-  <div class="card">
-    <h2 class="section-title">❓ Frequently Asked <span>Questions</span></h2>
+  <!-- FAQ SECTION -->
+  <div class="faq-section">
+    <h2 class="section-heading" style="margin-bottom:0.5rem;"><span class="sh-num">?</span>Frequently Asked Questions</h2>
 
-    <div class="faq-item">
-      <div class="faq-q">Are these calculators free to use?</div>
-      <div class="faq-a">Yes — completely free, forever. No login, no subscription, no paywall. All tools work in the browser without any sign-up.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can I use these in a clinical setting?</div>
-      <div class="faq-a">These tools are designed as decision-support aids for qualified healthcare professionals. They should supplement, not replace, clinical judgment. Always verify calculations independently before acting on them.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is patient data stored anywhere?</div>
-      <div class="faq-a">No. All calculations happen locally in your browser. Nothing is transmitted or stored. See our <a href="/privacy" style="color:var(--primary-light);">Privacy Policy</a> for full details.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Which guidelines do you follow?</div>
-      <div class="faq-a">Indian guidelines (NCDC, IAP, FOGSI, Jindal spirometry reference values) and international standards (WHO, NICE, BTS, CKD-EPI 2021). Each calculator page lists its specific references.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How do I request a new calculator?</div>
-      <div class="faq-a">Use the "Suggest a Calculator" button above to open a GitHub issue. Include the tool name, the guideline or reference you want it built on, and a brief description of the use case.</div>
-    </div>
+    <details>
+      <summary>Are these calculators free to use?</summary>
+      <div class="faq-answer">Yes — completely free, forever. No login, no subscription, no paywall. All tools work in the browser without any sign-up.</div>
+    </details>
+
+    <details>
+      <summary>Can I use these in a clinical setting?</summary>
+      <div class="faq-answer">These tools are designed as decision-support aids for qualified healthcare professionals. They should supplement, not replace, clinical judgment. Always verify calculations independently before acting on them. See our full <a href="https://rxmedcalc.com/disclaimer">Medical Disclaimer</a>.</div>
+    </details>
+
+    <details>
+      <summary>Is patient data stored anywhere?</summary>
+      <div class="faq-answer">No. All calculations happen locally in your browser. Nothing is transmitted or stored. See our <a href="https://rxmedcalc.com/privacy">Privacy Policy</a> for full details.</div>
+    </details>
+
+    <details>
+      <summary>Which guidelines do you follow?</summary>
+      <div class="faq-answer">Indian guidelines (NCDC, IAP, FOGSI, Jindal spirometry reference values) and international standards (WHO, NICE, BTS, CKD-EPI 2021, AKIN/KDIGO, AAP, ADA, RSSDI). Each calculator page lists its specific references.</div>
+    </details>
+
+    <details>
+      <summary>How do I request a new calculator?</summary>
+      <div class="faq-answer">Use the "Suggest a Calculator" card above to open a GitHub issue, or fill out the contact form on this page. Include the tool name, the guideline or reference you want it built on, and a brief description of the use case.</div>
+    </details>
+
+    <details>
+      <summary>I found a clinical error — what should I do?</summary>
+      <div class="faq-answer">Please report it immediately using the "Clinical Accuracy" GitHub issue link above, or email us at <a href="mailto:info@rxmedcalc.com">info@rxmedcalc.com</a>. Include the calculator name, the value you believe is wrong, and the guideline or source supporting the correction. We investigate and correct promptly.</div>
+    </details>
   </div>
 
 </div>
 
-<script src="/assets/shared-nav.js"></script>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <a class="footer-logo" href="https://rxmedcalc.com"><span>Rx</span>MedCalc</a>
+  <p>Free medical calculators and evidence-based clinical guides for healthcare professionals and patients.</p>
+  <p style="margin-top:0.5rem;">
+    <a href="https://rxmedcalc.com/about">About</a> &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/contact">Contact</a> &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/disclaimer">Medical Disclaimer</a>
+  </p>
+  <p style="margin-top:1rem;font-size:12px;color:rgba(255,255,255,0.4);">© 2025 RxMedCalc.com — All rights reserved.</p>
+</footer>
+
+<!-- ── FORM SCRIPT ── -->
+<script>
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const btnText = document.getElementById('btnText');
+  const btnIcon = document.getElementById('btnIcon');
+  const successMsg = document.getElementById('successMsg');
+  const errorMsg = document.getElementById('errorMsg');
+  const emailInput = document.getElementById('email');
+  const replyToField = document.getElementById('replyToField');
+
+  // Keep _replyto in sync with email input
+  emailInput.addEventListener('input', () => {
+    replyToField.value = emailInput.value;
+  });
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Basic validation
+    const required = form.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(field => {
+      if (field.type === 'checkbox' && !field.checked) valid = false;
+      else if (field.type !== 'checkbox' && !field.value.trim()) valid = false;
+    });
+    if (!valid) {
+      errorMsg.querySelector('div').innerHTML = '<strong>Please fill in all required fields</strong> and accept the privacy consent before submitting.';
+      errorMsg.classList.add('visible');
+      successMsg.classList.remove('visible');
+      return;
+    }
+
+    // Loading state
+    submitBtn.disabled = true;
+    btnText.textContent = 'Sending…';
+    btnIcon.textContent = '⏳';
+    successMsg.classList.remove('visible');
+    errorMsg.classList.remove('visible');
+
+    try {
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        successMsg.classList.add('visible');
+        form.reset();
+        btnText.textContent = 'Message Sent!';
+        btnIcon.textContent = '✅';
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          btnText.textContent = 'Send Message';
+          btnIcon.textContent = '📨';
+        }, 4000);
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (err) {
+      errorMsg.classList.add('visible');
+      submitBtn.disabled = false;
+      btnText.textContent = 'Send Message';
+      btnIcon.textContent = '📨';
+    }
+  });
+</script>
+
 </body>
 </html>
