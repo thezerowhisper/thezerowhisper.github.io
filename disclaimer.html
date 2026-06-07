@@ -1,121 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Medical Disclaimer | RxMedCalc — Clinical Decision Support Tools</title>
-  <meta name="description" content="Medical disclaimer for RxMedCalc. These clinical calculators are decision-support tools for qualified healthcare professionals only. They do not replace clinical judgement." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://rxmedcalc.com/disclaimer" />
-  <meta property="og:title" content="Medical Disclaimer | RxMedCalc" />
-  <meta property="og:url" content="https://rxmedcalc.com/disclaimer" />
-  <meta property="og:site_name" content="RxMedCalc" />
-  <script src="/assets/shared-nav.js" defer></script>
+  <meta name="description" content="Medical disclaimer for RxMedCalc. These clinical calculators are decision-support tools for qualified healthcare professionals only. They do not replace clinical judgement."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://rxmedcalc.com/disclaimer"/>
+  <meta property="og:title" content="Medical Disclaimer | RxMedCalc"/>
+  <meta property="og:url" content="https://rxmedcalc.com/disclaimer"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --rose:#C8315A; --rose-light:#FBEAF0; --rose-dark:#7B1A35; --rose-mid:#ED93B1;
+      --teal:#0F7B6C; --teal-light:#E0F5F1;
+      --amber:#B86E00; --amber-light:#FFF3DC;
+      --blue:#185FA5; --blue-light:#E6F1FB;
+      --red:#A32D2D; --red-light:#FCEBEB;
+      --gray-100:#F7F5F2; --gray-200:#EEE9E4; --gray-400:#B0A89E;
+      --gray-600:#7A7269; --gray-800:#3A3430; --gray-900:#1E1A17;
+      --text:#2A2420; --text-muted:#6B6259;
+      --border:rgba(42,36,32,0.1);
+      --shadow-sm:0 1px 4px rgba(0,0,0,0.06);
+      --shadow-md:0 4px 20px rgba(0,0,0,0.08);
+      --radius-sm:6px; --radius-md:10px; --radius-lg:16px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.75;color:var(--text);background:#FFFCFA;}
+
+    /* ── NAV ── */
+    .site-nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);}
+    .nav-logo{font-family:'Lora',serif;font-size:20px;font-weight:600;color:var(--gray-900);text-decoration:none;letter-spacing:-0.02em;}
+    .nav-logo span{color:var(--rose);}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{font-size:14px;color:var(--text-muted);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover{color:var(--rose);}
+    .nav-cta{background:var(--rose);color:#fff;font-size:13px;font-weight:500;padding:7px 16px;border-radius:20px;text-decoration:none;transition:background .2s;}
+    .nav-cta:hover{background:var(--rose-dark);}
+    @media(max-width:640px){.nav-links{display:none;}}
+
+    /* ── HERO ── */
+    .hero{background:linear-gradient(135deg,#FFF5F0 0%,#FFF0F0 50%,#FFF5F5 100%);border-bottom:1px solid var(--border);padding:3.5rem 1.5rem 2.5rem;text-align:center;}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(163,45,45,0.1);color:var(--red);font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1rem;}
+    .hero h1{font-family:'Lora',serif;font-size:clamp(24px,3.5vw,36px);font-weight:600;color:var(--gray-900);margin-bottom:0.75rem;letter-spacing:-0.02em;}
+    .hero-desc{font-size:16px;color:var(--text-muted);max-width:580px;margin:0 auto 1.25rem;}
+    .hero-warning{display:inline-flex;align-items:center;gap:8px;background:var(--red-light);color:var(--red);border:1px solid rgba(163,45,45,0.2);border-radius:var(--radius-md);padding:10px 18px;font-size:13.5px;font-weight:500;max-width:580px;}
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb{font-size:13px;color:var(--text-muted);margin-bottom:1.5rem;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+    .breadcrumb a{color:var(--rose);text-decoration:none;}
+    .breadcrumb a:hover{text-decoration:underline;}
+
+    /* ── LAYOUT ── */
+    .page-body{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 4rem;}
+
+    /* ── LAST UPDATED ── */
+    .last-updated{display:inline-flex;align-items:center;gap:6px;background:var(--blue-light);color:var(--blue);border:1px solid rgba(24,95,165,0.2);border-radius:20px;font-size:12px;font-weight:500;padding:4px 14px;margin-bottom:2rem;}
+
+    /* ── SECTION CARD ── */
+    .policy-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem 2rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm);transition:box-shadow .25s;}
+    .policy-card:hover{box-shadow:var(--shadow-md);}
+    .policy-card h2{font-family:'Lora',serif;font-size:17px;font-weight:600;color:var(--gray-900);margin-bottom:0.9rem;display:flex;align-items:center;gap:10px;padding-bottom:0.65rem;border-bottom:1px solid var(--border);}
+    .sec-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+    .icon-blue{background:var(--blue-light);}
+    .icon-teal{background:var(--teal-light);}
+    .icon-amber{background:var(--amber-light);}
+    .icon-rose{background:var(--rose-light);}
+    .icon-red{background:var(--red-light);}
+    .icon-gray{background:var(--gray-100);}
+
+    .policy-card p{font-size:15px;color:var(--text-muted);line-height:1.8;margin-bottom:0.7rem;}
+    .policy-card p:last-child{margin-bottom:0;}
+    .policy-card a{color:var(--rose);text-decoration:none;}
+    .policy-card a:hover{text-decoration:underline;}
+    .policy-card strong{color:var(--text);font-weight:500;}
+
+    /* ── BULLET LIST ── */
+    .styled-list{list-style:none;padding:0;margin:0.75rem 0;}
+    .styled-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.04);line-height:1.65;}
+    .styled-list li:last-child{border-bottom:none;}
+    .styled-list li .li-icon{flex-shrink:0;font-size:13px;margin-top:2px;}
+
+    /* ── ALERT BOXES ── */
+    .alert{border-radius:var(--radius-md);padding:1rem 1.2rem;margin:1rem 0;font-size:14.5px;line-height:1.7;display:flex;gap:10px;align-items:flex-start;}
+    .alert-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
+    .alert-red{background:var(--red-light);color:#791F1F;border-left:3px solid var(--red);}
+    .alert-amber{background:var(--amber-light);color:#7A4900;border-left:3px solid var(--amber);}
+    .alert-teal{background:var(--teal-light);color:#074D42;border-left:3px solid var(--teal);}
+    .alert-blue{background:var(--blue-light);color:#0C447C;border-left:3px solid var(--blue);}
+
+    /* ── EMERGENCY BANNER ── */
+    .emergency-card{background:linear-gradient(135deg,#7B1A35,#A32D2D);border-radius:var(--radius-lg);padding:1.75rem 2rem;margin-bottom:1.25rem;color:#fff;display:flex;gap:1.25rem;align-items:flex-start;}
+    .emergency-icon{font-size:36px;flex-shrink:0;}
+    .emergency-card h2{font-family:'Lora',serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:0.5rem;}
+    .emergency-card p{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.7;margin-bottom:0;}
+    .emergency-card strong{color:#fff;}
+
+    /* ── GUIDELINE GRID ── */
+    .guideline-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0.75rem 0;}
+    .guideline-box{background:var(--gray-100);border:1px solid var(--border);border-radius:var(--radius-md);padding:1rem 1.1rem;}
+    .guideline-box-title{font-size:13px;font-weight:500;color:var(--text);margin-bottom:5px;display:flex;align-items:center;gap:6px;}
+    .guideline-box p{font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:0;}
+    @media(max-width:500px){.guideline-grid{grid-template-columns:1fr;}}
+
+    /* ── RELATED LINKS ── */
+    .related-row{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;gap:1rem;flex-wrap:wrap;font-size:14px;}
+    .related-row a{color:var(--rose);text-decoration:none;}
+    .related-row a:hover{text-decoration:underline;}
+
+    /* ── FOOTER ── */
+    .site-footer{background:var(--gray-900);color:rgba(255,255,255,0.6);padding:2rem 1.5rem;text-align:center;font-size:13px;line-height:1.8;}
+    .site-footer a{color:rgba(255,255,255,0.8);}
+    .footer-logo{font-family:'Lora',serif;font-size:18px;font-weight:600;color:#fff;display:block;margin-bottom:0.5rem;}
+    .footer-logo span{color:var(--rose-mid);}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .hero h1,.hero-desc,.hero-warning{animation:fadeUp .5s ease both;}
+    .hero-desc{animation-delay:.1s;}
+    .hero-warning{animation-delay:.2s;}
+  </style>
 </head>
 <body>
 
-<!-- BREADCRUMB -->
-<nav aria-label="Breadcrumb">
-  <a href="https://rxmedcalc.com/">Home</a> › Medical Disclaimer
+<!-- NAV -->
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="nav-logo" href="https://rxmedcalc.com"><span>Rx</span>MedCalc</a>
+  <ul class="nav-links">
+    <li><a href="https://rxmedcalc.com/medical-calculators/">Calculators</a></li>
+    <li><a href="https://rxmedcalc.com/about">About</a></li>
+    <li><a href="https://rxmedcalc.com/privacy">Privacy</a></li>
+    <li><a href="https://rxmedcalc.com/contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="https://rxmedcalc.com/medical-calculators/">All Calculators →</a>
 </nav>
 
-<!-- PAGE HEADER -->
-<div class="page-label">Legal</div>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge">⚕️ Legal</div>
+  <h1>Medical Disclaimer</h1>
+  <p class="hero-desc">Please read this disclaimer carefully before using any tool on RxMedCalc.</p>
+  <div class="hero-warning">
+    ⚠️ For use by qualified healthcare professionals only — not a substitute for clinical judgement
+  </div>
+</header>
 
-<h1>Medical Disclaimer</h1>
-<p class="page-subtitle">Please read this disclaimer carefully before using any tool on RxMedCalc.</p>
+<!-- BODY -->
+<div class="page-body">
 
-<p><em>Last updated: June 2026</em></p>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://rxmedcalc.com/">Home</a><span>›</span><span>Medical Disclaimer</span>
+  </nav>
 
-<!-- SECTION 1 -->
-<h2>⚕️ For Healthcare Professionals Only</h2>
-<p>
-  All clinical calculators, scoring tools, drug dose references, and decision-support content on RxMedCalc (<strong>rxmedcalc.com</strong>) are intended for use by qualified healthcare professionals — including registered medical practitioners, nurses, pharmacists, and allied health professionals — as <strong>clinical decision-support aids only</strong>.
-</p>
-<p>
-  These tools are <strong>not intended for self-diagnosis, self-treatment, or use by the general public</strong> without the guidance of a licensed healthcare provider. If you are a patient, please consult your doctor or pharmacist before acting on any information from this website.
-</p>
+  <div class="last-updated">🗓 Last updated: June 2026</div>
 
-<!-- SECTION 2 -->
-<h2>🧮 No Substitute for Clinical Judgement</h2>
-<p>
-  Every clinical calculator on this site produces an output based on the values entered. These outputs are <strong>reference values only</strong> — they do not account for the full clinical picture, patient history, physical examination findings, comorbidities, local drug availability, or institution-specific protocols.
-</p>
-<p>
-  Clinical decisions — including drug dosing, admission decisions, referral thresholds, and treatment plans — must always be made by a qualified clinician who has examined the patient and is familiar with the relevant guidelines applicable in their practice setting.
-</p>
-<p>
-  <strong>Never act solely on the output of a calculator without independent clinical verification.</strong>
-</p>
+  <!-- Section 1 -->
+  <div class="policy-card">
+    <h2><span class="sec-icon icon-red">⚕️</span>For Healthcare Professionals Only</h2>
+    <p>
+      All clinical calculators, scoring tools, drug dose references, and decision-support content on RxMedCalc (<strong>rxmedcalc.com</strong>) are intended for use by qualified healthcare professionals — including registered medical practitioners, nurses, pharmacists, and allied health professionals — as <strong>clinical decision-support aids only</strong>.
+    </p>
+    <div class="alert alert-amber">
+      <span class="alert-icon">⚠️</span>
+      <div>These tools are <strong>not intended for self-diagnosis, self-treatment, or use by the general public</strong> without the guidance of a licensed healthcare provider. If you are a patient, please consult your doctor or pharmacist before acting on any information from this website.</div>
+    </div>
+  </div>
 
-<!-- SECTION 3 -->
-<h2>📋 Accuracy & Guideline Adherence</h2>
-<p>
-  Every tool on RxMedCalc is built against referenced clinical guidelines, including those from NCDC India, IAP, FOGSI, WHO, NICE, BTS, RCP, CKD-EPI, ADA, RSSDI, AKIN/KDIGO, and other national and international bodies. The specific guideline reference for each calculator is noted on its page.
-</p>
-<p>
-  Despite our best efforts to maintain accuracy, <strong>clinical guidelines are updated periodically</strong>. There may be a lag between a guideline update and its reflection on this website. Always cross-reference with the most current version of the relevant guideline before clinical application.
-</p>
-<p>
-  If you identify an error, an outdated value, or a discrepancy with current guidelines, please <a href="https://rxmedcalc.com/contact">report it via the Contact page</a>. We take clinical accuracy seriously and will investigate and correct errors promptly.
-</p>
+  <!-- Section 2 -->
+  <div class="policy-card">
+    <h2><span class="sec-icon icon-blue">🧮</span>No Substitute for Clinical Judgement</h2>
+    <p>
+      Every clinical calculator on this site produces an output based on the values entered. These outputs are <strong>reference values only</strong> — they do not account for the full clinical picture, patient history, physical examination findings, comorbidities, local drug availability, or institution-specific protocols.
+    </p>
+    <p>
+      Clinical decisions — including drug dosing, admission decisions, referral thresholds, and treatment plans — must always be made by a qualified clinician who has examined the patient and is familiar with the relevant guidelines applicable in their practice setting.
+    </p>
+    <div class="alert alert-red">
+      <span class="alert-icon">🚫</span>
+      <div><strong>Never act solely on the output of a calculator without independent clinical verification.</strong></div>
+    </div>
+  </div>
 
-<!-- SECTION 4 -->
-<h2>💊 Drug Dosing Caution</h2>
-<p>
-  Drug dose calculators on this site provide <strong>weight-based or age-based reference doses</strong> based on standard formularies and published guidelines. However:
-</p>
-<ul>
-  <li>Doses may need adjustment for renal impairment, hepatic impairment, extremes of age, pregnancy, and drug interactions.</li>
-  <li>Drug availability and approved indications vary by country and institution.</li>
-  <li>Always verify doses against the current drug package insert, local formulary, or a clinical pharmacist before prescribing or administering.</li>
-  <li>Chemotherapy and other high-alert medications require independent verification by an oncologist and clinical pharmacist before administration. Never administer chemotherapy based solely on a calculator result.</li>
-</ul>
+  <!-- Section 3 -->
+  <div class="policy-card">
+    <h2><span class="sec-icon icon-teal">📋</span>Accuracy &amp; Guideline Adherence</h2>
+    <p>Every tool on RxMedCalc is built against referenced clinical guidelines. The specific guideline reference for each calculator is noted on its page.</p>
+    <div class="guideline-grid">
+      <div class="guideline-box">
+        <div class="guideline-box-title">🇮🇳 Indian Guidelines</div>
+        <p>NCDC · IAP · FOGSI · NHP · BMW Rules 2016 · Jindal Spirometry Reference Values</p>
+      </div>
+      <div class="guideline-box">
+        <div class="guideline-box-title">🌍 International Guidelines</div>
+        <p>WHO · NICE · BTS · CKD-EPI 2021 · AKIN/KDIGO · RCOG · AAP · ADA · RSSDI</p>
+      </div>
+    </div>
+    <div class="alert alert-blue" style="margin-top:0.9rem;">
+      <span class="alert-icon">ℹ️</span>
+      <div><strong>Clinical guidelines are updated periodically.</strong> There may be a lag between a guideline update and its reflection on this website. Always cross-reference with the most current version of the relevant guideline before clinical application. If you identify an error or discrepancy, please <a href="https://rxmedcalc.com/contact">report it via the Contact page</a>.</div>
+    </div>
+  </div>
 
-<!-- SECTION 5 -->
-<h2>🌍 Jurisdiction & Applicability</h2>
-<p>
-  Many tools on RxMedCalc are built with Indian clinical practice in mind — using NCDC, IAP, FOGSI, and Jindal spirometry reference values where applicable. However, the site is accessed globally. <strong>Clinical cutoffs, drug schedules, and management protocols differ across countries.</strong> It is the clinician's responsibility to verify that the values and protocols used are appropriate for their jurisdiction and patient population.
-</p>
-<p>
-  For example: rabies PEP schedules follow NCDC India (4-dose Essen IM regimen), which may differ from WHO or local health authority protocols in other countries. BMI cutoffs use Indian population thresholds, which differ from WHO global cutoffs.
-</p>
+  <!-- Section 4 -->
+  <div class="policy-card">
+    <h2><span class="sec-icon icon-amber">💊</span>Drug Dosing Caution</h2>
+    <p>Drug dose calculators on this site provide <strong>weight-based or age-based reference doses</strong> based on standard formularies and published guidelines. However, important cautions apply:</p>
+    <ul class="styled-list">
+      <li><span class="li-icon">⚠️</span>Doses may need adjustment for renal impairment, hepatic impairment, extremes of age, pregnancy, and drug interactions.</li>
+      <li><span class="li-icon">🌍</span>Drug availability and approved indications vary by country and institution.</li>
+      <li><span class="li-icon">📖</span>Always verify doses against the current drug package insert, local formulary, or a clinical pharmacist before prescribing or administering.</li>
+      <li><span class="li-icon">🔬</span>Chemotherapy and other high-alert medications require independent verification by an oncologist and clinical pharmacist before administration. Never administer chemotherapy based solely on a calculator result.</li>
+    </ul>
+  </div>
 
-<!-- SECTION 6 -->
-<h2>⚠️ Limitation of Liability</h2>
-<p>
-  RxMedCalc and its developer(s) <strong>accept no liability</strong> for any clinical decision, adverse outcome, or harm arising from the use or misuse of any tool, calculator, score, or content on this website.
-</p>
-<p>
-  The tools are provided <strong>"as is"</strong>, without warranty of any kind — express or implied — including but not limited to accuracy, completeness, suitability for a particular purpose, or freedom from error. Use of this website constitutes acceptance of this disclaimer in full.
-</p>
+  <!-- Section 5 -->
+  <div class="policy-card">
+    <h2><span class="sec-icon icon-teal">🌍</span>Jurisdiction &amp; Applicability</h2>
+    <p>
+      Many tools on RxMedCalc are built with Indian clinical practice in mind — using NCDC, IAP, FOGSI, and Jindal spirometry reference values where applicable. However, the site is accessed globally. <strong>Clinical cutoffs, drug schedules, and management protocols differ across countries.</strong> It is the clinician's responsibility to verify that the values and protocols used are appropriate for their jurisdiction and patient population.
+    </p>
+    <div class="alert alert-amber">
+      <span class="alert-icon">📍</span>
+      <div>For example: rabies PEP schedules follow NCDC India (4-dose Essen IM regimen), which may differ from WHO or local health authority protocols in other countries. BMI cutoffs use Indian population thresholds, which differ from WHO global cutoffs.</div>
+    </div>
+  </div>
 
-<!-- SECTION 7 -->
-<h2>🔗 External Links</h2>
-<p>
-  Some pages on RxMedCalc link to external guidelines, government health portals, and research publications (e.g., WHO, PubMed, NCDC, NICE). We are not responsible for the content, accuracy, or availability of those external sites.
-</p>
+  <!-- Section 6 -->
+  <div class="policy-card">
+    <h2><span class="sec-icon icon-red">⚠️</span>Limitation of Liability</h2>
+    <p>
+      RxMedCalc and its developer(s) <strong>accept no liability</strong> for any clinical decision, adverse outcome, or harm arising from the use or misuse of any tool, calculator, score, or content on this website.
+    </p>
+    <p>
+      The tools are provided <strong>"as is"</strong>, without warranty of any kind — express or implied — including but not limited to accuracy, completeness, suitability for a particular purpose, or freedom from error. Use of this website constitutes acceptance of this disclaimer in full.
+    </p>
+  </div>
 
-<!-- SECTION 8 -->
-<h2>📞 Emergency Situations</h2>
-<p>
-  <strong>This website is not an emergency service.</strong> In a medical emergency, contact your local emergency services immediately (India: 108 / 112). Do not use this website as a substitute for emergency medical care.
-</p>
+  <!-- Section 7 -->
+  <div class="policy-card">
+    <h2><span class="sec-icon icon-gray">🔗</span>External Links</h2>
+    <p>
+      Some pages on RxMedCalc link to external guidelines, government health portals, and research publications (e.g., WHO, PubMed, NCDC, NICE). We are not responsible for the content, accuracy, or availability of those external sites.
+    </p>
+  </div>
 
-<!-- SECTION 9 -->
-<h2>✉️ Contact & Corrections</h2>
-<p>
-  For clinical inaccuracies, bugs, or guideline discrepancies, please <a href="https://rxmedcalc.com/contact">contact us</a>. We are committed to maintaining accuracy and will address corrections promptly.
-</p>
-<p>
-  This disclaimer may be updated periodically. The "Last updated" date at the top of this page reflects the most recent revision.
-</p>
+  <!-- Section 8 — Emergency (special card) -->
+  <div class="emergency-card" role="note" aria-label="Emergency services notice">
+    <div class="emergency-icon">🚨</div>
+    <div>
+      <h2>Emergency Situations</h2>
+      <p>
+        <strong>This website is not an emergency service.</strong> In a medical emergency, contact your local emergency services immediately — India: <strong>108 / 112</strong>. Do not use this website as a substitute for emergency medical care.
+      </p>
+    </div>
+  </div>
 
-<!-- RELATED LINKS -->
-<hr />
-<p>
-  Related: <a href="https://rxmedcalc.com/privacy">Privacy Policy</a> · <a href="https://rxmedcalc.com/about">About RxMedCalc</a> · <a href="https://rxmedcalc.com/contact">Contact</a> · <a href="https://rxmedcalc.com/medical-calculators/">All Calculators</a>
-</p>
+  <!-- Section 9 -->
+  <div class="policy-card">
+    <h2><span class="sec-icon icon-blue">✉️</span>Contact &amp; Corrections</h2>
+    <p>
+      For clinical inaccuracies, bugs, or guideline discrepancies, please <a href="https://rxmedcalc.com/contact">contact us</a>. We are committed to maintaining accuracy and will address corrections promptly.
+    </p>
+    <p>
+      This disclaimer may be updated periodically. The "Last updated" date at the top of this page reflects the most recent revision.
+    </p>
+  </div>
+
+  <!-- Related Links -->
+  <div class="related-row">
+    <a href="https://rxmedcalc.com/privacy">🔒 Privacy Policy</a>
+    <a href="https://rxmedcalc.com/about">ℹ️ About RxMedCalc</a>
+    <a href="https://rxmedcalc.com/contact">✉️ Contact</a>
+    <a href="https://rxmedcalc.com/medical-calculators/">🧮 All Calculators</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <a class="footer-logo" href="https://rxmedcalc.com"><span>Rx</span>MedCalc</a>
+  <p>Free medical calculators and evidence-based clinical guides for healthcare professionals and patients.</p>
+  <p style="margin-top:0.5rem;">
+    <a href="https://rxmedcalc.com/about">About</a> &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/contact">Contact</a> &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="https://rxmedcalc.com/disclaimer">Medical Disclaimer</a>
+  </p>
+  <p style="margin-top:1rem;font-size:12px;color:rgba(255,255,255,0.4);">© 2025 RxMedCalc.com — All rights reserved.</p>
+</footer>
 
 </body>
 </html>
