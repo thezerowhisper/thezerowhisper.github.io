@@ -1,0 +1,807 @@
+/*
+  rxmedcalc.com — Shared Calculator & Content Page Stylesheet
+  =============================================================
+  Fonts:   Fraunces (display/headings) + DM Sans (body)
+  Host:    /css/shared-calculator.css
+  Usage:   <link rel="stylesheet" href="/css/shared-calculator.css">
+  NOTE:    Do NOT add AdSense <ins> tags or the AdSense loader script
+           anywhere — shared-nav.js handles it automatically.
+  =============================================================
+*/
+
+/* ── DESIGN TOKENS ── */
+:root {
+  /* Primary accent — rose/pink (women's health feel, matches UPT page) */
+  --rose:        #C8315A;
+  --rose-light:  #FBEAF0;
+  --rose-mid:    #ED93B1;
+  --rose-dark:   #7B1A35;
+
+  /* Secondary accents */
+  --teal:        #0F7B6C;
+  --teal-light:  #E0F5F1;
+  --amber:       #B86E00;
+  --amber-light: #FFF3DC;
+  --blue:        #185FA5;
+  --blue-light:  #E6F1FB;
+  --red:         #A32D2D;
+  --red-light:   #FCEBEB;
+  --green:       #1E6B2F;
+  --green-light: #E8F5EB;
+
+  /* Grays */
+  --gray-50:   #FFFCFA;
+  --gray-100:  #F7F5F2;
+  --gray-200:  #EEE9E4;
+  --gray-400:  #B0A89E;
+  --gray-600:  #7A7269;
+  --gray-800:  #3A3430;
+  --gray-900:  #1E1A17;
+
+  /* Text */
+  --text:       #2A2420;
+  --text-muted: #6B6259;
+  --border:     rgba(42,36,32,0.1);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+
+  /* Fonts */
+  --font-display: 'Fraunces', 'Lora', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--gray-50);
+}
+
+/* ── SKIP LINK ── */
+.skip-link {
+  position: absolute; left: -999px; top: 4px;
+  background: var(--rose); color: #fff; padding: 6px 12px;
+  border-radius: var(--radius-sm); font-size: 14px; z-index: 9999;
+}
+.skip-link:focus { left: 10px; }
+
+/* ══════════════════════════════════════════════
+   HERO / PAGE HEADER
+   Each calculator sets its own --hero-accent-from
+   and --hero-accent-to to shift the gradient colour.
+   Default = rose (women's health).
+   Example overrides:
+     --hero-accent-from: #F0FFF4  (green, e.g. nutrition)
+     --hero-accent-from: #F0F4FF  (blue,  e.g. cardiology)
+══════════════════════════════════════════════ */
+.calc-hero {
+  --hero-accent-from: #FFF0F5;
+  --hero-accent-to:   #F0F9FF;
+  background: linear-gradient(135deg, var(--hero-accent-from) 0%, #FFF7F0 60%, var(--hero-accent-to) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.calc-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--rose-light); color: var(--rose-dark);
+  font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 5px 14px;
+  border-radius: 20px; margin-bottom: 1.25rem;
+}
+
+.calc-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--gray-900);
+  max-width: 760px;
+  margin: 0 auto 1rem;
+  letter-spacing: -0.02em;
+}
+
+.calc-hero h1 em {
+  color: var(--rose);
+  font-style: normal;
+}
+
+.calc-hero-desc {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.calc-hero-meta {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.5rem; flex-wrap: wrap;
+  font-size: 13px; color: var(--text-muted);
+}
+
+.calc-hero-meta-item { display: flex; align-items: center; gap: 6px; }
+.calc-hero-meta-dot  { width: 6px; height: 6px; border-radius: 50%; background: var(--rose); }
+
+.disclaimer-pill {
+  display: inline-block; margin-top: 1.5rem;
+  background: var(--amber-light); color: var(--amber);
+  font-size: 12px; padding: 5px 14px; border-radius: 20px;
+  border: 1px solid rgba(184,110,0,0.2);
+}
+
+/* ══════════════════════════════════════════════
+   CALCULATOR WIDGET AREA
+   The prominent input+result panel at the top of
+   each calculator page.
+══════════════════════════════════════════════ */
+.calc-widget-section {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 1.5rem;
+}
+
+.calc-widget {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+}
+
+.calc-widget-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--rose-light);
+}
+
+/* Form fields */
+.calc-field-group {
+  margin-bottom: 1.25rem;
+}
+
+.calc-field-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.calc-field-group .field-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.calc-input,
+.calc-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text);
+  background: var(--gray-100);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+
+.calc-input:focus,
+.calc-select:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(200,49,90,0.12);
+  background: #fff;
+}
+
+.calc-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.calc-input-unit {
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+/* Radio toggle groups (e.g. Male / Female, kg / lb) */
+.calc-toggle-group {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  width: fit-content;
+}
+
+.calc-toggle-group input[type="radio"] { display: none; }
+
+.calc-toggle-group label {
+  padding: 8px 18px;
+  font-size: 14px;
+  color: var(--text-muted);
+  cursor: pointer;
+  background: var(--gray-100);
+  border-right: 1px solid var(--gray-200);
+  transition: background 0.15s, color 0.15s;
+  user-select: none;
+  margin: 0;
+}
+
+.calc-toggle-group label:last-of-type { border-right: none; }
+
+.calc-toggle-group input[type="radio"]:checked + label {
+  background: var(--rose);
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Primary CTA button */
+.calc-btn {
+  width: 100%;
+  padding: 13px;
+  background: var(--rose);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 0.5rem;
+}
+
+.calc-btn:hover  { background: var(--rose-dark); }
+.calc-btn:active { transform: scale(0.99); }
+
+.calc-btn-secondary {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  color: var(--rose);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--rose);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+.calc-btn-secondary:hover { background: var(--rose-light); }
+
+/* Result panel — shown after calculation */
+.calc-result {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--teal-light);
+  display: none; /* shown via JS: el.style.display = 'block' */
+}
+
+.calc-result.visible { display: block; }
+
+.calc-result-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.25rem;
+}
+
+.calc-result-value {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--teal);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.calc-result-interp {
+  font-size: 14px;
+  color: #074D42;
+  line-height: 1.65;
+}
+
+/* Result severity variants */
+.calc-result.result-normal   { background: var(--teal-light);  border-color: rgba(15,123,108,0.25); }
+.calc-result.result-normal   .calc-result-label,
+.calc-result.result-normal   .calc-result-value { color: var(--teal); }
+.calc-result.result-normal   .calc-result-interp { color: #074D42; }
+
+.calc-result.result-warn     { background: var(--amber-light); border-color: rgba(184,110,0,0.25); }
+.calc-result.result-warn     .calc-result-label,
+.calc-result.result-warn     .calc-result-value { color: var(--amber); }
+.calc-result.result-warn     .calc-result-interp { color: #7A4900; }
+
+.calc-result.result-danger   { background: var(--red-light);   border-color: rgba(163,45,45,0.25); }
+.calc-result.result-danger   .calc-result-label,
+.calc-result.result-danger   .calc-result-value { color: var(--red); }
+.calc-result.result-danger   .calc-result-interp { color: #791F1F; }
+
+.calc-result.result-info     { background: var(--blue-light);  border-color: rgba(24,95,165,0.25); }
+.calc-result.result-info     .calc-result-label,
+.calc-result.result-info     .calc-result-value { color: var(--blue); }
+.calc-result.result-info     .calc-result-interp { color: #0C447C; }
+
+/* Error message */
+.calc-error {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--red-light);
+  color: var(--red);
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+  display: none;
+}
+.calc-error.visible { display: block; }
+
+/* ══════════════════════════════════════════════
+   PAGE LAYOUT (main + sidebar)
+══════════════════════════════════════════════ */
+.page-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .page-wrap { grid-template-columns: 1fr; }
+  .sidebar   { display: none; }
+}
+
+/* ══════════════════════════════════════════════
+   ARTICLE TYPOGRAPHY
+══════════════════════════════════════════════ */
+article h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--rose-light);
+  scroll-margin-top: 80px;
+}
+
+article h2 .sec-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--rose); color: #fff;
+  font-family: var(--font-body);
+  font-size: 12px; font-weight: 500;
+  margin-right: 10px; vertical-align: middle;
+  flex-shrink: 0;
+}
+
+article h3 {
+  font-size: 16px; font-weight: 500;
+  color: var(--gray-900); margin: 1.5rem 0 0.4rem;
+}
+
+article p {
+  font-size: 15.5px; color: var(--text-muted);
+  line-height: 1.8; margin-bottom: 0.9rem;
+}
+
+article strong { color: var(--text); font-weight: 500; }
+article ul, article ol { padding-left: 1.4rem; margin-bottom: 1rem; }
+article li { font-size: 15px; color: var(--text-muted); line-height: 1.75; padding: 2px 0; }
+
+/* ══════════════════════════════════════════════
+   ALERT BOXES
+   Usage: <div class="alert alert-info">
+          <span class="alert-icon">🔬</span>
+          <div>...</div>
+          </div>
+   Variants: alert-info, alert-success, alert-warn, alert-danger
+══════════════════════════════════════════════ */
+.alert {
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  margin: 1.25rem 0;
+  font-size: 14.5px;
+  line-height: 1.7;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.alert-info    { background: var(--blue-light);  color: #0C447C; border-left: 3px solid var(--blue); }
+.alert-success { background: var(--teal-light);  color: #074D42; border-left: 3px solid var(--teal); }
+.alert-warn    { background: var(--amber-light); color: #7A4900; border-left: 3px solid var(--amber); }
+.alert-danger  { background: var(--red-light);   color: #791F1F; border-left: 3px solid var(--red); }
+
+/* ══════════════════════════════════════════════
+   REFERENCE TABLE
+   Used for hCG ranges, drug doses, lab normals, etc.
+══════════════════════════════════════════════ */
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 14px;
+}
+
+.ref-table th {
+  font-size: 12px; font-weight: 500; color: var(--text-muted);
+  text-align: left; padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  background: var(--gray-100);
+}
+
+.ref-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  vertical-align: middle;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.ref-table tr:last-child td { border-bottom: none; }
+.ref-table tr:hover td { background: var(--gray-100); }
+
+/* Row highlight badges */
+.ref-table .badge {
+  font-size: 11px; font-weight: 500; padding: 2px 8px;
+  border-radius: 20px; display: inline-block; white-space: nowrap;
+}
+.badge-normal  { background: var(--teal-light);  color: var(--teal); }
+.badge-warn    { background: var(--amber-light); color: var(--amber); }
+.badge-danger  { background: var(--red-light);   color: var(--red); }
+.badge-info    { background: var(--blue-light);  color: var(--blue); }
+.badge-neutral { background: var(--gray-100);    color: var(--gray-600); }
+
+/* ══════════════════════════════════════════════
+   FAQ ACCORDION
+══════════════════════════════════════════════ */
+.faq-list { margin: 1rem 0; }
+
+details {
+  border-top: 1px solid var(--border);
+}
+details:last-child { border-bottom: 1px solid var(--border); }
+
+summary {
+  padding: 1rem 0.25rem;
+  font-size: 15px; font-weight: 500; color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: '+'; font-size: 20px; font-weight: 300;
+  color: var(--rose); flex-shrink: 0;
+}
+details[open] summary::after { content: '−'; }
+summary:hover { color: var(--rose); }
+
+.faq-answer {
+  padding: 0 0.25rem 1.25rem;
+  font-size: 15px; color: var(--text-muted); line-height: 1.8;
+}
+.faq-answer p          { margin-bottom: 0.6rem; }
+.faq-answer p:last-child { margin-bottom: 0; }
+
+/* ══════════════════════════════════════════════
+   NUMBERED STEPS LIST
+══════════════════════════════════════════════ */
+.steps-list {
+  counter-reset: steps;
+  list-style: none;
+  padding: 0; margin: 1rem 0;
+}
+
+.steps-list li {
+  counter-increment: steps;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  align-items: flex-start;
+  font-size: 14.5px; color: var(--text-muted); line-height: 1.65;
+}
+
+.steps-list li::before {
+  content: counter(steps);
+  display: flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--rose-light); color: var(--rose-dark);
+  font-size: 13px; font-weight: 500; flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.steps-list li:last-child { border-bottom: none; }
+
+/* ══════════════════════════════════════════════
+   INFO CARDS GRID
+   Usage: <div class="info-card-grid">
+            <div class="info-card">...</div>
+          </div>
+══════════════════════════════════════════════ */
+.info-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px; margin: 1rem 0;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-card-badge {
+  font-size: 11px; font-weight: 500; padding: 2px 8px;
+  border-radius: 20px; display: inline-block; margin-bottom: 6px;
+}
+
+.info-card-q {
+  font-size: 14px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px; line-height: 1.4;
+}
+
+.info-card-a {
+  font-size: 13.5px; color: var(--text-muted); line-height: 1.65;
+}
+
+/* ══════════════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════════════ */
+.sidebar { position: sticky; top: 80px; }
+
+.sidebar-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-card h3 {
+  font-size: 13px; font-weight: 500; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.07em;
+  margin-bottom: 0.75rem;
+}
+
+/* Table of Contents */
+.toc-nav { list-style: none; padding: 0; }
+.toc-nav li { border-bottom: 1px solid rgba(0,0,0,0.04); }
+.toc-nav li:last-child { border-bottom: none; }
+
+.toc-nav a {
+  display: block; padding: 7px 0;
+  font-size: 13.5px; color: var(--text-muted);
+  text-decoration: none; transition: color 0.2s; line-height: 1.4;
+}
+.toc-nav a:hover,
+.toc-nav a.active { color: var(--rose); font-weight: 500; }
+
+.toc-nav a .toc-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--gray-100); color: var(--text-muted);
+  font-size: 10px; margin-right: 7px; flex-shrink: 0;
+}
+
+/* Sidebar CTA */
+.sidebar-cta {
+  background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%);
+  border-radius: var(--radius-lg); padding: 1.25rem;
+  color: #fff; text-align: center;
+}
+.sidebar-cta h3 { color: rgba(255,255,255,0.85); font-size: 12px; margin-bottom: 0.5rem; }
+.sidebar-cta p  { font-size: 15px; font-weight: 500; margin-bottom: 1rem; line-height: 1.4; }
+.sidebar-cta a {
+  display: block; background: rgba(255,255,255,0.2);
+  color: #fff; text-decoration: none;
+  font-size: 13px; font-weight: 500;
+  padding: 8px; border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: background 0.2s; margin-bottom: 8px;
+}
+.sidebar-cta a:hover { background: rgba(255,255,255,0.3); }
+
+/* Warning card (e.g. ectopic pregnancy emergency) */
+.sidebar-card-warn {
+  background: var(--amber-light);
+  border-color: rgba(184,110,0,0.2);
+}
+.sidebar-card-warn h3 { color: var(--amber); }
+.sidebar-card-warn p  { font-size: 13.5px; color: #7A4900; line-height: 1.65; }
+
+/* ══════════════════════════════════════════════
+   MOBILE TABLE OF CONTENTS
+══════════════════════════════════════════════ */
+.mobile-toc {
+  display: none;
+  background: var(--rose-light);
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.mobile-toc summary {
+  padding: 0.9rem 1rem;
+  font-size: 14px; font-weight: 500; color: var(--rose-dark);
+  cursor: pointer; list-style: none;
+}
+.mobile-toc summary::-webkit-details-marker { display: none; }
+
+.mobile-toc-links { padding: 0 1rem 1rem; }
+.mobile-toc-links a {
+  display: block; padding: 5px 0;
+  font-size: 14px; color: var(--text-muted); text-decoration: none;
+}
+
+@media (max-width: 860px) { .mobile-toc { display: block; } }
+
+/* ══════════════════════════════════════════════
+   RELATED ARTICLES
+══════════════════════════════════════════════ */
+.related-section {
+  background: var(--gray-100);
+  border-top: 1px solid var(--border);
+  padding: 3rem 1.5rem;
+}
+.related-inner { max-width: 1120px; margin: 0 auto; }
+
+.related-section h2 {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  color: var(--gray-900);
+}
+
+.related-section p {
+  font-size: 15px; color: var(--text-muted); margin-top: 0.3rem;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px; margin-top: 1.5rem;
+}
+
+.related-card {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.25rem;
+  box-shadow: var(--shadow-sm); text-decoration: none;
+  transition: box-shadow 0.25s, transform 0.25s; display: block;
+}
+.related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.related-tag {
+  font-size: 11px; font-weight: 500; color: var(--rose);
+  text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px;
+}
+.related-card h3 { font-size: 15px; font-weight: 500; color: var(--text); line-height: 1.4; margin-bottom: 6px; }
+.related-card p  { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+/* ══════════════════════════════════════════════
+   REVIEWER / EEAT STRIP
+══════════════════════════════════════════════ */
+.reviewer-strip {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--gray-100);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  font-size: 13.5px;
+}
+
+.reviewer-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--rose-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+
+.reviewer-strip p  { color: var(--text-muted); line-height: 1.5; margin: 0; }
+.reviewer-strip strong { color: var(--text); font-weight: 500; }
+
+/* ══════════════════════════════════════════════
+   MEDICAL DISCLAIMER (page bottom)
+══════════════════════════════════════════════ */
+.medical-disclaimer {
+  margin-top: 2rem;
+  font-size: 13.5px;
+  color: var(--gray-400);
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  line-height: 1.7;
+}
+
+/* ══════════════════════════════════════════════
+   UTILITY ANIMATIONS
+══════════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.calc-hero h1       { animation: fadeUp 0.6s ease both; }
+.calc-hero-desc     { animation: fadeUp 0.6s ease 0.1s both; }
+.calc-hero-meta     { animation: fadeUp 0.6s ease 0.2s both; }
+
+/* ══════════════════════════════════════════════
+   PRINT
+══════════════════════════════════════════════ */
+@media print {
+  .sidebar, .related-section, .mobile-toc { display: none; }
+  .page-wrap { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════
+   COLOUR THEME OVERRIDES
+   Add class to <body> to shift the accent.
+   e.g. <body class="theme-blue"> for cardiology.
+══════════════════════════════════════════════ */
+body.theme-blue {
+  --rose:       #185FA5;
+  --rose-light: #E6F1FB;
+  --rose-mid:   #85B7EB;
+  --rose-dark:  #0C447C;
+}
+
+body.theme-green {
+  --rose:       #1E6B2F;
+  --rose-light: #E8F5EB;
+  --rose-mid:   #7BC98A;
+  --rose-dark:  #124A20;
+}
+
+body.theme-teal {
+  --rose:       #0F7B6C;
+  --rose-light: #E0F5F1;
+  --rose-mid:   #5DCAA5;
+  --rose-dark:  #085041;
+}
+
+body.theme-amber {
+  --rose:       #B86E00;
+  --rose-light: #FFF3DC;
+  --rose-mid:   #EF9F27;
+  --rose-dark:  #7A4900;
+}
