@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="bsa-calculator">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>BSA Calculator | Body Surface Area — Mosteller, DuBois, Haycock | RxMedCalc</title>
-<meta name="description" content="Free body surface area (BSA) calculator using Mosteller, DuBois, Boyd, and Haycock formulas. Used for chemotherapy dosing, cardiac index, and BSA-normalised drug dosing. Includes cardiac output and index calculation. Used by oncologists, cardiologists, and intensivists worldwide."/>
-<meta name="keywords" content="BSA calculator, body surface area calculator, Mosteller formula, DuBois formula, Haycock formula, BSA chemotherapy, cardiac index calculator, body surface area m2, BSA formula, BSA oncology dosing"/>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/bsa-calculator"/>
-<meta property="og:title" content="BSA Calculator | Body Surface Area | RxMedCalc"/>
-<meta property="og:description" content="Calculate BSA using Mosteller, DuBois, Boyd and Haycock formulas. Chemotherapy dosing, cardiac index. Free for doctors worldwide."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/bsa-calculator"/>
-<meta property="og:site_name" content="RxMedCalc"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="/assets/umami-events.js"></script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/bsa-calculator","name":"Body Surface Area (BSA) Calculator","description":"Calculate BSA using Mosteller, DuBois, Boyd and Haycock formulas for chemotherapy dosing and cardiac index.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Oncologist, Cardiologist, Physician"},"dateModified":"2025-04-14"},
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"BSA Calculator","item":"https://rxmedcalc.com/medical-calculators/bsa-calculator"}]}
-]}
-</script>
-<style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Body Surface Area(BSA) Calculator | RxMedCalc</title>
+  <meta name="description" content="Free body surface area (BSA) calculator using Mosteller, DuBois, Boyd, and Haycock formulas. Used for chemotherapy dosing, cardiac index, and BSA-normalised drug dosing. Includes cardiac output and index calculation. Used by oncologists, cardiologists, and intensivists worldwide."/>
+  <meta name="keywords" content="BSA calculator, body surface area calculator, Mosteller formula, DuBois formula, Haycock formula, BSA chemotherapy, cardiac index calculator, body surface area m2, BSA formula, BSA oncology dosing"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/bsa-calculator"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Body Surface Area(BSA) Calculator | RxMedCalc"/>
+  <meta property="og:description" content="Free body surface area (BSA) calculator using Mosteller, DuBois, Boyd, and Haycock formulas. Used for chemotherapy dosing, cardiac index, and BSA-normalised drug dosing. Includes cardiac output and index calculation. Used by oncologists, cardiologists, and intensivists worldwide."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/bsa-calculator"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/bsa-calculator.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Body Surface Area(BSA) Calculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/bsa-calculator.png"/>
+  <meta name="twitter:image:alt" content="Body Surface Area(BSA) Calculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Body Surface Area(BSA) Calculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Free body surface area (BSA) calculator using Mosteller, DuBois, Boyd, and Haycock formulas. Used for chemotherapy dosing, cardiac index, and BSA-normalised drug dosing. Includes cardiac output and index calculation. Used by oncologists, cardiologists, and intensivists worldwide."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"Body Surface Area(BSA) Calculator","description":"Free body surface area (BSA) calculator using Mosteller, DuBois, Boyd, and Haycock formulas. Used for chemotherapy dosing, cardiac index, and BSA-normalised drug dosing. Includes cardiac output and index calculation. Used by oncologists, cardiologists, and intensivists worldwide.","url":"https://rxmedcalc.com/medical-calculators/bsa-calculator","@id":"https://rxmedcalc.com/medical-calculators/bsa-calculator","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is body surface area used for?","acceptedAnswer":{"@type":"Answer","text":"BSA is used to calculate chemotherapy doses (most chemo drugs are dosed per m²), check cardiac index (CI = CO/BSA, normal 2.5–4.0 L/min/m²), calculate renal function (GFR is indexed to 1.73 m² BSA), and dose other drugs with narrow therapeutic windows where weight alone is insufficient."}},
+      {"@type":"Question","name":"Which BSA formula is most accurate?","acceptedAnswer":{"@type":"Answer","text":"No single formula is universally superior. Mosteller (√[height×weight/3600]) is simplest and widely used. DuBois formula (Weight^0.425 × Height^0.725 × 0.007184) is the historical reference standard. Boyd formula is most accurate in children and extremes of weight. For clinical use, Mosteller is recommended for its simplicity with comparable accuracy to DuBois."}},
+      {"@type":"Question","name":"Is BSAbased chemotherapy dosing accurate?","acceptedAnswer":{"@type":"Answer","text":"BSA-based dosing reduces inter-patient variability in drug exposure compared to flat dosing, but does not eliminate it. Actual drug clearance is influenced by organ function (renal, hepatic), body composition, genetics (pharmacogenomics), and drug interactions. Many oncology centres now use therapeutic drug monitoring (TDM) for drugs like carboplatin (AUC-based Calvert formula) rather than BSA alone."}},
+      {"@type":"Question","name":"What is cardiac index and how does BSA relate to it?","acceptedAnswer":{"@type":"Answer","text":"Cardiac index (CI) = Cardiac output (L/min) / BSA (m²). Indexing to BSA accounts for body size differences. Normal CI: 2.5–4.0 L/min/m². CI <2.0 L/min/m² indicates cardiogenic shock. CI is measured by thermodilution (pulmonary artery catheter), echocardiography, or pulse contour analysis. BSA calculation is therefore essential for haemodynamic monitoring in ICU."}},
+      {"@type":"Question","name":"How is BSA different from BMI?","acceptedAnswer":{"@type":"Answer","text":"BMI = weight/height² — measures weight relative to height as a proxy for body fat. BSA = calculated surface area of the body — used for drug dosing and physiological indexing. BSA accounts for both height and weight differently than BMI and does not assess adiposity. A tall, muscular patient may have high BSA but normal BMI; an obese patient may have elevated BMI and BSA."}},
+      {"@type":"Question","name":"What is the normal BSA for Indian adults?","acceptedAnswer":{"@type":"Answer","text":"Average BSA for Indian adults: approximately 1.6–1.7 m² for women and 1.7–1.9 m² for men, somewhat lower than the Western reference of 1.73 m² used for GFR indexing. This difference is clinically significant for chemotherapy dosing — Indian oncology guidelines recommend using calculated BSA rather than a fixed value, with capping at 2.0 m² for obese patients in some protocols."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"Body Surface Area(BSA) Calculator","item":"https://rxmedcalc.com/medical-calculators/bsa-calculator"}]},
+    {"@type":"SoftwareApplication","name":"Body Surface Area(BSA) Calculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/bsa-calculator"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
+  <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;overflow-wrap: break-word;word-wrap: break-word;}
@@ -117,41 +136,89 @@ h1 em{font-style:italic;color:#34d399}
     .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
     .fi.op .fa{max-height:600px;padding-top:8px}
   </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
-<div class="page-header">
-  <div class="hero-inner-content">
-    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>BSA Calculator</span></nav>
-    <div class="page-eyebrow">📐 Oncology · Cardiology · General</div>
-    <h1>Body Surface Area<br><em>(BSA)</em> Calculator</h1>
-    <p class="page-sub">Calculate BSA using Mosteller, DuBois, Boyd, and Haycock formulas. Includes chemotherapy dosing reference, cardiac index calculation, and eGFR normalisation guide.</p>
-    <div class="header-badges">
-      <span class="hbadge">✓ 4 Validated Formulas</span>
-      <span class="hbadge">✓ Chemotherapy Dosing</span>
-      <span class="hbadge">✓ Cardiac Index</span>
-      <span class="hbadge">✓ Paediatric Haycock</span>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
     </div>
-  </div>
-</div>
-<main class="main">
-  <div class="calc-card">
+  </header>
+
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 Oncology · Cardiology · General</div>
+    <h1><em>Body Surface Area(BSA) Calculator</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
+
+  
+
+  <section class="calc-widget-section">
+    <div class="calc-card">
     <div class="calc-title">BSA Calculator</div>
     <div class="input-grid">
       <div class="field">
         <label for="height">Height</label>
-        <input type="number" id="height" placeholder="e.g. 170" min="30" max="250" inputmode="decimal"/>
+        <input type="number" id="height" placeholder="e.g. 170" min="30" max="250" inputmode="decimal">
         <div class="hint">centimetres (cm)</div>
       </div>
       <div class="field">
         <label for="weight">Weight</label>
-        <input type="number" id="weight" placeholder="e.g. 70" min="1" max="300" inputmode="decimal"/>
+        <input type="number" id="weight" placeholder="e.g. 70" min="1" max="300" inputmode="decimal">
         <div class="hint">kilograms (kg)</div>
       </div>
     </div>
     <div class="input-grid">
       <div class="field">
         <label for="co">Cardiac Output <span style="font-weight:400;text-transform:none">(optional)</span></label>
-        <input type="number" id="co" placeholder="e.g. 5.0" min="0.5" max="20" inputmode="decimal"/>
+        <input type="number" id="co" placeholder="e.g. 5.0" min="0.5" max="20" inputmode="decimal">
         <div class="hint">L/min — for cardiac index</div>
       </div>
     </div>
@@ -166,7 +233,7 @@ h1 em{font-style:italic;color:#34d399}
       <div class="formula-compare">
         <div class="fc-title">All Formula Results</div>
         <div class="fc-row"><span class="fc-name">Mosteller (most used)</span><span class="fc-val" id="fc-most">—</span></div>
-        <div class="fc-row"><span class="fc-name">DuBois & DuBois (1916)</span><span class="fc-val" id="fc-dubois">—</span></div>
+        <div class="fc-row"><span class="fc-name">DuBois &amp; DuBois (1916)</span><span class="fc-val" id="fc-dubois">—</span></div>
         <div class="fc-row"><span class="fc-name">Boyd (1935)</span><span class="fc-val" id="fc-boyd">—</span></div>
         <div class="fc-row"><span class="fc-name">Haycock (paediatric)</span><span class="fc-val" id="fc-hay">—</span></div>
       </div>
@@ -185,53 +252,128 @@ h1 em{font-style:italic;color:#34d399}
       <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
   </div>
+  </section>
 
-  <div class="content-card">
-    <h2>BSA Formulas Explained</h2>
-    <div class="formula-block">
+  
+
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#bsa-formulas-explained">1. BSA Formulas Explained</a>
+          <a href="#faq">2. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="bsa-formulas-explained"><span class="sec-num">1</span>BSA Formulas Explained</h2>
+        <div class="formula-block">
       Mosteller: BSA = √(Height cm × Weight kg / 3600)<br>
       DuBois: BSA = 0.007184 × Height^0.725 × Weight^0.425<br>
       Boyd: BSA = 0.0003207 × Height^0.3 × Weight^(0.7285 - 0.0188×log10(Weight))<br>
       Haycock (paediatric): BSA = 0.024265 × Height^0.3964 × Weight^0.5378
-    </div>
-    <h3>Which Formula to Use?</h3>
-    <p><strong>Mosteller</strong> is the most widely used in clinical practice and oncology because of its simplicity (simple square root formula, easy mental math) and validated accuracy. Most chemotherapy dose calculation software uses Mosteller.</p>
-    <p><strong>DuBois & DuBois</strong> (1916) was the original formula, derived from only 9 subjects, and may underestimate BSA in obese patients. Historically used for cardiac index calculation.</p>
-    <p><strong>Haycock</strong> was specifically validated in children from neonates to adults and is the formula of choice for paediatric BSA calculations and paediatric eGFR normalisation.</p>
-    <h3>Clinical Uses of BSA</h3>
-    <ul>
+    </div><h3>Which Formula to Use?</h3><p><strong>Mosteller</strong> is the most widely used in clinical practice and oncology because of its simplicity (simple square root formula, easy mental math) and validated accuracy. Most chemotherapy dose calculation software uses Mosteller.</p><p><strong>DuBois &amp; DuBois</strong> (1916) was the original formula, derived from only 9 subjects, and may underestimate BSA in obese patients. Historically used for cardiac index calculation.</p><p><strong>Haycock</strong> was specifically validated in children from neonates to adults and is the formula of choice for paediatric BSA calculations and paediatric eGFR normalisation.</p><h3>Clinical Uses of BSA</h3><ul>
       <li><strong>Chemotherapy dosing:</strong> Most cytotoxic drugs are dosed in mg/m² — carboplatin, doxorubicin, vincristine, paclitaxel. BSA capping at 2.0 m² is common practice to prevent toxicity in obese patients</li>
       <li><strong>Cardiac index (CI):</strong> CI = Cardiac Output ÷ BSA. Normal CI = 2.5–4.0 L/min/m². Low CI (&lt;2.2) indicates cardiogenic shock</li>
       <li><strong>eGFR normalisation:</strong> CKD-EPI and MDRD give eGFR normalised to 1.73 m² BSA. Multiply by (patient BSA ÷ 1.73) to get absolute GFR in mL/min</li>
       <li><strong>Radiation therapy:</strong> BSA used to plan radiation fields and calculate mean doses</li>
-    </ul>
-    <h3>BSA Capping in Chemotherapy</h3>
-    <p>In obese patients, using actual BSA for chemotherapy dosing can lead to severe toxicity. Common capping strategies: cap BSA at 2.0 m² (most common), use IBW-based BSA instead of actual weight, or cap dose at standard adult dose. Always check the specific protocol — some regimens (e.g. carboplatin AUC-based dosing) use Calvert formula rather than BSA.</p>
-    <p>Conversely, underdosing based on capped BSA in obese patients may compromise chemotherapy efficacy. ASCO guidelines recommend using actual body weight (and hence actual BSA) for most chemotherapy regimens in obese patients with performance status.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is body surface area used for?</div><div class="fa">BSA is used to calculate chemotherapy doses (most chemo drugs are dosed per m²), check cardiac index (CI = CO/BSA, normal 2.5–4.0 L/min/m²), calculate renal function (GFR is indexed to 1.73 m² BSA), and dose other drugs with narrow therapeutic windows where weight alone is insufficient.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Which BSA formula is most accurate?</div><div class="fa">No single formula is universally superior. Mosteller (√[height×weight/3600]) is simplest and widely used. DuBois formula (Weight^0.425 × Height^0.725 × 0.007184) is the historical reference standard. Boyd formula is most accurate in children and extremes of weight. For clinical use, Mosteller is recommended for its simplicity with comparable accuracy to DuBois.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Is BSA-based chemotherapy dosing accurate?</div><div class="fa">BSA-based dosing reduces inter-patient variability in drug exposure compared to flat dosing, but does not eliminate it. Actual drug clearance is influenced by organ function (renal, hepatic), body composition, genetics (pharmacogenomics), and drug interactions. Many oncology centres now use therapeutic drug monitoring (TDM) for drugs like carboplatin (AUC-based Calvert formula) rather than BSA alone.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is cardiac index and how does BSA relate to it?</div><div class="fa">Cardiac index (CI) = Cardiac output (L/min) / BSA (m²). Indexing to BSA accounts for body size differences. Normal CI: 2.5–4.0 L/min/m². CI <2.0 L/min/m² indicates cardiogenic shock. CI is measured by thermodilution (pulmonary artery catheter), echocardiography, or pulse contour analysis. BSA calculation is therefore essential for haemodynamic monitoring in ICU.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is BSA different from BMI?</div><div class="fa">BMI = weight/height² — measures weight relative to height as a proxy for body fat. BSA = calculated surface area of the body — used for drug dosing and physiological indexing. BSA accounts for both height and weight differently than BMI and does not assess adiposity. A tall, muscular patient may have high BSA but normal BMI; an obese patient may have elevated BMI and BSA.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the normal BSA for Indian adults?</div><div class="fa">Average BSA for Indian adults: approximately 1.6–1.7 m² for women and 1.7–1.9 m² for men, somewhat lower than the Western reference of 1.73 m² used for GFR indexing. This difference is clinically significant for chemotherapy dosing — Indian oncology guidelines recommend using calculated BSA rather than a fixed value, with capping at 2.0 m² for obese patients in some protocols.</div></div>
-  </div>
+    </ul><h3>BSA Capping in Chemotherapy</h3><p>In obese patients, using actual BSA for chemotherapy dosing can lead to severe toxicity. Common capping strategies: cap BSA at 2.0 m² (most common), use IBW-based BSA instead of actual weight, or cap dose at standard adult dose. Always check the specific protocol — some regimens (e.g. carboplatin AUC-based dosing) use Calvert formula rather than BSA.</p><p>Conversely, underdosing based on capped BSA in obese patients may compromise chemotherapy efficacy. ASCO guidelines recommend using actual body weight (and hence actual BSA) for most chemotherapy regimens in obese patients with performance status.</p>
+
+
+        <h2 id="faq"><span class="sec-num">2</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is body surface area used for?</summary>
+            <div class="faq-answer"><p>BSA is used to calculate chemotherapy doses (most chemo drugs are dosed per m²), check cardiac index (CI = CO/BSA, normal 2.5–4.0 L/min/m²), calculate renal function (GFR is indexed to 1.73 m² BSA), and dose other drugs with narrow therapeutic windows where weight alone is insufficient.</p></div>
+          </details>
+          <details>
+            <summary>Which BSA formula is most accurate?</summary>
+            <div class="faq-answer"><p>No single formula is universally superior. Mosteller (√[height×weight/3600]) is simplest and widely used. DuBois formula (Weight^0.425 × Height^0.725 × 0.007184) is the historical reference standard. Boyd formula is most accurate in children and extremes of weight. For clinical use, Mosteller is recommended for its simplicity with comparable accuracy to DuBois.</p></div>
+          </details>
+          <details>
+            <summary>Is BSAbased chemotherapy dosing accurate?</summary>
+            <div class="faq-answer"><p>BSA-based dosing reduces inter-patient variability in drug exposure compared to flat dosing, but does not eliminate it. Actual drug clearance is influenced by organ function (renal, hepatic), body composition, genetics (pharmacogenomics), and drug interactions. Many oncology centres now use therapeutic drug monitoring (TDM) for drugs like carboplatin (AUC-based Calvert formula) rather than BSA alone.</p></div>
+          </details>
+          <details>
+            <summary>What is cardiac index and how does BSA relate to it?</summary>
+            <div class="faq-answer"><p>Cardiac index (CI) = Cardiac output (L/min) / BSA (m²). Indexing to BSA accounts for body size differences. Normal CI: 2.5–4.0 L/min/m². CI &lt;2.0 L/min/m² indicates cardiogenic shock. CI is measured by thermodilution (pulmonary artery catheter), echocardiography, or pulse contour analysis. BSA calculation is therefore essential for haemodynamic monitoring in ICU.</p></div>
+          </details>
+          <details>
+            <summary>How is BSA different from BMI?</summary>
+            <div class="faq-answer"><p>BMI = weight/height² — measures weight relative to height as a proxy for body fat. BSA = calculated surface area of the body — used for drug dosing and physiological indexing. BSA accounts for both height and weight differently than BMI and does not assess adiposity. A tall, muscular patient may have high BSA but normal BMI; an obese patient may have elevated BMI and BSA.</p></div>
+          </details>
+          <details>
+            <summary>What is the normal BSA for Indian adults?</summary>
+            <div class="faq-answer"><p>Average BSA for Indian adults: approximately 1.6–1.7 m² for women and 1.7–1.9 m² for men, somewhat lower than the Western reference of 1.73 m² used for GFR indexing. This difference is clinically significant for chemotherapy dosing — Indian oncology guidelines recommend using calculated BSA rather than a fixed value, with capping at 2.0 m² for obese patients in some protocols.</p></div>
+          </details>
+        </div>
+        <div class="alert alert-success" style="margin-top:2rem;">
+          <span class="alert-icon">📋</span>
+          <div><strong>Key takeaway:</strong> Add a 2–3 sentence clinical summary here.</div>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#bsa-formulas-explained"><span class="toc-num">1</span>BSA Formulas Explained</a></li>
+          <li><a href="#faq"><span class="toc-num">2</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
   </div>
 
-  <div class="content-card">
-    <h2>Related Calculators</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/ibw-calculator" class="related-card"><span class="rc-icon">⚖️</span><div><div class="rc-title">IBW Calculator</div><div class="rc-desc">Ideal weight for drug dosing</div></div></a>
-      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR Calculator</div><div class="rc-desc">BSA-normalised kidney function</div></div></a>
-      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Cardiac perfusion pressure</div></div></a>
-      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">Creatinine Clearance</div><div class="rc-desc">Drug dosing in renal failure</div></div></a>
+
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/ibw-calculator"><h3>IBW Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/egfr-calculator"><h3>eGFR Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/map-calculator"><h3>MAP Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/creatinine-clearance"><h3>Creatinine Clearance</h3></a>
+      </div>
     </div>
-  </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> BSA calculations are for reference. Chemotherapy dosing requires verification by a qualified oncologist and clinical pharmacist, review of protocol-specific dosing guidelines, and assessment of renal/hepatic function. Never administer chemotherapy based solely on a calculator result.</div>
-</main>
+  </section>
 
-<script>
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
 let lastResult=null;
 function calculate(){
   const h=parseFloat(document.getElementById('height').value);
@@ -267,10 +409,14 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){['height','weight','co'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';document.getElementById('ci-row').style.display='none';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
-</script>
-<script src="/assets/shared-nav.js"></script>
-  <script>
-      function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
+
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
+
 </body>
 </html>
