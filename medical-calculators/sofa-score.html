@@ -1,28 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="sofa-score">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>SOFA Score Calculator | Sequential Organ Failure Assessment | ICU Mortality | RxMedCalc</title>
-<meta name="description" content="Free SOFA score calculator for ICU patients. Assess sequential organ failure across 6 organ systems. Predict ICU mortality, diagnose sepsis (qSOFA), and guide organ support decisions. Used by intensivists and critical care physicians worldwide."/>
-<meta name="keywords" content="SOFA score calculator, sequential organ failure assessment, SOFA ICU, SOFA mortality, organ failure ICU, sepsis SOFA, SOFA score interpretation, SOFA score sepsis, ICU prognosis calculator, delta SOFA"/>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/sofa-score"/>
-<meta property="og:title" content="SOFA Score Calculator | Organ Failure Assessment | ICU Mortality | RxMedCalc"/>
-<meta property="og:description" content="Calculate SOFA score for ICU organ failure assessment. Mortality prediction, sepsis diagnosis. Free for intensivists worldwide."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/sofa-score"/>
-<meta property="og:site_name" content="RxMedCalc"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="/assets/umami-events.js"></script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>SOFA Score Calculator | RxMedCalc</title>
+  <meta name="description" content="Free SOFA score calculator for ICU patients. Assess sequential organ failure across 6 organ systems. Predict ICU mortality, diagnose sepsis (qSOFA), and guide organ support decisions. Used by intensivists and critical care physicians worldwide."/>
+  <meta name="keywords" content="SOFA score calculator, sequential organ failure assessment, SOFA ICU, SOFA mortality, organ failure ICU, sepsis SOFA, SOFA score interpretation, SOFA score sepsis, ICU prognosis calculator, delta SOFA"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/sofa-score"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="SOFA Score Calculator | RxMedCalc"/>
+  <meta property="og:description" content="Free SOFA score calculator for ICU patients. Assess sequential organ failure across 6 organ systems. Predict ICU mortality, diagnose sepsis (qSOFA), and guide organ support decisions. Used by intensivists and critical care physicians worldwide."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/sofa-score"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/sofa-score.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="SOFA Score Calculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/sofa-score.png"/>
+  <meta name="twitter:image:alt" content="SOFA Score Calculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="SOFA Score Calculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Free SOFA score calculator for ICU patients. Assess sequential organ failure across 6 organ systems. Predict ICU mortality, diagnose sepsis (qSOFA), and guide organ support decisions. Used by intensivists and critical care physicians worldwide."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"SOFA Score Calculator","description":"Free SOFA score calculator for ICU patients. Assess sequential organ failure across 6 organ systems. Predict ICU mortality, diagnose sepsis (qSOFA), and guide organ support decisions. Used by intensivists and critical care physicians worldwide.","url":"https://rxmedcalc.com/medical-calculators/sofa-score","@id":"https://rxmedcalc.com/medical-calculators/sofa-score","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What does each SOFA component measure?","acceptedAnswer":{"@type":"Answer","text":"Respiratory: PaO2/FiO2 ratio (P/F ratio). Coagulation: platelet count. Liver: serum bilirubin. Cardiovascular: MAP and vasopressor dose (dopamine, dobutamine, adrenaline, noradrenaline). Neurological: Glasgow Coma Scale. Renal: serum creatinine or urine output. Each component scored 0–4 (0=normal, 4=most abnormal). Total score 0–24."}},
+      {"@type":"Question","name":"How does SOFA define sepsis?","acceptedAnswer":{"@type":"Answer","text":"Sepsis-3 (Singer et al., JAMA 2016): Sepsis = life-threatening organ dysfunction caused by dysregulated host response to infection, identified by acute SOFA increase ≥2 from baseline. Septic shock = sepsis + vasopressor requirement to maintain MAP ≥65 mmHg AND lactate >2 mmol/L despite adequate fluids. The 'severe sepsis' category has been retired."}},
+      {"@type":"Question","name":"What is the mortality prediction of SOFA?","acceptedAnswer":{"@type":"Answer","text":"Initial SOFA: 0–6 (~<10% ICU mortality), 7–9 (~15–20%), 10–12 (~40%), 13–14 (~50%), 15–24 (>80%). Change in SOFA over 48 hours is more predictive than initial score — rising SOFA despite treatment indicates treatment failure; falling SOFA indicates clinical response. A SOFA score increase of ≥2 from baseline in a ward patient with suspected infection has ~10% hospital mortality."}},
+      {"@type":"Question","name":"How is the cardiovascular SOFA scored?","acceptedAnswer":{"@type":"Answer","text":"Cardiovascular SOFA: 0 = MAP ≥70 mmHg. 1 = MAP <70 mmHg. 2 = Dopamine ≤5 mcg/kg/min or any dobutamine. 3 = Dopamine 5–15 mcg/kg/min or adrenaline/noradrenaline ≤0.1 mcg/kg/min. 4 = Dopamine >15 mcg/kg/min or adrenaline/noradrenaline >0.1 mcg/kg/min. Higher vasopressor requirements indicate more severe cardiovascular failure."}},
+      {"@type":"Question","name":"When is SOFA used vs APACHE II?","acceptedAnswer":{"@type":"Answer","text":"APACHE II: calculated once at ICU admission — admission severity score for benchmarking and prognosis at admission. SOFA: calculated daily — trajectory score for monitoring organ failure progression. Use APACHE II for 'how sick is this patient at admission?' Use SOFA for 'is this patient getting better or worse day by day?' Both are complementary. SOFA is also embedded in the Sepsis-3 definition."}},
+      {"@type":"Question","name":"What is the 1hour sepsis bundle?","acceptedAnswer":{"@type":"Answer","text":"Surviving Sepsis Campaign 1-hour bundle: measure lactate (repeat if >2 mmol/L), obtain blood cultures before antibiotics (≥2 sets), administer broad-spectrum IV antibiotics, give 30 mL/kg IV crystalloid if hypotensive or lactate ≥4 mmol/L, start vasopressors (noradrenaline first-line) if MAP <65 despite initial fluids. Bundle compliance reduces sepsis mortality by ~25%."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"SOFA Score Calculator","item":"https://rxmedcalc.com/medical-calculators/sofa-score"}]},
+    {"@type":"SoftwareApplication","name":"SOFA Score Calculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/sofa-score"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
+  <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
@@ -116,24 +141,72 @@ h1 em{font-style:italic;color:#f87171}
     .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
     .fi.op .fa{max-height:600px;padding-top:8px}
   </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
-<div class="page-header">
-  <div class="header-inner">
-    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>SOFA Score</span></nav>
-    <div class="page-eyebrow">🏥 Critical Care · ICU · Sepsis</div>
-    <h1>SOFA Score<br><em>Calculator</em></h1>
-    <p class="page-sub">Sequential Organ Failure Assessment — evaluate organ dysfunction across 6 systems. ICU mortality prediction, sepsis diagnosis (Sepsis-3), and organ support guidance.</p>
-    <div class="header-badges">
-      <span class="hbadge">✓ 6 Organ Systems</span>
-      <span class="hbadge">✓ ICU Mortality %</span>
-      <span class="hbadge">✓ Sepsis-3 Criteria</span>
-      <span class="hbadge">✓ Live Scoring</span>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
     </div>
-  </div>
-</div>
-<main class="main">
-  <div class="calc-card">
+  </header>
+
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 Critical Care · ICU · Sepsis</div>
+    <h1><em>SOFA Score Calculator</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
+
+  
+
+  <section class="calc-widget-section">
+    <div class="calc-card">
     <div class="calc-title">SOFA Score Assessment</div>
     <div class="organ-sections" id="organ-sections"></div>
     <div class="running-total">
@@ -161,10 +234,32 @@ h1 em{font-style:italic;color:#f87171}
       <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
   </div>
+  </section>
 
-  <div class="content-card">
-    <h2>SOFA Score Reference Table</h2>
-    <table class="sofa-table">
+  
+
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#sofa-score-reference-table">1. SOFA Score Reference Table</a>
+          <a href="#faq">2. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="sofa-score-reference-table"><span class="sec-num">1</span>SOFA Score Reference Table</h2>
+        <table class="sofa-table">
       <thead><tr><th>Organ System</th><th>Score 0</th><th>Score 1</th><th>Score 2</th><th>Score 3</th><th>Score 4</th></tr></thead>
       <tbody>
         <tr><td><strong>Respiratory</strong> (PaO₂/FiO₂)</td><td>≥400</td><td>300–399</td><td>200–299</td><td>100–199 +vent</td><td>&lt;100 +vent</td></tr>
@@ -174,9 +269,7 @@ h1 em{font-style:italic;color:#f87171}
         <tr><td><strong>CNS</strong> (GCS)</td><td>15</td><td>13–14</td><td>10–12</td><td>6–9</td><td>&lt;6</td></tr>
         <tr><td><strong>Renal</strong> (Creatinine mg/dL)</td><td>&lt;1.2</td><td>1.2–1.9</td><td>2.0–3.4</td><td>3.5–4.9 or UO&lt;500</td><td>≥5.0 or UO&lt;200</td></tr>
       </tbody>
-    </table>
-    <h3>SOFA Score and Mortality</h3>
-    <table class="sofa-table">
+    </table><h3>SOFA Score and Mortality</h3><table class="sofa-table">
       <thead><tr><th>SOFA Score</th><th>ICU Mortality</th></tr></thead>
       <tbody>
         <tr><td>0–6</td><td>&lt;10%</td></tr>
@@ -186,35 +279,93 @@ h1 em{font-style:italic;color:#f87171}
         <tr><td>15+</td><td>&gt;80%</td></tr>
         <tr><td>15–24</td><td>&gt;90%</td></tr>
       </tbody>
-    </table>
-    <h3>Sepsis-3 Definition</h3>
-    <p>The Sepsis-3 consensus (2016) defines sepsis as life-threatening organ dysfunction caused by a dysregulated host response to infection. Operationally: suspected infection + acute SOFA score increase of ≥2 points from baseline. SOFA ≥2 at ICU admission = ~10% in-hospital mortality. Delta-SOFA (change from admission to 48 hours) is a key prognostic indicator — worsening SOFA predicts higher mortality than absolute score alone.</p>
-    <h3>Delta-SOFA — Clinical Significance</h3>
-    <p>Serial SOFA scoring every 24–48 hours is more informative than a single score. A delta-SOFA of ≥2 within 48 hours predicts significantly increased mortality. Improving SOFA predicts better outcomes than absolute values. Use SOFA trend to guide escalation decisions, family discussions, and palliative care planning in the ICU.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What does each SOFA component measure?</div><div class="fa">Respiratory: PaO2/FiO2 ratio (P/F ratio). Coagulation: platelet count. Liver: serum bilirubin. Cardiovascular: MAP and vasopressor dose (dopamine, dobutamine, adrenaline, noradrenaline). Neurological: Glasgow Coma Scale. Renal: serum creatinine or urine output. Each component scored 0–4 (0=normal, 4=most abnormal). Total score 0–24.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How does SOFA define sepsis?</div><div class="fa">Sepsis-3 (Singer et al., JAMA 2016): Sepsis = life-threatening organ dysfunction caused by dysregulated host response to infection, identified by acute SOFA increase ≥2 from baseline. Septic shock = sepsis + vasopressor requirement to maintain MAP ≥65 mmHg AND lactate >2 mmol/L despite adequate fluids. The 'severe sepsis' category has been retired.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the mortality prediction of SOFA?</div><div class="fa">Initial SOFA: 0–6 (~<10% ICU mortality), 7–9 (~15–20%), 10–12 (~40%), 13–14 (~50%), 15–24 (>80%). Change in SOFA over 48 hours is more predictive than initial score — rising SOFA despite treatment indicates treatment failure; falling SOFA indicates clinical response. A SOFA score increase of ≥2 from baseline in a ward patient with suspected infection has ~10% hospital mortality.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is the cardiovascular SOFA scored?</div><div class="fa">Cardiovascular SOFA: 0 = MAP ≥70 mmHg. 1 = MAP <70 mmHg. 2 = Dopamine ≤5 mcg/kg/min or any dobutamine. 3 = Dopamine 5–15 mcg/kg/min or adrenaline/noradrenaline ≤0.1 mcg/kg/min. 4 = Dopamine >15 mcg/kg/min or adrenaline/noradrenaline >0.1 mcg/kg/min. Higher vasopressor requirements indicate more severe cardiovascular failure.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When is SOFA used vs APACHE II?</div><div class="fa">APACHE II: calculated once at ICU admission — admission severity score for benchmarking and prognosis at admission. SOFA: calculated daily — trajectory score for monitoring organ failure progression. Use APACHE II for 'how sick is this patient at admission?' Use SOFA for 'is this patient getting better or worse day by day?' Both are complementary. SOFA is also embedded in the Sepsis-3 definition.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the 1-hour sepsis bundle?</div><div class="fa">Surviving Sepsis Campaign 1-hour bundle: measure lactate (repeat if >2 mmol/L), obtain blood cultures before antibiotics (≥2 sets), administer broad-spectrum IV antibiotics, give 30 mL/kg IV crystalloid if hypotensive or lactate ≥4 mmol/L, start vasopressors (noradrenaline first-line) if MAP <65 despite initial fluids. Bundle compliance reduces sepsis mortality by ~25%.</div></div>
-  </div>
+    </table><h3>Sepsis-3 Definition</h3><p>The Sepsis-3 consensus (2016) defines sepsis as life-threatening organ dysfunction caused by a dysregulated host response to infection. Operationally: suspected infection + acute SOFA score increase of ≥2 points from baseline. SOFA ≥2 at ICU admission = ~10% in-hospital mortality. Delta-SOFA (change from admission to 48 hours) is a key prognostic indicator — worsening SOFA predicts higher mortality than absolute score alone.</p><h3>Delta-SOFA — Clinical Significance</h3><p>Serial SOFA scoring every 24–48 hours is more informative than a single score. A delta-SOFA of ≥2 within 48 hours predicts significantly increased mortality. Improving SOFA predicts better outcomes than absolute values. Use SOFA trend to guide escalation decisions, family discussions, and palliative care planning in the ICU.</p>
+
+
+        <h2 id="faq"><span class="sec-num">2</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What does each SOFA component measure?</summary>
+            <div class="faq-answer"><p>Respiratory: PaO2/FiO2 ratio (P/F ratio). Coagulation: platelet count. Liver: serum bilirubin. Cardiovascular: MAP and vasopressor dose (dopamine, dobutamine, adrenaline, noradrenaline). Neurological: Glasgow Coma Scale. Renal: serum creatinine or urine output. Each component scored 0–4 (0=normal, 4=most abnormal). Total score 0–24.</p></div>
+          </details>
+          <details>
+            <summary>How does SOFA define sepsis?</summary>
+            <div class="faq-answer"><p>Sepsis-3 (Singer et al., JAMA 2016): Sepsis = life-threatening organ dysfunction caused by dysregulated host response to infection, identified by acute SOFA increase ≥2 from baseline. Septic shock = sepsis + vasopressor requirement to maintain MAP ≥65 mmHg AND lactate &gt;2 mmol/L despite adequate fluids. The 'severe sepsis' category has been retired.</p></div>
+          </details>
+          <details>
+            <summary>What is the mortality prediction of SOFA?</summary>
+            <div class="faq-answer"><p>Initial SOFA: 0–6 (~&lt;10% ICU mortality), 7–9 (~15–20%), 10–12 (~40%), 13–14 (~50%), 15–24 (&gt;80%). Change in SOFA over 48 hours is more predictive than initial score — rising SOFA despite treatment indicates treatment failure; falling SOFA indicates clinical response. A SOFA score increase of ≥2 from baseline in a ward patient with suspected infection has ~10% hospital mortality.</p></div>
+          </details>
+          <details>
+            <summary>How is the cardiovascular SOFA scored?</summary>
+            <div class="faq-answer"><p>Cardiovascular SOFA: 0 = MAP ≥70 mmHg. 1 = MAP &lt;70 mmHg. 2 = Dopamine ≤5 mcg/kg/min or any dobutamine. 3 = Dopamine 5–15 mcg/kg/min or adrenaline/noradrenaline ≤0.1 mcg/kg/min. 4 = Dopamine &gt;15 mcg/kg/min or adrenaline/noradrenaline &gt;0.1 mcg/kg/min. Higher vasopressor requirements indicate more severe cardiovascular failure.</p></div>
+          </details>
+          <details>
+            <summary>When is SOFA used vs APACHE II?</summary>
+            <div class="faq-answer"><p>APACHE II: calculated once at ICU admission — admission severity score for benchmarking and prognosis at admission. SOFA: calculated daily — trajectory score for monitoring organ failure progression. Use APACHE II for 'how sick is this patient at admission?' Use SOFA for 'is this patient getting better or worse day by day?' Both are complementary. SOFA is also embedded in the Sepsis-3 definition.</p></div>
+          </details>
+          <details>
+            <summary>What is the 1hour sepsis bundle?</summary>
+            <div class="faq-answer"><p>Surviving Sepsis Campaign 1-hour bundle: measure lactate (repeat if &gt;2 mmol/L), obtain blood cultures before antibiotics (≥2 sets), administer broad-spectrum IV antibiotics, give 30 mL/kg IV crystalloid if hypotensive or lactate ≥4 mmol/L, start vasopressors (noradrenaline first-line) if MAP &lt;65 despite initial fluids. Bundle compliance reduces sepsis mortality by ~25%.</p></div>
+          </details>
+        </div>
+        <div class="alert alert-success" style="margin-top:2rem;">
+          <span class="alert-icon">📋</span>
+          <div><strong>Key takeaway:</strong> Add a 2–3 sentence clinical summary here.</div>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#sofa-score-reference-table"><span class="toc-num">1</span>SOFA Score Reference Table</a></li>
+          <li><a href="#faq"><span class="toc-num">2</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
   </div>
 
-  <div class="content-card">
-    <h2>Related Calculators</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Cardiovascular SOFA component</div></div></a>
-      <a href="/medical-calculators/gcs-calculator" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">GCS Calculator</div><div class="rc-desc">CNS SOFA component</div></div></a>
-      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">Creatinine Clearance</div><div class="rc-desc">Renal SOFA component</div></div></a>
-      <a href="/medical-calculators/news2" class="related-card"><span class="rc-icon">📉</span><div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Early deterioration warning</div></div></a>
+
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/map-calculator"><h3>MAP Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/gcs-calculator"><h3>GCS Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/creatinine-clearance"><h3>Creatinine Clearance</h3></a>
+        <a class="related-card" href="/medical-calculators/news2"><h3>NEWS2 Score</h3></a>
+      </div>
     </div>
-  </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> SOFA score is a severity and prognostic tool for ICU patients. It should not be used in isolation for treatment limitation decisions, which require comprehensive clinical assessment, patient values, and multidisciplinary input. SOFA was validated in ICU populations and may not apply to non-ICU settings.</div>
-</main>
+  </section>
 
-<script>
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
 const ORGANS=[
   {name:'Respiratory',icon:'🫁',param:'PaO₂/FiO₂ (mmHg)',opts:[{s:0,d:'≥400'},{s:1,d:'300–399'},{s:2,d:'200–299'},{s:3,d:'100–199 + ventilated'},{s:4,d:'<100 + ventilated'}]},
   {name:'Coagulation',icon:'🩸',param:'Platelets (×10³/µL)',opts:[{s:0,d:'≥150'},{s:1,d:'100–149'},{s:2,d:'50–99'},{s:3,d:'20–49'},{s:4,d:'<20'}]},
@@ -275,9 +426,14 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){scores=new Array(6).fill(0);buildOrgans();document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
 buildOrgans();
-</script>
-<script src="/assets/shared-nav.js"></script>
-<script> function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
+
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
+
 </body>
 </html>
