@@ -1,532 +1,494 @@
 <!DOCTYPE html>
 <html lang="en" data-tool="gcs-calculator">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>GCS Calculator | Adult & Pediatric Glasgow Coma Scale | RxMedCalc</title>
+  <meta name="description" content="Free online GCS calculator for adults and pediatric patients. Supports intubated (T modifier). Includes Adelaide pediatric scale and TBI severity classification."/>
+  <meta name="keywords" content="GCS calculator India, Glasgow Coma Scale pediatric, intubated GCS score, trauma assessment GCS, TBI severity calculator, Adelaide pediatric GCS, GCS score interpretation, motor response decerebrate, coma scale calculator"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/gcs-calculator"/>
 
-<title>GCS Calculator | Adult & Pediatric Glasgow Coma Scale (Intubated)</title>
-<meta name="description" content="Free online GCS calculator for adults and pediatric patients. Supports intubated (T modifier). Includes Adelaide pediatric scale and TBI severity classification."/>
-<meta name="keywords" content="GCS calculator India, Glasgow Coma Scale pediatric, intubated GCS score, trauma assessment GCS, TBI severity calculator, Adelaide pediatric GCS, GCS score interpretation, motor response decerebrate, coma scale calculator"/>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/gcs-calculator"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <script src="assets/umami-events.js"></script>
 
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script src="assets/umami-events.js"></script>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="GCS Calculator | Adult & Pediatric Glasgow Coma Scale | RxMedCalc"/>
+  <meta property="og:description" content="Calculate Glasgow Coma Scale for adults and infants. Intubated (T modifier) support, TBI severity output, and WhatsApp sharing. Free clinical tool."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/gcs-calculator"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og-banner.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="675"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
 
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="GCS Calculator | Adult & Pediatric Glasgow Coma Scale"/>
-<meta property="og:description" content="Calculate Glasgow Coma Scale for adults and infants. Intubated (T modifier) support, TBI severity output, and WhatsApp sharing. Free clinical tool."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/gcs-calculator"/>
-<meta property="og:image" content="https://rxmedcalc.com/assets/og-banner.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="675"/>
-<meta property="og:site_name" content="Clinical Calculators India"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="GCS Calculator — Adult, Pediatric & Intubated Patients"/>
+  <meta name="twitter:description" content="Professional Glasgow Coma Scale calculator with pediatric Adelaide scale, intubated T modifier, and TBI severity classification."/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og-banner.png"/>
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="GCS Calculator — Adult, Pediatric & Intubated Patients"/>
-<meta name="twitter:description" content="Professional Glasgow Coma Scale calculator with pediatric Adelaide scale, intubated T modifier, and TBI severity classification."/>
-<meta name="twitter:image" content="https://rxmedcalc.com/assets/og-banner.png"/>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "name": "Glasgow Coma Scale (GCS) Calculator — Adult & Pediatric",
-  "description": "A professional neurological assessment tool using the validated GCS and Adelaide Pediatric scale with support for intubated patients.",
-  "url": "https://rxmedcalc.com/medical-calculators/gcs-calculator",
-  "lastReviewed": "2024-05-15",
-  "reviewedBy": {
-    "@type": "MedicalOrganization",
-    "name": "Teasdale & Jennett GCS Standards | IAP Pediatric Reference"
-  },
-  "audience": { "@type": "MedicalAudience", "audienceType": ["Clinician", "Nurse", "Emergency Physician", "Paramedic"] },
-  "medicalSpecialty": ["Emergency Medicine", "Neurology", "Pediatrics", "Trauma Surgery"],
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Medical Calculators", "item": "https://rxmedcalc.com/medical-calculators/"},
-      {"@type": "ListItem", "position": 2, "name": "GCS Calculator", "item": "https://rxmedcalc.com/medical-calculators/gcs-calculator"}
-    ]
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Glasgow Coma Scale Calculator",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Web",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-  "description": "Interactive GCS calculator for adult and pediatric populations. Calculates total score, component breakdown (E, V, M), and handles intubated (T) patients for trauma severity assessment."
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the Glasgow Coma Scale (GCS)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Glasgow Coma Scale (GCS) is a neurological assessment tool developed by Teasdale and Jennett in 1974 at the University of Glasgow. It measures the level of consciousness using three components: Eye opening (E, 1–4), Verbal response (V, 1–5), and Motor response (M, 1–6). The total score ranges from 3 (deep coma) to 15 (fully conscious). A GCS ≤8 indicates severe brain injury requiring airway protection."
-      }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Glasgow Coma Scale (GCS) Calculator — Adult & Pediatric",
+    "description": "A professional neurological assessment tool using the validated GCS and Adelaide Pediatric scale with support for intubated patients.",
+    "url": "https://rxmedcalc.com/medical-calculators/gcs-calculator",
+    "lastReviewed": "2026-06-09",
+    "reviewedBy": {
+      "@type": "MedicalOrganization",
+      "name": "Teasdale & Jennett GCS Standards | IAP Pediatric Reference"
     },
-    {
-      "@type": "Question",
-      "name": "What GCS score means coma?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A GCS total score of 8 or less is the internationally accepted threshold for coma. Patients with a GCS ≤8 are unable to protect their own airway and generally require intubation. A score of 3 represents the lowest possible value (no eye opening, no verbal response, no motor response) and indicates the deepest level of unresponsiveness."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is GCS calculated for intubated patients?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For intubated patients, the verbal score cannot be assessed. A 'T' (for Tube/intubated) is recorded in place of the verbal score. The GCS is reported as, for example, E3VTM4, and the numeric total is the sum of Eye and Motor scores only (not counting verbal). This modified score is documented separately, and the 'T' suffix communicates that the patient was intubated at the time of assessment."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the pediatric GCS scale?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The standard GCS verbal criteria are not applicable to infants and young children who have not yet developed verbal language. The Adelaide Pediatric GCS (and similar scales endorsed by IAP) uses age-appropriate criteria: a score of 5 (best) corresponds to cooing, babbling, or smiling normally, while lower scores indicate crying to pain, moaning, or no response. Eye and Motor subscales remain similar to the adult version."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the GCS classification for head injury severity?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The standard TBI (Traumatic Brain Injury) severity classification based on GCS is: Mild TBI (GCS 13–15) — typically minor head injury, low neurosurgical risk; Moderate TBI (GCS 9–12) — requires urgent CT imaging and neurosurgical consultation; Severe TBI (GCS ≤8) — coma-level injury requiring airway protection, ICU admission, and urgent neurosurgical assessment."
-      }
+    "audience": { "@type": "MedicalAudience", "audienceType": ["Clinician", "Nurse", "Emergency Physician", "Paramedic"] },
+    "medicalSpecialty": ["Emergency Medicine", "Neurology", "Pediatrics", "Trauma Surgery"],
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Medical Calculators", "item": "https://rxmedcalc.com/medical-calculators/"},
+        {"@type": "ListItem", "position": 2, "name": "GCS Calculator", "item": "https://rxmedcalc.com/medical-calculators/gcs-calculator"}
+      ]
     }
-  ]
-}
-</script>
+  }
+  </script>
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d3748;line-height:1.6}
-.pw{max-width:800px;margin:auto}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Glasgow Coma Scale Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "Interactive GCS calculator for adult and pediatric populations. Calculates total score, component breakdown (E, V, M), and handles intubated (T) patients for trauma severity assessment."
+  }
+  </script>
 
-.back-link{display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;color:#1a365d;font-size:0.9rem;font-weight:600;text-decoration:none}
-.back-link:hover{text-decoration:underline}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
 
-.hero{background:linear-gradient(135deg,#1a365d,#2b6cb0);border-radius:20px;padding:36px;color:white;margin-bottom:20px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-.hero-sub{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;margin-bottom:10px;opacity:.8;text-transform:uppercase}
-.hero h1{font-size:1.9rem;font-weight:800;margin-bottom:8px}
-.hero p{opacity:.9; font-size:0.95rem}
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "DM Sans", system-ui, -apple-system, sans-serif; background: #f8f6f2; padding: 0px; color: #2d3748; line-height: 1.6; }
+    .pw { max-width: 900px; margin: auto; }
 
-.card{background:white;border-radius:16px;padding:28px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.06)}
-.card h2{font-size:1.1rem;font-weight:800;color:#1a365d;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #bee3f8}
+    /* Hero Design Framework */
+    .hero { background: linear-gradient(135deg, #0d1b2a 0%, #1a1030 60%, #0d1b2a 100%); padding: 36px 20px; color: white; text-align: center; }
+    .hero-sub { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; margin-bottom: 10px; opacity: .8; text-transform: uppercase; }
+    .hero h1 { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.6rem, 5vw, 2.5rem); font-weight: 800; margin-bottom: 8px; color: #fff; }
+    .hero p { opacity: .9; font-size: 0.95rem; max-width: 650px; margin: 0 auto; }
+    .disclaimer-pill { display: inline-block; background: rgba(253,230,138,0.15); color: #fde68a; font-size: 0.73rem; padding: 4px 10px; border-radius: 6px; margin-top: 10px; }
 
-.form-group{margin-bottom:18px}
-label{font-size:0.85rem;font-weight:700;color:#4a5568;display:block;margin-bottom:7px;text-transform:uppercase;letter-spacing:.03em}
-select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:0.97rem;outline:none;background:#f8fafc;transition:border-color .2s;cursor:pointer;color:#2d3748;font-family:inherit}
-select:focus{border-color:#3182ce}
+    /* Widgets & Interaction Items */
+    .card { background: white; border-radius: 16px; padding: 28px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e5e7eb; }
+    .card h2 { font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; font-weight: 800; color: #0d1b2a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #c4b5fd; }
+    .form-group { margin-bottom: 18px; }
+    label { font-size: 0.85rem; font-weight: 700; color: #4a5568; display: block; margin-bottom: 7px; text-transform: uppercase; letter-spacing: .03em; }
+    select { width: 100%; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 0.97rem; outline: none; background: #f8fafc; transition: border-color .2s; cursor: pointer; color: #2d3748; font-family: inherit; }
+    select:focus { border-color: #8b5cf6; }
 
-.res-box{display:none;margin-top:24px;border-radius:16px;overflow:hidden;border:2px solid #e2e8f0;animation:fadeIn .4s;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.res-header{padding:18px;text-align:center;font-weight:800;color:white;font-size:1.15rem;text-transform:uppercase;letter-spacing:0.02em}
-.res-grid{display:grid;grid-template-columns:repeat(3,1fr);background:white;padding:24px;gap:12px}
-.rg-item{text-align:center;background:#f7fafc;padding:16px;border-radius:12px;border:1px solid #edf2f7}
-.rg-item .lbl{font-size:0.68rem;color:#718096;text-transform:uppercase;font-weight:700;margin-bottom:6px;letter-spacing:0.04em}
-.rg-item .val{font-size:1.6rem;font-weight:800;color:#1a202c}
+    /* Result Panel UI */
+    .res-box { display: none; margin-bottom: 24px; border-radius: 16px; overflow: hidden; border: 2px solid #e2e8f0; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.06); animation: fadeIn .4s; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .res-header { padding: 18px; text-align: center; font-weight: 800; color: white; font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.02em; }
+    .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); background: white; padding: 24px; gap: 12px; }
+    .rg-item { text-align: center; background: #f7fafc; padding: 16px; border-radius: 12px; border: 1px solid #edf2f7; }
+    .rg-item .lbl { font-size: 0.68rem; color: #718096; text-transform: uppercase; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.04em; }
+    .rg-item .val { font-size: 1.6rem; font-weight: 800; color: #1a202c; }
+    .interp { margin: 0 24px 16px; padding: 16px; border-radius: 12px; font-size: 0.92rem; line-height: 1.55; }
+    .interp.severe { background: #fff5f5; border-left: 5px solid #e53e3e; color: #742a2a; }
+    .interp.moderate { background: #fffaf0; border-left: 5px solid #ed8936; color: #7b341e; }
+    .interp.mild { background: #f0fff4; border-left: 5px solid #48bb78; color: #22543d; }
 
-.interp{margin:0 24px 16px;padding:16px;border-radius:12px;font-size:0.92rem;line-height:1.55}
-.interp.severe{background:#fff5f5;border-left:5px solid #e53e3e;color:#742a2a}
-.interp.moderate{background:#fffaf0;border-left:5px solid #ed8936;color:#7b341e}
-.interp.mild{background:#f0fff4;border-left:5px solid #48bb78;color:#22543d}
+    /* Action Control Triggers */
+    .share-bar { display: flex; gap: 10px; margin: 0 24px 24px; flex-wrap: wrap; }
+    .share-btn { flex: 1; min-width: 100px; padding: 12px; border: none; border-radius: 10px; font-size: 0.85rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; transition: opacity 0.2s; font-family: inherit; }
+    .share-btn:hover { opacity: 0.85; }
+    .btn-whatsapp { background: #25D366; color: white; }
+    .btn-copy { background: #edf2f7; color: #2d3748; border: 1px solid #cbd5e0; }
+    .btn-print { background: #4a5568; color: white; }
+    .btn-save { background: #ed8936; color: white; }
+    .copy-confirm { text-align: center; font-size: 0.8rem; color: #38a169; margin-top: 8px; height: 18px; font-weight: 600; width: 100%; }
 
-/* ACTION BAR */
-.share-bar{display:flex;gap:10px;margin:0 24px 24px;flex-wrap:wrap}
-.share-btn{flex:1;min-width:100px;padding:12px;border:none;border-radius:10px;font-size:0.85rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity 0.2s}
-.share-btn:hover{opacity:0.85}
-.btn-whatsapp{background:#25D366;color:white}
-.btn-copy{background:#edf2f7;color:#2d3748;border:1px solid #cbd5e0}
-.btn-print{background:#4a5568;color:white}
-.btn-save{background:#ed8936;color:white}
-.copy-confirm{text-align:center;font-size:0.8rem;color:#38a169;margin-top:8px;height:18px;font-weight:600;width:100%}
+    /* Reference Grids Layout */
+    .sev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+    .sev-card { padding: 16px; border-radius: 12px; text-align: center; background: #f7fafc; border: 1px solid #e2e8f0; }
+    .sev-card.mild { background: #f0fff4; border-color: #68d391; }
+    .sev-card.mod { background: #fffaf0; border-color: #f6ad55; }
+    .sev-card.sev { background: #fff5f5; border-color: #fc8181; }
+    .sev-card .range { font-size: 1.6rem; font-weight: 800; margin-bottom: 4px; }
+    .sev-card .type { font-size: 0.85rem; font-weight: 800; text-transform: uppercase; margin-bottom: 4px; }
+    .sev-card .desc { font-size: 0.8rem; color: #4a5568; line-height: 1.4; }
 
-/* Severity reference */
-.sev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-.sev-card{padding:16px;border-radius:12px;text-align:center;background:#f7fafc;border:1px solid #e2e8f0}
-.sev-card.mild{background:#f0fff4;border-color:#68d391}
-.sev-card.mod{background:#fffaf0;border-color:#f6ad55}
-.sev-card.sev{background:#fff5f5;border-color:#fc8181}
-.sev-card .range{font-size:1.6rem;font-weight:800;margin-bottom:4px}
-.sev-card .type{font-size:0.85rem;font-weight:800;text-transform:uppercase;margin-bottom:4px}
-.sev-card .desc{font-size:0.8rem;color:#4a5568;line-height:1.4}
+    /* Content Layout Blocks */
+    .content-section { background: white; border-radius: 16px; padding: 28px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e5e7eb; }
+    .content-section h2 { font-family: "Fraunces", Georgia, serif; font-size: 1.25rem; font-weight: 800; color: #0d1b2a; margin-bottom: 14px; }
+    .content-section h3 { font-size: 0.95rem; font-weight: 700; color: #8b5cf6; margin: 18px 0 8px; }
+    .content-section p { font-size: 0.9rem; color: #4a5568; margin-bottom: 12px; line-height: 1.65; }
+    .content-section ul { padding-left: 22px; margin-bottom: 12px; }
+    .content-section ul li { font-size: 0.9rem; color: #4a5568; margin-bottom: 6px; line-height: 1.5; }
 
-.content-section{background:white;border-radius:16px;padding:28px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-.content-section h2{font-size:1.15rem;font-weight:800;color:#1a365d;margin-bottom:14px}
-.content-section h3{font-size:0.95rem;font-weight:700;color:#2d3748;margin:18px 0 8px}
-.content-section p{font-size:0.9rem;color:#4a5568;margin-bottom:12px;line-height:1.65}
-.content-section ul{padding-left:22px;margin-bottom:12px}
-.content-section ul li{font-size:0.9rem;color:#4a5568;margin-bottom:6px;line-height:1.5}
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin-top: 12px; border-radius: 8px; overflow: hidden; }
+    .comp-table th { background: #0d1b2a; color: white; padding: 12px; text-align: left; font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.04em; }
+    .comp-table td { padding: 10px 12px; border-bottom: 1px solid #e2e8f0; color: #4a5568; }
+    .comp-table tr:nth-child(even) td { background: #f8fafc; }
 
-.comp-table{width:100%;border-collapse:collapse;font-size:0.86rem;margin-top:12px;border-radius:8px;overflow:hidden}
-.comp-table th{background:#1a365d;color:white;padding:10px 12px;text-align:left;font-weight:600}
-.comp-table td{padding:10px 12px;border-bottom:1px solid #e2e8f0;color:#4a5568}
-.comp-table tr:nth-child(even) td{background:#f8fafc}
+    /* Global Architecture Header & Footer */
+    .site-header { background: #fff; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .shi { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+    .sl { font-family: 'Fraunces', Georgia, serif; font-size: 18px; font-weight: 600; color: #1E1A17; text-decoration: none; }
+    .sl .la { color: #C8315A; }
+    .sn { display: flex; align-items: center; gap: 2px; }
+    .snl { font-size: 13.5px; font-weight: 500; color: #6B6259; text-decoration: none; padding: 5px 9px; border-radius: 6px; transition: color .15s, background .15s; }
+    .snl:hover { color: #C8315A; background: #FBEAF0; }
+    .snt { display: none; background: none; border: none; cursor: pointer; font-size: 18px; color: #3A3430; padding: 4px; }
+    @media (max-width: 680px) {
+      .sn { display: none; position: absolute; top: 54px; left: 0; right: 0; background: #fff; border-bottom: 1px solid rgba(42,36,32,0.1); flex-direction: column; align-items: flex-start; padding: .625rem; box-shadow: 0 4px 16px rgba(0,0,0,0.08); z-index: 999; }
+      .site-header.nav-open .sn { display: flex; }
+      .snt { display: block; }
+    }
+    .site-footer { background: #1E1A17; color: rgba(255,255,255,0.6); padding: 2.5rem 1.5rem 1.25rem; margin-top: 32px; }
+    .sfi { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 2.5rem; margin-bottom: 1.75rem; }
+    @media (max-width: 700px) { .sfi { grid-template-columns: 1fr; gap: 1.25rem; } }
+    .fb .sl { color: #fff; }
+    .fb p { font-size: 13px; margin-top: .4rem; line-height: 1.6; }
+    .fd { font-size: 11.5px; color: rgba(255,255,255,0.35); margin-top: .625rem; line-height: 1.6; }
+    .fcc { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1.25rem; }
+    .fc h4 { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: .5rem; }
+    .fc ul { list-style: none; padding: 0; }
+    .fc li { margin-bottom: .3rem; }
+    .fc a { font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color .15s; }
+    .fc a:hover { color: #fff; }
+    .fb2 { max-width: 1120px; margin: 0 auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; font-size: 12px; color: rgba(255,255,255,0.3); }
+    .fb2 a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .fb2 a:hover { color: #fff; }
 
-/* RELATED CARDS */
-.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-@media(max-width:500px){.related-grid{grid-template-columns:1fr}}
-.related-card{padding:14px;background:#f7fafc;border:1.5px solid #e2e8f0;border-radius:10px;text-decoration:none;color:#2d3748;transition:border-color 0.2s}
-.related-card:hover{border-color:#1a365d}
-.rc-name{font-weight:700;font-size:0.9rem;color:#1a365d;margin-bottom:4px}
-.rc-desc{font-size:0.8rem;color:#718096}
-
-.footer-cite{font-size:.8rem;color:#718096;text-align:center;margin-top:24px;padding:10px;line-height:1.5}
-
-@media(max-width:600px){
-  .res-grid{grid-template-columns:1fr 1fr}
-  .sev-grid{grid-template-columns:1fr}
-  .btn-row{flex-direction:column}
-  .hero{padding:24px 20px}
-  .card, .content-section{padding:20px}
-}
-
-@media print {
-  .back-link, .form-group, .hero, .share-bar, .related-grid, .content-section, footer, .footer-cite { display:none!important; }
-  body { background: white; padding: 0; }
-  .res-box { display: block !important; border: 2px solid #000; box-shadow: none; margin-top: 0; }
-}
-
-@media (min-width: 900px) {
-  body { padding: 32px 40px; }
-  .pw { max-width: 900px; }
-}
-</style>
+    @media(max-width:600px){
+      .res-grid{grid-template-columns:1fr 1fr}
+      .sev-grid{grid-template-columns:1fr}
+      .hero{padding:24px 20px}
+      .card, .content-section{padding:20px}
+    }
+    @media (min-width: 900px) {
+      body { padding: 0; }
+      .pw { max-width: 900px; }
+    }
+    @media print {
+      .site-header, .form-group, .hero, .share-bar, .content-section, .site-footer { display:none!important; }
+      body { background: white; padding: 0; }
+      .res-box { display: block !important; border: 2px solid #000; box-shadow: none; margin-top: 0; }
+    }
+  </style>
 </head>
 <body>
 
-<main class="pw">
-  <a class="back-link" href="/">← All Calculators</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
+    </div>
+  </header>
 
-  <div class="hero">
+  <header class="hero">
     <div class="hero-sub">Neurological Assessment Tool</div>
     <h1>GCS Calculator</h1>
     <p>Adult &amp; Pediatric Glasgow Coma Scale (with Intubated 'T' Modifier)</p>
-  </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
 
-  <div class="card">
-    <h2>Patient Assessment</h2>
-    <div class="form-group">
-      <label>1. Patient Age Group</label>
-      <select id="ageGroup" onchange="updateOptions()">
-        <option value="adult">Adult / Child (&gt;5 years)</option>
-        <option value="peds">Infant / Child (≤5 years) — Adelaide Scale</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>2. Eye Opening (E)</label>
-      <select id="eye" onchange="calc()">
-        <option value="4">4 — Spontaneous</option>
-        <option value="3">3 — To sound / speech</option>
-        <option value="2">2 — To pressure / pain</option>
-        <option value="1">1 — None</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>3. Verbal Response (V)</label>
-      <select id="verbal" onchange="calc()"></select>
-    </div>
-    <div class="form-group">
-      <label>4. Motor Response (M)</label>
-      <select id="motor" onchange="calc()"></select>
-    </div>
-  </div>
-
-  <div id="result" class="res-box" aria-live="polite">
-    <div id="res-header" class="res-header"></div>
-    <div class="res-grid">
-      <div class="rg-item"><div class="lbl">GCS Total</div><div id="res-total" class="val"></div></div>
-      <div class="rg-item"><div class="lbl">Breakdown</div><div id="res-comp" class="val"></div></div>
-      <div class="rg-item"><div class="lbl">Severity</div><div id="res-sev" class="val"></div></div>
-    </div>
-    <div id="interp-note" class="interp"></div>
-    
-    <div class="share-bar">
-      <button class="share-btn btn-whatsapp" onclick="shareWhatsApp()">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp
-      </button>
-      <button class="share-btn btn-copy" onclick="copyResult()">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-        Copy
-      </button>
-      <button class="share-btn btn-print" onclick="try{trackPrint('gcs-calculator');}catch(e){}; window.print()">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        Print
-      </button>
-      <button class="share-btn btn-save" onclick="saveImage()">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Save
-      </button>
-      <div class="copy-confirm" id="copy-confirm"></div>
-    </div>
-  </div>
-
-  <div class="content-section">
-    <h2>GCS Severity Classification</h2>
-    <div class="sev-grid">
-      <div class="sev-card mild">
-        <div class="range" style="color:#22543d">13–15</div>
-        <div class="type" style="color:#22543d">Mild TBI</div>
-        <div class="desc">Low neurosurgical risk. CT if deteriorates or high-risk mechanism.</div>
+  <div class="pw" style="padding: 24px 20px 0;">
+    <main id="main-content">
+      <div class="card">
+        <h2>Patient Assessment Parameters</h2>
+        <div class="form-group">
+          <label>1. Patient Age Group</label>
+          <select id="ageGroup" onchange="updateOptions()">
+            <option value="adult">Adult / Child (&gt;5 years)</option>
+            <option value="peds">Infant / Child (≤5 years) — Adelaide Scale</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>2. Eye Opening (E)</label>
+          <select id="eye" onchange="calc()">
+            <option value="4">4 — Spontaneous</option>
+            <option value="3">3 — To sound / speech</option>
+            <option value="2">2 — To pressure / pain</option>
+            <option value="1">1 — None</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>3. Verbal Response (V)</label>
+          <select id="verbal" onchange="calc()"></select>
+        </div>
+        <div class="form-group">
+          <label>4. Motor Response (M)</label>
+          <select id="motor" onchange="calc()"></select>
+        </div>
       </div>
-      <div class="sev-card mod">
-        <div class="range" style="color:#7b341e">9–12</div>
-        <div class="type" style="color:#7b341e">Moderate TBI</div>
-        <div class="desc">Urgent CT head. Neurosurgical consult. Close monitoring.</div>
+
+      <div id="result" class="res-box" aria-live="polite">
+        <div id="res-header" class="res-header"></div>
+        <div class="res-grid">
+          <div class="rg-item"><div class="lbl">GCS Total</div><div id="res-total" class="val"></div></div>
+          <div class="rg-item"><div class="lbl">Breakdown</div><div id="res-comp" class="val"></div></div>
+          <div class="rg-item"><div class="lbl">Severity</div><div id="res-sev" class="val"></div></div>
+        </div>
+        <div id="interp-note" class="interp"></div>
+        
+        <div class="share-bar">
+          <button class="share-btn btn-whatsapp" onclick="shareWhatsApp()">📲 WhatsApp</button>
+          <button class="share-btn btn-copy" onclick="copyResult()">📋 Copy</button>
+          <button class="share-btn btn-print" onclick="window.print()">🖨 Print</button>
+          <button class="share-btn btn-save" onclick="saveImage()">💾 Save Image</button>
+          <div class="copy-confirm" id="copy-confirm"></div>
+        </div>
       </div>
-      <div class="sev-card sev">
-        <div class="range" style="color:#742a2a">3–8</div>
-        <div class="type" style="color:#742a2a">Severe TBI / Coma</div>
-        <div class="desc">Airway protection required. ICU admission. Urgent neurosurgery.</div>
+
+      <div class="content-section">
+        <h2>GCS Severity Classification</h2>
+        <div class="sev-grid">
+          <div class="sev-card mild">
+            <div class="range" style="color:#22543d">13–15</div>
+            <div class="type" style="color:#22543d">Mild TBI</div>
+            <div class="desc">Low neurosurgical risk. CT if deteriorates or high-risk mechanism.</div>
+          </div>
+          <div class="sev-card mod">
+            <div class="range" style="color:#7b341e">9–12</div>
+            <div class="type" style="color:#7b341e">Moderate TBI</div>
+            <div class="desc">Urgent CT head. Neurosurgical consult. Close monitoring.</div>
+          </div>
+          <div class="sev-card sev">
+            <div class="range" style="color:#742a2a">3–8</div>
+            <div class="type" style="color:#742a2a">Severe TBI / Coma</div>
+            <div class="desc">Airway protection required. ICU admission. Urgent neurosurgery.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2>GCS Component Scoring Reference</h2>
+        <table class="comp-table">
+          <thead>
+            <tr><th>Score</th><th>Eye Opening (E)</th><th>Verbal — Adult (V)</th><th>Verbal — Pediatric (V)</th><th>Motor Response (M)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>6</td><td>—</td><td>—</td><td>—</td><td>Obeys commands / Normal movement</td></tr>
+            <tr><td>5</td><td>—</td><td>Oriented</td><td>Normal (coos, babbles)</td><td>Localizes to pain / Withdraws to touch</td></tr>
+            <tr><td>4</td><td>Spontaneous</td><td>Confused</td><td>Consolable cry</td><td>Normal flexion / Withdraws to pain</td></tr>
+            <tr><td>3</td><td>To speech</td><td>Inappropriate words</td><td>Persistent cry / Pain cry</td><td>Abnormal flexion (Decorticate)</td></tr>
+            <tr><td>2</td><td>To pain</td><td>Sounds only</td><td>Moans / Grunts to pain</td><td>Extension (Decerebrate)</td></tr>
+            <tr><td>1</td><td>None</td><td>None</td><td>None</td><td>None</td></tr>
+            <tr><td>T</td><td>—</td><td>Intubated</td><td>Intubated</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="content-section">
+        <h2>About the Glasgow Coma Scale</h2>
+        <p>The Glasgow Coma Scale was introduced by Graham Teasdale and Bryan Jennett in 1974 at the University of Glasgow as a standardized method to objectively assess and communicate the conscious state of a patient following traumatic brain injury (TBI). Prior to the GCS, neurological assessment was inconsistent and highly variable between clinicians and institutions. Today, the GCS is the most universally used consciousness assessment tool in emergency medicine, trauma surgery, critical care, and neurology worldwide.</p>
+        <p>The scale evaluates three independent domains: eye opening, verbal response, and motor response. The maximum score of 15 indicates a fully alert, oriented individual. The minimum score of 3 (not zero) reflects the lowest possible response in each domain. A score of ≤8 is the internationally accepted criterion for coma and is a standard intubation threshold in head-injured patients to protect the airway.</p>
+
+        <h3>Intubated Patients and the "T" Modifier</h3>
+        <p>When a patient is intubated or tracheostomized, the verbal response cannot be accurately assessed. In such cases, the verbal component is recorded as "T" (for Tube), and the GCS is expressed as, for example, <strong>E3VTM5</strong>. The numeric sum only includes the Eye and Motor scores. This convention prevents underestimation of consciousness due to the mechanical inability to speak and ensures documentation clarity across the care team.</p>
+
+        <h3>Pediatric (Adelaide) Scale</h3>
+        <p>Infants and young children cannot produce adult-standard verbal responses due to their developmental stage. The <strong>Adelaide Pediatric GCS</strong> (and similar scales endorsed by the IAP) adapts the verbal criteria to age-appropriate behaviours. A score of 5 represents normal cooing, babbling, or smiling; lower scores indicate crying in response to pain, moaning, or complete absence of response. The motor and eye components follow the same principles as the adult scale but use age-adapted descriptions for motor behaviour.</p>
+
+        <h3>Important Limitations</h3>
+        <ul>
+          <li>GCS is not reliable as a standalone tool for prognostication — it must be combined with CT findings, age, and injury mechanism.</li>
+          <li>Sedation, alcohol, metabolic encephalopathy, or a postictal state can falsely lower the score without structural brain injury.</li>
+          <li>Early assessment within the first hour is most predictive; the score often improves following initial fluid resuscitation.</li>
+          <li>Inter-rater reliability for the motor component (specifically differentiating between normal flexion and abnormal decorticate posturing) is lower than for other domains. It is important to standardize technique within clinical units.</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h2>Frequently Asked Questions</h2>
+        <h3>What is the minimum GCS score?</h3>
+        <p>The minimum GCS score is 3, not 0. This is because each of the three components (Eye, Verbal, Motor) has a minimum score of 1. A score of 3 (E1V1M1) represents the deepest state of unresponsiveness measurable by the scale.</p>
+        <h3>What GCS score is considered a medical emergency?</h3>
+        <p>A GCS of 8 or below is considered a medical emergency requiring immediate airway assessment and management ("GCS 8, intubate"). Most trauma protocols mandate intubation for GCS ≤8. Any patient whose GCS is falling — even from a higher baseline (e.g., dropping from 14 to 12) — requires urgent reassessment and escalation.</p>
+        <h3>How is GCS different in pediatric patients?</h3>
+        <p>The pediatric adaptation modifies the verbal criteria to reflect age-appropriate communication. An infant who is cooing and smiling normally scores 5 on verbal, just as an oriented adult does. Infants cannot say "I am oriented to time, place, and person" but their developmental equivalent of a best response is still coded as a 5.</p>
+        <h3>Is GCS used for stroke patients?</h3>
+        <p>The GCS can be applied in stroke patients to assess their overall consciousness level, but the NIH Stroke Scale (NIHSS) is preferred for detailed stroke-specific deficit assessment. The NIHSS captures language, motor, and sensory deficits with far greater specificity for stroke care pathways.</p>
+      </div>
+
+      <div class="alert alert-success" style="margin-top:2rem; background:#ecfdf5; border-left:4px solid #10b981; padding:16px; border-radius:8px;">
+        <span class="alert-icon">📋</span>
+        <div><strong>Key takeaway:</strong> Objective monitoring using the GCS standard prevents communication breakdowns across critical care handoffs. Always document the individual subscale triplet components ($E, V, M$) alongside numerical sums to keep monitoring patterns accurate.</div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+        <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h2>GCS Component Scoring Reference</h2>
-    <table class="comp-table">
-      <thead>
-        <tr><th>Score</th><th>Eye Opening (E)</th><th>Verbal — Adult (V)</th><th>Verbal — Pediatric (V)</th><th>Motor Response (M)</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>6</td><td>—</td><td>—</td><td>—</td><td>Obeys commands / Normal movement</td></tr>
-        <tr><td>5</td><td>—</td><td>Oriented</td><td>Normal (coos, babbles)</td><td>Localizes to pain / Withdraws to touch</td></tr>
-        <tr><td>4</td><td>Spontaneous</td><td>Confused</td><td>Consolable cry</td><td>Normal flexion / Withdraws to pain</td></tr>
-        <tr><td>3</td><td>To speech</td><td>Inappropriate words</td><td>Persistent cry / Pain cry</td><td>Abnormal flexion (Decorticate)</td></tr>
-        <tr><td>2</td><td>To pain</td><td>Sounds only</td><td>Moans / Grunts</td><td>Extension (Decerebrate)</td></tr>
-        <tr><td>1</td><td>None</td><td>None</td><td>None</td><td>None</td></tr>
-        <tr><td>T</td><td>—</td><td>Intubated</td><td>Intubated</td><td>—</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="content-section">
-    <h2>About the Glasgow Coma Scale</h2>
-    <p>The Glasgow Coma Scale was introduced by Graham Teasdale and Bryan Jennett in 1974 at the University of Glasgow as a standardized method to objectively assess and communicate the conscious state of a patient following traumatic brain injury (TBI). Prior to the GCS, neurological assessment was inconsistent and highly variable between clinicians and institutions. Today, the GCS is the most universally used consciousness assessment tool in emergency medicine, trauma surgery, critical care, and neurology worldwide.</p>
-    <p>The scale evaluates three independent domains: eye opening, verbal response, and motor response. The maximum score of 15 indicates a fully alert, oriented individual. The minimum score of 3 (not zero) reflects the lowest possible response in each domain. A score of ≤8 is the internationally accepted criterion for coma and is a standard intubation threshold in head-injured patients to protect the airway.</p>
-
-    <h3>Intubated Patients and the "T" Modifier</h3>
-    <p>When a patient is intubated or tracheostomized, the verbal response cannot be accurately assessed. In such cases, the verbal component is recorded as "T" (for Tube), and the GCS is expressed as, for example, <strong>E3VTM5</strong>. The numeric sum only includes the Eye and Motor scores. This convention prevents underestimation of consciousness due to the mechanical inability to speak and ensures documentation clarity across the care team.</p>
-
-    <h3>Pediatric (Adelaide) Scale</h3>
-    <p>Infants and young children cannot produce adult-standard verbal responses due to their developmental stage. The <strong>Adelaide Pediatric GCS</strong> (and similar scales endorsed by the IAP) adapts the verbal criteria to age-appropriate behaviours. A score of 5 represents normal cooing, babbling, or smiling; lower scores indicate crying in response to pain, moaning, or complete absence of response. The motor and eye components follow the same principles as the adult scale but use age-adapted descriptions for motor behaviour.</p>
-
-    <h3>Important Limitations</h3>
-    <ul>
-      <li>GCS is not reliable as a standalone tool for prognostication — it must be combined with CT findings, age, and injury mechanism.</li>
-      <li>Sedation, alcohol, metabolic encephalopathy, or a postictal state can falsely lower the score without structural brain injury.</li>
-      <li>Early assessment within the first hour is most predictive; the score often improves following initial fluid resuscitation.</li>
-      <li>Inter-rater reliability for the motor component (specifically differentiating between normal flexion and abnormal decorticate posturing) is lower than for other domains. It is important to standardize technique within clinical units.</li>
-    </ul>
-  </div>
-
-  <div class="content-section">
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is the minimum GCS score?</h3>
-    <p>The minimum GCS score is 3, not 0. This is because each of the three components (Eye, Verbal, Motor) has a minimum score of 1. A score of 3 (E1V1M1) represents the deepest state of unresponsiveness measurable by the scale.</p>
-
-    <h3>What GCS score is considered a medical emergency?</h3>
-    <p>A GCS of 8 or below is considered a medical emergency requiring immediate airway assessment and management ("GCS 8, intubate"). Most trauma protocols mandate intubation for GCS ≤8. Any patient whose GCS is falling — even from a higher baseline (e.g., dropping from 14 to 12) — requires urgent reassessment and escalation.</p>
-
-    <h3>How is GCS different in pediatric patients?</h3>
-    <p>The pediatric adaptation modifies the verbal criteria to reflect age-appropriate communication. An infant who is cooing and smiling normally scores 5 on verbal, just as an oriented adult does. Infants cannot say "I am oriented to time, place, and person" but their developmental equivalent of a best response is still coded as a 5.</p>
-
-    <h3>Is GCS used for stroke patients?</h3>
-    <p>The GCS can be applied in stroke patients to assess their overall consciousness level, but the NIH Stroke Scale (NIHSS) is preferred for detailed stroke-specific deficit assessment. The NIHSS captures language, motor, and sensory deficits with far greater specificity for stroke care pathways.</p>
-  </div>
-
-  <section class="card">
-    <h2>Related Emergency Tools</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/news2" class="related-card">
-        <div class="rc-name">NEWS2 Score</div>
-        <div class="rc-desc">Early warning monitoring</div>
-      </a>
-      <a href="/medical-calculators/burn-calculator" class="related-card">
-        <div class="rc-name">Burn Calculator</div>
-        <div class="rc-desc">TBSA & Parkland fluids</div>
-      </a>
-      <a href="/medical-calculators/wells-score" class="related-card">
-        <div class="rc-name">Wells Score</div>
-        <div class="rc-desc">DVT/PE risk assessment</div>
-      </a>
-      <a href="/medical-calculators/" class="related-card">
-        <div class="rc-name">All Calculators →</div>
-        <div class="rc-desc">32+ clinical tools</div>
-      </a>
+    <div class="fb2">
+      <span>© 2026 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
     </div>
-  </section>
+  </footer>
 
-  <div class="footer-cite">
-    References: Teasdale G, Jennett B. Assessment of Coma and Impaired Consciousness. Lancet. 1974. | Adelaide Pediatric GCS | IAP Trauma Reference 2023. This GCS calculator is intended to support, not replace, clinical assessment and judgment.
-  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    const scaleData = {
+      adult: {
+        v: [
+          {val:5,txt:"5 — Oriented (Time, Place, Person)"},
+          {val:4,txt:"4 — Confused conversation"},
+          {val:3,txt:"3 — Inappropriate words"},
+          {val:2,txt:"2 — Incomprehensible sounds"},
+          {val:1,txt:"1 — None"},
+          {val:"T",txt:"T — Intubated / Tracheal Tube"}
+        ],
+        m: [
+          {val:6,txt:"6 — Obeys commands"},
+          {val:5,txt:"5 — Localizes to pain"},
+          {val:4,txt:"4 — Normal flexion (Withdrawal)"},
+          {val:3,txt:"3 — Abnormal flexion (Decorticate)"},
+          {val:2,txt:"2 — Extension (Decerebrate)"},
+          {val:1,txt:"1 — None"}
+        ]
+      },
+      peds: {
+        v: [
+          {val:5,txt:"5 — Normal (smiles, coos, babbles)"},
+          {val:4,txt:"4 — Consolable cry / Irritable"},
+          {val:3,txt:"3 — Persistent cry / Pain cry"},
+          {val:2,txt:"2 — Moans / Grunts to pain"},
+          {val:1,txt:"1 — None"},
+          {val:"T",txt:"T — Intubated / Tracheal Tube"}
+        ],
+        m: [
+          {val:6,txt:"6 — Spontaneous / Normal movement"},
+          {val:5,txt:"5 — Withdraws to touch"},
+          {val:4,txt:"4 — Withdraws to pain"},
+          {val:3,txt:"3 — Abnormal flexion (Decorticate)"},
+          {val:2,txt:"2 — Extension (Decerebrate)"},
+          {val:1,txt:"1 — None"}
+        ]
+      }
+    };
 
-</main>
+    let shareText = "";
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script>
-const scaleData = {
-  adult: {
-    v: [
-      {val:5,txt:"5 — Oriented (Time, Place, Person)"},
-      {val:4,txt:"4 — Confused conversation"},
-      {val:3,txt:"3 — Inappropriate words"},
-      {val:2,txt:"2 — Incomprehensible sounds"},
-      {val:1,txt:"1 — None"},
-      {val:"T",txt:"T — Intubated / Tracheal Tube"}
-    ],
-    m: [
-      {val:6,txt:"6 — Obeys commands"},
-      {val:5,txt:"5 — Localizes to pain"},
-      {val:4,txt:"4 — Normal flexion (Withdrawal)"},
-      {val:3,txt:"3 — Abnormal flexion (Decorticate)"},
-      {val:2,txt:"2 — Extension (Decerebrate)"},
-      {val:1,txt:"1 — None"}
-    ]
-  },
-  peds: {
-    v: [
-      {val:5,txt:"5 — Normal (smiles, coos, babbles)"},
-      {val:4,txt:"4 — Consolable cry / Irritable"},
-      {val:3,txt:"3 — Persistent cry / Pain cry"},
-      {val:2,txt:"2 — Moans / Grunts to pain"},
-      {val:1,txt:"1 — None"},
-      {val:"T",txt:"T — Intubated / Tracheal Tube"}
-    ],
-    m: [
-      {val:6,txt:"6 — Spontaneous / Normal movement"},
-      {val:5,txt:"5 — Withdraws to touch"},
-      {val:4,txt:"4 — Withdraws to pain"},
-      {val:3,txt:"3 — Abnormal flexion (Decorticate)"},
-      {val:2,txt:"2 — Extension (Decerebrate)"},
-      {val:1,txt:"1 — None"}
-    ]
-  }
-};
-
-let shareText = "";
-
-function updateOptions(){
-  const group=document.getElementById("ageGroup").value;
-  document.getElementById("verbal").innerHTML=scaleData[group].v.map(o=>`<option value="${o.val}">${o.txt}</option>`).join('');
-  document.getElementById("motor").innerHTML=scaleData[group].m.map(o=>`<option value="${o.val}">${o.txt}</option>`).join('');
-  calc();
-}
-
-function calc(){
-  const e=parseInt(document.getElementById("eye").value);
-  const vRaw=document.getElementById("verbal").value;
-  const m=parseInt(document.getElementById("motor").value);
-  const isIntubated=vRaw==="T";
-  
-  const v=isIntubated?0:parseInt(vRaw);
-  const totalDisplay=isIntubated?(e+m)+"T":(e+v+m);
-  const comp=`E${e}V${vRaw}M${m}`;
-  let checkScore=isIntubated?(e+m+1):(e+v+m); // Add 1 to offset missing V for severity check
-
-  let status="mild", label="Mild TBI", note="GCS 13–15: Mild head injury. Low risk of neurosurgical intervention. CT if mechanism is high-risk or GCS is declining.";
-  if(checkScore<=8){
-    status="severe"; label="Severe TBI / Coma";
-    note="GCS ≤8: Severe head injury / Coma. <strong>AIRWAY PROTECTION REQUIRED.</strong> Urgent ICU admission and neurosurgical assessment.";
-  } else if(checkScore<=12){
-    status="moderate"; label="Moderate TBI";
-    note="GCS 9–12: Moderate head injury. <strong>Urgent CT imaging</strong> and neurosurgical consultation recommended. Monitor closely for deterioration.";
-  }
-
-  const colors={mild:"#48bb78",moderate:"#ed8936",severe:"#e53e3e"};
-  const hdr=document.getElementById("res-header");
-  hdr.style.background=colors[status];
-  hdr.textContent=isIntubated?"INTUBATED — "+label:label;
-  
-  document.getElementById("res-total").textContent=totalDisplay;
-  document.getElementById("res-comp").textContent=comp;
-  document.getElementById("res-sev").textContent=label.split(" ")[0];
-  
-  const noteBox=document.getElementById("interp-note");
-  noteBox.className="interp "+status;
-  noteBox.innerHTML="<strong>Clinical Status:</strong> "+note;
-  
-  document.getElementById("result").style.display="block";
-
-  try { if (typeof trackCalc === 'function') trackCalc('gcs-calculator', { score: totalDisplay, intubated: isIntubated }); } catch(e) {}
-
-  shareText = `🧠 GCS Assessment\n\nTotal Score: ${totalDisplay}\nBreakdown: ${comp}\nSeverity: ${label}\n\nCalculated at: ${window.location.href}`;
-}
-
-// ── SHARE & COPY FUNCTIONS ──
-function shareWhatsApp() {
-  if (!shareText) return;
-  try { if (typeof uTrack === 'function') uTrack('share_whatsapp', { tool: 'gcs-calculator' }); } catch(e) {} 
-  window.open('https://wa.me/?text=' + encodeURIComponent(shareText), "_blank", "noopener");
-}
-
-function copyResult() {
-  if (!shareText) return;
-  
-  const successHandler = () => {
-    const el = document.getElementById("copy-confirm");
-    if (el) {
-      el.textContent = "✓ Copied!";
-      setTimeout(() => { el.textContent = ""; }, 2500);
+    function updateOptions(){
+      const group=document.getElementById("ageGroup").value;
+      document.getElementById("verbal").innerHTML=scaleData[group].v.map(o=>`<option value="${o.val}">${o.txt}</option>`).join('');
+      document.getElementById("motor").innerHTML=scaleData[group].m.map(o=>`<option value="${o.val}">${o.txt}</option>`).join('');
+      calc();
     }
-  };
 
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(shareText).then(successHandler).catch(() => fallbackCopy(shareText, successHandler));
-  } else {
-    fallbackCopy(shareText, successHandler);
-  }
-}
+    function calc(){
+      const e=parseInt(document.getElementById("eye").value);
+      const vRaw=document.getElementById("verbal").value;
+      const m=parseInt(document.getElementById("motor").value);
+      const isIntubated=vRaw==="T";
+      
+      const v=isIntubated?0:parseInt(vRaw);
+      const totalDisplay=isIntubated?(e+m)+"T":(e+v+m);
+      const comp=`E${e}V${vRaw}M${m}`;
+      let checkScore=isIntubated?(e+m+1):(e+v+m); 
 
-function fallbackCopy(text, callback) {
-  const ta = document.createElement("textarea");
-  ta.value = text;
-  ta.style.position = "fixed"; ta.style.top = "0"; ta.style.left = "0";
-  document.body.appendChild(ta);
-  ta.focus(); ta.select();
-  try {
-    if(document.execCommand('copy')) callback();
-  } catch (err) {
-    console.error("Copy failed", err);
-  }
-  document.body.removeChild(ta);
-}
+      let status="mild", label="Mild TBI", note="GCS 13–15: Mild head injury. Low risk of neurosurgical intervention. CT if mechanism is high-risk or GCS is declining.";
+      if(checkScore<=8){
+        status="severe"; label="Severe TBI / Coma";
+        note="GCS ≤8: Severe head injury / Coma. <strong>AIRWAY PROTECTION REQUIRED.</strong> Urgent ICU admission and neurosurgical assessment.";
+      } else if(checkScore<=12){
+        status="moderate"; label="Moderate TBI";
+        note="GCS 9–12: Moderate head injury. <strong>Urgent CT imaging</strong> and neurosurgical consultation recommended. Monitor closely for deterioration.";
+      }
 
-function saveImage() {
-  if (!shareText) return;
-  const btn = event.target.closest("button"), orig = btn.innerHTML;
-  btn.textContent = "Saving..."; btn.disabled = true;
-  html2canvas(document.getElementById("result"), { backgroundColor:"#ffffff", scale:2, useCORS:true })
-    .then(canvas => {
-      const a = document.createElement("a");
-      a.download = "gcs-result.png";
-      a.href = canvas.toDataURL("image/png");
-      a.click();
-      btn.innerHTML = orig; btn.disabled = false;
-    });
-}
+      const colors={mild:"#48bb78",moderate:"#ed8936",severe:"#e53e3e"};
+      const hdr=document.getElementById("res-header");
+      hdr.style.background=colors[status];
+      hdr.textContent=isIntubated?"INTUBATED — "+label:label;
+      
+      document.getElementById("res-total").textContent=totalDisplay;
+      document.getElementById("res-comp").textContent=comp;
+      document.getElementById("res-sev").textContent=label.split(" ")[0];
+      
+      const noteBox=document.getElementById("interp-note");
+      noteBox.className="interp "+status;
+      noteBox.innerHTML="<strong>Clinical Status:</strong> "+note;
+      
+      document.getElementById("result").style.display="block";
 
-// Initialize
-updateOptions();
-</script>
-<script src="/assets/shared-nav.js"></script>
+      if (typeof trackCalc === 'function') {
+        trackCalc('gcs-calculator', { score: totalDisplay, intubated: isIntubated });
+      }
+
+      shareText = `🧠 GCS Assessment\n\nTotal Score: ${totalDisplay}\nBreakdown: ${comp}\nSeverity: ${label}\n\nCalculated at: ${window.location.href}`;
+    }
+
+    function shareWhatsApp() {
+      if (!shareText) return;
+      window.open('https://wa.me/?text=' + encodeURIComponent(shareText), "_blank", "noopener");
+    }
+
+    function copyResult() {
+      if (!shareText) return;
+      
+      const successHandler = () => {
+        const el = document.getElementById("copy-confirm");
+        if (el) {
+          el.textContent = "✓ Copied!";
+          setTimeout(() => { el.textContent = ""; }, 2500);
+        }
+      };
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(shareText).then(successHandler).catch(() => fallbackCopy(shareText, successHandler));
+      } else {
+        fallbackCopy(shareText, successHandler);
+      }
+    }
+
+    function fallbackCopy(text, callback) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed"; ta.style.top = "0"; ta.style.left = "0";
+      document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      try {
+        if(document.execCommand('copy')) callback();
+      } catch (err) {
+        console.error("Copy failed", err);
+      }
+      document.body.removeChild(ta);
+    }
+
+    function saveImage() {
+      if (!shareText) return;
+      const btn = event.target.closest("button"), orig = btn.innerHTML;
+      btn.textContent = "Saving..."; btn.disabled = true;
+      html2canvas(document.getElementById("result"), { backgroundColor:"#ffffff", scale:2, useCORS:true })
+        .then(canvas => {
+          const a = document.createElement("a");
+          a.download = "gcs-result.png";
+          a.href = canvas.toDataURL("image/png");
+          a.click();
+          btn.innerHTML = orig; btn.disabled = false;
+        });
+    }
+
+    updateOptions();
+  </script>
 </body>
 </html>
