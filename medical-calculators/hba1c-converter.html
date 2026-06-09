@@ -1,104 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="/assets/umami-events.js"></script>
-  <title>HbA1c Converter — % to mmol/mol, eAG mg/dL & mmol/L | Diabetes Targets</title>
-  <meta name="description" content="Free HbA1c converter: convert HbA1c % to IFCC mmol/mol, estimated average glucose (eAG) in mg/dL and mmol/L. Instant diabetes target interpretation. Used by doctors, diabetologists, and patients." />
-  <meta name="keywords" content="HbA1c converter, HbA1c to mmol/mol, HbA1c to eAG, A1c converter, glycated haemoglobin calculator, HbA1c percentage to IFCC, eAG calculator, average blood sugar from HbA1c, HbA1c diabetes target, HbA1c 7 percent in mmol, HbA1c India, DCCT to IFCC conversion, HbA1c mmol/L" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/hba1c-converter" />
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="HbA1c Converter — % ↔ mmol/mol ↔ eAG" />
-  <meta property="og:description" content="Convert HbA1c % to IFCC mmol/mol and estimated average glucose in mg/dL or mmol/L. Diabetes target bands included." />
-  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/hba1c-converter" />
-  <meta property="og:site_name" content="Medical Calculators" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="HbA1c Converter — % to mmol/mol & eAG" />
-  <meta name="twitter:description" content="Free HbA1c unit converter with diabetes target interpretation. All units supported." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>HbA1c Converter | RxMedCalc</title>
+  <meta name="description" content="Free HbA1c converter: convert HbA1c % to IFCC mmol/mol, estimated average glucose (eAG) in mg/dL and mmol/L. Instant diabetes target interpretation. Used by doctors, diabetologists, and patients."/>
+  <meta name="keywords" content="HbA1c converter, HbA1c to mmol/mol, HbA1c to eAG, A1c converter, glycated haemoglobin calculator, HbA1c percentage to IFCC, eAG calculator, average blood sugar from HbA1c, HbA1c diabetes target, HbA1c 7 percent in mmol, HbA1c India, DCCT to IFCC conversion, HbA1c mmol/L"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/hba1c-converter"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="HbA1c Converter | RxMedCalc"/>
+  <meta property="og:description" content="Free HbA1c converter: convert HbA1c % to IFCC mmol/mol, estimated average glucose (eAG) in mg/dL and mmol/L. Instant diabetes target interpretation. Used by doctors, diabetologists, and patients."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/hba1c-converter"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/hba1c-converter.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="HbA1c Converter"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/hba1c-converter.png"/>
+  <meta name="twitter:image:alt" content="HbA1c Converter"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="HbA1c Converter | RxMedCalc"/>
+  <meta name="twitter:description" content="Free HbA1c converter: convert HbA1c % to IFCC mmol/mol, estimated average glucose (eAG) in mg/dL and mmol/L. Instant diabetes target interpretation. Used by doctors, diabetologists, and patients."/>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/medical-calculators/"},
-          {"@type":"ListItem","position":2,"name":"Endocrinology","item":"https://rxmedcalc.com/medical-calculators/#endo"},
-          {"@type":"ListItem","position":3,"name":"HbA1c Converter","item":"https://rxmedcalc.com/medical-calculators/hba1c-converter"}
-        ]
-      },
-      {
-        "@type": "MedicalWebPage",
-        "name": "HbA1c Converter — % to mmol/mol and eAG",
-        "url": "https://rxmedcalc.com/medical-calculators/hba1c-converter",
-        "description": "Convert HbA1c between DCCT % and IFCC mmol/mol, and calculate estimated average glucose (eAG) in mg/dL and mmol/L.",
-        "specialty": "Endocrinology"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type":"Question","name":"What is HbA1c and why is it measured?",
-            "acceptedAnswer":{"@type":"Answer","text":"HbA1c (glycated haemoglobin or glycosylated haemoglobin) measures the percentage of haemoglobin that has glucose attached to it. Because red blood cells live approximately 90–120 days, HbA1c reflects average blood glucose over the past 2–3 months. It is the gold standard for monitoring long-term glycaemic control in diabetes and is also used to diagnose diabetes (≥6.5% / ≥48 mmol/mol) and prediabetes (5.7–6.4% / 39–47 mmol/mol)."}
-          },
-          {
-            "@type":"Question","name":"How do I convert HbA1c % to mmol/mol?",
-            "acceptedAnswer":{"@type":"Answer","text":"To convert HbA1c from DCCT % to IFCC mmol/mol, use the formula: mmol/mol = (HbA1c% − 2.15) × 10.929. For example, HbA1c 7% = (7 − 2.15) × 10.929 = 53 mmol/mol. To convert back: HbA1c% = (mmol/mol ÷ 10.929) + 2.15."}
-          },
-          {
-            "@type":"Question","name":"What is eAG (estimated average glucose)?",
-            "acceptedAnswer":{"@type":"Answer","text":"eAG is the estimated average blood glucose level corresponding to an HbA1c value, expressed in mg/dL or mmol/L. Formula: eAG (mg/dL) = (28.7 × HbA1c%) − 46.7. Convert to mmol/L by dividing by 18.016. For example, HbA1c 7% corresponds to eAG ~154 mg/dL (~8.6 mmol/L)."}
-          },
-          {
-            "@type":"Question","name":"What is the target HbA1c for type 2 diabetes?",
-            "acceptedAnswer":{"@type":"Answer","text":"For most adults with type 2 diabetes, the ADA and IDF recommend an HbA1c target of <7% (<53 mmol/mol). A less stringent target of <8% (<64 mmol/mol) is acceptable for elderly patients, those with limited life expectancy, severe hypoglycaemia risk, or multiple comorbidities. More stringent targets (<6.5%) may be appropriate for newly diagnosed patients without cardiovascular disease."}
-          },
-          {
-            "@type":"Question","name":"What is the HbA1c cut-off to diagnose diabetes?",
-            "acceptedAnswer":{"@type":"Answer","text":"According to WHO and ADA criteria, diabetes is diagnosed when HbA1c ≥6.5% (≥48 mmol/mol) on two separate occasions, or once with confirmed symptoms or other diagnostic criteria. Prediabetes is defined as HbA1c 5.7–6.4% (39–47 mmol/mol) by ADA, or 6.0–6.4% (42–47 mmol/mol) by WHO."}
-          },
-          {
-            "@type":"Question","name":"What conditions cause falsely high or low HbA1c?",
-            "acceptedAnswer":{"@type":"Answer","text":"Falsely HIGH HbA1c: iron deficiency anaemia, vitamin B12 deficiency, splenectomy, alcoholism, chronic kidney disease (uraemia). Falsely LOW HbA1c: haemolytic anaemia, haemoglobin variants (HbS, HbC, HbE — common in India and Africa), pregnancy (increased red cell turnover), recent blood transfusion, erythropoietin therapy. In these conditions, fructosamine or continuous glucose monitoring may be more reliable."}
-          },
-          {
-            "@type":"Question","name":"What is the difference between DCCT and IFCC HbA1c?",
-            "acceptedAnswer":{"@type":"Answer","text":"DCCT (%) is the older unit used primarily in the USA and many Asian countries including India. IFCC (mmol/mol) is the newer internationally standardised unit adopted by Europe, Australia, and WHO. The two scales are related but not linearly identical. Most modern analysers report both. The conversion formula is: IFCC (mmol/mol) = (DCCT% − 2.15) × 10.929."}
-          },
-          {
-            "@type":"Question","name":"How often should HbA1c be tested?",
-            "acceptedAnswer":{"@type":"Answer","text":"In patients with well-controlled diabetes meeting targets, HbA1c should be tested every 6 months. In patients with poorly controlled diabetes or those whose treatment has been recently changed, every 3 months. For diagnosis and high-risk prediabetes screening, annually. Note that HbA1c reflects average glucose over 2–3 months, so testing more frequently than every 3 months is rarely useful."}
-          },
-          {
-            "@type":"Question","name":"What is the difference between DCCT % and IFCC mmol/mol?",
-            "acceptedAnswer":{"@type":"Answer","text":"Both measure glycated haemoglobin but use different reference standards. DCCT % (also called NGSP) is the traditional percentage format used in the USA, India, and most of Asia. IFCC mmol/mol is the newer SI-unit format adopted in the UK, Europe, and Australia. The two scales are not interchangeable by simple multiplication — the conversion formula is: mmol/mol = (% − 2.15) × 10.929. Indian laboratories report HbA1c in DCCT % under ADA and RSSDI guidelines."}
-          },
-          {
-            "@type":"Question","name":"What HbA1c is considered diabetic in India?",
-            "acceptedAnswer":{"@type":"Answer","text":"Per ADA 2024 and RSSDI guidelines, an HbA1c of ≥6.5% (48 mmol/mol) on two separate occasions confirms diabetes mellitus. Prediabetes is 5.7–6.4% (39–47 mmol/mol). Below 5.7% is considered normal."}
-          },
-          {
-            "@type":"Question","name":"What is the HbA1c treatment target for type 2 diabetes in India?",
-            "acceptedAnswer":{"@type":"Answer","text":"RSSDI and ADA recommend an HbA1c target of <7.0% (53 mmol/mol) for most adults with type 2 diabetes. Targets should be individualised: <6.5% for younger patients with short disease duration, no hypoglycaemia risk, and no cardiovascular disease; <8.0% for elderly patients, those with significant comorbidities, hypoglycaemia unawareness, or limited life expectancy."}
-          },
-          {
-            "@type":"Question","name":"When is HbA1c unreliable and what should be used instead?",
-            "acceptedAnswer":{"@type":"Answer","text":"HbA1c is unreliable in haemolytic anaemia, sickle cell disease (HbS), HbC disease, malaria, and recent blood transfusion (falsely low). It is falsely high in iron deficiency anaemia, vitamin B12 deficiency, and splenectomy. In CKD, both effects occur depending on severity. In these situations, fructosamine (reflects 2–3 week average) or glycated albumin is preferred. During pregnancy, use fasting and post-prandial glucose or CGMS instead."}
-          }
-        ]
-      }
-    ]
-  }
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"HbA1c Converter","description":"Free HbA1c converter: convert HbA1c % to IFCC mmol/mol, estimated average glucose (eAG) in mg/dL and mmol/L. Instant diabetes target interpretation. Used by doctors, diabetologists, and patients.","url":"https://rxmedcalc.com/medical-calculators/hba1c-converter","@id":"https://rxmedcalc.com/medical-calculators/hba1c-converter","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is HbA1c and why is it measured?","acceptedAnswer":{"@type":"Answer","text":"HbA1c (glycated haemoglobin or glycosylated haemoglobin) measures the percentage of haemoglobin that has glucose attached to it. Because red blood cells live approximately 90–120 days, HbA1c reflects average blood glucose over the past 2–3 months. It is the gold standard for monitoring long-term glycaemic control in diabetes and is also used to diagnose diabetes (≥6.5% / ≥48 mmol/mol) and prediabetes (5.7–6.4% / 39–47 mmol/mol)."}},
+      {"@type":"Question","name":"How do I convert HbA1c % to mmol/mol?","acceptedAnswer":{"@type":"Answer","text":"To convert HbA1c from DCCT % to IFCC mmol/mol, use the formula: mmol/mol = (HbA1c% − 2.15) × 10.929. For example, HbA1c 7% = (7 − 2.15) × 10.929 = 53 mmol/mol. To convert back: HbA1c% = (mmol/mol ÷ 10.929) + 2.15."}},
+      {"@type":"Question","name":"What is eAG (estimated average glucose)?","acceptedAnswer":{"@type":"Answer","text":"eAG is the estimated average blood glucose level corresponding to an HbA1c value, expressed in mg/dL or mmol/L. Formula: eAG (mg/dL) = (28.7 × HbA1c%) − 46.7. Convert to mmol/L by dividing by 18.016. For example, HbA1c 7% corresponds to eAG ~154 mg/dL (~8.6 mmol/L)."}},
+      {"@type":"Question","name":"What is the target HbA1c for type 2 diabetes?","acceptedAnswer":{"@type":"Answer","text":"For most adults with type 2 diabetes, the ADA and IDF recommend an HbA1c target of <7% (<53 mmol/mol). A less stringent target of <8% (<64 mmol/mol) is acceptable for elderly patients, those with limited life expectancy, severe hypoglycaemia risk, or multiple comorbidities. More stringent targets (<6.5%) may be appropriate for newly diagnosed patients without cardiovascular disease."}},
+      {"@type":"Question","name":"What is the HbA1c cut-off to diagnose diabetes?","acceptedAnswer":{"@type":"Answer","text":"According to WHO and ADA criteria, diabetes is diagnosed when HbA1c ≥6.5% (≥48 mmol/mol) on two separate occasions, or once with confirmed symptoms or other diagnostic criteria. Prediabetes is defined as HbA1c 5.7–6.4% (39–47 mmol/mol) by ADA, or 6.0–6.4% (42–47 mmol/mol) by WHO."}},
+      {"@type":"Question","name":"What conditions cause falsely high or low HbA1c?","acceptedAnswer":{"@type":"Answer","text":"Falsely HIGH HbA1c: iron deficiency anaemia, vitamin B12 deficiency, splenectomy, alcoholism, chronic kidney disease (uraemia). Falsely LOW HbA1c: haemolytic anaemia, haemoglobin variants (HbS, HbC, HbE — common in India and Africa), pregnancy (increased red cell turnover), recent blood transfusion, erythropoietin therapy. In these conditions, fructosamine or continuous glucose monitoring may be more reliable."}},
+      {"@type":"Question","name":"What is the difference between DCCT and IFCC HbA1c?","acceptedAnswer":{"@type":"Answer","text":"DCCT (%) is the older unit used primarily in the USA and many Asian countries including India. IFCC (mmol/mol) is the newer internationally standardised unit adopted by Europe, Australia, and WHO. The two scales are related but not linearly identical. Most modern analysers report both. The conversion formula is: IFCC (mmol/mol) = (DCCT% − 2.15) × 10.929."}},
+      {"@type":"Question","name":"How often should HbA1c be tested?","acceptedAnswer":{"@type":"Answer","text":"In patients with well-controlled diabetes meeting targets, HbA1c should be tested every 6 months. In patients with poorly controlled diabetes or those whose treatment has been recently changed, every 3 months. For diagnosis and high-risk prediabetes screening, annually. Note that HbA1c reflects average glucose over 2–3 months, so testing more frequently than every 3 months is rarely useful."}},
+      {"@type":"Question","name":"What is the difference between DCCT % and IFCC mmol/mol?","acceptedAnswer":{"@type":"Answer","text":"Both measure glycated haemoglobin but use different reference standards. DCCT % (also called NGSP) is the traditional percentage format used in the USA, India, and most of Asia. IFCC mmol/mol is the newer SI-unit format adopted in the UK, Europe, and Australia. The two scales are not interchangeable by simple multiplication — the conversion formula is: mmol/mol = (% − 2.15) × 10.929. Indian laboratories report HbA1c in DCCT % under ADA and RSSDI guidelines."}},
+      {"@type":"Question","name":"What HbA1c is considered diabetic in India?","acceptedAnswer":{"@type":"Answer","text":"Per ADA 2024 and RSSDI guidelines, an HbA1c of ≥6.5% (48 mmol/mol) on two separate occasions confirms diabetes mellitus. Prediabetes is 5.7–6.4% (39–47 mmol/mol). Below 5.7% is considered normal."}},
+      {"@type":"Question","name":"What is the HbA1c treatment target for type 2 diabetes in India?","acceptedAnswer":{"@type":"Answer","text":"RSSDI and ADA recommend an HbA1c target of <7.0% (53 mmol/mol) for most adults with type 2 diabetes. Targets should be individualised: <6.5% for younger patients with short disease duration, no hypoglycaemia risk, and no cardiovascular disease; <8.0% for elderly patients, those with significant comorbidities, hypoglycaemia unawareness, or limited life expectancy."}},
+      {"@type":"Question","name":"When is HbA1c unreliable and what should be used instead?","acceptedAnswer":{"@type":"Answer","text":"HbA1c is unreliable in haemolytic anaemia, sickle cell disease (HbS), HbC disease, malaria, and recent blood transfusion (falsely low). It is falsely high in iron deficiency anaemia, vitamin B12 deficiency, and splenectomy. In CKD, both effects occur depending on severity. In these situations, fructosamine (reflects 2–3 week average) or glycated albumin is preferred. During pregnancy, use fasting and post-prandial glucose or CGMS instead."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"HbA1c Converter","item":"https://rxmedcalc.com/medical-calculators/hba1c-converter"}]},
+    {"@type":"SoftwareApplication","name":"HbA1c Converter — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/hba1c-converter"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
   <style>
-    :root {
+:root {
       --bg: #f0f4f8; --surface: #fff; --surface2: #f5f8fc; --border: #dce4ef;
       --primary: #0369a1; --primary-light: #0ea5e9; --primary-dark: #0c4a6e;
       --text: #0f1e33; --text-muted: #5a6a82; --text-light: #8fa0b8;
@@ -176,24 +132,72 @@
     .info-section p:last-child { margin-bottom: 0; }
     @media(max-width:640px) { .card { padding: 20px 16px; } }
   </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
-<nav class="topbar">
-  <div class="breadcrumb">
-    <a href="/">Medical Calculators</a><span>›</span><span>Endocrinology</span><span>›</span><span>HbA1c Converter</span>
-  </div>
-</nav>
-<header class="hero">
-  <div class="hero-badge">Endocrinology Calculator</div>
-  <h1>HbA1c Converter</h1>
-  <p>Convert between DCCT %, IFCC mmol/mol, and estimated average glucose (eAG)</p>
-  <div class="hero-tags">
-    <span>% ↔ mmol/mol</span><span>eAG mg/dL</span><span>eAG mmol/L</span>
-    <span>Diabetes Targets</span><span>DCCT ↔ IFCC</span>
-  </div>
-</header>
-<main class="page">
-  <section class="card">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
+    </div>
+  </header>
+
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 Endocrinology Calculator</div>
+    <h1><em>HbA1c Converter</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
+
+  
+
+  <section class="calc-widget-section">
+    <section class="card">
     <div class="card-title">Converter</div>
     <div class="mode-tabs">
       <button class="mtab active" data-mode="pct" onclick="setMode('pct')">Enter HbA1c %</button>
@@ -203,7 +207,7 @@
       <div class="input-group">
         <div class="field">
           <label for="hba1c_pct">HbA1c (DCCT %)</label>
-          <input type="number" id="hba1c_pct" placeholder="e.g. 7.0" min="2.5" max="20" step="0.1" oninput="calcFromPct()" />
+          <input type="number" id="hba1c_pct" placeholder="e.g. 7.0" min="2.5" max="20" step="0.1" oninput="calcFromPct()">
         </div>
         <div class="unit-label">%</div>
       </div>
@@ -212,7 +216,7 @@
       <div class="input-group">
         <div class="field">
           <label for="hba1c_mmol">HbA1c (IFCC mmol/mol)</label>
-          <input type="number" id="hba1c_mmol" placeholder="e.g. 53" min="4" max="220" step="1" oninput="calcFromMmol()" />
+          <input type="number" id="hba1c_mmol" placeholder="e.g. 53" min="4" max="220" step="1" oninput="calcFromMmol()">
         </div>
         <div class="unit-label">mmol/mol</div>
       </div>
@@ -241,51 +245,139 @@
     </div>
     <div id="targetBand" style="display:none; margin-top:16px;"></div>
   </section>
+  </section>
 
-  <!-- Reference Table -->
-  <section class="card">
-    <div class="card-title">Quick Reference Table</div>
-    <div style="overflow-x:auto">
-      <table class="ref-table">
-        <thead>
-          <tr><th>HbA1c %</th><th>mmol/mol</th><th>eAG mg/dL</th><th>eAG mmol/L</th><th>Interpretation</th></tr>
-        </thead>
-        <tbody id="refTableBody"></tbody>
-      </table>
+  
+
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#about-hba1c-interpretation-diabetes">1. About HbA1c — Interpretation &amp; Diabetes Targets</a>
+          <a href="#faq">2. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="about-hba1c-interpretation-diabetes"><span class="sec-num">1</span>About HbA1c — Interpretation &amp; Diabetes Targets</h2>
+        <p><strong>HbA1c (Glycated Haemoglobin)</strong> reflects average blood glucose over the preceding 2–3 months and is the gold standard for long-term glycaemic monitoring in diabetes. It is expressed as a percentage (NGSP/DCCT standard) or in mmol/mol (IFCC standard). The conversion formula is: <strong>mmol/mol = (% − 2.15) × 10.929</strong>. The estimated Average Glucose (eAG) can be derived as: <strong>eAG (mg/dL) = (28.7 × HbA1c%) − 46.7</strong>.</p><p>Diagnostic thresholds per <strong>ADA 2024</strong> and <strong>RSSDI India guidelines</strong>: HbA1c ≥6.5% (48 mmol/mol) = Diabetes. 5.7–6.4% (39–47 mmol/mol) = Prediabetes. Below 5.7% = Normal. Treatment targets in India: <strong>HbA1c &lt;7.0%</strong> for most adults with type 2 diabetes; &lt;6.5% for younger patients with short disease duration and no hypoglycaemia risk; &lt;8.0% for elderly patients, those with comorbidities, or limited life expectancy.</p><p>HbA1c has limitations in conditions that affect red cell turnover — it is falsely low in haemolytic anaemia, recent blood transfusion, and haemoglobinopathies (especially HbS and HbC common in Indian populations), and falsely elevated in iron-deficiency anaemia and chronic kidney disease. In these situations, fructosamine or glycated albumin may be preferred for glycaemic monitoring. HbA1c should be measured every 3 months when glycaemic targets are not met, and every 6 months once stable.</p>
+
+
+        <h2 id="faq"><span class="sec-num">2</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is HbA1c and why is it measured?</summary>
+            <div class="faq-answer"><p>HbA1c (glycated haemoglobin or glycosylated haemoglobin) measures the percentage of haemoglobin that has glucose attached to it. Because red blood cells live approximately 90–120 days, HbA1c reflects average blood glucose over the past 2–3 months. It is the gold standard for monitoring long-term glycaemic control in diabetes and is also used to diagnose diabetes (≥6.5% / ≥48 mmol/mol) and prediabetes (5.7–6.4% / 39–47 mmol/mol).</p></div>
+          </details>
+          <details>
+            <summary>How do I convert HbA1c % to mmol/mol?</summary>
+            <div class="faq-answer"><p>To convert HbA1c from DCCT % to IFCC mmol/mol, use the formula: mmol/mol = (HbA1c% − 2.15) × 10.929. For example, HbA1c 7% = (7 − 2.15) × 10.929 = 53 mmol/mol. To convert back: HbA1c% = (mmol/mol ÷ 10.929) + 2.15.</p></div>
+          </details>
+          <details>
+            <summary>What is eAG (estimated average glucose)?</summary>
+            <div class="faq-answer"><p>eAG is the estimated average blood glucose level corresponding to an HbA1c value, expressed in mg/dL or mmol/L. Formula: eAG (mg/dL) = (28.7 × HbA1c%) − 46.7. Convert to mmol/L by dividing by 18.016. For example, HbA1c 7% corresponds to eAG ~154 mg/dL (~8.6 mmol/L).</p></div>
+          </details>
+          <details>
+            <summary>What is the target HbA1c for type 2 diabetes?</summary>
+            <div class="faq-answer"><p>For most adults with type 2 diabetes, the ADA and IDF recommend an HbA1c target of &lt;7% (&lt;53 mmol/mol). A less stringent target of &lt;8% (&lt;64 mmol/mol) is acceptable for elderly patients, those with limited life expectancy, severe hypoglycaemia risk, or multiple comorbidities. More stringent targets (&lt;6.5%) may be appropriate for newly diagnosed patients without cardiovascular disease.</p></div>
+          </details>
+          <details>
+            <summary>What is the HbA1c cut-off to diagnose diabetes?</summary>
+            <div class="faq-answer"><p>According to WHO and ADA criteria, diabetes is diagnosed when HbA1c ≥6.5% (≥48 mmol/mol) on two separate occasions, or once with confirmed symptoms or other diagnostic criteria. Prediabetes is defined as HbA1c 5.7–6.4% (39–47 mmol/mol) by ADA, or 6.0–6.4% (42–47 mmol/mol) by WHO.</p></div>
+          </details>
+          <details>
+            <summary>What conditions cause falsely high or low HbA1c?</summary>
+            <div class="faq-answer"><p>Falsely HIGH HbA1c: iron deficiency anaemia, vitamin B12 deficiency, splenectomy, alcoholism, chronic kidney disease (uraemia). Falsely LOW HbA1c: haemolytic anaemia, haemoglobin variants (HbS, HbC, HbE — common in India and Africa), pregnancy (increased red cell turnover), recent blood transfusion, erythropoietin therapy. In these conditions, fructosamine or continuous glucose monitoring may be more reliable.</p></div>
+          </details>
+          <details>
+            <summary>What is the difference between DCCT and IFCC HbA1c?</summary>
+            <div class="faq-answer"><p>DCCT (%) is the older unit used primarily in the USA and many Asian countries including India. IFCC (mmol/mol) is the newer internationally standardised unit adopted by Europe, Australia, and WHO. The two scales are related but not linearly identical. Most modern analysers report both. The conversion formula is: IFCC (mmol/mol) = (DCCT% − 2.15) × 10.929.</p></div>
+          </details>
+          <details>
+            <summary>How often should HbA1c be tested?</summary>
+            <div class="faq-answer"><p>In patients with well-controlled diabetes meeting targets, HbA1c should be tested every 6 months. In patients with poorly controlled diabetes or those whose treatment has been recently changed, every 3 months. For diagnosis and high-risk prediabetes screening, annually. Note that HbA1c reflects average glucose over 2–3 months, so testing more frequently than every 3 months is rarely useful.</p></div>
+          </details>
+          <details>
+            <summary>What is the difference between DCCT % and IFCC mmol/mol?</summary>
+            <div class="faq-answer"><p>Both measure glycated haemoglobin but use different reference standards. DCCT % (also called NGSP) is the traditional percentage format used in the USA, India, and most of Asia. IFCC mmol/mol is the newer SI-unit format adopted in the UK, Europe, and Australia. The two scales are not interchangeable by simple multiplication — the conversion formula is: mmol/mol = (% − 2.15) × 10.929. Indian laboratories report HbA1c in DCCT % under ADA and RSSDI guidelines.</p></div>
+          </details>
+          <details>
+            <summary>What HbA1c is considered diabetic in India?</summary>
+            <div class="faq-answer"><p>Per ADA 2024 and RSSDI guidelines, an HbA1c of ≥6.5% (48 mmol/mol) on two separate occasions confirms diabetes mellitus. Prediabetes is 5.7–6.4% (39–47 mmol/mol). Below 5.7% is considered normal.</p></div>
+          </details>
+          <details>
+            <summary>What is the HbA1c treatment target for type 2 diabetes in India?</summary>
+            <div class="faq-answer"><p>RSSDI and ADA recommend an HbA1c target of &lt;7.0% (53 mmol/mol) for most adults with type 2 diabetes. Targets should be individualised: &lt;6.5% for younger patients with short disease duration, no hypoglycaemia risk, and no cardiovascular disease; &lt;8.0% for elderly patients, those with significant comorbidities, hypoglycaemia unawareness, or limited life expectancy.</p></div>
+          </details>
+          <details>
+            <summary>When is HbA1c unreliable and what should be used instead?</summary>
+            <div class="faq-answer"><p>HbA1c is unreliable in haemolytic anaemia, sickle cell disease (HbS), HbC disease, malaria, and recent blood transfusion (falsely low). It is falsely high in iron deficiency anaemia, vitamin B12 deficiency, and splenectomy. In CKD, both effects occur depending on severity. In these situations, fructosamine (reflects 2–3 week average) or glycated albumin is preferred. During pregnancy, use fasting and post-prandial glucose or CGMS instead.</p></div>
+          </details>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#about-hba1c-interpretation-diabetes"><span class="toc-num">1</span>About HbA1c — Interpretation</a></li>
+          <li><a href="#faq"><span class="toc-num">2</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
+  </div>
+
+
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/bmi"><h3>BMI Calculator Metabolic risk</h3></a>
+        <a class="related-card" href="/medical-calculators/egfr-calculator"><h3>eGFR Calculator CKD-EPI · CG · MDRD</h3></a>
+        <a class="related-card" href="/medical-calculators/corrected-calcium"><h3>Corrected Calcium Albumin-adjusted Ca²⁺</h3></a>
+        <a class="related-card" href="/medical-calculators/anion-gap"><h3>Anion Gap+ Delta ratio</h3></a>
+      </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="card">
-    <div class="card-title">Frequently Asked Questions</div>
-    <div id="faq-list"></div>
-  </section>
-
-  <!-- Related Calculators — single merged block -->
-  <section class="card">
-    <div class="card-title">Related Calculators</div>
-    <div class="related-grid">
-      <a href="/medical-calculators/bmi" class="related-card"><div class="rc-name">BMI Calculator</div><div class="rc-desc">Metabolic risk</div></a>
-      <a href="/medical-calculators/egfr-calculator" class="related-card"><div class="rc-name">eGFR Calculator</div><div class="rc-desc">CKD-EPI · CG · MDRD</div></a>
-      <a href="/medical-calculators/corrected-calcium" class="related-card"><div class="rc-name">Corrected Calcium</div><div class="rc-desc">Albumin-adjusted Ca²⁺</div></a>
-      <a href="/medical-calculators/anion-gap" class="related-card"><div class="rc-name">Anion Gap</div><div class="rc-desc">+ Delta ratio</div></a>
-      <a href="/medical-calculators/child-pugh" class="related-card"><div class="rc-name">Child-Pugh Score</div><div class="rc-desc">Cirrhosis staging</div></a>
-      <a href="/medical-calculators/" class="related-card"><div class="rc-name">All Calculators →</div><div class="rc-desc">32+ clinical tools</div></a>
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
     </div>
-  </section>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
 
-  <div class="disclaimer">⚠️ <strong>Disclaimer:</strong> HbA1c may be unreliable in haemoglobin variants, haemolytic anaemia, pregnancy, and recent transfusion. Individual treatment targets should be set by the treating clinician. Not for self-diagnosis. <a href="https://rxmedcalc.com//blog/hba1c-converter" target="_blank">Read our guide on interpreting HbA1c results</a>.</div>
-
-  <section class="info-section" id="about-hba1c">
-    <h2>About HbA1c — Interpretation &amp; Diabetes Targets</h2>
-    <p><strong>HbA1c (Glycated Haemoglobin)</strong> reflects average blood glucose over the preceding 2–3 months and is the gold standard for long-term glycaemic monitoring in diabetes. It is expressed as a percentage (NGSP/DCCT standard) or in mmol/mol (IFCC standard). The conversion formula is: <strong>mmol/mol = (% − 2.15) × 10.929</strong>. The estimated Average Glucose (eAG) can be derived as: <strong>eAG (mg/dL) = (28.7 × HbA1c%) − 46.7</strong>.</p>
-    <p>Diagnostic thresholds per <strong>ADA 2024</strong> and <strong>RSSDI India guidelines</strong>: HbA1c ≥6.5% (48 mmol/mol) = Diabetes. 5.7–6.4% (39–47 mmol/mol) = Prediabetes. Below 5.7% = Normal. Treatment targets in India: <strong>HbA1c &lt;7.0%</strong> for most adults with type 2 diabetes; &lt;6.5% for younger patients with short disease duration and no hypoglycaemia risk; &lt;8.0% for elderly patients, those with comorbidities, or limited life expectancy.</p>
-    <p>HbA1c has limitations in conditions that affect red cell turnover — it is falsely low in haemolytic anaemia, recent blood transfusion, and haemoglobinopathies (especially HbS and HbC common in Indian populations), and falsely elevated in iron-deficiency anaemia and chronic kidney disease. In these situations, fructosamine or glycated albumin may be preferred for glycaemic monitoring. HbA1c should be measured every 3 months when glycaemic targets are not met, and every 6 months once stable.</p>
-  </section>
-</main>
-
-<script>
-  let mode = 'pct';
+  <script>
+let mode = 'pct';
   function setMode(m) {
     mode = m;
     document.querySelectorAll('.mtab').forEach(t => t.classList.toggle('active', t.dataset.mode === m));
@@ -380,7 +472,14 @@
     const open = el.classList.toggle('open');
     btn.setAttribute('aria-expanded', open);
   }
-</script>
-<script src="/assets/shared-nav.js"></script>
+
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
+
 </body>
 </html>
