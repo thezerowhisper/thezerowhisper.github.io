@@ -1,414 +1,437 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="curb65">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<title>CURB-65 Calculator | Pneumonia Severity Score &amp; Admission Decision</title>
-<meta name="description" content="Calculate CURB-65 score online for Community-Acquired Pneumonia. Instantly assess 30-day mortality risk and get evidence-based BTS/IDSA admission recommendations."/>
-<meta name="keywords" content="CURB-65 calculator India, pneumonia severity score, CAP admission criteria, CURB65 online, BTS pneumonia guidelines, community acquired pneumonia mortality"/>
-<meta name="robots" content="index, follow"/>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script src="assets/umami-events.js"></script>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/curb65"/>
-<!-- Open Graph -->
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="CURB-65 Calculator | Pneumonia Severity &amp; Admission Decision"/>
-<meta property="og:description" content="Free online CURB-65 score calculator for community-acquired pneumonia. Get 30-day mortality risk and hospital admission recommendations instantly."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/curb65"/>
-<meta property="og:site_name" content="Clinical Calculators India"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>CURB-65 Calculator | Community-Acquired Pneumonia | RxMedCalc</title>
+  <meta name="description" content="Calculate CURB-65 score online for Community-Acquired Pneumonia. Instantly assess 30-day mortality risk and get evidence-based BTS/IDSA admission recommendations."/>
+  <meta name="keywords" content="CURB-65 calculator India, pneumonia severity score, CAP admission criteria, CURB65 online, BTS pneumonia guidelines, community acquired pneumonia mortality"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/curb65"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="CURB-65 Calculator | RxMedCalc"/>
+  <meta property="og:description" content="Calculate CURB-65 score online for Community-Acquired Pneumonia. Instantly assess 30-day mortality risk and get evidence-based BTS/IDSA admission recommendations."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/curb65"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/curb65.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="CURB-65 Calculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/curb65.png"/>
+  <meta name="twitter:image:alt" content="CURB-65 Calculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="CURB-65 Calculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Calculate CURB-65 score online for Community-Acquired Pneumonia. Instantly assess 30-day mortality risk and get evidence-based BTS/IDSA admission recommendations."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"CURB-65 Calculator","description":"Calculate CURB-65 score online for Community-Acquired Pneumonia. Instantly assess 30-day mortality risk and get evidence-based BTS/IDSA admission recommendations.","url":"https://rxmedcalc.com/medical-calculators/curb65","@id":"https://rxmedcalc.com/medical-calculators/curb65","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"CURB-65 Calculator","item":"https://rxmedcalc.com/medical-calculators/curb65"}]},
+    {"@type":"SoftwareApplication","name":"CURB-65 Calculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/curb65"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500;700&display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "DM Sans", system-ui, sans-serif; background: #f8f6f2; padding: 0px; color: #2d3748; line-height: 1.6; }
+.pw { max-width: 750px; margin: auto; }
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="CURB-65 Pneumonia Severity Calculator"/>
-<meta name="twitter:description" content="Online CURB-65 score tool with BTS-based admission guidance. Free clinical calculator for CAP management."/>
+/* Hero Box Layout */
+.hero { background: linear-gradient(135deg, #0d1b2a 0%, #1a1030 60%, #0d1b2a 100%); padding: 34px; color: white; text-align: center; }
+.hero h1 { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.6rem, 5vw, 2.4rem); font-weight: 800; margin-bottom: 8px; }
+.hero p { opacity: .85; font-size: 1rem; max-width: 600px; margin: 0 auto; }
+.badge { display: inline-block; background: rgba(255,255,255,0.15); color: #c4b5fd; border-radius: 20px; padding: 4px 14px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 12px; text-transform: uppercase; }
+.disclaimer-pill { display: inline-block; background: rgba(253,230,138,0.15); color: #fde68a; font-size: 0.73rem; padding: 4px 10px; border-radius: 6px; margin-top: 10px; }
 
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": "CURB-65 Pneumonia Severity Score Calculator",
-    "description": "A validated clinical prediction rule for estimating 30-day mortality and guiding admission decisions in community-acquired pneumonia.",
-    "url": "https://rxmedcalc.com/medical-calculators/curb65",
-    "lastReviewed": "2026-03-25",
-    "reviewedBy": {
-      "@type": "MedicalOrganization",
-      "name": "British Thoracic Society"
-    },
-    "audience": { "@type": "MedicalAudience", "audienceType": "Clinician, Emergency Physician, Nurse Practitioner" },
-    "medicalSpecialty": "Pulmonology, Emergency Medicine",
-    "mainContentOfPage": {
-      "@type": "MedicalCondition",
-      "name": "Community-Acquired Pneumonia",
-      "code": { "@type": "MedicalCode", "code": "J18.9", "codingSystem": "ICD-10" }
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What does CURB-65 stand for?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CURB-65 is an acronym: C = Confusion (new onset), U = Urea >7 mmol/L (BUN >19 mg/dL), R = Respiratory Rate ≥30 breaths/min, B = Blood Pressure (systolic <90 or diastolic ≤60 mmHg), 65 = Age 65 years or older. Each parameter present scores 1 point, giving a maximum score of 5."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between CURB-65 and CRB-65?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CRB-65 omits the Urea (U) parameter, making it usable in outpatient and primary care settings where blood tests may not be available. CURB-65 is preferred in hospital settings where a blood urea/BUN result is readily accessible, as it provides higher predictive accuracy for 30-day mortality."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What CURB-65 score requires ICU admission?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A CURB-65 score of 3 or higher indicates severe pneumonia and warrants urgent inpatient admission. A score of 4–5 carries a 30-day mortality of approximately 17–40% and should prompt consideration of ICU-level care or a critical care consult alongside senior clinician review."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can CURB-65 be used for COVID-19 pneumonia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CURB-65 was validated for bacterial community-acquired pneumonia and has limited evidence in COVID-19. While it can provide a general severity estimate, tools specifically developed for COVID-19, such as the 4C Mortality Score, may provide superior prognostication for SARS-CoV-2 pneumonia."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the limitations of CURB-65?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CURB-65 does not account for oxygenation (SpO2), bilateral infiltrates, comorbidities like liver disease or heart failure, functional status, or social circumstances. Clinical judgment must supplement the score. It is also less validated in immunocompromised patients and should not be used in isolation for admission decisions."
-        }
-      }
-    ]
-  }
-]
-</script>
+/* Interactive Widgets */
+.card { background: white; border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e5e7eb; }
+.card h2 { font-family: "Fraunces", Georgia, serif; font-size: 1.1rem; font-weight: 700; color: #0d1b2a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #c4b5fd; }
+.item { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid #edf2f7; cursor: pointer; transition: .15s; user-select: none; }
+.item:last-child { border-bottom: none; }
+.item:hover { background: #f7faff; margin: 0 -12px; padding-left: 12px; padding-right: 12px; border-radius: 8px; }
+.item-text b { display: block; font-size: 0.97rem; color: #1a202c; }
+.item-text p { font-size: 0.82rem; color: #718096; margin-top: 2px; }
+.chk { width: 28px; height: 28px; border: 2px solid #cbd5e0; border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: .2s; flex-shrink: 0; font-size: 1rem; color: white; background: #fff; }
+.item.active .chk { background: #8b5cf6; border-color: #8b5cf6; }
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:0px;color:#2d3748;line-height:1.6}
-.pw{max-width:750px;margin:auto}
-.hero{background:linear-gradient(135deg,#2c5282,#2b6cb0);border-radius:00px;padding:34px;color:white;margin-bottom:20px;text-align:center}
-.hero h1{font-size:1.9rem;font-weight:800;margin-bottom:8px}
-.hero p{opacity:.85;font-size:1rem}
-.badge{display:inline-block;background:rgba(255,255,255,0.2);border-radius:20px;padding:4px 14px;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;margin-bottom:12px}
-.card{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-.card h2{font-size:1rem;font-weight:700;color:#2c5282;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #bee3f8}
-.item{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #edf2f7;cursor:pointer;transition:.15s;user-select:none}
-.item:last-child{border-bottom:none}
-.item:hover{background:#f7faff;margin:0 -12px;padding-left:12px;padding-right:12px;border-radius:8px}
-.item-text b{display:block;font-size:0.97rem;color:#1a202c}
-.item-text p{font-size:0.82rem;color:#718096;margin-top:2px}
-.chk{width:28px;height:28px;border:2px solid #cbd5e0;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:.2s;flex-shrink:0;font-size:1rem;color:white}
-.item.active .chk{background:#2b6cb0;border-color:#2b6cb0}
+/* Computation Results Display */
+.res-box { display: none; margin-bottom: 20px; border-radius: 14px; overflow: hidden; border: 2px solid #e2e8f0; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.06); animation: fadeIn .3s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.res-header { padding: 16px; text-align: center; font-weight: 800; color: white; font-size: 1.1rem; letter-spacing: 0.02em; }
+.res-grid { display: grid; grid-template-columns: 1fr 1fr; background: white; padding: 20px; gap: 12px; }
+.rg-item { text-align: center; background: #f7fafc; padding: 15px; border-radius: 12px; border: 1px solid #edf2f7; }
+.rg-item .lbl { font-size: 0.68rem; color: #718096; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; letter-spacing: 0.04em; }
+.rg-item .val { font-size: 1.6rem; font-weight: 800; color: #1a202c; }
+.interp { margin: 0 20px 20px; padding: 14px; border-radius: 10px; font-size: 0.92rem; line-height: 1.6; }
+.interp.low { background: #f0fff4; border-left: 5px solid #48bb78; color: #22543d; }
+.interp.mod { background: #fffaf0; border-left: 5px solid #ed8936; color: #7b341e; }
+.interp.high { background: #fff5f5; border-left: 5px solid #e53e3e; color: #742a2a; }
+.btn-row { display: flex; gap: 10px; padding: 0 20px 20px; }
+.btn { flex: 1; padding: 11px; border-radius: 10px; border: none; cursor: pointer; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; }
+.btn-print { background: #edf2f7; color: #2d3748; border: 1px solid #cbd5e0; }
+.btn-print:hover { background: #e2e8f0; }
+.btn-wa { background: #25D366; color: white; }
+.btn-wa:hover { background: #22c35e; }
 
-.res-box{display:none;margin-top:20px;border-radius:14px;overflow:hidden;border:2px solid #e2e8f0;animation:fadeIn .3s}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.res-header{padding:16px;text-align:center;font-weight:800;color:white;font-size:1.1rem}
-.res-grid{display:grid;grid-template-columns:1fr 1fr;background:white;padding:20px;gap:12px}
-.rg-item{text-align:center;background:#f7fafc;padding:15px;border-radius:12px}
-.rg-item .lbl{font-size:0.68rem;color:#718096;text-transform:uppercase;font-weight:700;margin-bottom:4px}
-.rg-item .val{font-size:1.6rem;font-weight:800;color:#1a202c}
-.interp{margin:0 20px 20px;padding:14px;border-radius:10px;font-size:0.92rem;line-height:1.5}
-.interp.low{background:#f0fff4;border-left:5px solid #48bb78;color:#22543d}
-.interp.mod{background:#fffaf0;border-left:5px solid #ed8936;color:#7b341e}
-.interp.high{background:#fff5f5;border-left:5px solid #e53e3e;color:#742a2a}
-.btn-row{display:flex;gap:10px;padding:0 20px 20px}
-.btn{flex:1;padding:11px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:0.9rem}
-.btn-print{background:#edf2f7;color:#2d3748}
-.btn-wa{background:#25D366;color:white}
+/* Structural Data Frameworks */
+.ref-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 12px 0; border-radius: 8px; overflow: hidden; }
+.ref-table th { background: #0d1b2a; color: white; padding: 12px 10px; text-align: left; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.ref-table td { padding: 10px; border-bottom: 1px solid #e2e8f0; color: #2d3748; }
+.ref-table tr:nth-child(even) td { background: #f7fafc; }
+.risk-low { color: #22543d; font-weight: 700; }
+.risk-mod { color: #7b341e; font-weight: 700; }
+.risk-high { color: #742a2a; font-weight: 700; }
 
-/* Reference Table */
-.ref-table{width:100%;border-collapse:collapse;font-size:0.88rem;margin-top:10px}
-.ref-table th{background:#2c5282;color:white;padding:10px;text-align:left;font-weight:700}
-.ref-table td{padding:9px 10px;border-bottom:1px solid #e2e8f0}
-.ref-table tr:nth-child(even) td{background:#f7fafc}
-.risk-low{color:#22543d;font-weight:700}
-.risk-mod{color:#7b341e;font-weight:700}
-.risk-high{color:#742a2a;font-weight:700}
+/* General Content Typography */
+.content-section { background: white; border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e5e7eb; }
+.content-section h2 { font-family: "Fraunces", Georgia, serif; font-size: 1.3rem; font-weight: 700; color: #0d1b2a; margin-bottom: 12px; }
+.content-section h3 { font-size: 0.95rem; font-weight: 700; color: #8b5cf6; margin: 16px 0 6px; }
+.content-section p { font-size: 0.9rem; color: #4a5568; margin-bottom: 10px; line-height: 1.7; }
+.content-section ul { padding-left: 20px; margin-bottom: 12px; }
+.content-section ul li { font-size: 0.9rem; color: #4a5568; margin-bottom: 5px; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.tag { background: #eff6ff; color: #1e40af; border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; font-weight: 600; border: 1px solid #bfdbfe; }
 
-/* Content sections */
-.content-section{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-.content-section h2{font-size:1.1rem;font-weight:700;color:#2c5282;margin-bottom:12px}
-.content-section h3{font-size:0.95rem;font-weight:700;color:#2d3748;margin:14px 0 6px}
-.content-section p{font-size:0.9rem;color:#4a5568;margin-bottom:10px;line-height:1.65}
-.content-section ul{padding-left:20px;margin-bottom:10px}
-.content-section ul li{font-size:0.9rem;color:#4a5568;margin-bottom:5px}
-.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.tag{background:#ebf8ff;color:#2c5282;border-radius:20px;padding:4px 12px;font-size:0.78rem;font-weight:600}
+/* Architecture Master Wrappers */
+.site-header { background: #fff; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.shi { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+.sl { font-family: 'Fraunces', Georgia, serif; font-size: 18px; font-weight: 600; color: #1E1A17; text-decoration: none; }
+.sl .la { color: #C8315A; }
+.sn { display: flex; align-items: center; gap: 2px; }
+.snl { font-size: 13.5px; font-weight: 500; color: #6B6259; text-decoration: none; padding: 5px 9px; border-radius: 6px; transition: color .15s, background .15s; }
+.snl:hover { color: #C8315A; background: #FBEAF0; }
+.snt { display: none; background: none; border: none; cursor: pointer; font-size: 18px; color: #3A3430; padding: 4px; }
+@media (max-width: 680px) {
+  .sn { display: none; position: absolute; top: 54px; left: 0; right: 0; background: #fff; border-bottom: 1px solid rgba(42,36,32,0.1); flex-direction: column; align-items: flex-start; padding: .625rem; box-shadow: 0 4px 16px rgba(0,0,0,0.08); z-index: 999; }
+  .site-header.nav-open .sn { display: flex; }
+  .snt { display: block; }
+}
+.site-footer { background: #1E1A17; color: rgba(255,255,255,0.6); padding: 2.5rem 1.5rem 1.25rem; margin-top: 30px; }
+.sfi { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 2.5rem; margin-bottom: 1.75rem; }
+@media (max-width: 700px) { .sfi { grid-template-columns: 1fr; gap: 1.25rem; } }
+.fb .sl { color: #fff; }
+.fb p { font-size: 13px; margin-top: .4rem; line-height: 1.6; }
+.fd { font-size: 11.5px; color: rgba(255,255,255,0.35); margin-top: .625rem; line-height: 1.6; }
+.fcc { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1.25rem; }
+.fc h4 { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: .5rem; }
+.fc ul { list-style: none; padding: 0; }
+.fc li { margin-bottom: .3rem; }
+.fc a { font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color .15s; }
+.fc a:hover { color: #fff; }
+.fb2 { max-width: 1120px; margin: 0 auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; font-size: 12px; color: rgba(255,255,255,0.3); }
+.fb2 a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.fb2 a:hover { color: #fff; }
 
-.footer-cite{font-size:.75rem;color:#718096;text-align:center;margin-top:20px;padding:10px}
-@media(max-width:600px){.res-grid{grid-template-columns:1fr}.btn-row{flex-direction:column}}
-</style>
+@media (max-width:600px) { .res-grid { grid-template-columns: 1fr; } .btn-row { flex-direction: column; } }
+  </style>
 </head>
+
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <!-- ════ ARCHITECTURE HEADER ════ -->
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
+    </div>
+  </header>
 
-<main class="pw">
-<div class="hero">
-  <div class="badge">VALIDATED CLINICAL TOOL</div>
-  <h1>CURB-65 Calculator</h1>
-  <p>Community-Acquired Pneumonia Severity &amp; Admission Guide</p>
-</div>
-<div style="background:#ebf8ff;border:1.5px solid #bee3f8;border-radius:14px;
-padding:16px 20px;margin-bottom:20px;display:flex;align-items:center;
-gap:14px;flex-wrap:wrap;">
-  <div style="font-size:1.6rem">📖</div>
-  <div style="flex:1;min-width:200px">
-    <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;
-    letter-spacing:.07em;color:#2b6cb0;margin-bottom:3px">Deep Dive Article</div>
-    <div style="font-size:.95rem;font-weight:700;color:#1a202c;margin-bottom:2px">
-      CURB-65 Score: Pneumonia Severity, Antibiotics & When to Admit
-    </div>
-    <div style="font-size:.8rem;color:#4a5568">
-      Full guide — mortality tables, CRB-65 for primary care, antibiotic selection
-      by severity, Klebsiella in Indian patients, and ICU criteria.
-    </div>
+  <!-- ════ HERO ════ -->
+  <header class="hero">
+    <div class="badge">🩺 Clinical Tool</div>
+    <h1>CURB-65 Severity Calculator</h1>
+    <p>Calculate CURB-65 score online for Community-Acquired Pneumonia. Instantly assess 30-day mortality risk and get evidence-based BTS/IDSA admission recommendations.</p>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
+
+  <div class="page-wrap" style="max-width:900px; margin:24px auto; padding:0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 24px;">
+    
+    <!-- ════ MAIN CONTENT CONTAINER ════ -->
+    <main id="main-content">
+      <details class="mobile-toc" style="background:#fff; padding:12px; border-radius:8px; border:1px solid #e5e7eb; margin-bottom:16px;">
+        <summary style="font-weight:700; cursor:pointer;">📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links" style="display:flex; flex-direction:column; gap:6px; margin-top:8px; font-size:0.9rem;">
+          <a href="#select-all-that-apply-1-point-each">1. Select All That Apply (1 point each)</a>
+          <a href="#curb-65-score-interpretation-table">2. CURB-65 Score Interpretation Table</a>
+          <a href="#curb-65-in-the-indian-clinical-context">3. CURB-65 in the Indian Clinical Context</a>
+          <a href="#what-is-the-curb-65-score">4. What is the CURB-65 Score?</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip" style="display:flex; gap:12px; align-items:center; background:#fff; padding:14px; border-radius:12px; border:1px solid #e5e7eb; margin-bottom:20px;">
+        <div class="reviewer-avatar" style="font-size:24px;">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p style="font-size:13px; color:#6b7280; margin:0;">Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <!-- ===== INTERACTIVE INTERACTION INTERFACE ===== -->
+        <h2 id="select-all-that-apply-1-point-each" style="font-family:'Fraunces', Georgia, serif; font-size:1.3rem; color:#0d1b2a; margin-bottom:12px;"><span class="sec-num">1 </span>Select All That Apply (1 point each)</h2>
+        <div class="card" style="margin-bottom:24px;">
+          <div id="list">
+            <div class="item" onclick="toggle(1)">
+              <div class="item-text"><b>Confusion</b><p>New disorientation in person, place, or time (AMT ≤8)</p></div>
+              <div class="chk" id="c1"></div>
+            </div>
+            <div class="item" onclick="toggle(2)">
+              <div class="item-text"><b>Urea &gt; 7 mmol/L</b><p>Blood urea nitrogen (BUN) &gt; 19 mg/dL</p></div>
+              <div class="chk" id="c2"></div>
+            </div>
+            <div class="item" onclick="toggle(3)">
+              <div class="item-text"><b>Respiratory Rate ≥ 30 /min</b><p>Tachypnoea is a marker of respiratory compromise</p></div>
+              <div class="chk" id="c3"></div>
+            </div>
+            <div class="item" onclick="toggle(4)">
+              <div class="item-text"><b>Blood Pressure Low</b><p>Systolic &lt; 90 mmHg or Diastolic ≤ 60 mmHg</p></div>
+              <div class="chk" id="c4"></div>
+            </div>
+            <div class="item" onclick="toggle(5)">
+              <div class="item-text"><b>Age ≥ 65 Years</b><p>Advanced age independently increases mortality risk</p></div>
+              <div class="chk" id="c5"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════ CALCULATOR OUTCOME DROPDOWN WIDGET ════ -->
+        <div id="result" class="res-box">
+          <div id="res-header" class="res-header"></div>
+          <div class="res-grid">
+            <div class="rg-item"><div class="lbl">CURB-65 Score</div><div id="res-score" class="val">0/5</div></div>
+            <div class="rg-item"><div class="lbl">30-Day Mortality</div><div id="res-mort" class="val">0.7%</div></div>
+          </div>
+          <div id="res-note" class="interp"></div>
+          <div class="btn-row">
+            <button class="btn btn-print" onclick="window.print()">🖨 Print Note</button>
+            <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
+          </div>
+        </div>
+
+        <h2 id="curb-65-score-interpretation-table"><span class="sec-num">2 </span>CURB-65 Score Interpretation Table</h2>
+        <table class="ref-table">
+          <thead>
+            <tr><th>Score</th><th>Group</th><th>30-Day Mortality</th><th>Recommended Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0</td><td>Group 1</td><td class="risk-low">0.7%</td><td>Home treatment likely appropriate</td></tr>
+            <tr><td>1</td><td>Group 1</td><td class="risk-low">2.1%</td><td>Home treatment; reassess if no improvement in 48h</td></tr>
+            <tr><td>2</td><td>Group 2</td><td class="risk-mod">6.6%</td><td>Consider hospitalization or supervised outpatient care</td></tr>
+            <tr><td>3</td><td>Group 3</td><td class="risk-high">17.0%</td><td>Urgent inpatient admission; treat as severe CAP</td></tr>
+            <tr><td>4–5</td><td>Group 3</td><td class="risk-high">≈40%</td><td>Emergency admission; consider ICU assessment</td></tr>
+          </tbody>
+        </table>
+        <div class="tag-row" style="margin-bottom:24px;">
+          <span class="tag">BTS Guidelines</span>
+          <span class="tag">Lim et al. 2003</span>
+          <span class="tag">Validated in CAP</span>
+        </div>
+
+        <h2 id="curb-65-in-the-indian-clinical-context"><span class="sec-num">3 </span>CURB-65 in the Indian Clinical Context</h2>
+        <p>Community-acquired pneumonia (CAP) is among the leading causes of hospitalisation and mortality in India. The disease burden is compounded by several factors unique to the Indian setting — high prevalence of <strong>Klebsiella pneumoniae</strong> (a gram-negative organism not covered by standard beta-lactam monotherapy), <strong>drug-resistant Streptococcus pneumoniae</strong>, rising rates of TB-associated lung disease, and large numbers of immunocompromised patients on steroid therapy or with uncontrolled diabetes.</p>
+        
+        <h3>Pathogens in Indian CAP — What's Different</h3>
+        <p>Unlike Western populations where <em>S. pneumoniae</em> dominates, Indian studies (including data from PGIMER, AIIMS, and CMC Vellore) consistently show a higher proportion of gram-negative organisms — particularly <em>Klebsiella pneumoniae</em>, <em>Acinetobacter</em> spp., and <em>Pseudomonas aeruginosa</em> — especially in diabetic patients and those with prior antibiotic exposure. This has important implications: <strong>standard amoxicillin monotherapy is inadequate</strong> for moderate-to-severe Indian CAP; a combination of a beta-lactam plus a respiratory fluoroquinolone (levofloxacin or moxifloxacin) or a macrolide is preferred.</p>
+        
+        <h3>TB vs. CAP — A Critical Distinction</h3>
+        <p>In India, pulmonary tuberculosis must always be considered in the differential for any patient presenting with cough, fever, and infiltrates — particularly if symptoms have been present for more than 2 weeks, if the patient has had prior TB or TB contact, or if there is significant weight loss. <strong>CURB-65 does not distinguish TB from bacterial CAP.</strong> A patient with smear-positive TB may score 0–1 and be sent home — only to deteriorate and remain infectious. Always obtain sputum AFB smear and GeneXpert if TB is suspected.</p>
+        
+        <h3>Empirical Antibiotic Therapy — India Guidance</h3>
+        <table class="ref-table">
+          <thead>
+            <tr><th>CURB-65</th><th>Setting</th><th>Preferred Regimen (India)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0–1</td><td>Outpatient</td><td>Amoxicillin-clavulanate 625mg TDS <em>or</em> Azithromycin 500mg OD × 5 days</td></tr>
+            <tr><td>2</td><td>Ward admission</td><td>IV Ampicillin-sulbactam + Azithromycin <em>or</em> Levofloxacin 750mg OD</td></tr>
+            <tr><td>3–4</td><td>Ward / HDU</td><td>IV Piperacillin-tazobactam + Levofloxacin; consider coverage for Klebsiella</td></tr>
+            <tr><td>5</td><td>ICU</td><td>Meropenem + Levofloxacin ± anti-MRSA (vancomycin) if risk factors present</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:.78rem; color:#718096; margin-top:8px; margin-bottom:24px;">
+          Antibiotic choices should be guided by local antibiogram data and modified based on culture results. These are empirical starting points only.
+        </p>
+
+        <h2 id="what-is-the-curb-65-score"><span class="sec-num">4 </span>What is the CURB-65 Score?</h2>
+        <p>The CURB-65 score is a validated clinical prediction rule developed by Lim et al. in 2003 and endorsed by the British Thoracic Society (BTS) for stratifying the severity of community-acquired pneumonia (CAP). It uses five easily obtainable bedside and laboratory parameters to estimate 30-day all-cause mortality and guide the decision between outpatient, inpatient, and intensive care management.</p>
+        <p>Each parameter present is assigned 1 point. A total score ranges from 0 to 5. The score was derived from a cohort of over 1,000 patients across multiple UK hospitals and has since been externally validated in numerous international populations, including studies from India and Southeast Asia.</p>
+        
+        <h3>When to Use CURB-65</h3>
+        <p>CURB-65 is best applied in emergency departments and inpatient wards where blood urea/BUN results are readily available. For primary care or community settings without lab access, the abbreviated CRB-65 (dropping the Urea parameter) is recommended as a practical alternative. Always interpret the score alongside clinical judgment, oxygenation status, radiology findings, and social circumstances.</p>
+        
+        <h3>Antibiotic Guidance by Severity</h3>
+        <p>The IDSA/ATS guidelines recommend oral amoxicillin-clavulanate or respiratory fluoroquinolones for mild CAP (score 0–1), and IV beta-lactam plus a macrolide for moderate-severe CAP (score ≥2). For ICU-level patients, dual coverage with a beta-lactam plus either a macrolide or fluoroquinolone is standard. Atypical coverage (Legionella, Mycoplasma) should be considered in all hospitalized CAP patients.</p>
+        
+        <h3>Limitations to Be Aware Of</h3>
+        <ul>
+          <li>Does not incorporate oxygenation or SpO₂ directly — a patient with SpO₂ &lt;90% may score low but require admission</li>
+          <li>Urea may be elevated due to dehydration, renal disease, or upper GI bleeding — false positivity is possible</li>
+          <li>Does not assess bilateral or multilobar infiltrates, which independently worsen prognosis</li>
+          <li>Not validated in aspiration pneumonia, healthcare-associated pneumonia, or immunocompromised hosts</li>
+          <li>Functional status, social support, and comorbidities must supplement the numeric score</li>
+        </ul>
+
+        <div class="alert alert-success" style="margin-top:2rem; background:#ecfdf5; border-left:4px solid #10b981; padding:16px; border-radius:8px;">
+          <span class="alert-icon">📋</span>
+          <div><strong>Key takeaway:</strong> The CURB-65 metric serves as an objective tool to map pneumonia severity, yet low numerical values must never muffle active signs of severe hypoxaemia ($SpO_2 < 90\%$) or uncompensated organ failure which dictate immediate admission.</div>
+        </div>
+
+        <p class="medical-disclaimer" style="font-size:0.75rem; color:#718096; margin-top:20px;"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <!-- ════ ARCHITECTURE SIDEBAR ════ -->
+    <aside class="sidebar" aria-label="Page navigation" style="display:flex; flex-direction:column; gap:16px;">
+      <div class="sidebar-card" style="background:#fff; padding:16px; border-radius:12px; border:1px solid #e5e7eb;">
+        <h3 style="font-size:0.9rem; margin-bottom:8px; color:#0d1b2a;">Contents</h3>
+        <ul class="toc-nav" style="list-style:none; font-size:0.85rem; display:flex; flex-direction:column; gap:6px;">
+          <li><a href="#select-all-that-apply-1-point-each" style="text-decoration:none; color:#6b7280;">1. Metric Selections</a></li>
+          <li><a href="#curb-65-score-interpretation-table" style="text-decoration:none; color:#6b7280;">2. Interpretation Reference</a></li>
+          <li><a href="#curb-65-in-the-indian-clinical-context" style="text-decoration:none; color:#6b7280;">3. Indian Context Nuance</a></li>
+          <li><a href="#what-is-the-curb-65-score" style="text-decoration:none; color:#6b7280;">4. Score Foundations</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta" style="background:#fff; padding:16px; border-radius:12px; border:1px solid #e5e7eb;">
+        <h3 style="font-size:0.9rem; margin-bottom:4px; color:#0d1b2a;">Related Tools</h3>
+        <p style="font-size:0.8rem; color:#6b7280; margin-bottom:8px;">Explore other calculators on RxMedCalc</p>
+        <a href="/medical-calculators/" style="font-size:0.85rem; font-weight:700; color:#8b5cf6; text-decoration:none;">All calculators →</a>
+      </div>
+    </aside>
   </div>
-  <a href="/blog/curb65-score"
-     style="background:#2b6cb0;color:#fff;padding:9px 18px;border-radius:10px;
-     font-size:.85rem;font-weight:700;text-decoration:none;white-space:nowrap">
-     Read Article →
-  </a>
-</div>
-<div class="card">
-  <h2>Select All That Apply (1 point each)</h2>
-  <div id="list">
-    <div class="item" onclick="toggle(1)">
-      <div class="item-text"><b>Confusion</b><p>New disorientation in person, place, or time (AMT ≤8)</p></div>
-      <div class="chk" id="c1"></div>
-    </div>
-    <div class="item" onclick="toggle(2)">
-      <div class="item-text"><b>Urea &gt; 7 mmol/L</b><p>Blood urea nitrogen (BUN) &gt; 19 mg/dL</p></div>
-      <div class="chk" id="c2"></div>
-    </div>
-    <div class="item" onclick="toggle(3)">
-      <div class="item-text"><b>Respiratory Rate ≥ 30 /min</b><p>Tachypnoea is a marker of respiratory compromise</p></div>
-      <div class="chk" id="c3"></div>
-    </div>
-    <div class="item" onclick="toggle(4)">
-      <div class="item-text"><b>Blood Pressure Low</b><p>Systolic &lt; 90 mmHg or Diastolic ≤ 60 mmHg</p></div>
-      <div class="chk" id="c4"></div>
-    </div>
-    <div class="item" onclick="toggle(5)">
-      <div class="item-text"><b>Age ≥ 65 Years</b><p>Advanced age independently increases mortality risk</p></div>
-      <div class="chk" id="c5"></div>
-    </div>
-  </div>
-</div>
 
-<div id="result" class="res-box">
-  <div id="res-header" class="res-header"></div>
-  <div class="res-grid">
-    <div class="rg-item"><div class="lbl">CURB-65 Score</div><div id="res-score" class="val"></div></div>
-    <div class="rg-item"><div class="lbl">30-Day Mortality</div><div id="res-mort" class="val"></div></div>
-  </div>
-  <div id="res-note" class="interp"></div>
-  <div class="btn-row">
-    <button class="btn btn-print" onclick="trackPrint('curb65'); window.print()">🖨 Print Note</button>
-    <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
-  </div>
-</div>
-
-<!-- Score Reference Table -->
-<div class="content-section">
-  <h2>CURB-65 Score Interpretation Table</h2>
-  <table class="ref-table">
-    <tr><th>Score</th><th>Group</th><th>30-Day Mortality</th><th>Recommended Action</th></tr>
-    <tr><td>0</td><td>Group 1</td><td class="risk-low">0.7%</td><td>Home treatment likely appropriate</td></tr>
-    <tr><td>1</td><td>Group 1</td><td class="risk-low">2.1%</td><td>Home treatment; reassess if no improvement in 48h</td></tr>
-    <tr><td>2</td><td>Group 2</td><td class="risk-mod">6.6%</td><td>Consider hospitalization or supervised outpatient care</td></tr>
-    <tr><td>3</td><td>Group 3</td><td class="risk-high">17.0%</td><td>Urgent inpatient admission; treat as severe CAP</td></tr>
-    <tr><td>4–5</td><td>Group 3</td><td class="risk-high">≈40%</td><td>Emergency admission; consider ICU assessment</td></tr>
-  </table>
-  <div class="tag-row">
-    <span class="tag">BTS Guidelines</span>
-    <span class="tag">Lim et al. 2003</span>
-    <span class="tag">Validated in CAP</span>
-  </div>
-</div>
-<div class="content-section">
-  <h2>CURB-65 in the Indian Clinical Context</h2>
-  <p>Community-acquired pneumonia (CAP) is among the leading causes of hospitalisation and
-  mortality in India. The disease burden is compounded by several factors unique to the Indian
-  setting — high prevalence of <strong>Klebsiella pneumoniae</strong> (a gram-negative organism
-  not covered by standard beta-lactam monotherapy), <strong>drug-resistant Streptococcus
-  pneumoniae</strong>, rising rates of TB-associated lung disease, and large numbers of
-  immunocompromised patients on steroid therapy or with uncontrolled diabetes.</p>
-
-  <h3>Pathogens in Indian CAP — What's Different</h3>
-  <p>Unlike Western populations where <em>S. pneumoniae</em> dominates, Indian studies
-  (including data from PGIMER, AIIMS, and CMC Vellore) consistently show a higher proportion
-  of gram-negative organisms — particularly <em>Klebsiella pneumoniae</em>, <em>Acinetobacter</em>
-  spp., and <em>Pseudomonas aeruginosa</em> — especially in diabetic patients and those with
-  prior antibiotic exposure. This has important implications: <strong>standard amoxicillin
-  monotherapy is inadequate</strong> for moderate-to-severe Indian CAP; a combination of a
-  beta-lactam plus a respiratory fluoroquinolone (levofloxacin or moxifloxacin) or a macrolide
-  is preferred.</p>
-
-  <h3>TB vs. CAP — A Critical Distinction</h3>
-  <p>In India, pulmonary tuberculosis must always be considered in the differential for any
-  patient presenting with cough, fever, and infiltrates — particularly if symptoms have been
-  present for more than 2 weeks, if the patient has had prior TB or TB contact, or if there
-  is significant weight loss. <strong>CURB-65 does not distinguish TB from bacterial CAP.</strong>
-  A patient with smear-positive TB may score 0–1 and be sent home — only to deteriorate and
-  remain infectious. Always obtain sputum AFB smear and GeneXpert if TB is suspected.</p>
-
-  <h3>Empirical Antibiotic Therapy — India Guidance</h3>
-  <table class="ref-table" style="margin-top:10px">
-    <tr>
-      <th>CURB-65</th><th>Setting</th><th>Preferred Regimen (India)</th>
-    </tr>
-    <tr>
-      <td>0–1</td>
-      <td>Outpatient</td>
-      <td>Amoxicillin-clavulanate 625mg TDS <em>or</em> Azithromycin 500mg OD × 5 days</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Ward admission</td>
-      <td>IV Ampicillin-sulbactam + Azithromycin <em>or</em> Levofloxacin 750mg OD</td>
-    </tr>
-    <tr>
-      <td>3–4</td>
-      <td>Ward / HDU</td>
-      <td>IV Piperacillin-tazobactam + Levofloxacin; consider coverage for Klebsiella</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>ICU</td>
-      <td>Meropenem + Levofloxacin ± anti-MRSA (vancomycin) if risk factors present</td>
-    </tr>
-  </table>
-  <p style="font-size:.78rem;color:#718096;margin-top:8px">
-    Antibiotic choices should be guided by local antibiogram data and modified based on
-    culture results. These are empirical starting points only.
-  </p>
-</div>
-<!-- What is CURB-65 -->
-<div class="content-section">
-  <h2>What is the CURB-65 Score?</h2>
-  <p>The CURB-65 score is a validated clinical prediction rule developed by Lim et al. in 2003 and endorsed by the British Thoracic Society (BTS) for stratifying the severity of community-acquired pneumonia (CAP). It uses five easily obtainable bedside and laboratory parameters to estimate 30-day all-cause mortality and guide the decision between outpatient, inpatient, and intensive care management.</p>
-  <p>Each parameter present is assigned 1 point. A total score ranges from 0 to 5. The score was derived from a cohort of over 1,000 patients across multiple UK hospitals and has since been externally validated in numerous international populations, including studies from India and Southeast Asia.</p>
-
-  <h3>When to Use CURB-65</h3>
-  <p>CURB-65 is best applied in emergency departments and inpatient wards where blood urea/BUN results are readily available. For primary care or community settings without lab access, the abbreviated CRB-65 (dropping the Urea parameter) is recommended as a practical alternative. Always interpret the score alongside clinical judgment, oxygenation status, radiology findings, and social circumstances.</p>
-
-  <h3>Antibiotic Guidance by Severity</h3>
-  <p>The IDSA/ATS guidelines recommend oral amoxicillin-clavulanate or respiratory fluoroquinolones for mild CAP (score 0–1), and IV beta-lactam plus a macrolide for moderate-severe CAP (score ≥2). For ICU-level patients, dual coverage with a beta-lactam plus either a macrolide or fluoroquinolone is standard. Atypical coverage (Legionella, Mycoplasma) should be considered in all hospitalized CAP patients.</p>
-
-  <h3>Limitations to Be Aware Of</h3>
-  <ul>
-    <li>Does not incorporate oxygenation or SpO₂ directly — a patient with SpO₂ &lt;90% may score low but require admission</li>
-    <li>Urea may be elevated due to dehydration, renal disease, or upper GI bleeding — false positivity is possible</li>
-    <li>Does not assess bilateral or multilobar infiltrates, which independently worsen prognosis</li>
-    <li>Not validated in aspiration pneumonia, healthcare-associated pneumonia, or immunocompromised hosts</li>
-    <li>Functional status, social support, and comorbidities must supplement the numeric score</li>
-  </ul>
-</div>
-
-<!-- FAQ Section -->
-<div class="content-section">
-  <h2>Frequently Asked Questions</h2>
-
-  <h3>What does CURB-65 stand for?</h3>
-  <p>CURB-65 is an acronym: <strong>C</strong> = Confusion, <strong>U</strong> = Urea &gt;7 mmol/L, <strong>R</strong> = Respiratory Rate ≥30/min, <strong>B</strong> = low Blood Pressure, and <strong>65</strong> = Age ≥65 years. Each criterion present adds 1 point to the total score.</p>
-
-  <h3>What is the difference between CURB-65 and CRB-65?</h3>
-  <p>CRB-65 omits the blood urea parameter, making it usable when laboratory results aren't available — primarily in GP or primary care settings. CURB-65 has superior predictive accuracy and is preferred in hospitals where a blood urea or BUN result can be obtained quickly.</p>
-
-  <h3>What CURB-65 score needs ICU admission?</h3>
-  <p>A score of 4 or 5 carries a 30-day mortality approaching 40% and should trigger an urgent ICU assessment in addition to inpatient admission. A score of 3 also warrants hospital admission and management as severe pneumonia, with a lower threshold for ICU referral if the patient deteriorates.</p>
-
-  <h3>Can CURB-65 be used for COVID-19 pneumonia?</h3>
-  <p>CURB-65 was not validated for viral or COVID-19 pneumonia. It can provide a rough severity estimate, but dedicated scores such as the 4C Mortality Score or WHO severity classification are more appropriate for SARS-CoV-2 pneumonia assessment.</p>
-</div>
-<div style="background:#f7fafc;border:1px solid #e2e8f0;border-radius:12px;
-padding:16px 20px;margin-bottom:20px;display:flex;gap:14px;align-items:flex-start">
-  <div style="font-size:2rem">👨‍⚕️</div>
-  <div>
-    <div style="font-weight:700;font-size:.9rem;color:#1a202c">
-      Reviewed by Dr. Sharma, MBBS, AFIH
-    </div>
-    <div style="font-size:.8rem;color:#718096;line-height:1.6;margin-top:3px">
-      Medical Officer, Government AAC, Punjab, India.
-      Previously at Hero DMC Heart Institute and Fortis Hospital, Ludhiana.
-      This tool follows British Thoracic Society (BTS) 2009 CAP Guidelines
-      and IDSA/ATS 2007 Consensus Statement.
-    </div>
-  </div>
-</div>
-<div class="footer-cite">
-  References: Lim WS, et al. (2003). Thorax, 58(5):377–382 | British Thoracic Society (BTS) CAP Guidelines | IDSA/ATS CAP Guidelines 2007. This tool is for educational support of clinical decision-making only.
-</div>
-  <section class="card">
-    <div class="card-title">Related Tools</div>
-    <div class="related-grid">
-      <a href="/medical-calculators/news2" class="related-card" ><div class="rc-name">NEWS2 Score</div><div class="rc-desc">Early warning score</div></a>
-      <a href="/medical-calculators/gcs-calculator" class="related-card" ><div class="rc-name">GCS Calculator</div><div class="rc-desc">Level of consciousness</div></a>
-      <a href="/medical-calculators/wells-score" class="related-card" ><div class="rc-name">Wells Score</div><div class="rc-desc">DVT/PE probability</div></a>
-      <a href="/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">32+ clinical tools</div></a>
+  <!-- ════ RELATED TOOLS BAR ════ -->
+  <section class="related-section" aria-labelledby="related-heading" style="background:#fff; border-top:1px solid #e5e7eb; padding:24px 0;">
+    <div class="related-inner" style="max-width:900px; margin:0 auto; padding:0 20px;">
+      <h2 id="related-heading" style="font-family:'Fraunces', Georgia, serif; font-size:1.2rem; color:#0d1b2a; margin-bottom:12px;">Related calculators on RxMedCalc</h2>
+      <div class="related-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
+        <a class="related-card" href="/medical-calculators/news2" style="text-decoration:none; color:inherit; background:#f9fafb; padding:12px; border-radius:8px; border:1px solid #e5e7eb;">
+          <h3 style="font-size:0.85rem; color:#0d1b2a; margin:0;">NEWS2 Score</h3>
+          <p style="font-size:0.75rem; color:#718096; margin:0;">Early warning tracking</p>
+        </a>
+        <a class="related-card" href="/medical-calculators/gcs-calculator" style="text-decoration:none; color:inherit; background:#f9fafb; padding:12px; border-radius:8px; border:1px solid #e5e7eb;">
+          <h3 style="font-size:0.85rem; color:#0d1b2a; margin:0;">GCS Calculator</h3>
+          <p style="font-size:0.75rem; color:#718096; margin:0;">Level of consciousness</p>
+        </a>
+        <a class="related-card" href="/medical-calculators/wells-score" style="text-decoration:none; color:inherit; background:#f9fafb; padding:12px; border-radius:8px; border:1px solid #e5e7eb;">
+          <h3 style="font-size:0.85rem; color:#0d1b2a; margin:0;">Wells Score</h3>
+          <p style="font-size:0.75rem; color:#718096; margin:0;">DVT/PE risk prediction</p>
+        </a>
+        <a class="related-card" href="/medical-calculators/" style="text-decoration:none; color:inherit; background:#f9fafb; padding:12px; border-radius:8px; border:1px solid #e5e7eb;">
+          <h3 style="font-size:0.85rem; color:#8b5cf6; margin:0;">All Tools →</h3>
+          <p style="font-size:0.75rem; color:#718096; margin:0;">32+ diagnostic systems</p>
+        </a>
+      </div>
     </div>
   </section>
-  </main>
 
-<script>
-let selected = new Set();
+  <!-- ════ ARCHITECTURE FOOTER ════ -->
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+        <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2026 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
 
-function toggle(id){
-  if(selected.has(id)) selected.delete(id); else selected.add(id);
-  const el = document.querySelectorAll('.item')[id-1];
-  el.classList.toggle('active');
-  document.getElementById('c'+id).textContent = selected.has(id) ? '✓' : '';
-  calc();
-}
+  <script>
+    const selected = new Set();
 
-function calc(){
-  const score = selected.size;
-  const res = document.getElementById('result');
-  if(score === 0){ res.style.display = "none"; return; }
+    function toggle(id) {
+      if (selected.has(id)) {
+        selected.delete(id);
+      } else {
+        selected.add(id);
+      }
+      const el = document.querySelectorAll('.item')[id-1];
+      el.classList.toggle('active');
+      document.getElementById('c'+id).textContent = selected.has(id) ? '✓' : '';
+      calc();
+    }
 
-  let mort="0.7%", status="low", group="Group 1", action="Low risk. Home treatment is generally appropriate. Reassess if no improvement within 48 hours.";
-  if(score>=4){
-    mort="~40%"; status="high"; group="Group 3";
-    action="<strong>EMERGENCY ADMISSION:</strong> Very high risk. Consider immediate ICU assessment and senior clinician review.";
-  } else if(score===3){
-    mort="17.0%"; status="high"; group="Group 3";
-    action="<strong>URGENT ADMISSION:</strong> High risk. Manage as severe community-acquired pneumonia with IV antibiotics.";
-  } else if(score===2){
-    mort="6.6%"; status="mod"; group="Group 2";
-    action="<strong>CONSIDER HOSPITALIZATION:</strong> Moderate risk. Hospital-based or closely supervised outpatient treatment is recommended.";
-  } else if(score===1){
-    mort="2.1%"; status="low"; group="Group 1";
-    action="Low risk. Home treatment appropriate with clear review criteria and safety netting.";
-  }
+    function calc() {
+      const score = selected.size;
+      const res = document.getElementById('result');
+      
+      // Auto-default display variables matching baseline scales
+      let mort = "0.7%", status = "low", group = "Group 1", action = "Low risk. Home treatment is generally appropriate. Reassess if no improvement within 48 hours.";
+      
+      if (score >= 4) {
+        mort = "~40%"; status = "high"; group = "Group 3";
+        action = "<strong>EMERGENCY ADMISSION:</strong> Very high risk. Consider immediate ICU assessment and senior clinician review.";
+      } else if (score === 3) {
+        mort = "17.0%"; status = "high"; group = "Group 3";
+        action = "<strong>URGENT ADMISSION:</strong> High risk. Manage as severe community-acquired pneumonia with IV antibiotics.";
+      } else if (score === 2) {
+        mort = "6.6%"; status = "mod"; group = "Group 2";
+        action = "<strong>CONSIDER HOSPITALIZATION:</strong> Moderate risk. Hospital-based or closely supervised outpatient treatment is recommended.";
+      } else if (score === 1) {
+        mort = "2.1%"; status = "low"; group = "Group 1";
+        action = "Low risk. Home treatment appropriate with clear review criteria and safety netting.";
+      }
 
-  const colors={low:'#38a169',mod:'#ed8936',high:'#e53e3e'};
-  res.style.display="block";
-  trackCalc('curb65', { score: score, risk: status });
-  const hdr=document.getElementById('res-header');
-  hdr.style.background=colors[status];
-  hdr.textContent=`CURB-65: ${score}/5 — ${group.toUpperCase()} (${status.toUpperCase()} RISK)`;
-  document.getElementById('res-score').textContent=score+"/5";
-  document.getElementById('res-mort').textContent=mort;
-  const note=document.getElementById('res-note');
-  note.className="interp "+status;
-  note.innerHTML="<strong>Recommendation:</strong> "+action;
+      const colors = { low: '#38a169', mod: '#ed8936', high: '#e53e3e' };
+      res.style.display = "block";
+      
+      // Safety gate validation wrapper for dynamic analytics hooks
+      if (typeof trackCalc === 'function') {
+        trackCalc('curb65', { score: score, risk: status });
+      }
+      
+      const hdr = document.getElementById('res-header');
+      hdr.style.background = colors[status];
+      hdr.textContent = `CURB-65: ${score}/5 — ${group.toUpperCase()} (${status.toUpperCase()} RISK)`;
+      document.getElementById('res-score').textContent = score + "/5";
+      document.getElementById('res-mort').textContent = mort;
+      
+      const note = document.getElementById('res-note');
+      note.className = "interp " + status;
+      note.innerHTML = "<strong>Recommendation:</strong> " + action;
 
-  document.getElementById('share-btn').onclick=()=>{
-    const text=`CURB-65 Score: ${score}/5 | 30-day Mortality: ${mort} | ${group} — ${status.toUpperCase()} RISK\nCalculated at Clinical Calculators India`;
-    try{uTrack('share_whatsapp',{tool:'curb65'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
-  };
-}
-</script>
-<script src="/assets/shared-nav.js"></script>
+      document.getElementById('share-btn').onclick = () => {
+        const text = `CURB-65 Score: ${score}/5 | 30-day Mortality: ${mort} | ${group} — ${status.toUpperCase()} RISK\nCalculated at RxMedCalc`;
+        window.open('https://wa.me/?text=' + encodeURIComponent(text));
+      };
+    }
+
+    (() => {
+      const ss = document.querySelectorAll('article h2[id]');
+      const ll = document.querySelectorAll('.toc-nav a');
+      const ob = new IntersectionObserver(es => {
+        es.forEach(e => {
+          if (e.isIntersecting) {
+            ll.forEach(a => a.classList.remove('active'));
+            const a = document.querySelector('.toc-nav a[href="#' + e.target.id + '"]');
+            if (a) a.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px' });
+      ss.forEach(s => ob.observe(s));
+    })();
+  </script>
+
 </body>
 </html>
