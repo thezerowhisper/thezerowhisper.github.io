@@ -1,24 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="ldl-calculator">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>LDL Cholesterol Calculator | Friedewald Equation | LDL-C Formula | RxMedCalc</title>
-<meta name="description" content="Free LDL cholesterol calculator using Friedewald equation and Martin-Hopkins formula. Calculate LDL-C from total cholesterol, HDL, and triglycerides. Includes AHA/ACC statin targets by risk category. Works in mg/dL and mmol/L."/>
-<meta name="keywords" content="LDL calculator, Friedewald equation, LDL cholesterol formula, calculate LDL from lipid panel, LDL-C calculation, LDL mg/dL calculator, Martin-Hopkins LDL, statin target LDL, LDL without direct measurement, cholesterol calculator"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/ldl-calculator"/>
-<meta property="og:title" content="LDL Cholesterol Calculator | Friedewald Formula | RxMedCalc"/>
-<meta property="og:description" content="Calculate LDL-C using Friedewald equation from total cholesterol, HDL, and triglycerides. Statin targets by risk category. Free."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/ldl-calculator"/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>LDL CholesterolCalculator | RxMedCalc</title>
+  <meta name="description" content="Free LDL cholesterol calculator using Friedewald equation and Martin-Hopkins formula. Calculate LDL-C from total cholesterol, HDL, and triglycerides. Includes AHA/ACC statin targets by risk category. Works in mg/dL and mmol/L."/>
+  <meta name="keywords" content="LDL calculator, Friedewald equation, LDL cholesterol formula, calculate LDL from lipid panel, LDL-C calculation, LDL mg/dL calculator, Martin-Hopkins LDL, statin target LDL, LDL without direct measurement, cholesterol calculator"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/ldl-calculator"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="LDL CholesterolCalculator | RxMedCalc"/>
+  <meta property="og:description" content="Free LDL cholesterol calculator using Friedewald equation and Martin-Hopkins formula. Calculate LDL-C from total cholesterol, HDL, and triglycerides. Includes AHA/ACC statin targets by risk category. Works in mg/dL and mmol/L."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/ldl-calculator"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/ldl-calculator.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="LDL CholesterolCalculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/ldl-calculator.png"/>
+  <meta name="twitter:image:alt" content="LDL CholesterolCalculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="LDL CholesterolCalculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Free LDL cholesterol calculator using Friedewald equation and Martin-Hopkins formula. Calculate LDL-C from total cholesterol, HDL, and triglycerides. Includes AHA/ACC statin targets by risk category. Works in mg/dL and mmol/L."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"LDL CholesterolCalculator","description":"Free LDL cholesterol calculator using Friedewald equation and Martin-Hopkins formula. Calculate LDL-C from total cholesterol, HDL, and triglycerides. Includes AHA/ACC statin targets by risk category. Works in mg/dL and mmol/L.","url":"https://rxmedcalc.com/medical-calculators/ldl-calculator","@id":"https://rxmedcalc.com/medical-calculators/ldl-calculator","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is the Friedewald formula for LDL?","acceptedAnswer":{"@type":"Answer","text":"LDL cholesterol (mg/dL) = Total Cholesterol − HDL − (Triglycerides / 5). This is valid only when fasting triglycerides are <400 mg/dL. In SI units: LDL (mmol/L) = Total Cholesterol − HDL − (Triglycerides / 2.2). The formula underestimates LDL at high triglyceride levels — use direct LDL measurement if TG >400 mg/dL."}},
+      {"@type":"Question","name":"What is the LDL target for cardiovascular risk reduction?","acceptedAnswer":{"@type":"Answer","text":"ACC/AHA and ESC guidelines: Very high risk (established CVD, DM with organ damage): LDL <55 mg/dL (<1.4 mmol/L). High risk (DM without organ damage, 10-year risk >10%): LDL <70 mg/dL (<1.8 mmol/L). Moderate risk: LDL <100 mg/dL (<2.6 mmol/L). Low risk: LDL <116 mg/dL (<3.0 mmol/L). More aggressive targets are recommended after recent ACS."}},
+      {"@type":"Question","name":"Which statin achieves the most LDL reduction?","acceptedAnswer":{"@type":"Answer","text":"High-intensity statins: atorvastatin 40–80 mg (reduces LDL ~50%) or rosuvastatin 20–40 mg (reduces LDL ~55%). Moderate-intensity: atorvastatin 10–20 mg, rosuvastatin 5–10 mg, simvastatin 20–40 mg (reduces LDL ~30–50%). Each doubling of statin dose reduces LDL by an additional ~6% ('rule of 6'). If LDL target not achieved: add ezetimibe (further ~20% reduction) before escalating to PCSK9 inhibitors."}},
+      {"@type":"Question","name":"When is the Friedewald formula inaccurate?","acceptedAnswer":{"@type":"Answer","text":"Inaccurate when: TG >400 mg/dL (severely hypertriglyceridaemic), TG <150 mg/dL (underestimates LDL), in type III hyperlipidaemia (dysbetalipoproteinaemia), in non-fasting samples. In these situations, use direct LDL measurement by laboratory or the Sampson-NIH equation which is more accurate at extremes of TG and LDL values."}},
+      {"@type":"Question","name":"What is nonHDL cholesterol and when is it useful?","acceptedAnswer":{"@type":"Answer","text":"Non-HDL cholesterol = Total Cholesterol − HDL. It includes all atherogenic lipoproteins (LDL, VLDL, IDL, Lp(a)) and is a better predictor of CVD risk than LDL alone, particularly in patients with hypertriglyceridaemia or diabetes. Non-HDL targets are typically 30 mg/dL higher than LDL targets. Non-HDL cholesterol does not require fasting and can be calculated from a random sample — useful in population screening."}},
+      {"@type":"Question","name":"Are statins safe longterm?","acceptedAnswer":{"@type":"Answer","text":"Statins are among the most studied drugs in medicine. Proven safe for long-term use in the vast majority. Main adverse effects: myalgia (5–10%, often non-specific), myositis with elevated CK (rare, <0.1%), rhabdomyolysis (very rare, 1–3 per 100,000). Slight increase in diabetes risk (~10% relative increase). No credible evidence for cognitive impairment or cancer risk. Routine monitoring: LFTs only if symptomatic; CK only if myalgia. Benefits far outweigh risks in patients with CVD risk."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"LDL CholesterolCalculator","item":"https://rxmedcalc.com/medical-calculators/ldl-calculator"}]},
+    {"@type":"SoftwareApplication","name":"LDL CholesterolCalculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/ldl-calculator"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
+  <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
@@ -106,24 +135,72 @@ h1 em{font-style:italic;color:#34d399}
     .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
     .fi.op .fa{max-height:600px;padding-top:8px}
   </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
-<div class="page-header">
-  <div class="header-inner">
-    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>LDL Calculator</span></nav>
-    <div class="page-eyebrow">❤️ Cardiology · Lipids · Prevention</div>
-    <h1>LDL Cholesterol<br><em>Calculator</em></h1>
-    <p class="page-sub">Calculate LDL-C using Friedewald equation and Martin-Hopkins formula from a standard fasting lipid panel. Includes AHA/ACC statin targets by risk category and non-HDL cholesterol.</p>
-    <div class="header-badges">
-      <span class="hbadge">✓ Friedewald Equation</span>
-      <span class="hbadge">✓ Martin-Hopkins Formula</span>
-      <span class="hbadge">✓ mg/dL &amp; mmol/L</span>
-      <span class="hbadge">✓ Statin Targets by Risk</span>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
     </div>
-  </div>
-</div>
-<main class="main">
-  <div class="calc-card">
+  </header>
+
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 ❤️ Cardiology · Lipids · Prevention</div>
+    <h1><em>LDL CholesterolCalculator</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
+
+  
+
+  <section class="calc-widget-section">
+    <div class="calc-card">
     <div class="calc-title">LDL Cholesterol from Lipid Panel</div>
     <div class="unit-toggle">
       <button class="unit-btn active" id="u-mgdl" onclick="setUnit('mgdl')">mg/dL</button>
@@ -132,17 +209,17 @@ h1 em{font-style:italic;color:#34d399}
     <div class="input-grid">
       <div class="field">
         <label>Total Cholesterol</label>
-        <input type="number" id="tc" placeholder="e.g. 200" inputmode="decimal"/>
+        <input type="number" id="tc" placeholder="e.g. 200" inputmode="decimal">
         <div class="hint" id="h-tc">mg/dL (normal &lt;200)</div>
       </div>
       <div class="field">
         <label>HDL Cholesterol</label>
-        <input type="number" id="hdl" placeholder="e.g. 50" inputmode="decimal"/>
+        <input type="number" id="hdl" placeholder="e.g. 50" inputmode="decimal">
         <div class="hint" id="h-hdl">mg/dL (normal ≥40 M / ≥50 F)</div>
       </div>
       <div class="field">
         <label>Triglycerides (TG)</label>
-        <input type="number" id="tg" placeholder="e.g. 150" inputmode="decimal" oninput="checkTG()"/>
+        <input type="number" id="tg" placeholder="e.g. 150" inputmode="decimal" oninput="checkTG()">
         <div class="hint" id="h-tg">mg/dL — must be fasting</div>
       </div>
     </div>
@@ -171,18 +248,38 @@ h1 em{font-style:italic;color:#34d399}
       <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
   </div>
+  </section>
 
-  <div class="content-card">
-    <h2>LDL Calculation Formulas</h2>
-    <div class="formula-box">
+  
+
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#ldl-calculation-formulas">1. LDL Calculation Formulas</a>
+          <a href="#faq">2. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="ldl-calculation-formulas"><span class="sec-num">1</span>LDL Calculation Formulas</h2>
+        <div class="formula-box">
       Friedewald (mg/dL): LDL = TC − HDL − (TG ÷ 5)<br>
       Friedewald (mmol/L): LDL = TC − HDL − (TG ÷ 2.2)<br>
       <br>
       Non-HDL Cholesterol = TC − HDL<br>
       (Non-HDL includes LDL + VLDL + IDL — better predictor in hypertriglyceridaemia)
-    </div>
-    <h3>LDL Statin Targets — AHA/ACC 2019</h3>
-    <table class="target-table">
+    </div><h3>LDL Statin Targets — AHA/ACC 2019</h3><table class="target-table">
       <thead><tr><th>Risk Category</th><th>LDL Target (mg/dL)</th><th>LDL Target (mmol/L)</th><th>Statin Intensity</th></tr></thead>
       <tbody>
         <tr><td>Very High Risk (ASCVD, diabetes + ≥2 major risk factors, LDL &gt;190)</td><td>&lt;55</td><td>&lt;1.4</td><td>High-intensity ± ezetimibe ± PCSK9i</td></tr>
@@ -191,45 +288,99 @@ h1 em{font-style:italic;color:#34d399}
         <tr><td>Low Risk (&lt;7.5% 10-year ASCVD, LDL &lt;190)</td><td>&lt;130</td><td>&lt;3.4</td><td>Lifestyle first; statin if LDL ≥160+</td></tr>
         <tr><td>Familial Hypercholesterolaemia (LDL &gt;190)</td><td>&lt;100 (&lt;70 if ASCVD)</td><td>&lt;2.6</td><td>High-intensity statin — always treat</td></tr>
       </tbody>
-    </table>
-    <h3>When Friedewald Formula is INACCURATE</h3>
-    <ul>
+    </table><h3>When Friedewald Formula is INACCURATE</h3><ul>
       <li><strong>TG &gt;400 mg/dL (4.5 mmol/L):</strong> Friedewald substantially underestimates LDL. Use direct LDL measurement or Martin-Hopkins formula (validated up to TG 800 mg/dL)</li>
       <li><strong>Non-fasting sample:</strong> TG is elevated after meals, making the VLDL estimate incorrect. Always request a fasting lipid panel (12-hour fast, water allowed)</li>
       <li><strong>Type III hyperlipoproteinaemia (dysbetalipoproteinaemia):</strong> Unusual VLDL composition means TG/5 overestimates VLDL — use direct LDL</li>
       <li><strong>Very low LDL (&lt;70 mg/dL):</strong> Friedewald can give falsely low or even negative values. Martin-Hopkins or direct LDL preferred</li>
-    </ul>
-    <h3>High-Intensity Statin Options (India)</h3>
-    <ul>
+    </ul><h3>High-Intensity Statin Options (India)</h3><ul>
       <li><strong>Atorvastatin 40–80 mg OD:</strong> Reduces LDL by 49–60%. Most widely used high-intensity statin in India. Available as generic</li>
       <li><strong>Rosuvastatin 20–40 mg OD:</strong> Reduces LDL by 52–63%. Preferred in CKD, Asian patients (lower dose for equivalent effect). Less CYP3A4 metabolism than atorvastatin</li>
       <li><strong>Ezetimibe 10 mg OD (add-on):</strong> Reduces LDL by additional 15–25%. IMPROVE-IT trial: adds 6% relative CVD risk reduction on top of statin. First-line add-on if statin alone insufficient</li>
       <li><strong>PCSK9 inhibitors (evolocumab/alirocumab):</strong> Reduce LDL by 50–60% on top of statin. Expensive in India. Reserved for FH, very high-risk patients not at goal on statin + ezetimibe</li>
     </ul>
-     <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the Friedewald formula for LDL?</div><div class="fa">LDL cholesterol (mg/dL) = Total Cholesterol − HDL − (Triglycerides / 5). This is valid only when fasting triglycerides are <400 mg/dL. In SI units: LDL (mmol/L) = Total Cholesterol − HDL − (Triglycerides / 2.2). The formula underestimates LDL at high triglyceride levels — use direct LDL measurement if TG >400 mg/dL.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the LDL target for cardiovascular risk reduction?</div><div class="fa">ACC/AHA and ESC guidelines: Very high risk (established CVD, DM with organ damage): LDL <55 mg/dL (<1.4 mmol/L). High risk (DM without organ damage, 10-year risk >10%): LDL <70 mg/dL (<1.8 mmol/L). Moderate risk: LDL <100 mg/dL (<2.6 mmol/L). Low risk: LDL <116 mg/dL (<3.0 mmol/L). More aggressive targets are recommended after recent ACS.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Which statin achieves the most LDL reduction?</div><div class="fa">High-intensity statins: atorvastatin 40–80 mg (reduces LDL ~50%) or rosuvastatin 20–40 mg (reduces LDL ~55%). Moderate-intensity: atorvastatin 10–20 mg, rosuvastatin 5–10 mg, simvastatin 20–40 mg (reduces LDL ~30–50%). Each doubling of statin dose reduces LDL by an additional ~6% ('rule of 6'). If LDL target not achieved: add ezetimibe (further ~20% reduction) before escalating to PCSK9 inhibitors.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">When is the Friedewald formula inaccurate?</div><div class="fa">Inaccurate when: TG >400 mg/dL (severely hypertriglyceridaemic), TG <150 mg/dL (underestimates LDL), in type III hyperlipidaemia (dysbetalipoproteinaemia), in non-fasting samples. In these situations, use direct LDL measurement by laboratory or the Sampson-NIH equation which is more accurate at extremes of TG and LDL values.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is non-HDL cholesterol and when is it useful?</div><div class="fa">Non-HDL cholesterol = Total Cholesterol − HDL. It includes all atherogenic lipoproteins (LDL, VLDL, IDL, Lp(a)) and is a better predictor of CVD risk than LDL alone, particularly in patients with hypertriglyceridaemia or diabetes. Non-HDL targets are typically 30 mg/dL higher than LDL targets. Non-HDL cholesterol does not require fasting and can be calculated from a random sample — useful in population screening.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Are statins safe long-term?</div><div class="fa">Statins are among the most studied drugs in medicine. Proven safe for long-term use in the vast majority. Main adverse effects: myalgia (5–10%, often non-specific), myositis with elevated CK (rare, <0.1%), rhabdomyolysis (very rare, 1–3 per 100,000). Slight increase in diabetes risk (~10% relative increase). No credible evidence for cognitive impairment or cancer risk. Routine monitoring: LFTs only if symptomatic; CK only if myalgia. Benefits far outweigh risks in patients with CVD risk.</div></div>
-  </div>
+
+
+        <h2 id="faq"><span class="sec-num">2</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is the Friedewald formula for LDL?</summary>
+            <div class="faq-answer"><p>LDL cholesterol (mg/dL) = Total Cholesterol − HDL − (Triglycerides / 5). This is valid only when fasting triglycerides are &lt;400 mg/dL. In SI units: LDL (mmol/L) = Total Cholesterol − HDL − (Triglycerides / 2.2). The formula underestimates LDL at high triglyceride levels — use direct LDL measurement if TG &gt;400 mg/dL.</p></div>
+          </details>
+          <details>
+            <summary>What is the LDL target for cardiovascular risk reduction?</summary>
+            <div class="faq-answer"><p>ACC/AHA and ESC guidelines: Very high risk (established CVD, DM with organ damage): LDL &lt;55 mg/dL (&lt;1.4 mmol/L). High risk (DM without organ damage, 10-year risk &gt;10%): LDL &lt;70 mg/dL (&lt;1.8 mmol/L). Moderate risk: LDL &lt;100 mg/dL (&lt;2.6 mmol/L). Low risk: LDL &lt;116 mg/dL (&lt;3.0 mmol/L). More aggressive targets are recommended after recent ACS.</p></div>
+          </details>
+          <details>
+            <summary>Which statin achieves the most LDL reduction?</summary>
+            <div class="faq-answer"><p>High-intensity statins: atorvastatin 40–80 mg (reduces LDL ~50%) or rosuvastatin 20–40 mg (reduces LDL ~55%). Moderate-intensity: atorvastatin 10–20 mg, rosuvastatin 5–10 mg, simvastatin 20–40 mg (reduces LDL ~30–50%). Each doubling of statin dose reduces LDL by an additional ~6% ('rule of 6'). If LDL target not achieved: add ezetimibe (further ~20% reduction) before escalating to PCSK9 inhibitors.</p></div>
+          </details>
+          <details>
+            <summary>When is the Friedewald formula inaccurate?</summary>
+            <div class="faq-answer"><p>Inaccurate when: TG &gt;400 mg/dL (severely hypertriglyceridaemic), TG &lt;150 mg/dL (underestimates LDL), in type III hyperlipidaemia (dysbetalipoproteinaemia), in non-fasting samples. In these situations, use direct LDL measurement by laboratory or the Sampson-NIH equation which is more accurate at extremes of TG and LDL values.</p></div>
+          </details>
+          <details>
+            <summary>What is nonHDL cholesterol and when is it useful?</summary>
+            <div class="faq-answer"><p>Non-HDL cholesterol = Total Cholesterol − HDL. It includes all atherogenic lipoproteins (LDL, VLDL, IDL, Lp(a)) and is a better predictor of CVD risk than LDL alone, particularly in patients with hypertriglyceridaemia or diabetes. Non-HDL targets are typically 30 mg/dL higher than LDL targets. Non-HDL cholesterol does not require fasting and can be calculated from a random sample — useful in population screening.</p></div>
+          </details>
+          <details>
+            <summary>Are statins safe longterm?</summary>
+            <div class="faq-answer"><p>Statins are among the most studied drugs in medicine. Proven safe for long-term use in the vast majority. Main adverse effects: myalgia (5–10%, often non-specific), myositis with elevated CK (rare, &lt;0.1%), rhabdomyolysis (very rare, 1–3 per 100,000). Slight increase in diabetes risk (~10% relative increase). No credible evidence for cognitive impairment or cancer risk. Routine monitoring: LFTs only if symptomatic; CK only if myalgia. Benefits far outweigh risks in patients with CVD risk.</p></div>
+          </details>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#ldl-calculation-formulas"><span class="toc-num">1</span>LDL Calculation Formulas</a></li>
+          <li><a href="#faq"><span class="toc-num">2</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
   </div>
 
-  <div class="content-card">
-    <h2>Related Calculators</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/ascvd-risk" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">ASCVD Risk</div><div class="rc-desc">10-year CV risk for statin decision</div></div></a>
-      <a href="/medical-calculators/framingham-risk" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">Framingham Risk</div><div class="rc-desc">10-year CHD risk</div></div></a>
-      <a href="/medical-calculators/lab-unit-converter" class="related-card"><span class="rc-icon">🔬</span><div><div class="rc-title">Lab Unit Converter</div><div class="rc-desc">mg/dL ↔ mmol/L cholesterol</div></div></a>
-      <a href="/medical-calculators/cha2ds2-vasc" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">CHA₂DS₂-VASc</div><div class="rc-desc">AF stroke risk</div></div></a>
+
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/ascvd-risk"><h3>ASCVD Risk</h3></a>
+        <a class="related-card" href="/medical-calculators/framingham-risk"><h3>Framingham Risk</h3></a>
+        <a class="related-card" href="/medical-calculators/lab-unit-converter"><h3>Lab Unit Converter</h3></a>
+        <a class="related-card" href="/medical-calculators/cha2ds2-vasc"><h3>CHA₂DS₂-VASc</h3></a>
+      </div>
     </div>
-  </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Friedewald-calculated LDL is an estimate. Always request direct LDL measurement when TG &gt;400 mg/dL or sample is non-fasting. Statin decisions require comprehensive cardiovascular risk assessment including ASCVD calculation, shared decision-making, and clinical context. Consult a cardiologist or physician for personalised lipid management.</div>
-</main>
+  </section>
 
-<script>
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
 let unit='mgdl';let lastResult=null;
 function setUnit(u){
   unit=u;
@@ -296,12 +447,14 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){['tc','hdl','tg'].forEach(id=>document.getElementById(id).value='');document.getElementById('tg-warning').className='tg-warning';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
-</script>
-<script src="/assets/shared-nav.js"></script>
-<script>
-  function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}
-</script>
 
- 
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
+
 </body>
 </html>
