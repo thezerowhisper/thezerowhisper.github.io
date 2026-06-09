@@ -1,113 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="map-calculator">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Mean Arterial Pressure (MAP) Calculator | Normal MAP Range | RxMedCalc</title>
-<meta name="description" content="Free MAP calculator. Calculate mean arterial pressure from systolic and diastolic blood pressure instantly. Includes normal MAP range, clinical interpretation, and shock thresholds. Used by doctors and nurses worldwide."/>
-<meta name="keywords" content="mean arterial pressure calculator, MAP calculator, MAP normal range, MAP formula, MAP blood pressure, mean arterial pressure normal, MAP shock, MAP formula DBP SBP, MAP clinical significance, perfusion pressure calculator"/>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/map-calculator"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Mean Arterial Pressure (MAP) Calculator — Normal Range & Clinical Interpretation"/>
-<meta property="og:description" content="Calculate MAP from SBP and DBP instantly. Includes normal range, shock thresholds, and clinical interpretation. Free tool for doctors and nurses."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/map-calculator"/>
-<meta property="og:site_name" content="RxMedCalc"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="MAP Calculator | Mean Arterial Pressure | RxMedCalc"/>
-<meta name="twitter:description" content="Calculate mean arterial pressure (MAP) instantly. Normal range, shock thresholds, clinical interpretation. Free for doctors worldwide."/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="/assets/umami-events.js"></script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"MedicalWebPage",
-      "@id":"https://rxmedcalc.com/medical-calculators/map-calculator#webpage",
-      "url":"https://rxmedcalc.com/medical-calculators/map-calculator",
-      "name":"Mean Arterial Pressure (MAP) Calculator",
-      "description":"Free online MAP calculator. Calculate mean arterial pressure from systolic and diastolic blood pressure with clinical interpretation, normal range, and shock thresholds.",
-      "inLanguage":"en",
-      "isPartOf":{"@id":"https://rxmedcalc.com/#website"},
-      "about":{"@type":"MedicalCondition","name":"Mean Arterial Pressure"},
-      "audience":{"@type":"MedicalAudience","audienceType":"Physician, Nurse, Paramedic, Medical Student"},
-      "dateModified":"2025-04-14"
-    },
-    {
-      "@type":"BreadcrumbList",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},
-        {"@type":"ListItem","position":2,"name":"Medical Calculators","item":"https://rxmedcalc.com/medical-calculators/"},
-        {"@type":"ListItem","position":3,"name":"MAP Calculator","item":"https://rxmedcalc.com/medical-calculators/map-calculator"}
-      ]
-    },
-    {
-      "@type":"SoftwareApplication",
-      "name":"MAP Calculator",
-      "applicationCategory":"MedicalApplication",
-      "operatingSystem":"Any",
-      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
-      "url":"https://rxmedcalc.com/medical-calculators/map-calculator"
-    },
-    {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {
-          "@type":"Question",
-          "name":"What is the normal MAP range?",
-          "acceptedAnswer":{"@type":"Answer","text":"A normal mean arterial pressure is between 70 and 100 mmHg. A MAP of at least 65 mmHg is considered the minimum needed to perfuse vital organs in critically ill patients. A MAP above 70 mmHg is the target in most ICU resuscitation protocols. Values below 60 mmHg indicate inadequate organ perfusion and require urgent intervention."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is the formula for mean arterial pressure?",
-          "acceptedAnswer":{"@type":"Answer","text":"MAP = DBP + 1/3 × (SBP − DBP), or equivalently MAP = (SBP + 2×DBP) ÷ 3. This formula accounts for the fact that the heart spends approximately twice as long in diastole as in systole at normal heart rates. For example, a BP of 120/80 mmHg gives MAP = 80 + 1/3×(120−80) = 80 + 13.3 = 93.3 mmHg."}
-        },
-        {
-          "@type":"Question",
-          "name":"What MAP indicates shock?",
-          "acceptedAnswer":{"@type":"Answer","text":"A MAP below 65 mmHg is the threshold for haemodynamic shock in most clinical guidelines. This is the resuscitation target in septic shock per Surviving Sepsis Campaign guidelines (SSC 2021). At MAP below 50 mmHg, there is significant risk of acute kidney injury, myocardial ischaemia, and cerebral hypoperfusion. Below 40 mmHg is a critical emergency requiring immediate vasopressor support."}
-        },
-        {
-          "@type":"Question",
-          "name":"Why is MAP more important than systolic blood pressure in ICU?",
-          "acceptedAnswer":{"@type":"Answer","text":"MAP is a better indicator of tissue perfusion than systolic BP because it represents the average pressure driving blood through the circulation throughout the entire cardiac cycle. Systolic BP is just the peak pressure during contraction. MAP determines coronary perfusion pressure (CPP = MAP − LVEDP) and cerebral perfusion pressure (CPP = MAP − ICP). Most organ autoregulation mechanisms respond to MAP, not systolic pressure."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is the MAP target in septic shock?",
-          "acceptedAnswer":{"@type":"Answer","text":"The Surviving Sepsis Campaign 2021 guidelines recommend a MAP target of ≥65 mmHg in septic shock. Some guidelines suggest higher targets (70–75 mmHg) in patients with pre-existing hypertension or chronic kidney disease. Higher MAP targets (80–85 mmHg) did not show mortality benefit over 65 mmHg in the SEPSISPAM trial."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is a dangerously high MAP?",
-          "acceptedAnswer":{"@type":"Answer","text":"A MAP above 110 mmHg indicates hypertension and above 150 mmHg is a hypertensive emergency requiring immediate treatment. Chronically elevated MAP accelerates atherosclerosis, causes left ventricular hypertrophy, and damages the kidneys. In hypertensive encephalopathy or aortic dissection, MAP must be reduced rapidly under controlled conditions."}
-        },
-        {
-          "@type":"Question",
-          "name":"How does MAP relate to cerebral perfusion pressure?",
-          "acceptedAnswer":{"@type":"Answer","text":"Cerebral perfusion pressure (CPP) = MAP − ICP (intracranial pressure). Normal CPP is 60–80 mmHg. In traumatic brain injury (TBI), maintaining MAP ≥80 mmHg is often targeted to ensure adequate CPP (≥60 mmHg) if ICP is elevated. The Brain Trauma Foundation recommends CPP targets of 60–70 mmHg in severe TBI."}
-        },
-        {
-          "@type":"Question",
-          "name":"Can MAP be calculated from an automatic BP machine?",
-          "acceptedAnswer":{"@type":"Answer","text":"Most modern automatic blood pressure monitors (NIBP machines) display MAP directly. The monitor calculates MAP using the oscillometric method during cuff deflation, which is slightly different from the arithmetic formula but gives clinically equivalent results. You can also calculate it manually using MAP = DBP + 1/3 × Pulse Pressure, where Pulse Pressure = SBP − DBP."}
-        }
-      ]
-    }
-  ]
-}
-</script>
-
-<style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Mean Arterial Pressure(MAP) Calculator | RxMedCalc</title>
+  <meta name="description" content="Free MAP calculator. Calculate mean arterial pressure from systolic and diastolic blood pressure instantly. Includes normal MAP range, clinical interpretation, and shock thresholds. Used by doctors and nurses worldwide."/>
+  <meta name="keywords" content="mean arterial pressure calculator, MAP calculator, MAP normal range, MAP formula, MAP blood pressure, mean arterial pressure normal, MAP shock, MAP formula DBP SBP, MAP clinical significance, perfusion pressure calculator"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/map-calculator"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Mean Arterial Pressure(MAP) Calculator | RxMedCalc"/>
+  <meta property="og:description" content="Free MAP calculator. Calculate mean arterial pressure from systolic and diastolic blood pressure instantly. Includes normal MAP range, clinical interpretation, and shock thresholds. Used by doctors and nurses worldwide."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/map-calculator"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/map-calculator.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Mean Arterial Pressure(MAP) Calculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/map-calculator.png"/>
+  <meta name="twitter:image:alt" content="Mean Arterial Pressure(MAP) Calculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Mean Arterial Pressure(MAP) Calculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Free MAP calculator. Calculate mean arterial pressure from systolic and diastolic blood pressure instantly. Includes normal MAP range, clinical interpretation, and shock thresholds. Used by doctors and nurses worldwide."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"Mean Arterial Pressure(MAP) Calculator","description":"Free MAP calculator. Calculate mean arterial pressure from systolic and diastolic blood pressure instantly. Includes normal MAP range, clinical interpretation, and shock thresholds. Used by doctors and nurses worldwide.","url":"https://rxmedcalc.com/medical-calculators/map-calculator","@id":"https://rxmedcalc.com/medical-calculators/map-calculator","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is the normal MAP range?","acceptedAnswer":{"@type":"Answer","text":"A normal mean arterial pressure is between 70 and 100 mmHg. A MAP of at least 65 mmHg is considered the minimum needed to perfuse vital organs in critically ill patients. A MAP above 70 mmHg is the target in most ICU resuscitation protocols. Values below 60 mmHg indicate inadequate organ perfusion and require urgent intervention."}},
+      {"@type":"Question","name":"What is the formula for mean arterial pressure?","acceptedAnswer":{"@type":"Answer","text":"MAP = DBP + 1/3 × (SBP − DBP), or equivalently MAP = (SBP + 2×DBP) ÷ 3. This formula accounts for the fact that the heart spends approximately twice as long in diastole as in systole at normal heart rates. For example, a BP of 120/80 mmHg gives MAP = 80 + 1/3×(120−80) = 80 + 13.3 = 93.3 mmHg."}},
+      {"@type":"Question","name":"What MAP indicates shock?","acceptedAnswer":{"@type":"Answer","text":"A MAP below 65 mmHg is the threshold for haemodynamic shock in most clinical guidelines. This is the resuscitation target in septic shock per Surviving Sepsis Campaign guidelines (SSC 2021). At MAP below 50 mmHg, there is significant risk of acute kidney injury, myocardial ischaemia, and cerebral hypoperfusion. Below 40 mmHg is a critical emergency requiring immediate vasopressor support."}},
+      {"@type":"Question","name":"Why is MAP more important than systolic blood pressure in ICU?","acceptedAnswer":{"@type":"Answer","text":"MAP is a better indicator of tissue perfusion than systolic BP because it represents the average pressure driving blood through the circulation throughout the entire cardiac cycle. Systolic BP is just the peak pressure during contraction. MAP determines coronary perfusion pressure (CPP = MAP − LVEDP) and cerebral perfusion pressure (CPP = MAP − ICP). Most organ autoregulation mechanisms respond to MAP, not systolic pressure."}},
+      {"@type":"Question","name":"What is the MAP target in septic shock?","acceptedAnswer":{"@type":"Answer","text":"The Surviving Sepsis Campaign 2021 guidelines recommend a MAP target of ≥65 mmHg in septic shock. Some guidelines suggest higher targets (70–75 mmHg) in patients with pre-existing hypertension or chronic kidney disease. Higher MAP targets (80–85 mmHg) did not show mortality benefit over 65 mmHg in the SEPSISPAM trial."}},
+      {"@type":"Question","name":"What is a dangerously high MAP?","acceptedAnswer":{"@type":"Answer","text":"A MAP above 110 mmHg indicates hypertension and above 150 mmHg is a hypertensive emergency requiring immediate treatment. Chronically elevated MAP accelerates atherosclerosis, causes left ventricular hypertrophy, and damages the kidneys. In hypertensive encephalopathy or aortic dissection, MAP must be reduced rapidly under controlled conditions."}},
+      {"@type":"Question","name":"How does MAP relate to cerebral perfusion pressure?","acceptedAnswer":{"@type":"Answer","text":"Cerebral perfusion pressure (CPP) = MAP − ICP (intracranial pressure). Normal CPP is 60–80 mmHg. In traumatic brain injury (TBI), maintaining MAP ≥80 mmHg is often targeted to ensure adequate CPP (≥60 mmHg) if ICP is elevated. The Brain Trauma Foundation recommends CPP targets of 60–70 mmHg in severe TBI."}},
+      {"@type":"Question","name":"Can MAP be calculated from an automatic BP machine?","acceptedAnswer":{"@type":"Answer","text":"Most modern automatic blood pressure monitors (NIBP machines) display MAP directly. The monitor calculates MAP using the oscillometric method during cuff deflation, which is slightly different from the arithmetic formula but gives clinically equivalent results. You can also calculate it manually using MAP = DBP + 1/3 × Pulse Pressure, where Pulse Pressure = SBP − DBP."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"Mean Arterial Pressure(MAP) Calculator","item":"https://rxmedcalc.com/medical-calculators/map-calculator"}]},
+    {"@type":"SoftwareApplication","name":"Mean Arterial Pressure(MAP) Calculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/map-calculator"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
+  <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
@@ -308,34 +250,72 @@ h1 em{font-style:italic;color:#f87171}
     .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
     .info-section p:last-child { margin-bottom: 0; }
   </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
-
-<!-- /assets/shared-nav.js injects header -->
-
-<div class="page-header">
-  <div class="header-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a><span>›</span>
-      <a href="/medical-calculators/">Calculators</a><span>›</span>
-      <span>MAP Calculator</span>
-    </nav>
-    <div class="page-eyebrow">❤️ Cardiovascular · Critical Care</div>
-    <h1>Mean Arterial Pressure<br><em>(MAP)</em> Calculator</h1>
-    <p class="page-sub">Calculate MAP from systolic and diastolic blood pressure instantly. Includes clinical interpretation, shock thresholds, and organ perfusion targets used in ICU practice.</p>
-    <div class="header-badges">
-      <span class="hbadge">✓ SSC 2021 Guidelines</span>
-      <span class="hbadge">✓ ICU Perfusion Targets</span>
-      <span class="hbadge">✓ Cerebral Perfusion</span>
-      <span class="hbadge">✓ Instant Results</span>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
     </div>
-  </div>
-</div>
+  </header>
 
-<main class="main">
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 ❤️ Cardiovascular · Critical Care</div>
+    <h1><em>Mean Arterial Pressure(MAP) Calculator</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
 
-  <!-- ═══ CALCULATOR ═══ -->
-  <div class="calc-card">
+  
+
+  <section class="calc-widget-section">
+    <div class="calc-card">
     <div class="calc-card-title">MAP Calculator</div>
 
     <div class="bp-display" id="bp-display" style="display:none">
@@ -352,12 +332,12 @@ h1 em{font-style:italic;color:#f87171}
     <div class="input-grid">
       <div class="field">
         <label for="sbp">Systolic BP (SBP)</label>
-        <input type="number" id="sbp" placeholder="e.g. 120" min="40" max="300" inputmode="decimal" aria-label="Systolic blood pressure in mmHg"/>
+        <input type="number" id="sbp" placeholder="e.g. 120" min="40" max="300" inputmode="decimal" aria-label="Systolic blood pressure in mmHg">
         <div class="hint">mmHg — upper number on BP reading</div>
       </div>
       <div class="field">
         <label for="dbp">Diastolic BP (DBP)</label>
-        <input type="number" id="dbp" placeholder="e.g. 80" min="20" max="200" inputmode="decimal" aria-label="Diastolic blood pressure in mmHg"/>
+        <input type="number" id="dbp" placeholder="e.g. 80" min="20" max="200" inputmode="decimal" aria-label="Diastolic blood pressure in mmHg">
         <div class="hint">mmHg — lower number on BP reading</div>
       </div>
     </div>
@@ -413,39 +393,46 @@ h1 em{font-style:italic;color:#f87171}
       <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
   </div>
+  </section>
 
-  <!-- ═══ FORMULA ═══ -->
-  <div class="content-card">
-    <h2>MAP Formula Explained</h2>
-    <p>The mean arterial pressure formula is derived from the fact that the heart spends approximately <strong>one-third of the cardiac cycle in systole</strong> (contraction) and <strong>two-thirds in diastole</strong> (relaxation) at normal resting heart rates. This weighting gives diastolic pressure a greater contribution to the overall mean pressure.</p>
+  
 
-    <div class="formula-block">
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#map-formula-explained">1. MAP Formula Explained</a>
+          <a href="#map-normal-range-clinical-interpretati">2. MAP Normal Range &amp; Clinical Interpretation</a>
+          <a href="#clinical-uses-of-map-in-practice">3. Clinical Uses of MAP in Practice</a>
+          <a href="#about-the-map-calculator">4. About the MAP Calculator</a>
+          <a href="#faq">5. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="map-formula-explained"><span class="sec-num">1</span>MAP Formula Explained</h2>
+        <p>The mean arterial pressure formula is derived from the fact that the heart spends approximately <strong>one-third of the cardiac cycle in systole</strong> (contraction) and <strong>two-thirds in diastole</strong> (relaxation) at normal resting heart rates. This weighting gives diastolic pressure a greater contribution to the overall mean pressure.</p><div class="formula-block">
       MAP = DBP + <span>1/3 ×</span> (SBP − DBP)<br>
       MAP = <span>(</span>SBP + 2 × DBP<span>)</span> ÷ 3<br>
       MAP = DBP + <span>1/3 ×</span> Pulse Pressure
-    </div>
-
-    <h3>Worked Example</h3>
-    <p>For a blood pressure reading of <strong>120/80 mmHg</strong>:</p>
-    <ul>
+    </div><h3>Worked Example</h3><p>For a blood pressure reading of <strong>120/80 mmHg</strong>:</p><ul>
       <li>Pulse Pressure = 120 − 80 = 40 mmHg</li>
       <li>MAP = 80 + (1/3 × 40) = 80 + 13.3 = <strong>93.3 mmHg</strong></li>
       <li>Alternatively: MAP = (120 + 2×80) ÷ 3 = 280 ÷ 3 = <strong>93.3 mmHg</strong></li>
-    </ul>
+    </ul><h3>Why Not Just Average SBP and DBP?</h3><p>A simple arithmetic mean of SBP and DBP (120+80÷2 = 100) would be incorrect because it assumes equal time in systole and diastole. At a resting heart rate of 60–80 bpm, diastole accounts for roughly 65% of the cardiac cycle. The 1/3 weighting formula is the clinically validated approximation. At very high heart rates (&gt;150 bpm), diastolic time shortens significantly and the formula becomes less accurate — in such cases, direct intra-arterial measurement is preferred.</p><h3>Automatic BP Monitors vs Manual Formula</h3><p>Modern oscillometric NIBP monitors measure MAP directly during cuff deflation using the point of maximum oscillation, which is more accurate than the arithmetic formula. The displayed MAP on ICU monitors and NIBP machines uses this method. For bedside estimation from a manual BP reading, the formula above is clinically adequate and universally accepted.</p>
 
-    <h3>Why Not Just Average SBP and DBP?</h3>
-    <p>A simple arithmetic mean of SBP and DBP (120+80÷2 = 100) would be incorrect because it assumes equal time in systole and diastole. At a resting heart rate of 60–80 bpm, diastole accounts for roughly 65% of the cardiac cycle. The 1/3 weighting formula is the clinically validated approximation. At very high heart rates (>150 bpm), diastolic time shortens significantly and the formula becomes less accurate — in such cases, direct intra-arterial measurement is preferred.</p>
-
-    <h3>Automatic BP Monitors vs Manual Formula</h3>
-    <p>Modern oscillometric NIBP monitors measure MAP directly during cuff deflation using the point of maximum oscillation, which is more accurate than the arithmetic formula. The displayed MAP on ICU monitors and NIBP machines uses this method. For bedside estimation from a manual BP reading, the formula above is clinically adequate and universally accepted.</p>
-  </div>
-
-  <!-- ═══ NORMAL RANGE TABLE ═══ -->
-  <div class="content-card">
-    <h2>MAP Normal Range & Clinical Interpretation</h2>
-    <p>Understanding MAP values in their clinical context is essential. The same MAP carries different significance in a healthy young adult versus an elderly hypertensive patient in the ICU.</p>
-
-    <table class="range-table">
+        <h2 id="map-normal-range-clinical-interpretati"><span class="sec-num">2</span>MAP Normal Range &amp; Clinical Interpretation</h2>
+        <p>Understanding MAP values in their clinical context is essential. The same MAP carries different significance in a healthy young adult versus an elderly hypertensive patient in the ICU.</p><table class="range-table">
       <thead>
         <tr><th>MAP (mmHg)</th><th>Category</th><th>Clinical Significance</th><th>Action</th></tr>
       </thead>
@@ -458,83 +445,106 @@ h1 em{font-style:italic;color:#f87171}
         <tr><td>111 – 149</td><td><span class="status-pill pill-high">High</span></td><td>Significant hypertension, end-organ risk</td><td>Urgent BP management</td></tr>
         <tr><td>≥ 150</td><td><span class="status-pill pill-vhigh">Critical High</span></td><td>Hypertensive emergency, encephalopathy risk</td><td>Emergency treatment</td></tr>
       </tbody>
-    </table>
+    </table><h3>The 65 mmHg Threshold — Why It Matters</h3><p>The MAP of 65 mmHg is the most clinically significant threshold in critical care. It represents the minimum pressure required to maintain coronary artery perfusion (which occurs during diastole), renal perfusion (the kidney autoregulates between MAP 60–120 mmHg), and cerebral perfusion (brain autoregulates between MAP 50–150 mmHg in healthy individuals). Below 65 mmHg, these autoregulatory mechanisms begin to fail.</p><p>The Surviving Sepsis Campaign (SSC 2021) recommends MAP ≥65 mmHg as the resuscitation target in septic shock. The SEPSISPAM RCT (n=776) found no mortality benefit from targeting MAP 80–85 mmHg versus 65–70 mmHg — but patients with chronic hypertension had lower rates of acute kidney injury with higher MAP targets.</p>
 
-    <h3>The 65 mmHg Threshold — Why It Matters</h3>
-    <p>The MAP of 65 mmHg is the most clinically significant threshold in critical care. It represents the minimum pressure required to maintain coronary artery perfusion (which occurs during diastole), renal perfusion (the kidney autoregulates between MAP 60–120 mmHg), and cerebral perfusion (brain autoregulates between MAP 50–150 mmHg in healthy individuals). Below 65 mmHg, these autoregulatory mechanisms begin to fail.</p>
-    <p>The Surviving Sepsis Campaign (SSC 2021) recommends MAP ≥65 mmHg as the resuscitation target in septic shock. The SEPSISPAM RCT (n=776) found no mortality benefit from targeting MAP 80–85 mmHg versus 65–70 mmHg — but patients with chronic hypertension had lower rates of acute kidney injury with higher MAP targets.</p>
+        <h2 id="clinical-uses-of-map-in-practice"><span class="sec-num">3</span>Clinical Uses of MAP in Practice</h2>
+        <h3>1. Septic Shock Resuscitation</h3><p>MAP is the primary haemodynamic target in septic shock. The Hour-1 Bundle (SSC 2021) includes targeting MAP ≥65 mmHg with vasopressors if fluid resuscitation is insufficient. Noradrenaline (norepinephrine) is the first-line vasopressor — titrated to achieve the MAP target. In refractory septic shock, vasopressin and adrenaline are added.</p><h3>2. Traumatic Brain Injury (TBI)</h3><p>In severe TBI, cerebral perfusion pressure (CPP) = MAP − ICP. The Brain Trauma Foundation recommends CPP 60–70 mmHg. If ICP is elevated (e.g. 20 mmHg), MAP must be maintained ≥80–85 mmHg to ensure adequate CPP. MAP monitoring is therefore mandatory in all patients with severe TBI and ICP monitoring.</p><h3>3. Coronary Artery Disease &amp; Cardiac Surgery</h3><p>Coronary perfusion pressure (CoronaryPP) = Diastolic BP − LVEDP (left ventricular end-diastolic pressure). Since DBP is the primary determinant of coronary filling, a low MAP with particularly low DBP may cause myocardial ischaemia even with acceptable systolic values. Post-cardiac surgery, MAP targets of 65–90 mmHg are standard to protect bypass grafts.</p><h3>4. Renal Protection</h3><p>The kidneys autoregulate glomerular filtration between MAP 60–120 mmHg. Below 60 mmHg, GFR drops precipitously — explaining why hypotension is the leading cause of acute kidney injury (AKI) in hospitalised patients. Maintaining MAP ≥65 mmHg is critical in AKI prevention. In patients with pre-existing CKD, higher MAP targets (70–80 mmHg) may be needed due to impaired autoregulation.</p><h3>5. Obstetric Emergencies</h3><p>In severe pre-eclampsia and eclampsia, MAP is used to guide antihypertensive therapy. A MAP &gt;125 mmHg in pregnancy carries high risk of intracerebral haemorrhage and placental abruption. Labetalol and hydralazine are titrated against MAP. Uteroplacental perfusion is optimal when MAP is maintained between 85–105 mmHg in hypertensive pregnancy.</p><h3>6. Anaesthesia &amp; Perioperative Care</h3><p>Intraoperative hypotension (MAP &lt;65 mmHg for &gt;5 minutes) is independently associated with myocardial injury, AKI, and stroke. Anaesthetists use MAP as the primary intraoperative haemodynamic target, particularly in major surgeries, elderly patients, and those with pre-existing cardiovascular disease.</p><h3>Pulse Pressure — What It Tells You</h3><p>Pulse pressure (PP = SBP − DBP) provides additional information alongside MAP. A narrow pulse pressure (&lt;25 mmHg) suggests low stroke volume — seen in cardiac tamponade, severe heart failure, and haemorrhagic shock. A wide pulse pressure (&gt;60 mmHg) suggests aortic regurgitation, hyperdynamic states, or aortic stiffness in the elderly. Normal pulse pressure is 40 mmHg (one-third of systolic).</p>
+
+        <h2 id="about-the-map-calculator"><span class="sec-num">4</span>About the MAP Calculator</h2>
+        <p>Mean arterial pressure (MAP) is a fundamental haemodynamic parameter representing the average blood pressure throughout the cardiac cycle, weighted to account for the longer duration of diastole (~2/3 of the cycle). Unlike systolic BP, MAP correlates directly with organ perfusion pressure and tissue oxygen delivery, making it the key target in haemodynamic resuscitation and critical care management.</p><p>The clinical significance of MAP lies in its role in maintaining perfusion to vital organs. Each organ system has a lower limit of MAP below which autoregulation fails and perfusion becomes pressure-dependent: the brain requires MAP &gt;=60 mmHg (or higher in TBI — &gt;=70-80 mmHg to maintain cerebral perfusion pressure), the kidneys require MAP &gt;=65-70 mmHg for adequate glomerular filtration, and the coronary circulation depends on adequate diastolic pressure for myocardial perfusion.</p><p>In septic shock, the Surviving Sepsis Campaign targets MAP &gt;=65 mmHg with noradrenaline as first-line vasopressor. However, a higher MAP target (80-85 mmHg) may benefit patients with pre-existing hypertension or chronic kidney disease, as shown in the SEPSISPAM trial — where the higher target reduced the need for renal replacement therapy in hypertensive patients. MAP monitoring should be continuous via arterial line in any patient requiring vasopressors.</p>
+
+
+        <h2 id="faq"><span class="sec-num">5</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is the normal MAP range?</summary>
+            <div class="faq-answer"><p>A normal mean arterial pressure is between 70 and 100 mmHg. A MAP of at least 65 mmHg is considered the minimum needed to perfuse vital organs in critically ill patients. A MAP above 70 mmHg is the target in most ICU resuscitation protocols. Values below 60 mmHg indicate inadequate organ perfusion and require urgent intervention.</p></div>
+          </details>
+          <details>
+            <summary>What is the formula for mean arterial pressure?</summary>
+            <div class="faq-answer"><p>MAP = DBP + 1/3 × (SBP − DBP), or equivalently MAP = (SBP + 2×DBP) ÷ 3. This formula accounts for the fact that the heart spends approximately twice as long in diastole as in systole at normal heart rates. For example, a BP of 120/80 mmHg gives MAP = 80 + 1/3×(120−80) = 80 + 13.3 = 93.3 mmHg.</p></div>
+          </details>
+          <details>
+            <summary>What MAP indicates shock?</summary>
+            <div class="faq-answer"><p>A MAP below 65 mmHg is the threshold for haemodynamic shock in most clinical guidelines. This is the resuscitation target in septic shock per Surviving Sepsis Campaign guidelines (SSC 2021). At MAP below 50 mmHg, there is significant risk of acute kidney injury, myocardial ischaemia, and cerebral hypoperfusion. Below 40 mmHg is a critical emergency requiring immediate vasopressor support.</p></div>
+          </details>
+          <details>
+            <summary>Why is MAP more important than systolic blood pressure in ICU?</summary>
+            <div class="faq-answer"><p>MAP is a better indicator of tissue perfusion than systolic BP because it represents the average pressure driving blood through the circulation throughout the entire cardiac cycle. Systolic BP is just the peak pressure during contraction. MAP determines coronary perfusion pressure (CPP = MAP − LVEDP) and cerebral perfusion pressure (CPP = MAP − ICP). Most organ autoregulation mechanisms respond to MAP, not systolic pressure.</p></div>
+          </details>
+          <details>
+            <summary>What is the MAP target in septic shock?</summary>
+            <div class="faq-answer"><p>The Surviving Sepsis Campaign 2021 guidelines recommend a MAP target of ≥65 mmHg in septic shock. Some guidelines suggest higher targets (70–75 mmHg) in patients with pre-existing hypertension or chronic kidney disease. Higher MAP targets (80–85 mmHg) did not show mortality benefit over 65 mmHg in the SEPSISPAM trial.</p></div>
+          </details>
+          <details>
+            <summary>What is a dangerously high MAP?</summary>
+            <div class="faq-answer"><p>A MAP above 110 mmHg indicates hypertension and above 150 mmHg is a hypertensive emergency requiring immediate treatment. Chronically elevated MAP accelerates atherosclerosis, causes left ventricular hypertrophy, and damages the kidneys. In hypertensive encephalopathy or aortic dissection, MAP must be reduced rapidly under controlled conditions.</p></div>
+          </details>
+          <details>
+            <summary>How does MAP relate to cerebral perfusion pressure?</summary>
+            <div class="faq-answer"><p>Cerebral perfusion pressure (CPP) = MAP − ICP (intracranial pressure). Normal CPP is 60–80 mmHg. In traumatic brain injury (TBI), maintaining MAP ≥80 mmHg is often targeted to ensure adequate CPP (≥60 mmHg) if ICP is elevated. The Brain Trauma Foundation recommends CPP targets of 60–70 mmHg in severe TBI.</p></div>
+          </details>
+          <details>
+            <summary>Can MAP be calculated from an automatic BP machine?</summary>
+            <div class="faq-answer"><p>Most modern automatic blood pressure monitors (NIBP machines) display MAP directly. The monitor calculates MAP using the oscillometric method during cuff deflation, which is slightly different from the arithmetic formula but gives clinically equivalent results. You can also calculate it manually using MAP = DBP + 1/3 × Pulse Pressure, where Pulse Pressure = SBP − DBP.</p></div>
+          </details>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#map-formula-explained"><span class="toc-num">1</span>MAP Formula Explained</a></li>
+          <li><a href="#map-normal-range-clinical-interpretati"><span class="toc-num">2</span>MAP Normal Range &amp; Clinical </a></li>
+          <li><a href="#clinical-uses-of-map-in-practice"><span class="toc-num">3</span>Clinical Uses of MAP in Prac</a></li>
+          <li><a href="#about-the-map-calculator"><span class="toc-num">4</span>About the MAP Calculator</a></li>
+          <li><a href="#faq"><span class="toc-num">5</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
   </div>
 
-  <!-- ═══ CLINICAL USES ═══ -->
-  <div class="content-card">
-    <h2>Clinical Uses of MAP in Practice</h2>
 
-    <h3>1. Septic Shock Resuscitation</h3>
-    <p>MAP is the primary haemodynamic target in septic shock. The Hour-1 Bundle (SSC 2021) includes targeting MAP ≥65 mmHg with vasopressors if fluid resuscitation is insufficient. Noradrenaline (norepinephrine) is the first-line vasopressor — titrated to achieve the MAP target. In refractory septic shock, vasopressin and adrenaline are added.</p>
 
-    <h3>2. Traumatic Brain Injury (TBI)</h3>
-    <p>In severe TBI, cerebral perfusion pressure (CPP) = MAP − ICP. The Brain Trauma Foundation recommends CPP 60–70 mmHg. If ICP is elevated (e.g. 20 mmHg), MAP must be maintained ≥80–85 mmHg to ensure adequate CPP. MAP monitoring is therefore mandatory in all patients with severe TBI and ICP monitoring.</p>
-
-    <h3>3. Coronary Artery Disease & Cardiac Surgery</h3>
-    <p>Coronary perfusion pressure (CoronaryPP) = Diastolic BP − LVEDP (left ventricular end-diastolic pressure). Since DBP is the primary determinant of coronary filling, a low MAP with particularly low DBP may cause myocardial ischaemia even with acceptable systolic values. Post-cardiac surgery, MAP targets of 65–90 mmHg are standard to protect bypass grafts.</p>
-
-    <h3>4. Renal Protection</h3>
-    <p>The kidneys autoregulate glomerular filtration between MAP 60–120 mmHg. Below 60 mmHg, GFR drops precipitously — explaining why hypotension is the leading cause of acute kidney injury (AKI) in hospitalised patients. Maintaining MAP ≥65 mmHg is critical in AKI prevention. In patients with pre-existing CKD, higher MAP targets (70–80 mmHg) may be needed due to impaired autoregulation.</p>
-
-    <h3>5. Obstetric Emergencies</h3>
-    <p>In severe pre-eclampsia and eclampsia, MAP is used to guide antihypertensive therapy. A MAP >125 mmHg in pregnancy carries high risk of intracerebral haemorrhage and placental abruption. Labetalol and hydralazine are titrated against MAP. Uteroplacental perfusion is optimal when MAP is maintained between 85–105 mmHg in hypertensive pregnancy.</p>
-
-    <h3>6. Anaesthesia & Perioperative Care</h3>
-    <p>Intraoperative hypotension (MAP &lt;65 mmHg for >5 minutes) is independently associated with myocardial injury, AKI, and stroke. Anaesthetists use MAP as the primary intraoperative haemodynamic target, particularly in major surgeries, elderly patients, and those with pre-existing cardiovascular disease.</p>
-
-    <h3>Pulse Pressure — What It Tells You</h3>
-    <p>Pulse pressure (PP = SBP − DBP) provides additional information alongside MAP. A narrow pulse pressure (&lt;25 mmHg) suggests low stroke volume — seen in cardiac tamponade, severe heart failure, and haemorrhagic shock. A wide pulse pressure (&gt;60 mmHg) suggests aortic regurgitation, hyperdynamic states, or aortic stiffness in the elderly. Normal pulse pressure is 40 mmHg (one-third of systolic).</p>
-  </div>
-
-  <!-- ═══ FAQ ═══ -->
-  <div class="content-card">
-    <h2>Frequently Asked Questions</h2>
-    <div id="faq-container"></div>
-  </div>
-
-  <!-- ═══ RELATED TOOLS ═══ -->
-  <div class="content-card">
-    <h2>Related Clinical Calculators</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/news2" class="related-card">
-        <span class="rc-icon">📉</span>
-        <div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Early warning including BP</div></div>
-      </a>
-      <a href="/medical-calculators/gcs-calculator" class="related-card">
-        <span class="rc-icon">🧠</span>
-        <div><div class="rc-title">GCS Calculator</div><div class="rc-desc">Neurological assessment, CPP</div></div>
-      </a>
-      <a href="/medical-calculators/curb65" class="related-card">
-        <span class="rc-icon">🫁</span>
-        <div><div class="rc-title">CURB-65</div><div class="rc-desc">Pneumonia severity, sepsis</div></div>
-      </a>
-      <a href="/medical-calculators/ibw-calculator" class="related-card">
-        <span class="rc-icon">⚖️</span>
-        <div><div class="rc-title">IBW Calculator</div><div class="rc-desc">Drug dosing by body weight</div></div>
-      </a>
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/news2"><h3>NEWS2 Score</h3></a>
+        <a class="related-card" href="/medical-calculators/gcs-calculator"><h3>GCS Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/curb65"><h3>CURB-65</h3></a>
+        <a class="related-card" href="/medical-calculators/ibw-calculator"><h3>IBW Calculator</h3></a>
+      </div>
     </div>
-  </div>
-
-  <div class="disclaimer">
-    <strong>⚠ Medical Disclaimer:</strong> This MAP calculator is a clinical decision-support tool for qualified healthcare professionals. Results must be interpreted in the full clinical context of the patient. MAP targets vary by clinical scenario, comorbidities, and institutional protocols. Always verify with your clinical guidelines and senior colleagues for critical care decisions.
-  </div>
-
-
-  <section class="info-section" id="about-map-calculator">
-    <h2>About the MAP Calculator</h2>
-    <p>Mean arterial pressure (MAP) is a fundamental haemodynamic parameter representing the average blood pressure throughout the cardiac cycle, weighted to account for the longer duration of diastole (~2/3 of the cycle). Unlike systolic BP, MAP correlates directly with organ perfusion pressure and tissue oxygen delivery, making it the key target in haemodynamic resuscitation and critical care management.</p>
-    <p>The clinical significance of MAP lies in its role in maintaining perfusion to vital organs. Each organ system has a lower limit of MAP below which autoregulation fails and perfusion becomes pressure-dependent: the brain requires MAP >=60 mmHg (or higher in TBI — >=70-80 mmHg to maintain cerebral perfusion pressure), the kidneys require MAP >=65-70 mmHg for adequate glomerular filtration, and the coronary circulation depends on adequate diastolic pressure for myocardial perfusion.</p>
-    <p>In septic shock, the Surviving Sepsis Campaign targets MAP >=65 mmHg with noradrenaline as first-line vasopressor. However, a higher MAP target (80-85 mmHg) may benefit patients with pre-existing hypertension or chronic kidney disease, as shown in the SEPSISPAM trial — where the higher target reduced the need for renal replacement therapy in hypertensive patients. MAP monitoring should be continuous via arterial line in any patient requiring vasopressors.</p>
   </section>
-</main>
 
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
 
-<script>
+  <script>
 let lastResult = null;
 
 const faqs = [
@@ -680,7 +690,14 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Enter'&&['INPUT'].includes(e.target.tagName)) calculate();
   if(e.key==='Enter'&&e.target.classList.contains('faq-q')) e.target.click();
 });
-</script>
-<script src="/assets/shared-nav.js"></script>
+
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
+
 </body>
 </html>
