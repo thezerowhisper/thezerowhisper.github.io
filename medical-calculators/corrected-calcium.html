@@ -1,89 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="/assets/umami-events.js"></script>
-  <title>Corrected Calcium Calculator — Albumin-Adjusted Ca²⁺ (mg/dL & mmol/L)</title>
-  <meta name="description" content="Free corrected calcium calculator for hypoalbuminaemia. Calculates albumin-adjusted calcium in mg/dL and mmol/L with hypocalcaemia/hypercalcaemia interpretation. Used by doctors, intensivists, and medical students." />
-  <meta name="keywords" content="corrected calcium calculator, albumin corrected calcium, calcium correction hypoalbuminaemia, adjusted calcium formula, hypocalcaemia calculator, hypercalcaemia calculator, corrected calcium mg/dL, corrected calcium mmol/L, calcium albumin correction India, serum calcium correction formula" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/corrected-calcium" />
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Corrected Calcium Calculator — Albumin-Adjusted Ca²⁺" />
-  <meta property="og:description" content="Calculate albumin-corrected calcium in mg/dL and mmol/L. Instant hypocalcaemia and hypercalcaemia grading." />
-  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/corrected-calcium" />
-  <meta property="og:site_name" content="Medical Calculators" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Corrected Calcium Calculator" />
-  <meta name="twitter:description" content="Albumin-adjusted calcium calculator with mg/dL & mmol/L support and clinical interpretation." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Corrected Calcium Calculator | RxMedCalc</title>
+  <meta name="description" content="Free corrected calcium calculator for hypoalbuminaemia. Calculates albumin-adjusted calcium in mg/dL and mmol/L with hypocalcaemia/hypercalcaemia interpretation. Used by doctors, intensivists, and medical students."/>
+  <meta name="keywords" content="corrected calcium calculator, albumin corrected calcium, calcium correction hypoalbuminaemia, adjusted calcium formula, hypocalcaemia calculator, hypercalcaemia calculator, corrected calcium mg/dL, corrected calcium mmol/L, calcium albumin correction India, serum calcium correction formula"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/corrected-calcium"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Corrected Calcium Calculator | RxMedCalc"/>
+  <meta property="og:description" content="Free corrected calcium calculator for hypoalbuminaemia. Calculates albumin-adjusted calcium in mg/dL and mmol/L with hypocalcaemia/hypercalcaemia interpretation. Used by doctors, intensivists, and medical students."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/corrected-calcium"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/corrected-calcium.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Corrected Calcium Calculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/corrected-calcium.png"/>
+  <meta name="twitter:image:alt" content="Corrected Calcium Calculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Corrected Calcium Calculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Free corrected calcium calculator for hypoalbuminaemia. Calculates albumin-adjusted calcium in mg/dL and mmol/L with hypocalcaemia/hypercalcaemia interpretation. Used by doctors, intensivists, and medical students."/>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/medical-calculators/"},
-          {"@type":"ListItem","position":2,"name":"Electrolyte Calculators","item":"https://rxmedcalc.com/medical-calculators/#electrolytes"},
-          {"@type":"ListItem","position":3,"name":"Corrected Calcium","item":"https://rxmedcalc.com/medical-calculators/corrected-calcium"}
-        ]
-      },
-      {
-        "@type": "MedicalWebPage",
-        "name": "Corrected Calcium Calculator",
-        "url": "https://rxmedcalc.com/medical-calculators/corrected-calcium",
-        "description": "Calculates albumin-corrected serum calcium in hypoalbuminaemia. Supports mg/dL and mmol/L with clinical interpretation."
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type":"Question","name":"Why does serum calcium need to be corrected for albumin?",
-            "acceptedAnswer":{"@type":"Answer","text":"Approximately 40–45% of serum calcium is bound to albumin. When albumin is low (hypoalbuminaemia), total serum calcium is falsely low, even though the physiologically active ionised (free) calcium may be normal. The corrected calcium formula adjusts for this: Corrected Ca = Measured Ca + 0.8 × (4.0 − Albumin in g/dL). Without correction, hypoalbuminaemic patients may be incorrectly diagnosed with hypocalcaemia and treated unnecessarily."}
-          },
-          {
-            "@type":"Question","name":"What is the formula for corrected calcium?",
-            "acceptedAnswer":{"@type":"Answer","text":"Standard formula (using g/dL for albumin): Corrected Ca (mg/dL) = Measured Ca (mg/dL) + 0.8 × (4.0 − Albumin g/dL). In SI units: Corrected Ca (mmol/L) = Measured Ca (mmol/L) + 0.02 × (40 − Albumin g/L). Normal serum calcium: 8.5–10.5 mg/dL (2.12–2.62 mmol/L)."}
-          },
-          {
-            "@type":"Question","name":"What is the normal range for serum calcium?",
-            "acceptedAnswer":{"@type":"Answer","text":"Normal total serum calcium: 8.5–10.5 mg/dL (2.12–2.62 mmol/L). Ionised (free) calcium normal range: 1.15–1.35 mmol/L (4.6–5.4 mg/dL). Values below the lower limit of normal define hypocalcaemia; values above the upper limit define hypercalcaemia."}
-          },
-          {
-            "@type":"Question","name":"What are the causes of hypocalcaemia?",
-            "acceptedAnswer":{"@type":"Answer","text":"Common causes of true hypocalcaemia include: hypoparathyroidism (post-surgical, autoimmune, genetic), vitamin D deficiency, chronic kidney disease (reduced 1α-hydroxylation), hypomagnesaemia (impairs PTH secretion), pancreatitis (calcium saponification), hungry bone syndrome post-parathyroidectomy, and certain drugs (bisphosphonates, cinacalcet, denosumab, foscarnet)."}
-          },
-          {
-            "@type":"Question","name":"What are the causes of hypercalcaemia?",
-            "acceptedAnswer":{"@type":"Answer","text":"The mnemonic CHIMPANZEES covers most causes: Calcium supplementation excess, Hyperparathyroidism (primary — most common outpatient cause), Iatrogenic (thiazides, vitamin D, lithium), Metastatic malignancy or Multiple myeloma, Paget's disease, Addison's disease, Neoplasia (PTHrP-secreting tumours — most common inpatient cause), Zollinger-Ellison/MEN syndromes, Excess vitamin D (granulomatous disease — sarcoidosis, TB), Endocrine (hyperthyroidism), Sarcoidosis/immobilisation."}
-          },
-          {
-            "@type":"Question","name":"Is the corrected calcium formula accurate?",
-            "acceptedAnswer":{"@type":"Answer","text":"The Payne formula (0.8 correction factor) is the most widely used but has significant limitations. Multiple studies show poor correlation between corrected calcium and measured ionised calcium, particularly in critically ill patients, those with nephrotic syndrome, malignancy, and acid-base disturbances. When accurate calcium assessment is critical, direct measurement of ionised calcium (blood gas analyser) is preferred over the corrected formula."}
-          },
-          {
-            "@type":"Question","name":"What are the symptoms of hypocalcaemia?",
-            "acceptedAnswer":{"@type":"Answer","text":"Hypocalcaemia symptoms include neuromuscular irritability: Chvostek sign (facial muscle twitch on tapping the facial nerve), Trousseau sign (carpopedal spasm on blood pressure cuff inflation), perioral and fingertip paraesthesias, muscle cramps, tetany, and in severe cases seizures and laryngospasm. ECG findings include prolonged QTc interval. Chronic hypocalcaemia can cause cataracts, basal ganglia calcification, and cognitive impairment."}
-          },
-          {
-            "@type":"Question","name":"What are the symptoms of hypercalcaemia?",
-            "acceptedAnswer":{"@type":"Answer","text":"The mnemonic 'Bones, Stones, Groans, Psychic Moans': Bones — bone pain, osteitis fibrosa cystica; Stones — renal calculi, nephrocalcinosis, polyuria/polydipsia (nephrogenic DI); Groans — nausea, vomiting, constipation, anorexia, peptic ulcers; Psychic Moans — depression, confusion, lethargy, psychosis, coma. ECG shows shortened QTc interval."}
-          }
-        ]
-      }
-    ]
-  }
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"Corrected Calcium Calculator","description":"Free corrected calcium calculator for hypoalbuminaemia. Calculates albumin-adjusted calcium in mg/dL and mmol/L with hypocalcaemia/hypercalcaemia interpretation. Used by doctors, intensivists, and medical students.","url":"https://rxmedcalc.com/medical-calculators/corrected-calcium","@id":"https://rxmedcalc.com/medical-calculators/corrected-calcium","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Why does serum calcium need to be corrected for albumin?","acceptedAnswer":{"@type":"Answer","text":"Approximately 40–45% of serum calcium is bound to albumin. When albumin is low (hypoalbuminaemia), total serum calcium is falsely low, even though the physiologically active ionised (free) calcium may be normal. The corrected calcium formula adjusts for this: Corrected Ca = Measured Ca + 0.8 × (4.0 − Albumin in g/dL). Without correction, hypoalbuminaemic patients may be incorrectly diagnosed with hypocalcaemia and treated unnecessarily."}},
+      {"@type":"Question","name":"What is the formula for corrected calcium?","acceptedAnswer":{"@type":"Answer","text":"Standard formula (using g/dL for albumin): Corrected Ca (mg/dL) = Measured Ca (mg/dL) + 0.8 × (4.0 − Albumin g/dL). In SI units: Corrected Ca (mmol/L) = Measured Ca (mmol/L) + 0.02 × (40 − Albumin g/L). Normal serum calcium: 8.5–10.5 mg/dL (2.12–2.62 mmol/L)."}},
+      {"@type":"Question","name":"What is the normal range for serum calcium?","acceptedAnswer":{"@type":"Answer","text":"Normal total serum calcium: 8.5–10.5 mg/dL (2.12–2.62 mmol/L). Ionised (free) calcium normal range: 1.15–1.35 mmol/L (4.6–5.4 mg/dL). Values below the lower limit of normal define hypocalcaemia; values above the upper limit define hypercalcaemia."}},
+      {"@type":"Question","name":"What are the causes of hypocalcaemia?","acceptedAnswer":{"@type":"Answer","text":"Common causes of true hypocalcaemia include: hypoparathyroidism (post-surgical, autoimmune, genetic), vitamin D deficiency, chronic kidney disease (reduced 1α-hydroxylation), hypomagnesaemia (impairs PTH secretion), pancreatitis (calcium saponification), hungry bone syndrome post-parathyroidectomy, and certain drugs (bisphosphonates, cinacalcet, denosumab, foscarnet)."}},
+      {"@type":"Question","name":"What are the causes of hypercalcaemia?","acceptedAnswer":{"@type":"Answer","text":"The mnemonic CHIMPANZEES covers most causes: Calcium supplementation excess, Hyperparathyroidism (primary — most common outpatient cause), Iatrogenic (thiazides, vitamin D, lithium), Metastatic malignancy or Multiple myeloma, Paget's disease, Addison's disease, Neoplasia (PTHrP-secreting tumours — most common inpatient cause), Zollinger-Ellison/MEN syndromes, Excess vitamin D (granulomatous disease — sarcoidosis, TB), Endocrine (hyperthyroidism), Sarcoidosis/immobilisation."}},
+      {"@type":"Question","name":"Is the corrected calcium formula accurate?","acceptedAnswer":{"@type":"Answer","text":"The Payne formula (0.8 correction factor) is the most widely used but has significant limitations. Multiple studies show poor correlation between corrected calcium and measured ionised calcium, particularly in critically ill patients, those with nephrotic syndrome, malignancy, and acid-base disturbances. When accurate calcium assessment is critical, direct measurement of ionised calcium (blood gas analyser) is preferred over the corrected formula."}},
+      {"@type":"Question","name":"What are the symptoms of hypocalcaemia?","acceptedAnswer":{"@type":"Answer","text":"Hypocalcaemia symptoms include neuromuscular irritability: Chvostek sign (facial muscle twitch on tapping the facial nerve), Trousseau sign (carpopedal spasm on blood pressure cuff inflation), perioral and fingertip paraesthesias, muscle cramps, tetany, and in severe cases seizures and laryngospasm. ECG findings include prolonged QTc interval. Chronic hypocalcaemia can cause cataracts, basal ganglia calcification, and cognitive impairment."}},
+      {"@type":"Question","name":"What are the symptoms of hypercalcaemia?","acceptedAnswer":{"@type":"Answer","text":"The mnemonic 'Bones, Stones, Groans, Psychic Moans': Bones — bone pain, osteitis fibrosa cystica; Stones — renal calculi, nephrocalcinosis, polyuria/polydipsia (nephrogenic DI); Groans — nausea, vomiting, constipation, anorexia, peptic ulcers; Psychic Moans — depression, confusion, lethargy, psychosis, coma. ECG shows shortened QTc interval."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"Corrected Calcium Calculator","item":"https://rxmedcalc.com/medical-calculators/corrected-calcium"}]},
+    {"@type":"SoftwareApplication","name":"Corrected Calcium Calculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/corrected-calcium"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
   </script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
   <style>
-    :root {
+:root {
       --bg: #f0f4f8; --surface: #fff; --surface2: #f5f8fc; --border: #dce4ef;
       --primary: #0f766e; --primary-light: #14b8a6; --primary-dark: #0d4f4a;
       --text: #0f1e33; --text-muted: #5a6a82; --text-light: #8fa0b8;
@@ -184,27 +151,72 @@
     .info-section p:last-child { margin-bottom: 0; }
     @media(max-width:640px) { .card { padding: 20px 16px; } }
   </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
+    </div>
+  </header>
 
-<nav class="topbar">
-  <div class="breadcrumb">
-    <a href="/">Medical Calculators</a><span>›</span><span>Electrolytes</span><span>›</span><span>Corrected Calcium</span>
-  </div>
-</nav>
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 Electrolyte Calculator</div>
+    <h1><em>Corrected Calcium Calculator</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
 
-<header class="hero">
-  <div class="hero-badge">Electrolyte Calculator</div>
-  <h1>Corrected Calcium Calculator</h1>
-  <p>Albumin-adjusted serum calcium with hypocalcaemia &amp; hypercalcaemia grading</p>
-  <div class="hero-tags">
-    <span>mg/dL &amp; mmol/L</span><span>Albumin Correction</span>
-    <span>Hypo/Hypercalcaemia</span><span>Payne Formula</span><span>ICU &amp; Ward</span>
-  </div>
-</header>
+  
 
-<main class="page">
-  <section class="card">
+  <section class="calc-widget-section">
+    <section class="card">
     <div class="card-title">Calculator</div>
 
     <div class="unit-toggle-wrap">
@@ -218,12 +230,12 @@
     <div class="form-grid">
       <div class="field">
         <label for="ca" id="ca-label">Total Serum Calcium (mg/dL)</label>
-        <input type="number" id="ca" placeholder="e.g. 7.8" step="0.01" oninput="calculate()" />
+        <input type="number" id="ca" placeholder="e.g. 7.8" step="0.01" oninput="calculate()">
         <span class="hint" id="ca-hint">Normal: 8.5–10.5 mg/dL</span>
       </div>
       <div class="field">
         <label for="alb" id="alb-label">Serum Albumin (g/dL)</label>
-        <input type="number" id="alb" placeholder="e.g. 2.5" step="0.1" oninput="calculate()" />
+        <input type="number" id="alb" placeholder="e.g. 2.5" step="0.1" oninput="calculate()">
         <span class="hint" id="alb-hint">Normal: 3.5–5.0 g/dL</span>
       </div>
     </div>
@@ -247,66 +259,122 @@
       </div>
     </div>
   </section>
+  </section>
 
-  <!-- Formula Card -->
-  <section class="card">
-    <div class="card-title">Formulas</div>
-    <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:12px">The Payne formula corrects for the proportion of calcium bound to albumin. Normal albumin is assumed to be 4.0 g/dL (40 g/L).</p>
-    <div class="formula-box">
-      <span class="comment">// Conventional units (mg/dL for Ca, g/dL for Albumin):</span><br>
-      <span class="var">Corrected Ca</span> = Measured Ca + <span class="num">0.8</span> × (<span class="num">4.0</span> − Albumin)<br><br>
-      <span class="comment">// SI units (mmol/L for Ca, g/L for Albumin):</span><br>
-      <span class="var">Corrected Ca</span> = Measured Ca + <span class="num">0.02</span> × (<span class="num">40</span> − Albumin)
+  
+
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#about-the-corrected-calcium-calculator">1. About the Corrected Calcium Calculator — Clinical Guide</a>
+          <a href="#faq">2. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="about-the-corrected-calcium-calculator"><span class="sec-num">1</span>About the Corrected Calcium Calculator — Clinical Guide</h2>
+        <p><strong>Serum calcium exists in three forms:</strong> protein-bound (predominantly albumin-bound, ~40–45%), complexed to anions like phosphate and citrate (~15%), and free ionised calcium (~45%), which is the physiologically active fraction. Standard laboratory reports measure <em>total</em> serum calcium, which includes all three fractions. When albumin is low, the protein-bound fraction falls, reducing total calcium — but ionised calcium may remain entirely normal. This is why albumin correction is essential before interpreting serum calcium in any patient with hypoalbuminaemia.</p><p>The <strong>Payne formula</strong> (Payne RB et al., BMJ 1973) is the most widely used correction: <strong>Corrected Ca (mg/dL) = Measured Ca + 0.8 × (4.0 − Albumin g/dL)</strong>. For SI units: Corrected Ca (mmol/L) = Measured Ca + 0.02 × (40 − Albumin g/L). Hypoalbuminaemia is common in Indian hospitals — seen in liver disease (cirrhosis), nephrotic syndrome, malnutrition, burns, and critical illness. In all these contexts, the uncorrected calcium will be misleadingly low.</p><p>Despite its widespread use, the Payne formula has well-documented limitations. It was derived in stable outpatients and performs poorly in critically ill patients, where acid-base disturbances independently alter calcium-albumin binding. It also underperforms in malignancy and nephrotic syndrome. For any patient in the ICU, HDU, or with significant acid-base disturbance, <strong>direct measurement of ionised calcium</strong> on a blood gas analyser is the gold standard and should be used instead of the corrected total calcium formula.</p>
+
+
+        <h2 id="faq"><span class="sec-num">2</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Why does serum calcium need to be corrected for albumin?</summary>
+            <div class="faq-answer"><p>Approximately 40–45% of serum calcium is bound to albumin. When albumin is low (hypoalbuminaemia), total serum calcium is falsely low, even though the physiologically active ionised (free) calcium may be normal. The corrected calcium formula adjusts for this: Corrected Ca = Measured Ca + 0.8 × (4.0 − Albumin in g/dL). Without correction, hypoalbuminaemic patients may be incorrectly diagnosed with hypocalcaemia and treated unnecessarily.</p></div>
+          </details>
+          <details>
+            <summary>What is the formula for corrected calcium?</summary>
+            <div class="faq-answer"><p>Standard formula (using g/dL for albumin): Corrected Ca (mg/dL) = Measured Ca (mg/dL) + 0.8 × (4.0 − Albumin g/dL). In SI units: Corrected Ca (mmol/L) = Measured Ca (mmol/L) + 0.02 × (40 − Albumin g/L). Normal serum calcium: 8.5–10.5 mg/dL (2.12–2.62 mmol/L).</p></div>
+          </details>
+          <details>
+            <summary>What is the normal range for serum calcium?</summary>
+            <div class="faq-answer"><p>Normal total serum calcium: 8.5–10.5 mg/dL (2.12–2.62 mmol/L). Ionised (free) calcium normal range: 1.15–1.35 mmol/L (4.6–5.4 mg/dL). Values below the lower limit of normal define hypocalcaemia; values above the upper limit define hypercalcaemia.</p></div>
+          </details>
+          <details>
+            <summary>What are the causes of hypocalcaemia?</summary>
+            <div class="faq-answer"><p>Common causes of true hypocalcaemia include: hypoparathyroidism (post-surgical, autoimmune, genetic), vitamin D deficiency, chronic kidney disease (reduced 1α-hydroxylation), hypomagnesaemia (impairs PTH secretion), pancreatitis (calcium saponification), hungry bone syndrome post-parathyroidectomy, and certain drugs (bisphosphonates, cinacalcet, denosumab, foscarnet).</p></div>
+          </details>
+          <details>
+            <summary>What are the causes of hypercalcaemia?</summary>
+            <div class="faq-answer"><p>The mnemonic CHIMPANZEES covers most causes: Calcium supplementation excess, Hyperparathyroidism (primary — most common outpatient cause), Iatrogenic (thiazides, vitamin D, lithium), Metastatic malignancy or Multiple myeloma, Paget's disease, Addison's disease, Neoplasia (PTHrP-secreting tumours — most common inpatient cause), Zollinger-Ellison/MEN syndromes, Excess vitamin D (granulomatous disease — sarcoidosis, TB), Endocrine (hyperthyroidism), Sarcoidosis/immobilisation.</p></div>
+          </details>
+          <details>
+            <summary>Is the corrected calcium formula accurate?</summary>
+            <div class="faq-answer"><p>The Payne formula (0.8 correction factor) is the most widely used but has significant limitations. Multiple studies show poor correlation between corrected calcium and measured ionised calcium, particularly in critically ill patients, those with nephrotic syndrome, malignancy, and acid-base disturbances. When accurate calcium assessment is critical, direct measurement of ionised calcium (blood gas analyser) is preferred over the corrected formula.</p></div>
+          </details>
+          <details>
+            <summary>What are the symptoms of hypocalcaemia?</summary>
+            <div class="faq-answer"><p>Hypocalcaemia symptoms include neuromuscular irritability: Chvostek sign (facial muscle twitch on tapping the facial nerve), Trousseau sign (carpopedal spasm on blood pressure cuff inflation), perioral and fingertip paraesthesias, muscle cramps, tetany, and in severe cases seizures and laryngospasm. ECG findings include prolonged QTc interval. Chronic hypocalcaemia can cause cataracts, basal ganglia calcification, and cognitive impairment.</p></div>
+          </details>
+          <details>
+            <summary>What are the symptoms of hypercalcaemia?</summary>
+            <div class="faq-answer"><p>The mnemonic 'Bones, Stones, Groans, Psychic Moans': Bones — bone pain, osteitis fibrosa cystica; Stones — renal calculi, nephrocalcinosis, polyuria/polydipsia (nephrogenic DI); Groans — nausea, vomiting, constipation, anorexia, peptic ulcers; Psychic Moans — depression, confusion, lethargy, psychosis, coma. ECG shows shortened QTc interval.</p></div>
+          </details>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#about-the-corrected-calcium-calculator"><span class="toc-num">1</span>About the Corrected Calcium </a></li>
+          <li><a href="#faq"><span class="toc-num">2</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
+  </div>
+
+
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/egfr-calculator"><h3>eGFR CalculatorKidney function</h3></a>
+        <a class="related-card" href="/medical-calculators/anion-gap"><h3>Anion GapAcid-base analysis</h3></a>
+        <a class="related-card" href="/medical-calculators/child-pugh"><h3>Child-Pugh ScoreLiver/albumin status</h3></a>
+        <a class="related-card" href="/medical-calculators/"><h3>All Calculators →32+ clinical tools</h3></a>
+      </div>
     </div>
+  </section>
 
-    <div style="overflow-x:auto">
-      <table class="ref-table">
-        <thead><tr><th>Condition</th><th>Total Ca (mg/dL)</th><th>Total Ca (mmol/L)</th><th>Ionised Ca (mmol/L)</th></tr></thead>
-        <tbody>
-          <tr><td>Severe hypocalcaemia</td><td>&lt; 7.0</td><td>&lt; 1.75</td><td>&lt; 0.8</td></tr>
-          <tr><td>Mild hypocalcaemia</td><td>7.0 – 8.5</td><td>1.75 – 2.12</td><td>0.8 – 1.15</td></tr>
-          <tr style="background:#f0fdfa"><td><strong>Normal</strong></td><td><strong>8.5 – 10.5</strong></td><td><strong>2.12 – 2.62</strong></td><td><strong>1.15 – 1.35</strong></td></tr>
-          <tr><td>Mild hypercalcaemia</td><td>10.5 – 12.0</td><td>2.62 – 3.0</td><td>1.35 – 1.55</td></tr>
-          <tr><td>Moderate hypercalcaemia</td><td>12.0 – 14.0</td><td>3.0 – 3.5</td><td>1.55 – 1.8</td></tr>
-          <tr><td>Severe hypercalcaemia</td><td>&gt; 14.0</td><td>&gt; 3.5</td><td>&gt; 1.8</td></tr>
-        </tbody>
-      </table>
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
     </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="card">
-    <div class="card-title">Frequently Asked Questions</div>
-    <div id="faq-list"></div>
-  </section>
-
-  <!-- Related Calculators -->
-  <section class="card">
-    <div class="card-title">Related Calculators</div>
-    <div class="related-grid">
-      <a href="/medical-calculators/egfr-calculator" class="related-card" ><div class="rc-name">eGFR Calculator</div><div class="rc-desc">Kidney function</div></a>
-      <a href="/medical-calculators/anion-gap" class="related-card" ><div class="rc-name">Anion Gap</div><div class="rc-desc">Acid-base analysis</div></a>
-      <a href="/medical-calculators/child-pugh" class="related-card" ><div class="rc-name">Child-Pugh Score</div><div class="rc-desc">Liver/albumin status</div></a>
-      <a href="/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">32+ clinical tools</div></a>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
     </div>
-  </section>
-  <div class="disclaimer">⚠️ <strong>Disclaimer:</strong> The Payne corrected calcium formula has known limitations, particularly in critically ill patients, malignancy, nephrotic syndrome, and acid-base disturbances. When accurate calcium status is clinically critical, direct measurement of ionised calcium (blood gas analyser) is preferred. Not a substitute for clinical judgment.</div>
+  </footer>
 
-  <section class="info-section" id="about-corrected-calcium">
-    <h2>About the Corrected Calcium Calculator — Clinical Guide</h2>
-    <p><strong>Serum calcium exists in three forms:</strong> protein-bound (predominantly albumin-bound, ~40–45%), complexed to anions like phosphate and citrate (~15%), and free ionised calcium (~45%), which is the physiologically active fraction. Standard laboratory reports measure <em>total</em> serum calcium, which includes all three fractions. When albumin is low, the protein-bound fraction falls, reducing total calcium — but ionised calcium may remain entirely normal. This is why albumin correction is essential before interpreting serum calcium in any patient with hypoalbuminaemia.</p>
-    <p>The <strong>Payne formula</strong> (Payne RB et al., BMJ 1973) is the most widely used correction: <strong>Corrected Ca (mg/dL) = Measured Ca + 0.8 × (4.0 − Albumin g/dL)</strong>. For SI units: Corrected Ca (mmol/L) = Measured Ca + 0.02 × (40 − Albumin g/L). Hypoalbuminaemia is common in Indian hospitals — seen in liver disease (cirrhosis), nephrotic syndrome, malnutrition, burns, and critical illness. In all these contexts, the uncorrected calcium will be misleadingly low.</p>
-    <p>Despite its widespread use, the Payne formula has well-documented limitations. It was derived in stable outpatients and performs poorly in critically ill patients, where acid-base disturbances independently alter calcium-albumin binding. It also underperforms in malignancy and nephrotic syndrome. For any patient in the ICU, HDU, or with significant acid-base disturbance, <strong>direct measurement of ionised calcium</strong> on a blood gas analyser is the gold standard and should be used instead of the corrected total calcium formula.</p>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <p><a href="/">Medical Calculators</a> &nbsp;·&nbsp; Formula: Payne RB et al., BMJ 1973</p>
-  <p style="margin-top:6px;font-size:.75rem">Keywords: corrected calcium calculator · albumin corrected calcium · hypocalcaemia calculator · calcium correction hypoalbuminaemia · corrected calcium mg/dL mmol/L</p>
-</footer>
-
-<script>
-  let unit = 'mg';
+  <script>
+let unit = 'mg';
 
   function setUnit(u) {
     unit = u;
@@ -385,7 +453,14 @@
     const open = el.classList.toggle('open');
     el.querySelector('.faq-q').setAttribute('aria-expanded', open);
   }
-</script>
-<script src="/assets/shared-nav.js"></script>
+
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
+
 </body>
 </html>
