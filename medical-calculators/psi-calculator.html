@@ -1,37 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="psi-calculator">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PSI Calculator | Pneumonia Severity Index | PORT Score | RxMedCalc</title>
-<meta name="description" content="Free PSI (Pneumonia Severity Index) / PORT score calculator for community-acquired pneumonia. Predict 30-day mortality, guide outpatient vs inpatient vs ICU admission decisions. Includes antibiotic recommendations per ATS/IDSA 2019 guidelines. Used by emergency physicians and pulmonologists worldwide."/>
-<meta name="keywords" content="PSI calculator, pneumonia severity index, PORT score calculator, community acquired pneumonia, CAP severity, PSI risk class, pneumonia admission criteria, PSI vs CURB-65, pneumonia mortality, CAP treatment guidelines"/>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/psi-calculator"/>
-<meta property="og:title" content="PSI Calculator | Pneumonia Severity Index | PORT Score | RxMedCalc"/>
-<meta property="og:description" content="Calculate PSI/PORT score for CAP severity. 30-day mortality, admission decisions, antibiotic guidance. Free for emergency physicians worldwide."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/psi-calculator"/>
-<meta property="og:site_name" content="RxMedCalc"/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="/assets/umami-events.js"></script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/psi-calculator","name":"PSI Calculator — Pneumonia Severity Index","description":"PSI/PORT score for community-acquired pneumonia severity and admission decisions.","inLanguage":"en","dateModified":"2025-04-14"},
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"PSI Calculator","item":"https://rxmedcalc.com/medical-calculators/psi-calculator"}]},
-{"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is a high PSI score?","acceptedAnswer":{"@type":"Answer","text":"PSI Class IV (score 91–130) and Class V (score >130) indicate high-risk pneumonia with 30-day mortality of 8.2% and 29.2% respectively. Class IV/V patients require hospital admission, with Class V typically requiring ICU-level care. PSI Classes I–III (score ≤90) are low-risk and can generally be managed as outpatients with close follow-up."}},
-{"@type":"Question","name":"PSI vs CURB-65 — which is better?","acceptedAnswer":{"@type":"Answer","text":"Both are validated tools. PSI (PORT score) uses more variables (20 items) and better identifies low-risk patients for outpatient treatment — more conservative, avoids unnecessary admissions. CURB-65 uses only 5 variables and is quicker at the bedside. IDSA/ATS 2019 recommends either tool. PSI is preferred when identifying low-risk patients; CURB-65 is preferred for quick severity assessment in the ED."}}
-]}
-]}
-</script>
-<style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>PSI / PORT ScoreCalculator | RxMedCalc</title>
+  <meta name="description" content="Free PSI (Pneumonia Severity Index) / PORT score calculator for community-acquired pneumonia. Predict 30-day mortality, guide outpatient vs inpatient vs ICU admission decisions. Includes antibiotic recommendations per ATS/IDSA 2019 guidelines. Used by emergency physicians and pulmonologists worldwide."/>
+  <meta name="keywords" content="PSI calculator, pneumonia severity index, PORT score calculator, community acquired pneumonia, CAP severity, PSI risk class, pneumonia admission criteria, PSI vs CURB-65, pneumonia mortality, CAP treatment guidelines"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/psi-calculator"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="PSI / PORT ScoreCalculator | RxMedCalc"/>
+  <meta property="og:description" content="Free PSI (Pneumonia Severity Index) / PORT score calculator for community-acquired pneumonia. Predict 30-day mortality, guide outpatient vs inpatient vs ICU admission decisions. Includes antibiotic recommendations per ATS/IDSA 2019 guidelines. Used by emergency physicians and pulmonologists worldwide."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/psi-calculator"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/psi-calculator.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="PSI / PORT ScoreCalculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/psi-calculator.png"/>
+  <meta name="twitter:image:alt" content="PSI / PORT ScoreCalculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="PSI / PORT ScoreCalculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Free PSI (Pneumonia Severity Index) / PORT score calculator for community-acquired pneumonia. Predict 30-day mortality, guide outpatient vs inpatient vs ICU admission decisions. Includes antibiotic recommendations per ATS/IDSA 2019 guidelines. Used by emergency physicians and pulmonologists worldwide."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"PSI / PORT ScoreCalculator","description":"Free PSI (Pneumonia Severity Index) / PORT score calculator for community-acquired pneumonia. Predict 30-day mortality, guide outpatient vs inpatient vs ICU admission decisions. Includes antibiotic recommendations per ATS/IDSA 2019 guidelines. Used by emergency physicians and pulmonologists worldwide.","url":"https://rxmedcalc.com/medical-calculators/psi-calculator","@id":"https://rxmedcalc.com/medical-calculators/psi-calculator","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is a high PSI score?","acceptedAnswer":{"@type":"Answer","text":"PSI Class IV (score 91–130) and Class V (score >130) indicate high-risk pneumonia with 30-day mortality of 8.2% and 29.2% respectively. Class IV/V patients require hospital admission, with Class V typically requiring ICU-level care. PSI Classes I–III (score ≤90) are low-risk and can generally be managed as outpatients with close follow-up."}},
+      {"@type":"Question","name":"PSI vs CURB-65 — which is better?","acceptedAnswer":{"@type":"Answer","text":"Both are validated tools. PSI (PORT score) uses more variables (20 items) and better identifies low-risk patients for outpatient treatment — more conservative, avoids unnecessary admissions. CURB-65 uses only 5 variables and is quicker at the bedside. IDSA/ATS 2019 recommends either tool. PSI is preferred when identifying low-risk patients; CURB-65 is preferred for quick severity assessment in the ED."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"PSI / PORT ScoreCalculator","item":"https://rxmedcalc.com/medical-calculators/psi-calculator"}]},
+    {"@type":"SoftwareApplication","name":"PSI / PORT ScoreCalculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/psi-calculator"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
+  <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
@@ -143,24 +155,72 @@ h1 em{font-style:italic;color:#60a5fa}
     .info-section p { font-size: .9rem; color: var(--text-muted, #5a6a82); line-height: 1.8; margin-bottom: 12px; }
     .info-section p:last-child { margin-bottom: 0; }
   </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
-<div class="page-header">
-  <div class="header-inner">
-    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>PSI Calculator</span></nav>
-    <div class="page-eyebrow">🫁 Pulmonology · Emergency · CAP</div>
-    <h1>PSI / PORT Score<br><em>Calculator</em></h1>
-    <p class="page-sub">Pneumonia Severity Index for community-acquired pneumonia. Predict 30-day mortality and guide outpatient vs inpatient vs ICU admission decisions per IDSA/ATS 2019.</p>
-    <div class="header-badges">
-      <span class="hbadge">✓ Risk Classes I–V</span>
-      <span class="hbadge">✓ 30-Day Mortality</span>
-      <span class="hbadge">✓ Admission Decisions</span>
-      <span class="hbadge">✓ Antibiotic Guide</span>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
     </div>
-  </div>
-</div>
-<main class="main">
-  <div class="calc-card">
+  </header>
+
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 Pulmonology · Emergency · CAP</div>
+    <h1><em>PSI / PORT ScoreCalculator</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
+
+  
+
+  <section class="calc-widget-section">
+    <div class="calc-card">
     <div class="calc-title">PSI Score Calculator</div>
     <div class="calc-subtitle">Complete all sections. Demographic factors calculated automatically. Tick clinical findings present.</div>
 
@@ -169,7 +229,7 @@ h1 em{font-style:italic;color:#60a5fa}
     <div class="input-grid">
       <div class="field">
         <label for="age">Age</label>
-        <input type="number" id="age" placeholder="e.g. 65" min="18" max="110" inputmode="decimal"/>
+        <input type="number" id="age" placeholder="e.g. 65" min="18" max="110" inputmode="decimal">
         <div class="hint">years</div>
       </div>
       <div class="field">
@@ -318,10 +378,33 @@ h1 em{font-style:italic;color:#60a5fa}
       <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
   </div>
+  </section>
 
-  <div class="content-card">
-    <h2>PSI Risk Classes &amp; Mortality</h2>
-    <table class="psi-table">
+  
+
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#psi-risk-classes-mortality">1. PSI Risk Classes &amp; Mortality</a>
+          <a href="#about-the-psi-port-score-for-pneumonia">2. About the PSI/PORT Score for Pneumonia</a>
+          <a href="#faq">3. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="psi-risk-classes-mortality"><span class="sec-num">1</span>PSI Risk Classes &amp; Mortality</h2>
+        <table class="psi-table">
       <thead><tr><th>Class</th><th>Score</th><th>30-Day Mortality</th><th>Recommended Setting</th></tr></thead>
       <tbody>
         <tr><td><strong>I</strong></td><td>Age ≤50 + no comorbidities + no abnormal signs</td><td>0.1%</td><td>Outpatient</td></tr>
@@ -330,49 +413,90 @@ h1 em{font-style:italic;color:#60a5fa}
         <tr><td><strong>IV</strong></td><td>91–130</td><td>8.2%</td><td>Inpatient</td></tr>
         <tr><td><strong>V</strong></td><td>&gt;130</td><td>29.2%</td><td>Inpatient (consider ICU)</td></tr>
       </tbody>
-    </table>
-
-    <h3>CAP Antibiotic Recommendations — IDSA/ATS 2019</h3>
-    <ul>
+    </table><h3>CAP Antibiotic Recommendations — IDSA/ATS 2019</h3><ul>
       <li><strong>Outpatient (Class I–III), previously healthy, no recent antibiotics:</strong> Amoxicillin 500 mg TDS × 5 days. Or doxycycline 100 mg BD × 5 days (atypical cover). Azithromycin if low local pneumococcal resistance</li>
       <li><strong>Outpatient with comorbidities (diabetes, heart/lung/liver/renal disease, immunosuppression):</strong> Amoxicillin-clavulanate 875/125 mg BD + azithromycin 500 mg OD × 5 days. Or respiratory fluoroquinolone (levofloxacin 750 mg OD × 5 days)</li>
       <li><strong>Inpatient, non-ICU (Class IV):</strong> IV β-lactam (ampicillin-sulbactam 3g QID, or ceftriaxone 1–2g OD) + azithromycin 500 mg OD. Or respiratory fluoroquinolone monotherapy</li>
       <li><strong>ICU (Class V, severe CAP):</strong> IV β-lactam + IV azithromycin or IV fluoroquinolone. Add anti-MRSA coverage (vancomycin or linezolid) if MRSA risk factors. Add anti-Pseudomonal β-lactam if Pseudomonas risk</li>
-    </ul>
-
-    <h3>PSI vs CURB-65 — Key Differences</h3>
-    <ul>
+    </ul><h3>PSI vs CURB-65 — Key Differences</h3><ul>
       <li><strong>PSI (PORT score):</strong> 20 variables, validated in 51,000+ patients, better at identifying LOW-risk patients for outpatient treatment, recommended by IDSA/ATS 2007/2019</li>
       <li><strong>CURB-65:</strong> 5 variables (Confusion, Urea, RR, BP, Age ≥65), simpler bedside tool, better for quick HIGH-risk identification, endorsed by BTS guidelines</li>
       <li>Either tool is acceptable per IDSA/ATS 2019. PSI is more conservative (fewer unnecessary admissions); CURB-65 is faster</li>
     </ul>
+
+        <h2 id="about-the-psi-port-score-for-pneumonia"><span class="sec-num">2</span>About the PSI/PORT Score for Pneumonia</h2>
+        <p>The Pneumonia Severity Index (PSI), also known as the PORT (Patient Outcomes Research Team) score, was developed by Fine et al. (NEJM 1997) from a study of nearly 15,000 patients with community-acquired pneumonia. It remains the most extensively validated CAP severity score and is particularly powerful for identifying low-risk patients safe for outpatient treatment — its primary clinical utility.</p><p>PSI class I patients (age &lt;50, no comorbidities, normal vitals) have a 30-day mortality of &lt;0.1% and do not require hospital admission in the absence of social or practical barriers. PSI classes II-III carry low-moderate mortality (0.6-2.8%) and can often be managed with short hospital stays or outpatient treatment with close follow-up. Classes IV-V have high mortality (8.2-29.2%) and require hospitalisation with consideration of ICU admission.</p><p>In Indian practice, CAP management is complicated by high rates of antibiotic resistance (ESBL-producing Enterobacteriaceae, multidrug-resistant Klebsiella and Acinetobacter in hospital-acquired pneumonia), atypical pathogen burden (Mycoplasma, Chlamydia, Legionella — particularly in outbreaks), and tropical co-infections (melioidosis in northeast India, scrub typhus). PSI should always be used alongside microbiological results and local resistance patterns rather than as a standalone treatment guide.</p>
+
+
+        <h2 id="faq"><span class="sec-num">3</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is a high PSI score?</summary>
+            <div class="faq-answer"><p>PSI Class IV (score 91–130) and Class V (score &gt;130) indicate high-risk pneumonia with 30-day mortality of 8.2% and 29.2% respectively. Class IV/V patients require hospital admission, with Class V typically requiring ICU-level care. PSI Classes I–III (score ≤90) are low-risk and can generally be managed as outpatients with close follow-up.</p></div>
+          </details>
+          <details>
+            <summary>PSI vs CURB-65 — which is better?</summary>
+            <div class="faq-answer"><p>Both are validated tools. PSI (PORT score) uses more variables (20 items) and better identifies low-risk patients for outpatient treatment — more conservative, avoids unnecessary admissions. CURB-65 uses only 5 variables and is quicker at the bedside. IDSA/ATS 2019 recommends either tool. PSI is preferred when identifying low-risk patients; CURB-65 is preferred for quick severity assessment in the ED.</p></div>
+          </details>
+        </div>
+        <div class="alert alert-success" style="margin-top:2rem;">
+          <span class="alert-icon">📋</span>
+          <div><strong>Key takeaway:</strong> Add a 2–3 sentence clinical summary here.</div>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#psi-risk-classes-mortality"><span class="toc-num">1</span>PSI Risk Classes &amp; Mortality</a></li>
+          <li><a href="#about-the-psi-port-score-for-pneumonia"><span class="toc-num">2</span>About the PSI/PORT Score for</a></li>
+          <li><a href="#faq"><span class="toc-num">3</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
   </div>
 
-  <div class="content-card">
-    <h2>Frequently Asked Questions</h2>
-    <div id="faq-container"></div>
-  </div>
 
-  <div class="content-card">
-    <h2>Related Calculators</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/curb65" class="related-card"><span class="rc-icon">🫁</span><div><div class="rc-title">CURB-65</div><div class="rc-desc">Quick CAP severity</div></div></a>
-      <a href="/medical-calculators/news2" class="related-card"><span class="rc-icon">📉</span><div><div class="rc-title">NEWS2 Score</div><div class="rc-desc">Early deterioration</div></div></a>
-      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Severe CAP / sepsis</div></div></a>
-      <a href="/medical-calculators/aa-gradient" class="related-card"><span class="rc-icon">🫁</span><div><div class="rc-title">A-a Gradient</div><div class="rc-desc">Hypoxaemia assessment</div></div></a>
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/curb65"><h3>CURB-65</h3></a>
+        <a class="related-card" href="/medical-calculators/news2"><h3>NEWS2 Score</h3></a>
+        <a class="related-card" href="/medical-calculators/sofa-score"><h3>SOFA Score</h3></a>
+        <a class="related-card" href="/medical-calculators/aa-gradient"><h3>A-a Gradient</h3></a>
+      </div>
     </div>
-  </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> PSI is a severity prediction tool — not a substitute for clinical judgement. Patients with social factors, inability to maintain oral intake, or clinical instability may require admission regardless of low PSI score. Always apply clinical context alongside the score.</div>
-
-  <section class="info-section" id="about-psi-calculator">
-    <h2>About the PSI/PORT Score for Pneumonia</h2>
-    <p>The Pneumonia Severity Index (PSI), also known as the PORT (Patient Outcomes Research Team) score, was developed by Fine et al. (NEJM 1997) from a study of nearly 15,000 patients with community-acquired pneumonia. It remains the most extensively validated CAP severity score and is particularly powerful for identifying low-risk patients safe for outpatient treatment — its primary clinical utility.</p>
-    <p>PSI class I patients (age <50, no comorbidities, normal vitals) have a 30-day mortality of <0.1% and do not require hospital admission in the absence of social or practical barriers. PSI classes II-III carry low-moderate mortality (0.6-2.8%) and can often be managed with short hospital stays or outpatient treatment with close follow-up. Classes IV-V have high mortality (8.2-29.2%) and require hospitalisation with consideration of ICU admission.</p>
-    <p>In Indian practice, CAP management is complicated by high rates of antibiotic resistance (ESBL-producing Enterobacteriaceae, multidrug-resistant Klebsiella and Acinetobacter in hospital-acquired pneumonia), atypical pathogen burden (Mycoplasma, Chlamydia, Legionella — particularly in outbreaks), and tropical co-infections (melioidosis in northeast India, scrub typhus). PSI should always be used alongside microbiological results and local resistance patterns rather than as a standalone treatment guide.</p>
   </section>
-</main>
 
-<script>
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
 const pts={};let lastResult=null;
 const faqs = [
   ['What is the PSI/PORT score?', 'The PSI (Pneumonia Severity Index), also called the PORT score, stratifies death risk from community-acquired pneumonia (CAP) in adults. It uses demographic factors, comorbidities, physical exam findings, and lab/X-ray results. Risk classes: I (age <50, no comorbidities, normal vitals) = very low risk; II (score <=70) = low; III (71-90) = moderate; IV (91-130) = high; V (>130) = very high risk.'],
@@ -434,7 +558,14 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){Object.keys(pts).forEach(k=>{delete pts[k];const el=document.getElementById(k);if(el)el.classList.remove('sel')});document.getElementById('age').value='';document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
-</script>
-<script src="/assets/shared-nav.js"></script>
+
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
+
 </body>
 </html>
