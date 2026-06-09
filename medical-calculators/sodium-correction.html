@@ -1,23 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="sodium-correction">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sodium Correction Calculator | Hyperglycaemia | Corrected Sodium | RxMedCalc</title>
-<meta name="description" content="Free corrected sodium calculator for hyperglycaemia. Calculates true sodium using Katz (1.6) and Hillier (2.4) correction factors. Identifies masked hypo/hypernatraemia in diabetic patients. Used by diabetologists and emergency physicians worldwide."/>
-<meta name="keywords" content="sodium correction hyperglycaemia, corrected sodium calculator, sodium correction glucose, pseudohyponatraemia hyperglycaemia, Katz correction sodium, sodium glucose correction formula, HHS sodium correction, diabetic ketoacidosis sodium"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/sodium-correction"/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="/assets/umami-events.js"></script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Sodium Correction for Hyperglycaemia | RxMedCalc</title>
+  <meta name="description" content="Free corrected sodium calculator for hyperglycaemia. Calculates true sodium using Katz (1.6) and Hillier (2.4) correction factors. Identifies masked hypo/hypernatraemia in diabetic patients. Used by diabetologists and emergency physicians worldwide."/>
+  <meta name="keywords" content="sodium correction hyperglycaemia, corrected sodium calculator, sodium correction glucose, pseudohyponatraemia hyperglycaemia, Katz correction sodium, sodium glucose correction formula, HHS sodium correction, diabetic ketoacidosis sodium"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/sodium-correction"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Sodium Correction for Hyperglycaemia | RxMedCalc"/>
+  <meta property="og:description" content="Free corrected sodium calculator for hyperglycaemia. Calculates true sodium using Katz (1.6) and Hillier (2.4) correction factors. Identifies masked hypo/hypernatraemia in diabetic patients. Used by diabetologists and emergency physicians worldwide."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/sodium-correction"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/sodium-correction.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Sodium Correction for Hyperglycaemia"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/sodium-correction.png"/>
+  <meta name="twitter:image:alt" content="Sodium Correction for Hyperglycaemia"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Sodium Correction for Hyperglycaemia | RxMedCalc"/>
+  <meta name="twitter:description" content="Free corrected sodium calculator for hyperglycaemia. Calculates true sodium using Katz (1.6) and Hillier (2.4) correction factors. Identifies masked hypo/hypernatraemia in diabetic patients. Used by diabetologists and emergency physicians worldwide."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"Sodium Correction for Hyperglycaemia","description":"Free corrected sodium calculator for hyperglycaemia. Calculates true sodium using Katz (1.6) and Hillier (2.4) correction factors. Identifies masked hypo/hypernatraemia in diabetic patients. Used by diabetologists and emergency physicians worldwide.","url":"https://rxmedcalc.com/medical-calculators/sodium-correction","@id":"https://rxmedcalc.com/medical-calculators/sodium-correction","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is the corrected sodium formula in hyperglycaemia?","acceptedAnswer":{"@type":"Answer","text":"Hyperglycaemia causes osmotic shift of water from cells into plasma, diluting sodium. Corrected Na = Measured Na + 2.4 × [(Glucose − 100) / 100] (glucose in mg/dL). Alternative (more accurate for severe hyperglycaemia): Corrected Na = Measured Na + 1.6 × [(Glucose − 100) / 100]. If corrected Na is high (>145 mEq/L) despite apparent hyponatraemia, the patient is actually hypernatraemic — true sodium deficit is masked by glucose dilution."}},
+      {"@type":"Question","name":"What is the correction rate for hyponatraemia?","acceptedAnswer":{"@type":"Answer","text":"Chronic hyponatraemia (>48 hours or unknown duration): correct sodium at maximum 10–12 mEq/L per 24 hours (or 8 mEq/L/24h if high risk of osmotic demyelination — alcoholism, malnutrition, hypokalaemia, liver disease). Correction faster than this risks osmotic demyelination syndrome (ODS) — a potentially fatal pontine and extrapontine demyelination causing paraplegia, dysarthria, and locked-in syndrome."}},
+      {"@type":"Question","name":"What is osmotic demyelination syndrome?","acceptedAnswer":{"@type":"Answer","text":"ODS (formerly central pontine myelinolysis) occurs when chronic hyponatraemia is corrected too rapidly. Brain cells that have adapted to low sodium by losing osmolytes are suddenly exposed to rapid osmolality change, causing myelin sheath destruction. Onset 2–6 days after overcorrection. Symptoms: pseudobulbar palsy, spastic quadriplegia, dysarthria, dysphagia, altered consciousness. Prevention: strict rate limit of ≤10–12 mEq/L/24h, and re-lowering sodium with dextrose water + desmopressin if overcorrection occurs."}},
+      {"@type":"Question","name":"How is acute symptomatic hyponatraemia treated?","acceptedAnswer":{"@type":"Answer","text":"Acute severe hyponatraemia (seizures, coma, severe symptoms): 3% hypertonic saline 100–150 mL IV over 20 minutes, repeat once or twice until symptoms resolve. Target: raise Na by 4–6 mEq/L rapidly to stop acute brain herniation, then switch to controlled correction (≤10 mEq/L/day). This is an emergency — do not apply chronic hyponatraemia correction limits in acute symptomatic cases."}},
+      {"@type":"Question","name":"What are the common causes of hyponatraemia in India?","acceptedAnswer":{"@type":"Answer","text":"Most common causes seen in Indian hospitals: SIADH (secondary to CNS infections — TB meningitis and bacterial meningitis are major causes in India, also pneumonia, post-neurosurgery), excessive hypotonic IV fluids (iatrogenic — especially in postoperative patients given large volumes of 5% dextrose), hypothyroidism, adrenal insufficiency (Addison's disease, post-steroid withdrawal), decompensated liver cirrhosis, and nephrotic syndrome."}},
+      {"@type":"Question","name":"How is hypernatraemia managed?","acceptedAnswer":{"@type":"Answer","text":"Hypernatraemia (Na >145 mEq/L): identify and treat cause (inadequate water intake, diabetes insipidus, excessive sodium load). Free water deficit = 0.6 × weight × [(Na/140) − 1]. Replace deficit with oral water (preferred) or IV 5% dextrose or 0.45% saline. Correction rate: no faster than 10–12 mEq/L/day for chronic hypernatraemia (risk of cerebral oedema with rapid correction). Monitor Na every 4–6 hours during active correction."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"Sodium Correction for Hyperglycaemia","item":"https://rxmedcalc.com/medical-calculators/sodium-correction"}]},
+    {"@type":"SoftwareApplication","name":"Sodium Correction for Hyperglycaemia — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/sodium-correction"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
+  <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
@@ -84,34 +114,82 @@ h1 em{font-style:italic;color:#22d3ee}
     .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
     .fi.op .fa{max-height:600px;padding-top:8px}
   </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
-<body>
-<div class="page-header">
-  <div class="header-inner">
-    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>Sodium Correction</span></nav>
-    <div class="page-eyebrow">⚗️ Nephrology · Diabetes · Electrolytes</div>
-    <h1>Sodium Correction<br><em>for Hyperglycaemia</em></h1>
-    <p class="page-sub">Calculate true serum sodium corrected for hyperglycaemia using Katz and Hillier formulas. Unmask hidden hypernatraemia in DKA and HHS.</p>
-    <div class="header-badges">
-      <span class="hbadge">✓ Katz (1.6) Formula</span>
-      <span class="hbadge">✓ Hillier (2.4) Formula</span>
-      <span class="hbadge">✓ DKA / HHS Context</span>
-      <span class="hbadge">✓ mg/dL &amp; mmol/L</span>
+
+<body class="theme-teal">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
     </div>
-  </div>
-</div>
-<main class="main">
-  <div class="calc-card">
+  </header>
+
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 ⚗️ Nephrology · Diabetes · Electrolytes</div>
+    <h1><em>Sodium Correction for Hyperglycaemia</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
+
+  
+
+  <section class="calc-widget-section">
+    <div class="calc-card">
     <div class="calc-title">Corrected Sodium Calculator</div>
     <div class="input-grid">
       <div class="field">
         <label>Measured Serum Sodium</label>
-        <input type="number" id="na" placeholder="e.g. 130" inputmode="decimal"/>
+        <input type="number" id="na" placeholder="e.g. 130" inputmode="decimal">
         <div class="hint">mmol/L (mEq/L)</div>
       </div>
       <div class="field">
         <label>Serum Glucose</label>
-        <input type="number" id="gluc" placeholder="e.g. 600" inputmode="decimal"/>
+        <input type="number" id="gluc" placeholder="e.g. 600" inputmode="decimal">
       </div>
       <div class="field">
         <label>Glucose Units</label>
@@ -138,48 +216,126 @@ h1 em{font-style:italic;color:#22d3ee}
       <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
   </div>
+  </section>
 
-  <div class="content-card">
-    <h2>Sodium Correction — Clinical Guide</h2>
-    <div class="formula-box">
+  
+
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#sodium-correction-clinical-guide">1. Sodium Correction — Clinical Guide</a>
+          <a href="#faq">2. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="sodium-correction-clinical-guide"><span class="sec-num">1</span>Sodium Correction — Clinical Guide</h2>
+        <div class="formula-box">
       Katz: Corrected Na = Measured Na + 1.6 × (Glucose − 100) ÷ 100<br>
       Hillier: Corrected Na = Measured Na + 2.4 × (Glucose − 100) ÷ 100<br>
       (Glucose in mg/dL. For mmol/L: convert × 18 first)
-    </div>
-    <h3>Why Correct Sodium for Glucose?</h3>
-    <p>Hyperglycaemia creates an osmotic gradient that draws water from the intracellular to extracellular space, diluting serum sodium by approximately 1.6–2.4 mmol/L for every 100 mg/dL (5.6 mmol/L) rise in glucose above 100 mg/dL. The measured sodium is therefore artifactually low. The corrected sodium reflects what the sodium would be at a normal glucose level — this is the clinically important value for managing fluid replacement.</p>
-    <h3>Clinical Implications in DKA and HHS</h3>
-    <ul>
+    </div><h3>Why Correct Sodium for Glucose?</h3><p>Hyperglycaemia creates an osmotic gradient that draws water from the intracellular to extracellular space, diluting serum sodium by approximately 1.6–2.4 mmol/L for every 100 mg/dL (5.6 mmol/L) rise in glucose above 100 mg/dL. The measured sodium is therefore artifactually low. The corrected sodium reflects what the sodium would be at a normal glucose level — this is the clinically important value for managing fluid replacement.</p><h3>Clinical Implications in DKA and HHS</h3><ul>
       <li><strong>DKA:</strong> Corrected Na helps assess true hydration status. In DKA, corrected Na &gt;135 indicates hypernatraemia that will be unmasked as glucose falls with treatment — use more hypotonic fluid (0.45% NaCl after initial resuscitation)</li>
       <li><strong>HHS:</strong> Corrected Na often markedly elevated in HHS (corrected Na &gt;145 is common). Guides initial fluid choice — normal saline first to restore volume, then switch to 0.45% NaCl to correct free water deficit</li>
       <li><strong>Hillier formula (2.4):</strong> Preferred for glucose &gt;400 mg/dL — more accurate at very high glucose levels. Katz (1.6) traditionally taught but underestimates correction at extreme hyperglycaemia</li>
-    </ul>
-    <h3>Which Formula to Use?</h3>
-    <p>Use Hillier (2.4) for glucose &gt;400 mg/dL (22 mmol/L) — this is now preferred in most guidelines. Use Katz (1.6) for moderate hyperglycaemia (180–400 mg/dL). Both formulas are presented in the result — the Hillier corrected Na is often the clinically more relevant value in severe hyperglycaemia such as HHS.</p>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the corrected sodium formula in hyperglycaemia?</div><div class="fa">Hyperglycaemia causes osmotic shift of water from cells into plasma, diluting sodium. Corrected Na = Measured Na + 2.4 × [(Glucose − 100) / 100] (glucose in mg/dL). Alternative (more accurate for severe hyperglycaemia): Corrected Na = Measured Na + 1.6 × [(Glucose − 100) / 100]. If corrected Na is high (>145 mEq/L) despite apparent hyponatraemia, the patient is actually hypernatraemic — true sodium deficit is masked by glucose dilution.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the correction rate for hyponatraemia?</div><div class="fa">Chronic hyponatraemia (>48 hours or unknown duration): correct sodium at maximum 10–12 mEq/L per 24 hours (or 8 mEq/L/24h if high risk of osmotic demyelination — alcoholism, malnutrition, hypokalaemia, liver disease). Correction faster than this risks osmotic demyelination syndrome (ODS) — a potentially fatal pontine and extrapontine demyelination causing paraplegia, dysarthria, and locked-in syndrome.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is osmotic demyelination syndrome?</div><div class="fa">ODS (formerly central pontine myelinolysis) occurs when chronic hyponatraemia is corrected too rapidly. Brain cells that have adapted to low sodium by losing osmolytes are suddenly exposed to rapid osmolality change, causing myelin sheath destruction. Onset 2–6 days after overcorrection. Symptoms: pseudobulbar palsy, spastic quadriplegia, dysarthria, dysphagia, altered consciousness. Prevention: strict rate limit of ≤10–12 mEq/L/24h, and re-lowering sodium with dextrose water + desmopressin if overcorrection occurs.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is acute symptomatic hyponatraemia treated?</div><div class="fa">Acute severe hyponatraemia (seizures, coma, severe symptoms): 3% hypertonic saline 100–150 mL IV over 20 minutes, repeat once or twice until symptoms resolve. Target: raise Na by 4–6 mEq/L rapidly to stop acute brain herniation, then switch to controlled correction (≤10 mEq/L/day). This is an emergency — do not apply chronic hyponatraemia correction limits in acute symptomatic cases.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the common causes of hyponatraemia in India?</div><div class="fa">Most common causes seen in Indian hospitals: SIADH (secondary to CNS infections — TB meningitis and bacterial meningitis are major causes in India, also pneumonia, post-neurosurgery), excessive hypotonic IV fluids (iatrogenic — especially in postoperative patients given large volumes of 5% dextrose), hypothyroidism, adrenal insufficiency (Addison's disease, post-steroid withdrawal), decompensated liver cirrhosis, and nephrotic syndrome.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How is hypernatraemia managed?</div><div class="fa">Hypernatraemia (Na >145 mEq/L): identify and treat cause (inadequate water intake, diabetes insipidus, excessive sodium load). Free water deficit = 0.6 × weight × [(Na/140) − 1]. Replace deficit with oral water (preferred) or IV 5% dextrose or 0.45% saline. Correction rate: no faster than 10–12 mEq/L/day for chronic hypernatraemia (risk of cerebral oedema with rapid correction). Monitor Na every 4–6 hours during active correction.</div></div>
-  </div>
+    </ul><h3>Which Formula to Use?</h3><p>Use Hillier (2.4) for glucose &gt;400 mg/dL (22 mmol/L) — this is now preferred in most guidelines. Use Katz (1.6) for moderate hyperglycaemia (180–400 mg/dL). Both formulas are presented in the result — the Hillier corrected Na is often the clinically more relevant value in severe hyperglycaemia such as HHS.</p>
+
+
+        <h2 id="faq"><span class="sec-num">2</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is the corrected sodium formula in hyperglycaemia?</summary>
+            <div class="faq-answer"><p>Hyperglycaemia causes osmotic shift of water from cells into plasma, diluting sodium. Corrected Na = Measured Na + 2.4 × [(Glucose − 100) / 100] (glucose in mg/dL). Alternative (more accurate for severe hyperglycaemia): Corrected Na = Measured Na + 1.6 × [(Glucose − 100) / 100]. If corrected Na is high (&gt;145 mEq/L) despite apparent hyponatraemia, the patient is actually hypernatraemic — true sodium deficit is masked by glucose dilution.</p></div>
+          </details>
+          <details>
+            <summary>What is the correction rate for hyponatraemia?</summary>
+            <div class="faq-answer"><p>Chronic hyponatraemia (&gt;48 hours or unknown duration): correct sodium at maximum 10–12 mEq/L per 24 hours (or 8 mEq/L/24h if high risk of osmotic demyelination — alcoholism, malnutrition, hypokalaemia, liver disease). Correction faster than this risks osmotic demyelination syndrome (ODS) — a potentially fatal pontine and extrapontine demyelination causing paraplegia, dysarthria, and locked-in syndrome.</p></div>
+          </details>
+          <details>
+            <summary>What is osmotic demyelination syndrome?</summary>
+            <div class="faq-answer"><p>ODS (formerly central pontine myelinolysis) occurs when chronic hyponatraemia is corrected too rapidly. Brain cells that have adapted to low sodium by losing osmolytes are suddenly exposed to rapid osmolality change, causing myelin sheath destruction. Onset 2–6 days after overcorrection. Symptoms: pseudobulbar palsy, spastic quadriplegia, dysarthria, dysphagia, altered consciousness. Prevention: strict rate limit of ≤10–12 mEq/L/24h, and re-lowering sodium with dextrose water + desmopressin if overcorrection occurs.</p></div>
+          </details>
+          <details>
+            <summary>How is acute symptomatic hyponatraemia treated?</summary>
+            <div class="faq-answer"><p>Acute severe hyponatraemia (seizures, coma, severe symptoms): 3% hypertonic saline 100–150 mL IV over 20 minutes, repeat once or twice until symptoms resolve. Target: raise Na by 4–6 mEq/L rapidly to stop acute brain herniation, then switch to controlled correction (≤10 mEq/L/day). This is an emergency — do not apply chronic hyponatraemia correction limits in acute symptomatic cases.</p></div>
+          </details>
+          <details>
+            <summary>What are the common causes of hyponatraemia in India?</summary>
+            <div class="faq-answer"><p>Most common causes seen in Indian hospitals: SIADH (secondary to CNS infections — TB meningitis and bacterial meningitis are major causes in India, also pneumonia, post-neurosurgery), excessive hypotonic IV fluids (iatrogenic — especially in postoperative patients given large volumes of 5% dextrose), hypothyroidism, adrenal insufficiency (Addison's disease, post-steroid withdrawal), decompensated liver cirrhosis, and nephrotic syndrome.</p></div>
+          </details>
+          <details>
+            <summary>How is hypernatraemia managed?</summary>
+            <div class="faq-answer"><p>Hypernatraemia (Na &gt;145 mEq/L): identify and treat cause (inadequate water intake, diabetes insipidus, excessive sodium load). Free water deficit = 0.6 × weight × [(Na/140) − 1]. Replace deficit with oral water (preferred) or IV 5% dextrose or 0.45% saline. Correction rate: no faster than 10–12 mEq/L/day for chronic hypernatraemia (risk of cerebral oedema with rapid correction). Monitor Na every 4–6 hours during active correction.</p></div>
+          </details>
+        </div>
+        <div class="alert alert-success" style="margin-top:2rem;">
+          <span class="alert-icon">📋</span>
+          <div><strong>Key takeaway:</strong> Add a 2–3 sentence clinical summary here.</div>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#sodium-correction-clinical-guide"><span class="toc-num">1</span>Sodium Correction — Clinical</a></li>
+          <li><a href="#faq"><span class="toc-num">2</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
   </div>
 
-  <div class="content-card">
-    <h2>Related Calculators</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/serum-osmolality" class="related-card"><span class="rc-icon">⚗️</span><div><div class="rc-title">Serum Osmolality</div><div class="rc-desc">Osmol gap</div></div></a>
-      <a href="/medical-calculators/anion-gap" class="related-card"><span class="rc-icon">⚗️</span><div><div class="rc-title">Anion Gap</div><div class="rc-desc">DKA metabolic acidosis</div></div></a>
-      <a href="/medical-calculators/hba1c-converter" class="related-card"><span class="rc-icon">🩺</span><div><div class="rc-title">HbA1c Converter</div><div class="rc-desc">Diabetes monitoring</div></div></a>
-      <a href="/medical-calculators/egfr-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">eGFR</div><div class="rc-desc">Renal function</div></div></a>
+
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/serum-osmolality"><h3>Serum Osmolality</h3></a>
+        <a class="related-card" href="/medical-calculators/anion-gap"><h3>Anion Gap</h3></a>
+        <a class="related-card" href="/medical-calculators/hba1c-converter"><h3>HbA1c Converter</h3></a>
+        <a class="related-card" href="/medical-calculators/egfr-calculator"><h3>eGFR</h3></a>
+      </div>
     </div>
-  </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> Corrected sodium is a calculated estimate. Clinical decisions about fluid type and rate in DKA/HHS require serial monitoring of glucose, electrolytes, osmolality, and clinical status. Always follow your institution's DKA/HHS protocol.</div>
-</main>
+  </section>
 
-<script>
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
 let lastResult=null;
 function calculate(){
   const na=parseFloat(document.getElementById('na').value);
@@ -210,8 +366,14 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){['na','gluc'].forEach(id=>document.getElementById(id).value='');document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
-</script>
-<script src="/assets/shared-nav.js"></script>
- <script> function tf(el){var fi=el.closest('.fi');var was=fi.classList.contains('op');document.querySelectorAll('.fi').forEach(function(e){e.classList.remove('op')});if(!was)fi.classList.add('op')}</script>
- </body>
+
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
+
+</body>
 </html>
