@@ -1,387 +1,433 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="news2">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> --> 
-<title>NEWS2 Score Calculator: Early Warning System India</title>
-<meta name="description" content="Free NEWS2 score calculator for emergency & ward care: Assess acute illness risk in seconds. Includes interpretation, escalation guidelines, & offline use."/>
-<meta name="keywords" content="NEWS2 calculator India, National Early Warning Score 2, NEWS2 SpO2 scale 2, acute illness severity score, patient deterioration score, RCP NEWS2 guidelines, early warning score nurse"/>
-<meta name="robots" content="index, follow"/>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script src="assets/umami-events.js"></script>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/news2"/>
-<!-- Open Graph -->
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="NEWS2 Score Calculator: Early Warning System India"/>
-<meta property="og:description" content="Free NEWS2 score calculator for emergency & ward care: Assess acute illness risk in seconds. Includes interpretation, escalation guidelines, & offline use."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/news2"/>
-<meta property="og:site_name" content="Clinical Calculators India"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>NIH Stroke Scale (NIHSS) Calculator | RxMedCalc</title>
+  <meta name="description" content="Free NIH Stroke Scale (NIHSS) calculator. Assess acute ischaemic stroke severity across 11 domains. Predict stroke outcome, guide tPA thrombolysis decisions, and track neurological improvement. Validated scoring tool used by neurologists and emergency physicians worldwide."/>
+  <meta name="keywords" content="NIHSS calculator, NIH stroke scale, NIH stroke score, NIHSS score, stroke severity calculator, tPA thrombolysis NIHSS, NIHSS score interpretation, stroke assessment tool, NIHSS mild moderate severe, ischaemic stroke score"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/nihss-calculator"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="NIH Stroke Scale (NIHSS) Calculator | RxMedCalc"/>
+  <meta property="og:description" content="Free NIH Stroke Scale (NIHSS) calculator. Assess acute ischaemic stroke severity across 11 domains. Predict stroke outcome, guide tPA thrombolysis decisions, and track neurological improvement. Validated scoring tool used by neurologists and emergency physicians worldwide."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/nihss-calculator"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/nihss-calculator.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="NIH Stroke Scale (NIHSS) Calculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/nihss-calculator.png"/>
+  <meta name="twitter:image:alt" content="NIH Stroke Scale (NIHSS) Calculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="NIH Stroke Scale (NIHSS) Calculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Free NIH Stroke Scale (NIHSS) calculator. Assess acute ischaemic stroke severity across 11 domains. Predict stroke outcome, guide tPA thrombolysis decisions, and track neurological improvement. Validated scoring tool used by neurologists and emergency physicians worldwide."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"NIH Stroke Scale (NIHSS) Calculator","description":"Free NIH Stroke Scale (NIHSS) calculator. Assess acute ischaemic stroke severity across 11 domains. Predict stroke outcome, guide tPA thrombolysis decisions, and track neurological improvement. Validated scoring tool used by neurologists and emergency physicians worldwide.","url":"https://rxmedcalc.com/medical-calculators/nihss-calculator","@id":"https://rxmedcalc.com/medical-calculators/nihss-calculator","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What does the NIHSS measure?","acceptedAnswer":{"@type":"Answer","text":"The NIH Stroke Scale (NIHSS) quantifies neurological deficit severity in acute stroke using 11 items: level of consciousness (3 items), gaze, visual fields, facial palsy, motor arm (both), motor leg (both), limb ataxia, sensory, language/aphasia, dysarthria, and extinction/inattention. Score 0–42. Higher scores indicate more severe deficit."}},
+      {"@type":"Question","name":"How is NIHSS severity classified?","acceptedAnswer":{"@type":"Answer","text":"NIHSS 0: no deficit. 1–4: minor stroke. 5–15: moderate stroke. 16–20: moderate-severe. 21–42: severe stroke. NIHSS >25 is associated with very poor outcome without reperfusion therapy. NIHSS >22 is a relative contraindication to IV thrombolysis in some guidelines due to high haemorrhagic transformation risk."}},
+      {"@type":"Question","name":"What NIHSS score qualifies for IV thrombolysis?","acceptedAnswer":{"@type":"Answer","text":"IV alteplase (tPA) for ischaemic stroke: onset within 4.5 hours, NIHSS ≥4 (some centres treat NIHSS 1–3 with disabling deficits), NIHSS ≤25 (relative contraindication if >25). Contraindications include haemorrhage on CT, recent surgery, anticoagulation with therapeutic INR, and prior stroke + DM combination. MRI-guided thrombolysis can extend window in wake-up strokes."}},
+      {"@type":"Question","name":"What is mechanical thrombectomy and who is eligible?","acceptedAnswer":{"@type":"Answer","text":"Mechanical thrombectomy (MT) removes large vessel occlusion (LVO) using catheter-based devices. Indicated for: large anterior circulation LVO (ICA, M1, M2 MCA) within 6 hours of onset (or 24 hours in DAWN/DEFUSE-3 criteria with mismatch imaging), NIHSS ≥6, and salvageable brain tissue on CT/MRI perfusion. MT is the most effective stroke treatment — NNT ~2.5 for functional independence. Available in comprehensive stroke centres in Indian metros."}},
+      {"@type":"Question","name":"How is NIHSS used for stroke prognosis?","acceptedAnswer":{"@type":"Answer","text":"NIHSS at 24 hours better predicts outcome than admission NIHSS. NIHSS improvement of ≥4 points at 24 hours ('early neurological improvement') predicts good 90-day outcome after thrombolysis. Discharge NIHSS 0–1 correlates with excellent functional recovery (mRS 0–1). NIHSS is also used to assess eligibility for rehabilitation services and to track recovery trajectory."}},
+      {"@type":"Question","name":"What is the difference between NIHSS and mRS?","acceptedAnswer":{"@type":"Answer","text":"NIHSS measures neurological deficit at a point in time — useful for acute assessment and treatment decisions. mRS (modified Rankin Scale) measures functional disability and independence — used for outcome assessment at 90 days. They measure different domains: NIHSS captures neurological findings; mRS captures functional impact on daily life. A patient can have a low NIHSS but high mRS if their deficit (e.g. isolated aphasia) severely impacts function."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"NIH Stroke Scale (NIHSS) Calculator","item":"https://rxmedcalc.com/medical-calculators/nihss-calculator"}]},
+    {"@type":"SoftwareApplication","name":"NIH Stroke Scale (NIHSS) Calculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/nihss-calculator"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
+.page-header{background:linear-gradient(135deg,#0d1b2a 0%,#121830 60%,#0d1b2a 100%);padding:40px 0 0;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.05) 1px,transparent 1px);background-size:40px 40px}
+.page-header::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,0.1) 0%,transparent 70%);top:-100px;right:-50px;pointer-events:none}
+.header-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none}.breadcrumb span{color:rgba(255,255,255,0.3)}
+.page-eyebrow{display:inline-flex;align-items:center;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);border-radius:20px;padding:5px 14px;font-size:0.72rem;font-weight:700;color:#93c5fd;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{font-style:italic;color:#60a5fa}
+.page-sub{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin-bottom:24px}
+.header-badges{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:32px}
+.hbadge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:0.7rem;font-weight:600;color:rgba(255,255,255,0.7)}
+.main{max-width:900px;margin:0 auto;padding:36px 24px 80px}
+.calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:28px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.calc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#0d1b2a;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.calc-title::before{content:'';display:block;width:4px;height:20px;background:#3b82f6;border-radius:2px;flex-shrink:0}
+.calc-sub{font-size:0.8rem;color:#6b7280;margin-bottom:24px}
+.item-list{display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
+.nihss-item{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:14px;padding:16px 18px}
+.nihss-item.has-score{border-color:#bfdbfe;background:#eff6ff}
+.item-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;gap:12px}
+.item-num{font-size:0.68rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em}
+.item-name{font-size:0.9rem;font-weight:700;color:#0d1b2a;margin-top:2px}
+.item-score{font-family:'Fraunces',Georgia,serif;font-size:1.8rem;font-weight:900;color:#3b82f6;min-width:30px;text-align:right}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opt-btn{padding:7px 12px;border:1.5px solid #e5e7eb;border-radius:8px;background:#fff;font-family:inherit;font-size:0.78rem;font-weight:600;color:#374151;cursor:pointer;transition:all 0.2s;text-align:left;line-height:1.3}
+.opt-btn:hover{border-color:#3b82f6;background:#eff6ff}
+.opt-btn.sel{border-color:#3b82f6;background:#3b82f6;color:#fff}
+.running-total{background:linear-gradient(135deg,#eff6ff,#fff);border:1.5px solid #bfdbfe;border-radius:14px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;position:sticky;bottom:16px;z-index:10;box-shadow:0 4px 16px rgba(59,130,246,0.15)}
+.rt-label{font-size:0.8rem;font-weight:600;color:#6b7280}
+.rt-val{font-family:'Fraunces',Georgia,serif;font-size:2.5rem;font-weight:900;color:#3b82f6}
+.btn-calc{width:100%;padding:14px;background:linear-gradient(135deg,#3b82f6,#2563eb);border:none;border-radius:12px;color:#fff;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(59,130,246,0.3)}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(59,130,246,0.4)}
+.results{display:none;margin-top:24px}.results.show{display:block}
+.divider{height:1px;background:#f3f4f6;margin:20px 0}
+.score-display{text-align:center;margin-bottom:20px}
+.score-big{font-family:'Fraunces',Georgia,serif;font-size:4.5rem;font-weight:900;line-height:1}
+.score-badge{display:inline-block;padding:7px 24px;border-radius:20px;font-size:0.9rem;font-weight:700;margin-top:10px}
+.s0{background:#f0fdf4;color:#16a34a;border:1.5px solid #bbf7d0}
+.s1{background:#eff6ff;color:#2563eb;border:1.5px solid #bfdbfe}
+.s2{background:#fffbeb;color:#d97706;border:1.5px solid #fde68a}
+.s3{background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca}
+.s4{background:#dc2626;color:#fff}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+.rbox{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;text-align:center}
+.rbox.hi{background:#eff6ff;border-color:#bfdbfe}
+.rlabel{font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.rval{font-size:1.2rem;font-weight:700;color:#0d1b2a}
+.rbox.hi .rval{color:#2563eb}
+.runit{font-size:0.7rem;color:#9ca3af;margin-top:2px}
+.rec-box{border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.75;white-space:pre-line}
+.r-none{background:#f0fdf4;border:1.5px solid #bbf7d0;color:#166534}
+.r-mild{background:#eff6ff;border:1.5px solid #bfdbfe;color:#1e3a5f}
+.r-mod{background:#fffbeb;border:1.5px solid #fde68a;color:#92400e}
+.r-sev{background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b}
+.r-crit{background:#fef2f2;border:2px solid #dc2626;color:#7f1d1d}
+.action-row{display:flex;gap:10px;margin-top:12px}
+.act-btn{flex:1;padding:10px;border-radius:10px;font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.act-btn:hover{opacity:0.85}
+.wa-btn{background:#25d366;color:#fff}.copy-btn{background:#f3f4f6;border:1.5px solid #e5e7eb;color:#374151}
+.reset-btn{width:100%;margin-top:8px;padding:9px;background:transparent;border:1.5px solid #e5e7eb;border-radius:10px;color:#9ca3af;font-family:inherit;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+.reset-btn:hover{border-color:#3b82f6;color:#3b82f6}
+.content-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:32px;margin-bottom:24px}
+.content-card h2{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:900;color:#0d1b2a;margin-bottom:16px}
+.content-card h3{font-size:1rem;font-weight:700;color:#3b82f6;margin:20px 0 8px}
+.content-card p{font-size:0.9rem;color:#4b5563;line-height:1.8;margin-bottom:12px}
+.content-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.content-card li{font-size:0.88rem;color:#4b5563;padding-left:16px;position:relative;line-height:1.6}
+.content-card li::before{content:'→';position:absolute;left:0;color:#3b82f6;font-size:0.8rem}
+.nihss-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:14px 0}
+.nihss-table th{background:#eff6ff;color:#1e3a5f;font-weight:700;padding:9px 12px;text-align:left;font-size:0.72rem;text-transform:uppercase;border-bottom:2px solid #bfdbfe}
+.nihss-table td{padding:9px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.related-card{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.related-card:hover{border-color:#3b82f6;background:#eff6ff;transform:translateX(3px)}
+.rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
+.disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="NEWS2 Score Calculator: Early Warning System India"/>
-<meta name="twitter:description" content="Free NEWS2 score calculator for emergency & ward care: Assess acute illness risk in seconds. Includes interpretation, escalation guidelines, & offline use."/>
-
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": "NEWS2 — National Early Warning Score 2 Calculator",
-    "description": "A standardized physiological scoring system for tracking acute patient deterioration, endorsed by the Royal College of Physicians UK.",
-    "url": "https://rxmedcalc.com/medical-calculators/news2",
-    "lastReviewed": "2026-03-25",
-    "reviewedBy": {
-      "@type": "MedicalOrganization",
-      "name": "Royal College of Physicians UK"
-    },
-    "audience": { "@type": "MedicalAudience", "audienceType": "Clinician, Nurse, Healthcare Worker" },
-    "medicalSpecialty": "Emergency Medicine, Critical Care, Internal Medicine"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is NEWS2?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "NEWS2 (National Early Warning Score 2) is a standardized physiological track-and-trigger system developed and updated by the Royal College of Physicians (RCP) UK in 2017. It uses six bedside physiological parameters — respiratory rate, oxygen saturation, systolic blood pressure, pulse rate, level of consciousness, and temperature — plus oxygen supplementation to calculate a total score. A higher score indicates greater physiological deterioration and triggers an escalating clinical response."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is SpO₂ Scale 2 in NEWS2 and when is it used?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SpO₂ Scale 2 is a modified oxygen saturation scoring scale for patients with confirmed hypercapnic respiratory failure (typically COPD), whose prescribed oxygen saturation target is 88–92% rather than the standard 94–98%. Using Scale 1 in these patients would incorrectly score a saturation of 88–92% as abnormal. Scale 2 adjusts the thresholds so that target-range saturations do not generate false-positive NEWS2 points. Scale 2 should only be used when a documented decision to target 88–92% SpO₂ has been made by the responsible clinician."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What NEWS2 score requires urgent escalation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A NEWS2 score of 5 or 6 (medium risk), or any single parameter scoring 3, requires urgent clinical review — minimum hourly monitoring and assessment by a nurse or clinician. A score of 7 or above (high risk) mandates continuous monitoring and emergency assessment by a critical care competent team. Any score of 3 in a single parameter is treated as a 'red flag' requiring immediate nurse review."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the ACVPU scale used in NEWS2?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ACVPU stands for Alert, Confusion (new), Voice, Pain, Unresponsive — replacing the older AVPU scale. The addition of 'C' (new-onset Confusion) was a key update in NEWS2, as new confusion is an important clinical indicator of sepsis and acute deterioration. Any response other than Alert scores 3 points in the NEWS2 system."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can NEWS2 be used in pregnancy or children?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "NEWS2 is validated for use in adults aged 16 years and above. It is not validated for use in children, pregnant women, or patients under 16. Modified Early Obstetric Warning Score (MEOWS) is recommended during pregnancy and the postpartum period. Dedicated pediatric early warning scores (such as PEWS or BEWS) should be used for children."
-        }
-      }
-    ]
-  }
-]
-</script>
-
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d3748;line-height:1.6}
-.pw{max-width:850px;margin:auto}
-.hero{background:linear-gradient(135deg,#1a365d,#2c5282);border-radius:20px;padding:36px;color:white;margin-bottom:20px;text-align:center}
-.hero-sub{font-size:0.68rem;font-weight:700;letter-spacing:.12em;margin-bottom:10px;opacity:.8;text-transform:uppercase}
-.hero h1{font-size:1.9rem;font-weight:800;margin-bottom:8px}
-.hero p{opacity:.85}
-.card{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
-.card h2{font-size:1rem;font-weight:700;color:#1a365d;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #bee3f8}
-.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:4px}
-.form-group label{font-size:.78rem;font-weight:700;color:#4a5568;display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.03em}
-.form-group input,.form-group select{width:100%;border:2px solid #e2e8f0;border-radius:10px;padding:12px;font-size:0.97rem;outline:none;background:#f8fafc;transition:border-color .2s}
-.form-group input:focus,.form-group select:focus{border-color:#3182ce}
-.radio-group{display:flex;gap:10px;margin-top:5px}
-.radio-btn{flex:1;text-align:center;padding:10px;border:2px solid #e2e8f0;border-radius:10px;cursor:pointer;font-weight:700;font-size:.88rem;transition:.2s;user-select:none}
-.radio-btn.active{border-color:#3182ce;background:#ebf8ff;color:#2b6cb0}
-
-/* FIXED: was result-box / result-header — now matches CSS classes */
-.res-box{display:none;margin-top:24px;border-radius:14px;overflow:hidden;border:2px solid #e2e8f0;animation:fadeIn .3s}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.res-header{padding:16px;font-weight:800;color:white;text-align:center;font-size:1.2rem}
-.res-grid{display:grid;grid-template-columns:1fr 1fr;background:white;padding:20px;gap:12px}
-.rg-item{background:#f7fafc;padding:15px;border-radius:12px;text-align:center}
-.rg-item .lbl{font-size:.65rem;font-weight:700;color:#718096;text-transform:uppercase;margin-bottom:4px}
-.rg-item .val{font-size:1.6rem;font-weight:800;color:#1a202c}
-.interp-note{margin:0 20px 16px;padding:14px;border-radius:10px;font-size:.92rem;line-height:1.5}
-.interp-note.low{background:#f0fff4;border-left:5px solid #48bb78;color:#22543d}
-.interp-note.medium{background:#fffaf0;border-left:5px solid #ed8936;color:#7b341e}
-.interp-note.high{background:#fff5f5;border-left:5px solid #e53e3e;color:#742a2a}
-.btn-row{display:flex;gap:10px;padding:0 20px 20px}
-.btn{flex:1;padding:11px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:.88rem}
-.btn-print{background:#edf2f7;color:#2d3748}
-.btn-wa{background:#25D366;color:white}
-
-/* Reference Table */
-.ref-table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:10px}
-.ref-table th{background:#1a365d;color:white;padding:9px 10px;text-align:left;font-size:.82rem}
-.ref-table td{padding:8px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top}
-.ref-table tr:nth-child(even) td{background:#f7fafc}
-
-.content-section{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-.content-section h2{font-size:1.1rem;font-weight:700;color:#1a365d;margin-bottom:12px}
-.content-section h3{font-size:.95rem;font-weight:700;color:#2d3748;margin:14px 0 6px}
-.content-section p{font-size:.9rem;color:#4a5568;margin-bottom:10px}
-.content-section ul{padding-left:20px;margin-bottom:10px}
-.content-section ul li{font-size:.9rem;color:#4a5568;margin-bottom:5px}
-.callout{background:#ebf8ff;border-left:4px solid #3182ce;padding:12px 14px;border-radius:8px;font-size:.88rem;color:#2c5282;margin-top:12px}
-
-.footer-cite{font-size:.75rem;color:#718096;text-align:center;margin-top:20px;padding:10px}
-@media(max-width:600px){.res-grid{grid-template-columns:1fr}.btn-row{flex-direction:column}}
-</style>
+    .faq-sec{margin:28px 0}.faq-sec h2{font-size:1.05rem;font-weight:700;color:var(--primary-dark,#0c4a6e);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border,#dce4ef)}
+    .fi{border-bottom:1px solid var(--border,#e5e7eb);padding:14px 0}.fi:last-child{border-bottom:none}
+    .fq{font-size:0.9rem;font-weight:600;color:var(--text,#0d1b2a);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;user-select:none}
+    .fq::after{content:'＋';color:var(--primary,#0369a1);font-size:1rem;flex-shrink:0;transition:transform 0.2s}
+    .fi.op .fq::after{transform:rotate(45deg)}
+    .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
+    .fi.op .fa{max-height:600px;padding-top:8px}
+  </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
+    </div>
+  </header>
 
-<main class="pw">
-<div class="hero">
-  <div class="hero-sub">Royal College of Physicians — 2017 Standard</div>
-  <h1>NEWS2 Calculator</h1>
-  <p>National Early Warning Score 2 — Acute Illness &amp; Deterioration Assessment</p>
-</div>
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 Neurology · Stroke · Emergency</div>
+    <h1><em>NIH Stroke Scale (NIHSS) Calculator</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
 
-<div class="card">
-  <h2>Enter Physiological Parameters</h2>
-  <div class="form-grid">
-    <div class="form-group">
-      <label>Respiration Rate (breaths/min)</label>
-      <input type="number" id="rr" placeholder="e.g. 16" oninput="calc()">
+  
+
+  <section class="calc-widget-section">
+    <div class="calc-card">
+    <div class="calc-title">NIHSS Assessment</div>
+    <div class="calc-sub">Select the best response for each item. Score updates live. Items marked with a number correspond to the official NIHSS item numbers.</div>
+    <div class="item-list" id="item-list"></div>
+    <div class="running-total">
+      <span class="rt-label">Total NIHSS Score (max 42)</span>
+      <span class="rt-val" id="rt-val">0</span>
     </div>
-    <div class="form-group">
-      <label>SpO₂ Scale Selection</label>
-      <select id="spo2Scale" onchange="calc()">
-        <option value="1">Scale 1 — Standard (SpO₂ target 94–98%)</option>
-        <option value="2">Scale 2 — COPD / Hypercapnic (target 88–92%)</option>
-      </select>
+    <button class="btn-calc" onclick="calculate()">Calculate Stroke Severity →</button>
+    <div class="results" id="results">
+      <div class="divider"></div>
+      <div class="score-display">
+        <div class="score-big" id="score-big" style="color:#3b82f6">0</div>
+        <div style="font-size:0.9rem;color:#6b7280;margin-top:4px">NIHSS Score (max 42)</div>
+        <div class="score-badge" id="score-badge"></div>
+      </div>
+      <div class="result-grid">
+        <div class="rbox hi"><div class="rlabel">NIHSS Score</div><div class="rval" id="r-nihss">—</div><div class="runit">/ 42</div></div>
+        <div class="rbox"><div class="rlabel">Severity</div><div class="rval" id="r-sev" style="font-size:1rem">—</div><div class="runit">category</div></div>
+        <div class="rbox"><div class="rlabel">tPA Consideration</div><div class="rval" id="r-tpa" style="font-size:0.9rem">—</div><div class="runit">within window</div></div>
+      </div>
+      <div class="rec-box" id="rec-box"></div>
+      <div class="action-row">
+        <button class="act-btn wa-btn" onclick="shareWA()">📲 WhatsApp</button>
+        <button class="act-btn copy-btn" onclick="copyResult()">📋 Copy</button>
+      </div>
+      <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
-    <div class="form-group">
-      <label>SpO₂ (%)</label>
-      <input type="number" id="spo2" placeholder="e.g. 97" oninput="calc()">
-    </div>
-    <div class="form-group">
-      <label>Supplemental Oxygen?</label>
-      <div class="radio-group">
-        <div class="radio-btn active" id="oxy-air" onclick="setOxy('air')">Room Air</div>
-        <div class="radio-btn" id="oxy-o2" onclick="setOxy('o2')">On Oxygen</div>
+  </div>
+  </section>
+
+  
+
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#nihss-stroke-severity-guide">1. NIHSS Stroke Severity Guide</a>
+          <a href="#faq">2. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="nihss-stroke-severity-guide"><span class="sec-num">1</span>NIHSS Stroke Severity Guide</h2>
+        <table class="nihss-table">
+      <thead><tr><th>NIHSS Score</th><th>Severity</th><th>Typical Deficits</th><th>Outcome (90-day mRS 0–2)</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>No stroke symptoms</td><td>Normal examination</td><td>~95%</td></tr>
+        <tr><td>1–4</td><td>Minor stroke</td><td>Subtle findings — sensory, mild motor, mild speech</td><td>~80–90%</td></tr>
+        <tr><td>5–15</td><td>Moderate stroke</td><td>Clear motor/speech deficits, partial limb weakness</td><td>~30–60%</td></tr>
+        <tr><td>16–20</td><td>Moderate–Severe</td><td>Dense hemiplegia, global aphasia, gaze deviation</td><td>~10–25%</td></tr>
+        <tr><td>21–42</td><td>Severe stroke</td><td>Coma, severe neurological impairment</td><td>&lt;10%</td></tr>
+      </tbody>
+    </table><h3>tPA (Alteplase) in Acute Ischaemic Stroke</h3><p>Intravenous alteplase (0.9 mg/kg, max 90 mg) remains the standard pharmacological reperfusion therapy for eligible patients with acute ischaemic stroke. Key eligibility criteria per AHA/ASA 2019 guidelines:</p><ul>
+      <li>Age ≥18 years; symptom onset within 3 hours (extended to 4.5 hours in selected patients per ECASS-3 criteria)</li>
+      <li>NIHSS ≥4 (relative — low NIHSS may still benefit; high NIHSS may still be treated)</li>
+      <li>CT head showing no haemorrhage or established large infarct (&gt;1/3 MCA territory)</li>
+      <li>No absolute contraindications: no prior ICH, intracranial neoplasm/AVM, active internal bleeding, recent (&lt;3 months) head trauma/brain surgery, BP &gt;185/110 despite treatment</li>
+    </ul><h3>Mechanical Thrombectomy Eligibility</h3><p>Mechanical thrombectomy (MT) has transformed outcomes for large vessel occlusion (LVO) strokes. AHA/ASA 2018 extended MT window criteria: NIHSS ≥6, pre-stroke mRS ≤1, ASPECTS ≥6 on CT, confirmed LVO on CTA, treatment within 6 hours of onset (up to 24 hours in selected wake-up/late-window cases with favourable CT perfusion or DWI-FLAIR mismatch on MRI). NIHSS score does not independently exclude patients from MT consideration — LVO must be confirmed on vascular imaging.</p><h3>NIHSS as a Serial Monitoring Tool</h3><p>A reduction in NIHSS of ≥4 points from baseline is the standard definition of neurological improvement used in clinical trials (including NINDS trial). NIHSS should be performed: at baseline (admission), at 2 hours, 24 hours, 7 days, and at discharge. A worsening NIHSS of ≥4 points from baseline suggests haemorrhagic transformation, cerebral oedema, or re-occlusion — requiring urgent CT head and neurology review.</p>
+
+
+        <h2 id="faq"><span class="sec-num">2</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What does the NIHSS measure?</summary>
+            <div class="faq-answer"><p>The NIH Stroke Scale (NIHSS) quantifies neurological deficit severity in acute stroke using 11 items: level of consciousness (3 items), gaze, visual fields, facial palsy, motor arm (both), motor leg (both), limb ataxia, sensory, language/aphasia, dysarthria, and extinction/inattention. Score 0–42. Higher scores indicate more severe deficit.</p></div>
+          </details>
+          <details>
+            <summary>How is NIHSS severity classified?</summary>
+            <div class="faq-answer"><p>NIHSS 0: no deficit. 1–4: minor stroke. 5–15: moderate stroke. 16–20: moderate-severe. 21–42: severe stroke. NIHSS &gt;25 is associated with very poor outcome without reperfusion therapy. NIHSS &gt;22 is a relative contraindication to IV thrombolysis in some guidelines due to high haemorrhagic transformation risk.</p></div>
+          </details>
+          <details>
+            <summary>What NIHSS score qualifies for IV thrombolysis?</summary>
+            <div class="faq-answer"><p>IV alteplase (tPA) for ischaemic stroke: onset within 4.5 hours, NIHSS ≥4 (some centres treat NIHSS 1–3 with disabling deficits), NIHSS ≤25 (relative contraindication if &gt;25). Contraindications include haemorrhage on CT, recent surgery, anticoagulation with therapeutic INR, and prior stroke + DM combination. MRI-guided thrombolysis can extend window in wake-up strokes.</p></div>
+          </details>
+          <details>
+            <summary>What is mechanical thrombectomy and who is eligible?</summary>
+            <div class="faq-answer"><p>Mechanical thrombectomy (MT) removes large vessel occlusion (LVO) using catheter-based devices. Indicated for: large anterior circulation LVO (ICA, M1, M2 MCA) within 6 hours of onset (or 24 hours in DAWN/DEFUSE-3 criteria with mismatch imaging), NIHSS ≥6, and salvageable brain tissue on CT/MRI perfusion. MT is the most effective stroke treatment — NNT ~2.5 for functional independence. Available in comprehensive stroke centres in Indian metros.</p></div>
+          </details>
+          <details>
+            <summary>How is NIHSS used for stroke prognosis?</summary>
+            <div class="faq-answer"><p>NIHSS at 24 hours better predicts outcome than admission NIHSS. NIHSS improvement of ≥4 points at 24 hours ('early neurological improvement') predicts good 90-day outcome after thrombolysis. Discharge NIHSS 0–1 correlates with excellent functional recovery (mRS 0–1). NIHSS is also used to assess eligibility for rehabilitation services and to track recovery trajectory.</p></div>
+          </details>
+          <details>
+            <summary>What is the difference between NIHSS and mRS?</summary>
+            <div class="faq-answer"><p>NIHSS measures neurological deficit at a point in time — useful for acute assessment and treatment decisions. mRS (modified Rankin Scale) measures functional disability and independence — used for outcome assessment at 90 days. They measure different domains: NIHSS captures neurological findings; mRS captures functional impact on daily life. A patient can have a low NIHSS but high mRS if their deficit (e.g. isolated aphasia) severely impacts function.</p></div>
+          </details>
+        </div>
+        <div class="alert alert-success" style="margin-top:2rem;">
+          <span class="alert-icon">📋</span>
+          <div><strong>Key takeaway:</strong> Add a 2–3 sentence clinical summary here.</div>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#nihss-stroke-severity-guide"><span class="toc-num">1</span>NIHSS Stroke Severity Guide</a></li>
+          <li><a href="#faq"><span class="toc-num">2</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
+  </div>
+
+
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/gcs-calculator"><h3>GCS Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/abcd2-score"><h3>ABCD2 Score</h3></a>
+        <a class="related-card" href="/medical-calculators/map-calculator"><h3>MAP Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/cha2ds2-vasc"><h3>CHA₂DS₂-VASc</h3></a>
       </div>
     </div>
-    <div class="form-group">
-      <label>Systolic Blood Pressure (mmHg)</label>
-      <input type="number" id="sbp" placeholder="e.g. 118" oninput="calc()">
-    </div>
-    <div class="form-group">
-      <label>Pulse Rate (beats/min)</label>
-      <input type="number" id="pulse" placeholder="e.g. 78" oninput="calc()">
-    </div>
-    <div class="form-group">
-      <label>Consciousness (ACVPU)</label>
-      <select id="acvpu" onchange="calc()">
-        <option value="0">A — Alert</option>
-        <option value="3">C — New Confusion</option>
-        <option value="3">V — Responds to Voice</option>
-        <option value="3">P — Responds to Pain</option>
-        <option value="3">U — Unresponsive</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Temperature (°C)</label>
-      <input type="number" id="temp" step="0.1" placeholder="e.g. 36.8" oninput="calc()">
-    </div>
-  </div>
-</div>
-
-<div id="result" class="res-box">
-  <div id="res-header" class="res-header"></div>
-  <div class="res-grid">
-    <div class="rg-item"><div class="lbl">Total NEWS2 Score</div><div id="res-total" class="val">—</div></div>
-    <div class="rg-item"><div class="lbl">Risk Level</div><div id="res-risk" class="val">—</div></div>
-  </div>
-  <div id="interp-box" class="interp-note"></div>
-  <div class="btn-row">
-    <button class="btn btn-print" onclick="trackPrint('news2'); window.print()">🖨 Print Assessment</button>
-    <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
-  </div>
-</div>
-
-<!-- RCP Response Table -->
-<div class="content-section">
-  <h2>NEWS2 Clinical Response Thresholds (RCP 2017)</h2>
-  <table class="ref-table">
-    <tr><th>NEWS2 Score</th><th>Risk Level</th><th>Monitoring Frequency</th><th>Clinical Response</th></tr>
-    <tr>
-      <td>0</td><td style="color:#22543d;font-weight:700">Low</td>
-      <td>Minimum 12-hourly</td><td>Continue routine NEWS monitoring</td>
-    </tr>
-    <tr>
-      <td>1–4</td><td style="color:#22543d;font-weight:700">Low</td>
-      <td>Minimum 4–6 hourly</td><td>Nurse assessment; inform responsible clinician if continued concern</td>
-    </tr>
-    <tr>
-      <td>3 in single parameter</td><td style="color:#7b341e;font-weight:700">Medium (Red Flag)</td>
-      <td>Minimum 1-hourly</td><td>Urgent nurse assessment; inform responsible clinician for review</td>
-    </tr>
-    <tr>
-      <td>5–6</td><td style="color:#7b341e;font-weight:700">Medium</td>
-      <td>Minimum 1-hourly</td><td>Urgent clinician review; consider higher-level care ward</td>
-    </tr>
-    <tr>
-      <td>≥7</td><td style="color:#742a2a;font-weight:700">High</td>
-      <td>Continuous</td><td>Emergency assessment by critical care–competent team; consider ICU/HDU</td>
-    </tr>
-  </table>
-  <div class="callout">⚠️ NEWS2 is for use in adults ≥16 years only. Use MEOWS for pregnancy and PEWS for pediatric patients.</div>
-</div>
-
-<!-- Educational Content -->
-<div class="content-section">
-  <h2>What is NEWS2?</h2>
-  <p>NEWS2 (National Early Warning Score 2) is the second iteration of the National Early Warning Score, updated by the Royal College of Physicians (RCP) in 2017 to address the growing recognition of sepsis as a major driver of acute patient deterioration in hospital settings. It replaced NEWS (2012) primarily by adding a new-onset confusion criterion to the consciousness parameter (ACVPU vs AVPU) and by introducing SpO₂ Scale 2 for patients with chronic hypercapnic respiratory failure.</p>
-  <p>The score is used to standardize the identification of patients at risk of clinical deterioration across all wards. It provides a common language between nurses, junior doctors, and senior clinicians for communicating physiological status, and it triggers a structured escalation response proportional to the severity of abnormality.</p>
-
-  <h3>Understanding SpO₂ Scale 2 (COPD Patients)</h3>
-  <p>Patients with Type 2 respiratory failure (hypercapnic, commonly COPD) are prescribed a lower oxygen saturation target of 88–92% to avoid suppressing their hypoxic drive. Using the standard Scale 1 for these patients would penalize their correctly managed, lower-target saturations with falsely high NEWS2 points. Scale 2 adjusts scoring so that the 88–92% range scores 0–1 points on air, while inappropriately high saturations on supplemental oxygen (≥93%) are flagged with a higher score.</p>
-  <p>Scale 2 must only be used when there is a documented clinical decision to target 88–92% — it should never be applied to all COPD patients indiscriminately.</p>
-
-  <h3>The ACVPU Upgrade from AVPU</h3>
-  <p>The original AVPU scale classified consciousness as Alert, responds to Voice, responds to Pain, or Unresponsive. NEWS2 introduced "C" for new-onset Confusion as a fifth category, positioned between Alert and Voice. New confusion is an important early sign of sepsis, metabolic derangement, and intracranial pathology, and was previously under-weighted in the NEWS system. Any state other than "Alert" (including new confusion) scores 3 points.</p>
-
-  <h3>Limitations of NEWS2</h3>
-  <ul>
-    <li>Not validated in children (&lt;16 years), pregnancy, or patients with chronic physiological abnormalities</li>
-    <li>A baseline high NEWS2 in patients with chronic lung disease may mask acute changes — trend matters more than absolute score</li>
-    <li>Does not directly assess urine output, lactate, or mental state depth — supplement with clinical assessment</li>
-    <li>Requires accurate physiological measurement — poorly taken readings lead to incorrect scores</li>
-  </ul>
-</div>
-
-<!-- FAQ -->
-<div class="content-section">
-  <h2>Frequently Asked Questions</h2>
-
-  <h3>What is the difference between NEWS and NEWS2?</h3>
-  <p>NEWS2 made two key changes from the original 2012 NEWS: it added new-onset Confusion as a separate ACVPU category (vs. the original AVPU), and it introduced SpO₂ Scale 2 for patients on a prescribed 88–92% oxygen saturation target. These updates addressed gaps in sepsis detection and safe management of hypercapnic patients.</p>
-
-  <h3>Does a NEWS2 score of 0 mean the patient is safe?</h3>
-  <p>A NEWS2 score of 0 means all measured physiological parameters are within normal ranges. However, clinical context always takes precedence — a patient with 0 who is acutely unwell by clinical assessment still warrants investigation. NEWS2 is a screening tool, not a replacement for clinical judgment.</p>
-
-  <h3>What does it mean if a single parameter scores 3?</h3>
-  <p>A "single-parameter red flag" in NEWS2 means one physiological measurement is severely abnormal (e.g., RR ≥25, SpO₂ ≤91%, GCS decline). Even if the total score is below 5, a single-parameter score of 3 mandates urgent nurse review and consideration for clinician assessment. This rule prevents a falsely reassuring low total score when one parameter is critically abnormal.</p>
-</div>
-
-<div class="footer-cite">
-  Reference: Royal College of Physicians. National Early Warning Score 2 (NEWS2). London: RCP, 2017. For adults ≥16 years only. This tool is for educational support of clinical decision-making and does not replace direct patient assessment.
-</div>
-  <section class="card">
-    <div class="card-title">Related Tools</div>
-    <div class="related-grid">
-      <a href="/medical-calculators/curb65" class="related-card" ><div class="rc-name">CURB-65 Score</div><div class="rc-desc">Pneumonia severity</div></a>
-      <a href="/medical-calculators/gcs-calculator" class="related-card" ><div class="rc-name">GCS Calculator</div><div class="rc-desc">Neurological status</div></a>
-      <a href="/medical-calculators/burn-calculator" class="related-card" ><div class="rc-name">Burn Calculator</div><div class="rc-desc">TBSA & Parkland formula</div></a>
-      <a href="/medical-calculators/" class="related-card" ><div class="rc-name">All Calculators →</div><div class="rc-desc">32+ clinical tools</div></a>
-    </div>
   </section>
-  </main>
 
-<script>
-let oxygenType='air';
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
 
-function setOxy(type){
-  oxygenType=type;
-  document.getElementById('oxy-air').className='radio-btn'+(type==='air'?' active':'');
-  document.getElementById('oxy-o2').className='radio-btn'+(type==='o2'?' active':'');
-  calc();
+  <script>
+const ITEMS=[
+  {n:'1a',name:'Level of Consciousness',opts:['0 — Alert',`1 — Drowsy (arousable)`,`2 — Stuporous (strong stimuli)`,`3 — Coma (reflex/no response)`]},
+  {n:'1b',name:'LOC Questions (Month & Age)',opts:['0 — Both correct','1 — One correct','2 — Neither correct (or intubated)']},
+  {n:'1c',name:'LOC Commands (Eyes & Grip)',opts:['0 — Both correct','1 — One correct','2 — Neither correct']},
+  {n:'2',name:'Best Gaze',opts:['0 — Normal','1 — Partial gaze palsy','2 — Forced deviation / total palsy']},
+  {n:'3',name:'Visual Fields',opts:['0 — No visual loss','1 — Partial hemianopia','2 — Complete hemianopia','3 — Bilateral hemianopia (blind)']},
+  {n:'4',name:'Facial Palsy',opts:['0 — Normal','1 — Minor (flat nasolabial fold)','2 — Partial (lower face)','3 — Complete (upper+lower)']},
+  {n:'5a',name:'Motor Arm — Left',opts:['0 — No drift (10 sec)','1 — Drift within 10 sec','2 — Falls before 10 sec','3 — No effort against gravity','4 — No movement','UN — Amputation/joint fusion']},
+  {n:'5b',name:'Motor Arm — Right',opts:['0 — No drift','1 — Drift within 10 sec','2 — Falls before 10 sec','3 — No effort against gravity','4 — No movement','UN — Amputation/joint fusion']},
+  {n:'6a',name:'Motor Leg — Left',opts:['0 — No drift (5 sec)','1 — Drift within 5 sec','2 — Falls before 5 sec','3 — No effort against gravity','4 — No movement','UN — Amputation/joint fusion']},
+  {n:'6b',name:'Motor Leg — Right',opts:['0 — No drift','1 — Drift within 5 sec','2 — Falls before 5 sec','3 — No effort against gravity','4 — No movement','UN — Amputation/joint fusion']},
+  {n:'7',name:'Limb Ataxia',opts:['0 — Absent','1 — Present in one limb','2 — Present in two limbs','UN — Paralysed or absent']},
+  {n:'8',name:'Sensory',opts:['0 — Normal','1 — Mild–moderate loss','2 — Severe loss or absent']},
+  {n:'9',name:'Best Language (Aphasia)',opts:['0 — No aphasia','1 — Mild–moderate aphasia','2 — Severe aphasia','3 — Mute / global aphasia']},
+  {n:'10',name:'Dysarthria',opts:['0 — Normal','1 — Mild–moderate slurring','2 — Severe / unintelligible','UN — Intubated/other barrier']},
+  {n:'11',name:'Extinction / Inattention',opts:['0 — No abnormality','1 — Inattention to one modality','2 — Profound hemi-inattention']},
+];
+let scores=new Array(ITEMS.length).fill(null);let lastResult=null;
+document.getElementById('item-list').innerHTML=ITEMS.map((item,ii)=>`
+  <div class="nihss-item" id="ni${ii}">
+    <div class="item-header">
+      <div>
+        <div class="item-num">Item ${item.n}</div>
+        <div class="item-name">${item.name}</div>
+      </div>
+      <div class="item-score" id="ns${ii}">—</div>
+    </div>
+    <div class="opts">
+      ${item.opts.map((opt,oi)=>`<button class="opt-btn" id="ob${ii}_${oi}" onclick="setScore(${ii},${oi},'${opt}')">${opt}</button>`).join('')}
+    </div>
+  </div>`).join('');
+function setScore(ii,oi,opt){
+  scores[ii]=opt.startsWith('UN')?0:oi;
+  ITEMS[ii].opts.forEach((_,j)=>{const b=document.getElementById(`ob${ii}_${j}`);if(b)b.classList.toggle('sel',j===oi)});
+  document.getElementById('ns'+ii).textContent=scores[ii];
+  document.getElementById('ni'+ii).classList.toggle('has-score',scores[ii]!==null);
+  const total=scores.filter(s=>s!==null).reduce((a,b)=>a+b,0);
+  document.getElementById('rt-val').textContent=total;
 }
-
-function calc(){
-  const rr=parseInt(document.getElementById('rr').value);
-  const spo2=parseInt(document.getElementById('spo2').value);
-  const scale=document.getElementById('spo2Scale').value;
-  const sbp=parseInt(document.getElementById('sbp').value);
-  const pulse=parseInt(document.getElementById('pulse').value);
-  const acvpu=parseInt(document.getElementById('acvpu').value);
-  const temp=parseFloat(document.getElementById('temp').value);
-
-  if(isNaN(rr)||isNaN(spo2)||isNaN(sbp)||isNaN(pulse)||isNaN(temp)) return;
-
-  let score=0, singleThree=false;
-
-  // RR
-  let rrS=(rr<=8||rr>=25)?3:(rr>=21)?2:(rr>=9&&rr<=11)?1:0;
-  score+=rrS; if(rrS===3) singleThree=true;
-
-  // SpO2
-  if(scale==="1"){
-    let sS=(spo2<=91)?3:(spo2<=93)?2:(spo2<=95)?1:0;
-    score+=sS; if(sS===3) singleThree=true;
-  } else {
-    let sS=(spo2<=83)?3:(spo2<=85)?2:(spo2<=87)?1:(spo2>=93&&oxygenType==='o2')?2:(spo2>=95&&oxygenType==='o2')?3:0;
-    score+=sS; if(sS===3) singleThree=true;
-  }
-
-  // Supplemental O2
-  if(oxygenType==='o2') score+=2;
-
-  // SBP
-  let sbpS=(sbp<=90||sbp>=220)?3:(sbp<=100)?2:(sbp<=110)?1:0;
-  score+=sbpS; if(sbpS===3) singleThree=true;
-
-  // Pulse
-  let pS=(pulse<=40||pulse>=131)?3:(pulse>=111)?2:(pulse<=50||(pulse>=91&&pulse<=110))?1:0;
-  score+=pS; if(pS===3) singleThree=true;
-
-  // ACVPU
-  score+=acvpu; if(acvpu===3) singleThree=true;
-
-  // Temp
-  let tS=(temp<=35.0||temp>=39.1)?3:(temp>=38.1)?1:(temp<=36.0)?1:0;
-  score+=tS; if(tS===3) singleThree=true;
-
-  updateUI(score, singleThree);
+function calculate(){
+  const total=scores.filter(s=>s!==null).reduce((a,b)=>a+b,0);
+  const answered=scores.filter(s=>s!==null).length;
+  document.getElementById('score-big').textContent=total;
+  document.getElementById('r-nihss').textContent=total+'/42';
+  let sev,badgeCls,tpa,rCls,rTxt;
+  if(total===0){sev='No Deficit';badgeCls='s0';tpa='Not indicated';rCls='r-none';rTxt='✅ NIHSS 0 — No neurological deficit detected.\n\nReview carefully — subtle strokes may be missed by NIHSS (posterior circulation, pure sensory strokes). If stroke symptoms were present and resolved, consider TIA evaluation with ABCD2 score and urgent MRI-DWI.';}
+  else if(total<=4){sev='Minor Stroke';badgeCls='s1';tpa='Consider (shared decision)';rCls='r-mild';rTxt='ℹ️ Minor stroke (NIHSS 1–4).\n\nManagement:\n• CT head urgently to exclude haemorrhage\n• tPA: consider in disabling deficits within 3–4.5 hours — PRISM trial evidence supports treatment of minor but disabling strokes\n• Dual antiplatelet therapy (aspirin + clopidogrel) for 21 days if not anticoagulating\n• Urgent carotid duplex and cardiac monitoring (24–48h Holter)\n• MRI-DWI for lesion confirmation\n• Stroke unit admission';}
+  else if(total<=15){sev='Moderate Stroke';badgeCls='s2';tpa='Indicated (if eligible)';rCls='r-mod';rTxt='⚠️ Moderate stroke (NIHSS 5–15).\n\nManagement:\n• IV alteplase 0.9 mg/kg (max 90 mg) within 4.5 hours if eligible — 10% as IV bolus, remainder over 60 min\n• CT angiography (CTA) to assess for LVO — mechanical thrombectomy if LVO confirmed\n• Strict BP control: <185/110 before tPA; <180/105 for 24 hours post-tPA\n• Aspirin 300 mg after 24 hours (post-neuroimaging)\n• Stroke unit — swallowing assessment, DVT prophylaxis, early physiotherapy\n• Echo and 72h cardiac monitoring for cardioembolic source';}
+  else if(total<=20){sev='Moderate–Severe';badgeCls='s3';tpa='Indicated if eligible';rCls='r-sev';rTxt='⚠️ Moderate–severe stroke (NIHSS 16–20).\n\nManagement:\n• Urgent CTA — high likelihood of LVO, mechanical thrombectomy strongly indicated\n• tPA bridge-to-thrombectomy if within window and no contraindications\n• Neurological ITU/high-dependency unit\n• Airway protection assessment — risk of aspiration\n• Early neurosurgical consult if large hemisphere infarct (malignant MCA syndrome risk)\n• Hemicraniectomy counselling for age <60 with malignant MCA infarct';}
+  else{sev='Severe Stroke';badgeCls='s4';tpa='Consider — high risk/benefit';rCls='r-crit';rTxt='🚨 Severe stroke (NIHSS ≥21).\n\nManagement:\n• Immediate CTA — LVO almost certain at this score\n• Mechanical thrombectomy — strong evidence even at high NIHSS (HERMES meta-analysis)\n• tPA bridge: give if within window unless major contraindication\n• Neurological ICU — airway management, ICP monitoring if large infarct\n• Early goals-of-care discussion with family given poor baseline prognosis\n• Haemorrhagic transformation risk high — avoid antithrombotics for 24 hours post-tPA\n• Rehabilitation team involvement from day 1';}
+  document.getElementById('score-badge').textContent=sev;document.getElementById('score-badge').className='score-badge '+badgeCls;
+  document.getElementById('r-sev').textContent=sev;
+  document.getElementById('r-tpa').textContent=tpa;
+  document.getElementById('rec-box').textContent=rTxt;document.getElementById('rec-box').className='rec-box '+rCls;
+  lastResult=`NIHSS Score: ${total}/42 — ${sev}\ntPA: ${tpa}\nItems scored: ${answered}/${ITEMS.length}\nCalculated at rxmedcalc.com/medical-calculators/nihss-calculator`;
+  document.getElementById('results').className='results show';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof umami!=='undefined')umami.track('nihss_calc',{score:total,severity:sev});
 }
+function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+encodeURIComponent('🧠 NIHSS Score\n'+lastResult),'_blank')}
+function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
+function resetCalc(){scores=new Array(ITEMS.length).fill(null);document.querySelectorAll('.opt-btn').forEach(b=>b.classList.remove('sel'));document.querySelectorAll('.nihss-item').forEach(el=>el.classList.remove('has-score'));ITEMS.forEach((_,i)=>{document.getElementById('ns'+i).textContent='—'});document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';lastResult=null}
 
-function updateUI(total, singleThree){
-  const colors={low:"#48bb78",medium:"#ed8936",high:"#e53e3e"};
-  let status="low", risk="Low Risk", note="Minimum 4–6 hourly monitoring. Continue routine observations.";
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
 
-  if(total>=7){
-    status="high"; risk="High Risk";
-    note="<strong>EMERGENCY:</strong> Continuous monitoring. Urgent assessment by critical care–competent team. Consider ICU/HDU admission.";
-  } else if(total>=5||singleThree){
-    status="medium"; risk="Medium Risk";
-    note=singleThree?"<strong>RED FLAG — Single Parameter Score 3:</strong> Urgent nurse review required. Inform responsible clinician.":"<strong>URGENT:</strong> Minimum hourly monitoring. Clinician review required. Consider escalation to higher-dependency care.";
-  } else if(total>=1){
-    note="Minimum 4–6 hourly monitoring. Nurse to inform clinician if continued clinical concern.";
-  } else {
-    note="All parameters within normal ranges. Continue routine 12-hourly monitoring.";
-  }
-
-  const hdr=document.getElementById('res-header');
-  hdr.style.background=colors[status];
-  hdr.textContent=risk.toUpperCase()+" — NEWS2: "+total+(singleThree?" (Red Flag)":"");
-  document.getElementById('res-total').textContent=total;
-  document.getElementById('res-risk').textContent=risk;
-  const box=document.getElementById('interp-box');
-  box.className="interp-note "+status;
-  box.innerHTML="<strong>Required Action:</strong> "+note;
-  document.getElementById('result').style.display="block";
-  trackCalc('news2', { score: total, risk: status, red_flag: singleThree });
-
-  document.getElementById('share-btn').onclick=()=>{
-    const text=`NEWS2 Score: ${total}${singleThree?" (Red Flag)":""}\nRisk Level: ${risk}\nCalculated at Clinical Calculators India`;
-    try{uTrack('share_whatsapp',{tool:'news2'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
-  };
-}
-</script>
-<script src="/assets/shared-nav.js"></script>
 </body>
 </html>
