@@ -1,38 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="meld-score">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>MELD Score Calculator | MELD-Na | Liver Transplant Priority | RxMedCalc</title>
-<meta name="description" content="Free MELD and MELD-Na score calculator for liver disease severity and transplant priority. 90-day mortality prediction, UNOS waitlist criteria, and hepatology management guide. Used by hepatologists and gastroenterologists worldwide."/>
-<meta name="keywords" content="MELD score calculator, MELD-Na calculator, liver transplant score, MELD score interpretation, end stage liver disease, UNOS MELD, hepatic encephalopathy, liver failure score, MELD mortality, MELD 3.0"/>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/meld-score"/>
-<meta property="og:title" content="MELD Score Calculator | MELD-Na | Liver Disease Severity | RxMedCalc"/>
-<meta property="og:description" content="Calculate MELD and MELD-Na scores for liver disease severity and transplant priority. 90-day mortality prediction. Free for hepatologists worldwide."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/meld-score"/>
-<meta property="og:site_name" content="RxMedCalc"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="/assets/umami-events.js"></script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"MedicalWebPage","url":"https://rxmedcalc.com/medical-calculators/meld-score","name":"MELD Score Calculator","description":"MELD and MELD-Na score for liver disease severity, 90-day mortality, and transplant priority.","inLanguage":"en","audience":{"@type":"MedicalAudience","audienceType":"Hepatologist, Gastroenterologist, Physician"},"dateModified":"2025-04-14"},
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators/"},{"@type":"ListItem","position":3,"name":"MELD Score","item":"https://rxmedcalc.com/medical-calculators/meld-score"}]},
-{"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is a dangerous MELD score?","acceptedAnswer":{"@type":"Answer","text":"A MELD score ≥15 indicates significant mortality risk and is the threshold for listing for liver transplantation in most centres. MELD 15–19 carries ~20% 3-month mortality without transplantation. MELD 20–29 carries 40–50% 3-month mortality. MELD ≥30 carries 70–80% 3-month mortality. MELD ≥40 has >90% 3-month mortality without transplantation."}},
-{"@type":"Question","name":"What is the difference between MELD and MELD-Na?","acceptedAnswer":{"@type":"Answer","text":"MELD-Na adds serum sodium to the original MELD score because hyponatraemia is an independent predictor of mortality in cirrhosis not captured by the original MELD formula. MELD-Na = MELD − serum Na − (0.025 × MELD × (140 − serum Na)) + 140. UNOS adopted MELD-Na in 2016 for organ allocation. Patients with the same MELD but lower sodium have higher waitlist mortality — MELD-Na corrects for this."}}
-]}
-]}
-</script>
-<style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>MELD Score Calculator | RxMedCalc</title>
+  <meta name="description" content="Free MELD and MELD-Na score calculator for liver disease severity and transplant priority. 90-day mortality prediction, UNOS waitlist criteria, and hepatology management guide. Used by hepatologists and gastroenterologists worldwide."/>
+  <meta name="keywords" content="MELD score calculator, MELD-Na calculator, liver transplant score, MELD score interpretation, end stage liver disease, UNOS MELD, hepatic encephalopathy, liver failure score, MELD mortality, MELD 3.0"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/meld-score"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="MELD Score Calculator | RxMedCalc"/>
+  <meta property="og:description" content="Free MELD and MELD-Na score calculator for liver disease severity and transplant priority. 90-day mortality prediction, UNOS waitlist criteria, and hepatology management guide. Used by hepatologists and gastroenterologists worldwide."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/meld-score"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/meld-score.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="MELD Score Calculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/meld-score.png"/>
+  <meta name="twitter:image:alt" content="MELD Score Calculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="MELD Score Calculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Free MELD and MELD-Na score calculator for liver disease severity and transplant priority. 90-day mortality prediction, UNOS waitlist criteria, and hepatology management guide. Used by hepatologists and gastroenterologists worldwide."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"MELD Score Calculator","description":"Free MELD and MELD-Na score calculator for liver disease severity and transplant priority. 90-day mortality prediction, UNOS waitlist criteria, and hepatology management guide. Used by hepatologists and gastroenterologists worldwide.","url":"https://rxmedcalc.com/medical-calculators/meld-score","@id":"https://rxmedcalc.com/medical-calculators/meld-score","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is a dangerous MELD score?","acceptedAnswer":{"@type":"Answer","text":"A MELD score ≥15 indicates significant mortality risk and is the threshold for listing for liver transplantation in most centres. MELD 15–19 carries ~20% 3-month mortality without transplantation. MELD 20–29 carries 40–50% 3-month mortality. MELD ≥30 carries 70–80% 3-month mortality. MELD ≥40 has >90% 3-month mortality without transplantation."}},
+      {"@type":"Question","name":"What is the difference between MELD and MELD-Na?","acceptedAnswer":{"@type":"Answer","text":"MELD-Na adds serum sodium to the original MELD score because hyponatraemia is an independent predictor of mortality in cirrhosis not captured by the original MELD formula. MELD-Na = MELD − serum Na − (0.025 × MELD × (140 − serum Na)) + 140. UNOS adopted MELD-Na in 2016 for organ allocation. Patients with the same MELD but lower sodium have higher waitlist mortality — MELD-Na corrects for this."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},{"@type":"ListItem","position":3,"name":"MELD Score Calculator","item":"https://rxmedcalc.com/medical-calculators/meld-score"}]},
+    {"@type":"SoftwareApplication","name":"MELD Score Calculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/meld-score"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC Clinic","url":"https://rxmedcalc.com/about"}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
+  <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden}
@@ -112,46 +123,94 @@ h1 em{font-style:italic;color:#fbbf24}
 .related-card:hover{border-color:#d97706;background:#fffbeb;transform:translateX(3px)}
 .rc-icon{font-size:1.5rem;flex-shrink:0}.rc-title{font-size:0.88rem;font-weight:700;color:#0d1b2a;margin-bottom:2px}.rc-desc{font-size:0.72rem;color:#9ca3af}
 .disclaimer{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:0.78rem;color:#78350f;line-height:1.65;margin-top:24px}
-</style>
+  </style>
+  <style>
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
-<div class="page-header">
-  <div class="header-inner">
-    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>MELD Score</span></nav>
-    <div class="page-eyebrow">🫀 Hepatology · Gastroenterology</div>
-    <h1>MELD Score<br><em>Calculator</em></h1>
-    <p class="page-sub">Calculate MELD and MELD-Na scores for liver disease severity, 90-day mortality prediction, and liver transplant priority. Includes UNOS waitlist criteria and management guide.</p>
-    <div class="header-badges">
-      <span class="hbadge">✓ MELD &amp; MELD-Na</span>
-      <span class="hbadge">✓ 90-Day Mortality</span>
-      <span class="hbadge">✓ UNOS Criteria</span>
-      <span class="hbadge">✓ MELD 3.0</span>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
     </div>
-  </div>
-</div>
-<main class="main">
-  <div class="calc-card">
+  </header>
+
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 Hepatology · Gastroenterology</div>
+    <h1><em>MELD Score Calculator</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
+
+  
+
+  <section class="calc-widget-section">
+    <div class="calc-card">
     <div class="calc-title">MELD &amp; MELD-Na Calculator</div>
     <div class="floor-note">ℹ️ MELD uses floor values: Bilirubin, INR, and Creatinine minimum 1.0. Creatinine capped at 4.0 (patients on dialysis = 4.0).</div>
     <div class="input-grid">
       <div class="field">
         <label for="bilirubin">Serum Bilirubin</label>
-        <input type="number" id="bilirubin" placeholder="e.g. 3.0" min="0.1" max="50" inputmode="decimal"/>
+        <input type="number" id="bilirubin" placeholder="e.g. 3.0" min="0.1" max="50" inputmode="decimal">
         <div class="hint">mg/dL (min 1.0 applied)</div>
       </div>
       <div class="field">
         <label for="inr">INR</label>
-        <input type="number" id="inr" placeholder="e.g. 1.8" min="0.5" max="20" inputmode="decimal"/>
+        <input type="number" id="inr" placeholder="e.g. 1.8" min="0.5" max="20" inputmode="decimal">
         <div class="hint">International Normalised Ratio (min 1.0)</div>
       </div>
       <div class="field">
         <label for="creatinine">Serum Creatinine</label>
-        <input type="number" id="creatinine" placeholder="e.g. 1.5" min="0.1" max="10" inputmode="decimal"/>
+        <input type="number" id="creatinine" placeholder="e.g. 1.5" min="0.1" max="10" inputmode="decimal">
         <div class="hint">mg/dL (min 1.0, max 4.0, dialysis = 4.0)</div>
       </div>
       <div class="field">
         <label for="sodium">Serum Sodium <span style="font-weight:400;text-transform:none">(for MELD-Na)</span></label>
-        <input type="number" id="sodium" placeholder="e.g. 135" min="100" max="160" inputmode="decimal"/>
+        <input type="number" id="sodium" placeholder="e.g. 135" min="100" max="160" inputmode="decimal">
         <div class="hint">mmol/L — range 125–137 used in MELD-Na</div>
       </div>
     </div>
@@ -195,10 +254,32 @@ h1 em{font-style:italic;color:#fbbf24}
       <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
   </div>
+  </section>
 
-  <div class="content-card">
-    <h2>MELD Score — Mortality by Score</h2>
-    <table class="meld-table" id="meld-ref-table">
+  
+
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#meld-score-mortality-by-score">1. MELD Score — Mortality by Score</a>
+          <a href="#faq">2. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC Clinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="meld-score-mortality-by-score"><span class="sec-num">1</span>MELD Score — Mortality by Score</h2>
+        <table class="meld-table" id="meld-ref-table">
       <thead><tr><th>MELD Score</th><th>3-Month Mortality</th><th>Transplant Priority</th></tr></thead>
       <tbody>
         <tr><td>&lt; 9</td><td>~1.9%</td><td>Low — outpatient management</td></tr>
@@ -207,45 +288,87 @@ h1 em{font-style:italic;color:#fbbf24}
         <tr><td>30–39</td><td>~53%</td><td>Very High — urgent listing</td></tr>
         <tr><td>≥ 40</td><td>&gt;71%</td><td>Critical — highest priority (1A status)</td></tr>
       </tbody>
-    </table>
-
-    <h3>MELD Formula</h3>
-    <div class="formula-block">
+    </table><h3>MELD Formula</h3><div class="formula-block">
       MELD = 3.78 × ln(Bilirubin) + 11.2 × ln(INR) + 9.57 × ln(Creatinine) + 6.43<br>
       Minimum values: Bili ≥1.0, INR ≥1.0, Cr ≥1.0, Cr max 4.0<br><br>
       MELD-Na = MELD − Na − (0.025 × MELD × (140 − Na)) + 140<br>
       Na range clamped to 125–137 mmol/L
-    </div>
-
-    <h3>MELD-Na vs MELD — Why Sodium Matters</h3>
-    <p>Hyponatraemia in cirrhosis is a marker of advanced disease, portal hypertension, and activated renin-angiotensin-aldosterone system. Patients with the same MELD score but lower serum sodium have significantly higher 90-day waitlist mortality. The United Network for Organ Sharing (UNOS) adopted MELD-Na in January 2016, replacing MELD as the primary organ allocation score.</p>
-    <p>MELD-Na ranges from 6 to 40. A patient with MELD 20 and sodium 128 mmol/L has MELD-Na ≈ 25 — significantly higher priority for organ allocation than their MELD alone would suggest.</p>
-
-    <h3>MELD 3.0 — The Newest Formula</h3>
-    <p>MELD 3.0 was introduced in 2021 to address sex-based disparities in liver transplantation (women historically had lower access despite equivalent illness severity). MELD 3.0 adds serum albumin and a female sex coefficient: MELD 3.0 = 4.56 × ln(Bili) + 0.82 × (137 − Na) − 0.24 × (137 − Na) × ln(Cr) + 9.09 × ln(INR) + 11.14 × ln(Cr) + 1.85 × (3.5 − Alb) + 1.33 (if female) + 7. Some UNOS regions are transitioning to MELD 3.0.</p>
-
-    <h3>Clinical Uses Beyond Transplantation</h3>
-    <ul>
+    </div><h3>MELD-Na vs MELD — Why Sodium Matters</h3><p>Hyponatraemia in cirrhosis is a marker of advanced disease, portal hypertension, and activated renin-angiotensin-aldosterone system. Patients with the same MELD score but lower serum sodium have significantly higher 90-day waitlist mortality. The United Network for Organ Sharing (UNOS) adopted MELD-Na in January 2016, replacing MELD as the primary organ allocation score.</p><p>MELD-Na ranges from 6 to 40. A patient with MELD 20 and sodium 128 mmol/L has MELD-Na ≈ 25 — significantly higher priority for organ allocation than their MELD alone would suggest.</p><h3>MELD 3.0 — The Newest Formula</h3><p>MELD 3.0 was introduced in 2021 to address sex-based disparities in liver transplantation (women historically had lower access despite equivalent illness severity). MELD 3.0 adds serum albumin and a female sex coefficient: MELD 3.0 = 4.56 × ln(Bili) + 0.82 × (137 − Na) − 0.24 × (137 − Na) × ln(Cr) + 9.09 × ln(INR) + 11.14 × ln(Cr) + 1.85 × (3.5 − Alb) + 1.33 (if female) + 7. Some UNOS regions are transitioning to MELD 3.0.</p><h3>Clinical Uses Beyond Transplantation</h3><ul>
       <li><strong>Surgical risk assessment:</strong> MELD predicts 30-day post-operative mortality in cirrhotic patients. MELD &lt;10 = low risk (~4%). MELD 10–15 = moderate risk (~9%). MELD &gt;15 = high risk (&gt;25%). Elective surgery should generally be avoided if MELD &gt;20</li>
       <li><strong>Acute alcoholic hepatitis:</strong> Maddrey Discriminant Function (MDF) is used alongside MELD. MELD &gt;20 in alcoholic hepatitis predicts high mortality and may guide corticosteroid therapy decisions</li>
       <li><strong>Acute-on-chronic liver failure (ACLF):</strong> CLIF-C ACLF score has largely replaced MELD for short-term prognosis in ACLF, but MELD is still used for organ allocation</li>
       <li><strong>Variceal bleeding:</strong> MELD at admission predicts 6-week mortality after variceal haemorrhage</li>
     </ul>
+
+
+        <h2 id="faq"><span class="sec-num">2</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is a dangerous MELD score?</summary>
+            <div class="faq-answer"><p>A MELD score ≥15 indicates significant mortality risk and is the threshold for listing for liver transplantation in most centres. MELD 15–19 carries ~20% 3-month mortality without transplantation. MELD 20–29 carries 40–50% 3-month mortality. MELD ≥30 carries 70–80% 3-month mortality. MELD ≥40 has &gt;90% 3-month mortality without transplantation.</p></div>
+          </details>
+          <details>
+            <summary>What is the difference between MELD and MELD-Na?</summary>
+            <div class="faq-answer"><p>MELD-Na adds serum sodium to the original MELD score because hyponatraemia is an independent predictor of mortality in cirrhosis not captured by the original MELD formula. MELD-Na = MELD − serum Na − (0.025 × MELD × (140 − serum Na)) + 140. UNOS adopted MELD-Na in 2016 for organ allocation. Patients with the same MELD but lower sodium have higher waitlist mortality — MELD-Na corrects for this.</p></div>
+          </details>
+        </div>
+        <div class="alert alert-success" style="margin-top:2rem;">
+          <span class="alert-icon">📋</span>
+          <div><strong>Key takeaway:</strong> Add a 2–3 sentence clinical summary here.</div>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#meld-score-mortality-by-score"><span class="toc-num">1</span>MELD Score — Mortality by Sc</a></li>
+          <li><a href="#faq"><span class="toc-num">2</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
   </div>
 
-  <div class="content-card">
-    <h2>Related Calculators</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/child-pugh" class="related-card"><span class="rc-icon">🫀</span><div><div class="rc-title">Child-Pugh Score</div><div class="rc-desc">Liver cirrhosis severity A/B/C</div></div></a>
-      <a href="/medical-calculators/creatinine-clearance" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">Creatinine Clearance</div><div class="rc-desc">Drug dosing in hepatic failure</div></div></a>
-      <a href="/medical-calculators/corrected-calcium" class="related-card"><span class="rc-icon">🔬</span><div><div class="rc-title">Corrected Calcium</div><div class="rc-desc">Albumin correction in liver disease</div></div></a>
-      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Hepatorenal syndrome</div></div></a>
+
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/child-pugh"><h3>Child-Pugh Score</h3></a>
+        <a class="related-card" href="/medical-calculators/creatinine-clearance"><h3>Creatinine Clearance</h3></a>
+        <a class="related-card" href="/medical-calculators/corrected-calcium"><h3>Corrected Calcium</h3></a>
+        <a class="related-card" href="/medical-calculators/map-calculator"><h3>MAP Calculator</h3></a>
+      </div>
     </div>
-  </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> MELD score is a mathematical model validated for prognostication and organ allocation. Clinical decisions regarding transplant listing, surgical risk, and acute management require comprehensive hepatology assessment. MELD does not account for all causes of mortality in liver disease. Always involve a hepatologist or transplant centre for complex decisions.</div>
-</main>
+  </section>
 
-<script>
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
 let lastResult=null;
 const MORTALITY=[1.9,6,6,20,20,20,53,53,71,71,71,71];
 function getMortality(meld){
@@ -307,7 +430,14 @@ function shareWA(){if(!lastResult)return;window.open('https://wa.me/?text='+enco
 function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastResult).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>{b.textContent='📋 Copy'},2000)})}
 function resetCalc(){['bilirubin','inr','creatinine','sodium'].forEach(id=>{document.getElementById(id).value=''});document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&['INPUT','SELECT'].includes(e.target.tagName))calculate()});
-</script>
-<script src="/assets/shared-nav.js"></script>
+
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ll.forEach(a=>a.classList.remove('active'));const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
+
 </body>
 </html>
