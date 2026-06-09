@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Vancomycin Dose Calculator India | MRSA · TDM · Renal Dosing | RxMedCalc</title>
-<meta name="description" content="Vancomycin dosage calculator India. Weight-based IV dosing for MRSA and serious Gram-positive infections. TDM trough and AUC targets, renal dose adjustment, infusion rate, red man syndrome. Vancomax, Vancocin brands. BNF aligned.">
-<meta name="keywords" content="vancomycin dose calculator India, vancomycin MRSA dose, vancomycin TDM trough level, vancomycin renal dose, vancocin dose India, vancomax dose, vancomycin infusion rate, vancomycin red man syndrome, vancomycin weight based dose India">
-<link rel="canonical" href="https://rxmedcalc.com/drug-doses/vancomycin">
+<meta content="Vancomycin dosage calculator India. Weight-based IV dosing for MRSA and serious Gram-positive infections. TDM trough and AUC targets, renal dose adjustment, infusion rate, red man syndrome. Vancomax, Vancocin brands. BNF aligned." name="description"/>
+<meta content="vancomycin dose calculator India, vancomycin MRSA dose, vancomycin TDM trough level, vancomycin renal dose, vancocin dose India, vancomax dose, vancomycin infusion rate, vancomycin red man syndrome, vancomycin weight based dose India" name="keywords"/>
+<link href="https://rxmedcalc.com/drug-doses/vancomycin" rel="canonical"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Vancomycin Dose Calculator \u2014 RxMedCalc","description":"Vancomycin IV dose calculator for MRSA and serious Gram-positive infections. Weight-based dosing, TDM targets, renal dose adjustment, infusion guidance. India brands BNF aligned.","url":"https://rxmedcalc.com/drug-doses/vancomycin"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},{"@type":"ListItem","position":2,"name":"Drug Doses","item":"https://rxmedcalc.com/drug-doses/"},{"@type":"ListItem","position":3,"name":"Vancomycin","item":"https://rxmedcalc.com/drug-doses/vancomycin"}]}</script>
 <!-- <link rel="stylesheet" href="/assets/shared.css"> -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
@@ -112,169 +113,154 @@ a{color:#7c3aed;text-decoration:none}a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b" defer="" src="https://cloud.umami.is/script.js"></script>
 <nav class="topnav">
-  <a href="https://rxmedcalc.com" class="nav-logo">Rx<em>Med</em>Calc</a>
-  <a href="/drug-doses/" class="back-link">← Drug Doses</a>
+<a class="nav-logo" href="https://rxmedcalc.com">Rx<em>Med</em>Calc</a>
+<a class="back-link" href="/drug-doses/">← Drug Doses</a>
 </nav>
 <div class="bc"><a href="https://rxmedcalc.com">Home</a><span>›</span><a href="/drug-doses/">Drug Doses</a><span>›</span><span>Vancomycin</span></div>
-
 <section class="hero">
-  <div class="hi">
-    <div class="hbadge">💊 Glycopeptide antibiotic · IV only · MRSA first-line · TDM mandatory</div>
-    <h1>Vancomycin Dose Calculator</h1>
-    <p>India · MRSA · Serious Gram-positive infections · Weight-based IV dosing · TDM · Renal Adjustment · Vancomax · Vancocin</p>
-    <div class="hpills"><span class="hp">15–20 mg/kg IV q8–12h</span><span class="hp">Infuse over ≥60 min/g</span><span class="hp">Trough: 10–20 mg/L</span><span class="hp">Reduce in CKD</span></div>
-  </div>
-</section>
-
-<div class="pw">
-  <div class="grid">
-    <div class="card">
-      <div class="ch">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5b21b6" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg>
-        <h2>Vancomycin IV Dose Calculator</h2>
-      </div>
-      <div class="cb">
-        <div class="r3">
-          <div class="f">
-            <label class="lb">Actual weight <small>(kg)</small></label>
-            <input class="inp" id="wt" type="number" placeholder="e.g. 65" min="20" max="200" step="0.5" inputmode="decimal">
-          </div>
-          <div class="f">
-            <label class="lb">Height <small>(cm)</small></label>
-            <input class="inp" id="ht" type="number" placeholder="e.g. 162" min="100" max="220" inputmode="decimal">
-          </div>
-          <div class="f">
-            <label class="lb">Sex</label>
-            <select class="sel" id="sex">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
-        </div>
-        <div class="r2">
-          <div class="f">
-            <label class="lb">CrCl / eGFR <small>(mL/min)</small></label>
-            <input class="inp" id="crcl" type="number" placeholder="e.g. 55" min="5" max="200" inputmode="decimal">
-          </div>
-          <div class="f">
-            <label class="lb">Age <small>(years)</small></label>
-            <input class="inp" id="age" type="number" placeholder="e.g. 45" min="1" max="100" inputmode="decimal">
-          </div>
-        </div>
-        <div class="f">
-          <label class="lb">Indication / severity</label>
-          <select class="sel" id="ind">
-            <option value="mrsa_mod">MRSA — moderate infection (skin, soft tissue, pneumonia)</option>
-            <option value="mrsa_severe">MRSA — severe / bacteraemia / endocarditis</option>
-            <option value="mrsa_cns">MRSA — CNS infection (meningitis, brain abscess)</option>
-            <option value="oral_cdiff">C. difficile — oral vancomycin (local action only)</option>
-            <option value="sst">Skin/soft tissue — MRSA suspected</option>
-          </select>
-        </div>
-
-        <button class="btn" onclick="calc()">Calculate Dose + Infusion Guide</button>
-
-        <div class="res" id="res">
-          <div class="rl" id="r-label">Vancomycin Dose</div>
-          <div class="rm" id="r-dose">—</div>
-          <div class="rsub" id="r-freq">—</div>
-          <div class="rg">
-            <div class="rc"><div class="xl">Dosing weight</div><div class="xv" id="r-wt">—</div></div>
-            <div class="rc"><div class="xl">Vials needed</div><div class="xv" id="r-vials">—</div></div>
-            <div class="rc"><div class="xl">Infusion time</div><div class="xv" id="r-inf">—</div></div>
-            <div class="rc"><div class="xl">TDM trough target</div><div class="xv" id="r-tdm">10–20 mg/L</div></div>
-          </div>
-        </div>
-
-        <div class="inf-box" id="inf-box">
-          <div class="inf-title">💉 IV Infusion Guide</div>
-          <div id="inf-steps"></div>
-        </div>
-
-        <div class="al alw" id="warn">⚠️ <span id="warn-t"></span></div>
-        <div class="al ald" id="danger">🚫 <span id="danger-t"></span></div>
-        <div class="al ali" id="info">ℹ️ <span id="info-t"></span></div>
-      </div>
-    </div>
-
-    <div class="sw">
-      <div class="wg">
-        <div class="wh">💊 Drug profile</div>
-        <div class="wb">
-          <div class="wr"><span class="wl">Class</span><span class="wv">Glycopeptide antibiotic</span></div>
-          <div class="wr"><span class="wl">Route</span><span class="wv">IV (systemic) · Oral (C. diff only)</span></div>
-          <div class="wr"><span class="wl">Half-life</span><span class="wv">4–8h (normal renal)</span></div>
-          <div class="wr"><span class="wl">Renal excretion</span><span class="wv">~90% unchanged</span></div>
-          <div class="wr"><span class="wl">Trough target</span><span class="wv">10–20 mg/L</span></div>
-          <div class="wr"><span class="wl">Severe infection</span><span class="wv">15–20 mg/L trough</span></div>
-        </div>
-      </div>
-      <div class="wg">
-        <div class="wh">🏷️ Indian brands</div>
-        <div class="wb">
-          <div class="wr"><span class="wl">500 mg vial</span><span class="wv">Vancomax 500 · Vancocin 500</span></div>
-          <div class="wr"><span class="wl">1000 mg vial</span><span class="wv">Vancomax 1g · Vancocin 1g</span></div>
-          <div class="wr"><span class="wl">Oral capsule</span><span class="wv">Vancocin oral (125mg cap)</span></div>
-        </div>
-      </div>
-      <div class="wg">
-        <div class="wh">🫘 Renal dose table</div>
-        <div class="wb" style="font-size:12px;color:var(--tm);line-height:1.7">
-          <p><strong style="color:var(--navy)">CrCl &gt;90:</strong> 15–20 mg/kg q8h</p>
-          <p><strong style="color:var(--navy)">CrCl 50–90:</strong> 15–20 mg/kg q12h</p>
-          <p><strong style="color:var(--navy)">CrCl 20–50:</strong> 15–20 mg/kg q24h</p>
-          <p><strong style="color:var(--navy)">CrCl &lt;20:</strong> 15–20 mg/kg then TDM-guided</p>
-          <p style="margin-top:6px">⚠️ Haemodialysis: give after each dialysis session. TDM-guided redosing.</p>
-        </div>
-      </div>
-      <div class="wg">
-        <div class="wh">⚠️ Red man syndrome</div>
-        <div class="wb" style="font-size:12px;color:var(--tm);line-height:1.7">
-          <p>Flushing, erythema, pruritus on neck/face/upper body during infusion — not a true allergy</p>
-          <p style="margin-top:6px"><strong>Prevention:</strong> infuse ≥60 min per gram. Never bolus.</p>
-          <p style="margin-top:6px"><strong>Treatment:</strong> slow or stop infusion temporarily. Antihistamine (promethazine 25mg IV). Resume at slower rate.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ct">
-    <h2>Vancomycin — Clinical Guide India</h2>
-    <p>Vancomycin is a glycopeptide antibiotic and the drug of choice for serious infections caused by methicillin-resistant Staphylococcus aureus (MRSA) and other resistant Gram-positive organisms including vancomycin-sensitive Enterococcus, penicillin-resistant Streptococcus pneumoniae (meningitis), and Clostridioides difficile (oral route only). India has extremely high rates of MRSA in hospital settings (40–70% of S. aureus isolates are MRSA in many Indian ICUs), making vancomycin one of the most important hospital antibiotics in the country. Its use requires TDM monitoring, precise renal dosing, and careful infusion technique to avoid toxicity.</p>
-
-    <h3>Dosing weight — use IBW in obese patients</h3>
-    <p>Vancomycin distributes into total body water but not proportionally into adipose tissue. In obese patients, the loading dose may use actual body weight (to achieve rapid therapeutic levels) but maintenance dosing is typically based on Ideal Body Weight (IBW) or adjusted body weight. For patients with BMI &gt;40, use AdjBW = IBW + 0.4 × (actual weight − IBW). This calculator uses the most appropriate weight automatically based on height and weight inputs.</p>
-
-    <h3>Infusion rate — preventing Red Man Syndrome</h3>
-    <p>Vancomycin must never be given as an IV bolus. Rapid infusion causes "Red Man Syndrome" — a histamine-mediated (non-IgE) reaction causing flushing, erythema, and pruritus on the face, neck, and upper torso, sometimes with hypotension. It is not a true allergy. Prevention: infuse each gram over at least 60 minutes (1000 mg = minimum 60 minutes; 1500 mg = 90 minutes; 2000 mg = 2 hours). For CNS infections requiring higher doses, infuse over 2–3 hours. If Red Man Syndrome occurs: slow or stop the infusion, give antihistamine, restart at a slower rate.</p>
-
-    <h3>TDM — trough levels and the AUC shift</h3>
-    <p>Traditional vancomycin TDM used trough levels (drawn 30 minutes before the next dose): target 10–15 mg/L for most infections, 15–20 mg/L for severe infections. Current ASHP/IDSA/SIDP guidelines (2020) now recommend AUC/MIC monitoring as the preferred approach for serious infections — targeting AUC24 400–600 mg·h/L — because trough monitoring alone may overestimate nephrotoxicity risk at high trough targets. In most Indian centres, AUC monitoring is not yet routinely available; trough monitoring remains the practical standard. Trough target: 10–15 mg/L (moderate infections), 15–20 mg/L (bacteraemia, endocarditis, meningitis). Draw trough 30 minutes before the 4th or 5th dose (steady state).</p>
-
-    <h3>Oral vancomycin for C. difficile</h3>
-    <p>Oral vancomycin 125 mg four times daily for 10 days is first-line treatment for Clostridioides difficile infection (CDI) in India, where metronidazole is now considered second-line (per IDSA 2017 guidelines). Oral vancomycin is NOT absorbed systemically — it acts locally in the colon. It cannot be used as oral vancomycin for MRSA or other systemic infections. IV vancomycin does NOT work for CDI (insufficient colonic concentration after IV administration).</p>
-
-    <h2 style="margin-top:24px">Frequently Asked Questions</h2>
-    <div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How should vancomycin be prepared and diluted for infusion?<span class="fi-ico">+</span></div><div class="fa">Reconstitute 500 mg vial with 10 ml sterile water = 50 mg/ml solution. Then dilute to 5 mg/ml for infusion: add 500 mg (10 ml) to 90 ml of 0.9% NaCl or 5% dextrose = 100 ml total at 5 mg/ml. For 1000 mg: add 20 ml to 180 ml diluent = 200 ml at 5 mg/ml. Infuse at ≤10 mg/min — for 1000 mg in 200 ml: rate = 200 ml over 60 minutes minimum = 200 ml/hr. Compatible with NS and D5W. Incompatible with heparin and alkaline solutions.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Is vancomycin nephrotoxic and how is it monitored?<span class="fi-ico">+</span></div><div class="fa">Vancomycin is nephrotoxic, particularly at high trough levels (>20 mg/L), when combined with other nephrotoxins (aminoglycosides, NSAIDs, amphotericin), or with prolonged therapy. Monitor: serum creatinine and eGFR at baseline and every 48–72 hours during treatment. Vancomycin trough (or AUC) at steady state (3rd–5th dose) and with every significant dose change. If creatinine rises >50% from baseline: hold vancomycin, recheck, consider dose reduction or switch to alternative (teicoplanin, linezolid). In patients receiving concomitant aminoglycosides (e.g. gentamicin): monitor renal function daily.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is the oral vancomycin dose for C. difficile colitis?<span class="fi-ico">+</span></div><div class="fa">For CDI (C. difficile infection): vancomycin 125 mg orally four times daily for 10 days. Severe CDI: 500 mg four times daily for 10 days. IV vancomycin is NOT effective for CDI. Oral vancomycin is NOT absorbed and does NOT treat systemic infections. In recurrent CDI: consider fidaxomicin (if available) or bezlotoxumab adjunct. Ensure adequate hydration and avoid proton pump inhibitors if possible (associated with higher CDI recurrence).</div></div>
-    </div>
-    <div class="disc"><span>⚠️</span><span>Vancomycin must be given by slow IV infusion only — never bolus. TDM mandatory — check trough before 4th or 5th dose. Monitor renal function every 48–72h. Reduce dose in renal impairment. Verify against BNF and local antibiotic stewardship guidelines.</span></div>
-    <h2 style="margin-top:24px">Related Tools</h2>
-    <div class="rg2">
-      <a href="/drug-doses/ceftriaxone" class="rc2"><div class="rn">Ceftriaxone</div><div class="rd">Gram-neg cover to combine</div></a>
-      <a href="/drug-doses/amikacin-gentamicin" class="rc2"><div class="rn">Amikacin / Gentamicin</div><div class="rd">Gram-neg synergy — TDM</div></a>
-      <a href="/medical-calculators/creatinine-clearance" class="rc2"><div class="rn">CrCl Calculator</div><div class="rd">Renal dose adjustment</div></a>
-      <a href="/medical-calculators/ibw-calculator" class="rc2"><div class="rn">IBW Calculator</div><div class="rd">Dosing weight for vancomycin</div></a>
-    </div>
-  </div>
+<div class="hi">
+<div class="hbadge">💊 Glycopeptide antibiotic · IV only · MRSA first-line · TDM mandatory</div>
+<h1>Vancomycin Dose Calculator</h1>
+<p>India · MRSA · Serious Gram-positive infections · Weight-based IV dosing · TDM · Renal Adjustment · Vancomax · Vancocin</p>
+<div class="hpills"><span class="hp">15–20 mg/kg IV q8–12h</span><span class="hp">Infuse over ≥60 min/g</span><span class="hp">Trough: 10–20 mg/L</span><span class="hp">Reduce in CKD</span></div>
 </div>
-
+</section>
+<div class="pw">
+<div class="grid">
+<div class="card">
+<div class="ch">
+<svg fill="none" height="16" stroke="#5b21b6" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="2" width="16" x="4" y="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="8" x2="16" y1="10" y2="10"></line><line x1="8" x2="13" y1="14" y2="14"></line></svg>
+<h2>Vancomycin IV Dose Calculator</h2>
+</div>
+<div class="cb">
+<div class="r3">
+<div class="f">
+<label class="lb">Actual weight <small>(kg)</small></label>
+<input class="inp" id="wt" inputmode="decimal" max="200" min="20" placeholder="e.g. 65" step="0.5" type="number"/>
+</div>
+<div class="f">
+<label class="lb">Height <small>(cm)</small></label>
+<input class="inp" id="ht" inputmode="decimal" max="220" min="100" placeholder="e.g. 162" type="number"/>
+</div>
+<div class="f">
+<label class="lb">Sex</label>
+<select class="sel" id="sex">
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+</div>
+</div>
+<div class="r2">
+<div class="f">
+<label class="lb">CrCl / eGFR <small>(mL/min)</small></label>
+<input class="inp" id="crcl" inputmode="decimal" max="200" min="5" placeholder="e.g. 55" type="number"/>
+</div>
+<div class="f">
+<label class="lb">Age <small>(years)</small></label>
+<input class="inp" id="age" inputmode="decimal" max="100" min="1" placeholder="e.g. 45" type="number"/>
+</div>
+</div>
+<div class="f">
+<label class="lb">Indication / severity</label>
+<select class="sel" id="ind">
+<option value="mrsa_mod">MRSA — moderate infection (skin, soft tissue, pneumonia)</option>
+<option value="mrsa_severe">MRSA — severe / bacteraemia / endocarditis</option>
+<option value="mrsa_cns">MRSA — CNS infection (meningitis, brain abscess)</option>
+<option value="oral_cdiff">C. difficile — oral vancomycin (local action only)</option>
+<option value="sst">Skin/soft tissue — MRSA suspected</option>
+</select>
+</div>
+<button class="btn" onclick="calc()">Calculate Dose + Infusion Guide</button>
+<div class="res" id="res">
+<div class="rl" id="r-label">Vancomycin Dose</div>
+<div class="rm" id="r-dose">—</div>
+<div class="rsub" id="r-freq">—</div>
+<div class="rg">
+<div class="rc"><div class="xl">Dosing weight</div><div class="xv" id="r-wt">—</div></div>
+<div class="rc"><div class="xl">Vials needed</div><div class="xv" id="r-vials">—</div></div>
+<div class="rc"><div class="xl">Infusion time</div><div class="xv" id="r-inf">—</div></div>
+<div class="rc"><div class="xl">TDM trough target</div><div class="xv" id="r-tdm">10–20 mg/L</div></div>
+</div>
+</div>
+<div class="inf-box" id="inf-box">
+<div class="inf-title">💉 IV Infusion Guide</div>
+<div id="inf-steps"></div>
+</div>
+<div class="al alw" id="warn">⚠️ <span id="warn-t"></span></div>
+<div class="al ald" id="danger">🚫 <span id="danger-t"></span></div>
+<div class="al ali" id="info">ℹ️ <span id="info-t"></span></div>
+</div>
+</div>
+<div class="sw">
+<div class="wg">
+<div class="wh">💊 Drug profile</div>
+<div class="wb">
+<div class="wr"><span class="wl">Class</span><span class="wv">Glycopeptide antibiotic</span></div>
+<div class="wr"><span class="wl">Route</span><span class="wv">IV (systemic) · Oral (C. diff only)</span></div>
+<div class="wr"><span class="wl">Half-life</span><span class="wv">4–8h (normal renal)</span></div>
+<div class="wr"><span class="wl">Renal excretion</span><span class="wv">~90% unchanged</span></div>
+<div class="wr"><span class="wl">Trough target</span><span class="wv">10–20 mg/L</span></div>
+<div class="wr"><span class="wl">Severe infection</span><span class="wv">15–20 mg/L trough</span></div>
+</div>
+</div>
+<div class="wg">
+<div class="wh">🏷️ Indian brands</div>
+<div class="wb">
+<div class="wr"><span class="wl">500 mg vial</span><span class="wv">Vancomax 500 · Vancocin 500</span></div>
+<div class="wr"><span class="wl">1000 mg vial</span><span class="wv">Vancomax 1g · Vancocin 1g</span></div>
+<div class="wr"><span class="wl">Oral capsule</span><span class="wv">Vancocin oral (125mg cap)</span></div>
+</div>
+</div>
+<div class="wg">
+<div class="wh">🫘 Renal dose table</div>
+<div class="wb" style="font-size:12px;color:var(--tm);line-height:1.7">
+<p><strong style="color:var(--navy)">CrCl &gt;90:</strong> 15–20 mg/kg q8h</p>
+<p><strong style="color:var(--navy)">CrCl 50–90:</strong> 15–20 mg/kg q12h</p>
+<p><strong style="color:var(--navy)">CrCl 20–50:</strong> 15–20 mg/kg q24h</p>
+<p><strong style="color:var(--navy)">CrCl &lt;20:</strong> 15–20 mg/kg then TDM-guided</p>
+<p style="margin-top:6px">⚠️ Haemodialysis: give after each dialysis session. TDM-guided redosing.</p>
+</div>
+</div>
+<div class="wg">
+<div class="wh">⚠️ Red man syndrome</div>
+<div class="wb" style="font-size:12px;color:var(--tm);line-height:1.7">
+<p>Flushing, erythema, pruritus on neck/face/upper body during infusion — not a true allergy</p>
+<p style="margin-top:6px"><strong>Prevention:</strong> infuse ≥60 min per gram. Never bolus.</p>
+<p style="margin-top:6px"><strong>Treatment:</strong> slow or stop infusion temporarily. Antihistamine (promethazine 25mg IV). Resume at slower rate.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="ct">
+<h2>Vancomycin — Clinical Guide India</h2>
+<p>Vancomycin is a glycopeptide antibiotic and the drug of choice for serious infections caused by methicillin-resistant Staphylococcus aureus (MRSA) and other resistant Gram-positive organisms including vancomycin-sensitive Enterococcus, penicillin-resistant Streptococcus pneumoniae (meningitis), and Clostridioides difficile (oral route only). India has extremely high rates of MRSA in hospital settings (40–70% of S. aureus isolates are MRSA in many Indian ICUs), making vancomycin one of the most important hospital antibiotics in the country. Its use requires TDM monitoring, precise renal dosing, and careful infusion technique to avoid toxicity.</p>
+<h3>Dosing weight — use IBW in obese patients</h3>
+<p>Vancomycin distributes into total body water but not proportionally into adipose tissue. In obese patients, the loading dose may use actual body weight (to achieve rapid therapeutic levels) but maintenance dosing is typically based on Ideal Body Weight (IBW) or adjusted body weight. For patients with BMI &gt;40, use AdjBW = IBW + 0.4 × (actual weight − IBW). This calculator uses the most appropriate weight automatically based on height and weight inputs.</p>
+<h3>Infusion rate — preventing Red Man Syndrome</h3>
+<p>Vancomycin must never be given as an IV bolus. Rapid infusion causes "Red Man Syndrome" — a histamine-mediated (non-IgE) reaction causing flushing, erythema, and pruritus on the face, neck, and upper torso, sometimes with hypotension. It is not a true allergy. Prevention: infuse each gram over at least 60 minutes (1000 mg = minimum 60 minutes; 1500 mg = 90 minutes; 2000 mg = 2 hours). For CNS infections requiring higher doses, infuse over 2–3 hours. If Red Man Syndrome occurs: slow or stop the infusion, give antihistamine, restart at a slower rate.</p>
+<h3>TDM — trough levels and the AUC shift</h3>
+<p>Traditional vancomycin TDM used trough levels (drawn 30 minutes before the next dose): target 10–15 mg/L for most infections, 15–20 mg/L for severe infections. Current ASHP/IDSA/SIDP guidelines (2020) now recommend AUC/MIC monitoring as the preferred approach for serious infections — targeting AUC24 400–600 mg·h/L — because trough monitoring alone may overestimate nephrotoxicity risk at high trough targets. In most Indian centres, AUC monitoring is not yet routinely available; trough monitoring remains the practical standard. Trough target: 10–15 mg/L (moderate infections), 15–20 mg/L (bacteraemia, endocarditis, meningitis). Draw trough 30 minutes before the 4th or 5th dose (steady state).</p>
+<h3>Oral vancomycin for C. difficile</h3>
+<p>Oral vancomycin 125 mg four times daily for 10 days is first-line treatment for Clostridioides difficile infection (CDI) in India, where metronidazole is now considered second-line (per IDSA 2017 guidelines). Oral vancomycin is NOT absorbed systemically — it acts locally in the colon. It cannot be used as oral vancomycin for MRSA or other systemic infections. IV vancomycin does NOT work for CDI (insufficient colonic concentration after IV administration).</p>
+<h2 style="margin-top:24px">Frequently Asked Questions</h2>
+<div>
+<div class="fi"><div class="fq" onclick="tf(this)">How should vancomycin be prepared and diluted for infusion?<span class="fi-ico">+</span></div><div class="fa">Reconstitute 500 mg vial with 10 ml sterile water = 50 mg/ml solution. Then dilute to 5 mg/ml for infusion: add 500 mg (10 ml) to 90 ml of 0.9% NaCl or 5% dextrose = 100 ml total at 5 mg/ml. For 1000 mg: add 20 ml to 180 ml diluent = 200 ml at 5 mg/ml. Infuse at ≤10 mg/min — for 1000 mg in 200 ml: rate = 200 ml over 60 minutes minimum = 200 ml/hr. Compatible with NS and D5W. Incompatible with heparin and alkaline solutions.</div></div>
+<div class="fi"><div class="fq" onclick="tf(this)">Is vancomycin nephrotoxic and how is it monitored?<span class="fi-ico">+</span></div><div class="fa">Vancomycin is nephrotoxic, particularly at high trough levels (&gt;20 mg/L), when combined with other nephrotoxins (aminoglycosides, NSAIDs, amphotericin), or with prolonged therapy. Monitor: serum creatinine and eGFR at baseline and every 48–72 hours during treatment. Vancomycin trough (or AUC) at steady state (3rd–5th dose) and with every significant dose change. If creatinine rises &gt;50% from baseline: hold vancomycin, recheck, consider dose reduction or switch to alternative (teicoplanin, linezolid). In patients receiving concomitant aminoglycosides (e.g. gentamicin): monitor renal function daily.</div></div>
+<div class="fi"><div class="fq" onclick="tf(this)">What is the oral vancomycin dose for C. difficile colitis?<span class="fi-ico">+</span></div><div class="fa">For CDI (C. difficile infection): vancomycin 125 mg orally four times daily for 10 days. Severe CDI: 500 mg four times daily for 10 days. IV vancomycin is NOT effective for CDI. Oral vancomycin is NOT absorbed and does NOT treat systemic infections. In recurrent CDI: consider fidaxomicin (if available) or bezlotoxumab adjunct. Ensure adequate hydration and avoid proton pump inhibitors if possible (associated with higher CDI recurrence).</div></div>
+</div>
+<div class="disc"><span>⚠️</span><span>Vancomycin must be given by slow IV infusion only — never bolus. TDM mandatory — check trough before 4th or 5th dose. Monitor renal function every 48–72h. Reduce dose in renal impairment. Verify against BNF and local antibiotic stewardship guidelines.</span></div>
+<h2 style="margin-top:24px">Related Tools</h2>
+<div class="rg2">
+<a class="rc2" href="/drug-doses/ceftriaxone"><div class="rn">Ceftriaxone</div><div class="rd">Gram-neg cover to combine</div></a>
+<a class="rc2" href="/drug-doses/amikacin-gentamicin"><div class="rn">Amikacin / Gentamicin</div><div class="rd">Gram-neg synergy — TDM</div></a>
+<a class="rc2" href="/medical-calculators/creatinine-clearance"><div class="rn">CrCl Calculator</div><div class="rd">Renal dose adjustment</div></a>
+<a class="rc2" href="/medical-calculators/ibw-calculator"><div class="rn">IBW Calculator</div><div class="rd">Dosing weight for vancomycin</div></a>
+<a class="rc2" href="/medical-calculators/kt-v-dialysis"><div class="rn">Kt/V Dialysis</div><div class="rd">Renal replacement</div></a><a class="rc2" href="/drug-doses/teicoplanin"><div class="rn">Teicoplanin</div><div class="rd">Glycopeptide alternative</div></a></div>
+</div>
+</div>
 <footer class="ft"><p>RxMedCalc · Free Clinical Tools for India · <a href="/medical-calculators">Medical Calculators</a> · <a href="/drug-doses">Drug Doses</a></p></footer>
-
 <script>
 function hideAll(){['res','inf-box','warn','danger','info'].forEach(id=>document.getElementById(id).classList.remove('on'))}
 function show(id){document.getElementById(id).classList.add('on')}
@@ -360,7 +346,6 @@ function calc(){
   if(ind==='mrsa_cns'){document.getElementById('info-t').textContent='CNS infection: use highest dose range (20mg/kg). Target trough 15–20 mg/L. CNS penetration of vancomycin is modest — higher doses are needed. Some centres add intrathecal vancomycin under neurosurgical guidance for ventriculitis.';show('info');}
 }
 </script>
-
 <script src="/assets/shared-nav.js"></script>
 </body>
 </html>

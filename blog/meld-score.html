@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MELD Score: Liver Disease Severity, Transplant Priority & Prognosis | RxMedCalc</title>
-  <meta name="description" content="A complete guide to the MELD score — the formula, MELD-Na, what scores mean for 90-day mortality, liver transplant prioritisation, MELD in alcoholic hepatitis, acute liver failure, and Child-Pugh comparison." />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MELD Score: Liver Disease Severity, Transplant Priority &amp; Prognosis | RxMedCalc</title>
+<meta content="A complete guide to the MELD score — the formula, MELD-Na, what scores mean for 90-day mortality, liver transplant prioritisation, MELD in alcoholic hepatitis, acute liver failure, and Child-Pugh comparison." name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&amp;family=DM+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
     :root{--brand:#5a3a0d;--brand-dark:#2e1d06;--brand-light:#faf3e6;--accent:#1a5c96;--text:#1c1c1e;--muted:#5a5a6a;--border:#e0c8a0;--bg:#fdf9f2;--white:#fff;--max:740px;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     body{font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.8;color:var(--text);background:var(--bg);}
@@ -56,146 +57,126 @@
   </style>
 </head>
 <body>
-<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a> &nbsp;›&nbsp; <a href="/blog/">Articles</a> &nbsp;›&nbsp; MELD Score</header>
+<header><a href="https://rxmedcalc.com">🩺 RxMedCalc</a>  ›  <a href="/blog/">Articles</a>  ›  MELD Score</header>
 <div class="hero">
-  <div class="tag">🫀 Hepatology</div>
-  <h1>MELD Score: Liver Disease Severity, Transplant Priority &amp; Prognosis</h1>
-  <p class="subtitle">The MELD and MELD-Na formulas, 90-day mortality by score, liver transplant waitlist prioritisation, MELD in alcoholic hepatitis and acute liver failure, and comparison with Child-Pugh.</p>
-  <p class="meta">Reviewed by an MBBS, AFIH Certified Physician &nbsp;|&nbsp; Based on AASLD, EASL &amp; UNOS Guidelines</p>
+<div class="tag">🫀 Hepatology</div>
+<h1>MELD Score: Liver Disease Severity, Transplant Priority &amp; Prognosis</h1>
+<p class="subtitle">The MELD and MELD-Na formulas, 90-day mortality by score, liver transplant waitlist prioritisation, MELD in alcoholic hepatitis and acute liver failure, and comparison with Child-Pugh.</p>
+<p class="meta">Reviewed by an MBBS, AFIH Certified Physician  |  Based on AASLD, EASL &amp; UNOS Guidelines</p>
 </div>
 <div class="wrap">
-
-  <p>Chronic liver disease and cirrhosis affect millions of people worldwide — in India, liver disease is one of the top 10 causes of death, driven by viral hepatitis B and C, alcohol-related liver disease, and increasingly, non-alcoholic fatty liver disease (NAFLD/MASLD). When cirrhosis progresses to decompensated liver failure, the question that haunts every clinical decision is: <strong>how sick is this patient, and how urgently do they need a transplant?</strong></p>
-  <p>The <strong>Model for End-Stage Liver Disease (MELD) score</strong> answers this question with mathematical precision. Derived from three laboratory values — bilirubin, creatinine, and INR — MELD predicts 90-day mortality in patients with end-stage liver disease and is the foundation of liver transplant allocation worldwide.</p>
-
-  <h2>The MELD Formula</h2>
-
-  <div class="formula-box">
-    <div class="label">MELD Score (Original)</div>
-    MELD = <strong>3.78 × ln[Bilirubin (mg/dL)]</strong><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>+ 11.2 × ln[INR]</strong><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>+ 9.57 × ln[Creatinine (mg/dL)]</strong><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>+ 6.43</strong><br><br>
-    <span style="font-size:.88rem;opacity:.75;">Minimum values: Bilirubin ≥ 1.0, INR ≥ 1.0, Creatinine ≥ 1.0 (set all values below 1.0 to 1.0)<br>
-    Maximum creatinine: 4.0 mg/dL (cap if on dialysis or creatinine &gt; 4.0)<br>
+<p>Chronic liver disease and cirrhosis affect millions of people worldwide — in India, liver disease is one of the top 10 causes of death, driven by viral hepatitis B and C, alcohol-related liver disease, and increasingly, non-alcoholic fatty liver disease (NAFLD/MASLD). When cirrhosis progresses to decompensated liver failure, the question that haunts every clinical decision is: <strong>how sick is this patient, and how urgently do they need a transplant?</strong></p>
+<p>The <strong>Model for End-Stage Liver Disease (MELD) score</strong> answers this question with mathematical precision. Derived from three laboratory values — bilirubin, creatinine, and INR — MELD predicts 90-day mortality in patients with end-stage liver disease and is the foundation of liver transplant allocation worldwide.</p>
+<h2>The MELD Formula</h2>
+<div class="formula-box">
+<div class="label">MELD Score (Original)</div>
+    MELD = <strong>3.78 × ln[Bilirubin (mg/dL)]</strong><br/>
+             <strong>+ 11.2 × ln[INR]</strong><br/>
+             <strong>+ 9.57 × ln[Creatinine (mg/dL)]</strong><br/>
+             <strong>+ 6.43</strong><br/><br/>
+<span style="font-size:.88rem;opacity:.75;">Minimum values: Bilirubin ≥ 1.0, INR ≥ 1.0, Creatinine ≥ 1.0 (set all values below 1.0 to 1.0)<br/>
+    Maximum creatinine: 4.0 mg/dL (cap if on dialysis or creatinine &gt; 4.0)<br/>
     Score rounded to nearest whole number. Maximum score used in transplant: 40.</span>
-  </div>
-
-  <div class="formula-box" style="margin-top:-8px;">
-    <div class="label">MELD-Na (Sodium-Adjusted — Current UNOS Standard)</div>
-    MELD-Na = <strong>MELD − Na − [0.025 × MELD × (140 − Na)] + 140</strong><br><br>
-    <span style="font-size:.88rem;opacity:.75;">Na = Serum sodium (mEq/L). Cap Na at 125 (minimum) and 137 (maximum) before calculating.<br>
-    MELD-Na better predicts 90-day waitlist mortality and is now the UNOS transplant allocation standard.</span>
-  </div>
-
-  <div class="callout blue">
-    <p>🫀 Use the <a href="/medical-calculators/meld-score" target="_blank"><strong>RxMedCalc MELD Score Calculator</strong></a> — calculates both MELD and MELD-Na with 90-day mortality prediction and transplant priority guidance.</p>
-  </div>
-
-  <h2>MELD Score and 90-Day Mortality</h2>
-
-  <div class="mort-scale">
-    <div class="ms"><div class="ms-score">&lt; 10</div><div class="ms-mort">&lt; 5% mortality</div></div>
-    <div class="ms"><div class="ms-score">10–19</div><div class="ms-mort">~10–25%</div></div>
-    <div class="ms"><div class="ms-score">20–29</div><div class="ms-mort">~40–50%</div></div>
-    <div class="ms"><div class="ms-score">30–39</div><div class="ms-mort">~55–70%</div></div>
-    <div class="ms"><div class="ms-score">≥ 40</div><div class="ms-mort">&gt; 80%</div></div>
-  </div>
-
-  <div class="table-wrap"><table>
-    <thead><tr><th>MELD Score</th><th>90-Day Mortality</th><th>Clinical Implication</th></tr></thead>
-    <tbody>
-      <tr><td><strong>&lt; 10</strong></td><td>&lt; 5%</td><td>Low short-term mortality. Outpatient management typically appropriate. Re-evaluate trigger for hospitalisation.</td></tr>
-      <tr><td><strong>10–14</strong></td><td>~10%</td><td>Moderate risk. Close outpatient follow-up or hospitalisation based on clinical context.</td></tr>
-      <tr><td><strong>15–19</strong></td><td>~20%</td><td>Significant risk. Transplant evaluation should begin. Hospitalisation often warranted.</td></tr>
-      <tr><td><strong>20–29</strong></td><td>~40–50%</td><td>High risk. Active transplant listing. Aggressive management of complications.</td></tr>
-      <tr><td><strong>30–39</strong></td><td>~55–70%</td><td>Very high risk. Urgent transplant priority. ICU-level care.</td></tr>
-      <tr><td><strong>≥ 40</strong></td><td>&gt; 80%</td><td>Critically high. Highest transplant priority. Consider palliative goals if transplant not possible.</td></tr>
-    </tbody>
-  </table></div>
-
-  <h2>Why MELD Uses These Three Variables</h2>
-  <p>The three components of MELD each reflect a specific aspect of liver failure's systemic consequences:</p>
-  <ul>
-    <li><strong>Bilirubin</strong> — reflects the liver's ability to conjugate and excrete waste. Rising bilirubin indicates failing hepatocellular function and is the most visible marker of hepatic decompensation.</li>
-    <li><strong>INR (International Normalised Ratio)</strong> — reflects coagulation factor synthesis. The liver produces all clotting factors except Factor VIII. A rising INR indicates severe hepatocellular dysfunction and predicts bleeding complications.</li>
-    <li><strong>Creatinine</strong> — reflects renal function. The kidneys are intimately linked to liver failure — hepatorenal syndrome (HRS), where renal failure occurs as a direct consequence of advanced cirrhosis, carries very high mortality. Elevated creatinine in a cirrhotic patient is an ominous sign.</li>
-  </ul>
-  <p>Notably, MELD does not include clinical signs like ascites, encephalopathy, or jaundice — it is entirely laboratory-based, making it objective and reproducible across settings.</p>
-
-  <h2>Why Sodium Was Added — MELD-Na</h2>
-  <p>Hyponatraemia (low serum sodium) is a powerful independent predictor of mortality in cirrhosis, not captured by the original MELD. Sodium below 130 mEq/L in a cirrhotic patient indicates severe portal hypertension with massive sodium retention and is associated with high 90-day mortality even at moderate MELD scores.</p>
-  <p>MELD-Na incorporates serum sodium to correct for this. Two patients with an identical MELD of 18 — one with sodium 138 and one with sodium 126 — have very different prognoses. MELD-Na correctly assigns the hyponatraemic patient a higher score, prioritising them appropriately on transplant waitlists. UNOS (United States) adopted MELD-Na as the transplant allocation standard in 2016.</p>
-
-  <h2>MELD in Specific Clinical Scenarios</h2>
-
-  <h3>Alcoholic Hepatitis</h3>
-  <p>Severe alcoholic hepatitis — defined as Maddrey's Discriminant Function &gt; 32 or MELD &gt; 20 — carries very high short-term mortality (30–40% at 30 days without treatment). In severe alcoholic hepatitis, MELD is used to:</p>
-  <ul>
-    <li>Identify patients likely to benefit from prednisolone therapy (MELD 20–54 with no active infection or GI bleeding)</li>
-    <li>Monitor response to treatment — a fall in MELD at day 7 (Lille score) predicts response; failure to respond indicates consideration of early liver transplantation in carefully selected abstinent patients</li>
-  </ul>
-
-  <h3>Acute-on-Chronic Liver Failure (ACLF)</h3>
-  <p>ACLF — acute decompensation of cirrhosis triggered by a precipitating event (infection, GI bleed, alcohol binge) — is associated with much higher short-term mortality than the MELD alone predicts, because of multi-organ failure. The <strong>CLIF-C ACLF score</strong> (incorporating organ failure grading) is preferred in ACLF, but MELD remains a useful baseline severity measure.</p>
-
-  <h3>Acute Liver Failure (ALF)</h3>
-  <p>In acute liver failure (e.g. paracetamol overdose, viral hepatitis B fulminant failure, drug-induced liver injury), MELD is used alongside the <strong>King's College Criteria</strong> to guide emergency transplant listing. MELD &gt; 30 in ALF is a marker of poor prognosis without transplantation.</p>
-
-  <h2>MELD vs Child-Pugh Score</h2>
-  <div class="table-wrap"><table>
-    <thead><tr><th>Feature</th><th>MELD / MELD-Na</th><th>Child-Pugh</th></tr></thead>
-    <tbody>
-      <tr><td><strong>Variables</strong></td><td>Bilirubin, INR, Creatinine (± Na)</td><td>Bilirubin, albumin, PT/INR, ascites, encephalopathy</td></tr>
-      <tr><td><strong>Objective?</strong></td><td>Entirely laboratory-based — fully objective</td><td>Includes subjective clinical grading of ascites and encephalopathy</td></tr>
-      <tr><td><strong>Mortality prediction</strong></td><td>Better for short-term (90-day) mortality</td><td>Better for medium-term (1–2 year) prognosis</td></tr>
-      <tr><td><strong>Transplant allocation</strong></td><td>Standard tool — used by UNOS, Eurotransplant</td><td>Not used for allocation — superseded by MELD</td></tr>
-      <tr><td><strong>Best use</strong></td><td>Transplant prioritisation, acute decompensation severity</td><td>General cirrhosis severity staging, surgical risk</td></tr>
-    </tbody>
-  </table></div>
-
-  <h2>Common Causes of Liver Disease in India</h2>
-  <p>India's liver disease burden has a different aetiology profile from Western countries, which affects MELD use in practice:</p>
-  <ul>
-    <li><strong>Hepatitis B:</strong> India has ~40 million chronic HBV carriers. HBV cirrhosis is the leading cause of hepatocellular carcinoma (HCC) in India. MELD guides timing of antiviral therapy escalation and transplant listing.</li>
-    <li><strong>Hepatitis C:</strong> ~6 million HCV-infected individuals. Direct-acting antiviral (DAA) therapy can dramatically improve MELD in compensated cirrhosis — a post-SVR MELD reduction is now a recognised phenomenon requiring waitlist reassessment.</li>
-    <li><strong>Alcohol-related liver disease:</strong> Rising rapidly, particularly in urban India. Alcoholic hepatitis is a major cause of acute MELD elevation.</li>
-    <li><strong>NAFLD/MASLD:</strong> Increasing in parallel with the diabetes and obesity epidemic. India has among the highest NAFLD prevalence in Asia.</li>
-    <li><strong>Budd-Chiari syndrome:</strong> More common in India than in Western countries — often presents acutely with very high MELD requiring urgent anticoagulation and/or transplant consideration.</li>
-  </ul>
-
-  <div class="takeaways">
-    <h2>Key Takeaways</h2>
-    <ul>
-      <li>MELD uses <strong>bilirubin, INR, and creatinine</strong> to predict 90-day mortality in end-stage liver disease</li>
-      <li><strong>MELD-Na</strong> adds serum sodium — better predicts waitlist mortality and is the current UNOS transplant allocation standard</li>
-      <li>MELD &lt; 10 = low short-term risk; MELD ≥ 20 = high risk warranting transplant evaluation; MELD ≥ 30 = very high urgency</li>
-      <li>Set all input values to a minimum of <strong>1.0</strong>; cap creatinine at <strong>4.0 mg/dL</strong> (or set to 4.0 if on dialysis)</li>
-      <li>MELD is <strong>entirely objective</strong> (laboratory-based) — superior to Child-Pugh for acute severity and transplant allocation</li>
-      <li>Severe alcoholic hepatitis: MELD &gt; 20 indicates consideration of <strong>prednisolone therapy</strong></li>
-      <li>India's dominant causes: <strong>Hepatitis B, alcohol, and rising NAFLD</strong> — all assessed with MELD for transplant and prognosis decisions</li>
-    </ul>
-  </div>
-
-  <div class="references">
-    <h2>References</h2>
-    <ol>
-      <li>Kamath PS et al. <em>A model to predict survival in patients with end-stage liver disease.</em> Hepatology. 2001;33(2):464-470.</li>
-      <li>Kim WR et al. <em>Hyponatremia and mortality among patients on the liver-transplant waiting list.</em> N Engl J Med. 2008;359(10):1018-1026.</li>
-      <li>AASLD. <em>Liver Transplantation Practice Guideline.</em> Hepatology. 2023.</li>
-      <li>EASL. <em>Clinical Practice Guidelines on Decompensated Cirrhosis.</em> J Hepatol. 2018;69(2):406-460.</li>
-      <li>Sarin SK et al. <em>Acute-on-chronic liver failure: consensus recommendations of the Asian Pacific Association for the Study of the Liver (APASL).</em> Hepatol Int. 2019.</li>
-    </ol>
-  </div>
-
-  <p class="disclaimer">This article is for educational purposes based on AASLD and EASL guidelines. MELD score interpretation and liver transplant decisions must be made by a qualified hepatologist or transplant physician.<br><br>
-  <strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
 </div>
-<script defer src="/assets/umami-events.js">
-</script> <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<div class="formula-box" style="margin-top:-8px;">
+<div class="label">MELD-Na (Sodium-Adjusted — Current UNOS Standard)</div>
+    MELD-Na = <strong>MELD − Na − [0.025 × MELD × (140 − Na)] + 140</strong><br/><br/>
+<span style="font-size:.88rem;opacity:.75;">Na = Serum sodium (mEq/L). Cap Na at 125 (minimum) and 137 (maximum) before calculating.<br/>
+    MELD-Na better predicts 90-day waitlist mortality and is now the UNOS transplant allocation standard.</span>
+</div>
+<div class="callout blue">
+<p>🫀 Use the <a href="/medical-calculators/meld-score" target="_blank"><strong>RxMedCalc MELD Score Calculator</strong></a> — calculates both MELD and MELD-Na with 90-day mortality prediction and transplant priority guidance.</p>
+</div>
+<h2>MELD Score and 90-Day Mortality</h2>
+<div class="mort-scale">
+<div class="ms"><div class="ms-score">&lt; 10</div><div class="ms-mort">&lt; 5% mortality</div></div>
+<div class="ms"><div class="ms-score">10–19</div><div class="ms-mort">~10–25%</div></div>
+<div class="ms"><div class="ms-score">20–29</div><div class="ms-mort">~40–50%</div></div>
+<div class="ms"><div class="ms-score">30–39</div><div class="ms-mort">~55–70%</div></div>
+<div class="ms"><div class="ms-score">≥ 40</div><div class="ms-mort">&gt; 80%</div></div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>MELD Score</th><th>90-Day Mortality</th><th>Clinical Implication</th></tr></thead>
+<tbody>
+<tr><td><strong>&lt; 10</strong></td><td>&lt; 5%</td><td>Low short-term mortality. Outpatient management typically appropriate. Re-evaluate trigger for hospitalisation.</td></tr>
+<tr><td><strong>10–14</strong></td><td>~10%</td><td>Moderate risk. Close outpatient follow-up or hospitalisation based on clinical context.</td></tr>
+<tr><td><strong>15–19</strong></td><td>~20%</td><td>Significant risk. Transplant evaluation should begin. Hospitalisation often warranted.</td></tr>
+<tr><td><strong>20–29</strong></td><td>~40–50%</td><td>High risk. Active transplant listing. Aggressive management of complications.</td></tr>
+<tr><td><strong>30–39</strong></td><td>~55–70%</td><td>Very high risk. Urgent transplant priority. ICU-level care.</td></tr>
+<tr><td><strong>≥ 40</strong></td><td>&gt; 80%</td><td>Critically high. Highest transplant priority. Consider palliative goals if transplant not possible.</td></tr>
+</tbody>
+</table></div>
+<h2>Why MELD Uses These Three Variables</h2>
+<p>The three components of MELD each reflect a specific aspect of liver failure's systemic consequences:</p>
+<ul>
+<li><strong>Bilirubin</strong> — reflects the liver's ability to conjugate and excrete waste. Rising bilirubin indicates failing hepatocellular function and is the most visible marker of hepatic decompensation.</li>
+<li><strong>INR (International Normalised Ratio)</strong> — reflects coagulation factor synthesis. The liver produces all clotting factors except Factor VIII. A rising INR indicates severe hepatocellular dysfunction and predicts bleeding complications.</li>
+<li><strong>Creatinine</strong> — reflects renal function. The kidneys are intimately linked to liver failure — hepatorenal syndrome (HRS), where renal failure occurs as a direct consequence of advanced cirrhosis, carries very high mortality. Elevated creatinine in a cirrhotic patient is an ominous sign.</li>
+</ul>
+<p>Notably, MELD does not include clinical signs like ascites, encephalopathy, or jaundice — it is entirely laboratory-based, making it objective and reproducible across settings.</p>
+<h2>Why Sodium Was Added — MELD-Na</h2>
+<p>Hyponatraemia (low serum sodium) is a powerful independent predictor of mortality in cirrhosis, not captured by the original MELD. Sodium below 130 mEq/L in a cirrhotic patient indicates severe portal hypertension with massive sodium retention and is associated with high 90-day mortality even at moderate MELD scores.</p>
+<p>MELD-Na incorporates serum sodium to correct for this. Two patients with an identical MELD of 18 — one with sodium 138 and one with sodium 126 — have very different prognoses. MELD-Na correctly assigns the hyponatraemic patient a higher score, prioritising them appropriately on transplant waitlists. UNOS (United States) adopted MELD-Na as the transplant allocation standard in 2016.</p>
+<h2>MELD in Specific Clinical Scenarios</h2>
+<h3>Alcoholic Hepatitis</h3>
+<p>Severe alcoholic hepatitis — defined as Maddrey's Discriminant Function &gt; 32 or MELD &gt; 20 — carries very high short-term mortality (30–40% at 30 days without treatment). In severe alcoholic hepatitis, MELD is used to:</p>
+<ul>
+<li>Identify patients likely to benefit from prednisolone therapy (MELD 20–54 with no active infection or GI bleeding)</li>
+<li>Monitor response to treatment — a fall in MELD at day 7 (Lille score) predicts response; failure to respond indicates consideration of early liver transplantation in carefully selected abstinent patients</li>
+</ul>
+<h3>Acute-on-Chronic Liver Failure (ACLF)</h3>
+<p>ACLF — acute decompensation of cirrhosis triggered by a precipitating event (infection, GI bleed, alcohol binge) — is associated with much higher short-term mortality than the MELD alone predicts, because of multi-organ failure. The <strong>CLIF-C ACLF score</strong> (incorporating organ failure grading) is preferred in ACLF, but MELD remains a useful baseline severity measure.</p>
+<h3>Acute Liver Failure (ALF)</h3>
+<p>In acute liver failure (e.g. paracetamol overdose, viral hepatitis B fulminant failure, drug-induced liver injury), MELD is used alongside the <strong>King's College Criteria</strong> to guide emergency transplant listing. MELD &gt; 30 in ALF is a marker of poor prognosis without transplantation.</p>
+<h2>MELD vs Child-Pugh Score</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Feature</th><th>MELD / MELD-Na</th><th>Child-Pugh</th></tr></thead>
+<tbody>
+<tr><td><strong>Variables</strong></td><td>Bilirubin, INR, Creatinine (± Na)</td><td>Bilirubin, albumin, PT/INR, ascites, encephalopathy</td></tr>
+<tr><td><strong>Objective?</strong></td><td>Entirely laboratory-based — fully objective</td><td>Includes subjective clinical grading of ascites and encephalopathy</td></tr>
+<tr><td><strong>Mortality prediction</strong></td><td>Better for short-term (90-day) mortality</td><td>Better for medium-term (1–2 year) prognosis</td></tr>
+<tr><td><strong>Transplant allocation</strong></td><td>Standard tool — used by UNOS, Eurotransplant</td><td>Not used for allocation — superseded by MELD</td></tr>
+<tr><td><strong>Best use</strong></td><td>Transplant prioritisation, acute decompensation severity</td><td>General cirrhosis severity staging, surgical risk</td></tr>
+</tbody>
+</table></div>
+<h2>Common Causes of Liver Disease in India</h2>
+<p>India's liver disease burden has a different aetiology profile from Western countries, which affects MELD use in practice:</p>
+<ul>
+<li><strong>Hepatitis B:</strong> India has ~40 million chronic HBV carriers. HBV cirrhosis is the leading cause of hepatocellular carcinoma (HCC) in India. MELD guides timing of antiviral therapy escalation and transplant listing.</li>
+<li><strong>Hepatitis C:</strong> ~6 million HCV-infected individuals. Direct-acting antiviral (DAA) therapy can dramatically improve MELD in compensated cirrhosis — a post-SVR MELD reduction is now a recognised phenomenon requiring waitlist reassessment.</li>
+<li><strong>Alcohol-related liver disease:</strong> Rising rapidly, particularly in urban India. Alcoholic hepatitis is a major cause of acute MELD elevation.</li>
+<li><strong>NAFLD/MASLD:</strong> Increasing in parallel with the diabetes and obesity epidemic. India has among the highest NAFLD prevalence in Asia.</li>
+<li><strong>Budd-Chiari syndrome:</strong> More common in India than in Western countries — often presents acutely with very high MELD requiring urgent anticoagulation and/or transplant consideration.</li>
+</ul>
+<div class="takeaways">
+<h2>Key Takeaways</h2>
+<ul>
+<li>MELD uses <strong>bilirubin, INR, and creatinine</strong> to predict 90-day mortality in end-stage liver disease</li>
+<li><strong>MELD-Na</strong> adds serum sodium — better predicts waitlist mortality and is the current UNOS transplant allocation standard</li>
+<li>MELD &lt; 10 = low short-term risk; MELD ≥ 20 = high risk warranting transplant evaluation; MELD ≥ 30 = very high urgency</li>
+<li>Set all input values to a minimum of <strong>1.0</strong>; cap creatinine at <strong>4.0 mg/dL</strong> (or set to 4.0 if on dialysis)</li>
+<li>MELD is <strong>entirely objective</strong> (laboratory-based) — superior to Child-Pugh for acute severity and transplant allocation</li>
+<li>Severe alcoholic hepatitis: MELD &gt; 20 indicates consideration of <strong>prednisolone therapy</strong></li>
+<li>India's dominant causes: <strong>Hepatitis B, alcohol, and rising NAFLD</strong> — all assessed with MELD for transplant and prognosis decisions</li>
+</ul>
+</div>
+<div class="references">
+<h2>References</h2>
+<ol>
+<li>Kamath PS et al. <em>A model to predict survival in patients with end-stage liver disease.</em> Hepatology. 2001;33(2):464-470.</li>
+<li>Kim WR et al. <em>Hyponatremia and mortality among patients on the liver-transplant waiting list.</em> N Engl J Med. 2008;359(10):1018-1026.</li>
+<li>AASLD. <em>Liver Transplantation Practice Guideline.</em> Hepatology. 2023.</li>
+<li>EASL. <em>Clinical Practice Guidelines on Decompensated Cirrhosis.</em> J Hepatol. 2018;69(2):406-460.</li>
+<li>Sarin SK et al. <em>Acute-on-chronic liver failure: consensus recommendations of the Asian Pacific Association for the Study of the Liver (APASL).</em> Hepatol Int. 2019.</li>
+</ol>
+</div>
+<p class="disclaimer">This article is for educational purposes based on AASLD and EASL guidelines. MELD score interpretation and liver transplant decisions must be made by a qualified hepatologist or transplant physician.<br/><br/>
+<strong>Built by an MBBS, AFIH Certified Physician in Punjab, India | <a href="https://rxmedcalc.com">RxMedCalc.com</a></strong></p>
+</div>
+<script defer="" src="/assets/umami-events.js">
+</script> <script data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b" defer="" src="https://cloud.umami.is/script.js"></script>
 <script src="/assets/shared-nav.js"></script>
 <!-- RXMC-RELATED-START -->
-
 <style id="rxmc-related-styles">
 .rxmc-related{margin:48px 0 32px;padding-top:32px;border-top:1px solid #dde3ea;font-family:'DM Sans',sans-serif;}
 .rxmc-related h3{font-family:'Lora',serif;font-size:1.15rem;font-weight:700;color:#1a3a5c;margin-bottom:20px;}
@@ -211,42 +192,42 @@
 @media(max-width:360px){.rxmc-related-grid{grid-template-columns:1fr;}}
 </style>
 <div class="rxmc-related">
-  <h3>Related Articles</h3>
-  <div class="rxmc-related-grid">
-    <a href="/blog/neonatal-jaundice" class="rxmc-rel-card">
-      <div class="rxmc-rel-bar" style="background:#1a6b5c;"></div>
-      <div class="rxmc-rel-body">
-        <div class="rxmc-rel-cat">👶 Neonatology</div>
-        <div class="rxmc-rel-title">Neonatal Jaundice: Causes, Phototherapy & AAP 2022 Guidelines</div>
-      </div>
-      <div class="rxmc-rel-foot">Read Article → &nbsp;<span style="color:#5a5a6a;font-weight:400;">12 min</span></div>
-    </a>
-    <a href="/blog/curb65-score" class="rxmc-rel-card">
-      <div class="rxmc-rel-bar" style="background:#1a6b3c;"></div>
-      <div class="rxmc-rel-body">
-        <div class="rxmc-rel-cat">🫁 Respiratory Medicine</div>
-        <div class="rxmc-rel-title">CURB-65 Score: Pneumonia Severity & Hospital Admission</div>
-      </div>
-      <div class="rxmc-rel-foot">Read Article → &nbsp;<span style="color:#5a5a6a;font-weight:400;">14 min</span></div>
-    </a>
-    <a href="/blog/news2-score" class="rxmc-rel-card">
-      <div class="rxmc-rel-bar" style="background:#1a6b3c;"></div>
-      <div class="rxmc-rel-body">
-        <div class="rxmc-rel-cat">🫁 Respiratory Medicine</div>
-        <div class="rxmc-rel-title">NEWS2 Score: Early Warning System for Deteriorating Patients</div>
-      </div>
-      <div class="rxmc-rel-foot">Read Article → &nbsp;<span style="color:#5a5a6a;font-weight:400;">11 min</span></div>
-    </a>
-    <a href="/blog/rabies-pep" class="rxmc-rel-card">
-      <div class="rxmc-rel-bar" style="background:#7a1a1a;"></div>
-      <div class="rxmc-rel-body">
-        <div class="rxmc-rel-cat">🦠 Infectious Disease</div>
-        <div class="rxmc-rel-title">Rabies After a Dog Bite: PEP, Vaccines & the NCDC Schedule</div>
-      </div>
-      <div class="rxmc-rel-foot">Read Article → &nbsp;<span style="color:#5a5a6a;font-weight:400;">12 min</span></div>
-    </a>
-  </div>
+<h3>Related Articles</h3>
+<div class="rxmc-related-grid">
+<a class="rxmc-rel-card" href="/blog/neonatal-jaundice">
+<div class="rxmc-rel-bar" style="background:#1a6b5c;"></div>
+<div class="rxmc-rel-body">
+<div class="rxmc-rel-cat">👶 Neonatology</div>
+<div class="rxmc-rel-title">Neonatal Jaundice: Causes, Phototherapy &amp; AAP 2022 Guidelines</div>
+</div>
+<div class="rxmc-rel-foot">Read Article →  <span style="color:#5a5a6a;font-weight:400;">12 min</span></div>
+</a>
+<a class="rxmc-rel-card" href="/blog/curb65-score">
+<div class="rxmc-rel-bar" style="background:#1a6b3c;"></div>
+<div class="rxmc-rel-body">
+<div class="rxmc-rel-cat">🫁 Respiratory Medicine</div>
+<div class="rxmc-rel-title">CURB-65 Score: Pneumonia Severity &amp; Hospital Admission</div>
+</div>
+<div class="rxmc-rel-foot">Read Article →  <span style="color:#5a5a6a;font-weight:400;">14 min</span></div>
+</a>
+<a class="rxmc-rel-card" href="/blog/news2-score">
+<div class="rxmc-rel-bar" style="background:#1a6b3c;"></div>
+<div class="rxmc-rel-body">
+<div class="rxmc-rel-cat">🫁 Respiratory Medicine</div>
+<div class="rxmc-rel-title">NEWS2 Score: Early Warning System for Deteriorating Patients</div>
+</div>
+<div class="rxmc-rel-foot">Read Article →  <span style="color:#5a5a6a;font-weight:400;">11 min</span></div>
+</a>
+<a class="rxmc-rel-card" href="/blog/rabies-pep">
+<div class="rxmc-rel-bar" style="background:#7a1a1a;"></div>
+<div class="rxmc-rel-body">
+<div class="rxmc-rel-cat">🦠 Infectious Disease</div>
+<div class="rxmc-rel-title">Rabies After a Dog Bite: PEP, Vaccines &amp; the NCDC Schedule</div>
+</div>
+<div class="rxmc-rel-foot">Read Article →  <span style="color:#5a5a6a;font-weight:400;">12 min</span></div>
+</a>
+</div>
 </div>
 <!-- RXMC-RELATED-END -->
-</body>
+<h2 style="margin-top:24px">Related Tools</h2><div class="rg2"><a class="rc2" href="/medical-calculators/child-pugh"><div class="rn">Child-Pugh Score</div><div class="rd">Liver disease severity</div></a><a class="rc2" href="/medical-calculators/fib4-calculator"><div class="rn">FIB-4 Index</div><div class="rd">Liver fibrosis</div></a><a class="rc2" href="/drug-doses/spironolactone"><div class="rn">Spironolactone</div><div class="rd">Ascites management</div></a><a class="rc2" href="/drug-doses/furosemide"><div class="rn">Furosemide</div><div class="rd">Oedema / ascites</div></a></div></body>
 </html>
