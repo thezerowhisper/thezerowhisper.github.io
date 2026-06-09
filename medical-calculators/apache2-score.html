@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" data-tool="apache2-score">
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>APACHE II Score Calculator | ICU Mortality Prediction | RxMedCalc</title>
-<meta name="description" content="Free APACHE II (Acute Physiology and Chronic Health Evaluation II) score calculator for ICU mortality prediction. Calculate score from 12 acute physiology variables, age, and chronic health points. Includes ICU mortality percentage and management guidance. Used by intensivists and critical care physicians worldwide."/>
-<meta name="keywords" content="APACHE II calculator, APACHE 2 score, ICU mortality score, APACHE II mortality, acute physiology score, ICU prognosis calculator, APACHE score interpretation, critical care score, APACHE II points, ICU severity score"/>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
-<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/apache2-score"/>
-<meta property="og:title" content="APACHE II Score Calculator | ICU Mortality | RxMedCalc"/>
-<meta property="og:description" content="Calculate APACHE II score for ICU mortality prediction. 12 physiology variables + age + chronic health. Free for intensivists worldwide."/>
-<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/apache2-score"/>
-<meta property="og:site_name" content="RxMedCalc"/>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap"/></noscript>
-<!-- <link rel="stylesheet" href="/assets/shared.css"/> -->
-<script defer src="/assets/umami-events.js"></script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-<style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>APACHE II Score Calculator | RxMedCalc</title>
+  <meta name="description" content="Free APACHE II (Acute Physiology and Chronic Health Evaluation II) score calculator for ICU mortality prediction. Calculate score from 12 acute physiology variables, age, and chronic health points. Includes ICU mortality percentage and management guidance. Used by intensivists and critical care physicians worldwide."/>
+  <meta name="keywords" content="APACHE II calculator, APACHE 2 score, ICU mortality score, APACHE II mortality, acute physiology score, ICU prognosis calculator, APACHE score interpretation, critical care score, APACHE II points, ICU severity score"/>
+  <meta name="author" content="RxMedCalc Editorial Team"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+  <link rel="canonical" href="https://rxmedcalc.com/medical-calculators/apache2-score"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="APACHE II Score Calculator | RxMedCalc"/>
+  <meta property="og:description" content="Free APACHE II (Acute Physiology and Chronic Health Evaluation II) score calculator for ICU mortality prediction. Calculate score from 12 acute physiology variables, age, and chronic health points. Includes ICU mortality percentage and management guidance. Used by intensivists and critical care physicians worldwide."/>
+  <meta property="og:url" content="https://rxmedcalc.com/medical-calculators/apache2-score"/>
+  <meta property="og:site_name" content="RxMedCalc"/>
+  <meta property="og:image" content="https://rxmedcalc.com/assets/og/apache2-score.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="APACHE II Score Calculator"/>
+  <meta name="twitter:image" content="https://rxmedcalc.com/assets/og/apache2-score.png"/>
+  <meta name="twitter:image:alt" content="APACHE II Score Calculator"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="APACHE II Score Calculator | RxMedCalc"/>
+  <meta name="twitter:description" content="Free APACHE II (Acute Physiology and Chronic Health Evaluation II) score calculator for ICU mortality prediction. Calculate score from 12 acute physiology variables, age, and chronic health points. Includes ICU mortality percentage and management guidance. Used by intensivists and critical care physicians worldwide."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"MedicalWebPage","name":"APACHE II Score Calculator","description":"Free APACHE II (Acute Physiology and Chronic Health Evaluation II) score calculator for ICU mortality prediction. Calculate score from 12 acute physiology variables, age, and chronic health points. Includes ICU mortality percentage and management guidance. Used by intensivists and critical care physicians worldwide.","url":"https://rxmedcalc.com/medical-calculators/apache2-score","@id":"https://rxmedcalc.com/medical-calculators/apache2-score","isPartOf":{"@id":"https://rxmedcalc.com"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"datePublished":"2026-06-09","dateModified":"2026-06-09","publisher":{"@type":"Organization","name":"RxMedCalc","url":"https://rxmedcalc.com","logo":{"@type":"ImageObject","url":"https://rxmedcalc.com/favicon.svg"}}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is APACHE II used for?","acceptedAnswer":{"@type":"Answer","text":"APACHE II (Acute Physiology and Chronic Health Evaluation II) estimates ICU mortality risk using 12 acute physiological variables, age, and chronic health status. Scores range 0–71. It is used for ICU benchmarking, clinical research stratification, prognosis estimation, and family discussions — not for individual treatment-limitation decisions."}},
+      {"@type":"Question","name":"What APACHE II score predicts high mortality?","acceptedAnswer":{"@type":"Answer","text":"Score 0–9: <10% mortality. Score 10–19: 15–25%. Score 20–24: ~40%. Score 25–29: ~55%. Score 30–34: ~73%. ≥35: >85%. These are population estimates. Actual mortality depends on diagnosis, ICU interventions, and centre-level factors."}},
+      {"@type":"Question","name":"What are the 12 physiological variables in APACHE II?","acceptedAnswer":{"@type":"Answer","text":"Temperature (rectal), mean arterial pressure, heart rate, respiratory rate, oxygenation (A-a gradient or PaO2), arterial pH, serum sodium, serum potassium, creatinine, haematocrit, white cell count, and GCS. Each scored 0–4 based on deviation from normal using worst values in first 24 ICU hours."}},
+      {"@type":"Question","name":"What chronic conditions add APACHE II points?","acceptedAnswer":{"@type":"Answer","text":"5 points added for non-operative or emergency surgical patients with: liver cirrhosis with portal hypertension, NYHA Class IV heart failure, severe COPD/chronic hypoxia, chronic renal replacement therapy, or immunosuppression (chemotherapy, steroids, AIDS). 2 points for elective surgical patients with same conditions."}},
+      {"@type":"Question","name":"How does APACHE II compare to SOFA?","acceptedAnswer":{"@type":"Answer","text":"APACHE II is calculated once at ICU admission — it is a severity-at-admission score. SOFA is calculated daily to track organ failure trajectory. A rising SOFA predicts poor outcome better than a high initial APACHE II. Use APACHE II for admission severity; SOFA for daily monitoring and sepsis definition."}},
+      {"@type":"Question","name":"Is APACHE II validated in Indian ICUs?","acceptedAnswer":{"@type":"Answer","text":"APACHE II has been validated in multiple Indian ICU studies and performs reasonably well, though it tends to overestimate mortality in Indian populations compared to the original Western derivation cohort. Several Indian studies suggest calibrating with local mortality data. Despite this, it remains the most widely used ICU severity score in India."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com"},
+      {"@type":"ListItem","position":2,"name":"Calculators","item":"https://rxmedcalc.com/medical-calculators"},
+      {"@type":"ListItem","position":3,"name":"APACHE II Score Calculator","item":"https://rxmedcalc.com/medical-calculators/apache2-score"}
+    ]},
+    {"@type":"SoftwareApplication","name":"APACHE II Score Calculator — Online Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://rxmedcalc.com/medical-calculators/apache2-score"},
+    {"@type":"Person","name":"Dr. Sharma, MBBS AFIH","jobTitle":"Medical Officer, AAC CLinic","url":"https://rxmedcalc.com/about","affiliation":{"@type":"MedicalOrganization","name":"AAC Golewala, Bathinda"}}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"/>
+  <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+  <!-- add GTM / analytics / verification tags here -->
+  <!-- Original styles preserved -->
+  <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#f8f6f2;color:#1a1a2e;overflow-x:hidden;-webkit-text-size-adjust:100%}
@@ -129,24 +158,78 @@ h1 em{font-style:italic;color:#f87171}
     .fa{max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:0.85rem;color:var(--text-muted,#4b5563);line-height:1.75}
     .fi.op .fa{max-height:600px;padding-top:8px}
   </style>
+  <style>
+    /* ── Site header ── */
+    .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+    .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+    .sl{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:600;color:#1E1A17;text-decoration:none;}
+    .sl .la{color:#C8315A;}
+    .sn{display:flex;align-items:center;gap:2px;}
+    .snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s;}
+    .snl:hover{color:#C8315A;background:#FBEAF0;}
+    .snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:#3A3430;padding:4px;}
+    .ann-bar{background:#1E1A17;color:rgba(255,255,255,0.75);text-align:center;font-size:12.5px;padding:6px 1rem;}
+    .ann-bar a{color:#ED93B1;text-decoration:none;}
+    @media(max-width:680px){
+      .sn{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(42,36,32,0.1);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);z-index:999;}
+      .site-header.nav-open .sn{display:flex;}
+      .snt{display:block;}
+    }
+    /* ── Site footer ── */
+    .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
+    .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
+    @media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem;}}
+    .fb .sl{color:#fff;}
+    .fb p{font-size:13px;margin-top:.4rem;line-height:1.6;}
+    .fd{font-size:11.5px;color:rgba(255,255,255,0.35);margin-top:.625rem;line-height:1.6;}
+    .fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem;}
+    .fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:.5rem;}
+    .fc ul{list-style:none;padding:0;}
+    .fc li{margin-bottom:.3rem;}
+    .fc a{font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .15s;}
+    .fc a:hover{color:#fff;}
+    .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+    .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
+    .fb2 a:hover{color:#fff;}
+        .ad-container{text-align:center;padding:.625rem 0;border-top:1px solid rgba(42,36,32,0.06);border-bottom:1px solid rgba(42,36,32,0.06);margin:1rem 0;background:rgba(247,245,242,0.5);}
+  </style>
 </head>
+
 <body>
-<div class="page-header">
-  <div class="header-inner">
-    <nav class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/medical-calculators/">Calculators</a><span>›</span><span>APACHE II</span></nav>
-    <div class="page-eyebrow">🏥 Critical Care · ICU · Prognosis</div>
-    <h1>APACHE II<br><em>Score Calculator</em></h1>
-    <p class="page-sub">Acute Physiology and Chronic Health Evaluation II — ICU mortality prediction from 12 physiology variables, age, and chronic health status. Validates within 24 hours of ICU admission.</p>
-    <div class="header-badges">
-      <span class="hbadge">✓ 12 Physiology Variables</span>
-      <span class="hbadge">✓ ICU Mortality %</span>
-      <span class="hbadge">✓ Age & Chronic Health</span>
-      <span class="hbadge">✓ Knaus 1985 Validated</span>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ════ HEADER ════ -->
+  <header class="site-header" id="site-header">
+    <div class="shi">
+      <a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+      <nav class="sn" aria-label="Main navigation">
+        <a href="/medical-calculators" class="snl">Calculators</a>
+        <a href="/drug-doses" class="snl">Drug Doses</a>
+        <a href="/blog" class="snl">Blog</a>
+        <a href="/rabies-scheduler" class="snl">Rabies Schedule</a>
+        <a href="/vitamin" class="snl">Vitamins</a>
+      </nav>
+      <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
     </div>
-  </div>
-</div>
-<main class="main">
-  <div class="calc-card">
+  </header>
+
+  <!-- ════ HERO ════ -->
+  <header class="calc-hero" style="padding:1.5rem 1.5rem 1.25rem;">
+    <div class="calc-hero-eyebrow">🩺 Critical Care · ICU · Prognosis</div>
+    <h1><em>APACHE II Score Calculator</em></h1>
+    <div class="calc-hero-meta">
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Updated 2026-06-09</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+      <span class="calc-hero-meta-item"><span class="calc-hero-meta-dot"></span>Medically reviewed</span>
+    </div>
+    <div class="disclaimer-pill">⚠️ For clinical decision support only — always apply professional judgement</div>
+  </header>
+
+  
+
+  <!-- ════ CALCULATOR WIDGET ════ -->
+  <section class="calc-widget-section">
+    <div class="calc-card">
     <div class="calc-title">APACHE II Score</div>
     <div class="calc-subtitle">Use worst values in the first 24h of ICU admission. Select the range that matches the patient's value.</div>
 
@@ -159,7 +242,7 @@ h1 em{font-style:italic;color:#f87171}
     <div class="input-grid">
       <div class="field">
         <label for="age">Patient Age</label>
-        <input type="number" id="age" placeholder="e.g. 55" min="16" max="110" inputmode="decimal"/>
+        <input type="number" id="age" placeholder="e.g. 55" min="16" max="110" inputmode="decimal">
         <div class="hint">years — auto-calculates age points</div>
       </div>
     </div>
@@ -204,10 +287,33 @@ h1 em{font-style:italic;color:#f87171}
       <button class="reset-btn" onclick="resetCalc()">↺ Reset</button>
     </div>
   </div>
+  </section>
 
-  <div class="content-card">
-    <h2>APACHE II — ICU Mortality Reference</h2>
-    <table class="apache-table">
+  
+
+  <!-- ════ MAIN CONTENT ════ -->
+  <div class="page-wrap">
+    <main id="main-content">
+      <details class="mobile-toc">
+        <summary>📋 Contents — tap to expand</summary>
+        <div class="mobile-toc-links">
+          <a href="#apache-ii-icu-mortality-reference">1. APACHE II — ICU Mortality Reference</a>
+          <a href="#faq">2. FAQ</a>
+        </div>
+      </details>
+
+      <div class="reviewer-strip">
+        <div class="reviewer-avatar">👨‍⚕️</div>
+        <div><strong>Reviewed by Dr. Sharma, MBBS AFIH</strong><br>
+        <p>Medical Officer, AAC CLinic · Updated 2026-06-09</p></div>
+      </div>
+      <article itemscope itemtype="https://schema.org/MedicalWebPage">
+        <meta itemprop="datePublished" content="2026-06-09"/>
+        <meta itemprop="dateModified"  content="2026-06-09"/>
+        <meta itemprop="author"        content="RxMedCalc Editorial Team"/>
+
+        <h2 id="apache-ii-icu-mortality-reference"><span class="sec-num">1</span>APACHE II — ICU Mortality Reference</h2>
+        <table class="apache-table">
       <thead><tr><th>APACHE II Score</th><th>Non-Operative</th><th>Post-Operative</th><th>Severity</th></tr></thead>
       <tbody>
         <tr><td>0–4</td><td>4%</td><td>1%</td><td>Low</td></tr>
@@ -219,41 +325,99 @@ h1 em{font-style:italic;color:#f87171}
         <tr><td>30–34</td><td>73%</td><td>73%</td><td>Very High</td></tr>
         <tr><td>≥35</td><td>&gt;85%</td><td>&gt;85%</td><td>Critical</td></tr>
       </tbody>
-    </table>
-    <h3>APACHE II — Clinical Context</h3>
-    <p>APACHE II was developed by Knaus et al. (1985) from data on 5,815 ICU admissions across 13 US hospitals. It remains one of the most widely used and externally validated ICU severity scores globally. The score is calculated from the worst physiological values recorded in the first 24 hours of ICU admission, reflecting the severity of acute illness at its worst. Age and chronic health status add independent prognostic weight.</p>
-    <p>APACHE II is used for: ICU performance benchmarking, research stratification, quality improvement, resource allocation decisions, and family counselling regarding prognosis. It should NOT be used as the sole determinant for treatment limitation decisions, which require full multidisciplinary assessment and patient/family consultation.</p>
-    <h3>APACHE II Limitations</h3>
-    <ul>
+    </table><h3>APACHE II — Clinical Context</h3><p>APACHE II was developed by Knaus et al. (1985) from data on 5,815 ICU admissions across 13 US hospitals. It remains one of the most widely used and externally validated ICU severity scores globally. The score is calculated from the worst physiological values recorded in the first 24 hours of ICU admission, reflecting the severity of acute illness at its worst. Age and chronic health status add independent prognostic weight.</p><p>APACHE II is used for: ICU performance benchmarking, research stratification, quality improvement, resource allocation decisions, and family counselling regarding prognosis. It should NOT be used as the sole determinant for treatment limitation decisions, which require full multidisciplinary assessment and patient/family consultation.</p><h3>APACHE II Limitations</h3><ul>
       <li>Derived from 1979–1982 data — overestimates mortality in modern ICUs due to improved treatment</li>
       <li>Does not account for lead-time bias or pre-ICU treatment</li>
       <li>Poorly calibrated for some diagnoses (burns, post-cardiac arrest, liver failure)</li>
       <li>APACHE IV and SOFA have largely replaced APACHE II in research; APACHE II remains widely used clinically</li>
     </ul>
-    <div class="faq-sec">
-    <h2>Frequently Asked Questions</h2>
-      <div class="fi"><div class="fq" onclick="tf(this)">What is APACHE II used for?</div><div class="fa">APACHE II (Acute Physiology and Chronic Health Evaluation II) estimates ICU mortality risk using 12 acute physiological variables, age, and chronic health status. Scores range 0–71. It is used for ICU benchmarking, clinical research stratification, prognosis estimation, and family discussions — not for individual treatment-limitation decisions.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What APACHE II score predicts high mortality?</div><div class="fa">Score 0–9: <10% mortality. Score 10–19: 15–25%. Score 20–24: ~40%. Score 25–29: ~55%. Score 30–34: ~73%. ≥35: >85%. These are population estimates. Actual mortality depends on diagnosis, ICU interventions, and centre-level factors.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What are the 12 physiological variables in APACHE II?</div><div class="fa">Temperature (rectal), mean arterial pressure, heart rate, respiratory rate, oxygenation (A-a gradient or PaO2), arterial pH, serum sodium, serum potassium, creatinine, haematocrit, white cell count, and GCS. Each scored 0–4 based on deviation from normal using worst values in first 24 ICU hours.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">What chronic conditions add APACHE II points?</div><div class="fa">5 points added for non-operative or emergency surgical patients with: liver cirrhosis with portal hypertension, NYHA Class IV heart failure, severe COPD/chronic hypoxia, chronic renal replacement therapy, or immunosuppression (chemotherapy, steroids, AIDS). 2 points for elective surgical patients with same conditions.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">How does APACHE II compare to SOFA?</div><div class="fa">APACHE II is calculated once at ICU admission — it is a severity-at-admission score. SOFA is calculated daily to track organ failure trajectory. A rising SOFA predicts poor outcome better than a high initial APACHE II. Use APACHE II for admission severity; SOFA for daily monitoring and sepsis definition.</div></div>
-      <div class="fi"><div class="fq" onclick="tf(this)">Is APACHE II validated in Indian ICUs?</div><div class="fa">APACHE II has been validated in multiple Indian ICU studies and performs reasonably well, though it tends to overestimate mortality in Indian populations compared to the original Western derivation cohort. Several Indian studies suggest calibrating with local mortality data. Despite this, it remains the most widely used ICU severity score in India.</div></div>
-  </div>
+
+
+        <h2 id="faq"><span class="sec-num">2</span>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is APACHE II used for?</summary>
+            <div class="faq-answer"><p>APACHE II (Acute Physiology and Chronic Health Evaluation II) estimates ICU mortality risk using 12 acute physiological variables, age, and chronic health status. Scores range 0–71. It is used for ICU benchmarking, clinical research stratification, prognosis estimation, and family discussions — not for individual treatment-limitation decisions.</p></div>
+          </details>
+          <details>
+            <summary>What APACHE II score predicts high mortality?</summary>
+            <div class="faq-answer"><p>Score 0–9: &lt;10% mortality. Score 10–19: 15–25%. Score 20–24: ~40%. Score 25–29: ~55%. Score 30–34: ~73%. ≥35: &gt;85%. These are population estimates. Actual mortality depends on diagnosis, ICU interventions, and centre-level factors.</p></div>
+          </details>
+          <details>
+            <summary>What are the 12 physiological variables in APACHE II?</summary>
+            <div class="faq-answer"><p>Temperature (rectal), mean arterial pressure, heart rate, respiratory rate, oxygenation (A-a gradient or PaO2), arterial pH, serum sodium, serum potassium, creatinine, haematocrit, white cell count, and GCS. Each scored 0–4 based on deviation from normal using worst values in first 24 ICU hours.</p></div>
+          </details>
+          <details>
+            <summary>What chronic conditions add APACHE II points?</summary>
+            <div class="faq-answer"><p>5 points added for non-operative or emergency surgical patients with: liver cirrhosis with portal hypertension, NYHA Class IV heart failure, severe COPD/chronic hypoxia, chronic renal replacement therapy, or immunosuppression (chemotherapy, steroids, AIDS). 2 points for elective surgical patients with same conditions.</p></div>
+          </details>
+          <details>
+            <summary>How does APACHE II compare to SOFA?</summary>
+            <div class="faq-answer"><p>APACHE II is calculated once at ICU admission — it is a severity-at-admission score. SOFA is calculated daily to track organ failure trajectory. A rising SOFA predicts poor outcome better than a high initial APACHE II. Use APACHE II for admission severity; SOFA for daily monitoring and sepsis definition.</p></div>
+          </details>
+          <details>
+            <summary>Is APACHE II validated in Indian ICUs?</summary>
+            <div class="faq-answer"><p>APACHE II has been validated in multiple Indian ICU studies and performs reasonably well, though it tends to overestimate mortality in Indian populations compared to the original Western derivation cohort. Several Indian studies suggest calibrating with local mortality data. Despite this, it remains the most widely used ICU severity score in India.</p></div>
+          </details>
+        </div>
+        <div class="alert alert-success" style="margin-top:2rem;">
+          <span class="alert-icon">📋</span>
+          <div><strong>Key takeaway:</strong> Add a 2–3 sentence summary of the most important clinical point here.</div>
+        </div>
+
+        <p class="medical-disclaimer"><strong>Medical disclaimer:</strong> This calculator is for educational and clinical decision-support purposes only. It does not replace clinical judgment or specialist consultation. RxMedCalc is not liable for clinical decisions made solely on this tool.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar" aria-label="Page navigation">
+      <div class="sidebar-card">
+        <h3>Contents</h3>
+        <ul class="toc-nav">
+          <li><a href="#apache-ii-icu-mortality-reference"><span class="toc-num">1</span>APACHE II — ICU Mortality Re</a></li>
+          <li><a href="#faq"><span class="toc-num">2</span>FAQ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-cta">
+        <h3>Related tools</h3>
+        <p>More calculators on RxMedCalc</p>
+        <a href="/medical-calculators/">All calculators →</a>
+      </div>
+
+    </aside>
   </div>
 
-  <div class="content-card">
-    <h2>Related Calculators</h2>
-    <div class="related-grid">
-      <a href="/medical-calculators/sofa-score" class="related-card"><span class="rc-icon">🏥</span><div><div class="rc-title">SOFA Score</div><div class="rc-desc">Sepsis-3 organ failure</div></div></a>
-      <a href="/medical-calculators/gcs-calculator" class="related-card"><span class="rc-icon">🧠</span><div><div class="rc-title">GCS Calculator</div><div class="rc-desc">APACHE II GCS component</div></div></a>
-      <a href="/medical-calculators/map-calculator" class="related-card"><span class="rc-icon">❤️</span><div><div class="rc-title">MAP Calculator</div><div class="rc-desc">Mean arterial pressure</div></div></a>
-      <a href="/medical-calculators/fena-calculator" class="related-card"><span class="rc-icon">🫘</span><div><div class="rc-title">FENa Calculator</div><div class="rc-desc">AKI in ICU</div></div></a>
+
+
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Related calculators on RxMedCalc</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/medical-calculators/sofa-score"><h3>SOFA Score</h3></a>
+        <a class="related-card" href="/medical-calculators/gcs-calculator"><h3>GCS Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/map-calculator"><h3>MAP Calculator</h3></a>
+        <a class="related-card" href="/medical-calculators/fena-calculator"><h3>FENa Calculator</h3></a>
+      </div>
     </div>
-  </div>
-  <div class="disclaimer"><strong>⚠ Medical Disclaimer:</strong> APACHE II is a prognostic tool for populations, not individuals. ICU outcome decisions require comprehensive clinical assessment, serial evaluation, and multidisciplinary team input. Never use APACHE II score alone for treatment limitation or withdrawal of care decisions.</div>
-</main>
+  </section>
 
-<script>
+  <!-- ════ FOOTER ════ -->
+  <footer class="site-footer">
+    <div class="sfi">
+      <div class="fb"><a href="/" class="sl"><span class="la">Rx</span>MedCalc</a>
+        <p>Clinical decision support for healthcare professionals.</p>
+        <p class="fd">RxMedCalc is for qualified healthcare professionals. Information is for educational and clinical decision-support purposes only and does not replace professional medical judgment.</p>
+      </div>
+      <div class="fcc">
+    <div class="fc"><h4>Calculators</h4><ul><li><a href="/medical-calculators">All Calculators</a></li><li><a href="/medical-calculators/egfr">eGFR</a></li><li><a href="/medical-calculators/bmi">BMI</a></li><li><a href="/medical-calculators/apgar-score">APGAR Score</a></li><li><a href="/medical-calculators/child-pugh">Child-Pugh</a></li></ul></div>
+      </div>
+    </div>
+    <div class="fb2">
+      <span>© 2025 RxMedCalc. All rights reserved.</span>
+      <span><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
 // APACHE II physiology variables: [name, options: [label, points]]
 const PHYS=[
   {n:'Temperature (°C)',id:'temp',opts:[['≥41 / ≤29.9',4],['39–40.9 / 30–31.9',3],['38.5–38.9 / 32–33.9',1],['36–38.4 (Normal)',0],['34–35.9',1],['32–33.9 already counted',''],['30–31.9 already counted',''],['≤29.9 already counted','']]},
@@ -383,22 +547,22 @@ function copyResult(){if(!lastResult)return;navigator.clipboard.writeText(lastRe
 function resetCalc(){physScores={};chronicSel.clear();surgType='none';document.getElementById('age').value='';document.querySelectorAll('.pi-opt').forEach(b=>b.classList.remove('sel'));PHYS.forEach(p=>{const el=document.getElementById('ps-'+p.id);if(el){el.textContent='—';el.className='pi-score'}});CHRONIC.forEach(c=>document.getElementById(c.id).classList.remove('sel'));['none','nonop','elec'].forEach(t=>{const el=document.getElementById('surg-'+t);const chk=document.getElementById('chk-surg-'+t);if(el){el.style.background='';el.style.borderColor='';chk.style.background='';chk.style.borderColor='';chk.style.color=''}});document.getElementById('rt-val').textContent='0';document.getElementById('results').className='results';document.getElementById('error-msg').className='error-msg';lastResult=null}
 setSurg('none');// default
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')calculate()});
-</script>
-<script>
-function tf(el){
-  var fi = el.closest('.fi');
-  var was = fi.classList.contains('op');
 
-  document.querySelectorAll('.fi').forEach(function(e){
-    e.classList.remove('op');
-  });
+    (()=>{
+      const ss=document.querySelectorAll('article h2[id]');
+      const ll=document.querySelectorAll('.toc-nav a');
+      const ob=new IntersectionObserver(es=>{
+        es.forEach(e=>{
+          if(e.isIntersecting){
+            ll.forEach(a=>a.classList.remove('active'));
+            const a=document.querySelector('.toc-nav a[href="#'+e.target.id+'"]');
+            if(a)a.classList.add('active');
+          }
+        });
+      },{rootMargin:'-80px 0px -60% 0px'});
+      ss.forEach(s=>ob.observe(s));
+    })();
+  </script>
 
-  if(!was){
-    fi.classList.add('op');
-  }
-}
-</script>
-<script src="/assets/shared-nav.js">
-</script>
 </body>
 </html>
