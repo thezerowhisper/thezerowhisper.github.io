@@ -176,6 +176,20 @@
     .faq-q{font-size:14px;font-weight:600;color:var(--text);cursor:pointer;user-select:none;display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
     .faq-q::after{content:'+';font-size:18px;color:var(--primary);flex-shrink:0}
     .faq-item.open .faq-q::after{content:'−'}.faq-a{font-size:14px;color:var(--text-muted);line-height:1.8;margin-top:10px;display:none}.faq-item.open .faq-a{display:block}
+    .related-card{
+    max-width:700px;
+    margin:24px auto;
+    padding:20px;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.related-card h2{
+    margin:0 0 16px;
+}
     .disclaimer{background:#f8fafc;border:1px solid #e2e8f0;border-radius:var(--radius-sm);padding:14px 16px;font-size:12px;color:var(--text-muted);margin-top:30px;line-height:1.7}
     @media print{.page-hero,.breadcrumb,.tab-row,.route-grid,.indication-grid,.btn-calc,.print-row,.info-section,.faq-item,.disclaimer{display:none!important}.result-box{display:block!important}body{background:white}}
   </style>
@@ -384,6 +398,31 @@ function calculate(){
 function printResult(){if(typeof umami!=='undefined')umami.track('print',{tool:'vitamin-b6'});window.print();}
 function toggleFaq(el){el.parentElement.classList.toggle('open');}
 </script>
-<script src="/assets/shared-nav.js"></script>
-<h2 style="margin-top:24px">Related Tools</h2><div class="rg2"><a class="rc2" href="/vitamin/b9-folic-acid"><div class="rn">Folic Acid</div><div class="rd">B9 — Pregnancy / Anaemia</div></a><a class="rc2" href="/vitamin/b12-calculator"><div class="rn">Vitamin B12</div><div class="rd">B12 deficiency</div></a><a class="rc2" href="/vitamin/b2-riboflavin-calculator"><div class="rn">Vitamin B2</div><div class="rd">Riboflavin</div></a><a class="rc2" href="/medical-calculators/obs-calc"><div class="rn">ObsCalc</div><div class="rd">Hyperemesis / pregnancy</div></a></div></body>
+<div class="related-card">
+    <h2>Related Tools</h2>
+
+    <div class="rg2">
+        <a class="rc2" href="/vitamin/b9-folic-acid">
+            <div class="rn">Folic Acid</div>
+            <div class="rd">B9 — Pregnancy / Anaemia</div>
+        </a>
+
+        <a class="rc2" href="/vitamin/b12-cobalamin-calculator">
+            <div class="rn">Vitamin B12</div>
+            <div class="rd">B12 deficiency</div>
+        </a>
+
+        <a class="rc2" href="/vitamin/b2-riboflavin-calculator">
+            <div class="rn">Vitamin B2</div>
+            <div class="rd">Riboflavin</div>
+        </a>
+
+        <a class="rc2" href="/medical-calculators/obs-calc">
+            <div class="rn">ObsCalc</div>
+            <div class="rd">Hyperemesis / pregnancy</div>
+        </a>
+    </div>
+</div>
+
+</body>
 </html>
