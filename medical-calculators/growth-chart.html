@@ -96,10 +96,10 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d3748}
+body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:0px;color:#2d3748}
 .pw{max-width:780px;margin:auto}
 .back-nav{display:flex;align-items:center;gap:8px;margin-bottom:20px;text-decoration:none;color:#3182ce;font-size:.85rem;font-weight:600}
-.hero{background:linear-gradient(135deg,#2a4a7f,#3182ce);border-radius:20px;padding:36px;margin-bottom:20px;color:white}
+.hero{background:linear-gradient(135deg,#2a4a7f,#3182ce);border-radius:0px;padding:36px;margin-bottom:0px;color:white}
 .hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:white;font-size:.72rem;font-weight:600;padding:4px 14px;border-radius:20px;margin-bottom:14px;letter-spacing:.04em}
 .hero h1{font-size:1.7rem;font-weight:800;line-height:1.2;margin-bottom:10px}
 .hero-sub{font-size:.9rem;color:#bee3f8;line-height:1.6;margin-bottom:18px}
@@ -164,7 +164,7 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .rc-name{font-weight:700;font-size:0.85rem;color:#2b6cb0;margin-bottom:4px}
 .rc-desc{font-size:0.75rem;color:#718096}
 
-footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+footer{background:white;border-radius:0x;padding:22px 26px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
 .fl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
 .fl a{font-size:.82rem;color:#3182ce;text-decoration:none;padding:4px 0;font-weight:600}
 .fl a:hover{text-decoration:underline}
@@ -190,7 +190,6 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
 </head>
 <body>
 <main class="pw">
-<a class="back-nav" href="/">&#8592; All Medical Calculators</a>
 
 <div class="hero">
   <div class="hero-badge">&#128200; WHO &middot; IAP 2015 &middot; Free &middot; India</div>
@@ -364,19 +363,7 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
   <strong>Disclaimer:</strong> This calculator uses WHO MGRS 2006 reference data (0&ndash;5 years) and IAP 2015 reference data (5&ndash;18 years) with linear interpolation. Results are approximate. Always verify against official plotted growth charts for clinical decisions. Z-scores are estimates and should be interpreted alongside physical clinical examination. This tool does not replace professional medical assessment.
 </div>
 
-<footer>
-  <div class="fl">
-    <a href="milestones">&#128307; Developmental Milestones</a>
-    <a href="uip-vaccine">&#129370; UIP Vaccine Tracker</a>
-    <a href="/rabies-scheduler/">&#128137; Rabies ARV</a>
-    <a href="bmi">&#9878; BMI Calculator</a>
-    <a href="doses">&#128138; Drug Dose</a>
-    <a href="obs-calc">&#127973; ObsCalc</a>
-    <a href="paracetamol">&#127777; Paracetamol Dose</a>
-    <a href="/">&#129658; All Calculators</a>
-  </div>
   <div class="fb">Free medical calculators for India &middot; Built by a doctor &middot; WHO MGRS 2006 &amp; IAP 2015 guidelines<br><span style="margin-top:4px;display:block">For informational purposes only &middot; Always consult your physician</span></div>
-</footer>
 
 </main>
 
@@ -611,6 +598,6 @@ function fallbackCopy(text, callback) {
   document.body.removeChild(textArea);
 }
 </script>
-<script src="/assets/shared-nav.js"></script>
+<script src="https://rxmedcalc.com/assets/shared-nav.js"></script>
 </body>
 </html>
