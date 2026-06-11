@@ -14,11 +14,11 @@
 <url><loc>https://rxmedcalc.com/vitamin/b9-folic-acid</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/vitamin/e-tocopherol-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/vitamin/b7-biotin-calculator</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/vitamin</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/vitamin/</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/vitamin/a-retinol-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/privacy</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/search</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/rabies-scheduler</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/rabies-scheduler/</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/rabies-scheduler/doses</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/phenobarbitone</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/ceftriaxone</loc><priority>0.64</priority></url>
@@ -60,7 +60,7 @@
 <url><loc>https://rxmedcalc.com/drug-doses/levetiracetam</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/dexamethasone</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/digoxin</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/drug-doses</loc><priority>0.8</priority></url>
+<url><loc>https://rxmedcalc.com/drug-doses/</loc><priority>0.8</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/enalapril</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/iron</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/drug-doses/phenytoin</loc><priority>0.64</priority></url>
@@ -98,7 +98,7 @@
 <url><loc>https://rxmedcalc.com/blog/parkland-formula</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/blog/abcd2-score</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/blog/pregnancy-due-date</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/blog</loc><priority>0.64</priority></url>
+<url><loc>https://rxmedcalc.com/blog/</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/blog/cha2ds2-vasc</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/blog/mentzer-index</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/blog/grace-score</loc><priority>0.64</priority></url>
@@ -164,7 +164,7 @@
 <url><loc>https://rxmedcalc.com/medical-calculators/iron-deficit</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/iv-drip-rate-calculator</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/abcd2-score</loc><priority>0.64</priority></url>
-<url><loc>https://rxmedcalc.com/medical-calculators</loc><priority>0.8</priority></url>
+<url><loc>https://rxmedcalc.com/medical-calculators/</loc><priority>0.8</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/cha2ds2-vasc</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/beta-hcg</loc><priority>0.64</priority></url>
 <url><loc>https://rxmedcalc.com/medical-calculators/height-velocity</loc><priority>0.64</priority></url>
