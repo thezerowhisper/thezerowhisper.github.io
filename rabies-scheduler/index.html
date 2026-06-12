@@ -160,16 +160,14 @@
     .fb2 a:hover{color:#fff;}
 
     /* ── SVG HERO WRAPPER ── */
-    .svg-hero{
-      width:100%;overflow:hidden;
-      background:linear-gradient(135deg,#1a365d,#2b6cb0);
-      margin-bottom:0;
-      /* Reserve space to prevent CLS */
-      aspect-ratio:3/1;
-      max-height:300px;
-    }
-    .svg-hero svg{display:block;width:100%;height:auto;}
-    @media(max-width:600px){.svg-hero{aspect-ratio:2/1;max-height:200px;}}
+.svg-hero{
+  width:100%;overflow:hidden;
+  background:linear-gradient(135deg,#1a365d,#2b6cb0);
+  margin-bottom:0;
+  line-height:0;
+}
+.svg-hero svg{display:block;width:100%;height:auto;}
+@media(max-width:600px){.svg-hero svg{min-height:220px;}}
 
     /* ── CALC HERO STRIP (below SVG) ── */
     .calc-hero-strip{
