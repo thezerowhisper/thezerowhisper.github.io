@@ -13,16 +13,14 @@
   <link rel="dns-prefetch" href="https://cloud.umami.is"/>
   <link rel="preconnect" href="https://gateway.umami.is"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <!-- removed fonts.googleapis.com preconnect — we no longer block on it -->
  
-  <!-- ② PRELOAD the LCP resource (SVG hero background = the page itself,
-       but the LCP *element* is the inline SVG rendered by the browser.
-       What actually delays it is the render-blocking font CSS.
-       So we preload the font FILES directly instead.) -->
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-        href="https://fonts.gstatic.com/s/fraunces/v31/6NUt8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnDpToK.woff2"/>
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-        href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZa4ET-DNl0.woff2"/>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      media="print" onload="this.media='all'"/>
+<noscript>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"/>
+</noscript>
  
   <!-- ③ PRELOAD shared CSS — critical for FCP -->
   <link rel="preload" as="style" href="https://rxmedcalc.com/css/shared-calculator.css"/>
