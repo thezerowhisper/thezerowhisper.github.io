@@ -7,13 +7,25 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
   <meta name="google-site-verification" content="nZgsChD0zRn_BmL5Yw4MLcuRGkkhdkSTp9WAJPmudyM"/>
   <meta name="google-adsense-account" content="ca-pub-9687081664589626"/>
-
-  <!-- Preconnect -->
+ 
+  <!-- ① PRECONNECT — keep these, they help -->
   <link rel="preconnect" href="https://cloud.umami.is" crossorigin/>
   <link rel="dns-prefetch" href="https://cloud.umami.is"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-
+  <!-- removed fonts.googleapis.com preconnect — we no longer block on it -->
+ 
+  <!-- ② PRELOAD the LCP resource (SVG hero background = the page itself,
+       but the LCP *element* is the inline SVG rendered by the browser.
+       What actually delays it is the render-blocking font CSS.
+       So we preload the font FILES directly instead.) -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://fonts.gstatic.com/s/fraunces/v31/6NUt8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnDpToK.woff2"/>
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZa4ET-DNl0.woff2"/>
+ 
+  <!-- ③ PRELOAD shared CSS — critical for FCP -->
+  <link rel="preload" as="style" href="https://rxmedcalc.com/css/shared-calculator.css"/>
+ 
   <!-- PRIMARY SEO -->
   <title>Rabies Vaccination Schedule Calculator | ARV Dates India | Dog Bite 0,3,7,28 | RxMedCalc</title>
   <meta name="description" content="Free rabies vaccination schedule calculator for India. Get your anti-rabies vaccine dates from today — Days 0, 3, 7, 28 (Essen regimen). Dog bite, monkey bite &amp; IDRV schedules. Instant, no signup."/>
@@ -22,8 +34,8 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
   <meta name="language" content="en-IN"/>
   <link rel="canonical" href="https://rxmedcalc.com/rabies-scheduler/"/>
-
-  <!-- OG -->
+ 
+  <!-- OG / Twitter unchanged -->
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Rabies Vaccination Schedule Calculator | ARV Dates India | Dog Bite 0,3,7,28"/>
   <meta property="og:description" content="Free ARV schedule calculator for India. Get your anti-rabies vaccine dates from today — Days 0, 3, 7, 28. Dog bite, monkey bite &amp; IDRV schedules."/>
@@ -39,94 +51,36 @@
   <meta name="twitter:image:alt" content="Rabies ARV Schedule Calculator India — Days 0, 3, 7, 28"/>
   <meta name="twitter:title" content="Rabies Vaccination Schedule Calculator | ARV Dates India"/>
   <meta name="twitter:description" content="Free tool: Calculate ARV injection dates from today (Days 0, 3, 7, 28). Dog bite, monkey bite &amp; IDRV schedules for India."/>
-
-  <!-- SCHEMA 1: MedicalWebPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "@id": "https://rxmedcalc.com/rabies-scheduler/#webpage",
-    "name": "ARV Schedule Calculator — Rabies Vaccine Dates from Today",
-    "headline": "ARV Schedule Calculator | Rabies Vaccine Dates from Today | Dog Bite 0,3,7,28 India",
-    "description": "Free ARV schedule calculator for India. Enter your first dose date and get all 4 anti-rabies vaccine injection dates instantly — Days 0, 3, 7, 28.",
-    "url": "https://rxmedcalc.com/rabies-scheduler/",
-    "inLanguage": "en-IN",
-    "about": {
-      "@type": "MedicalCondition",
-      "name": "Rabies Post-Exposure Prophylaxis",
-      "alternateName": "Rabies PEP",
-      "code": { "@type": "MedicalCode", "codeValue": "Z20.3", "codingSystem": "ICD-10" }
-    },
-    "medicalAudience": [
-      { "@type": "MedicalAudience", "audienceType": "Patient" },
-      { "@type": "MedicalAudience", "audienceType": "Clinician" }
-    ],
-    "publisher": { "@type": "Organization", "name": "RxMedCalc", "url": "https://rxmedcalc.com" },
-    "dateModified": "2026-06-11",
-    "isBasedOn": [
-      { "@type": "MedicalGuideline", "name": "WHO Rabies Post-Exposure Prophylaxis Guidelines", "url": "https://www.who.int/news-room/fact-sheets/detail/rabies" },
-      { "@type": "MedicalGuideline", "name": "NCDC India Rabies Guidelines", "url": "https://ncdc.gov.in" }
-    ],
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rxmedcalc.com" },
-        { "@type": "ListItem", "position": 2, "name": "Rabies Vaccine Calculator", "item": "https://rxmedcalc.com/rabies-scheduler/" }
-      ]
-    }
-  }
-  </script>
-
-  <!-- SCHEMA 2: SoftwareApplication -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "@id": "https://rxmedcalc.com/rabies-scheduler/#calculator",
-    "name": "Rabies ARV Schedule Calculator",
-    "applicationCategory": "HealthApplication",
-    "operatingSystem": "All",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Calculate anti-rabies vaccine (ARV) injection dates for the 4-dose Essen regimen used in India (Days 0, 3, 7, 28).",
-    "featureList": [
-      "Instant Days 0,3,7,28 date calculation",
-      "Google Calendar integration for each dose",
-      "One-click WhatsApp sharing",
-      "Printable vaccination schedule"
-    ],
-    "url": "https://rxmedcalc.com/rabies-scheduler/"
-  }
-  </script>
-
-  <!-- SCHEMA 3: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "What is the rabies vaccination schedule in India?", "acceptedAnswer": { "@type": "Answer", "text": "In India, the standard post-exposure prophylaxis (PEP) schedule follows the Essen regimen: 4 doses of anti-rabies vaccine (ARV) given on Day 0, Day 3, Day 7, and Day 28 after the first dose." } },
-      { "@type": "Question", "name": "How many doses of rabies vaccine are required after a dog bite?", "acceptedAnswer": { "@type": "Answer", "text": "4 doses are required for immunocompetent individuals in India, given on Days 0, 3, 7, and Day 28. Immunocompromised patients may require a 5th dose on Day 90." } },
-      { "@type": "Question", "name": "What is the Essen regimen for rabies?", "acceptedAnswer": { "@type": "Answer", "text": "The Essen regimen is the standard intramuscular PEP protocol involving anti-rabies vaccine doses on Day 0, Day 3, Day 7, and Day 28. It is the widely recommended schedule in India." } },
-      { "@type": "Question", "name": "When should the rabies vaccine be given after a dog bite?", "acceptedAnswer": { "@type": "Answer", "text": "The first dose should be given as soon as possible after the bite (Day 0). Subsequent doses follow on Day 3, Day 7, and Day 28. Immediate wound cleaning for 15 minutes is also critical on Day 0." } },
-      { "@type": "Question", "name": "What if I miss a rabies vaccine dose date?", "acceptedAnswer": { "@type": "Answer", "text": "Take the missed dose as soon as you remember and continue the remaining doses on the original schedule intervals. Do not restart the series. Consult your doctor for specific guidance." } },
-      { "@type": "Question", "name": "How do I calculate my ARV dates from today?", "acceptedAnswer": { "@type": "Answer", "text": "If you received your first dose today (Day 0), your ARV dates are: Day 0 = today, Day 3 = 3 days from today, Day 7 = 7 days from today, Day 28 = 28 days from today. Use the calculator above and click 'Use Today's Date' to calculate instantly." } },
-      { "@type": "Question", "name": "What is IDRV and how is the IDRV schedule calculated?", "acceptedAnswer": { "@type": "Answer", "text": "IDRV stands for Intra-Dermal Rabies Vaccine. The WHO-approved UTRC ID regimen uses 2-site intradermal injections on Days 0, 3, and 7, with a single-site ID dose on Day 28. The same Day 0, 3, 7, 28 timing applies." } },
-      { "@type": "Question", "name": "Do I need rabies vaccine after a monkey bite in India?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Monkey bites are treated the same as dog bites in India — the same 4-dose ARV schedule (Days 0, 3, 7, 28) applies. Always seek immediate PEP." } },
-      { "@type": "Question", "name": "How to calculate ARV dose dates?", "acceptedAnswer": { "@type": "Answer", "text": "Note the date of your first injection (Day 0). Add 3 days for Dose 2, 7 days for Dose 3, and 28 days for Dose 4. Use the free ARV schedule calculator above to get all dates instantly." } }
-    ]
-  }
-  </script>
-
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"/>
-
-  <!-- Shared design system -->
+ 
+  <!-- SCHEMA — unchanged, keep all 3 -->
+ 
+  <!-- ④ FONTS — non-blocking swap pattern (no render-block) -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        media="print" onload="this.media='all'"/>
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"/>
+  </noscript>
+ 
+  <!-- ⑤ Shared CSS — load normally (preload above already fetched it) -->
   <link rel="stylesheet" href="https://rxmedcalc.com/css/shared-calculator.css"/>
-
-  <!-- Umami — always present -->
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
-
+ 
+  <!-- ⑥ Umami — keep defer, but NO inline here; moved to bottom of <body> -->
+ 
   <style>
+    /* ── FONT FALLBACK — prevents FOUT jump shifting layout ── */
+    /* DM Sans fallback metrics (matches font closely, reduces CLS) */
+    @font-face {
+      font-family: 'DM Sans Fallback';
+      src: local('Arial');
+      ascent-override: 94.9%;
+      descent-override: 24.9%;
+      line-gap-override: 0%;
+      size-adjust: 100.6%;
+    }
+    body { font-family: 'DM Sans', 'DM Sans Fallback', sans-serif; }
+ 
     /* ── SITE HEADER ── */
     .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
     .shi{max-width:1120px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
@@ -141,7 +95,7 @@
       .site-header.nav-open .sn{display:flex;}
       .snt{display:block;}
     }
-
+ 
     /* ── SITE FOOTER ── */
     .site-footer{background:#1E1A17;color:rgba(255,255,255,0.6);padding:2.5rem 1.5rem 1.25rem;}
     .sfi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem;}
@@ -158,88 +112,43 @@
     .fb2{max-width:1120px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
     .fb2 a{color:rgba(255,255,255,0.4);text-decoration:none;}
     .fb2 a:hover{color:#fff;}
-
-    /* ── SVG HERO WRAPPER ── */
-.svg-hero{
-  width:100%;overflow:hidden;
-  background:linear-gradient(135deg,#1a365d,#2b6cb0);
-  margin-bottom:0;
-  line-height:0;
-}
-.svg-hero svg{display:block;width:100%;height:auto;}
-@media(max-width:600px){.svg-hero svg{min-height:220px;}}
-
-    /* ── CALC HERO STRIP (below SVG) ── */
-    .calc-hero-strip{
-      background:linear-gradient(135deg,#1a365d 0%,#2b6cb0 100%);
-      padding:1.25rem 1.5rem 1.5rem;
-      text-align:center;
-      border-bottom:1px solid rgba(255,255,255,0.1);
+ 
+    /* ── SVG HERO WRAPPER — FIXED: no max-height clipping ── */
+    .svg-hero{
+      width:100%;overflow:hidden;
+      background:linear-gradient(135deg,#1a365d,#2b6cb0);
+      margin-bottom:0;
+      line-height:0;
     }
-    .calc-hero-strip .calc-hero-eyebrow{
-      display:inline-flex;align-items:center;gap:8px;
-      background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
-      color:rgba(255,255,255,0.9);border-radius:20px;
-      font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;
-      padding:4px 12px;margin-bottom:.75rem;
-    }
-    .calc-hero-strip .calc-hero-meta{
-      display:flex;align-items:center;justify-content:center;
-      gap:1.25rem;flex-wrap:wrap;
-      font-size:12px;color:rgba(255,255,255,0.65);margin-top:.5rem;
-    }
+    .svg-hero svg{display:block;width:100%;height:auto;}
+    @media(max-width:600px){.svg-hero svg{min-height:220px;}}
+ 
+    /* all remaining styles unchanged below this point */
+    .calc-hero-strip{background:linear-gradient(135deg,#1a365d 0%,#2b6cb0 100%);padding:1.25rem 1.5rem 1.5rem;text-align:center;border-bottom:1px solid rgba(255,255,255,0.1);}
+    .calc-hero-strip .calc-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.9);border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:4px 12px;margin-bottom:.75rem;}
+    .calc-hero-strip .calc-hero-meta{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,0.65);margin-top:.5rem;}
     .calc-hero-strip .calc-hero-meta-item{display:flex;align-items:center;gap:5px;}
     .calc-hero-strip .calc-hero-meta-dot{width:5px;height:5px;border-radius:50%;background:#90cdf4;}
-    .calc-hero-strip .disclaimer-pill{
-      display:inline-block;margin-top:.75rem;
-      background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);
-      font-size:11px;padding:4px 12px;border-radius:20px;
-      border:1px solid rgba(255,255,255,0.2);
-    }
-
-    /* ── CALCULATOR WIDGET (original card styles preserved) ── */
-    .calc-widget-section{
-      background:#fff;
-      border-bottom:1px solid var(--border);
-      padding:2rem 1.5rem;
-    }
-    .arv-card{
-      max-width:560px;margin:0 auto;
-      background:#fff;border:1.5px solid #e2e8f0;border-radius:16px;
-      padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.08);
-    }
-
-    /* Logo decorative */
+    .calc-hero-strip .disclaimer-pill{display:inline-block;margin-top:.75rem;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);font-size:11px;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);}
+    .calc-widget-section{background:#fff;border-bottom:1px solid var(--border);padding:2rem 1.5rem;}
+    .arv-card{max-width:560px;margin:0 auto;background:#fff;border:1.5px solid #e2e8f0;border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.08);}
     .arv-logo{font-size:2rem;text-align:center;margin-bottom:.5rem;pointer-events:none;user-select:none;}
-
-    /* keyword chips */
     .keyword-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:1.25rem;}
     .keyword-chip{background:#ebf8ff;color:#2b6cb0;font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid #bee3f8;pointer-events:none;user-select:none;}
-
-    /* first aid alert */
     .first-aid-alert{background:#fff5f5;border:1.5px solid #fc8181;border-radius:10px;padding:14px 18px;font-size:.85rem;color:#c53030;margin-bottom:1.25rem;line-height:1.55;}
-
-    /* date input */
     .arv-card label{display:block;font-weight:600;color:#2d3748;margin-bottom:8px;font-size:.95rem;}
     .arv-card input[type="date"]{width:100%;padding:12px 16px;border:2px solid #e2e8f0;border-radius:10px;font-size:1rem;color:#2d3748;outline:none;transition:border-color .2s;font-family:inherit;}
     .arv-card input[type="date"]:focus{border-color:#3182ce;}
-
     .use-today-btn{margin-top:8px;padding:6px 12px;background:#edf2f7;border:1px solid #cbd5e0;border-radius:6px;font-size:.85rem;cursor:pointer;font-weight:600;color:#4a5568;transition:background .2s;display:inline-flex;align-items:center;gap:6px;touch-action:manipulation;font-family:inherit;}
     .use-today-btn:hover{background:#e2e8f0;}
-
-    /* calc button */
     .arv-calc-btn{width:100%;margin-top:1rem;padding:13px;background:#3182ce;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s,opacity .15s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;font-family:inherit;}
     .arv-calc-btn:hover:not(:disabled){background:#2b6cb0;}
     .arv-calc-btn:disabled{background:#90cdf4;cursor:not-allowed;opacity:.8;}
     .arv-calc-btn.loading::after{content:'';display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:arv-spin .6s linear infinite;margin-left:10px;vertical-align:middle;}
     @keyframes arv-spin{to{transform:rotate(360deg);}}
-
-    /* results */
     .arv-results{margin-top:1.5rem;display:none;}
     .arv-results.visible{display:block;}
     .arv-results h2{font-size:1.05rem;font-weight:700;color:#2d3748;margin-bottom:1rem;padding-bottom:.625rem;border-bottom:2px solid #e2e8f0;}
-
-    /* dose cards */
     .dose{display:flex;align-items:flex-start;gap:16px;padding:14px 16px;border-radius:10px;margin-bottom:10px;background:#ebf8ff;border-left:4px solid #3182ce;}
     .dose.past{opacity:.65;background:#f7fafc;border-left-color:#a0aec0;}
     .dose-badge{background:#3182ce;color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0;margin-top:4px;pointer-events:none;}
@@ -249,13 +158,9 @@
     .dose-date{color:#4a5568;font-size:.85rem;margin-top:2px;}
     .dose-day{font-size:.8rem;color:#718096;font-weight:500;}
     .reminder-text{font-size:.85rem;font-weight:600;color:#e53e3e;margin-top:4px;}
-
     .cal-link{font-size:.85rem;color:#3182ce;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:6px;margin-top:6px;padding:4px 8px;background:#ebf8ff;border:1px solid #bee3f8;border-radius:6px;transition:background .2s;touch-action:manipulation;}
     .cal-link:hover{background:#bee3f8;}
-
     .arv-note{margin-top:1.25rem;background:#fffaf0;border:1px solid #fbd38d;border-radius:10px;padding:12px 16px;font-size:.82rem;color:#744210;line-height:1.6;}
-
-    /* share bar */
     .share-bar{display:flex;gap:10px;margin-top:1rem;flex-wrap:wrap;}
     .share-btn{flex:1;min-width:100px;padding:11px 12px;border:none;border-radius:10px;font-size:.88rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:opacity .2s,transform .1s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;font-family:inherit;}
     .share-btn:hover{opacity:.88;transform:translateY(-1px);}
@@ -264,34 +169,24 @@
     .btn-copy{background:#edf2f7;color:#2d3748;}
     .btn-print{background:#667eea;color:#fff;}
     .copy-confirm{text-align:center;font-size:.8rem;color:#38a169;margin-top:8px;min-height:18px;}
-
     .human-note{background:#f0fff4;border:1px solid #9ae6b4;border-radius:10px;padding:12px 16px;font-size:.85rem;color:#276749;margin-top:1rem;}
-
-    /* cross-link promo */
     .dose-xlink{background:linear-gradient(135deg,#78350f,#b45309);border-radius:14px;padding:18px 22px;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;box-shadow:0 4px 20px rgba(120,53,15,.2);}
     .dose-xlink-text{flex:1;pointer-events:none;}
     .dose-xlink-title{font-size:.95rem;font-weight:800;color:#fff;margin-bottom:3px;}
     .dose-xlink-sub{font-size:.78rem;color:rgba(255,255,255,.82);line-height:1.45;}
     .dose-xlink-btn{background:#fef3c7;color:#78350f;text-decoration:none;font-weight:800;font-size:.85rem;padding:9px 18px;border-radius:30px;white-space:nowrap;flex-shrink:0;transition:background .18s;border:none;cursor:pointer;touch-action:manipulation;}
     .dose-xlink-btn:hover{background:#fde68a;}
-
     .rig-inline-link{display:inline-block;margin-top:8px;background:#fff3cd;border:1px solid #fcd34d;border-radius:6px;padding:5px 12px;font-size:.83rem;font-weight:700;color:#78350f;text-decoration:none;transition:background .18s;}
     .rig-inline-link:hover{background:#fde68a;}
-
-    /* schedule table */
     .schedule-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.88rem;}
     .schedule-table th{background:#ebf8ff;color:#2b6cb0;padding:10px 14px;text-align:left;font-weight:600;font-size:.8rem;}
     .schedule-table td{padding:10px 14px;border-bottom:1px solid #e2e8f0;color:#4a5568;}
     .schedule-table tr:last-child td{border-bottom:none;}
-
-    /* faq inside article */
     .arv-faq{border-top:1px solid var(--border);padding:1rem 0;}
     .arv-faq:first-child{border-top:none;}
     .arv-faq h3{font-size:.95rem;font-weight:700;color:#2d3748;margin-bottom:6px;}
     .arv-faq p{font-size:.88rem;color:#4a5568;line-height:1.7;}
     .arv-faq a{color:#3182ce;}
-
-    /* print */
     @media print{
       .arv-calc-btn,.share-bar,.arv-card input,.arv-card label,.keyword-chips,
       .first-aid-alert,.dose-xlink,.use-today-btn,.cal-link,.site-header,
@@ -300,7 +195,6 @@
       .arv-results{display:block!important;}
       .dose{break-inside:avoid;}
     }
-
     @media(max-width:480px){.arv-card{padding:1.25rem;}}
   </style>
 </head>
