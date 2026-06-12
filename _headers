@@ -1,0 +1,37 @@
+# RxMedCalc — Cloudflare Pages Headers
+# ======================================
+
+# Static assets — cache 1 year (immutable)
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript files
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# OG images and other static images in root
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/*.jpg
+  Cache-Control: public, max-age=2592000
+
+/*.webp
+  Cache-Control: public, max-age=2592000
+
+# HTML pages — short cache, always revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Security headers — applied to all pages
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
