@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en-IN" data-tool="prostate-calc">
+<head>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Prostate Volume Calculator — PSA Density, IPSS, BPH Assessment | RxMedCalc India</title>
+<meta name="description" content="Free prostate volume calculator using ellipsoid formula. Calculate prostate size from TRUS/MRI, PSA density, IPSS score, and BPH risk — used by urologists and GPs in India. No login required."/>
+<meta name="keywords" content="prostate volume calculator, prostate size calculator, PSA density calculator, IPSS score calculator, BPH calculator, prostate gland size, transrectal ultrasound prostate volume, prostate volume formula, ellipsoid formula prostate, prostate volume normal range, enlarged prostate calculator, TRUS prostate volume, prostate weight calculator, prostate volume ml, PSA density normal range, IPSS questionnaire, lower urinary tract symptoms calculator, BPH treatment calculator, prostate assessment India"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://rxmedcalc.com/medical-calculators/prostate-volume-calculator"/>
+<meta name="language" content="English"/>
+<meta name="author" content="RxMedCalc"/>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script data-cfasync="false" src="/assets/umami-events.js"></script>
+
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_IN"/>
+<meta property="og:url" content="https://rxmedcalc.com/medical-calculators/prostate-volume-calculator"/>
+<meta property="og:title" content="Prostate Volume Calculator — PSA Density, IPSS & BPH | RxMedCalc India"/>
+<meta property="og:description" content="Calculate prostate volume (ellipsoid formula), PSA density, IPSS score and BPH risk category. Evidence-based, India-relevant. Free for doctors and GPs."/>
+<meta property="og:image" content="https://rxmedcalc.com/assets/og-banner.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="675"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Prostate Volume Calculator — PSA Density & IPSS | RxMedCalc India"/>
+<meta name="twitter:description" content="Free prostate volume calculator: ellipsoid formula from TRUS/MRI measurements. Plus PSA density and IPSS score. Evidence-based, no login."/>
+<meta name="twitter:image" content="https://rxmedcalc.com/assets/og-banner.png"/>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://rxmedcalc.com/"},
+  {"@type":"ListItem","position":2,"name":"Medical Calculators","item":"https://rxmedcalc.com/medical-calculators/"},
+  {"@type":"ListItem","position":3,"name":"Prostate Volume Calculator","item":"https://rxmedcalc.com/medical-calculators/prostate-volume-calculator"}
+]},
+{"@type":"SoftwareApplication","name":"Prostate Volume Calculator — RxMedCalc","description":"Free online prostate volume calculator using the ellipsoid formula from TRUS or MRI measurements. Calculates prostate weight, PSA density, and IPSS urinary symptom score for BPH assessment.","url":"https://rxmedcalc.com/medical-calculators/prostate-volume-calculator","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"isAccessibleForFree":true,"inLanguage":"en-IN"},
+{"@type":"MedicalWebPage","name":"Prostate Volume Calculator with PSA Density and IPSS","description":"Evidence-based prostate volume and BPH assessment tools for urologists and GPs in India.","audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"medicalSpecialty":"Urology"},
+{"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What is the formula for prostate volume calculation?","acceptedAnswer":{"@type":"Answer","text":"Prostate volume is calculated using the ellipsoid formula: Volume (mL) = Length × Width × Height × 0.523 (π/6). Measurements are obtained by transrectal ultrasound (TRUS) or MRI in centimetres. This is the standard formula used by urologists worldwide and endorsed by EAU guidelines."}},
+  {"@type":"Question","name":"What is the normal prostate volume?","acceptedAnswer":{"@type":"Answer","text":"The normal prostate volume in adult men is 20–30 mL. A prostate of 30–50 mL is mildly enlarged, 50–80 mL is moderately enlarged, and above 80 mL is significantly enlarged. Prostate volume increases with age: men in their 40s typically have 20–25 mL, rising to 35–45 mL by their 60s."}},
+  {"@type":"Question","name":"What is PSA density and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"PSA density (PSAD) = serum PSA (ng/mL) ÷ prostate volume (mL). A PSAD below 0.10 ng/mL/mL suggests the PSA rise is due to BPH. A PSAD above 0.15 ng/mL/mL raises concern for prostate cancer and warrants biopsy consideration, even if total PSA is in the grey zone (4–10 ng/mL)."}},
+  {"@type":"Question","name":"What is a high IPSS score?","acceptedAnswer":{"@type":"Answer","text":"The International Prostate Symptom Score (IPSS) classifies LUTS severity as: Mild (0–7), Moderate (8–19), and Severe (20–35). Men with moderate-to-severe IPSS scores (≥8) with bothersome symptoms are candidates for medical therapy. Severe IPSS (≥20) with retention or complications suggests surgical evaluation."}},
+  {"@type":"Question","name":"What is the prostate volume needed for 5-alpha reductase inhibitors?","acceptedAnswer":{"@type":"Answer","text":"5-alpha reductase inhibitors (5-ARIs) — finasteride and dutasteride — are most effective when prostate volume is ≥40 mL (or ≥30 mL with PSA >1.4 ng/mL). Smaller prostates derive less benefit from 5-ARIs, and alpha-blockers alone or combination therapy should be considered."}},
+  {"@type":"Question","name":"How is prostate weight calculated from volume?","acceptedAnswer":{"@type":"Answer","text":"Prostate weight (grams) ≈ Prostate volume (mL) × 1.05, using prostate tissue density of 1.05 g/mL. For practical clinical purposes, prostate weight in grams is numerically similar to volume in mL. This conversion matters for surgical planning (HoLEP, open prostatectomy) and for risk stratification."}},
+  {"@type":"Question","name":"When should prostate biopsy be considered in Indian men?","acceptedAnswer":{"@type":"Answer","text":"Indian urological guidelines suggest prostate biopsy when: PSA >10 ng/mL regardless of DRE; PSA 4–10 ng/mL with PSAD >0.15 or abnormal DRE; PSA velocity >0.75 ng/mL/year; or free/total PSA ratio <15%. Age-specific PSA reference ranges for Indians differ slightly from Western populations."}},
+  {"@type":"Question","name":"What does prostate volume mean for TURP eligibility?","acceptedAnswer":{"@type":"Answer","text":"TURP (transurethral resection of the prostate) is standard for prostate volumes of 30–80 mL with failed medical therapy. For volumes >80 mL, alternatives include HoLEP (holmium laser enucleation), which has no upper size limit, or open simple prostatectomy. TURP for very large glands carries higher bleeding risk."}},
+  {"@type":"Question","name":"What is the ellipsoid formula for prostate volume?","acceptedAnswer":{"@type":"Answer","text":"The ellipsoid formula for prostate volume is: PV (mL) = Anteroposterior (AP) × Transverse (W) × Cranio-caudal (L) × 0.523. The constant 0.523 is π/6 ≈ 0.5236. On TRUS, the three orthogonal diameters measured in sagittal and transverse planes are entered in centimetres."}}
+]}
+]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+
+<style>
+:root{
+  --navy:#0d1b2a;--navy-2:#1a3558;--navy-3:#2563a6;
+  --indigo:#4338ca;--indigo-lt:#eef2ff;--indigo-bd:#c7d2fe;
+  --teal:#0d9488;--teal-lt:#f0fdfa;--teal-bd:#99f6e4;
+  --rose:#c8315a;--rose-lt:#fbeaf0;--rose-bd:#f3a8c0;
+  --amber:#b45309;--amber-lt:#fffbeb;--amber-bd:#fde68a;
+  --red:#c53030;--red-lt:#fff5f5;--red-bd:#fed7d7;
+  --green:#166534;--green-lt:#f0fdf4;--green-bd:#bbf7d0;
+  --plum:#6d28d9;--plum-lt:#f5f3ff;--plum-bd:#ddd6fe;
+  /* Page accent = indigo/slate — clinical, masculine, urology */
+  --accent:#4338ca;--accent-lt:#eef2ff;--accent-bd:#c7d2fe;
+  --bg:#f7f5f2;--surface:#ffffff;--border:#e5e7eb;
+  --text:#1a1a2e;--text-md:#4b5563;--text-sm:#9ca3af;
+  --radius:14px;--radius-sm:9px;
+  --shadow:0 1px 3px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.07);
+  --shadow-lg:0 8px 32px rgba(0,0,0,.1);
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#fff;padding:8px 14px;text-decoration:none;font-size:.8rem;font-weight:700;border-radius:0 0 8px 0;z-index:9999}
+.skip-link:focus{top:0}
+
+/* HEADER */
+.site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.shi{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px}
+.site-logo{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text);text-decoration:none}
+.site-logo .la{color:var(--rose)}
+.site-nav{display:flex;align-items:center;gap:2px}
+.snl{font-size:13.5px;font-weight:500;color:#6B6259;text-decoration:none;padding:5px 9px;border-radius:6px;transition:color .15s,background .15s}
+.snl:hover{color:var(--accent);background:var(--accent-lt)}
+.snt{display:none;background:none;border:none;cursor:pointer;font-size:18px;color:var(--text);padding:4px}
+@media(max-width:680px){
+  .site-nav{display:none;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);flex-direction:column;align-items:flex-start;padding:.625rem;box-shadow:0 4px 16px rgba(0,0,0,.08);z-index:999}
+  .site-header.nav-open .site-nav{display:flex}
+  .snt{display:block}
+}
+
+/* HERO */
+.page-hero{background:linear-gradient(160deg,#0d1b2a 0%,#1a0a30 100%);padding:32px 0 28px}
+.hero-inner{max-width:780px;margin:0 auto;padding:0 20px;text-align:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;background:rgba(67,56,202,.22);border:1px solid rgba(99,102,241,.35);border-radius:20px;padding:4px 14px;font-size:.7rem;font-weight:700;color:#a5b4fc;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(1.55rem,4.5vw,2.4rem);font-weight:900;color:#fff;line-height:1.18;margin-bottom:10px}
+.page-hero h1 em{font-style:italic;color:#a5b4fc}
+.hero-sub{font-size:.88rem;color:rgba(255,255,255,.58);line-height:1.7;max-width:520px;margin:0 auto 16px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.htag{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:3px 10px;font-size:.67rem;font-weight:600;color:rgba(255,255,255,.65)}
+
+/* BREADCRUMB */
+.breadcrumb-bar{background:#fff;border-bottom:1px solid var(--border);padding:8px 20px}
+.breadcrumb{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:6px;font-size:.72rem;color:var(--text-sm);flex-wrap:wrap}
+.breadcrumb a{color:var(--text-md);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{color:var(--border)}
+
+/* MAIN */
+.main{max-width:860px;margin:0 auto;padding:28px 20px 80px}
+@media(min-width:900px){.main{padding:32px 40px 80px}}
+
+/* CALC CARD */
+.calc-card{background:var(--surface);border-radius:20px;box-shadow:var(--shadow-lg);border:1.5px solid var(--border);overflow:hidden;margin-bottom:20px}
+.calc-header{background:linear-gradient(135deg,#0d1b2a,#1a0a30);padding:20px 24px 18px;display:flex;align-items:center;gap:14px}
+.calc-icon{font-size:2rem;line-height:1}
+.calc-header-text h2{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:3px}
+.calc-header-text p{font-size:.76rem;color:rgba(255,255,255,.55)}
+
+/* TABS */
+.mode-tabs{display:flex;border-bottom:1.5px solid var(--border);background:#fafafa}
+.mode-tab{flex:1;padding:12px 8px;font-size:.78rem;font-weight:600;color:var(--text-md);background:none;border:none;cursor:pointer;font-family:var(--font-body);border-bottom:2.5px solid transparent;margin-bottom:-1.5px;transition:all .15s;text-align:center}
+.mode-tab:hover{color:var(--accent);background:var(--accent-lt)}
+.mode-tab.active{color:var(--accent);border-bottom-color:var(--accent);background:#fff}
+@media(max-width:540px){.mode-tab{font-size:.7rem;padding:10px 4px}}
+
+.calc-body{padding:24px}
+.calc-panel{display:none;animation:fadeUp .2s ease}
+.calc-panel.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.panel-desc{font-size:.8rem;color:var(--text-md);margin-bottom:18px;line-height:1.6;padding:10px 13px;background:#f9fafb;border-radius:8px;border-left:3px solid var(--accent)}
+
+/* FORMS */
+.field-row{margin-bottom:14px}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.field-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px}
+@media(max-width:540px){.field-grid{grid-template-columns:1fr}.field-grid-3{grid-template-columns:1fr 1fr}}
+label{display:block;font-size:.72rem;font-weight:700;color:var(--text-md);letter-spacing:.04em;text-transform:uppercase;margin-bottom:5px}
+.label-hint{font-weight:400;font-size:.7rem;color:var(--text-sm);text-transform:none}
+input[type=number],select{
+  width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;
+  font-size:16px;color:var(--text);background:#f9fafb;font-family:var(--font-body);
+  outline:none;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none;
+}
+input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(67,56,202,.1);background:#fff}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:34px}
+
+.calc-btn{
+  width:100%;padding:15px;
+  background:linear-gradient(135deg,var(--accent),#3730a3);
+  color:#fff;border:none;border-radius:12px;
+  font-weight:700;font-size:1rem;cursor:pointer;
+  font-family:var(--font-body);letter-spacing:.01em;
+  box-shadow:0 4px 18px rgba(67,56,202,.35);
+  transition:opacity .15s,transform .1s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-bottom:6px;
+}
+.calc-btn:hover{opacity:.93}
+.calc-btn:active{transform:scale(.98)}
+.clear-link{display:block;text-align:center;font-size:.76rem;color:var(--text-sm);cursor:pointer;margin-top:6px;text-decoration:underline;text-underline-offset:3px}
+.clear-link:hover{color:var(--text)}
+
+/* RESULTS */
+.result-box{display:none;margin-top:20px;animation:fadeUp .25s ease}
+
+.result-hero-main{
+  text-align:center;padding:22px 20px;
+  background:linear-gradient(135deg,var(--accent-lt),#f5f3ff);
+  border-radius:14px;border:1.5px solid var(--accent-bd);
+  margin-bottom:16px;
+}
+.rhm-label{font-size:.68rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.rhm-value{font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:#1e1b4b;line-height:1.1;margin-bottom:4px}
+.rhm-sub{font-size:.9rem;font-weight:600;color:var(--text-md);margin-bottom:4px}
+
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.res-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+@media(max-width:400px){.res-grid{grid-template-columns:1fr}.res-grid-3{grid-template-columns:1fr 1fr}}
+.rc{background:#f9fafb;border-radius:10px;padding:11px 13px;border:1px solid var(--border)}
+.rc-label{font-size:.62rem;font-weight:700;color:var(--text-sm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+.rc-value{font-size:.9rem;font-weight:700;color:var(--text);font-family:var(--font-mono)}
+.rc-sub{font-size:.67rem;color:var(--text-sm);margin-top:2px}
+
+.info-box{background:var(--accent-lt);border:1px solid var(--accent-bd);border-radius:10px;padding:10px 13px;font-size:.78rem;color:#1e1b4b;margin-bottom:10px;line-height:1.6}
+.warn-box{background:var(--amber-lt);border:1px solid var(--amber-bd);border-radius:10px;padding:10px 13px;font-size:.78rem;color:#78350f;margin-bottom:10px;line-height:1.6}
+.danger-box{background:var(--red-lt);border:1px solid var(--red-bd);border-radius:10px;padding:10px 13px;font-size:.78rem;color:var(--red);margin-bottom:10px;line-height:1.6}
+.success-box{background:var(--green-lt);border:1px solid var(--green-bd);border-radius:10px;padding:10px 13px;font-size:.78rem;color:var(--green);margin-bottom:10px;line-height:1.6}
+
+/* result hero variants */
+.rh-green{background:var(--green-lt);border-color:var(--green-bd)}
+.rh-green .rh-label,.rh-green .rh-val{color:var(--green)}
+.rh-orange{background:var(--amber-lt);border-color:var(--amber-bd)}
+.rh-orange .rh-label,.rh-orange .rh-val{color:var(--amber)}
+.rh-red{background:var(--red-lt);border-color:var(--red-bd)}
+.rh-red .rh-label,.rh-red .rh-val{color:var(--red)}
+.rh-blue{background:var(--accent-lt);border-color:var(--accent-bd)}
+.rh-blue .rh-label,.rh-blue .rh-val{color:var(--accent)}
+
+.result-hero{text-align:center;padding:18px 16px;border-radius:12px;margin-bottom:14px;border:1.5px solid}
+.rh-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.rh-val{font-family:var(--font-display);font-size:2rem;font-weight:900;line-height:1;letter-spacing:-.02em}
+.rh-sub{font-size:.8rem;margin-top:6px;font-weight:500;color:var(--text-md)}
+
+/* IPSS score buttons */
+.score-group{margin-bottom:14px}
+.score-group-label{font-weight:600;font-size:.83rem;color:var(--text);margin-bottom:5px;line-height:1.4}
+.score-group-sub{font-size:.72rem;color:var(--text-sm);margin-bottom:7px;font-style:italic}
+.score-options{display:flex;gap:6px;flex-wrap:wrap}
+.score-btn{padding:6px 11px;border:1.5px solid var(--border);border-radius:8px;font-size:.73rem;font-weight:600;cursor:pointer;background:var(--surface);color:var(--text-md);transition:all .12s;font-family:var(--font-body)}
+.score-btn:hover:not(.selected){border-color:#cbd5e0;background:#f8fafc}
+.score-btn.selected{border-color:var(--accent);background:var(--accent-lt);color:var(--accent)}
+
+/* VOLUME METER */
+.vol-meter{margin-bottom:16px}
+.vol-meter-label{font-size:.72rem;font-weight:600;color:var(--text-md);margin-bottom:6px}
+.vol-bar{height:12px;background:#f1f5f9;border-radius:20px;overflow:hidden;position:relative}
+.vol-bar-fill{height:100%;border-radius:20px;transition:width .5s ease}
+.vol-marks{display:flex;justify-content:space-between;font-size:.6rem;color:var(--text-sm);margin-top:4px}
+
+/* share bar */
+.share-bar{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}
+.share-btn{flex:1;min-width:70px;padding:9px 10px;border:none;border-radius:8px;font-size:.75rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;font-family:var(--font-body)}
+.btn-whatsapp{background:#25D366;color:#fff}
+.btn-copy{background:#f1f5f9;color:var(--text)}
+.btn-print{background:#6366f1;color:#fff}
+.copy-confirm{text-align:center;font-size:.73rem;color:var(--teal);margin-top:5px;min-height:16px}
+
+/* CONTENT */
+.content-card{background:var(--surface);border:1.5px solid var(--border);border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:var(--shadow)}
+.content-card h2{font-family:var(--font-display);font-size:1.15rem;font-weight:900;color:var(--navy);margin-bottom:14px}
+.content-card h3{font-size:.9rem;font-weight:700;color:var(--accent);margin:16px 0 7px}
+.content-card h3:first-of-type{margin-top:0}
+.content-card p{font-size:.85rem;color:var(--text-md);line-height:1.8;margin-bottom:8px}
+
+/* REFERENCE TABLE */
+.ref-table{width:100%;border-collapse:collapse;font-size:.8rem;margin-top:10px}
+.ref-table th{background:#f9fafb;color:var(--navy);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;padding:8px 10px;text-align:left;border-bottom:2px solid var(--border)}
+.ref-table td{padding:7px 10px;border-bottom:1px solid #f1f5f9;vertical-align:top;color:var(--text-md)}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table td:first-child{font-weight:600;color:var(--text)}
+
+/* FAQ */
+.faq-list{margin-top:4px}
+.fi{border-bottom:1px solid var(--border);padding:14px 0}
+.fi:last-child{border-bottom:none}
+.fq{font-size:.9rem;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;list-style:none}
+.fq::-webkit-details-marker,.fq::marker{display:none}
+.fq::after{content:'＋';color:var(--accent);font-size:1rem;flex-shrink:0;transition:transform .2s}
+details[open] .fq::after{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:.85rem;color:var(--text-md);line-height:1.75}
+details[open] .faq-answer{max-height:600px;padding-top:8px}
+
+/* RELATED */
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:10px}
+.related-card{padding:12px;background:#f9fafb;border:1.5px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);transition:all .15s;display:block}
+.related-card:hover{background:var(--accent-lt);border-color:var(--accent-bd);transform:translateY(-2px)}
+.rc-name{font-weight:700;font-size:.82rem;margin-bottom:3px}
+.rc-desc{font-size:.72rem;color:var(--text-sm)}
+
+.section-label{font-size:.7rem;font-weight:700;color:var(--text-sm);text-transform:uppercase;letter-spacing:.09em;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.disclaimer{background:var(--surface);border-radius:12px;padding:14px 18px;font-size:.77rem;color:var(--text-md);line-height:1.6;border:1px solid var(--border);border-left:3px solid var(--amber);margin-bottom:16px}
+
+/* FOOTER */
+.site-footer{background:#1E1A17;color:rgba(255,255,255,.6);padding:2.5rem 1.5rem 1.25rem}
+.sfi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-bottom:1.75rem}
+@media(max-width:700px){.sfi{grid-template-columns:1fr;gap:1.25rem}}
+.fb .site-logo{color:#fff}
+.fb p{font-size:13px;margin-top:.4rem;line-height:1.6}
+.fd{font-size:11.5px;color:rgba(255,255,255,.35);margin-top:.625rem;line-height:1.6}
+.fcc{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.25rem}
+.fc h4{font-size:11px;font-weight:500;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.5rem}
+.fc ul{list-style:none}
+.fc li{margin-bottom:.3rem}
+.fc a{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .15s}
+.fc a:hover{color:#fff}
+.fb2{max-width:1100px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:rgba(255,255,255,.3)}
+.fb2 a{color:rgba(255,255,255,.4);text-decoration:none}
+.fb2 a:hover{color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{.site-header,.site-footer,.share-bar,.mode-tabs,.content-card{display:none!important}.result-box{display:block!important}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header" id="site-header">
+  <div class="shi">
+    <a href="/" class="site-logo"><span class="la">Rx</span>MedCalc</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/medical-calculators/" class="snl">Calculators</a>
+      <a href="/drug-doses/" class="snl">Drug Doses</a>
+      <a href="/blog/" class="snl">Blog</a>
+      <a href="/rabies-scheduler/" class="snl">Rabies Schedule</a>
+      <a href="/vitamin/" class="snl">Vitamins</a>
+    </nav>
+    <button class="snt" aria-label="Toggle navigation" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</button>
+  </div>
+</header>
+
+<header class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">🔵 Urology · Prostate Assessment</div>
+    <h1>Prostate Volume <em>Calculator</em> — PSA Density &amp; IPSS</h1>
+    <p class="hero-sub">Calculate prostate volume using the ellipsoid formula from TRUS or MRI measurements. Get PSA density, BPH classification, and IPSS urinary symptom score — all in one place.</p>
+    <div class="hero-tags">
+      <span class="htag">📐 Ellipsoid Formula</span>
+      <span class="htag">🔬 PSA Density</span>
+      <span class="htag">📋 IPSS Score</span>
+      <span class="htag">⚖️ Prostate Weight</span>
+      <span class="htag">🏥 BPH Classification</span>
+      <span class="htag">💊 Treatment Guidance</span>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb-bar">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/medical-calculators/">Medical Calculators</a><span>›</span>
+    <span>Prostate Volume Calculator</span>
+  </nav>
+</div>
+
+<main class="main" id="main-content">
+
+  <!-- MAIN CALC CARD -->
+  <div class="calc-card">
+    <div class="calc-header">
+      <div class="calc-icon">🔵</div>
+      <div class="calc-header-text">
+        <h2>Prostate Volume — Ellipsoid Formula</h2>
+        <p>Volume · PSA Density · Weight · BPH Classification</p>
+      </div>
+    </div>
+
+    <div class="mode-tabs" role="tablist">
+      <button class="mode-tab active" role="tab" aria-selected="true" onclick="switchTab('volume',this)">📐 Prostate Volume</button>
+      <button class="mode-tab" role="tab" aria-selected="false" onclick="switchTab('psad',this)">🔬 PSA Density</button>
+      <button class="mode-tab" role="tab" aria-selected="false" onclick="switchTab('ipss',this)">📋 IPSS Score</button>
+    </div>
+
+    <div class="calc-body">
+
+      <!-- VOLUME TAB -->
+      <div class="calc-panel active" id="tab-volume" role="tabpanel">
+        <div class="panel-desc">Enter three orthogonal prostate diameters from TRUS or MRI (in cm). The ellipsoid formula <strong>V = L × W × AP × 0.523</strong> is the EAU/AUA gold standard for prostate volume calculation.</div>
+        <div class="field-grid-3">
+          <div>
+            <label for="pv-length">Length <span class="label-hint">(cranio-caudal, cm)</span></label>
+            <input type="number" id="pv-length" placeholder="e.g. 4.5" min="1" max="15" step="0.1" inputmode="decimal"/>
+          </div>
+          <div>
+            <label for="pv-width">Width <span class="label-hint">(transverse, cm)</span></label>
+            <input type="number" id="pv-width" placeholder="e.g. 4.0" min="1" max="15" step="0.1" inputmode="decimal"/>
+          </div>
+          <div>
+            <label for="pv-ap">AP Diameter <span class="label-hint">(anteroposterior, cm)</span></label>
+            <input type="number" id="pv-ap" placeholder="e.g. 3.5" min="1" max="12" step="0.1" inputmode="decimal"/>
+          </div>
+        </div>
+        <div class="field-grid">
+          <div>
+            <label for="pv-psa">PSA <span class="label-hint">(ng/mL, optional)</span></label>
+            <input type="number" id="pv-psa" placeholder="e.g. 6.5" min="0" max="200" step="0.1" inputmode="decimal"/>
+          </div>
+          <div>
+            <label for="pv-age">Patient Age <span class="label-hint">(years, optional)</span></label>
+            <input type="number" id="pv-age" placeholder="e.g. 62" min="30" max="100" step="1" inputmode="numeric"/>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcVolume()">📐 Calculate Prostate Volume</button>
+        <span class="clear-link" onclick="clearPanel('volume')">Clear</span>
+        <div class="result-box" id="res-volume" aria-live="polite"></div>
+      </div>
+
+      <!-- PSA DENSITY TAB -->
+      <div class="calc-panel" id="tab-psad" role="tabpanel">
+        <div class="panel-desc">PSA Density (PSAD) = Serum PSA ÷ Prostate Volume. PSAD above 0.15 ng/mL/mL in the PSA grey zone (4–10 ng/mL) raises suspicion for prostate cancer and may guide biopsy decisions.</div>
+        <div class="field-grid">
+          <div>
+            <label for="psad-psa">Serum PSA <span class="label-hint">(ng/mL)</span></label>
+            <input type="number" id="psad-psa" placeholder="e.g. 7.2" min="0" max="200" step="0.1" inputmode="decimal"/>
+          </div>
+          <div>
+            <label for="psad-vol">Prostate Volume <span class="label-hint">(mL)</span></label>
+            <input type="number" id="psad-vol" placeholder="e.g. 48" min="5" max="300" step="0.1" inputmode="decimal"/>
+          </div>
+        </div>
+        <div class="field-grid">
+          <div>
+            <label for="psad-fpsa">Free PSA <span class="label-hint">(ng/mL, optional)</span></label>
+            <input type="number" id="psad-fpsa" placeholder="e.g. 0.9" min="0" max="50" step="0.01" inputmode="decimal"/>
+          </div>
+          <div>
+            <label for="psad-age2">Patient Age <span class="label-hint">(years)</span></label>
+            <input type="number" id="psad-age2" placeholder="e.g. 65" min="30" max="100" step="1" inputmode="numeric"/>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcPsad()">🔬 Calculate PSA Density</button>
+        <span class="clear-link" onclick="clearPanel('psad')">Clear</span>
+        <div class="result-box" id="res-psad" aria-live="polite"></div>
+      </div>
+
+      <!-- IPSS TAB -->
+      <div class="calc-panel" id="tab-ipss" role="tabpanel">
+        <div class="panel-desc">The International Prostate Symptom Score (IPSS) — validated 7-question tool for lower urinary tract symptoms (LUTS). Score each symptom over the past month. Score 0–7 = mild, 8–19 = moderate, 20–35 = severe.</div>
+
+        <div id="ipss-questions"></div>
+
+        <div class="score-group" style="margin-top:16px;padding-top:14px;border-top:1.5px solid var(--border)">
+          <div class="score-group-label">Quality of Life — If you had to spend the rest of your life with your urinary symptoms as they are now, how would you feel?</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setIpssQol(0,this)">0 — Delighted</button>
+            <button class="score-btn" onclick="setIpssQol(1,this)">1 — Pleased</button>
+            <button class="score-btn" onclick="setIpssQol(2,this)">2 — Mostly satisfied</button>
+            <button class="score-btn" onclick="setIpssQol(3,this)">3 — Mixed</button>
+            <button class="score-btn" onclick="setIpssQol(4,this)">4 — Mostly dissatisfied</button>
+            <button class="score-btn" onclick="setIpssQol(5,this)">5 — Unhappy</button>
+            <button class="score-btn" onclick="setIpssQol(6,this)">6 — Terrible</button>
+          </div>
+        </div>
+
+        <button class="calc-btn" onclick="calcIpss()">📋 Calculate IPSS Score</button>
+        <span class="clear-link" onclick="clearIpss()">Clear</span>
+        <div class="result-box" id="res-ipss" aria-live="polite"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTENT: Reference -->
+  <div class="content-card">
+    <h2 id="reference">Prostate Volume — Clinical Reference</h2>
+
+    <h3>Normal Prostate Volume by Age</h3>
+    <p>Prostate volume increases with age due to benign prostatic hyperplasia (BPH). Volume alone does not determine symptoms — the degree of bladder outlet obstruction and patient bother guide treatment decisions. The following ranges are established from population-level TRUS studies.</p>
+    <table class="ref-table" aria-label="Normal prostate volume by age">
+      <thead><tr><th>Age Group</th><th>Typical Volume</th><th>BPH Grade</th><th>Clinical Relevance</th></tr></thead>
+      <tbody>
+        <tr><td>30–40 years</td><td>15–25 mL</td><td>Normal</td><td>Baseline; BPH rarely symptomatic</td></tr>
+        <tr><td>41–50 years</td><td>20–30 mL</td><td>Normal to mildly enlarged</td><td>Early BPH may begin; screen if LUTS present</td></tr>
+        <tr><td>51–60 years</td><td>25–40 mL</td><td>Mildly enlarged</td><td>IPSS + TRUS recommended if symptomatic</td></tr>
+        <tr><td>61–70 years</td><td>35–55 mL</td><td>Moderately enlarged</td><td>Medical therapy (alpha-blockers ± 5-ARIs) considered</td></tr>
+        <tr><td>71–80 years</td><td>45–80 mL</td><td>Moderately–significantly enlarged</td><td>Assess for urinary retention, hydronephrosis</td></tr>
+        <tr><td>80+ years</td><td>50–100+ mL</td><td>Significantly enlarged</td><td>Surgical planning (HoLEP/TURP) if refractory</td></tr>
+      </tbody>
+    </table>
+
+    <h3>PSA Density (PSAD) — Interpretation</h3>
+    <p>PSA density refines the interpretation of total PSA, particularly in the diagnostic grey zone of 4–10 ng/mL where total PSA alone cannot reliably distinguish BPH from prostate cancer. PSAD corrects for the contribution of benign prostatic tissue to PSA secretion.</p>
+    <table class="ref-table" aria-label="PSA density interpretation">
+      <thead><tr><th>PSAD (ng/mL/mL)</th><th>Interpretation</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td>&lt;0.10</td><td>Low — PSA likely from BPH</td><td>Active surveillance; repeat PSA in 12 months</td></tr>
+        <tr><td>0.10–0.15</td><td>Borderline</td><td>Consider free/total PSA ratio; counsel and monitor</td></tr>
+        <tr><td>&gt;0.15</td><td>Elevated — cancer cannot be excluded</td><td>Biopsy discussion; MRI prostate (PI-RADS) recommended</td></tr>
+        <tr><td>&gt;0.25</td><td>High suspicion</td><td>Prompt urology referral; targeted biopsy preferred</td></tr>
+      </tbody>
+    </table>
+
+    <h3>BPH Treatment by Prostate Volume</h3>
+    <p>Prostate volume guides selection of medical and surgical therapy. The table below reflects EAU and AUA guidelines, which are broadly followed by Indian urologists. Note that alpha-blockers improve symptoms regardless of prostate size; 5-ARIs are volume-dependent and most effective in prostates ≥40 mL.</p>
+    <table class="ref-table" aria-label="BPH treatment by prostate volume">
+      <thead><tr><th>Volume</th><th>Preferred Medical Therapy</th><th>Surgical Options</th></tr></thead>
+      <tbody>
+        <tr><td>&lt;30 mL</td><td>Alpha-blocker (tamsulosin 0.4 mg) alone</td><td>TUIP if refractory</td></tr>
+        <tr><td>30–40 mL</td><td>Alpha-blocker ± 5-ARI (if PSA &gt;1.4)</td><td>TURP (standard)</td></tr>
+        <tr><td>40–80 mL</td><td>Combination: tamsulosin + dutasteride/finasteride</td><td>TURP, HoLEP, or TUMT</td></tr>
+        <tr><td>80–150 mL</td><td>Combination therapy + reassess every 3–6 months</td><td>HoLEP preferred over TURP</td></tr>
+        <tr><td>&gt;150 mL</td><td>Medical bridge; surgical planning</td><td>Open simple prostatectomy / HoLEP</td></tr>
+      </tbody>
+    </table>
+
+    <h3>How Prostate Volume Is Measured</h3>
+    <p>The most accurate method is <strong>transrectal ultrasound (TRUS)</strong>, which allows direct visualisation in sagittal and transverse planes. The probe is placed in the rectum; three orthogonal diameters are measured: anteroposterior (AP), transverse (width), and cranio-caudal (length). MRI prostate is increasingly used and provides superior soft-tissue contrast for simultaneous cancer staging.</p>
+    <p>Transabdominal ultrasound (TAUS) is less accurate for prostate volume but suitable for screening in primary care. DRE (digital rectal examination) estimates volume subjectively and underestimates large glands; it remains part of the clinical examination but should not replace TRUS for treatment planning.</p>
+
+    <h3>Ellipsoid Formula — How This Calculator Works</h3>
+    <p>This calculator uses the standard ellipsoid formula: <strong>V = Length × Width × AP × 0.523</strong>, where 0.523 = π/6 ≈ 0.5236. All measurements are entered in centimetres and the result is given in millilitres (mL), since 1 cm³ = 1 mL. Prostate weight (grams) is derived by multiplying by tissue density (1.05 g/mL), though for practical purposes volume in mL ≈ weight in grams.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="content-card">
+    <h2>Frequently Asked Questions — Prostate Volume</h2>
+    <div class="faq-list">
+      <details class="fi">
+        <summary class="fq">What is the normal prostate volume?</summary>
+        <div class="faq-answer"><p>The normal prostate volume in adult men is 20–30 mL. A volume of 30–50 mL is considered mildly enlarged, 50–80 mL moderately enlarged, and above 80 mL significantly enlarged. Prostate volume increases with age, so what is normal at 40 differs from normal at 70. The key clinical question is not just size but whether symptoms (LUTS) are present and whether bladder outlet obstruction is demonstrated.</p></div>
+      </details>
+      <details class="fi">
+        <summary class="fq">What is PSA density and when should I calculate it?</summary>
+        <div class="faq-answer"><p>PSA density (PSAD) = serum PSA ÷ prostate volume in mL. It is most useful when total PSA is in the grey zone of 4–10 ng/mL, where it is difficult to distinguish BPH from prostate cancer based on total PSA alone. A PSAD above 0.15 ng/mL/mL raises concern for prostate cancer; below 0.10 ng/mL/mL suggests the PSA is explained by BPH. Free/total PSA ratio is complementary — a ratio below 15% also increases cancer suspicion.</p></div>
+      </details>
+      <details class="fi">
+        <summary class="fq">What is the IPSS score and what does it mean?</summary>
+        <div class="faq-answer"><p>The International Prostate Symptom Score (IPSS) is a validated 7-question questionnaire that quantifies lower urinary tract symptoms (LUTS) over the past month. Scores: 0–7 = mild (watchful waiting), 8–19 = moderate (medical therapy), 20–35 = severe (surgical evaluation). The quality-of-life (bother) question is assessed separately and often drives treatment decisions more than the symptom score alone.</p></div>
+      </details>
+      <details class="fi">
+        <summary class="fq">When are 5-alpha reductase inhibitors (finasteride/dutasteride) indicated?</summary>
+        <div class="faq-answer"><p>5-ARIs are indicated when prostate volume is ≥40 mL (or ≥30 mL with PSA >1.4 ng/mL). They reduce prostate volume by 20–30% over 6–12 months and reduce the risk of acute urinary retention and need for surgery. They are ineffective in small prostates. The combination of tamsulosin + dutasteride (CombAT study) is superior to either alone for moderate-to-severe LUTS in men with enlarged prostates.</p></div>
+      </details>
+      <details class="fi">
+        <summary class="fq">What prostate volume requires surgery?</summary>
+        <div class="faq-answer"><p>Surgical intervention is considered when medical therapy fails, when there are absolute indications (acute urinary retention refractory to catheter removal, recurrent UTIs, bladder stones, renal impairment from BPH), or when the patient prefers definitive treatment. TURP is standard for 30–80 mL. HoLEP (holmium laser enucleation of the prostate) has no upper size limit and is preferred for large prostates (>80 mL) in centres where it is available.</p></div>
+      </details>
+      <details class="fi">
+        <summary class="fq">How accurate is prostate volume measurement by ultrasound?</summary>
+        <div class="faq-answer"><p>TRUS with the ellipsoid formula has a ±10–20% variability compared to pathological weight on prostatectomy specimens. The main sources of error are: examiner experience, probe angle, and patient cooperation. MRI planimetry is more accurate but not routinely used for volume alone. For clinical purposes — treatment planning and PSA density — TRUS ellipsoid volume is sufficient and is the standard of care.</p></div>
+      </details>
+      <details class="fi">
+        <summary class="fq">What is considered a large prostate in India?</summary>
+        <div class="faq-answer"><p>In Indian men, BPH and LUTS are common from the fifth decade onward. A prostate above 40 mL is considered significantly enlarged for clinical management purposes in most Indian urological practice, with volumes above 80 mL typically requiring discussion of HoLEP or open prostatectomy. Indian men may present later with larger prostates due to delayed health-seeking. PSA levels in Indian men follow similar distributions to Western populations, though formal Indian-specific age-adjusted PSA norms are not yet universally adopted.</p></div>
+      </details>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="content-card">
+    <h2>Related Clinical Tools</h2>
+    <div class="related-grid">
+      <a href="/medical-calculators/egfr-calculator" class="related-card"><div class="rc-name">eGFR Calculator</div><div class="rc-desc">Renal function in BPH workup</div></a>
+      <a href="/medical-calculators/framingham-risk" class="related-card"><div class="rc-name">Framingham Risk</div><div class="rc-desc">Cardiovascular risk score</div></a>
+      <a href="/medical-calculators/bmi" class="related-card"><div class="rc-name">BMI Calculator</div><div class="rc-desc">Obesity linked to BPH risk</div></a>
+      <a href="/medical-calculators/child-pugh" class="related-card"><div class="rc-name">Child-Pugh Score</div><div class="rc-desc">Liver function assessment</div></a>
+      <a href="/drug-doses/" class="related-card"><div class="rc-name">Drug Doses</div><div class="rc-desc">Tamsulosin, dutasteride, finasteride</div></a>
+      <a href="/medical-calculators/" class="related-card"><div class="rc-name">All Calculators →</div><div class="rc-desc">62+ free clinical tools</div></a>
+    </div>
+  </div>
+
+  <div class="disclaimer">⚠️ <strong>For qualified healthcare professionals only.</strong> This prostate volume calculator provides clinical decision support only. PSA density and IPSS results must be interpreted in the context of the full clinical picture including DRE, uroflowmetry, post-void residual, and imaging. Always follow current EAU, AUA, and national urology guidelines for individual patient management.</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="sfi">
+    <div class="fb">
+      <a href="/" class="site-logo"><span class="la">Rx</span>MedCalc</a>
+      <p>Clinical decision support for healthcare professionals.</p>
+      <p class="fd">RxMedCalc is for qualified healthcare professionals only. Information is for educational and clinical decision-support purposes only.</p>
+    </div>
+    <div class="fcc">
+      <div class="fc">
+        <h4>Urology</h4>
+        <ul>
+          <li><a href="/medical-calculators/prostate-volume-calculator">Prostate Volume</a></li>
+          <li><a href="/medical-calculators/egfr-calculator">eGFR Calculator</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/medical-calculators/">All Calculators</a></li>
+          <li><a href="/medical-calculators/obs-calc">Pregnancy Wheel</a></li>
+          <li><a href="/medical-calculators/framingham-risk">Framingham Risk</a></li>
+          <li><a href="/medical-calculators/bmi">BMI Calculator</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Other Tools</h4>
+        <ul>
+          <li><a href="/rabies-scheduler/">Rabies PEP</a></li>
+          <li><a href="/drug-doses/">Drug Doses</a></li>
+          <li><a href="/vitamin/">Vitamins</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fb2">
+    <span>© 2025 RxMedCalc. Evidence-based · EAU · AUA · Indian Urology guidelines</span>
+    <span><a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+const shareTexts={};
+
+const show=(id,html,text)=>{
+  const b=document.getElementById("res-"+id);
+  if(!b)return;
+  b.innerHTML=html;b.style.display="block";shareTexts[id]=text;
+  if(window.innerWidth<600)setTimeout(()=>b.scrollIntoView({behavior:'smooth',block:'nearest'}),100);
+};
+
+const sb=id=>`<div class="share-bar">
+  <button class="share-btn btn-whatsapp" onclick="doWa('${id}')">📲 WhatsApp</button>
+  <button class="share-btn btn-copy" onclick="doCopy('${id}')">📋 Copy</button>
+  <button class="share-btn btn-print" onclick="window.print()">🖨 Print</button>
+</div><div class="copy-confirm" id="cc-${id}"></div>`;
+
+function doWa(id){const t=shareTexts[id];if(!t)return;window.open(`https://wa.me/?text=${encodeURIComponent(t)}`,"_blank","noopener");}
+function doCopy(id){
+  const t=shareTexts[id];if(!t)return;
+  const ok=()=>{const e=document.getElementById("cc-"+id);if(e){e.textContent="✓ Copied!";setTimeout(()=>e.textContent="",2500);}};
+  if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(ok).catch(()=>fb(t,ok));else fb(t,ok);
+}
+function fb(text,cb){const a=document.createElement("textarea");a.value=text;Object.assign(a.style,{position:"fixed",top:"0",left:"0",opacity:"0"});document.body.appendChild(a);a.focus();a.select();try{if(document.execCommand('copy'))cb();}catch(e){}document.body.removeChild(a);}
+
+function switchTab(tab,btn){
+  btn.closest(".mode-tabs").querySelectorAll(".mode-tab").forEach(t=>{t.classList.remove("active");t.setAttribute('aria-selected','false');});
+  btn.classList.add("active");btn.setAttribute('aria-selected','true');
+  document.querySelectorAll(".calc-panel").forEach(p=>p.classList.remove("active"));
+  document.getElementById("tab-"+tab).classList.add("active");
+}
+
+function clearPanel(id){
+  const p=document.getElementById("tab-"+id);
+  if(p)p.querySelectorAll("input").forEach(i=>i.value="");
+  const b=document.getElementById("res-"+id);
+  if(b){b.style.display="none";b.innerHTML="";}
+}
+
+const rc=(l,v,s="")=>`<div class="rc"><div class="rc-label">${l}</div><div class="rc-value">${v}</div>${s?`<div class="rc-sub">${s}</div>`:""}</div>`;
+
+// ── Volume classification ──
+function classifyVolume(vol){
+  if(vol<20)return{label:"Small",color:"rh-blue",desc:"Below average; BPH unlikely the primary cause of LUTS"};
+  if(vol<30)return{label:"Normal",color:"rh-green",desc:"Normal prostate size"};
+  if(vol<50)return{label:"Mildly Enlarged",color:"rh-blue",desc:"Borderline; assess IPSS and flow rate"};
+  if(vol<80)return{label:"Moderately Enlarged",color:"rh-orange",desc:"Medical therapy appropriate; 5-ARI benefit if ≥40 mL"};
+  return{label:"Significantly Enlarged",color:"rh-red",desc:"Surgical evaluation recommended if medically refractory"};
+}
+
+// ── Volume bar ──
+function volBar(vol){
+  const pct=Math.min(100,Math.round((vol/150)*100));
+  let col="#4338ca";
+  if(vol>=50)col="#b45309";
+  if(vol>=80)col="#c53030";
+  return `<div class="vol-meter">
+    <div class="vol-meter-label">Prostate volume — ${vol.toFixed(1)} mL relative to 150 mL scale</div>
+    <div class="vol-bar"><div class="vol-bar-fill" style="width:${pct}%;background:${col}"></div></div>
+    <div class="vol-marks"><span>0</span><span>30</span><span>50</span><span>80</span><span>150 mL</span></div>
+  </div>`;
+}
+
+// ── Calc Volume ──
+function calcVolume(){
+  const l=parseFloat(document.getElementById("pv-length").value);
+  const w=parseFloat(document.getElementById("pv-width").value);
+  const ap=parseFloat(document.getElementById("pv-ap").value);
+  if(!l||!w||!ap){alert("Please enter all three dimensions.");return;}
+  const vol=l*w*ap*0.5236;
+  const wt=(vol*1.05).toFixed(1);
+  const cls=classifyVolume(vol);
+  const psa=parseFloat(document.getElementById("pv-psa").value);
+  const age=parseInt(document.getElementById("pv-age").value);
+  let psadHtml="",psadText="";
+  if(psa){
+    const psad=psa/vol;
+    let pint,pcol;
+    if(psad<0.10){pint="Low — likely BPH";pcol="success-box";}
+    else if(psad<0.15){pint="Borderline — monitor closely";pcol="warn-box";}
+    else{pint="Elevated — cancer cannot be excluded";pcol="danger-box";}
+    psadHtml=`<div class="${pcol}"><strong>PSA Density:</strong> ${psad.toFixed(3)} ng/mL/mL — ${pint}</div>`;
+    psadText=`PSA Density: ${psad.toFixed(3)} ng/mL/mL — ${pint}`;
+  }
+  let tmt="";
+  if(vol<30)tmt="Alpha-blocker monotherapy appropriate if symptomatic.";
+  else if(vol<40)tmt="Alpha-blocker; consider 5-ARI if PSA >1.4 ng/mL.";
+  else if(vol<80)tmt="Combination therapy (tamsulosin + dutasteride/finasteride) — most effective for this volume.";
+  else tmt="Combination therapy; surgical consultation (HoLEP/TURP) if medically refractory.";
+
+  const html=`
+    <div class="result-hero ${cls.color}">
+      <div class="rh-label">Prostate Volume</div>
+      <div class="rh-val">${vol.toFixed(1)} mL</div>
+      <div class="rh-sub">${cls.label} · ${cls.desc}</div>
+    </div>
+    ${volBar(vol)}
+    <div class="res-grid">
+      ${rc("Volume",vol.toFixed(1)+" mL","Ellipsoid formula")}
+      ${rc("Est. Weight",wt+" g","Vol × 1.05")}
+      ${rc("Length × Width × AP",`${l}×${w}×${ap} cm`,"Measurements")}
+      ${rc("BPH Grade",cls.label,"")}
+    </div>
+    ${psadHtml}
+    <div class="info-box"><strong>Treatment note:</strong> ${tmt}</div>
+    ${sb("volume")}`;
+  show("volume",html,`🔵 Prostate Volume Calculator\nMeasurements: ${l}×${w}×${ap} cm\nVolume: ${vol.toFixed(1)} mL (${cls.label})\nWeight: ${wt}g\n${psadText}\nTreatment: ${tmt}\n${window.location.href}`);
+}
+
+// ── PSA Density ──
+function calcPsad(){
+  const psa=parseFloat(document.getElementById("psad-psa").value);
+  const vol=parseFloat(document.getElementById("psad-vol").value);
+  if(!psa||!vol){alert("Please enter PSA and prostate volume.");return;}
+  const psad=psa/vol;
+  const fpsa=parseFloat(document.getElementById("psad-fpsa").value);
+  const age=parseInt(document.getElementById("psad-age2").value);
+  let color,interp,action;
+  if(psad<0.10){color="rh-green";interp="Low (PSA likely from BPH)";action="Reassurance. Repeat PSA in 12 months. No biopsy indicated on PSAD alone.";}
+  else if(psad<0.15){color="rh-orange";interp="Borderline";action="Calculate free/total PSA ratio. Discuss risk with patient. Consider MRI prostate.";}
+  else{color="rh-red";interp="Elevated — prostate cancer cannot be excluded";action="Urology referral. MRI prostate (PI-RADS scoring) before biopsy if available. Discuss biopsy.";}
+  let fpHtml="",fpText="";
+  if(fpsa&&psa){
+    const fpr=(fpsa/psa)*100;
+    let fp_interp="";
+    if(fpr<10)fp_interp="Low free PSA ratio (<10%) — high cancer risk";
+    else if(fpr<15)fp_interp="Borderline free PSA ratio (10–15%)";
+    else fp_interp="Higher free PSA ratio (>15%) — cancer less likely";
+    fpHtml=`<div class="${fpr<10?"danger-box":fpr<15?"warn-box":"success-box"}"><strong>Free/Total PSA Ratio:</strong> ${fpr.toFixed(1)}% — ${fp_interp}</div>`;
+    fpText=`Free/Total PSA: ${fpr.toFixed(1)}% — ${fp_interp}`;
+  }
+  // Age-specific PSA reference
+  let ageRef="";
+  if(age){
+    if(age<50)ageRef=age<50?"PSA >2.5 ng/mL may warrant investigation in men <50 years.":"";
+    else if(age<60)ageRef="Age-specific PSA upper limit: ~3.5 ng/mL (50–59 years).";
+    else if(age<70)ageRef="Age-specific PSA upper limit: ~4.5 ng/mL (60–69 years).";
+    else ageRef="Age-specific PSA upper limit: ~6.5 ng/mL (70+ years).";
+  }
+  const html=`
+    <div class="result-hero ${color}">
+      <div class="rh-label">PSA Density</div>
+      <div class="rh-val">${psad.toFixed(4)} ng/mL/mL</div>
+      <div class="rh-sub">${interp}</div>
+    </div>
+    <div class="res-grid">
+      ${rc("Serum PSA",psa.toFixed(1)+" ng/mL","")}
+      ${rc("Prostate Volume",vol.toFixed(1)+" mL","")}
+      ${rc("PSA Density",psad.toFixed(4)+" ng/mL/mL","PSA ÷ Volume")}
+      ${rc("PSA Zone",psa<4?"Low (<4)":psa<=10?"Grey zone (4–10)":"High (>10)","Diagnostic zone")}
+    </div>
+    ${fpHtml}
+    <div class="${psad>=0.15?"danger-box":psad>=0.10?"warn-box":"success-box"}"><strong>Recommendation:</strong> ${action}</div>
+    ${ageRef?`<div class="info-box">ℹ️ ${ageRef}</div>`:""}
+    ${sb("psad")}`;
+  show("psad",html,`🔬 PSA Density\nPSA: ${psa} ng/mL · Volume: ${vol} mL\nPSAD: ${psad.toFixed(4)} ng/mL/mL\n${interp}\nAction: ${action}\n${fpText}\n${window.location.href}`);
+}
+
+// ── IPSS ──
+const IPSS_QS=[
+  {id:"incomplete",q:"Incomplete emptying — Over the past month, how often have you had a sensation of not emptying your bladder completely after you finished urinating?"},
+  {id:"frequency",q:"Frequency — Over the past month, how often have you had to urinate again less than two hours after you finished urinating?"},
+  {id:"intermittency",q:"Intermittency — Over the past month, how often have you found you stopped and started again several times when you urinated?"},
+  {id:"urgency",q:"Urgency — Over the past month, how often have you found it difficult to postpone urination?"},
+  {id:"weak_stream",q:"Weak stream — Over the past month, how often have you had a weak urinary stream?"},
+  {id:"straining",q:"Straining — Over the past month, how often have you had to push or strain to begin urination?"},
+  {id:"nocturia",q:"Nocturia — Over the past month, how many times did you most typically get up to urinate from the time you went to bed until the time you got up in the morning?"}
+];
+const IPSS_OPTS=["0 — Not at all","1 — Less than 1 in 5","2 — Less than half the time","3 — About half the time","4 — More than half the time","5 — Almost always"];
+const IPSS_NOCTURIA=["0 — None","1 — Once","2 — Twice","3 — 3 times","4 — 4 times","5 — 5+ times"];
+const ipssScores={};
+let ipssQol=null;
+
+function buildIpss(){
+  const el=document.getElementById("ipss-questions");if(!el)return;
+  el.innerHTML=IPSS_QS.map((q,i)=>`
+    <div class="score-group">
+      <div class="score-group-label">Q${i+1}. ${q.q}</div>
+      <div class="score-options">
+        ${(i<6?IPSS_OPTS:IPSS_NOCTURIA).map((o,j)=>`<button class="score-btn" onclick="setIpssQ('${q.id}',${j},this)">${o}</button>`).join("")}
+      </div>
+    </div>`).join("");
+}
+
+function setIpssQ(id,val,btn){
+  ipssScores[id]=val;
+  btn.closest(".score-options").querySelectorAll(".score-btn").forEach(b=>b.classList.remove("selected"));
+  btn.classList.add("selected");
+}
+function setIpssQol(val,btn){
+  ipssQol=val;
+  btn.closest(".score-options").querySelectorAll(".score-btn").forEach(b=>b.classList.remove("selected"));
+  btn.classList.add("selected");
+}
+
+function calcIpss(){
+  const needed=IPSS_QS.map(q=>q.id);
+  for(const k of needed){if(ipssScores[k]===undefined){alert("Please answer all 7 symptom questions.");return;}}
+  const total=needed.reduce((s,k)=>s+ipssScores[k],0);
+  let color,sev,tmt;
+  if(total<=7){color="rh-green";sev="Mild";tmt="Watchful waiting. Reassure. Lifestyle measures: fluid timing, reduce caffeine/alcohol, bladder training. Review in 12 months.";}
+  else if(total<=19){color="rh-orange";sev="Moderate";tmt="Medical therapy: alpha-blocker (tamsulosin 0.4 mg OD). Add 5-ARI if prostate ≥40 mL. Review in 4–6 weeks.";}
+  else{color="rh-red";sev="Severe";tmt="Urology referral. Consider uroflowmetry, post-void residual, TRUS. Surgical evaluation if medically refractory or absolute indications present.";}
+  const qolText=ipssQol!==null?["Delighted","Pleased","Mostly satisfied","Mixed","Mostly dissatisfied","Unhappy","Terrible"][ipssQol]:"Not scored";
+  const qolNote=ipssQol!==null&&ipssQol>=4?"High bother score — patient's quality of life significantly impacted; this influences treatment threshold.":"";
+  const pct=Math.round((total/35)*100);
+  const html=`
+    <div class="result-hero ${color}">
+      <div class="rh-label">IPSS Total Score</div>
+      <div class="rh-val">${total} / 35</div>
+      <div class="rh-sub">${sev} LUTS</div>
+    </div>
+    <div class="vol-meter">
+      <div class="vol-meter-label">Symptom severity — ${total}/35 (${pct}%)</div>
+      <div class="vol-bar"><div class="vol-bar-fill" style="width:${pct}%;background:${total<=7?"#166534":total<=19?"#b45309":"#c53030"}"></div></div>
+      <div class="vol-marks"><span>0 — Mild</span><span>8</span><span>20</span><span>35 — Severe</span></div>
+    </div>
+    <div class="res-grid-3">
+      ${needed.map((k,i)=>`<div class="rc"><div class="rc-label">Q${i+1} ${k.replace(/_/g,' ')}</div><div class="rc-value">${ipssScores[k]}/5</div></div>`).join("")}
+    </div>
+    <div class="res-grid">
+      ${rc("IPSS Total",total+"/35",sev)}
+      ${rc("QoL Bother",qolText,ipssQol!==null?"Score "+ipssQol+"/6":"")}
+    </div>
+    ${qolNote?`<div class="warn-box">⚠️ ${qolNote}</div>`:""}
+    <div class="${total<=7?"success-box":total<=19?"warn-box":"danger-box"}"><strong>Management:</strong> ${tmt}</div>
+    ${sb("ipss")}`;
+  show("ipss",html,`📋 IPSS Score\nTotal: ${total}/35 — ${sev} LUTS\nQoL: ${qolText}\nManagement: ${tmt}\n${window.location.href}`);
+}
+
+function clearIpss(){
+  IPSS_QS.forEach(q=>{delete ipssScores[q.id];});
+  ipssQol=null;
+  const el=document.getElementById("ipss-questions");
+  if(el)el.querySelectorAll(".score-btn").forEach(b=>b.classList.remove("selected"));
+  document.querySelectorAll("#tab-ipss .score-btn").forEach(b=>b.classList.remove("selected"));
+  const b=document.getElementById("res-ipss");if(b){b.style.display="none";b.innerHTML="";}
+}
+
+buildIpss();
+Object.assign(window,{doWa,doCopy,switchTab,clearPanel,calcVolume,calcPsad,setIpssQ,setIpssQol,calcIpss,clearIpss});
+})();
+</script>
+</body>
+</html>
